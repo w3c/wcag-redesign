@@ -1,4 +1,9 @@
-Temporary repository to preview WCAG redesign work to stakeholders.
+Temporary repository to preview WCAG redesign work to stakeholders:
+
+* [Techniques](https://draft-wcag-redesign.netlify.app/techniques/)
+* [Understanding](https://draft-wcag-redesign.netlify.app/understanding/)
+
+This is temporary, may break and should not be used as a reference.
 
 ## Background 
 
