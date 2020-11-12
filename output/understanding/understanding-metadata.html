@@ -3,148 +3,173 @@
    <head>
       <meta charset="UTF-8" />
       <title>Understanding Metadata</title>
-      <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css?1573220675560713000" />
-      <link rel="stylesheet" type="text/css" href="../base.css" />
+      <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
+      <link rel="stylesheet" href="base.css" />
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
          <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.1: Understanding documents</a></span><div class="tool-header-logo"><a href="http://w3.org/"><img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" /></a><a href="http://w3.org/WAI/"><img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" /></a></div>
          </div>
       </header>
-      <nav>
-         <ul id="navigation">
-            <li><a href="." title="Table of Contents">Contents</a></li>
-            <li><a href="documenting-accessibility-support">Previous: Documenting Accessibility Support for Uses of a Web Technology</a></li>
-         </ul>
-      </nav>
-      <nav class="navtoc">
-         <p>On this page:</p>
-         <ul id="navbar">
-            <li><a href="#understanding-metadata-resources">Metadata Resources</a></li>
-         </ul>
-      </nav>
-      <h1>Understanding Metadata</h1>
       <main>
-         		
-         		
-         <p>This section discusses metadata techniques that can be employed to satisfy WCAG 2.1
-            Success Criteria. For more information about metadata see resources below. 
-         </p>
-         		
-         <p>At its most basic level, metadata is essentially 'data about data' and is used to
-            both describe and find resources. 
-         </p>
-         		
-         <p>Metadata is a powerful tool that can be used for describing Web pages and accessible
-            components of Web pages as well as associating alternate versions of Web content to
-            each other. These descriptions in turn allows users to locate specific information
-            they need or prefer. 
-         </p>
-         		
-         <p>In conjunction with WCAG, metadata can play a number of roles including: </p>
-         		
-         <ol>
-            			
-            <li>
-               				
-               <p> Metadata can be used to associate conforming alternate versions of Web pages with
-                  Web pages which do not conform, in order to allow users to find the conforming alternate
-                  version when they land on a non-conforming page that they cannot use. 
+         <div class="default-grid leftcol">
+            <nav class="nav" aria-label="Meta navigation">
+               <ul>
+                  <li class="nav__item"><a href="/techniques/#introduction">About Techniques</a></li>
+                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
+                  <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
+                        									
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                        </svg></a><div id="explain-supporting-documents" hidden="">
+                        <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
+                           documents.
+                        </p>
+                        <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+                     </div>
+                  </li>
+               </ul>
+            </nav>
+            <section class="main-content">
+               <h1>Understanding Metadata</h1>
+               <main>
+                  		
+                  		
+                  <p>This section discusses metadata techniques that can be employed to satisfy WCAG 2.1
+                     Success Criteria. For more information about metadata see resources below. 
+                  </p>
+                  		
+                  <p>At its most basic level, metadata is essentially 'data about data' and is used to
+                     both describe and find resources. 
+                  </p>
+                  		
+                  <p>Metadata is a powerful tool that can be used for describing Web pages and accessible
+                     components of Web pages as well as associating alternate versions of Web content to
+                     each other. These descriptions in turn allows users to locate specific information
+                     they need or prefer. 
+                  </p>
+                  		
+                  <p>In conjunction with WCAG, metadata can play a number of roles including: </p>
+                  		
+                  <ol>
+                     			
+                     <li>
+                        				
+                        <p> Metadata can be used to associate conforming alternate versions of Web pages with
+                           Web pages which do not conform, in order to allow users to find the conforming alternate
+                           version when they land on a non-conforming page that they cannot use. 
+                        </p>
+                        			
+                     </li>
+                     			
+                     <li>
+                        				
+                        <p> Metadata can be used to locate and also to describe alternate pages where there are
+                           multiple versions of a page which have been developed, especially where the alternate
+                           pages are optimized for individuals with different disabilities. The user can use
+                           the metadata both to locate the alternate versions and to identify characteristics
+                           of the versions, so that they can find the one that best meets their needs. 
+                        </p>
+                        			
+                     </li>
+                     			
+                     <li>
+                        				
+                        <p>In addition to being used for whole pages (as in #1 and #2 above), metadata can be
+                           used to describe alternate versions of subcomponents of a page. Again, the metadata
+                           can be used to find alternate versions of a Web page component as well as to get descriptions
+                           of the alternate versions ( if there are several) in order to determine which one
+                           would best meet the user's needs. 
+                        </p>
+                        			
+                     </li>
+                     		
+                  </ol>
+                  		
+                  <section id="understanding-metadata-resources">
+                     			
+                     <h2>Metadata Resources</h2>
+                     			
+                     <p>Metadata descriptions often provide values from defined, agreed vocabularies such
+                        as the resource's subject matter or its date of publication, and are machine readable
+                        - software that understands the metadata scheme in use can do useful tasks not feasible
+                        otherwise. Typically, an object having metadata may have one or more such metadata
+                        descriptions. 
+                     </p>
+                     			
+                     <p>Well-known specifications (schemas) for metadata include: </p>
+                     			
+                     <ul>
+                        				
+                        <li>
+                           					
+                           <p><a href="http://www.loc.gov/standards/mets/">Metadata Encoding and Transmission Standard (METS) scheme</a></p>
+                           				
+                        </li>
+                        				
+                        <li>
+                           					
+                           <p><a href="http://dublincore.org">Dublin Core Metadata Initiative (DCMI) terms for cross-disciplinary resources</a></p>
+                           				
+                        </li>
+                        				
+                        <li>
+                           					
+                           <p><a href="http://www.ieee.org/index.html">IEEE Standards</a></p>
+                           				
+                        </li>
+                        			
+                     </ul>
+                     			
+                     <p>There are some tools available to provide resource descriptions, or they can be provided
+                        manually. The more easily the metadata can be created and collected at point of creation
+                        of a resource or at point of publication, the more efficient the process and the more
+                        likely it is to take place. 
+                     </p>
+                     			
+                     <p>Some examples include: </p>
+                     			
+                     <ul>
+                        				
+                        <li>
+                           					
+                           <p><a href="http://www.ukoln.ac.uk/metadata/dcdot/">DC-dot</a></p>
+                           				
+                        </li>
+                        			
+                     </ul>
+                     			
+                     <p>Accessibility metadata implementations include: </p>
+                     			
+                     <ul>
+                        				
+                        <li>
+                           					
+                           <p><a href="http://barrierfree.ca/tile/">The Inclusive Learning Exchange (TILE)</a></p>
+                           				
+                        </li>
+                        			
+                     </ul>
+                     		
+                  </section>
+                  	
+               </main>
+               <nav class="pager" aria-label="Previous/Next Page">
+                  <ul id="navigation">
+                     <li><a href="documenting-accessibility-support">Previous: Documenting Accessibility Support for Uses of a Web Technology</a></li>
+                  </ul>
+               </nav>
+            </section>
+            <aside class="your-report your-report--expanded sidebar" tabindex="-1">
+               <h2 style="margin-top: 0">About this page</h2>
+               <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
                </p>
-               			
-            </li>
-            			
-            <li>
-               				
-               <p> Metadata can be used to locate and also to describe alternate pages where there are
-                  multiple versions of a page which have been developed, especially where the alternate
-                  pages are optimized for individuals with different disabilities. The user can use
-                  the metadata both to locate the alternate versions and to identify characteristics
-                  of the versions, so that they can find the one that best meets their needs. 
-               </p>
-               			
-            </li>
-            			
-            <li>
-               				
-               <p>In addition to being used for whole pages (as in #1 and #2 above), metadata can be
-                  used to describe alternate versions of subcomponents of a page. Again, the metadata
-                  can be used to find alternate versions of a Web page component as well as to get descriptions
-                  of the alternate versions ( if there are several) in order to determine which one
-                  would best meet the user's needs. 
-               </p>
-               			
-            </li>
-            		
-         </ol>
-         		
-         <section id="understanding-metadata-resources">
-            			
-            <h2>Metadata Resources</h2>
-            			
-            <p>Metadata descriptions often provide values from defined, agreed vocabularies such
-               as the resource's subject matter or its date of publication, and are machine readable
-               - software that understands the metadata scheme in use can do useful tasks not feasible
-               otherwise. Typically, an object having metadata may have one or more such metadata
-               descriptions. 
-            </p>
-            			
-            <p>Well-known specifications (schemas) for metadata include: </p>
-            			
-            <ul>
-               				
-               <li>
-                  					
-                  <p><a href="http://www.loc.gov/standards/mets/">Metadata Encoding and Transmission Standard (METS) scheme</a></p>
-                  				
-               </li>
-               				
-               <li>
-                  					
-                  <p><a href="http://dublincore.org">Dublin Core Metadata Initiative (DCMI) terms for cross-disciplinary resources</a></p>
-                  				
-               </li>
-               				
-               <li>
-                  					
-                  <p><a href="http://www.ieee.org/index.html">IEEE Standards</a></p>
-                  				
-               </li>
-               			
-            </ul>
-            			
-            <p>There are some tools available to provide resource descriptions, or they can be provided
-               manually. The more easily the metadata can be created and collected at point of creation
-               of a resource or at point of publication, the more efficient the process and the more
-               likely it is to take place. 
-            </p>
-            			
-            <p>Some examples include: </p>
-            			
-            <ul>
-               				
-               <li>
-                  					
-                  <p><a href="http://www.ukoln.ac.uk/metadata/dcdot/">DC-dot</a></p>
-                  				
-               </li>
-               			
-            </ul>
-            			
-            <p>Accessibility metadata implementations include: </p>
-            			
-            <ul>
-               				
-               <li>
-                  					
-                  <p><a href="http://barrierfree.ca/tile/">The Inclusive Learning Exchange (TILE)</a></p>
-                  				
-               </li>
-               			
-            </ul>
-            		
-         </section>
-         	
+               <dl>
+                  <dt>Level</dt>
+                  <dd>A</dd>
+               </dl>
+            </aside>
+         </div>
       </main>
    </body>
 </html>

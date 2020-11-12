@@ -3,115 +3,81 @@
    <head>
       <meta charset="UTF-8" />
       <title>Understanding Success Criterion 2.1.3: Keyboard (No Exception)</title>
-      <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css?1573220675560713000" />
-      <link rel="stylesheet" type="text/css" href="../base.css" />
+      <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
+      <link rel="stylesheet" href="base.css" />
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
          <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.1: Understanding documents</a></span><div class="tool-header-logo"><a href="http://w3.org/"><img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" /></a><a href="http://w3.org/WAI/"><img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" /></a></div>
          </div>
       </header>
-      <nav>
-         <ul id="navigation">
-            <li><a href="." title="Table of Contents">Contents</a></li>
-            <li><a href="keyboard-accessible"><abbr title="Guideline">GL</abbr>: Keyboard Accessible</a></li>
-            <li><a href="no-keyboard-trap">Previous <abbr title="Success Criterion">SC</abbr>: No Keyboard Trap</a></li>
-            <li><a href="character-key-shortcuts">Next <abbr title="Success Criterion">SC</abbr>: Character Key Shortcuts</a></li>
-         </ul>
-      </nav>
-      <nav class="navtoc">
-         <p>On this page:</p>
-         <ul id="navbar">
-            <li><a href="#intent">Intent</a></li>
-            <li><a href="#benefits">Benefits</a></li>
-            <li><a href="#techniques">Techniques</a></li>
-            <li><a href="#key-terms">Key Terms</a></li>
-         </ul>
-      </nav>
-      <h1>Understanding Success Criterion 2.1.3: Keyboard (No Exception)</h1>
-      <blockquote class="scquote">
-         <p>Success Criterion <a href="/guidelines/#keyboard-no-exception" style="font-weight: bold;">2.1.3 Keyboard (No Exception)</a> (Level AAA): All <a href="#dfn-functionality">functionality</a> of the content is operable through a <a href="#dfn-keyboard-interface">keyboard interface</a> without requiring specific timings for individual keystrokes.
-            
-         </p>
-      </blockquote>
       <main>
-         <section id="intent">
-            <h2>Intent</h2>
-            <p>The intent of this Success Criterion is to ensure that 
-               <strong>all</strong> content is operable from the keyboard. This is the same as Success Criterion 2.1.1,
-               except that no exceptions are allowed. This does not mean that content where the underlying
-               function requires input that depends on the path of the user's movement and not just
-               the endpoints (excluded from the requirements of 2.1.1) must be made keyboard accessible.
-               Rather, it means that content that uses path-dependent input cannot conform to this
-               Success Criterion and therefore cannot meet Guideline 2.1 at Level AAA. 
-               
-            </p>
-         </section>
-         <section id="techniques">
-            <h2>Techniques</h2>
-            <p>Each numbered item in this section represents a technique or combination of techniques
-               that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-               it is not necessary to use these particular techniques. For information on using other
-               techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-            </p>
-         </section>
-         <section id="key-terms">
-            <h2>Key Terms</h2>
-            <dt id="dfn-functionality">functionality</dt>
-            <dd>
-               <definition xmlns="">
-                  
-                  
-                  <p xmlns="http://www.w3.org/1999/xhtml">
-                     <a href="#dfn-process">processes</a> and outcomes achievable through user action
+         <div class="default-grid leftcol">
+            <nav class="nav" aria-label="Meta navigation">
+               <ul>
+                  <li class="nav__item"><a href="/techniques/#introduction">About Techniques</a></li>
+                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
+                  <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
+                        									
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                        </svg></a><div id="explain-supporting-documents" hidden="">
+                        <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
+                           documents.
+                        </p>
+                        <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+                     </div>
+                  </li>
+               </ul>
+            </nav>
+            <section class="main-content">
+               <h1>Understanding Success Criterion 2.1.3: Keyboard (No Exception)</h1>
+               <blockquote class="scquote">
+                  <p>Success Criterion <a href="/guidelines/#keyboard-no-exception" style="font-weight: bold;">2.1.3 Keyboard (No Exception)</a> (Level AAA): All <a href="#dfn-functionality">functionality</a> of the content is operable through a <a href="#dfn-keyboard-interface">keyboard interface</a> without requiring specific timings for individual keystrokes.
                      
                   </p>
-                  
-                  
-               </definition>
-            </dd>
-            <dt id="dfn-keyboard-interface">keyboard interface</dt>
-            <dd>
-               <definition xmlns="">
-                  
-                  
-                  <p xmlns="http://www.w3.org/1999/xhtml">interface used by software to obtain keystroke input</p>
-                  
-                  
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                     <div>
-                        
-                        <p>A keyboard interface allows users to provide keystroke input to programs even if the
-                           native technology does not contain a keyboard.
-                        </p>
-                        
-                        
-                        <p class="example">A touchscreen PDA has a keyboard interface built into its operating system as well
-                           as a connector for external keyboards. Applications on the PDA can use the interface
-                           to obtain keyboard input either from an external keyboard or from other applications
-                           that provide simulated keyboard output, such as handwriting interpreters or speech-to-text
-                           applications with "keyboard emulation" functionality.
-                        </p>
-                        
-                     </div>
-                  </div>
-                  
-                  
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
-                     <p>Operation of the application (or parts of the application) through a keyboard-operated
-                        mouse emulator, such as MouseKeys, does not qualify as operation through a keyboard
-                        interface because operation of the program is through its pointing device interface,
-                        not through its keyboard interface.
-                        
-                     </p>
-                  </div>
-                  
-                  
-               </definition>
-            </dd>
-         </section>
+               </blockquote>
+               <section id="intent">
+                  <h2>Intent</h2>
+                  <p>The intent of this Success Criterion is to ensure that 
+                     <strong>all</strong> content is operable from the keyboard. This is the same as Success Criterion 2.1.1,
+                     except that no exceptions are allowed. This does not mean that content where the underlying
+                     function requires input that depends on the path of the user's movement and not just
+                     the endpoints (excluded from the requirements of 2.1.1) must be made keyboard accessible.
+                     Rather, it means that content that uses path-dependent input cannot conform to this
+                     Success Criterion and therefore cannot meet Guideline 2.1 at Level AAA. 
+                     
+                  </p>
+               </section>
+               <section id="techniques">
+                  <h2>Techniques</h2>
+                  <p>Each numbered item in this section represents a technique or combination of techniques
+                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                     it is not necessary to use these particular techniques. For information on using other
+                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+                  </p>
+               </section>
+               <nav class="pager" aria-label="Previous/Next Page">
+                  <ul id="navigation">
+                     <li><a href="keyboard-accessible"><abbr title="Guideline">GL</abbr>: Keyboard Accessible</a></li>
+                     <li><a href="no-keyboard-trap">Previous <abbr title="Success Criterion">SC</abbr>: No Keyboard Trap</a></li>
+                     <li><a href="character-key-shortcuts">Next <abbr title="Success Criterion">SC</abbr>: Character Key Shortcuts</a></li>
+                  </ul>
+               </nav>
+            </section>
+            <aside class="your-report your-report--expanded sidebar" tabindex="-1">
+               <h2 style="margin-top: 0">About this page</h2>
+               <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
+               </p>
+               <dl>
+                  <dt>Level</dt>
+                  <dd>A</dd>
+                  <dt>Key terms</dt>
+                  <li id="dfn-functionality"><a href="/guidelines/#dfn-functionality">functionality</a></li>
+                  <li id="dfn-keyboard-interface"><a href="/guidelines/#dfn-keyboard-interface">keyboard interface</a></li>
+               </dl>
+            </aside>
+         </div>
       </main>
    </body>
 </html>
