@@ -85,6 +85,10 @@ h2:hover .fragmentlink svg {
     visibility: visible;
 }
 
+.understanding-list li {
+    list-style: none;
+}
+
 [data-tooltip-content] {
     padding: 0;
     background: none;
