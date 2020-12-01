@@ -114,3 +114,11 @@ h2:hover .fragmentlink svg {
 dt div {
     font-weight: normal;
 }
+
+.pager--item.context {
+    flex: 100%;
+    background: var(--cloudy-subtle);
+    margin: -8px -8px 8px;
+    padding: 8px;
+    text-align: center;
+}
