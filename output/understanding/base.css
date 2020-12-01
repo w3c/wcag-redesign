@@ -130,8 +130,8 @@ img {
 }
 
 .note {
-    background-color: var(--cloudy-subtle);
-    border-left: 5px solid var(--light-blue);
+    background-color: var(--footer-grey);
+    border-left: 3px solid var(--wai-green);
     padding: 1em;
 }
 .note-title {
