@@ -11,269 +11,347 @@
          <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.1: Understanding documents</a></span><div class="tool-header-logo"><a href="http://w3.org/"><img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" /></a><a href="http://w3.org/WAI/"><img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" /></a></div>
          </div>
       </header>
-      <main>
-         <div class="default-grid leftcol">
-            <nav class="nav" aria-label="Meta navigation">
-               <ul>
-                  <li class="nav__item"><a href="#">About Understanding documents</a></li>
-                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
-                  <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a><div id="explain-supporting-documents" hidden="">
-                        <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
-                           documents.
-                        </p>
-                        <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
-                     </div>
-                  </li>
-               </ul>
-            </nav>
-            <section class="main-content">
-               <h1>Understanding Success Criterion 2.5.1: Pointer Gestures</h1>
-               <blockquote class="scquote">
-                  <p>Success Criterion <a href="/guidelines/#pointer-gestures" style="font-weight: bold;">2.5.1 Pointer Gestures</a> (Level A): All <a href="#dfn-functionality">functionality</a> that uses multipoint or path-based gestures for operation can be operated with a
-                     <a href="#dfn-single-pointer">single pointer</a> without a path-based gesture, unless a multipoint or path-based gesture is <a href="#dfn-essential">essential</a>.
-                  </p>
-                  <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this
-                     does not apply to actions that are required to operate the user agent or assistive
-                     technology).
-                  </p>
-               </blockquote>
-               <section id="intent">
-                  <h2>Intent</h2>
-                  <p>The intent of this Success Criterion is to ensure that content can be controlled with
-                     a range of pointing devices, abilities, and assistive technologies. Some people  cannot
-                     perform gestures in a precise manner, or they may use a specialized or adapted input
-                     device such as a head pointer, eye-gaze system, or speech-controlled mouse emulator.
-                     Some pointing methods lack the capability or accuracy to perform multipoint or path-based
-                     gestures.
-                  </p>
-                  <p>A <strong>path-based gesture</strong> involves an interaction where not just the endpoints matter. If going  through an
-                     intermediate point (usually near the start of the gesture) also affects its meaning
-                     then it is a path-based gesture. The user engages a pointer (starting point), carries
-                     out a movement that goes through at least one intermediate-point before disengaging
-                     the pointer (end point). The intermediate point defines the gesture as requiring a
-                     specific path, even if the complete path is not defined.
-                  </p>
-                  <figure id="figure-path-based-gesture-1">
-                     				<img src="img/path-based-gesture-1.png" width="400" alt="Hand showing a starting touch, 1. Moving through a second point, 2. Going to one of several points,3." />
-                     				
-                     <figcaption>Figure 1A path-based gesture involves starting a pointer movement that goes through at least
-                        one intermediate point before the end-point. The end-point may be a continuation,
-                        or allow for various movements.
-                     </figcaption>
-                     			
-                  </figure>
-                  <p>Examples of path-based gestures include swiping, sliders and carousels dependent on
-                     the direction of interaction, and other gestures which trace a prescribed path such
-                     as the drawing a specific shape. Such paths may be drawn with a finger or stylus on
-                     a touchscreen, graphics tablet, or trackpad, or with a mouse, joystick, or similar
-                     pointer device.
-                  </p>
-                  <p>Pointer interactions where the movement between the start and end points can go in
-                     any direction and are entirely non-prescriptive are not path-based.
-                  </p>
-                  <figure id="figure-path-based-gesture-2">
-                     				<img src="img/path-based-gesture-2.png" width="400" alt="Hand showing a starting touch, 1. Going to a second point, 2. It follows a very random path." />
-                     				
-                     <figcaption>Figure 2A free-form gesture does not require any particular path before the end-point, only
-                        the start and (optionally) the end point matter.
-                     </figcaption>
-                     			
-                  </figure>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                     <p>Any movement of a pointer could be difficult or impossible to use for someone who
-                        cannot perform precise movements, therefore alternative forms of interaction are always
-                        recommended. This success criterion is scoped to <em>path-based gestures</em> as it may be difficult or impossible to provide an alternative for free-form paths.
+      <div class="default-grid nav-container">
+         <nav class="nav" aria-label="Meta navigation">
+            <ul>
+               <li class="nav__item"><a href="#">About Understanding documents</a></li>
+               <li class="nav__item"><a href=".">All Understanding documents</a></li>
+               <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
+                     									
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                     </svg></a><div id="explain-supporting-documents" hidden="">
+                     <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
+                        documents.
                      </p>
+                     <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
                   </div>
-                  <p>Examples of <strong>multipoint</strong> gestures include a two-finger pinch zoom, a split tap where one finger rests on the
-                     screen and a second finger taps, or a two- or three-finger tap or swipe. Users may
-                     find it difficult or impossible to accomplish these if they type and point with a
-                     single finger or stick.
+               </li>
+            </ul>
+         </nav>
+      </div>
+      <div class="default-grid">
+         <main class="main-content">
+            <h1>Understanding Success Criterion 2.5.1: Pointer Gestures</h1>
+            <blockquote class="scquote">
+               <p>Success Criterion <a href="/guidelines/#pointer-gestures" style="font-weight: bold;">2.5.1 Pointer Gestures</a> (Level A): All <a href="#dfn-functionality">functionality</a> that uses multipoint or path-based gestures for operation can be operated with a
+                  <a href="#dfn-single-pointer">single pointer</a> without a path-based gesture, unless a multipoint or path-based gesture is <a href="#dfn-essential">essential</a>.
+               </p>
+               <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this
+                  does not apply to actions that are required to operate the user agent or assistive
+                  technology).
+               </p>
+            </blockquote>
+            <section id="intent">
+               <h2>Intent</h2>
+               <p>The intent of this Success Criterion is to ensure that content can be controlled with
+                  a range of pointing devices, abilities, and assistive technologies. Some people  cannot
+                  perform gestures in a precise manner, or they may use a specialized or adapted input
+                  device such as a head pointer, eye-gaze system, or speech-controlled mouse emulator.
+                  Some pointing methods lack the capability or accuracy to perform multipoint or path-based
+                  gestures.
+               </p>
+               <p>A <strong>path-based gesture</strong> involves an interaction where not just the endpoints matter. If going  through an
+                  intermediate point (usually near the start of the gesture) also affects its meaning
+                  then it is a path-based gesture. The user engages a pointer (starting point), carries
+                  out a movement that goes through at least one intermediate-point before disengaging
+                  the pointer (end point). The intermediate point defines the gesture as requiring a
+                  specific path, even if the complete path is not defined.
+               </p>
+               <figure id="figure-path-based-gesture-1">
+                  				<img src="img/path-based-gesture-1.png" width="400" alt="Hand showing a starting touch, 1. Moving through a second point, 2. Going to one of several points,3." />
+                  				
+                  <figcaption>Figure 1A path-based gesture involves starting a pointer movement that goes through at least
+                     one intermediate point before the end-point. The end-point may be a continuation,
+                     or allow for various movements.
+                  </figcaption>
+                  			
+               </figure>
+               <p>Examples of path-based gestures include swiping, sliders and carousels dependent on
+                  the direction of interaction, and other gestures which trace a prescribed path such
+                  as the drawing a specific shape. Such paths may be drawn with a finger or stylus on
+                  a touchscreen, graphics tablet, or trackpad, or with a mouse, joystick, or similar
+                  pointer device.
+               </p>
+               <p>Pointer interactions where the movement between the start and end points can go in
+                  any direction and are entirely non-prescriptive are not path-based.
+               </p>
+               <figure id="figure-path-based-gesture-2">
+                  				<img src="img/path-based-gesture-2.png" width="400" alt="Hand showing a starting touch, 1. Going to a second point, 2. It follows a very random path." />
+                  				
+                  <figcaption>Figure 2A free-form gesture does not require any particular path before the end-point, only
+                     the start and (optionally) the end point matter.
+                  </figcaption>
+                  			
+               </figure>
+               <div class="note">
+                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                  <p>Any movement of a pointer could be difficult or impossible to use for someone who
+                     cannot perform precise movements, therefore alternative forms of interaction are always
+                     recommended. This success criterion is scoped to <em>path-based gestures</em> as it may be difficult or impossible to provide an alternative for free-form paths.
                   </p>
-                  <p>Authors must ensure that their content can be operated without multipoint or path-based
-                     gestures. Multipoint or path-based gestures can be used so long as the functionality
-                     can also be operated by another method, such as a tap, click, double tap, double click,
-                     long press, or click &amp; hold. 
-                  </p>
-                  <p>This Success Criterion applies to gestures in the author-provided content, not gestures
-                     defined by the operating system, user agent, or assistive technology. Examples of
-                     operating system gestures would be swiping down to see system notifications and gestures
-                     for built-in assistive technologies (AT). Examples of user-agent-implemented gestures
-                     would be horizontal swiping implemented by browsers for navigating within the page
-                     history, or vertical swiping to scroll page content.
-                  </p>
-                  <p>There are times when a component requires a path-based gesture for touch screen devices
-                     but not with a mouse. Taking an example of a generic slider:
-                  </p>
-                  <ul>
-                     				
-                     <li><strong>Using a mouse:</strong> If the user clicks on the thumb control of the slider and moves vertically, the slider
-                        will respond by moving to the right or left, even if the movement is mostly upwards.
-                        There will be no page scrolling as a result of the vertical movement as long as they
-                        drag with focus on the slider. Therefore, the slider does not require a path-based
-                        gesture with mouse pointer.
-                     </li>
-                     				
-                     <li><strong>Using a touch-screen:</strong> If the user puts their finger on the thumb control of the slider and moves upwards
-                        more than sideways, the slider may not respond because the browser takes control of
-                        the swipe and interprets it as a scroll, and will move the page up and down. Moving
-                        left or right on the slider thumb engages the slider and then the user can vary their
-                        vertical movement. This implementation has the 3-point requirement to work with a
-                        finger on a touch screen device so is a path-based gesture.
-                     </li>
-                     			
-                  </ul>
-                  <p>As touch screen devices can apply default gestures it is important to test with them
-                     if you are unsure whether a particular component does require a path-based gesture.
-                  </p>
-                  <p>Browsers on a touch screen device generally provide some default gestures that impact
-                     whether a path-based gesture is needed. For example, a web browser on a touch-screen
-                     devices might detect a vertical gesture and scroll the page. If a user places their
-                     finger on a slider thumb and moves up (to scroll down) that might not activate the
-                     slider (depending on implementation). If the user moves horizontally first then the
-                     slider could capture that gesture and ignore vertical movement, resulting in a path-based
-                     gesture. If you include touch-screen devices as accessibility supported then these
-                     types of interaction need testing with a touch screen as using a mouse in a similar
-                     way would not trigger the same browser behavior.
-                  </p>
-                  <p>This Success Criterion does not require all functionality to be available through
-                     pointing devices, but if it is available to pointer devices then it should not require
-                     path-based gestures. While content authors generally need to provide keyboard commands
-                     or other non-pointer mechanisms that perform actions equivalent to complex gestures
-                     (see Success Criterion 2.1.1 Keyboard), this is not sufficient to conform to this
-                     Success Criterion. That is because some users rely entirely on pointing devices, or
-                     find simple pointer inputs much easier than alternatives. For example, a user relying
-                     on a head-pointer would find clicking a control to be much more convenient than activating
-                     an on-screen keyboard to emulate a keyboard shortcut, and a person who has difficulty
-                     memorizing a series of keys (or gestures) may find it much easier to simply click
-                     on a labeled control. Therefore, if one or more pointer-based mechanisms are supported,
-                     then their benefits should be afforded to users through simple, single-point actions
-                     alone.
-                  </p>
-                  <p>An exception is made for functionality that is inherently and necessarily based on
-                     complex paths or multipoint gestures. For example, entering your signature may be
-                     inherently path-based (although acknowledging something or confirming your identity
-                     need not be).
-                  </p>
-                  <p>Gestures that involve dragging in any direction are not in scope for this SC because
-                     only the start and end points matter in a dragging operation. However, such gestures
-                     do require fine motor control. Authors are encouraged to provide non-dragging methods,
-                     for instance, a drag and drop operation could also be achieved by selecting an item
-                     (with a tap or keyboard interaction) and then selecting its destination as a second
-                     step.
-                  </p>
-               </section>
-               <section id="benefits">
-                  <h2>Benefits</h2>
+               </div>
+               <p>Examples of <strong>multipoint</strong> gestures include a two-finger pinch zoom, a split tap where one finger rests on the
+                  screen and a second finger taps, or a two- or three-finger tap or swipe. Users may
+                  find it difficult or impossible to accomplish these if they type and point with a
+                  single finger or stick.
+               </p>
+               <p>Authors must ensure that their content can be operated without multipoint or path-based
+                  gestures. Multipoint or path-based gestures can be used so long as the functionality
+                  can also be operated by another method, such as a tap, click, double tap, double click,
+                  long press, or click &amp; hold. 
+               </p>
+               <p>This Success Criterion applies to gestures in the author-provided content, not gestures
+                  defined by the operating system, user agent, or assistive technology. Examples of
+                  operating system gestures would be swiping down to see system notifications and gestures
+                  for built-in assistive technologies (AT). Examples of user-agent-implemented gestures
+                  would be horizontal swiping implemented by browsers for navigating within the page
+                  history, or vertical swiping to scroll page content.
+               </p>
+               <p>There are times when a component requires a path-based gesture for touch screen devices
+                  but not with a mouse. Taking an example of a generic slider:
+               </p>
+               <ul>
+                  				
+                  <li><strong>Using a mouse:</strong> If the user clicks on the thumb control of the slider and moves vertically, the slider
+                     will respond by moving to the right or left, even if the movement is mostly upwards.
+                     There will be no page scrolling as a result of the vertical movement as long as they
+                     drag with focus on the slider. Therefore, the slider does not require a path-based
+                     gesture with mouse pointer.
+                  </li>
+                  				
+                  <li><strong>Using a touch-screen:</strong> If the user puts their finger on the thumb control of the slider and moves upwards
+                     more than sideways, the slider may not respond because the browser takes control of
+                     the swipe and interprets it as a scroll, and will move the page up and down. Moving
+                     left or right on the slider thumb engages the slider and then the user can vary their
+                     vertical movement. This implementation has the 3-point requirement to work with a
+                     finger on a touch screen device so is a path-based gesture.
+                  </li>
+                  			
+               </ul>
+               <p>As touch screen devices can apply default gestures it is important to test with them
+                  if you are unsure whether a particular component does require a path-based gesture.
+               </p>
+               <p>Browsers on a touch screen device generally provide some default gestures that impact
+                  whether a path-based gesture is needed. For example, a web browser on a touch-screen
+                  devices might detect a vertical gesture and scroll the page. If a user places their
+                  finger on a slider thumb and moves up (to scroll down) that might not activate the
+                  slider (depending on implementation). If the user moves horizontally first then the
+                  slider could capture that gesture and ignore vertical movement, resulting in a path-based
+                  gesture. If you include touch-screen devices as accessibility supported then these
+                  types of interaction need testing with a touch screen as using a mouse in a similar
+                  way would not trigger the same browser behavior.
+               </p>
+               <p>This Success Criterion does not require all functionality to be available through
+                  pointing devices, but if it is available to pointer devices then it should not require
+                  path-based gestures. While content authors generally need to provide keyboard commands
+                  or other non-pointer mechanisms that perform actions equivalent to complex gestures
+                  (see Success Criterion 2.1.1 Keyboard), this is not sufficient to conform to this
+                  Success Criterion. That is because some users rely entirely on pointing devices, or
+                  find simple pointer inputs much easier than alternatives. For example, a user relying
+                  on a head-pointer would find clicking a control to be much more convenient than activating
+                  an on-screen keyboard to emulate a keyboard shortcut, and a person who has difficulty
+                  memorizing a series of keys (or gestures) may find it much easier to simply click
+                  on a labeled control. Therefore, if one or more pointer-based mechanisms are supported,
+                  then their benefits should be afforded to users through simple, single-point actions
+                  alone.
+               </p>
+               <p>An exception is made for functionality that is inherently and necessarily based on
+                  complex paths or multipoint gestures. For example, entering your signature may be
+                  inherently path-based (although acknowledging something or confirming your identity
+                  need not be).
+               </p>
+               <p>Gestures that involve dragging in any direction are not in scope for this SC because
+                  only the start and end points matter in a dragging operation. However, such gestures
+                  do require fine motor control. Authors are encouraged to provide non-dragging methods,
+                  for instance, a drag and drop operation could also be achieved by selecting an item
+                  (with a tap or keyboard interaction) and then selecting its destination as a second
+                  step.
+               </p>
+            </section>
+            <section id="benefits">
+               <h2>Benefits</h2>
+               <ul>
+                  					
+                  <li>
+                     <p>Users who cannot (accurately) perform complex pointer gestures will have alternative
+                        means for operating the content.
+                     </p>
+                  </li>
+                  
+                  <li>
+                     <p>The availability of user interface elements provided as a fallback for complex gestures
+                        helps users who may often be unaware of the support for complex pointer gestures.
+                        This can be especially beneficial for users with cognitive or learning disabilities.
+                     </p>
+                  </li>
+                  				
+               </ul>
+            </section>
+            <section id="examples">
+               <h2>Examples</h2>
+               <ul>
+                  
+                  <li>
+                     <p>A web site includes a map view that supports the pinch gesture to zoom into the map
+                        content. User interface controls offer the operation using plus and minus buttons
+                        to zoom in and out.
+                     </p>
+                  </li>
+                  
+                  <li>
+                     <p>A news site has a horizontal content slider with hidden news teasers that can moved
+                        into the viewport via horizontal swiping. It also offers forward and backward arrow
+                        buttons for single-point activation to navigate to adjacent slider content.
+                     </p>
+                  </li>
+                  				
+                  <li>
+                     <p>A kanban widget with several vertical areas representing states in a defined process
+                        allows the user to right- or left-swipe elements to move them to an adjacent silo.
+                        The user can also accomplish this by selecting the element with a single tap or click,
+                        and then activating an arrow button to move the selected element.
+                     </p>
+                  </li>
+                  				
+                  <li>
+                     <p>A custom slider requires movement in a strict left/right direction when operated by
+                        dragging the thumb control. Buttons on both sides of the slider increment and decrement
+                        the selected value and update the thumb position.
+                     </p>
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="techniques">
+               <h2>Techniques</h2>
+               <p>Each numbered item in this section represents a technique or combination of techniques
+                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                  it is not necessary to use these particular techniques. For information on using other
+                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+               </p>
+               <section id="sufficient">
+                  <h3>Sufficient Techniques</h3>
                   <ul>
                      					
-                     <li>
-                        <p>Users who cannot (accurately) perform complex pointer gestures will have alternative
-                           means for operating the content.
-                        </p>
-                     </li>
-                     
-                     <li>
-                        <p>The availability of user interface elements provided as a fallback for complex gestures
-                           helps users who may often be unaware of the support for complex pointer gestures.
-                           This can be especially beneficial for users with cognitive or learning disabilities.
-                        </p>
-                     </li>
+                     <li><a href="/techniques/general/G215">G215: Providing controls to achieve the same result as path based or multipoint gestures</a></li>
+                     					
+                     <li><a href="/techniques/general/G216">G216: Providing single point activation for a control slider</a></li>
                      				
                   </ul>
                </section>
-               <section id="examples">
-                  <h2>Examples</h2>
-                  <ul>
-                     
-                     <li>
-                        <p>A web site includes a map view that supports the pinch gesture to zoom into the map
-                           content. User interface controls offer the operation using plus and minus buttons
-                           to zoom in and out.
-                        </p>
-                     </li>
-                     
-                     <li>
-                        <p>A news site has a horizontal content slider with hidden news teasers that can moved
-                           into the viewport via horizontal swiping. It also offers forward and backward arrow
-                           buttons for single-point activation to navigate to adjacent slider content.
-                        </p>
-                     </li>
-                     				
-                     <li>
-                        <p>A kanban widget with several vertical areas representing states in a defined process
-                           allows the user to right- or left-swipe elements to move them to an adjacent silo.
-                           The user can also accomplish this by selecting the element with a single tap or click,
-                           and then activating an arrow button to move the selected element.
-                        </p>
-                     </li>
-                     				
-                     <li>
-                        <p>A custom slider requires movement in a strict left/right direction when operated by
-                           dragging the thumb control. Buttons on both sides of the slider increment and decrement
-                           the selected value and update the thumb position.
-                        </p>
-                     </li>
-                     
-                  </ul>
-               </section>
-               <section id="techniques">
-                  <h2>Techniques</h2>
-                  <p>Each numbered item in this section represents a technique or combination of techniques
-                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                     it is not necessary to use these particular techniques. For information on using other
-                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+               <section id="failure">
+                  <h3>Failures</h3>
+                  <p>The following are common mistakes that are considered failures of this Success Criterion
+                     by the WCAG Working Group.
                   </p>
-                  <section id="sufficient">
-                     <h3>Sufficient Techniques</h3>
-                     <ul>
-                        					
-                        <li><a href="/techniques/general/G215">G215: Providing controls to achieve the same result as path based or multipoint gestures</a></li>
-                        					
-                        <li><a href="/techniques/general/G216">G216: Providing single point activation for a control slider</a></li>
-                        				
-                     </ul>
-                  </section>
-                  <section id="failure">
-                     <h3>Failures</h3>
-                     <p>The following are common mistakes that are considered failures of this Success Criterion
-                        by the WCAG Working Group.
-                     </p>
-                     <ul>
-                        					
-                        <li><a href="/techniques/failures/F105">F105: Failure of Success Criterion 2.5.1 due to providing functionality via a path-based
-                              gesture without simple pointer alternative</a></li>
-                        				
-                     </ul>
-                  </section>
-               </section>
-               <nav class="pager" aria-label="Previous/Next Page">
-                  <ul id="navigation">
-                     <li><a href="input-modalities"><abbr title="Guideline">GL</abbr>: Input Modalities</a></li>
-                     <li><a href="section-headings">Previous <abbr title="Success Criterion">SC</abbr>: Section Headings</a></li>
-                     <li><a href="pointer-cancellation">Next <abbr title="Success Criterion">SC</abbr>: Pointer Cancellation</a></li>
+                  <ul>
+                     					
+                     <li><a href="/techniques/failures/F105">F105: Failure of Success Criterion 2.5.1 due to providing functionality via a path-based
+                           gesture without simple pointer alternative</a></li>
+                     				
                   </ul>
-               </nav>
+               </section>
             </section>
-            <aside class="your-report your-report--expanded sidebar" tabindex="-1">
-               <h2 style="margin-top: 0">About this page</h2>
-               <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
+            <nav class="pager" aria-label="Previous/Next Page">
+               <ul id="navigation">
+                  <li><a href="input-modalities"><abbr title="Guideline">GL</abbr>: Input Modalities</a></li>
+                  <li><a href="section-headings">Previous <abbr title="Success Criterion">SC</abbr>: Section Headings</a></li>
+                  <li><a href="pointer-cancellation">Next <abbr title="Success Criterion">SC</abbr>: Pointer Cancellation</a></li>
+               </ul>
+            </nav>
+         </main>
+         <aside class="your-report your-report--expanded sidebar">
+            <h2>About this page</h2>
+            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
+            </p>
+            <dl>
+               <dt>Level</dt>
+               <dd>A</dd>
+               <dt>Key terms</dt>
+               <li id="dfn-essential"><a href="/guidelines/#dfn-essential">essential</a></li>
+               <li id="dfn-functionality"><a href="/guidelines/#dfn-functionality">functionality</a></li>
+               <li id="dfn-single-pointer"><a href="/guidelines/#dfn-single-pointer">single pointer</a></li>
+            </dl>
+         </aside>
+      </div>
+      <div class="default-grid">
+         <aside class="box box-icon box-space-above" id="helpimprove" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <header class="box-h box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2>Help improve this page</h2>
+            </header>
+            <div class="box-i">
+               <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
+                  list  <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub.
                </p>
-               <dl>
-                  <dt>Level</dt>
-                  <dd>A</dd>
-                  <dt>Key terms</dt>
-                  <li id="dfn-essential"><a href="/guidelines/#dfn-essential">essential</a></li>
-                  <li id="dfn-functionality"><a href="/guidelines/#dfn-functionality">functionality</a></li>
-                  <li id="dfn-single-pointer"><a href="/guidelines/#dfn-single-pointer">single pointer</a></li>
-               </dl>
-            </aside>
+               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniquesl&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+            </div>
+         </aside>
+      </div>
+      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
+         <div class="inner" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <p><strong>Date:</strong> Published 29 June 2020.
+            </p>
+            <p><strong>Authors</strong>:
+               					<a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a>.
+               					<strong>Editors</strong>:
+               					<a href="group-ag-chairs@w3.org">Alastair Campbell, Michael Cooper, Andrew Kirkpatrick</a>.
+               				
+            </p>
          </div>
-      </main>
+      </footer>
+      <footer class="site-footer grid-4q" aria-label="Site">
+         <div class="q1-start q3-end about">
+            <div>
+               <p><a class="largelink" href="https://w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
+               <p>Strategies, standards, and supporting resources to make the Web accessible to people
+                  with disabilities.
+               </p>
+            </div>
+            <div class="social" dir="auto" translate="no" lang="en">
+               <ul>
+                  <li><a href="https://twitter.com/w3c_wai">
+                        <svg focusable="false" aria-hidden="true" class="icon-twitter" viewBox="0 0 32 32">
+                           <path d="M31.939 6.092c-1.18 0.519-2.44 0.872-3.767 1.033 1.352-0.815 2.392-2.099 2.884-3.631-1.268 0.74-2.673 1.279-4.169 1.579-1.195-1.279-2.897-2.079-4.788-2.079-3.623 0-6.56 2.937-6.56 6.556 0 0.52 0.060 1.020 0.169 1.499-5.453-0.257-10.287-2.876-13.521-6.835-0.569 0.963-0.888 2.081-0.888 3.3 0 2.28 1.16 4.284 2.917 5.461-1.076-0.035-2.088-0.331-2.971-0.821v0.081c0 3.18 2.257 5.832 5.261 6.436-0.551 0.148-1.132 0.228-1.728 0.228-0.419 0-0.82-0.040-1.221-0.115 0.841 2.604 3.26 4.503 6.139 4.556-2.24 1.759-5.079 2.807-8.136 2.807-0.52 0-1.039-0.031-1.56-0.089 2.919 1.859 6.357 2.945 10.076 2.945 12.072 0 18.665-9.995 18.665-18.648 0-0.279 0-0.56-0.020-0.84 1.281-0.919 2.4-2.080 3.28-3.397l-0.063-0.027z"></path>
+                        </svg>
+                        								Twitter</a></li>
+                  <li><a href="https://w3.org/WAI/feed.xml">
+                        <svg focusable="false" aria-hidden="true" class="icon-rss" viewBox="0 0 32 32">
+                           <path d="M25.599 32c0-14.044-11.555-25.6-25.599-25.6v-6.4c17.553 0 32 14.447 32 32h-6.401zM4.388 23.22c2.419 0 4.391 1.972 4.391 4.393 0 2.417-1.98 4.387-4.401 4.387-2.417 0-4.377-1.965-4.377-4.387s1.967-4.392 4.388-4.393zM21.212 32h-6.22c0-8.225-6.767-14.993-14.992-14.993v-6.22c11.636 0 21.212 9.579 21.212 21.213z"></path>
+                        </svg>
+                        								Feed</a></li>
+                  <li><a href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv">
+                        <svg focusable="false" aria-hidden="true" class="icon-youtube" viewBox="0 0 32 32">
+                           <path d="M31.327 8.273c-0.386-1.353-1.431-2.398-2.756-2.777l-0.028-0.007c-2.493-0.668-12.528-0.668-12.528-0.668s-10.009-0.013-12.528 0.668c-1.353 0.386-2.398 1.431-2.777 2.756l-0.007 0.028c-0.443 2.281-0.696 4.903-0.696 7.585 0 0.054 0 0.109 0 0.163l-0-0.008c-0 0.037-0 0.082-0 0.126 0 2.682 0.253 5.304 0.737 7.845l-0.041-0.26c0.386 1.353 1.431 2.398 2.756 2.777l0.028 0.007c2.491 0.669 12.528 0.669 12.528 0.669s10.008 0 12.528-0.669c1.353-0.386 2.398-1.431 2.777-2.756l0.007-0.028c0.425-2.233 0.668-4.803 0.668-7.429 0-0.099-0-0.198-0.001-0.297l0 0.015c0.001-0.092 0.001-0.201 0.001-0.31 0-2.626-0.243-5.196-0.708-7.687l0.040 0.258zM12.812 20.801v-9.591l8.352 4.803z"></path>
+                        </svg>
+                        								YouTube</a></li>
+                  <li><a href="https://w3.org/WAI/news/subscribe/" class="button">Get News in Email</a></li>
+               </ul>
+            </div>
+            <div dir="auto" translate="no" lang="en">
+               <p>
+                  						Copyright © 2019 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+                  						<a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+                  										<a href="https://ev.buaa.edu.cn">Beihang</a>)
+                  										<a href="https://w3.org/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
+                  					
+               </p>
+            </div>
+         </div>
+         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+            <ul style="margin-bottom: 0;">
+               <li><a href="https://w3.org/WAI/about/contacting/">Contact WAI</a></li>
+               <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
+               <li><a href="https://w3.org/WAI/news/">News</a></li>
+               <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
+               <li><a href="https://w3.org/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
+               <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
+               <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
+            </ul>
+         </div>
+      </footer>
    </body>
 </html>

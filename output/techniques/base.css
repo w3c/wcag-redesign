@@ -1,14 +1,11 @@
-main {
-    display: block;
+.nav-container {
     background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
-}
-
-.nav {
     margin-bottom: 2em;
 }
 
 .nav__item a {
     display: inline-block;
+    padding: 0.75em;
 }
 
 .nav__item a svg {
@@ -19,14 +16,17 @@ main {
 .nav__item a+button {
     margin-left: -0.75em;
     margin-right: 1em;
-    ;
 }
 
-.tool-header {
+.tool-header,
+.nav-container .nav {
     -ms-grid-column: 2;
     -ms-grid-column-span: 8;
     -ms-grid-row: 1;
     grid-column: 2 / 10;
+}
+
+.tool-header {
     max-height: 3em;
 }
 
@@ -83,6 +83,10 @@ h2 .fragmentlink svg {
 
 h2:hover .fragmentlink svg {
     visibility: visible;
+}
+
+.your-report h2 {
+    margin-top: 0;
 }
 
 .understanding-list li {

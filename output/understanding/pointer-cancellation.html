@@ -11,286 +11,364 @@
          <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.1: Understanding documents</a></span><div class="tool-header-logo"><a href="http://w3.org/"><img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" /></a><a href="http://w3.org/WAI/"><img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" /></a></div>
          </div>
       </header>
-      <main>
-         <div class="default-grid leftcol">
-            <nav class="nav" aria-label="Meta navigation">
-               <ul>
-                  <li class="nav__item"><a href="#">About Understanding documents</a></li>
-                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
-                  <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a><div id="explain-supporting-documents" hidden="">
-                        <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
-                           documents.
-                        </p>
-                        <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
-                     </div>
-                  </li>
-               </ul>
-            </nav>
-            <section class="main-content">
-               <h1>Understanding Success Criterion 2.5.2: Pointer Cancellation</h1>
-               <blockquote class="scquote">
-                  <p>Success Criterion <a href="/guidelines/#pointer-cancellation" style="font-weight: bold;">2.5.2 Pointer Cancellation</a> (Level A): For <a href="#dfn-functionality">functionality</a> that can be operated using a <a href="#dfn-single-pointer">single pointer</a>, at least one of the following is true:
-                  </p>
-                  <dl>
-                     
-                     
-                     <dt>No Down-Event</dt>
-                     
-                     <dd>The <a href="#dfn-down-event">down-event</a> of the pointer is not used to execute any part of the function;
-                     </dd>
-                     						
-                     
-                     <dt>Abort or Undo</dt>
-                     
-                     <dd>Completion of the function is on the <a href="#dfn-up-event">up-event</a>, and a <a href="#dfn-mechanism">mechanism</a> is available to abort the function before completion or to undo the function after
-                        completion;
-                     </dd>
-                     						
-                     
-                     <dt>Up Reversal</dt>
-                     
-                     <dd>The up-event reverses any outcome of the preceding down-event;</dd>
-                     						
-                     
-                     <dt>Essential</dt>
-                     
-                     <dd>Completing the function on the down-event is <a href="#dfn-essential">essential</a>.
-                     </dd>
-                     						
-                     
-                  </dl>
-                  <p class="note">Functions that emulate a keyboard or numeric keypad key press are considered essential.</p>
-                  <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this
-                     does not apply to actions that are required to operate the user agent or assistive
-                     technology).
-                  </p>
-               </blockquote>
-               <section id="intent">
-                  <h2>Intent</h2>
-                  <p>The intent of this success criterion is to make it easier for users to prevent accidental
-                     or erroneous pointer input. People with various disabilities can inadvertently initiate
-                     touch or mouse events with unwanted results. Each of the following subsections roughly
-                     aligns with the bullets of this Success Criterion, and outlines a means of allowing
-                     users to cancel pointer operations.
-                  </p>
-                  <section id="up-event-activation-or-completion">
-                     			
-                     <h3>Up-Event activation or completion</h3>
-                     			
-                     <p>The most accessible way to incorporate pointer cancellation is to make activation
-                        occur on the up-event.
+      <div class="default-grid nav-container">
+         <nav class="nav" aria-label="Meta navigation">
+            <ul>
+               <li class="nav__item"><a href="#">About Understanding documents</a></li>
+               <li class="nav__item"><a href=".">All Understanding documents</a></li>
+               <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
+                     									
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                     </svg></a><div id="explain-supporting-documents" hidden="">
+                     <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
+                        documents.
                      </p>
-                     
-                     
-                     <p>Up-event activation refers to the activation of a target when the pointer is released.
-                        In a touchscreen interaction, when the finger touches a target, the up-event activation
-                        only occurs when the finger is lifted while still being within the target boundary.
-                        Similarly in mouse interaction, the up-event occurs when the mouse button is released
-                        while the cursor is still within the boundary of the initial target set when the mouse
-                        button was pressed.
-                     </p>
-                     
-                     <p>Authors can reduce the problem of users inadvertently triggering an action by using
-                        generic platform activation/click events that activate functionality on the up-event.
-                        For example, the <code>click</code> event in JavaScript triggers on release of the primary mouse button, and is an example
-                        of an implicit up-event. Despite its name, the <code>click</code> event is device-independent and also works for touch and keyboard interaction.
-                     </p>
-                     
-                     <p>The preference for up-events is implicit in the Success Criterion wording of the first
-                        bullet: <q>The down-event of the pointer is not used to execute any part of the function.</q> Authors meet the first bullet by using only the up-event.
-                     </p> 
-                     			
-                  </section>
-                  <section id="up-event-abort-or-undo">
-                     
-                     <h3>Up-Event Abort or Undo</h3>
-                     
-                     <p>Where the interaction is equivalent to a simple "click", up-event activation has a
-                        built-in ability to cancel. There is a distinction between when someone touches a
-                        screen and when they remove their finger. Similarly, in mouse interaction, there is
-                        a difference between pressing and releasing the mouse button. When activation occurs
-                        only as the pointer is released, users have the opportunity to Abort (cancel) the
-                        activation. Users who have difficulty accurately using a mouse or touchscreen benefit
-                        greatly from this basic behaviour. They normally receive visual feedback when an item
-                        is pressed. If they discover they have selected the wrong item, they can cancel the
-                        action by moving their pointer or finger away from the target before releasing.
-                     </p>
-                     			
-                     
-                     <p>For more complex interactions, such as drag and drop, the down- and up-events may
-                        initiate and end a series of actions to complete a process. For example, with drag
-                        and drop, the item may be:
-                     </p>
-                     
-                     <ol>
-                        
-                        <li>selected with a press (down-event),</li>
-                        
-                        <li>moved to a new location, while still being depressed, and</li>
-                        
-                        <li>released (up-event) to conclude the drop action.</li>
-                        
-                     </ol>
-                     
-                     <p>In such a complex action, the need for an Abort or Undo function increases. Designers
-                        may elect to confirm the move through something like a confirmation dialog or an undo
-                        button, giving the user the ability to Undo the process just completed. Alternatively,
-                        the ability to Abort the action can be acheived if, before completing step 3, the
-                        user returns the selected item to its original location and concludes the process
-                        there. If other parts of the screen disallow a move, the user can conclude the drag
-                        and drop there, effectively nullifying the operation.
-                     </p> 
-                     			
-                  </section>
-                  <section id="up-reversal">
-                     
-                     <h3>Up Reversal</h3>
-                     
-                     <p>In other interactions, the down-event may trigger a behaviour which can be reversed
-                        when the up-event concludes. Examples of this include press-and-hold actions such
-                        as where a transient popup appears (or a video plays) when the user presses on an
-                        object (down-event), but the popup (or video) disappears as soon as the user releases
-                        the pointer (up-event). Since the up-event reverses the preceding down event, the
-                        user is returned to their prior point, and has effectively cancelled the operation.
-                     </p>
-                     			
-                  </section>
-                  <section id="down-event">
-                     
-                     <h3>Down-Event</h3>
-                     
-                     <p>Completing the function on the down-event is only permitted when it is essential that
-                        the up-event not be used.
-                     </p>
-                     
-                     <p>The most prevalent essential down-event activation occurs in keyboard emulation. On
-                        a physical keyboard, keys by default activate on the down-event -- a letter appears
-                        when the key is pressed. If a software keyboard emulator tried to override this expected
-                        behaviour by making letters appear when the key is released, the behaviour would be
-                        unexpected and would adversely affect expected interaction.
-                     </p>
-                     
-                     <p>Note that a keyboard has a built-in Backspace or Delete button, which effectively
-                        provides an Undo option. Undo is not a requirement of the down-event Essential exception;
-                        however, providing an easy way for users to undo any action is a recommended practice
-                        (and may be a functional necessity), even where it is not a requirement of this Success
-                        Criterion.
-                     </p>
-                     			
-                     <p>Other examples where the timing of an activation is essential and requires the down-event
-                        would be:
-                     </p>
-                     			
-                     <ul>
-                        				
-                        <li>An activity that emulates a physical on-press trigger, such as when playing an on-screen
-                           piano keyboard. Activation on the up-event would significantly alter the desired behaviour.
-                        </li>
-                        				
-                        <li>A program for shooting skeets where waiting for the "up" event would invalidate the
-                           precise timing necessary for the activation.
-                        </li>
-                        			
-                     </ul>
-                     			
-                  </section>
-               </section>
-               <section id="benefits">
-                  <h2>Benefits</h2>
-                  <ul>
-                     					
-                     <li>Makes it easier for all users to recover from hitting the wrong target.</li>
-                     					
-                     <li>Helps people with visual disabilities, cognitive limitations, and motor impairments
-                        by reducing the chance that a control will be accidentally activated or an action
-                        will occur unexpectedly, and also ensures that where complex controls are activated,
-                        a means of Undoing or Aborting the action is available.
-                     </li>
-                     					
-                     <li>Individuals who are unable to detect changes of context are less likely to become
-                        disoriented while navigating a site.
-                     </li>
-                     				
-                  </ul>
-               </section>
-               <section id="examples">
-                  <h2>Examples</h2>
-                  <ul>
-                     				
-                     <li>For interface elements that have a single tap or long press as input, the corresponding
-                        event is triggered when the finger is lifted inside that element.
-                     </li>
-                     				
-                     
-                     <li>A drag-and-drop interface allows users to sort vertically stacked cards by picking
-                        up one card with the pointer (down-event), move it to a new position, and insert it
-                        at the new location when the pointer is released (up-event). Releasing the pointer
-                        outside the drop target area reverts the action, i.e., it moves the card back to the
-                        old position before the interaction started.
-                     </li>
-                     			
-                  </ul>
-               </section>
-               <section id="techniques">
-                  <h2>Techniques</h2>
-                  <p>Each numbered item in this section represents a technique or combination of techniques
-                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                     it is not necessary to use these particular techniques. For information on using other
-                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-                  </p>
-                  <section id="sufficient">
-                     <h3>Sufficient Techniques</h3>
-                     <ul>
-                        						
-                        <li><a class="general" href="/techniques/general/G210">G210: Ensuring that drag-and-drop actions can be cancelled</a></li>
-                        						
-                        <li><a class="general" href="/techniques/general/G212">G212: Using native controls to ensure functionality is triggered on the up-event.</a></li>
-                        						
-                        <li>@@ Touch events are only triggered when touch is removed from a control.</li>		
-                        					
-                     </ul>
-                  </section>
-                  <section id="failure">
-                     <h3>Failures</h3>
-                     <p>The following are common mistakes that are considered failures of this Success Criterion
-                        by the WCAG Working Group.
-                     </p>
-                     <ul>
-                        					
-                        <li><a href="/techniques/failures/F101">F101: Failure of Success Criterion 2.5.2 due to activating a control on the down-event</a></li>
-                        				
-                     </ul>
-                  </section>
-               </section>
-               <nav class="pager" aria-label="Previous/Next Page">
-                  <ul id="navigation">
-                     <li><a href="input-modalities"><abbr title="Guideline">GL</abbr>: Input Modalities</a></li>
-                     <li><a href="pointer-gestures">Previous <abbr title="Success Criterion">SC</abbr>: Pointer Gestures</a></li>
-                     <li><a href="label-in-name">Next <abbr title="Success Criterion">SC</abbr>: Label in Name</a></li>
-                  </ul>
-               </nav>
-            </section>
-            <aside class="your-report your-report--expanded sidebar" tabindex="-1">
-               <h2 style="margin-top: 0">About this page</h2>
-               <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
+                     <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+      </div>
+      <div class="default-grid">
+         <main class="main-content">
+            <h1>Understanding Success Criterion 2.5.2: Pointer Cancellation</h1>
+            <blockquote class="scquote">
+               <p>Success Criterion <a href="/guidelines/#pointer-cancellation" style="font-weight: bold;">2.5.2 Pointer Cancellation</a> (Level A): For <a href="#dfn-functionality">functionality</a> that can be operated using a <a href="#dfn-single-pointer">single pointer</a>, at least one of the following is true:
                </p>
                <dl>
-                  <dt>Level</dt>
-                  <dd>A</dd>
-                  <dt>Key terms</dt>
-                  <li id="dfn-down-event"><a href="/guidelines/#dfn-down-event">down-event</a></li>
-                  <li id="dfn-essential"><a href="/guidelines/#dfn-essential">essential</a></li>
-                  <li id="dfn-functionality"><a href="/guidelines/#dfn-functionality">functionality</a></li>
-                  <li id="dfn-mechanism"><a href="/guidelines/#dfn-mechanism">mechanism</a></li>
-                  <li id="dfn-single-pointer"><a href="/guidelines/#dfn-single-pointer">single pointer</a></li>
-                  <li id="dfn-up-event"><a href="/guidelines/#dfn-up-event">up-event</a></li>
+                  
+                  
+                  <dt>No Down-Event</dt>
+                  
+                  <dd>The <a href="#dfn-down-event">down-event</a> of the pointer is not used to execute any part of the function;
+                  </dd>
+                  						
+                  
+                  <dt>Abort or Undo</dt>
+                  
+                  <dd>Completion of the function is on the <a href="#dfn-up-event">up-event</a>, and a <a href="#dfn-mechanism">mechanism</a> is available to abort the function before completion or to undo the function after
+                     completion;
+                  </dd>
+                  						
+                  
+                  <dt>Up Reversal</dt>
+                  
+                  <dd>The up-event reverses any outcome of the preceding down-event;</dd>
+                  						
+                  
+                  <dt>Essential</dt>
+                  
+                  <dd>Completing the function on the down-event is <a href="#dfn-essential">essential</a>.
+                  </dd>
+                  						
+                  
                </dl>
-            </aside>
+               <p class="note">Functions that emulate a keyboard or numeric keypad key press are considered essential.</p>
+               <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this
+                  does not apply to actions that are required to operate the user agent or assistive
+                  technology).
+               </p>
+            </blockquote>
+            <section id="intent">
+               <h2>Intent</h2>
+               <p>The intent of this success criterion is to make it easier for users to prevent accidental
+                  or erroneous pointer input. People with various disabilities can inadvertently initiate
+                  touch or mouse events with unwanted results. Each of the following subsections roughly
+                  aligns with the bullets of this Success Criterion, and outlines a means of allowing
+                  users to cancel pointer operations.
+               </p>
+               <section id="up-event-activation-or-completion">
+                  			
+                  <h3>Up-Event activation or completion</h3>
+                  			
+                  <p>The most accessible way to incorporate pointer cancellation is to make activation
+                     occur on the up-event.
+                  </p>
+                  
+                  
+                  <p>Up-event activation refers to the activation of a target when the pointer is released.
+                     In a touchscreen interaction, when the finger touches a target, the up-event activation
+                     only occurs when the finger is lifted while still being within the target boundary.
+                     Similarly in mouse interaction, the up-event occurs when the mouse button is released
+                     while the cursor is still within the boundary of the initial target set when the mouse
+                     button was pressed.
+                  </p>
+                  
+                  <p>Authors can reduce the problem of users inadvertently triggering an action by using
+                     generic platform activation/click events that activate functionality on the up-event.
+                     For example, the <code>click</code> event in JavaScript triggers on release of the primary mouse button, and is an example
+                     of an implicit up-event. Despite its name, the <code>click</code> event is device-independent and also works for touch and keyboard interaction.
+                  </p>
+                  
+                  <p>The preference for up-events is implicit in the Success Criterion wording of the first
+                     bullet: <q>The down-event of the pointer is not used to execute any part of the function.</q> Authors meet the first bullet by using only the up-event.
+                  </p> 
+                  			
+               </section>
+               <section id="up-event-abort-or-undo">
+                  
+                  <h3>Up-Event Abort or Undo</h3>
+                  
+                  <p>Where the interaction is equivalent to a simple "click", up-event activation has a
+                     built-in ability to cancel. There is a distinction between when someone touches a
+                     screen and when they remove their finger. Similarly, in mouse interaction, there is
+                     a difference between pressing and releasing the mouse button. When activation occurs
+                     only as the pointer is released, users have the opportunity to Abort (cancel) the
+                     activation. Users who have difficulty accurately using a mouse or touchscreen benefit
+                     greatly from this basic behaviour. They normally receive visual feedback when an item
+                     is pressed. If they discover they have selected the wrong item, they can cancel the
+                     action by moving their pointer or finger away from the target before releasing.
+                  </p>
+                  			
+                  
+                  <p>For more complex interactions, such as drag and drop, the down- and up-events may
+                     initiate and end a series of actions to complete a process. For example, with drag
+                     and drop, the item may be:
+                  </p>
+                  
+                  <ol>
+                     
+                     <li>selected with a press (down-event),</li>
+                     
+                     <li>moved to a new location, while still being depressed, and</li>
+                     
+                     <li>released (up-event) to conclude the drop action.</li>
+                     
+                  </ol>
+                  
+                  <p>In such a complex action, the need for an Abort or Undo function increases. Designers
+                     may elect to confirm the move through something like a confirmation dialog or an undo
+                     button, giving the user the ability to Undo the process just completed. Alternatively,
+                     the ability to Abort the action can be acheived if, before completing step 3, the
+                     user returns the selected item to its original location and concludes the process
+                     there. If other parts of the screen disallow a move, the user can conclude the drag
+                     and drop there, effectively nullifying the operation.
+                  </p> 
+                  			
+               </section>
+               <section id="up-reversal">
+                  
+                  <h3>Up Reversal</h3>
+                  
+                  <p>In other interactions, the down-event may trigger a behaviour which can be reversed
+                     when the up-event concludes. Examples of this include press-and-hold actions such
+                     as where a transient popup appears (or a video plays) when the user presses on an
+                     object (down-event), but the popup (or video) disappears as soon as the user releases
+                     the pointer (up-event). Since the up-event reverses the preceding down event, the
+                     user is returned to their prior point, and has effectively cancelled the operation.
+                  </p>
+                  			
+               </section>
+               <section id="down-event">
+                  
+                  <h3>Down-Event</h3>
+                  
+                  <p>Completing the function on the down-event is only permitted when it is essential that
+                     the up-event not be used.
+                  </p>
+                  
+                  <p>The most prevalent essential down-event activation occurs in keyboard emulation. On
+                     a physical keyboard, keys by default activate on the down-event -- a letter appears
+                     when the key is pressed. If a software keyboard emulator tried to override this expected
+                     behaviour by making letters appear when the key is released, the behaviour would be
+                     unexpected and would adversely affect expected interaction.
+                  </p>
+                  
+                  <p>Note that a keyboard has a built-in Backspace or Delete button, which effectively
+                     provides an Undo option. Undo is not a requirement of the down-event Essential exception;
+                     however, providing an easy way for users to undo any action is a recommended practice
+                     (and may be a functional necessity), even where it is not a requirement of this Success
+                     Criterion.
+                  </p>
+                  			
+                  <p>Other examples where the timing of an activation is essential and requires the down-event
+                     would be:
+                  </p>
+                  			
+                  <ul>
+                     				
+                     <li>An activity that emulates a physical on-press trigger, such as when playing an on-screen
+                        piano keyboard. Activation on the up-event would significantly alter the desired behaviour.
+                     </li>
+                     				
+                     <li>A program for shooting skeets where waiting for the "up" event would invalidate the
+                        precise timing necessary for the activation.
+                     </li>
+                     			
+                  </ul>
+                  			
+               </section>
+            </section>
+            <section id="benefits">
+               <h2>Benefits</h2>
+               <ul>
+                  					
+                  <li>Makes it easier for all users to recover from hitting the wrong target.</li>
+                  					
+                  <li>Helps people with visual disabilities, cognitive limitations, and motor impairments
+                     by reducing the chance that a control will be accidentally activated or an action
+                     will occur unexpectedly, and also ensures that where complex controls are activated,
+                     a means of Undoing or Aborting the action is available.
+                  </li>
+                  					
+                  <li>Individuals who are unable to detect changes of context are less likely to become
+                     disoriented while navigating a site.
+                  </li>
+                  				
+               </ul>
+            </section>
+            <section id="examples">
+               <h2>Examples</h2>
+               <ul>
+                  				
+                  <li>For interface elements that have a single tap or long press as input, the corresponding
+                     event is triggered when the finger is lifted inside that element.
+                  </li>
+                  				
+                  
+                  <li>A drag-and-drop interface allows users to sort vertically stacked cards by picking
+                     up one card with the pointer (down-event), move it to a new position, and insert it
+                     at the new location when the pointer is released (up-event). Releasing the pointer
+                     outside the drop target area reverts the action, i.e., it moves the card back to the
+                     old position before the interaction started.
+                  </li>
+                  			
+               </ul>
+            </section>
+            <section id="techniques">
+               <h2>Techniques</h2>
+               <p>Each numbered item in this section represents a technique or combination of techniques
+                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                  it is not necessary to use these particular techniques. For information on using other
+                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+               </p>
+               <section id="sufficient">
+                  <h3>Sufficient Techniques</h3>
+                  <ul>
+                     						
+                     <li><a class="general" href="/techniques/general/G210">G210: Ensuring that drag-and-drop actions can be cancelled</a></li>
+                     						
+                     <li><a class="general" href="/techniques/general/G212">G212: Using native controls to ensure functionality is triggered on the up-event.</a></li>
+                     						
+                     <li>@@ Touch events are only triggered when touch is removed from a control.</li>		
+                     					
+                  </ul>
+               </section>
+               <section id="failure">
+                  <h3>Failures</h3>
+                  <p>The following are common mistakes that are considered failures of this Success Criterion
+                     by the WCAG Working Group.
+                  </p>
+                  <ul>
+                     					
+                     <li><a href="/techniques/failures/F101">F101: Failure of Success Criterion 2.5.2 due to activating a control on the down-event</a></li>
+                     				
+                  </ul>
+               </section>
+            </section>
+            <nav class="pager" aria-label="Previous/Next Page">
+               <ul id="navigation">
+                  <li><a href="input-modalities"><abbr title="Guideline">GL</abbr>: Input Modalities</a></li>
+                  <li><a href="pointer-gestures">Previous <abbr title="Success Criterion">SC</abbr>: Pointer Gestures</a></li>
+                  <li><a href="label-in-name">Next <abbr title="Success Criterion">SC</abbr>: Label in Name</a></li>
+               </ul>
+            </nav>
+         </main>
+         <aside class="your-report your-report--expanded sidebar">
+            <h2>About this page</h2>
+            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
+            </p>
+            <dl>
+               <dt>Level</dt>
+               <dd>A</dd>
+               <dt>Key terms</dt>
+               <li id="dfn-down-event"><a href="/guidelines/#dfn-down-event">down-event</a></li>
+               <li id="dfn-essential"><a href="/guidelines/#dfn-essential">essential</a></li>
+               <li id="dfn-functionality"><a href="/guidelines/#dfn-functionality">functionality</a></li>
+               <li id="dfn-mechanism"><a href="/guidelines/#dfn-mechanism">mechanism</a></li>
+               <li id="dfn-single-pointer"><a href="/guidelines/#dfn-single-pointer">single pointer</a></li>
+               <li id="dfn-up-event"><a href="/guidelines/#dfn-up-event">up-event</a></li>
+            </dl>
+         </aside>
+      </div>
+      <div class="default-grid">
+         <aside class="box box-icon box-space-above" id="helpimprove" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <header class="box-h box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2>Help improve this page</h2>
+            </header>
+            <div class="box-i">
+               <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
+                  list  <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub.
+               </p>
+               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniquesl&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+            </div>
+         </aside>
+      </div>
+      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
+         <div class="inner" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <p><strong>Date:</strong> Published 29 June 2020.
+            </p>
+            <p><strong>Authors</strong>:
+               					<a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a>.
+               					<strong>Editors</strong>:
+               					<a href="group-ag-chairs@w3.org">Alastair Campbell, Michael Cooper, Andrew Kirkpatrick</a>.
+               				
+            </p>
          </div>
-      </main>
+      </footer>
+      <footer class="site-footer grid-4q" aria-label="Site">
+         <div class="q1-start q3-end about">
+            <div>
+               <p><a class="largelink" href="https://w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
+               <p>Strategies, standards, and supporting resources to make the Web accessible to people
+                  with disabilities.
+               </p>
+            </div>
+            <div class="social" dir="auto" translate="no" lang="en">
+               <ul>
+                  <li><a href="https://twitter.com/w3c_wai">
+                        <svg focusable="false" aria-hidden="true" class="icon-twitter" viewBox="0 0 32 32">
+                           <path d="M31.939 6.092c-1.18 0.519-2.44 0.872-3.767 1.033 1.352-0.815 2.392-2.099 2.884-3.631-1.268 0.74-2.673 1.279-4.169 1.579-1.195-1.279-2.897-2.079-4.788-2.079-3.623 0-6.56 2.937-6.56 6.556 0 0.52 0.060 1.020 0.169 1.499-5.453-0.257-10.287-2.876-13.521-6.835-0.569 0.963-0.888 2.081-0.888 3.3 0 2.28 1.16 4.284 2.917 5.461-1.076-0.035-2.088-0.331-2.971-0.821v0.081c0 3.18 2.257 5.832 5.261 6.436-0.551 0.148-1.132 0.228-1.728 0.228-0.419 0-0.82-0.040-1.221-0.115 0.841 2.604 3.26 4.503 6.139 4.556-2.24 1.759-5.079 2.807-8.136 2.807-0.52 0-1.039-0.031-1.56-0.089 2.919 1.859 6.357 2.945 10.076 2.945 12.072 0 18.665-9.995 18.665-18.648 0-0.279 0-0.56-0.020-0.84 1.281-0.919 2.4-2.080 3.28-3.397l-0.063-0.027z"></path>
+                        </svg>
+                        								Twitter</a></li>
+                  <li><a href="https://w3.org/WAI/feed.xml">
+                        <svg focusable="false" aria-hidden="true" class="icon-rss" viewBox="0 0 32 32">
+                           <path d="M25.599 32c0-14.044-11.555-25.6-25.599-25.6v-6.4c17.553 0 32 14.447 32 32h-6.401zM4.388 23.22c2.419 0 4.391 1.972 4.391 4.393 0 2.417-1.98 4.387-4.401 4.387-2.417 0-4.377-1.965-4.377-4.387s1.967-4.392 4.388-4.393zM21.212 32h-6.22c0-8.225-6.767-14.993-14.992-14.993v-6.22c11.636 0 21.212 9.579 21.212 21.213z"></path>
+                        </svg>
+                        								Feed</a></li>
+                  <li><a href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv">
+                        <svg focusable="false" aria-hidden="true" class="icon-youtube" viewBox="0 0 32 32">
+                           <path d="M31.327 8.273c-0.386-1.353-1.431-2.398-2.756-2.777l-0.028-0.007c-2.493-0.668-12.528-0.668-12.528-0.668s-10.009-0.013-12.528 0.668c-1.353 0.386-2.398 1.431-2.777 2.756l-0.007 0.028c-0.443 2.281-0.696 4.903-0.696 7.585 0 0.054 0 0.109 0 0.163l-0-0.008c-0 0.037-0 0.082-0 0.126 0 2.682 0.253 5.304 0.737 7.845l-0.041-0.26c0.386 1.353 1.431 2.398 2.756 2.777l0.028 0.007c2.491 0.669 12.528 0.669 12.528 0.669s10.008 0 12.528-0.669c1.353-0.386 2.398-1.431 2.777-2.756l0.007-0.028c0.425-2.233 0.668-4.803 0.668-7.429 0-0.099-0-0.198-0.001-0.297l0 0.015c0.001-0.092 0.001-0.201 0.001-0.31 0-2.626-0.243-5.196-0.708-7.687l0.040 0.258zM12.812 20.801v-9.591l8.352 4.803z"></path>
+                        </svg>
+                        								YouTube</a></li>
+                  <li><a href="https://w3.org/WAI/news/subscribe/" class="button">Get News in Email</a></li>
+               </ul>
+            </div>
+            <div dir="auto" translate="no" lang="en">
+               <p>
+                  						Copyright © 2019 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+                  						<a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+                  										<a href="https://ev.buaa.edu.cn">Beihang</a>)
+                  										<a href="https://w3.org/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
+                  					
+               </p>
+            </div>
+         </div>
+         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+            <ul style="margin-bottom: 0;">
+               <li><a href="https://w3.org/WAI/about/contacting/">Contact WAI</a></li>
+               <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
+               <li><a href="https://w3.org/WAI/news/">News</a></li>
+               <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
+               <li><a href="https://w3.org/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
+               <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
+               <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
+            </ul>
+         </div>
+      </footer>
    </body>
 </html>

@@ -11,260 +11,338 @@
          <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.1: Understanding documents</a></span><div class="tool-header-logo"><a href="http://w3.org/"><img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" /></a><a href="http://w3.org/WAI/"><img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" /></a></div>
          </div>
       </header>
-      <main>
-         <div class="default-grid leftcol">
-            <nav class="nav" aria-label="Meta navigation">
+      <div class="default-grid nav-container">
+         <nav class="nav" aria-label="Meta navigation">
+            <ul>
+               <li class="nav__item"><a href="#">About Understanding documents</a></li>
+               <li class="nav__item"><a href=".">All Understanding documents</a></li>
+               <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
+                     									
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                     </svg></a><div id="explain-supporting-documents" hidden="">
+                     <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
+                        documents.
+                     </p>
+                     <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+      </div>
+      <div class="default-grid">
+         <main class="main-content">
+            <h1>Understanding Success Criterion 2.2.5: Re-authenticating</h1>
+            <blockquote class="scquote">
+               <p>Success Criterion <a href="/guidelines/#re-authenticating" style="font-weight: bold;">2.2.5 Re-authenticating</a> (Level AAA): When an authenticated session expires, the user can continue the activity without
+                  loss of data after re-authenticating.
+                  
+               </p>
+            </blockquote>
+            <section id="intent">
+               <h2>Intent</h2>
+               <p>The intent of this Success Criterion is to allow all users to complete authenticated
+                  transactions that have inactivity time limits or other circumstances that would cause
+                  a user to be logged out while in the midst of completing the transaction.
+                  
+               </p>
+               <p>For security reasons, many sites implement an authentication time limit after a certain
+                  period of inactivity. These time limits may cause problems for persons with disabilities
+                  because it may take longer for them to complete the activity. 
+                  
+               </p>
+               <p>Other sites will log a person out of a session if a person logs in on the Web site
+                  from another computer or if other activities arise that make the site suspicious of
+                  whether the person is still the same legitimate person who logged in originally. When
+                  users are logged out while still in the midst of a transaction - it is important that
+                  they be given the ability to re-authenticate and continue with the transaction without
+                  the loss of any data already entered.
+                  
+                  
+               </p>
+            </section>
+            <section id="benefits">
+               <h2>Benefits</h2>
                <ul>
-                  <li class="nav__item"><a href="#">About Understanding documents</a></li>
-                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
-                  <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a><div id="explain-supporting-documents" hidden="">
-                        <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
-                           documents.
-                        </p>
-                        <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
-                     </div>
+                  
+                  
+                  <li>This Success Criterion benefits people who may require additional time to complete
+                     an activity. People with cognitive limitations may read slowly and require additional
+                     time to read and respond to a questionnaire. Users interacting via a screen reader
+                     may need extra time to navigate and complete a complicated form. 
+                     A person with motor impairments or who navigates with an alternative input device
+                     may require additional time to navigate through or complete input within a form.
+                     
                   </li>
+                  
+                  
+                  <li>In circumstances where a sign-language interpreter may be relating audio content to
+                     a user who is deaf, control over time limits is also important.
+                     
+                  </li>
+                  
+                  
+               </ul>
+            </section>
+            <section id="examples">
+               <h2>Examples</h2>
+               <ul>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>
+                        								       
+                        <strong>A shopping site checkout</strong>
+                        							     
+                        
+                     </p>
+                     
+                     
+                     <p>A user with extremely limited use of the hands is logged into a shopping site. It
+                        takes so long to enter credit card information into the application that a time limit
+                        occurs while the user is performing the checkout process. When the user returns to
+                        the checkout process and submits the form, the site returns a login screen to re-authenticate.
+                        After the user logs in, the check out process is restored with the same information
+                        and at the same stage. The user did not lose any data because the server had temporarily
+                        accepted and stored the submission even though the session had timed out and restored
+                        the user to the same state after re-authentication was completed.
+                        
+                     </p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>
+                        								       
+                        <strong>Authentication in an email program</strong>
+                        							     
+                        
+                     </p>
+                     
+                     
+                     <p>An email program has an authentication time-out after 30 minutes. The program prompts
+                        the user several minutes before the time-out occurs and provides a link to open a
+                        new window in order to re-authenticate. The original window with the in-progress email
+                        remains intact and, after re-authentication, the user may send that data.
+                        
+                     </p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>
+                        								       
+                        <strong>A questionnaire with a time limit
+                           
+                           </strong>
+                        							     
+                        
+                     </p>
+                     
+                     
+                     <p>A long questionnaire provided within a single Web page has information at the beginning
+                        that indicates that the session will time out after 15 minutes. The user is also informed
+                        that the questionnaire can be saved at any point and completed at a later time. Within
+                        the Web page there are several buttons provided to save the partially completed form.
+                        In addition, with JavaScript in the list of accessibility-supported content technologies
+                        that are relied upon, the user can elect to be alerted via a pop-up if the session
+                        is close to timing out. 
+                        
+                     </p>
+                     
+                     
+                  </li>
+                  
+                  
+               </ul>
+            </section>
+            <section id="techniques">
+               <h2>Techniques</h2>
+               <p>Each numbered item in this section represents a technique or combination of techniques
+                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                  it is not necessary to use these particular techniques. For information on using other
+                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+               </p>
+               <section id="sufficient">
+                  <h3>Sufficient Techniques</h3>
+                  <ol>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>
+                           Providing options to continue without loss of data using one of the following techniques:
+                           
+                        </p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="general" href="/techniques/general/G105">G105: Saving data so that it can be used after a user re-authenticates</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="general" href="/techniques/general/G181">G181: Encoding user data as hidden or encrypted data in a re-authorization page</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </li>
+                     
+                     
+                  </ol>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                     <div>
+                        
+                        
+                        <p>Refer to 
+                           <a href="timing-adjustable#techniques" class="understanding">Techniques for Addressing Success Criterion 2.2.1</a> for techniques related to providing notifications about time limits.
+                           
+                           
+                        </p>
+                        
+                        
+                     </div>
+                  </div>
+               </section>
+               <section id="failure">
+                  <h3>Failures</h3>
+                  <p>The following are common mistakes that are considered failures of this Success Criterion
+                     by the WCAG Working Group.
+                  </p>
+                  <ul>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="failure" href="/techniques/failures/F12">F12: Failure of Success Criterion 2.2.5 due to having a session time limit without a mechanism
+                           re-authentication</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                  </ul>
+               </section>
+            </section>
+            <nav class="pager" aria-label="Previous/Next Page">
+               <ul id="navigation">
+                  <li><a href="enough-time"><abbr title="Guideline">GL</abbr>: Enough Time</a></li>
+                  <li><a href="interruptions">Previous <abbr title="Success Criterion">SC</abbr>: Interruptions</a></li>
+                  <li><a href="timeouts">Next <abbr title="Success Criterion">SC</abbr>: Timeouts</a></li>
                </ul>
             </nav>
-            <section class="main-content">
-               <h1>Understanding Success Criterion 2.2.5: Re-authenticating</h1>
-               <blockquote class="scquote">
-                  <p>Success Criterion <a href="/guidelines/#re-authenticating" style="font-weight: bold;">2.2.5 Re-authenticating</a> (Level AAA): When an authenticated session expires, the user can continue the activity without
-                     loss of data after re-authenticating.
-                     
-                  </p>
-               </blockquote>
-               <section id="intent">
-                  <h2>Intent</h2>
-                  <p>The intent of this Success Criterion is to allow all users to complete authenticated
-                     transactions that have inactivity time limits or other circumstances that would cause
-                     a user to be logged out while in the midst of completing the transaction.
-                     
-                  </p>
-                  <p>For security reasons, many sites implement an authentication time limit after a certain
-                     period of inactivity. These time limits may cause problems for persons with disabilities
-                     because it may take longer for them to complete the activity. 
-                     
-                  </p>
-                  <p>Other sites will log a person out of a session if a person logs in on the Web site
-                     from another computer or if other activities arise that make the site suspicious of
-                     whether the person is still the same legitimate person who logged in originally. When
-                     users are logged out while still in the midst of a transaction - it is important that
-                     they be given the ability to re-authenticate and continue with the transaction without
-                     the loss of any data already entered.
-                     
-                     
-                  </p>
-               </section>
-               <section id="benefits">
-                  <h2>Benefits</h2>
-                  <ul>
-                     
-                     
-                     <li>This Success Criterion benefits people who may require additional time to complete
-                        an activity. People with cognitive limitations may read slowly and require additional
-                        time to read and respond to a questionnaire. Users interacting via a screen reader
-                        may need extra time to navigate and complete a complicated form. 
-                        A person with motor impairments or who navigates with an alternative input device
-                        may require additional time to navigate through or complete input within a form.
-                        
-                     </li>
-                     
-                     
-                     <li>In circumstances where a sign-language interpreter may be relating audio content to
-                        a user who is deaf, control over time limits is also important.
-                        
-                     </li>
-                     
-                     
-                  </ul>
-               </section>
-               <section id="examples">
-                  <h2>Examples</h2>
-                  <ul>
-                     
-                     
-                     <li>
-                        
-                        
-                        <p>
-                           								       
-                           <strong>A shopping site checkout</strong>
-                           							     
-                           
-                        </p>
-                        
-                        
-                        <p>A user with extremely limited use of the hands is logged into a shopping site. It
-                           takes so long to enter credit card information into the application that a time limit
-                           occurs while the user is performing the checkout process. When the user returns to
-                           the checkout process and submits the form, the site returns a login screen to re-authenticate.
-                           After the user logs in, the check out process is restored with the same information
-                           and at the same stage. The user did not lose any data because the server had temporarily
-                           accepted and stored the submission even though the session had timed out and restored
-                           the user to the same state after re-authentication was completed.
-                           
-                        </p>
-                        
-                        
-                     </li>
-                     
-                     
-                     <li>
-                        
-                        
-                        <p>
-                           								       
-                           <strong>Authentication in an email program</strong>
-                           							     
-                           
-                        </p>
-                        
-                        
-                        <p>An email program has an authentication time-out after 30 minutes. The program prompts
-                           the user several minutes before the time-out occurs and provides a link to open a
-                           new window in order to re-authenticate. The original window with the in-progress email
-                           remains intact and, after re-authentication, the user may send that data.
-                           
-                        </p>
-                        
-                        
-                     </li>
-                     
-                     
-                     <li>
-                        
-                        
-                        <p>
-                           								       
-                           <strong>A questionnaire with a time limit
-                              
-                              </strong>
-                           							     
-                           
-                        </p>
-                        
-                        
-                        <p>A long questionnaire provided within a single Web page has information at the beginning
-                           that indicates that the session will time out after 15 minutes. The user is also informed
-                           that the questionnaire can be saved at any point and completed at a later time. Within
-                           the Web page there are several buttons provided to save the partially completed form.
-                           In addition, with JavaScript in the list of accessibility-supported content technologies
-                           that are relied upon, the user can elect to be alerted via a pop-up if the session
-                           is close to timing out. 
-                           
-                        </p>
-                        
-                        
-                     </li>
-                     
-                     
-                  </ul>
-               </section>
-               <section id="techniques">
-                  <h2>Techniques</h2>
-                  <p>Each numbered item in this section represents a technique or combination of techniques
-                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                     it is not necessary to use these particular techniques. For information on using other
-                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-                  </p>
-                  <section id="sufficient">
-                     <h3>Sufficient Techniques</h3>
-                     <ol>
-                        
-                        
-                        <li>
-                           
-                           
-                           <p>
-                              Providing options to continue without loss of data using one of the following techniques:
-                              
-                           </p>
-                           
-                           
-                           <ul>
-                              
-                              
-                              <li>
-                                 											             
-                                 <a class="general" href="/techniques/general/G105">G105: Saving data so that it can be used after a user re-authenticates</a>
-                                 										           
-                                 
-                              </li>
-                              
-                              
-                              <li>
-                                 											             
-                                 <a class="general" href="/techniques/general/G181">G181: Encoding user data as hidden or encrypted data in a re-authorization page</a>
-                                 										           
-                                 
-                              </li>
-                              
-                              
-                           </ul>
-                           
-                           
-                        </li>
-                        
-                        
-                     </ol>
-                     <div class="note">
-                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                        <div>
-                           
-                           
-                           <p>Refer to 
-                              <a href="timing-adjustable#techniques" class="understanding">Techniques for Addressing Success Criterion 2.2.1</a> for techniques related to providing notifications about time limits.
-                              
-                              
-                           </p>
-                           
-                           
-                        </div>
-                     </div>
-                  </section>
-                  <section id="failure">
-                     <h3>Failures</h3>
-                     <p>The following are common mistakes that are considered failures of this Success Criterion
-                        by the WCAG Working Group.
-                     </p>
-                     <ul>
-                        
-                        
-                        <li>
-                           									         
-                           <a class="failure" href="/techniques/failures/F12">F12: Failure of Success Criterion 2.2.5 due to having a session time limit without a mechanism
-                              re-authentication</a>
-                           								       
-                           
-                        </li>
-                        
-                        
-                     </ul>
-                  </section>
-               </section>
-               <nav class="pager" aria-label="Previous/Next Page">
-                  <ul id="navigation">
-                     <li><a href="enough-time"><abbr title="Guideline">GL</abbr>: Enough Time</a></li>
-                     <li><a href="interruptions">Previous <abbr title="Success Criterion">SC</abbr>: Interruptions</a></li>
-                     <li><a href="timeouts">Next <abbr title="Success Criterion">SC</abbr>: Timeouts</a></li>
-                  </ul>
-               </nav>
-            </section>
-            <aside class="your-report your-report--expanded sidebar" tabindex="-1">
-               <h2 style="margin-top: 0">About this page</h2>
-               <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
+         </main>
+         <aside class="your-report your-report--expanded sidebar">
+            <h2>About this page</h2>
+            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
+            </p>
+            <dl>
+               <dt>Level</dt>
+               <dd>AAA</dd>
+            </dl>
+         </aside>
+      </div>
+      <div class="default-grid">
+         <aside class="box box-icon box-space-above" id="helpimprove" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <header class="box-h box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2>Help improve this page</h2>
+            </header>
+            <div class="box-i">
+               <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
+                  list  <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub.
                </p>
-               <dl>
-                  <dt>Level</dt>
-                  <dd>AAA</dd>
-               </dl>
-            </aside>
+               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniquesl&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+            </div>
+         </aside>
+      </div>
+      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
+         <div class="inner" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <p><strong>Date:</strong> Published 29 June 2020.
+            </p>
+            <p><strong>Authors</strong>:
+               					<a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a>.
+               					<strong>Editors</strong>:
+               					<a href="group-ag-chairs@w3.org">Alastair Campbell, Michael Cooper, Andrew Kirkpatrick</a>.
+               				
+            </p>
          </div>
-      </main>
+      </footer>
+      <footer class="site-footer grid-4q" aria-label="Site">
+         <div class="q1-start q3-end about">
+            <div>
+               <p><a class="largelink" href="https://w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
+               <p>Strategies, standards, and supporting resources to make the Web accessible to people
+                  with disabilities.
+               </p>
+            </div>
+            <div class="social" dir="auto" translate="no" lang="en">
+               <ul>
+                  <li><a href="https://twitter.com/w3c_wai">
+                        <svg focusable="false" aria-hidden="true" class="icon-twitter" viewBox="0 0 32 32">
+                           <path d="M31.939 6.092c-1.18 0.519-2.44 0.872-3.767 1.033 1.352-0.815 2.392-2.099 2.884-3.631-1.268 0.74-2.673 1.279-4.169 1.579-1.195-1.279-2.897-2.079-4.788-2.079-3.623 0-6.56 2.937-6.56 6.556 0 0.52 0.060 1.020 0.169 1.499-5.453-0.257-10.287-2.876-13.521-6.835-0.569 0.963-0.888 2.081-0.888 3.3 0 2.28 1.16 4.284 2.917 5.461-1.076-0.035-2.088-0.331-2.971-0.821v0.081c0 3.18 2.257 5.832 5.261 6.436-0.551 0.148-1.132 0.228-1.728 0.228-0.419 0-0.82-0.040-1.221-0.115 0.841 2.604 3.26 4.503 6.139 4.556-2.24 1.759-5.079 2.807-8.136 2.807-0.52 0-1.039-0.031-1.56-0.089 2.919 1.859 6.357 2.945 10.076 2.945 12.072 0 18.665-9.995 18.665-18.648 0-0.279 0-0.56-0.020-0.84 1.281-0.919 2.4-2.080 3.28-3.397l-0.063-0.027z"></path>
+                        </svg>
+                        								Twitter</a></li>
+                  <li><a href="https://w3.org/WAI/feed.xml">
+                        <svg focusable="false" aria-hidden="true" class="icon-rss" viewBox="0 0 32 32">
+                           <path d="M25.599 32c0-14.044-11.555-25.6-25.599-25.6v-6.4c17.553 0 32 14.447 32 32h-6.401zM4.388 23.22c2.419 0 4.391 1.972 4.391 4.393 0 2.417-1.98 4.387-4.401 4.387-2.417 0-4.377-1.965-4.377-4.387s1.967-4.392 4.388-4.393zM21.212 32h-6.22c0-8.225-6.767-14.993-14.992-14.993v-6.22c11.636 0 21.212 9.579 21.212 21.213z"></path>
+                        </svg>
+                        								Feed</a></li>
+                  <li><a href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv">
+                        <svg focusable="false" aria-hidden="true" class="icon-youtube" viewBox="0 0 32 32">
+                           <path d="M31.327 8.273c-0.386-1.353-1.431-2.398-2.756-2.777l-0.028-0.007c-2.493-0.668-12.528-0.668-12.528-0.668s-10.009-0.013-12.528 0.668c-1.353 0.386-2.398 1.431-2.777 2.756l-0.007 0.028c-0.443 2.281-0.696 4.903-0.696 7.585 0 0.054 0 0.109 0 0.163l-0-0.008c-0 0.037-0 0.082-0 0.126 0 2.682 0.253 5.304 0.737 7.845l-0.041-0.26c0.386 1.353 1.431 2.398 2.756 2.777l0.028 0.007c2.491 0.669 12.528 0.669 12.528 0.669s10.008 0 12.528-0.669c1.353-0.386 2.398-1.431 2.777-2.756l0.007-0.028c0.425-2.233 0.668-4.803 0.668-7.429 0-0.099-0-0.198-0.001-0.297l0 0.015c0.001-0.092 0.001-0.201 0.001-0.31 0-2.626-0.243-5.196-0.708-7.687l0.040 0.258zM12.812 20.801v-9.591l8.352 4.803z"></path>
+                        </svg>
+                        								YouTube</a></li>
+                  <li><a href="https://w3.org/WAI/news/subscribe/" class="button">Get News in Email</a></li>
+               </ul>
+            </div>
+            <div dir="auto" translate="no" lang="en">
+               <p>
+                  						Copyright © 2019 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+                  						<a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+                  										<a href="https://ev.buaa.edu.cn">Beihang</a>)
+                  										<a href="https://w3.org/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
+                  					
+               </p>
+            </div>
+         </div>
+         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+            <ul style="margin-bottom: 0;">
+               <li><a href="https://w3.org/WAI/about/contacting/">Contact WAI</a></li>
+               <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
+               <li><a href="https://w3.org/WAI/news/">News</a></li>
+               <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
+               <li><a href="https://w3.org/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
+               <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
+               <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
+            </ul>
+         </div>
+      </footer>
    </body>
 </html>

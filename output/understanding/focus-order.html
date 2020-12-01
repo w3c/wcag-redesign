@@ -11,379 +11,457 @@
          <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.1: Understanding documents</a></span><div class="tool-header-logo"><a href="http://w3.org/"><img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" /></a><a href="http://w3.org/WAI/"><img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" /></a></div>
          </div>
       </header>
-      <main>
-         <div class="default-grid leftcol">
-            <nav class="nav" aria-label="Meta navigation">
-               <ul>
-                  <li class="nav__item"><a href="#">About Understanding documents</a></li>
-                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
-                  <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a><div id="explain-supporting-documents" hidden="">
-                        <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
-                           documents.
-                        </p>
-                        <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
-                     </div>
+      <div class="default-grid nav-container">
+         <nav class="nav" aria-label="Meta navigation">
+            <ul>
+               <li class="nav__item"><a href="#">About Understanding documents</a></li>
+               <li class="nav__item"><a href=".">All Understanding documents</a></li>
+               <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
+                     									
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                     </svg></a><div id="explain-supporting-documents" hidden="">
+                     <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
+                        documents.
+                     </p>
+                     <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+      </div>
+      <div class="default-grid">
+         <main class="main-content">
+            <h1>Understanding Success Criterion 2.4.3: Focus Order</h1>
+            <blockquote class="scquote">
+               <p>Success Criterion <a href="/guidelines/#focus-order" style="font-weight: bold;">2.4.3 Focus Order</a> (Level A): If a <a href="#dfn-web-page">Web page</a> can be <a href="#dfn-navigated-sequentially">navigated sequentially</a> and the navigation sequences affect meaning or operation, focusable components receive
+                  focus in an order that preserves meaning and operability.
+                  
+               </p>
+            </blockquote>
+            <section id="intent">
+               <h2>Intent</h2>
+               <p>The intent of this Success Criterion is to ensure that when users navigate sequentially
+                  through content, they encounter information in an order that is consistent with the
+                  meaning of the content and can be operated from the keyboard. This reduces confusion
+                  by letting users form a consistent mental model of the content. There may be different
+                  orders that reflect logical relationships in the content. For example, moving through
+                  components in a table one row at a time or one column at a time both reflect the logical
+                  relationships in the content. Either order may satisfy this Success Criterion.
+                  
+               </p>
+               <p>The way that sequential navigation order is determined in Web content is defined by
+                  the technology of the content. For example, simple HTML defines sequential navigation
+                  via the notion of tabbing order. Dynamic HTML may modify the navigation sequence using
+                  scripting along with the addition of a tabindex attribute to allow focus to additional
+                  elements. If no scripting or tabindex attributes are used, the navigation order is
+                  the order that components appear in the content stream. (See HTML 4.01 Specification,
+                  section 17.11, "Giving focus to an element").
+                  
+               </p>
+               <p>An example of keyboard navigation that is not the sequential navigation addressed
+                  by this Success Criterion is using arrow key navigation to traverse a tree component.
+                  The user can use the up and down arrow keys to move from tree node to tree node. Pressing
+                  the right arrow key may expand a node, then using the down arrow key, will move into
+                  the newly expanded nodes. This navigation sequence follows the expected sequence for
+                  a tree control - as additional items get expanded or collapsed, they are added or
+                  removed from the navigation sequence.
+                  
+               </p>
+               <p>The focus order may not be identical to the programmatically determined reading order
+                  (see Success Criterion 1.3.2) as long as the user can still understand and operate
+                  the Web page. Since there may be several possible logical reading orders for the content,
+                  the focus order may match any of them. However, when the order of a particular presentation
+                  differs from the programmatically determined reading order, users of one of these
+                  presentations may find it difficult to understand or operate the Web page. Authors
+                  should carefully consider all these users as they design their Web pages.
+                  
+               </p>
+               <p>For example, a screen reader user interacts with the programmatically determined reading
+                  order, while a sighted keyboard user interacts with the visual presentation of the
+                  Web page. Care should be taken so that the focus order makes sense to both of these
+                  sets of users and does not appear to either of them to jump around randomly. 
+                  
+               </p>
+               <p>For clarity:</p>
+               <ol>
+                  
+                  
+                  <li>Focusable components need to receive focus in an order that preserves meaning and
+                     operability only when navigation sequences affect meaning and operability.
+                     
                   </li>
+                  
+                  
+                  <li>In those cases where it is required, there may be more than one order that will preserve
+                     meaning and operability.
+                     
+                  </li>
+                  
+                  
+                  <li>If there is more than one order that preserves meaning and operability, only one of
+                     them needs to be provided.
+                     
+                  </li>
+                  
+                  
+               </ol>
+            </section>
+            <section id="benefits">
+               <h2>Benefits</h2>
+               <p>These techniques benefit keyboard users who navigate documents sequentially and expect
+                  the focus order to be consistent with the sequential reading order.
+                  
+               </p>
+               <ul>
+                  
+                  
+                  <li>People with mobility impairments who must rely on keyboard access for operating a
+                     page benefit from a logical, usable focus order.
+                     
+                  </li>
+                  
+                  
+                  <li>People with disabilities that make reading difficult can become disoriented when tabbing
+                     takes focus someplace unexpected. They benefit from a logical focus order.
+                     
+                  </li>
+                  
+                  
+                  <li>People with visual impairments can become disoriented when tabbing takes focus someplace
+                     unexpected or when they cannot easily find the content surrounding an interactive
+                     element.
+                     
+                  </li>
+                  
+                  
+                  <li>Only a small portion of the page may be visible to an individual using a screen magnifier
+                     at a high level of magnification. Such a user may interpret a field in the wrong context
+                     if the focus order is not logical.
+                     
+                  </li>
+                  
+                  
                </ul>
-            </nav>
-            <section class="main-content">
-               <h1>Understanding Success Criterion 2.4.3: Focus Order</h1>
-               <blockquote class="scquote">
-                  <p>Success Criterion <a href="/guidelines/#focus-order" style="font-weight: bold;">2.4.3 Focus Order</a> (Level A): If a <a href="#dfn-web-page">Web page</a> can be <a href="#dfn-navigated-sequentially">navigated sequentially</a> and the navigation sequences affect meaning or operation, focusable components receive
-                     focus in an order that preserves meaning and operability.
+            </section>
+            <section id="examples">
+               <h2>Examples</h2>
+               <ol>
+                  
+                  
+                  <li>On a web page that contains a tree of interactive controls, the user can use the up
+                     and down arrow keys to move from tree node to tree node. Pressing the right arrow
+                     key expands a node, then using the down arrow key moves into the newly expanded nodes.
                      
-                  </p>
-               </blockquote>
-               <section id="intent">
-                  <h2>Intent</h2>
-                  <p>The intent of this Success Criterion is to ensure that when users navigate sequentially
-                     through content, they encounter information in an order that is consistent with the
-                     meaning of the content and can be operated from the keyboard. This reduces confusion
-                     by letting users form a consistent mental model of the content. There may be different
-                     orders that reflect logical relationships in the content. For example, moving through
-                     components in a table one row at a time or one column at a time both reflect the logical
-                     relationships in the content. Either order may satisfy this Success Criterion.
+                  </li>
+                  
+                  
+                  <li>A Web page implements modeless dialogs via scripting. When the trigger button is activated,
+                     a dialog opens. The interactive elements in the dialog are inserted in the focus order
+                     immediately after the button. When the dialog is open, the focus order goes from the
+                     button to the elements of the dialog, then to the interactive element following the
+                     button. When the dialog is closed, the focus order goes from the button to the following
+                     element.
                      
-                  </p>
-                  <p>The way that sequential navigation order is determined in Web content is defined by
-                     the technology of the content. For example, simple HTML defines sequential navigation
-                     via the notion of tabbing order. Dynamic HTML may modify the navigation sequence using
-                     scripting along with the addition of a tabindex attribute to allow focus to additional
-                     elements. If no scripting or tabindex attributes are used, the navigation order is
-                     the order that components appear in the content stream. (See HTML 4.01 Specification,
-                     section 17.11, "Giving focus to an element").
+                  </li>
+                  
+                  
+                  <li>A Web page implements modal dialogs via scripting. When the trigger button is activated,
+                     a dialog opens and focus is set to the first interactive element in the dialog. As
+                     long as the dialog is open, focus is limited to the elements of the dialog. When the
+                     dialog is dismissed, focus returns to the button or the element following the button.
                      
-                  </p>
-                  <p>An example of keyboard navigation that is not the sequential navigation addressed
-                     by this Success Criterion is using arrow key navigation to traverse a tree component.
-                     The user can use the up and down arrow keys to move from tree node to tree node. Pressing
-                     the right arrow key may expand a node, then using the down arrow key, will move into
-                     the newly expanded nodes. This navigation sequence follows the expected sequence for
-                     a tree control - as additional items get expanded or collapsed, they are added or
-                     removed from the navigation sequence.
-                     
-                  </p>
-                  <p>The focus order may not be identical to the programmatically determined reading order
-                     (see Success Criterion 1.3.2) as long as the user can still understand and operate
-                     the Web page. Since there may be several possible logical reading orders for the content,
-                     the focus order may match any of them. However, when the order of a particular presentation
-                     differs from the programmatically determined reading order, users of one of these
-                     presentations may find it difficult to understand or operate the Web page. Authors
-                     should carefully consider all these users as they design their Web pages.
-                     
-                  </p>
-                  <p>For example, a screen reader user interacts with the programmatically determined reading
-                     order, while a sighted keyboard user interacts with the visual presentation of the
-                     Web page. Care should be taken so that the focus order makes sense to both of these
-                     sets of users and does not appear to either of them to jump around randomly. 
-                     
-                  </p>
-                  <p>For clarity:</p>
-                  <ol>
+                  </li>
+                  
+                  
+                  <li>
                      
                      
-                     <li>Focusable components need to receive focus in an order that preserves meaning and
-                        operability only when navigation sequences affect meaning and operability.
+                     <p>An HTML Web page is created with the left hand navigation occurring in the HTML after
+                        the main body content, and styled with CSS to appear on the left hand side of the
+                        page. This is done to allow focus to move to the main body content first without requiring
+                        tabIndex attributes or JavaScript.
                         
-                     </li>
+                     </p>
                      
                      
-                     <li>In those cases where it is required, there may be more than one order that will preserve
-                        meaning and operability.
-                        
-                     </li>
-                     
-                     
-                     <li>If there is more than one order that preserves meaning and operability, only one of
-                        them needs to be provided.
-                        
-                     </li>
-                     
-                     
-                  </ol>
-               </section>
-               <section id="benefits">
-                  <h2>Benefits</h2>
-                  <p>These techniques benefit keyboard users who navigate documents sequentially and expect
-                     the focus order to be consistent with the sequential reading order.
-                     
-                  </p>
-                  <ul>
-                     
-                     
-                     <li>People with mobility impairments who must rely on keyboard access for operating a
-                        page benefit from a logical, usable focus order.
-                        
-                     </li>
-                     
-                     
-                     <li>People with disabilities that make reading difficult can become disoriented when tabbing
-                        takes focus someplace unexpected. They benefit from a logical focus order.
-                        
-                     </li>
-                     
-                     
-                     <li>People with visual impairments can become disoriented when tabbing takes focus someplace
-                        unexpected or when they cannot easily find the content surrounding an interactive
-                        element.
-                        
-                     </li>
-                     
-                     
-                     <li>Only a small portion of the page may be visible to an individual using a screen magnifier
-                        at a high level of magnification. Such a user may interpret a field in the wrong context
-                        if the focus order is not logical.
-                        
-                     </li>
-                     
-                     
-                  </ul>
-               </section>
-               <section id="examples">
-                  <h2>Examples</h2>
-                  <ol>
-                     
-                     
-                     <li>On a web page that contains a tree of interactive controls, the user can use the up
-                        and down arrow keys to move from tree node to tree node. Pressing the right arrow
-                        key expands a node, then using the down arrow key moves into the newly expanded nodes.
-                        
-                     </li>
-                     
-                     
-                     <li>A Web page implements modeless dialogs via scripting. When the trigger button is activated,
-                        a dialog opens. The interactive elements in the dialog are inserted in the focus order
-                        immediately after the button. When the dialog is open, the focus order goes from the
-                        button to the elements of the dialog, then to the interactive element following the
-                        button. When the dialog is closed, the focus order goes from the button to the following
-                        element.
-                        
-                     </li>
-                     
-                     
-                     <li>A Web page implements modal dialogs via scripting. When the trigger button is activated,
-                        a dialog opens and focus is set to the first interactive element in the dialog. As
-                        long as the dialog is open, focus is limited to the elements of the dialog. When the
-                        dialog is dismissed, focus returns to the button or the element following the button.
-                        
-                     </li>
-                     
-                     
-                     <li>
-                        
-                        
-                        <p>An HTML Web page is created with the left hand navigation occurring in the HTML after
-                           the main body content, and styled with CSS to appear on the left hand side of the
-                           page. This is done to allow focus to move to the main body content first without requiring
-                           tabIndex attributes or JavaScript.
-                           
-                        </p>
-                        
-                        
-                        <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                           <div>
-                              
-                              
-                              <p>While this example passes the Success Criterion, it is not necessarily true that all
-                                 CSS positioning would. More complex positioning examples may or may not preserve meaning
-                                 and operability
-                                 
-                              </p>
-                              
-                              
-                           </div>
-                        </div>
-                        
-                        
-                     </li>
-                     
-                     
-                     <li>
-                        
-                        
-                        <p>The following example 
-                           <strong>fails to meet the Success Criterion</strong>:
-                           
-                        </p>
-                        
-                        
-                        <p>A company's Web site includes a form that collects marketing data and allows users
-                           to subscribe to several newsletters published by the company. The section of the form
-                           for collecting marketing data includes fields such as name, street address, city,
-                           state or province, and postal code. Another section of the form includes several checkboxes
-                           so that users can indicate newsletters they want to receive. However, the tab order
-                           for the form skips between fields in different sections of the form, so that focus
-                           moves from the name field to a checkbox, then to the street address, then to another
-                           checkbox.
-                           
-                        </p>
-                        
-                        
-                     </li>
-                     
-                     
-                  </ol>
-               </section>
-               <section id="techniques">
-                  <h2>Techniques</h2>
-                  <p>Each numbered item in this section represents a technique or combination of techniques
-                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                     it is not necessary to use these particular techniques. For information on using other
-                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-                  </p>
-                  <section id="sufficient">
-                     <h3>Sufficient Techniques</h3>
-                     <ol>
-                        
-                        
-                        <li>
-                           									         
-                           <a class="general" href="/techniques/general/G59">G59: Placing the interactive elements in an order that follows sequences and relationships
-                              within the content</a>
-                           								       
-                           
-                        </li>
-                        
-                        
-                        <li>
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                        <div>
                            
                            
-                           <p>Giving focus to elements in an order that follows sequences and relationships within
-                              the content using one of the following techniques:
+                           <p>While this example passes the Success Criterion, it is not necessarily true that all
+                              CSS positioning would. More complex positioning examples may or may not preserve meaning
+                              and operability
                               
                            </p>
                            
                            
-                           <ul>
-                              
-                              
-                              <li>
-                                 											             
-                                 <a class="css" href="/techniques/css/C27">C27: Making the DOM order match the visual order</a>
-                                 										           
-                                 
-                              </li>
-                              
-                              
-                              <li>
-                                 
-                                 <a class="pdf" href="/techniques/pdf/PDF3">PDF3: Ensuring correct tab and reading order in PDF documents</a>
-                                 
-                                 
-                              </li>
-                              
-                              
-                              <li>
-                                 
-                                 <a class="silverlight" href="/techniques/silverlight/SL34">SL34: Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties</a>
-                                 
-                                 
-                              </li>
-                              
-                              
-                           </ul>
-                           
-                           
-                        </li>
+                        </div>
+                     </div>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>The following example 
+                        <strong>fails to meet the Success Criterion</strong>:
                         
-                        
-                        <li>
-                           
-                           
-                           <p>Changing a Web page dynamically using one of the following techniques:</p>
-                           
-                           
-                           <ul>
-                              
-                              
-                              <li>
-                                 											             
-                                 <a class="script" href="/techniques/client-side-script/SCR26">SCR26: Inserting dynamic content into the Document Object Model immediately following its
-                                    trigger element</a>
-                                 										           
-                                 
-                              </li>
-                              
-                              
-                              <li>
-                                 											             
-                                 <a class="script" href="/techniques/client-side-script/SCR37">SCR37: Creating Custom Dialogs in a Device Independent Way</a>
-                                 										           
-                                 
-                              </li>
-                              
-                              
-                              <li>
-                                 											             
-                                 <a class="script" href="/techniques/client-side-script/SCR27">SCR27: Reordering page sections using the Document Object Model</a>
-                                 										           
-                                 
-                              </li>
-                              
-                              
-                           </ul>
-                           
-                           
-                        </li>
-                        
-                        
-                     </ol>
-                  </section>
-                  <section id="failure">
-                     <h3>Failures</h3>
-                     <p>The following are common mistakes that are considered failures of this Success Criterion
-                        by the WCAG Working Group.
                      </p>
-                     <ul>
+                     
+                     
+                     <p>A company's Web site includes a form that collects marketing data and allows users
+                        to subscribe to several newsletters published by the company. The section of the form
+                        for collecting marketing data includes fields such as name, street address, city,
+                        state or province, and postal code. Another section of the form includes several checkboxes
+                        so that users can indicate newsletters they want to receive. However, the tab order
+                        for the form skips between fields in different sections of the form, so that focus
+                        moves from the name field to a checkbox, then to the street address, then to another
+                        checkbox.
                         
-                        
-                        <li>
-                           									         
-                           <a class="failure" href="/techniques/failures/F44">F44: Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that
-                              does not preserve meaning and operability</a>
-                           								       
-                           
-                        </li>
-                        
-                        
-                        <li>
-                           									         
-                           <a class="failure" href="/techniques/failures/F85">F85: Failure of Success Criterion 2.4.3 due to using dialogs or menus that are not adjacent
-                              to their trigger control in the sequential navigation order</a>
-                           								       
-                           
-                        </li>
-                        
-                        
-                     </ul>
-                  </section>
-               </section>
-               <nav class="pager" aria-label="Previous/Next Page">
-                  <ul id="navigation">
-                     <li><a href="navigable"><abbr title="Guideline">GL</abbr>: Navigable</a></li>
-                     <li><a href="page-titled">Previous <abbr title="Success Criterion">SC</abbr>: Page Titled</a></li>
-                     <li><a href="link-purpose-in-context">Next <abbr title="Success Criterion">SC</abbr>: Link Purpose (In Context)</a></li>
-                  </ul>
-               </nav>
+                     </p>
+                     
+                     
+                  </li>
+                  
+                  
+               </ol>
             </section>
-            <aside class="your-report your-report--expanded sidebar" tabindex="-1">
-               <h2 style="margin-top: 0">About this page</h2>
-               <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
+            <section id="techniques">
+               <h2>Techniques</h2>
+               <p>Each numbered item in this section represents a technique or combination of techniques
+                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                  it is not necessary to use these particular techniques. For information on using other
+                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
                </p>
-               <dl>
-                  <dt>Level</dt>
-                  <dd>A</dd>
-                  <dt>Key terms</dt>
-                  <li id="dfn-navigated-sequentially"><a href="/guidelines/#dfn-navigated-sequentially">navigated sequentially</a></li>
-                  <li id="dfn-web-page"><a href="/guidelines/#dfn-web-page">web page</a></li>
-               </dl>
-            </aside>
+               <section id="sufficient">
+                  <h3>Sufficient Techniques</h3>
+                  <ol>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="general" href="/techniques/general/G59">G59: Placing the interactive elements in an order that follows sequences and relationships
+                           within the content</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>Giving focus to elements in an order that follows sequences and relationships within
+                           the content using one of the following techniques:
+                           
+                        </p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="css" href="/techniques/css/C27">C27: Making the DOM order match the visual order</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              
+                              <a class="pdf" href="/techniques/pdf/PDF3">PDF3: Ensuring correct tab and reading order in PDF documents</a>
+                              
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              
+                              <a class="silverlight" href="/techniques/silverlight/SL34">SL34: Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties</a>
+                              
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>Changing a Web page dynamically using one of the following techniques:</p>
+                        
+                        
+                        <ul>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="script" href="/techniques/client-side-script/SCR26">SCR26: Inserting dynamic content into the Document Object Model immediately following its
+                                 trigger element</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="script" href="/techniques/client-side-script/SCR37">SCR37: Creating Custom Dialogs in a Device Independent Way</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              											             
+                              <a class="script" href="/techniques/client-side-script/SCR27">SCR27: Reordering page sections using the Document Object Model</a>
+                              										           
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </li>
+                     
+                     
+                  </ol>
+               </section>
+               <section id="failure">
+                  <h3>Failures</h3>
+                  <p>The following are common mistakes that are considered failures of this Success Criterion
+                     by the WCAG Working Group.
+                  </p>
+                  <ul>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="failure" href="/techniques/failures/F44">F44: Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that
+                           does not preserve meaning and operability</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        									         
+                        <a class="failure" href="/techniques/failures/F85">F85: Failure of Success Criterion 2.4.3 due to using dialogs or menus that are not adjacent
+                           to their trigger control in the sequential navigation order</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                  </ul>
+               </section>
+            </section>
+            <nav class="pager" aria-label="Previous/Next Page">
+               <ul id="navigation">
+                  <li><a href="navigable"><abbr title="Guideline">GL</abbr>: Navigable</a></li>
+                  <li><a href="page-titled">Previous <abbr title="Success Criterion">SC</abbr>: Page Titled</a></li>
+                  <li><a href="link-purpose-in-context">Next <abbr title="Success Criterion">SC</abbr>: Link Purpose (In Context)</a></li>
+               </ul>
+            </nav>
+         </main>
+         <aside class="your-report your-report--expanded sidebar">
+            <h2>About this page</h2>
+            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
+            </p>
+            <dl>
+               <dt>Level</dt>
+               <dd>A</dd>
+               <dt>Key terms</dt>
+               <li id="dfn-navigated-sequentially"><a href="/guidelines/#dfn-navigated-sequentially">navigated sequentially</a></li>
+               <li id="dfn-web-page"><a href="/guidelines/#dfn-web-page">web page</a></li>
+            </dl>
+         </aside>
+      </div>
+      <div class="default-grid">
+         <aside class="box box-icon box-space-above" id="helpimprove" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <header class="box-h box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2>Help improve this page</h2>
+            </header>
+            <div class="box-i">
+               <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
+                  list  <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub.
+               </p>
+               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniquesl&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+            </div>
+         </aside>
+      </div>
+      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
+         <div class="inner" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
+            <p><strong>Date:</strong> Published 29 June 2020.
+            </p>
+            <p><strong>Authors</strong>:
+               					<a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a>.
+               					<strong>Editors</strong>:
+               					<a href="group-ag-chairs@w3.org">Alastair Campbell, Michael Cooper, Andrew Kirkpatrick</a>.
+               				
+            </p>
          </div>
-      </main>
+      </footer>
+      <footer class="site-footer grid-4q" aria-label="Site">
+         <div class="q1-start q3-end about">
+            <div>
+               <p><a class="largelink" href="https://w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
+               <p>Strategies, standards, and supporting resources to make the Web accessible to people
+                  with disabilities.
+               </p>
+            </div>
+            <div class="social" dir="auto" translate="no" lang="en">
+               <ul>
+                  <li><a href="https://twitter.com/w3c_wai">
+                        <svg focusable="false" aria-hidden="true" class="icon-twitter" viewBox="0 0 32 32">
+                           <path d="M31.939 6.092c-1.18 0.519-2.44 0.872-3.767 1.033 1.352-0.815 2.392-2.099 2.884-3.631-1.268 0.74-2.673 1.279-4.169 1.579-1.195-1.279-2.897-2.079-4.788-2.079-3.623 0-6.56 2.937-6.56 6.556 0 0.52 0.060 1.020 0.169 1.499-5.453-0.257-10.287-2.876-13.521-6.835-0.569 0.963-0.888 2.081-0.888 3.3 0 2.28 1.16 4.284 2.917 5.461-1.076-0.035-2.088-0.331-2.971-0.821v0.081c0 3.18 2.257 5.832 5.261 6.436-0.551 0.148-1.132 0.228-1.728 0.228-0.419 0-0.82-0.040-1.221-0.115 0.841 2.604 3.26 4.503 6.139 4.556-2.24 1.759-5.079 2.807-8.136 2.807-0.52 0-1.039-0.031-1.56-0.089 2.919 1.859 6.357 2.945 10.076 2.945 12.072 0 18.665-9.995 18.665-18.648 0-0.279 0-0.56-0.020-0.84 1.281-0.919 2.4-2.080 3.28-3.397l-0.063-0.027z"></path>
+                        </svg>
+                        								Twitter</a></li>
+                  <li><a href="https://w3.org/WAI/feed.xml">
+                        <svg focusable="false" aria-hidden="true" class="icon-rss" viewBox="0 0 32 32">
+                           <path d="M25.599 32c0-14.044-11.555-25.6-25.599-25.6v-6.4c17.553 0 32 14.447 32 32h-6.401zM4.388 23.22c2.419 0 4.391 1.972 4.391 4.393 0 2.417-1.98 4.387-4.401 4.387-2.417 0-4.377-1.965-4.377-4.387s1.967-4.392 4.388-4.393zM21.212 32h-6.22c0-8.225-6.767-14.993-14.992-14.993v-6.22c11.636 0 21.212 9.579 21.212 21.213z"></path>
+                        </svg>
+                        								Feed</a></li>
+                  <li><a href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv">
+                        <svg focusable="false" aria-hidden="true" class="icon-youtube" viewBox="0 0 32 32">
+                           <path d="M31.327 8.273c-0.386-1.353-1.431-2.398-2.756-2.777l-0.028-0.007c-2.493-0.668-12.528-0.668-12.528-0.668s-10.009-0.013-12.528 0.668c-1.353 0.386-2.398 1.431-2.777 2.756l-0.007 0.028c-0.443 2.281-0.696 4.903-0.696 7.585 0 0.054 0 0.109 0 0.163l-0-0.008c-0 0.037-0 0.082-0 0.126 0 2.682 0.253 5.304 0.737 7.845l-0.041-0.26c0.386 1.353 1.431 2.398 2.756 2.777l0.028 0.007c2.491 0.669 12.528 0.669 12.528 0.669s10.008 0 12.528-0.669c1.353-0.386 2.398-1.431 2.777-2.756l0.007-0.028c0.425-2.233 0.668-4.803 0.668-7.429 0-0.099-0-0.198-0.001-0.297l0 0.015c0.001-0.092 0.001-0.201 0.001-0.31 0-2.626-0.243-5.196-0.708-7.687l0.040 0.258zM12.812 20.801v-9.591l8.352 4.803z"></path>
+                        </svg>
+                        								YouTube</a></li>
+                  <li><a href="https://w3.org/WAI/news/subscribe/" class="button">Get News in Email</a></li>
+               </ul>
+            </div>
+            <div dir="auto" translate="no" lang="en">
+               <p>
+                  						Copyright © 2019 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+                  						<a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+                  										<a href="https://ev.buaa.edu.cn">Beihang</a>)
+                  										<a href="https://w3.org/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
+                  					
+               </p>
+            </div>
+         </div>
+         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
+            <ul style="margin-bottom: 0;">
+               <li><a href="https://w3.org/WAI/about/contacting/">Contact WAI</a></li>
+               <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
+               <li><a href="https://w3.org/WAI/news/">News</a></li>
+               <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
+               <li><a href="https://w3.org/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
+               <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
+               <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
+            </ul>
+         </div>
+      </footer>
    </body>
 </html>
