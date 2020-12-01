@@ -115,10 +115,30 @@ dt div {
     font-weight: normal;
 }
 
+video,
+audio,
+img {
+    max-width: 100%;
+}
+
 .pager--item.context {
     flex: 100%;
     background: var(--cloudy-subtle);
     margin: -8px -8px 8px;
     padding: 8px;
     text-align: center;
+}
+
+.note {
+    background: var(--cloudy-subtle);
+    padding: 8px;
+    max-width: max-content;
+}
+.note-title {
+    font-weight: bold;
+    background: var(--light-blue);
+    margin-left: -1em;
+    padding: 0 1em;
+    color: var(--pure-white);
+    max-width: max-content;
 }
