@@ -194,11 +194,11 @@
                      pointer over the image. To provide keyboard users with a similar experience, the image
                      is also changed when the user tabs to it.
                      
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;a href="menu.php" onmouseover="swapImageOn('menu')" onfocus="swapImageOn('menu')" 
 onmouseout="swapImageOff('menu')" onblur="swapImageOff('menu')"&gt; 
 &lt;img id="menu" src="menu_off.gif" alt="Menu" /&gt; 
-&lt;/a&gt;</pre></section>
+&lt;/a&gt;</code></pre></section>
                <section class="example" id="example-2">
                   <h3>Example 2</h3>
                   <p>
@@ -208,9 +208,9 @@ onmouseout="swapImageOff('menu')" onblur="swapImageOff('menu')"&gt;
                      keyboard will have a tab stop on the image. Note that in this example, the nextPage()
                      function should check that the keyboard key pressed was Enter, otherwise it will respond
                      to all keyboard actions while the image has focus, which is not the desired behavior.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;img onclick="nextPage();" onkeypress="nextPage();" tabindex="0" src="arrow.gif" 
-alt="Go to next page"&gt; </pre><div class="note">
+alt="Go to next page"&gt; </code></pre><div class="note">
                      <div role="heading" class="note-title marker" aria-level="4">Note</div>
                      <div>
                         
@@ -381,5 +381,5 @@ alt="Go to next page"&gt; </pre><div class="note">
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

@@ -72,13 +72,13 @@
                   <h3>Example 1: Social Security Number</h3>
                   <p>Social security number fields which are 9 digits long and broken up into 3 segments
                      can be grouped using role="group".
-                  </p><pre xml:space="preserve">&lt;div role="group" aria-labelledby="ssn1"&gt;
+                  </p><pre><code>&lt;div role="group" aria-labelledby="ssn1"&gt;
    &lt;span id="ssn1"&gt;Social Security#&lt;/span&gt; 
    &lt;span style="color: #D90D0D;"&gt; * &lt;/span&gt;
    &lt;input size="3" type="text" aria-required="true" title="First 3 digits" /&gt;-
    &lt;input size="2" type="text" aria-required="true" title="Next 2 digits" /&gt;-
    &lt;input size="4" type="text" aria-required="true" title="Last 4 digits" /&gt;
-&lt;/div&gt;</pre><p class="working-example">Working example: <a href="../../working-examples/aria-grouping-multipart-fields-ssn/">Multiple part field groups</a>.
+&lt;/div&gt;</code></pre><p class="working-example">Working example: <a href="../../working-examples/aria-grouping-multipart-fields-ssn/">Multiple part field groups</a>.
                   </p>
                </section>
                <section class="example" id="example-2-identifying-radio-groups">
@@ -88,7 +88,7 @@
                      radio buttons is not included in this example. ) One may optionally employ CSS to
                      place a border around groups of such fields to visually reinforce the group relationship.
                      The CSS properties are available below the form.
-                  </p><pre xml:space="preserve">&lt;h3&gt;Set Alerts for your Account&lt;/h3&gt;
+                  </p><pre><code>&lt;h3&gt;Set Alerts for your Account&lt;/h3&gt;
   &lt;div role="radiogroup" aria-labelledby="alert1"&gt;
     &lt;p id="alert1"&gt;Send an alert when balance exceeds $ 3,000&lt;/p&gt;
     &lt;div&gt;
@@ -111,9 +111,9 @@
       &lt;span id="a2r2"&gt;No&lt;/span&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;p&gt;&lt;input type="submit" value="Continue" id="continue_btn" name="continue_btn" /&gt;&lt;/p&gt;</pre><p>Related CSS Style Definition to place a border around the group of fields :</p><pre xml:space="preserve">div[role=radiogroup] {
+  &lt;p&gt;&lt;input type="submit" value="Continue" id="continue_btn" name="continue_btn" /&gt;&lt;/p&gt;</code></pre><p>Related CSS Style Definition to place a border around the group of fields :</p><pre><code>div[role=radiogroup] {
   border: black thin solid;
-} </pre><p class="working-example">Working example: <a href="../../working-examples/aria-grouping-related-fields/">using grouping roles to identify related form controls</a>.
+} </code></pre><p class="working-example">Working example: <a href="../../working-examples/aria-grouping-related-fields/">using grouping roles to identify related form controls</a>.
                   </p>
                </section>
             </section>
@@ -277,5 +277,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

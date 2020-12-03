@@ -76,17 +76,17 @@
                   <h3>Example 1</h3>
                   <p>The following example is commonly used in HTML 4.01 to open new
                      windows when pages are loaded.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 window.onload = showAdvertisement;
  function showAdvertisement()
  {
   window.open('advert.html', '_blank', 'height=200,width=150');
- }</pre></section>
+ }</code></pre></section>
                <section class="example" id="example-2">
                   <h3>Example 2</h3>
                   <p>The following example commonly used in XHTML to open new windows when
                      pages are loaded.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 if (window.addEventListener) { 
     window.addEventListener("load", showAdvertisement, true);
 }
@@ -96,7 +96,7 @@ if (window.attachEvent) {
 function showAdvertisement()
 {
 window.open('noscript.html', '_blank', 'height=200,width=150');
-}</pre></section>
+}</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -243,5 +243,5 @@ window.open('noscript.html', '_blank', 'height=200,width=150');
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

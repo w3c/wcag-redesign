@@ -115,7 +115,7 @@
                      but does not use the <code class="el">label</code> element to associate them with their controls. The code example below is a failure
                      because assistive technology may not be able to determine which label goes with which
                      control.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;form&gt;
  First name: 
  &lt;input type="text" name="firstname"&gt;
@@ -126,12 +126,12 @@
  I have a dog &lt;input type="checkbox" name="pet" value="dog"&gt;
  I have a cat &lt;input type="checkbox" name="pet" value="cat"&gt;
 &lt;/form&gt;
-</pre></section>
+</code></pre></section>
                <section class="example" id="example-2">
                   <h3>Example 2</h3>
                   <p>In the following code example, <code class="el">label</code> elements are present, but they are not programmatically linked to the corresponding
                      input controls and may therefore not be properly determined by assistive technology.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;form action="..." method="post"&gt; 
 &lt;p&gt; 
 &lt;label&gt;First Name&lt;/label&gt;
@@ -140,14 +140,14 @@
 &lt;input type="text" name="lastname"&gt; 
 &lt;/p&gt; 
 &lt;/form&gt;
-</pre></section>
+</code></pre></section>
                <section class="example" id="example-3">
                   <h3>Example 3</h3>
                   <p>The search text box in the following code example does not have a programmatically
                      determinable name. The name can be supplied with any of the approaches mentioned above.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;input type="text" value="Type your search here"&gt;&lt;input type="submit" type="submit" value="Search"&gt;
-</pre></section>
+</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -347,5 +347,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

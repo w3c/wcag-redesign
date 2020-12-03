@@ -191,7 +191,7 @@
                   <p>In this example, a <code class="obj">StackPanel</code> has a natural layout
                      						order of top-to-bottom, and that will also be the tab order of each <code class="obj">StackPanel</code> child
                      						element (FirstName, then LastName). 
-                  </p><pre xml:space="preserve">   &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
+                  </p><pre><code>   &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
        &lt;StackPanel Orientation="Horizontal"&gt;
            &lt;TextBlock Name="lbl_FirstName"&gt;First name&lt;/TextBlock&gt;
            &lt;TextBox AutomationProperties.LabeledBy="{Binding ElementName=lbl_FirstName}" Name="tbFirstName" Width="100"/&gt;
@@ -201,7 +201,7 @@
            &lt;TextBox AutomationProperties.LabeledBy="{Binding ElementName=lbl_LastName}" Name="tbLastName" Width="100"/&gt;
        &lt;/StackPanel&gt;
    &lt;/StackPanel&gt;
-</pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-tab-sequence/">working example of Tab Sequence</a>.
+</code></pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-tab-sequence/">working example of Tab Sequence</a>.
                   </p>
                </section>
                <section class="example" id="example-2-tab-order-modified-by-tabindex">
@@ -215,7 +215,7 @@
                      						the Silverlight elements are used to specify a tab order that navigates
                      						column by column. This example specifically illustrates how changing
                      						tab order can change the meaningful sequence. 
-                  </p><pre xml:space="preserve"> &lt;UserControl x:Class="TabSequence.MainPage"
+                  </p><pre><code> &lt;UserControl x:Class="TabSequence.MainPage"
  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
  &gt;
@@ -250,7 +250,7 @@
        &lt;/Grid&gt;
    &lt;/StackPanel&gt;
  &lt;/UserControl&gt;
- </pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-tab-sequence-tab-index/">working example of Tab Sequence TabIndex</a>.
+ </code></pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-tab-sequence-tab-index/">working example of Tab Sequence TabIndex</a>.
                   </p>
                </section>
                <section class="example" id="example-3-tab-order-modified-by-changing-runtime-control-properties">
@@ -262,7 +262,7 @@
                      						the preceding logical element, which also affects whether the fields
                      						appear in the further tab sequence. The following is UI definition
                      						in XAML. 
-                  </p><pre xml:space="preserve">&lt;UserControl x:Class="TabSequence.MainPage"
+                  </p><pre><code>&lt;UserControl x:Class="TabSequence.MainPage"
    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 &gt;
@@ -291,7 +291,7 @@
        &lt;/Grid&gt;
    &lt;/StackPanel&gt;
 &lt;/UserControl&gt;
-</pre><p>The following is event handler code. </p><pre xml:space="preserve">       private void RadioButton_CheckedC(object sender, RoutedEventArgs e)
+</code></pre><p>The following is event handler code. </p><pre><code>       private void RadioButton_CheckedC(object sender, RoutedEventArgs e)
        {
            tb_fn.IsEnabled = true;
            tb_ln.IsEnabled = true;
@@ -301,7 +301,7 @@
            tb_fn.IsEnabled = false;
            tb_ln.IsEnabled = false;
        }
-       </pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-tab-sequence-enabled/">working example of Tab Sequence Enabled</a>.
+       </code></pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-tab-sequence-enabled/">working example of Tab Sequence Enabled</a>.
                   </p>
                </section>
             </section>
@@ -466,5 +466,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

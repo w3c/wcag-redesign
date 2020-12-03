@@ -106,7 +106,7 @@
                   <p>The following is the basic UI in XAML. This example is deliberately
                      						simple and does not include <code class="obj">AutomationProperties</code>.
                      						Audio streams are identified by an index in a collection. 
-                  </p><pre xml:space="preserve">      &lt;Grid x:Name="LayoutRoot" Background="White"&gt;
+                  </p><pre><code>      &lt;Grid x:Name="LayoutRoot" Background="White"&gt;
         &lt;Grid.ColumnDefinitions&gt;
             &lt;ColumnDefinition Width="*" /&gt;
             &lt;ColumnDefinition Width="*" /&gt;
@@ -131,7 +131,7 @@
         &lt;Button Name="AltAudioBtn" Grid.Row="2" HorizontalAlignment="Left" Grid.ColumnSpan="2" 
         Click="AltAudioBtn_Click"&gt;Play Full-Description Audio&lt;/Button&gt;
     &lt;/Grid&gt;
-</pre><p>The following is the C# logic. </p><pre xml:space="preserve">        private void AltAudioBtn_Click(object sender, RoutedEventArgs e)
+</code></pre><p>The following is the C# logic. </p><pre><code>        private void AltAudioBtn_Click(object sender, RoutedEventArgs e)
         {
             if (media.AudioStreamCount &gt; 1)
             {
@@ -160,7 +160,7 @@
         private void PlayMedia(object sender, RoutedEventArgs e)
         {
             media.Play();
-        }</pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-alternative-audio-channel/">working example of Alternative Audio Channel</a>. If using the test file, the test contains test audio tones rather than actual audio
+        }</code></pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-alternative-audio-channel/">working example of Alternative Audio Channel</a>. If using the test file, the test contains test audio tones rather than actual audio
                      description, but the pitch of the tones is indicative of which of the channels is
                      selected and played. 
                   </p>
@@ -327,5 +327,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

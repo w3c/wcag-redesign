@@ -107,12 +107,12 @@
                         </p>
                         
                      </div>
-                  </div><pre xml:space="preserve">&lt;form&gt;
+                  </div><pre><code>&lt;form&gt;
 &lt;p&gt;&lt;span id="timeout-label" tabindex="-1"&gt;&lt;label for="timeout-duration"&gt;Extend time-out to&lt;/label&gt;&lt;/span&gt;
 &lt;input type="text" size="3" id="timeout-duration" value="20" 
     aria-labelledby="timeout-label timeout-duration timeout-unit"&gt;
 &lt;span id="timeout-unit" tabindex="-1"&gt; minutes&lt;/span&gt;&lt;/p&gt;
-&lt;/form&gt;</pre><p class="working-example">Working example, <a href="../../working-examples/aria-labelledby-time-out-input-concatenated-label/">Time-out input field with concatenated label</a>, adapted from Easy ARIA tip #2: aria-labelledby and aria-describedby, an example
+&lt;/form&gt;</code></pre><p class="working-example">Working example, <a href="../../working-examples/aria-labelledby-time-out-input-concatenated-label/">Time-out input field with concatenated label</a>, adapted from Easy ARIA tip #2: aria-labelledby and aria-describedby, an example
                      put together by Marco Zehe.
                   </p>
                </section>
@@ -120,7 +120,7 @@
                   <h3>Example 2: A simple data table with text inputs</h3>
                   <p>A simple data table containing text inputs. The input labels are concatenated through
                      <code class="att">aria-labelledby</code> referencing the respective column and row headers.
-                  </p><pre xml:space="preserve">&lt;table&gt;
+                  </p><pre><code>&lt;table&gt;
 	&lt;tr&gt;
 		&lt;td&gt;&lt;/td&gt;
 		&lt;th id="tpayer"&gt;Taxpayer&lt;/th&gt;
@@ -138,7 +138,7 @@
 		&lt;td&gt;&lt;input type="text" size="20" aria-labelledby="tpayer div" /&gt;&lt;/td&gt;
 		&lt;td&gt;&lt;input type="text" size="20" aria-labelledby="sp div" /&gt;&lt;/td&gt;
 	&lt;/tr&gt;
-&lt;/table&gt;</pre><p class="working-example">Working example, <a href="../../working-examples/aria-labelledby-table-text-inputs/">Using aria-labelledby for simple table with text inputs</a>, based on an example by Jim Thatcher.
+&lt;/table&gt;</code></pre><p class="working-example">Working example, <a href="../../working-examples/aria-labelledby-table-text-inputs/">Using aria-labelledby for simple table with text inputs</a>, based on an example by Jim Thatcher.
                   </p>
                </section>
                <section class="example" id="example-3-a-conference-workshop-booking-table">
@@ -151,7 +151,7 @@
                   </p>
                   <p>Some browser / screen reader combinations (e.g. Mozilla Firefox and NVDA) will in
                      addition speak the relevant table cell headers.
-                  </p><pre xml:space="preserve">&lt;h1&gt;Dinosaur Conference workshops timetable Thursday, 14.  &amp; Friday, 15. March 2013&lt;/h1&gt;
+                  </p><pre><code>&lt;h1&gt;Dinosaur Conference workshops timetable Thursday, 14.  &amp; Friday, 15. March 2013&lt;/h1&gt;
 &lt;table&gt;
 &lt;caption&gt;Dinosaur Conference workshop booking table&lt;/caption&gt;
 &lt;tbody&gt;&lt;tr&gt;
@@ -231,7 +231,7 @@
 	&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</pre><p class="working-example">Working example: <a href="../../working-examples/aria-labelledby-workshop-booking-timetable/">Conference workshop booking timetable</a>.
+&lt;/table&gt;</code></pre><p class="working-example">Working example: <a href="../../working-examples/aria-labelledby-workshop-booking-timetable/">Conference workshop booking timetable</a>.
                   </p>
                </section>
             </section>
@@ -411,5 +411,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

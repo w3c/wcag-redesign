@@ -67,12 +67,12 @@
                   <h3>Example 1: Incorrect attribute</h3>
                   <p>An online form used to collect the user's name and birthday which uses incorrect autocomplete
                      attributes.  The correct attribute value for the first control is <code>name</code> and for the second control the made-up attribute value <code>birthday</code> was used instead of <code>bday</code> for this example.
-                  </p><pre>
+                  </p><pre><code>
 &lt;h2&gt;Your details:&lt;/h2&gt;
 &lt;label for="name1"&gt;Name:&lt;/label&gt;
 &lt;input type="text" name="field1a" <span style="background:yellow; font-weight:bold;">autocomplete="email"</span> id="name1"&gt; 
 &lt;label for="birthday1"&gt;Birthday:&lt;/label&gt;
-&lt;input type="text" name="field1b" <span style="background:yellow; font-weight:bold;">autocomplete="birthday"</span> id="birthday1&gt;</pre></section>
+&lt;input type="text" name="field1b" <span style="background:yellow; font-weight:bold;">autocomplete="birthday"</span> id="birthday1&gt;</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -229,5 +229,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

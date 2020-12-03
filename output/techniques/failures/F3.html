@@ -84,21 +84,21 @@
                      image that is presented by CSS alone. In this example, the image
                      TopRate.png is a 180 by 200 pixel image that contains the text,
                      "19.3% APR Typical Variable." 
-                  </p><pre xml:space="preserve"> The CSS contains: 
+                  </p><pre><code> The CSS contains: 
 p#bestinterest {
   padding-left: 200px;
   background: transparent url(/images/TopRate.png) no-repeat top left;
-}</pre><p> It is used in this excerpt: </p><pre xml:space="preserve"> 
+}</code></pre><p> It is used in this excerpt: </p><pre><code> 
 &lt;p id="bestinterest"&gt;
   Where else would you find a better interest rate?
-&lt;/p&gt;</pre></section>
+&lt;/p&gt;</code></pre></section>
                <section class="example" id="example-2">
                   <h3>Example 2</h3>
                   <p> A book distributor uses background images to provide icons against a
                      list of book titles to indicate whether they are new, limited,
                      in-stock, or out of stock. 
                   </p>
-                  <p>The CSS contains: </p><pre xml:space="preserve">
+                  <p>The CSS contains: </p><pre><code>
 ul#booklist li {
   padding-left: 20px;
 }
@@ -117,27 +117,27 @@ ul#booklist li.instock {
 
 ul#booklist li.outstock {
   background: transparent url(outstock.png) no-repeat top left; 
-}</pre><p>It is used in this excerpt: </p><pre xml:space="preserve">
+}</code></pre><p>It is used in this excerpt: </p><pre><code>
 &lt;ul id="booklist"&gt;
   &lt;li class="new"&gt;Some book&lt;/li&gt;
   &lt;li class="instock"&gt;Some other book&lt;/li&gt;
   &lt;li class="limited"&gt;A book we desperately want to get rid of&lt;/li&gt;
   ...
   &lt;li class="outstock"&gt;A book you actually want &lt;/li&gt;
-&lt;/ul&gt;</pre></section>
+&lt;/ul&gt;</code></pre></section>
                <section class="example" id="example-3">
                   <h3>Example 3</h3>
                   <p>Using the code from example 1, the same background image is declared in the HTML style
                      attribute:
-                  </p><pre xml:space="preserve">&lt;p id="bestinterest" style="background: transparent url(/images/TopRate.png) no-repeat top left;" &gt;
+                  </p><pre><code>&lt;p id="bestinterest" style="background: transparent url(/images/TopRate.png) no-repeat top left;" &gt;
 Where else would you find a better interest rate?
-&lt;p&gt;</pre><p>In the following code, the background image declaration is created in a client script:</p><pre xml:space="preserve">&lt;script type="text/javascript"&gt;
+&lt;p&gt;</code></pre><p>In the following code, the background image declaration is created in a client script:</p><pre><code>&lt;script type="text/javascript"&gt;
 var newP = document.createElement('p');
 var newPText = document.createTextNode('Where else would you find a better interest rate?');
 newP.appendChild(newPText);
 newP.style.background = 'transparent url(/images/TopRate.png) no-repeat top left';
 document.body.appendChild(newP);
-&lt;/script&gt; </pre></section>
+&lt;/script&gt; </code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -287,5 +287,5 @@ document.body.appendChild(newP);
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

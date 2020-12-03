@@ -176,7 +176,7 @@
                      					to obtain a comprehensive view of the "value" for a document
                      					role object. 
                   </p>
-                  <pre xml:space="preserve">private void FindTheTextPatterns_Click(object sender, RoutedEventArgs e)
+                  <pre><code>private void FindTheTextPatterns_Click(object sender, RoutedEventArgs e)
 {
    if (allSilverlight != null &amp;&amp; allSilverlight.Count&gt;0)
    {
@@ -199,7 +199,7 @@ private void GetAllSilverlight()
    allSilverlight = this._clientAppRootInstance.FindAll(TreeScope.Descendants,
       new PropertyCondition(AutomationElement.ClassNameProperty, "MicrosoftSilverlight"));
 }
-</pre>
+</code></pre>
                   <p>MSAA has only limited possibilities for interacting with a Document
                      				role, and MSAA code for attempting to do so is not shown. 
                   </p>
@@ -281,7 +281,7 @@ private void GetAllSilverlight()
                      						(Jaws Key)+DownArrow. It is actually JAWS that determines the line
                      						length, because the line length otherwise is defined only by the adaptive
                      						layout at runtime, which is not reported to UIA. 
-                  </p><pre xml:space="preserve">  &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
+                  </p><pre><code>  &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
           &lt;TextBlock&gt;Call me Ishmael. Some years ago--never mind how long precisely--
 having little or no money in my purse, and
 nothing particular to interest me on shore, I thought I would sail about a little 
@@ -319,20 +319,20 @@ up in lath and plaster--tied to counters, nailed to benches, clinched to desks.
 How  then is this? Are the green fields gone? What do they here?
           &lt;/TextBlock&gt;
   &lt;/StackPanel&gt;
-</pre></section>
+</code></pre></section>
                <section class="example" id="example-2-text-containers-and-their-uia-representation">
                   <h3>Example 2: Text containers and their UIA representation</h3>
                   <p>The following example is intended as sample XAML to view in an accessibility
                      						framework viewer, to see the various names, roles, and patterns for
                      						obtaining value. 
-                  </p><pre xml:space="preserve">   &lt;StackPanel x:Name="LayoutRoot"&gt;
+                  </p><pre><code>   &lt;StackPanel x:Name="LayoutRoot"&gt;
        &lt;TextBox Text="This is a TextBox"/&gt;
        &lt;RichTextBox&gt;
            &lt;Paragraph&gt;This is a RichTextBox.&lt;/Paragraph&gt;
        &lt;/RichTextBox&gt;
        &lt;TextBlock Text="This is a TextBlock"/&gt;
    &lt;/StackPanel&gt;
-</pre></section>
+</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -518,5 +518,5 @@ How  then is this? Are the green fields gone? What do they here?
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

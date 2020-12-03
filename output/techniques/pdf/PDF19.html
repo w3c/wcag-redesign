@@ -162,7 +162,7 @@
                      <img src="img/language.jpg" />
                      
                      
-                     <figcaption>Figure 1Specifying the language for a word in text using the Show Order Panel of the TouchUp
+                     <figcaption>Figure Figure Figure 1Specifying the language for a word in text using the Show Order Panel of the TouchUp
                         Reading Order tool.
                      </figcaption>
                      
@@ -193,7 +193,7 @@
                   <p>The following code fragment illustrates code that is typical for using
                      						the /Lang entry to override the default document language by specifying
                      						a marked-content sequence within a page's content stream: 
-                  </p><pre xml:space="preserve">   /P % Start of marked-content sequence
+                  </p><pre><code>   /P % Start of marked-content sequence
    BDC
       (See you later, or in Spanish you would say, ) Tj
       /Span &lt;&lt; /Lang (es-MX) &gt;&gt;% Start of nested marked-content sequence
@@ -201,12 +201,12 @@
       (Hasta la vista.) Tj
      EMC% End of nested marked-content sequence
    EMC% End of marked-content sequence
-</pre><p>The following code fragment illustrates code that is typical for
+</code></pre><p>The following code fragment illustrates code that is typical for
                      						using the /Lang entry in the structure element dictionary. In this
                      						case, the /Lang entry applies to the marked-content sequence having
                      						an MCID (marked-content identifier) value of 0 within the indicated
                      						page's content stream. 
-                  </p><pre xml:space="preserve">1 0 obj% Structure element
+                  </p><pre><code>1 0 obj% Structure element
   &lt;&lt; /Type /StructElem
     /S /Span% Structure type
     /P /P% Parent in structure hierarchy
@@ -238,7 +238,7 @@ endobj
  ET
  endstream
  endobj
-</pre></section>
+</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -452,5 +452,5 @@ endobj
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

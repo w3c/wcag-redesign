@@ -145,7 +145,7 @@
                      would be advisable to save this preference in a cookie or server-side user profile,
                      so that users would only have to make the selection once per site. 
                   </p>
-                  <p>The XHTML components:</p><pre xml:space="preserve">
+                  <p>The XHTML components:</p><pre><code>
 In &lt;head&gt; section:
 
   &lt;link href="main.css" rel="stylesheet" type="text/css" /&gt;
@@ -173,7 +173,7 @@ In &lt;body&gt; section:
   &lt;p&gt;Last week's conference presented an impressive line-up of speakers...&lt;/p&gt;
 &lt;/div&gt;
 
-</pre><p>The CSS components:</p><pre xml:space="preserve">
+</code></pre><p>The CSS components:</p><pre><code>
 In main.css:
 
 body{ font-family: Geneva, Arial, Helvetica, sans-serif; margin: 2em; }
@@ -233,12 +233,12 @@ body, h1, h2, h3, p, a {
     color:#000000; 
     background-color:#FFFFFF; 
 }
-  </pre><p>The JavaScript components:</p><pre xml:space="preserve">
+  </code></pre><p>The JavaScript components:</p><pre><code>
 function changeColors (newCSS)
 {
   document.getElementById('currentCSS').href = newCSS; 
 }
-</pre><p class="working-example">A working example of this code, <a href="../../working-examples/script-swap-css/">Using a JavaScript control to apply a different external CSS file</a>, is available.
+</code></pre><p class="working-example">A working example of this code, <a href="../../working-examples/script-swap-css/">Using a JavaScript control to apply a different external CSS file</a>, is available.
                   </p>
                </section>
                <section class="example" id="example-2-using-a-client-side-javascript-to-change-a-css-property-">
@@ -260,7 +260,7 @@ function changeColors (newCSS)
                         
                      </div>
                   </div>
-                  <p>The XHTML components:</p><pre xml:space="preserve">
+                  <p>The XHTML components:</p><pre><code>
 &lt;h1&gt;Product comparison&lt;/h1&gt;
 &lt;p&gt;The products you selected to compare are listed below. 
 Any differences between the products are highlighted and italicized.&lt;/p&gt;
@@ -302,7 +302,7 @@ Any differences between the products are highlighted and italicized.&lt;/p&gt;
   &lt;/tr&gt;
 &lt;/table&gt;
 
-</pre><p>The CSS components:</p><pre xml:space="preserve">
+</code></pre><p>The CSS components:</p><pre><code>
 body { color:#000000; background-color:#FFFFFF; }
 
 .hghltLightYellow { color: #000000; background-color: #FFFF99; font-style:oblique; }
@@ -317,7 +317,7 @@ body { color:#000000; background-color:#FFFFFF; }
 .inline li { display:inline; }
 .inline li a {padding: 0.5em 1em; border: 2px solid #000000; }
 
-</pre><p>The JavaScript components:</p><pre xml:space="preserve">
+</code></pre><p>The JavaScript components:</p><pre><code>
 function changeColor(hghltColor)
 {
   // collects table data cells into an array
@@ -334,7 +334,7 @@ function changeColor(hghltColor)
   }
 }
 
-</pre><p class="working-example">A working example of this code, <a href="../../working-examples/script-change-css-property/">Using a client-side JavaScript to change a CSS property</a>, is available.
+</code></pre><p class="working-example">A working example of this code, <a href="../../working-examples/script-change-css-property/">Using a client-side JavaScript to change a CSS property</a>, is available.
                   </p>
                </section>
                <section class="example" id="example-3-using-php-$_get-to-apply-a-different-external-css-file-">
@@ -348,7 +348,7 @@ function changeColor(hghltColor)
                   <p>The following code is PHP, but a similar approach would work with a variety of server-side
                      technologies. 
                   </p>
-                  <p>The PHP and XHTML components: </p><pre xml:space="preserve">
+                  <p>The PHP and XHTML components: </p><pre><code>
 At the beginning of the PHP page:
 
 &lt;?php
@@ -383,7 +383,7 @@ else {
   &lt;p&gt;Last week's conference presented an impressive line-up of speakers...&lt;/p&gt;
 &lt;/div&gt;
 
-</pre><p>The CSS components: </p><pre xml:space="preserve">
+</code></pre><p>The CSS components: </p><pre><code>
 In style1.css:
 
   body, p { color:#000000; background-color:#FFFFFF; }
@@ -393,7 +393,7 @@ In style2.css:
 
   body, h1, h2, h3, p, a { color:#FFFF00; background-color:#000000; }
 
-</pre><p class="working-example">A working example of this code, <a href="../../working-examples/uri-parameter-choose-stylesheet/">Using PHP $_GET to apply a different external CSS file</a>, is available.
+</code></pre><p class="working-example">A working example of this code, <a href="../../working-examples/uri-parameter-choose-stylesheet/">Using PHP $_GET to apply a different external CSS file</a>, is available.
                   </p>
                </section>
                <section class="example" id="example-4-using-jsp-to-provide-an-alternative-style-sheet-">
@@ -412,7 +412,7 @@ In style2.css:
                      chooses and link elements with "alternate stylesheet" for the other styles. The code
                      can thus be used as a fallback for the client-side code in the second example. 
                   </p>
-                  <p>The JSP page with the form: </p><pre xml:space="preserve">
+                  <p>The JSP page with the form: </p><pre><code>
  &lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
  %&gt;&lt;%@include file="_jsp/styleswitch.jsp"%&gt;&lt;?xml version="1.0" encoding="UTF-8"?&gt;
  &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
@@ -470,7 +470,7 @@ In style2.css:
    &lt;/form&gt;
  &lt;/body&gt;
  &lt;/html&gt;
- </pre><p>The styleswitcher.jsp file included in the previous file: </p><pre xml:space="preserve">
+ </code></pre><p>The styleswitcher.jsp file included in the previous file: </p><pre><code>
  &lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
  &lt;%!
    /**
@@ -560,11 +560,11 @@ In style2.css:
      return theStyleLinks;
    }
  %&gt;
- </pre><p>Other JSP pages can use this code by means of the following include and scriptlet
+ </code></pre><p>Other JSP pages can use this code by means of the following include and scriptlet
                      code:
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
  &lt;%@include file="_jsp/styleswitch.jsp"%&gt;&lt;% out.println(getStyleLinks(request)); %&gt;
- </pre></section>
+ </code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -845,5 +845,5 @@ In style2.css:
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

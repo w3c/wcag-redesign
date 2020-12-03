@@ -67,7 +67,7 @@
                   <p>A section on the home page of a news website that contains a poll that changes every
                      week is marked up with role="region". The h3 text above the form is referenced as
                      the region's name using <code class="att">aria-labelledby</code>.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;div role="region" aria-labelledby="pollhead"&gt;
 &lt;h3 id="pollhead"&gt;This week's Poll&lt;/h3&gt;
 &lt;form method="post" action="#"&gt;
@@ -85,12 +85,12 @@
 &lt;/form&gt;
 &lt;a href="results.php"&gt;See Poll Results&lt;/a&gt;
 &lt;/div&gt;			
-            </pre></section>
+            </code></pre></section>
                <section class="example" id="example-2-identifying-a-region-on-a-banking-site">
                   <h3>Example 2: Identifying a region on a banking site</h3>
                   <p>A user can expand links on a bank website after logging in to see details of term
                      deposit accounts. The details are within a span marked up with <code class="prop">region</code> role. The heading for the region has role=heading and is included in the <code class="att">aria-labelledby</code> that names the region.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;ol&gt;
 	&lt;li&gt;&lt;a id="l1" href="#" aria-expanded="false" title="Show details" aria-controls="block1" &gt;John Henry's Account&lt;/a&gt;&lt;img src="images/panel_expand.gif" alt="" /&gt;
 		 &lt;div id="block1" class="nowHidden" tabindex="-1" aria-labelledby="l1 cd1" role="region"&gt;&lt;span id="cd1" role="heading" aria-level="3"&gt;Certificate of  Deposit:&lt;/span&gt;
@@ -104,16 +104,16 @@
 		 &lt;/div&gt;
 	 &lt;/li&gt;
  &lt;/ol&gt;
-            </pre></section>
+            </code></pre></section>
                <section class="example" id="example-3-identifying-a-portlet-with-a-generic-region">
                   <h3>Example 3: Identifying a portlet with a generic region</h3>
                   <p>This example shows how a generic <code class="prop">region</code> landmark might be added to a weather portlet. There is no existing text on the page
                      that can be referenced as the label, so it is labelled with <code class="att">aria-label</code>.
                      
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;div role="region" aria-label="weather portlet"&gt; 
 	...
-&lt;/div&gt;            </pre></section>
+&lt;/div&gt;            </code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -274,5 +274,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

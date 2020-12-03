@@ -88,7 +88,7 @@
                      is aware of the change in the DOM. 
                   </p>
                   <p>In this example, the Submit and Reset buttons inside the dialog simply hide the <code class="el">div</code>. 
-                  </p><pre xml:space="preserve">...
+                  </p><pre><code>...
 &lt;button onclick="TogglePopup(event,true)"
 	name="pop0001"&gt;Options&lt;/button&gt;
 
@@ -108,8 +108,8 @@
 
 &lt;/div&gt;
 ...
-</pre><p>The <code class="el">div</code>, heading and <code class="el">form</code> elements are styled with CSS to look like a dialog. 
-                  </p><pre xml:space="preserve">...
+</code></pre><p>The <code class="el">div</code>, heading and <code class="el">form</code> elements are styled with CSS to look like a dialog. 
+                  </p><pre><code>...
 a { color:blue; }
 a.clickPopup img { border:none; width:0; }
 
@@ -122,8 +122,8 @@ div.popover h3 { margin:0; padding:0.1em 0.5em; background-color:navy; color:whi
 #pop0001 div.buttons { text-align:right; }
 #pop0001 div.buttons input { width:6em; }
 ...
-</pre><p>The script toggles the display of the popup <code class="el">div</code>, showing it and hiding it. 
-                  </p><pre xml:space="preserve">...
+</code></pre><p>The script toggles the display of the popup <code class="el">div</code>, showing it and hiding it. 
+                  </p><pre><code>...
 function TogglePopup(evt,show)
 {
 	HarmonizeEvent(evt);
@@ -172,7 +172,7 @@ function ResetForm(elem)
 	return false;
 }
 ...
-</pre><p class="working-example">A working example, <a href="../../working-examples/script-options-button-dialog/">an options button that opens a dialog</a>, is available. 
+</code></pre><p class="working-example">A working example, <a href="../../working-examples/script-options-button-dialog/">an options button that opens a dialog</a>, is available. 
                   </p>
                </section>
             </section>
@@ -358,5 +358,5 @@ function ResetForm(elem)
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

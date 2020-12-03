@@ -113,7 +113,7 @@
                   <h3>Example 1</h3>
                   <p>This example organizes the sections of a search page by marking each section
                      heading using <code class="el">h2</code> elements.
-                  </p><pre xml:space="preserve">&lt;h1&gt;Search Technical Periodicals&lt;/h1&gt;
+                  </p><pre><code>&lt;h1&gt;Search Technical Periodicals&lt;/h1&gt;
  &lt;h2&gt;Search&lt;/h2&gt;
  &lt;form action="search.php"&gt;
   &lt;p&gt;&lt;label for="searchInput"&gt;Enter search topic: &lt;/label&gt;
@@ -127,12 +127,12 @@
   &lt;a href="jse.com"&gt;Journal of Software Engineering&lt;/a&gt;
  &lt;/div&gt;
  &lt;h2&gt;Search Results&lt;/h2&gt;
- ... search results are returned in this section ...   </pre></section>
+ ... search results are returned in this section ...   </code></pre></section>
                <section class="example" id="example-2-headings-show-the-overall-organization-of-the-content">
                   <h3>Example 2: Headings show the overall organization of the content</h3>
                   <p>In this example, heading markup is used to make the navigation and main content
                      sections perceivable.
-                  </p><pre xml:space="preserve">&lt;!-- Logo, banner graphic, search form, etc.  --&gt;
+                  </p><pre><code>&lt;!-- Logo, banner graphic, search form, etc.  --&gt;
   &lt;h2&gt;Navigation&lt;/h2&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href="about.htm"&gt;About us&lt;/a&gt;&lt;/li&gt;
@@ -141,14 +141,14 @@
     &lt;/ul&gt;
   &lt;h2&gt;All about headings&lt;/h2&gt;
    &lt;!-- Text, images, other material making up the main content... --&gt; 
-            </pre></section>
+            </code></pre></section>
                <section class="example" id="example-3-headings-show-the-organization-of-material-within-the-main-content">
                   <h3>Example 3: Headings show the organization of material within the main content</h3>
                   <p>Note that in HTML 4.01 and XHTML 1.x, heading elements only mark the beginning of
                      	sections. Because there is no markup to associate a heading element with the section
                      content explicitly, users will assume that the heading applies to all following content
                      until the next heading element is encountered.
-                  </p><pre xml:space="preserve"> &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+                  </p><pre><code> &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
   &lt;head&gt;
     &lt;title&gt;Cooking techniques&lt;/title&gt;  
   &lt;/head&gt;   
@@ -166,7 +166,7 @@
         ... text of the section ...     
     &lt;/p&gt;   
   &lt;/body&gt; 
-&lt;/html&gt;    </pre></section>
+&lt;/html&gt;    </code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -363,5 +363,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

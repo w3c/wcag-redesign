@@ -61,13 +61,13 @@
                <h2>Examples</h2>
                <section class="example" id="example-1-checking-a-single-control-with-an-event-handler">
                   <h3>Example 1: Checking a single control with an event handler</h3>
-                  <p>The following script will check that a valid date has been entered in the form control.</p><pre xml:space="preserve">
+                  <p>The following script will check that a valid date has been entered in the form control.</p><pre><code>
 &lt;label for="date"&gt;Date:&lt;/label&gt;
 &lt;input type="text" name="date" id="date" 
 onchange="if(isNaN(Date.parse(this.value))) 
 alert('This control is not a valid date. 
 Please re-enter the value.');" /&gt;
-</pre></section>
+</code></pre></section>
                <section class="example" id="example-2-checking-multiple-controls-when-the-user-submits-the-form">
                   <h3>Example 2: Checking multiple controls when the user submits the form</h3>
                   <p>The following sample shows multiple controls in a form. The <code class="el">form</code> element uses the <code class="att">onsubmit</code> attribute which creates an event handler to execute the validation script when the
@@ -91,7 +91,7 @@ Please re-enter the value.');" /&gt;
                         			
                      </div>
                   </div>
-                  <p>Script code:</p><pre xml:space="preserve">
+                  <p>Script code:</p><pre><code>
 function validate() {
 	// initialize error message
 	var msg = "";
@@ -111,7 +111,7 @@ function validate() {
 		return false;
 	} else return true;
 }
-</pre><p>Form code:</p><pre xml:space="preserve">
+</code></pre><p>Form code:</p><pre><code>
 &lt;form action="multiple-controls.html" onsubmit="return validate()"&gt;
 	&lt;p&gt;
 		&lt;label for="name"&gt;Name: &lt;/label&gt;
@@ -125,7 +125,7 @@ function validate() {
 		&lt;input type="submit" /&gt;
 	&lt;/p&gt;
 &lt;/form&gt;
-</pre><p class="working-example">This is demonstrated in the <a href="../../working-examples/script-check-multiple-controls/">working example of checking multiple controls when the user submits the form</a>.
+</code></pre><p class="working-example">This is demonstrated in the <a href="../../working-examples/script-check-multiple-controls/">working example of checking multiple controls when the user submits the form</a>.
                   </p>
                </section>
             </section>
@@ -270,5 +270,5 @@ function validate() {
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

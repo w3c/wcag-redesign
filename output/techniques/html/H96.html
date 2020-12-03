@@ -76,32 +76,32 @@
                   <h3>Example 1: Audio description in one language</h3>
                   <p>A <code class="el">video</code> element for a video in the English language. The audio descriptions are provided
                      in the WebVTT format.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 			 &lt;video poster="myvideo.png" controls&gt;
 				&lt;source src="myvideo.mp4" srclang="en" type="video/mp4"&gt;
 				&lt;track src="myvideo_en.vtt" kind="descriptions" srclang="en" label="English"&gt;
 			  &lt;/video&gt;
-            </pre></section>
+            </code></pre></section>
                <section class="example" id="example-2-audio-description-in-multiple-languages">
                   <h3>Example 2: Audio description in multiple languages</h3>
                   <p>A <code class="el">video</code> element for a video with both an English and French language source element, and
                      with an English and a French audio description track using the WebVTT (vtt) file format.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 			 &lt;video poster="myvideo.png" controls&gt;
 				&lt;source src="myvideo.mp4" srclang="en" type="video/mp4"&gt;
 				&lt;source src="myvideo.webm" srclang="fr" type="video/webm"&gt;
 				&lt;track src="myvideo_en.vtt" kind="descriptions" srclang="en" label="English"&gt;
 				&lt;track src="myvideo_fr.vtt" kind="descriptions" srclang="fr" label="French"&gt;
-			  &lt;/video&gt;            </pre></section>
+			  &lt;/video&gt;            </code></pre></section>
                <section class="example" id="example-3-captions-in-multiple-languages">
                   <h3>Example 3: Captions in multiple languages</h3>
                   <p>A <code class="el">video</code>, "Google self-driving car". with an audio description track.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 			&lt;video controls tabindex="1"&gt;
 				&lt;source src="cdgQpa1pUUE.webm" type="video/webm"&gt;
 				&lt;source src="cdgQpa1pUUE.mp4" type="video/mp4"&gt;
 				&lt;track id="audesc" src="cdgQpa1pUUE.vtt" kind="descriptions" label="English descriptions" srclang="en-us"&gt;&lt;/track&gt;
-			&lt;/video&gt;            </pre></section>
+			&lt;/video&gt;            </code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -263,5 +263,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

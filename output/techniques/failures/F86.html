@@ -74,8 +74,8 @@
                      suffix. They are typically formatted as follows ([area code]) [prefix]-[suffix], such
                      as (206) 555-1212. Often, forms asking for a telephone number will include 3 separate
                      fields, but with a single label, such as:
-                  </p><pre xml:space="preserve">Phone number: 
-(&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</pre><p>The failure occurs when there is not a name for each of the 3 fields in the Accessibility
+                  </p><pre><code>Phone number: 
+(&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</code></pre><p>The failure occurs when there is not a name for each of the 3 fields in the Accessibility
                      API. A user with assistive technology will experience these as three undefined text
                      fields. Some assistive technologies will read the punctuation as identification for
                      the text fields, which can be even more confusing. In the case of a 3-field US phone
@@ -87,7 +87,7 @@
                   <h3>Example 2</h3>
                   <p>The same US telephone number. In this case, the label is not programatically associated
                      with any of the parts. 
-                  </p><pre xml:space="preserve">Phone number: (&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</pre><p> A user with assistive technology will experience these as three undefined text fields.
+                  </p><pre><code>Phone number: (&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</code></pre><p> A user with assistive technology will experience these as three undefined text fields.
                      
                   </p>
                </section>
@@ -95,8 +95,8 @@
                   <h3>Example 3</h3>
                   <p>The same US telephone number. In this case, the label is programatically associated
                      with the first part.
-                  </p><pre xml:space="preserve">&lt;label for="area"&gt;Phone number:&lt;/label&gt; 
-(&lt;input id="area" type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</pre><p>A user with assistive technology will be led to believe that the first field is for
+                  </p><pre><code>&lt;label for="area"&gt;Phone number:&lt;/label&gt; 
+(&lt;input id="area" type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</code></pre><p>A user with assistive technology will be led to believe that the first field is for
                      the entire phone number, and will experience the second and third fields as undefined
                      text fields.
                   </p>
@@ -277,5 +277,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

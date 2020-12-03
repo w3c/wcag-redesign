@@ -100,7 +100,7 @@
                      									<code class="att">type</code>="radio"). The radio
                      buttons are contained within a <code class="el">fieldset</code>. The test question is tagged
                      with the <code class="el">legend</code> element.
-                  </p><pre xml:space="preserve">&lt;fieldset&gt;
+                  </p><pre><code>&lt;fieldset&gt;
   &lt;legend&gt;The play &lt;cite&gt;Hamlet&lt;/cite&gt; was written by:&lt;/legend&gt;
   &lt;input type="radio" id="shakesp" name="hamlet" checked="checked" value="a"&gt;
   &lt;label for="shakesp"&gt;William Shakespeare&lt;/label&gt;&lt;br /&gt;
@@ -112,7 +112,7 @@
   &lt;label for="hem"&gt;Ernest Hemingway&lt;/label&gt;&lt;br /&gt;
   &lt;input type="radio" id="dickens" name="hamlet" value="e"&gt;
   &lt;label for="dickens"&gt;Charles Dickens&lt;/label&gt;
-&lt;/fieldset&gt;   </pre></section>
+&lt;/fieldset&gt;   </code></pre></section>
                <section class="example" id="example-2-a-set-of-checkboxes-">
                   <h3>Example 2: A set of checkboxes </h3>
                   <p>The User Profile page for a Web site allows users to indicate their interests by
@@ -122,7 +122,7 @@
                      has a <code class="el">label</code>. The checkboxes are contained within a
                      <code class="el">fieldset</code>, and the <code class="el">legend</code> element contains the prompt for
                      the entire group of checkboxes.
-                  </p><pre xml:space="preserve">&lt;fieldset&gt;
+                  </p><pre><code>&lt;fieldset&gt;
   &lt;legend&gt;I am interested in the following (check all that apply):&lt;/legend&gt;
   &lt;input type="checkbox" id="photo" name="interests" value="ph"&gt;
   &lt;label for="photo"&gt;Photography&lt;/label&gt;&lt;br /&gt;
@@ -131,13 +131,13 @@
   &lt;input type="checkbox" id="acrylic" name="interests" checked="checked" value="ac"&gt;
   &lt;label for="acrylic"&gt;Acrylic&lt;/label&gt;
   …
-&lt;/fieldset&gt;    </pre></section>
+&lt;/fieldset&gt;    </code></pre></section>
                <section class="example" id="example-3--radio-buttons-submitting-to-the-same-named-field">
                   <h3>Example 3:  Radio buttons submitting to the same named field</h3>
                   <p>This example requests the user to choose a single philosopher. Note that each field
                      has the same "<code class="att">name</code>" attribute, indicating these radio buttons are related (they all submit the same
                      field), and should be grouped as shown. Also note that while the "<code class="att">name</code>" attributes are the same, the "<code class="att">id</code>" attributes must be unique.
-                  </p><pre xml:space="preserve">&lt;form action="http://example.com/vote" method="post"&gt;
+                  </p><pre><code>&lt;form action="http://example.com/vote" method="post"&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Your preferred philosopher&lt;/legend&gt;
     &lt;input type="radio" name="philosopher" id="philosopher_socrates" value="socrates"/&gt;
@@ -147,7 +147,7 @@
     &lt;input type="radio" name="philosopher" id="philosopher_aristotle" value="aristotle"/&gt;
     &lt;label for="philosopher_aristotle"&gt;Aristotle&lt;/label&gt;
   &lt;/fieldset&gt;
-  &lt;/form&gt; </pre><div class="note">
+  &lt;/form&gt; </code></pre><div class="note">
                      <div role="heading" class="note-title marker" aria-level="4">Note</div>
                      <div>
                         
@@ -162,7 +162,7 @@
                   <h3>Example 4:  Logically related controls</h3>
                   <p>In this example, form fields for residential and postal addresses are distinguished
                      by the value of the <code class="el">legend</code> in each <code class="el">fieldset</code> grouping.
-                  </p><pre xml:space="preserve">&lt;form action="http://example.com/adduser" method="post"&gt;
+                  </p><pre><code>&lt;form action="http://example.com/adduser" method="post"&gt;
    &lt;fieldset&gt;
      &lt;legend&gt;Residential Address&lt;/legend&gt;
      &lt;label for="raddress"&gt;Address: &lt;/label&gt;
@@ -179,7 +179,7 @@
      &lt;input type="text" id="pzip" name="pzip" /&gt;
      ...more postal address information...
    &lt;/fieldset&gt;
-&lt;/form&gt;</pre></section>
+&lt;/form&gt;</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -343,5 +343,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

@@ -141,7 +141,7 @@
                   <p>XAML templates can be verbose; for clarity, only the parts of the
                      					template that were changed or useful for showing the structure are
                      					shown. Omitted portions are shown as ellipsis (...). 
-                  </p><pre xml:space="preserve">&lt;UserControl x:Class="VisibleFocusTemplate.MainPage"
+                  </p><pre><code>&lt;UserControl x:Class="VisibleFocusTemplate.MainPage"
  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 &gt;
@@ -189,26 +189,26 @@
  &gt;Button with re-templated focus visible indicator&lt;/Button&gt;
  &lt;/StackPanel&gt;
 &lt;/UserControl&gt;
-</pre><p>The most interesting aspect of this example is the change made to
+</code></pre><p>The most interesting aspect of this example is the change made to
                      						the FocusVisualElement part. Here is the original (default template)
                      						FocusVisualElement: 
-                  </p><pre xml:space="preserve">&lt;Rectangle x:Name="FocusVisualElement" RadiusX="2" RadiusY="2" Margin="1" Stroke="#FF6DBDD1" StrokeThickness="1" 
+                  </p><pre><code>&lt;Rectangle x:Name="FocusVisualElement" RadiusX="2" RadiusY="2" Margin="1" Stroke="#FF6DBDD1" StrokeThickness="1" 
  Opacity="0" IsHitTestVisible="false" /&gt;
-</pre><p>Here is the changed FocusVisualElement: </p><pre xml:space="preserve">&lt;Border x:Name="FocusVisualElement" IsHitTestVisible="false"
+</code></pre><p>Here is the changed FocusVisualElement: </p><pre><code>&lt;Border x:Name="FocusVisualElement" IsHitTestVisible="false"
  Opacity="0" CornerRadius="2"
  BorderBrush="#D0FF0000" BorderThickness="4"&gt;
  &lt;Rectangle x:Name="rectangle" IsHitTestVisible="false"
  Margin="2" Opacity="0"
  RadiusY="2" RadiusX="2" Fill="#A0FF0000"/&gt;
 &lt;/Border&gt;
-</pre><p>The following images show how each of the two buttons (default and
+</code></pre><p>The following images show how each of the two buttons (default and
                      						reskinned) appear when focused. 
                   </p>
                   <figure id="figure-default-focus-button-sl">
                      <img src="img/default_button_focus.png" />
                      
                      
-                     <figcaption>Figure 1Default button focus</figcaption>
+                     <figcaption>Figure Figure Figure 1Default button focus</figcaption>
                      
                      
                   </figure>
@@ -216,7 +216,7 @@
                      <img src="img/reskinned_button_focus.png" />
                      
                      
-                     <figcaption>Figure 2Reskinned button focus</figcaption>
+                     <figcaption>Figure Figure Figure 2Reskinned button focus</figcaption>
                      
                      
                   </figure>
@@ -406,5 +406,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

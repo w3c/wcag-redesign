@@ -75,14 +75,14 @@
                   <h3>Example 1</h3>
                   <p>The following example incorrectly uses tabindex to specify an
                      alternative tab order:
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;ol&gt;
    &lt;li&gt;&lt;a href="main.html" tabindex="1"&gt;Homepage&lt;/a&gt;&lt;/li&gt;
    &lt;li&gt;&lt;a href="chapter1.html" tabindex="4"&gt;Chapter 1&lt;/a&gt;&lt;/li&gt;
    &lt;li&gt;&lt;a href="chapter2.html" tabindex="3"&gt;Chapter 2&lt;/a&gt;&lt;/li&gt;
    &lt;li&gt;&lt;a href="chapter3.html" tabindex="2"&gt;Chapter 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</pre><p>If this list is navigated by the tab key, the list is navigated in
+</code></pre><p>If this list is navigated by the tab key, the list is navigated in
                      the order Homepage, chapter 3, chapter 2, chapter 1, which does not
                      follow the sequence in the content.
                   </p>
@@ -249,5 +249,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

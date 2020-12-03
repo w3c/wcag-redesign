@@ -91,13 +91,13 @@
                      <code>click</code> event - which in most user agents is triggered on the up-event - the author decided
                      to close the dialog on the down-event. This may lead to the user accidentally closing
                      the dialog and losing all the data they entered into the form up to that point.
-                  </p><pre><code>
+                  </p><pre><code><code>
 
-                        <!-- modal dialog with a form -->
+                           <!-- modal dialog with a form -->
 ...
 &lt;button id="close"&gt;Close&lt;/button&gt;
 ...
-</code></pre><pre><code>
+</code></code></pre><pre><code><code>
 const trigger = document.getElementById("close");
 
 function closeDialog() {
@@ -108,7 +108,7 @@ function closeDialog() {
 trigger.addEventListener('mousedown', closeDialog);
 trigger.addEventListener('touchstart', closeDialog);
 trigger.addEventListener('pointerdown', closeDialog);
-</code></pre></section>
+</code></code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -250,5 +250,5 @@ trigger.addEventListener('pointerdown', closeDialog);
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

@@ -76,12 +76,12 @@
                      submit a form, and should instead use a submit button, or rely on
                      the form's default behavior of submitting when the user hits enter
                      in a text field. 
-                  </p><pre xml:space="preserve"> 
+                  </p><pre><code> 
 &lt;form method="get" id="form1"&gt;
   &lt;input type="text" name="text1" size="3" maxlength="3"&gt; - 
   &lt;input type="text" name="text2" size="3" maxlength="3"&gt; - 
   &lt;input type="text" name="text3" size="4" maxlength="4" onchange="form1.submit();"&gt;
-&lt;/form&gt; </pre></section>
+&lt;/form&gt; </code></pre></section>
                <section class="example" id="example-2">
                   <h3>Example 2</h3>
                   <p>This is a  example that submits a form when the user
@@ -91,7 +91,7 @@
                      and users with hand tremors can easily make a mistake on which item on the dropdown
                      menu to choose and they are taken to the wrong destination before they can correct
                      it.  
-                  </p><pre xml:space="preserve"> 
+                  </p><pre><code> 
 &lt;form method="get" id="form2"&gt;
  &lt;input type="text" name="text1"&gt;
   &lt;select name="select1" onchange="form2.submit();"&gt;
@@ -100,7 +100,7 @@
     &lt;option&gt;three&lt;/option&gt;
     &lt;option&gt;four&lt;/option&gt;
   &lt;/select&gt;
-&lt;/form&gt;</pre></section>
+&lt;/form&gt;</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -239,5 +239,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

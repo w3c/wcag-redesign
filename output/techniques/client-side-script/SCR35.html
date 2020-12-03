@@ -80,7 +80,7 @@
                   <p>The "return false;" at the end of the doStuff() event handling function tells the
                      browser not to navigate to the URI. Without it, the page would refresh after the script
                      ran. 
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;script&gt; 
 function doStuff()
  {
@@ -89,7 +89,7 @@ function doStuff()
   }
 &lt;/script&gt;
 &lt;a href="#" onclick="return doStuff();"&gt;do stuff&lt;/a&gt;
-</pre></section>
+</code></pre></section>
                <section class="example" id="example-2">
                   <h3>Example 2</h3>
                   <p>Link that runs script, but navigates to another page when script is not available.
@@ -100,7 +100,7 @@ function doStuff()
                      at the end of the doStuff() event handling function tells the browser not to navigate
                      to the URI. Without it, the browser would navigate to dostuff.htm after the script
                      ran.
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;script&gt; 
 function doStuff() 
  {  
@@ -109,7 +109,7 @@ function doStuff()
  }
 &lt;/script&gt;
 &lt;a href="dostuff.htm" onclick="return doStuff();"&gt;do stuff&lt;/a&gt;
-</pre><p class="working-example">A working example of this code is available. Refer to <a href="../../working-examples/script-action-links/">Creating Action Links using JavaScript</a>.
+</code></pre><p class="working-example">A working example of this code is available. Refer to <a href="../../working-examples/script-action-links/">Creating Action Links using JavaScript</a>.
                   </p>
                </section>
                <section class="example" id="example-3">
@@ -118,7 +118,7 @@ function doStuff()
                      This approach can be used by sites that do not rely on script, if and only if the
                      form post provides the same functionality as the script. The onsubmit="return false;"
                      prevents the form from submitting. 
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;script&gt;
   function doStuff()
  {
@@ -128,7 +128,7 @@ function doStuff()
 &lt;form action="doStuff.aspx" onsubmit="return false;"&gt;
  &lt;input type="submit" value="Do Stuff" onclick="doStuff();" /&gt;
 &lt;/form&gt;
-</pre><p class="working-example">A working example of this code is available. Refer to <a href="../../working-examples/script-action-buttons/">Creating Action Buttons using JavaScript</a>.
+</code></pre><p class="working-example">A working example of this code is available. Refer to <a href="../../working-examples/script-action-buttons/">Creating Action Buttons using JavaScript</a>.
                   </p>
                </section>
                <section class="example" id="example-4">
@@ -136,7 +136,7 @@ function doStuff()
                   <p>Button that runs a script, implemented with input type="image". Note that an alt attribute
                      must be added to the <code class="el">input</code> to provide a text equivalent for the image. This approach should only be used when
                      script is relied upon. 
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;script&gt;
   function doStuff()
   {
@@ -145,26 +145,26 @@ function doStuff()
   }
 &lt;/script&gt;
 &lt;input  type="image"  src="stuff.gif"  alt="Do stuff"  onclick="return doStuff();" /&gt;
-</pre></section>
+</code></pre></section>
                <section class="example" id="example-5">
                   <h3>Example 5</h3>
                   <p>Button that runs a script, implemented with input type="submit", input type="reset"
                      or input type="button". This approach should only be used when script is relied upon.
                      
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;input type="submit" onclick="return doStuff();" value=”Do Stuff” /&gt;
-</pre></section>
+</code></pre></section>
                <section class="example" id="example-6">
                   <h3>Example 6</h3>
                   <p>Button that runs a script, implemented with <code class="el">button</code>…<code class="el">/button</code>. This is valuable when you want more control over the look of your button. In this
                      particular example, the button contains both an icon and some text. This approach
                      should only be used when script is relied upon. 
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 &lt;button onclick="return doStuff();"&gt;
  &lt;img src="stuff.gif" alt="stuff icon"&gt;
  Do Stuff
 &lt;/button&gt;
-</pre></section>
+</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -392,5 +392,5 @@ function doStuff()
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

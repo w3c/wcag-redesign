@@ -138,12 +138,12 @@
                   <h3>Example 1: Simple landmarks</h3>
                   <p>The following example shows how landmarks might be added to an HTML4 or XHTML 1.0
                      document:
-                  </p><pre xml:space="preserve">&lt;div id="header" role="banner"&gt;A banner image and introductory title&lt;/div&gt;
+                  </p><pre><code>&lt;div id="header" role="banner"&gt;A banner image and introductory title&lt;/div&gt;
 &lt;div id="sitelookup" role="search"&gt;....&lt;/div&gt;
 &lt;div id="nav" role="navigation"&gt;...a list of links here ... &lt;/div&gt;
 &lt;div id="content" role="main"&gt; ... Ottawa is the capital of Canada ...&lt;/div&gt;
 &lt;div id="rightsideadvert" role="complementary"&gt;....an advertisement here...&lt;/div&gt;
-&lt;div id="footer" role="contentinfo"&gt;(c)The Freedom Company, 123 Freedom Way, Helpville, USA&lt;/div&gt;</pre></section>
+&lt;div id="footer" role="contentinfo"&gt;(c)The Freedom Company, 123 Freedom Way, Helpville, USA&lt;/div&gt;</code></pre></section>
                <section class="example" id="example-2-multiple-landmarks-of-the-same-type-and-aria-labelledby">
                   <h3>Example 2: Multiple landmarks of the same type and aria-labelledby</h3>
                   <p>The following example shows a best practice of how landmarks might be added to an
@@ -152,30 +152,30 @@
                      times on a Web page, each instance may have a unique label specified using <code class="att">aria-labelledby</code>:
                      
                      
-                  </p><pre xml:space="preserve">&lt;div id="leftnav" role="navigaton" aria-labelledby="leftnavheading"&gt;
+                  </p><pre><code>&lt;div id="leftnav" role="navigaton" aria-labelledby="leftnavheading"&gt;
 &lt;h2 id="leftnavheading"&gt;Institutional Links&lt;/h2&gt;
 &lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;
 &lt;div id="rightnav" role="navigation" aria-labelledby="rightnavheading"&gt;
 &lt;h2 id="rightnavheading"&gt;Related topics&lt;/h2&gt;
-&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</pre></section>
+&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</code></pre></section>
                <section class="example" id="example-3-multiple-landmarks-of-the-same-type-and-aria-label">
                   <h3>Example 3: Multiple landmarks of the same type and aria-label</h3>
                   <p>The following example shows a best practice of how landmarks might be added to an
                      HTML4 or XHTML 1.0 document in situations where there are more than two of the same
                      type of landmark on the same page, and there is no existing text on the page that
                      can be referenced as the label.
-                  </p><pre xml:space="preserve">&lt;div id="leftnav" role="navigaton" aria-label="Primary"&gt;
+                  </p><pre><code>&lt;div id="leftnav" role="navigaton" aria-label="Primary"&gt;
 &lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt;&lt;/ul&gt; &lt;/div&gt;
 &lt;div id="rightnav" role="navigation" aria-label="Secondary"&gt;
-&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;</pre></section>
+&lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;</code></pre></section>
                <section class="example" id="example-4-search-form">
                   <h3>Example 4: Search form</h3>
                   <p>The following example shows a search form with a "search" landmark. The search role
                      typically goes on the form field or a div surrounding the search form.
-                  </p><pre xml:space="preserve">&lt;form role="search"&gt;
+                  </p><pre><code>&lt;form role="search"&gt;
 &lt;label for="s6"&gt;search&lt;/label&gt;&lt;input id="s6" type="text" size="20"&gt;
 ...
-&lt;/form&gt; </pre></section>
+&lt;/form&gt; </code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -358,5 +358,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

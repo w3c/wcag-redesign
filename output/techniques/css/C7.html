@@ -88,7 +88,7 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <p>The following examples use the CSS selector and rule set below:</p><pre><code>.visually-hidden {
+               <p>The following examples use the CSS selector and rule set below:</p><pre><code><code>.visually-hidden {
    clip-path: inset(100%);
    clip: rect(1px, 1px, 1px, 1px);
    height: 1px;
@@ -96,21 +96,21 @@
    position: absolute;
    white-space: nowrap;
    width: 1px;
-}</code></pre><section class="example" id="example-1">
+}</code></code></pre><section class="example" id="example-1">
                   <h3>Example 1</h3>
                   <p>This example describes a news site that has a series of short synopsis of stories
                      followed by a link that says "full story". Hidden link text describes the purpose
                      of the link.
-                  </p><pre><code>
+                  </p><pre><code><code>
 &lt;p&gt;Washington has announced plans to stimulate economic growth.
   &lt;a href="#"&gt;&lt;span class="visually-hidden"&gt;Washington stimulates economic growth &lt;/span&gt;
-  Full Story&lt;/a&gt;&lt;/p&gt;</code></pre></section>
+  Full Story&lt;/a&gt;&lt;/p&gt;</code></code></pre></section>
                <section class="example" id="example-2">
                   <h3>Example 2</h3>
                   <p>This example describes a resource that has electronic books in different formats.
                      The title of each book is followed by links that say "HTML" and "PDF." Hidden text
                      describes the purpose of each link.
-                  </p><pre><code>&lt;dl&gt;
+                  </p><pre><code><code>&lt;dl&gt;
 &lt;dt&gt;Winnie the Pooh &lt;/dt&gt;
    &lt;dd&gt;&lt;a href="winnie_the_pooh.html"&gt;
       &lt;span class="visually-hidden"&gt;Winnie the Pooh &lt;/span&gt;HTML&lt;/a&gt;&lt;/dd&gt;
@@ -121,7 +121,7 @@
       &lt;span class="visually-hidden"&gt;War and Peace &lt;/span&gt;HTML&lt;/a&gt;&lt;/dd&gt; 
     &lt;dd&gt;&lt;a href="war_and_peace.pdf"&gt;
       &lt;span class="visually-hidden"&gt;War and Peace &lt;/span&gt;PDF&lt;/a&gt;&lt;/dd&gt;
-&lt;/dl&gt;</code></pre></section>
+&lt;/dl&gt;</code></code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -279,5 +279,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

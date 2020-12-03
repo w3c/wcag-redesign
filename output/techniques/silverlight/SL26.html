@@ -76,7 +76,7 @@
                      						XAML root or elsewhere). No code-behind is necessary for this example;
                      						the element relationships are established by the {Binding} values in
                      						the XAML and interpreted appropriately by the Silverlight run time. 
-                  </p><pre xml:space="preserve">   &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
+                  </p><pre><code>   &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
        &lt;StackPanel Orientation="Horizontal"&gt;
            &lt;TextBlock Name="lbl_FirstName"&gt;First name&lt;/TextBlock&gt;
            &lt;TextBox AutomationProperties.LabeledBy="{Binding ElementName=lbl_FirstName}" Name="tbFirstName" Width="100"/&gt;
@@ -86,15 +86,15 @@
            &lt;TextBox AutomationProperties.LabeledBy="{Binding ElementName=lbl_LastName}" Name="tbLastName" Width="100"/&gt;
        &lt;/StackPanel&gt;
    &lt;/StackPanel&gt;
-</pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-labels/">working example of Labels</a>.
+</code></pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-labels/">working example of Labels</a>.
                   </p>
                </section>
                <section class="example" id="example-2-labeling-/-captioning-an-image-">
-                  <h3>Example 2: Labeling / captioning an image </h3><pre xml:space="preserve">       &lt;Image HorizontalAlignment="Left" Width="480" Name="img_MyPix"
+                  <h3>Example 2: Labeling / captioning an image </h3><pre><code>       &lt;Image HorizontalAlignment="Left" Width="480" Name="img_MyPix"
                 Source="snoqualmie-NF.jpg"
                 AutomationProperties.LabeledBy="{Binding ElementName=caption_MyPix}"/&gt;
        &lt;TextBlock Name="caption_MyPix"&gt;Mount Snoqualmie North Bowl Skiing&lt;/TextBlock&gt;
-       </pre><div class="note">
+       </code></pre><div class="note">
                      <div role="heading" class="note-title marker" aria-level="4">Note</div>
                      <div>
                         
@@ -270,5 +270,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

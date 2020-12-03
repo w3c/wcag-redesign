@@ -71,25 +71,25 @@
                   <h3>Example 1: JSP/Servlets</h3>
                   <p> In Java Servlets or JavaServer Pages (JSP), developers can use
                      HttpServletResponse.sendRedirect(String url). 
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 …
 public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 …
   response.sendRedirect("/newUserLogin.do");
-}</pre><p> This sends a response with a 302 status code ("Found") and a
+}</code></pre><p> This sends a response with a 302 status code ("Found") and a
                      Location header with the new URL to the user agent. It is also
                      possible to set another status code with
                      response.sendError(int code, String message) with
                      one of the constants defined in the interface
                      javax.servlet.http.HttpServletResponse as status code. 
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 …
 public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 …
   response.sendError(response.SC_MOVED_PERMANENTLY, "/newUserLogin.do");
-}</pre><p> If an application uses HttpServletResponse.encodeURL(String
+}</code></pre><p> If an application uses HttpServletResponse.encodeURL(String
                      url) for URL rewriting because the application depends on
                      sessions, the method
                      HttpServletResponse.encodeRedirectURL(String url)
@@ -105,33 +105,33 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
                   <h3>Example 2: ASP</h3>
                   <p> In Active Server Page (ASP) with VBScript, developers can use
                      Response.Redirect. 
-                  </p><pre xml:space="preserve">
-  Response.Redirect "newUserLogin.asp"</pre><p> or </p><pre xml:space="preserve">
-Response.Redirect("newUserLogin.asp")</pre><p> The code below is a more complete example with a specific HTTP
+                  </p><pre><code>
+  Response.Redirect "newUserLogin.asp"</code></pre><p> or </p><pre><code>
+Response.Redirect("newUserLogin.asp")</code></pre><p> The code below is a more complete example with a specific HTTP
                      status code. 
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
 Response.Clear
 Response.Status = 301
 Response.AddHeader "Location", "newUserLogin.asp"
 Response.Flush
-Response.End</pre></section>
+Response.End</code></pre></section>
                <section class="example" id="example-3-php">
                   <h3>Example 3: PHP</h3>
                   <p> In PHP, developers can send a raw HTTP header with the
                      header method. The code below sends a 301 status code
                      and a new location. If the status is not explicitly set, the
                      redirect response sends an HTTP status code 302. 
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
  &lt;?php
 header("HTTP/1.1 301 Moved Permanently);
 header("Location: http://www.example.com/newUserLogin.php");
-?&gt;</pre></section>
+?&gt;</code></pre></section>
                <section class="example" id="example-4-apache">
                   <h3>Example 4: Apache</h3>
                   <p> Developers can configure the Apache Web server to handle redirects,
                      as in the following example. 
-                  </p><pre xml:space="preserve">
-redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</pre></section>
+                  </p><pre><code>
+redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -319,5 +319,5 @@ redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</pre></sec
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

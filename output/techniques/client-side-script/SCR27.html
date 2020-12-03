@@ -78,7 +78,7 @@
                   </p>
                   <p>The modules are list items, and each module, in addition to content in div elements,
                      contains a menu represented as a nested list. 
-                  </p><pre xml:space="preserve">&lt;ul id="swapper"&gt;
+                  </p><pre><code>&lt;ul id="swapper"&gt;
     &lt;li id="black"&gt;
         &lt;div class="module"&gt;
             &lt;div class="module_header"&gt;
@@ -98,7 +98,7 @@
         &lt;/div&gt;
     &lt;/li&gt;
     ...
-&lt;/ul&gt;</pre><p>Since we've covered the showing and hiding of menus in the simple tree samples, we'll
+&lt;/ul&gt;</code></pre><p>Since we've covered the showing and hiding of menus in the simple tree samples, we'll
                      focus here just on the code that swaps the modules. Once we harmonize the events and
                      cancel the default link action, we go to work. First, we set a bunch of local variables
                      for the elements with which we'll be working: the menu, the module to be reordered,
@@ -106,7 +106,7 @@
                      to swap. If we find one, we then call swapNode() to swap our two modules, and PositionElement()
                      to move the absolutely-positioned menu along with the module, and then set focus back
                      on the menu item which launched the whole thing.
-                  </p><pre xml:space="preserve">function MoveNode(evt,dir)
+                  </p><pre><code>function MoveNode(evt,dir)
 {
     HarmonizeEvent(evt);
     evt.preventDefault();
@@ -144,9 +144,9 @@
         PositionElement(menu,menuLink,false,true);
     }
     src.focus();
-}</pre><p>The CSS for the node swap is not much different than that of our previous tree samples,
+}</code></pre><p>The CSS for the node swap is not much different than that of our previous tree samples,
                      with some size and color adjustment for the modules and the small menu.
-                  </p><pre xml:space="preserve">ul#swapper { margin:0px; padding:0px; list-item-style:none; }
+                  </p><pre><code>ul#swapper { margin:0px; padding:0px; list-item-style:none; }
 ul#swapper li { padding:0; margin:1em; list-style:none; height:5em; width:15em; 
     border:1px solid black; }
 ul#swapper li a { color:white; text-decoration:none; font-size:90%; }
@@ -160,7 +160,7 @@ ul#swapper ul.menu li { height:auto; border:none; margin:0; text-align:left;
     font-weight:normal; width:5em; }
 ul#swapper ul.menu li a { text-decoration:none; color:black; padding:0 0.1em; 
     display:block; width:100%; }
-</pre></section>
+</code></pre></section>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -301,5 +301,5 @@ ul#swapper ul.menu li a { text-decoration:none; color:black; padding:0 0.1em;
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

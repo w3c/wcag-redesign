@@ -71,7 +71,7 @@
                   </p>
                   <p>The following snippet from The Open Ajax Accessibility Examples, Example 38, shows
                      WAI-ARIA mark-up for a toggle button that selects bold text:
-                  </p><pre xml:space="preserve">
+                  </p><pre><code>
   &lt;li id="bold1"  
     class="toggleButton"
     role="button"
@@ -81,9 +81,9 @@
     aria-controls="text1"&gt;
     &lt;img src="http://www.oaa-accessibility.org/media/examples/images/button-bold.png" alt="bold text" align="middle"&gt;
 &lt;/li&gt;
-</pre><p>The <code class="el">li</code> element has a role of "button" and an "aria-pressed" attribute. The following excerpt
+</code></pre><p>The <code class="el">li</code> element has a role of "button" and an "aria-pressed" attribute. The following excerpt
                      from the Javascript for this example updates the value of the "aria-pressed" attribute:
-                  </p><pre xml:space="preserve">                   
+                  </p><pre><code>                   
                              /**
    * togglePressed() toggles the aria-pressed atribute between true or false
    *
@@ -101,7 +101,7 @@
       $(id).attr('aria-pressed', 'true');
     }
   }
-                            </pre><p>This button is available as part of the <a href="http://www.oaa-accessibility.org/examplep/toolbar1/">working example of Example 38 - Toolbar using inline images for visual state</a>, on the OpenAjax Alliance site.
+                            </code></pre><p>This button is available as part of the <a href="http://www.oaa-accessibility.org/examplep/toolbar1/">working example of Example 38 - Toolbar using inline images for visual state</a>, on the OpenAjax Alliance site.
                   </p>
                </section>
                <section class="example" id="example-2-a-slider">
@@ -113,21 +113,21 @@
                   <p>The following snippet from The Open Ajax Accessibility Examples, Example 32, shows
                      WAI-ARIA mark-up for a slider created in Javascript. Note that the javascript sets
                      the attributes aria-valuemin, aria-valuemax, and aria-valuenow:
-                  </p><pre xml:space="preserve">   var handle = '&lt;img id="' + id + '" class="' + (this.vert == true ? 'v':'h') +'sliderHandle" ' +
+                  </p><pre><code>   var handle = '&lt;img id="' + id + '" class="' + (this.vert == true ? 'v':'h') +'sliderHandle" ' +
     'src="http://www.oaa-accessibility.org/media/examples/images/slider_' + (this.vert == true ? 'v':'h') + '.png" ' + 'role="slider" ' +
     'aria-valuemin="' + this.min +
     '" aria-valuemax="' + this.max +
     '" aria-valuenow="' + (val == undefined ? this.min : val) +
            '" aria-labelledby="' + label +
-           '" aria-controls="' + controls + '" tabindex="0"&gt;&lt;/img&gt;';</pre><p>The following excerpt from the Javascript for this example updates the value of the
+           '" aria-controls="' + controls + '" tabindex="0"&gt;&lt;/img&gt;';</code></pre><p>The following excerpt from the Javascript for this example updates the value of the
                      "aria-valuenow" attribute when the value of the slider handle is changed:
-                  </p><pre xml:space="preserve"> slider.prototype.positionHandle = function($handle, val) {
+                  </p><pre><code> slider.prototype.positionHandle = function($handle, val) {
     ...
    // Set the aria-valuenow position of the handle
   $handle.attr('aria-valuenow', val);
    ...
   }
-</pre><p>This slider is available as part of the <a href="http://oaa-accessibility.org/example/32/">working example of Example 32 - Slider</a>, on the OpenAjax Alliance site.
+</code></pre><p>This slider is available as part of the <a href="http://oaa-accessibility.org/example/32/">working example of Example 32 - Slider</a>, on the OpenAjax Alliance site.
                   </p>
                </section>
             </section>
@@ -320,5 +320,5 @@
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>

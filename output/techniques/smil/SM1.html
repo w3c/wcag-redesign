@@ -77,7 +77,7 @@
                <section class="example" id="example-1-smil-1.0-video-with-audio-descriptions-that-pause-the-main-media-in-4-locations-to-allow-extended-audio-description">
                   <h3>Example 1: SMIL 1.0 Video with audio descriptions that pause the main media in 4 locations
                      to allow extended audio description
-                  </h3><pre xml:space="preserve">   
+                  </h3><pre><code>   
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;smil xmlns:qt="http://www.apple.com/quicktime/resources/smilextensions" 
 xmlns="https://www.w3.org/TR/REC-smil" qt:time-slider="true"&gt;
@@ -118,7 +118,7 @@ xmlns="https://www.w3.org/TR/REC-smil" qt:time-slider="true"&gt;
   &lt;/par&gt;
 &lt;/body&gt;
 &lt;/smil&gt;
-</pre><p>The markup above is broken into five &lt;par&gt; segments. In each, there is a &lt;video&gt; and
+</code></pre><p>The markup above is broken into five &lt;par&gt; segments. In each, there is a &lt;video&gt; and
                      an &lt;audio&gt; tag (the last &lt;par&gt; has no &lt;audio&gt; tag intentionally). The convention with
                      extended audio descriptions is that the main media pauses during the description.
                      The way to make this happen in SMIL 1.0 is to set a "clip-begin" and "clip-end" which
@@ -314,5 +314,5 @@ xmlns="https://www.w3.org/TR/REC-smil" qt:time-slider="true"&gt;
                <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="../highlight.pack.js"></script></body>
+      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
 </html>
