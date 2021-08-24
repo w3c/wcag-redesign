@@ -1,11 +1,14 @@
-.nav-container {
+main {
+    display: block;
     background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
+}
+
+.nav {
     margin-bottom: 2em;
 }
 
 .nav__item a {
     display: inline-block;
-    padding: 0.75em;
 }
 
 .nav__item a svg {
@@ -16,17 +19,14 @@
 .nav__item a+button {
     margin-left: -0.75em;
     margin-right: 1em;
+    ;
 }
 
-.tool-header,
-.nav-container .nav {
+.tool-header {
     -ms-grid-column: 2;
     -ms-grid-column-span: 8;
     -ms-grid-row: 1;
     grid-column: 2 / 10;
-}
-
-.tool-header {
     max-height: 3em;
 }
 
@@ -85,14 +85,6 @@ h2:hover .fragmentlink svg {
     visibility: visible;
 }
 
-.your-report h2 {
-    margin-top: 0;
-}
-
-.understanding-list li {
-    list-style: none;
-}
-
 [data-tooltip-content] {
     padding: 0;
     background: none;
@@ -113,33 +105,4 @@ h2:hover .fragmentlink svg {
 
 dt div {
     font-weight: normal;
-}
-
-video,
-audio,
-img {
-    max-width: 100%;
-}
-
-.pager--item.context {
-    flex: 100%;
-    background: var(--cloudy-subtle);
-    margin: -8px -8px 8px;
-    padding: 8px;
-    text-align: center;
-}
-
-.note {
-    background-color: var(--footer-grey);
-    border-left: 3px solid var(--wai-green);
-    padding: 1em;
-}
-.note-title {
-    font-weight: bold;
-}
-.note p:last-child {
-    margin-bottom: 0
-}
-.note + .note {
-    margin-top: 1em;
 }

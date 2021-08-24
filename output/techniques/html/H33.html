@@ -5,225 +5,124 @@
       <title>H33: Supplementing link text with the title attribute</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
-      <link rel="stylesheet" href="../a11y-light.css" />
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/"><img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" /></a><a href="http://w3.org/WAI/"><img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" /></a></div>
+         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.1: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/"><img alt="W3C" src="https://w3.org/WAI/atag/report-tool/images/w3c.svg" width="92" height="44" /></a><a href="http://w3.org/WAI/"><img alt="Web Accessibility Initiative" src="https://w3.org//WAI/atag/report-tool/images/wai.svg" /></a></div>
          </div>
       </header>
-      <div class="default-grid leftcol nav-container">
-         <nav class="nav" aria-label="Meta navigation">
-            <ul>
-               <li class="nav__item"><a href="#">About Techniques</a></li>
-               <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
-               <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
-                     									
-                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                     </svg></a><div id="explain-supporting-documents" hidden="">
-                     <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
-                        documents.
-                     </p>
-                     <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+      <main>
+         <div class="default-grid leftcol">
+            <nav class="nav" aria-label="Meta navigation">
+               <ul>
+                  <li class="nav__item"><a href="#">About Techniques</a></li>
+                  <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
+                  <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
+                        									
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                        </svg></a><div id="explain-supporting-documents" hidden="">
+                        <p>WCAG comes with a number of supporting documents, like Techniques and Understanding
+                           documents.
+                        </p>
+                        <p>See also: <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#whatis2">What is in the WCAG 2 Documents</a></p>
+                     </div>
+                  </li>
+               </ul>
+            </nav>
+            <section class="main-content">
+               <h1><span>Technique H33:</span>Supplementing link text with the title attribute
+               </h1>
+               <aside class="box">
+                  <header class="box-h  box-h-icon">
+                     					About this Technique
+                     				
+                  </header>
+                  <div class="box-i">
+                     <p>HTML and XHTML</p>
+                     <p>This technique is:</p>
+                     <ul>
+                        <li>Sufficient to meet:  when used with an unwritten technique<a href="/understanding/link-purpose-in-context">2.4.4: Link Purpose (In Context)</a></li>
+                        <li>Advisory for: <a href="/understanding/link-purpose-link-only">2.4.9: Link Purpose (Link Only)</a></li>
+                     </ul>
                   </div>
-               </li>
-            </ul>
-         </nav>
-      </div>
-      <div class="default-grid">
-         <main class="main-content">
-            <h1><span>Technique H33:</span>Supplementing link text with the title attribute
-            </h1>
-            <aside class="box">
-               <header class="box-h  box-h-icon">
-                  		[sufficiencyshort]
-                  		
-               </header>
-               <div class="box-i">
-                  <section id="applicability">
-                     <p>This Technique 
-                        						is sufficient to meet  as a way to meet  @@@ <a href="/understanding/link-purpose-in-context">2.4.4: Link Purpose (In Context)</a>is advisory for <a href="/understanding/link-purpose-link-only">2.4.9: Link Purpose (Link Only)</a> 
-                     </p>
-                  </section>
-               </div>
-            </aside>
-            <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to demonstrate how to use a <code class="att">title</code>
-                  attribute on an anchor element to provide additional text describing a link. The
-                  <code class="att">title</code> attribute is used to provide additional information to help clarify
-                  or further describe the purpose of a link. If the supplementary information provided
-                  through the <code class="att">title</code> attribute is something the user should know before
-                  following the link, such as a warning, then it should be provided in the link text
-                  rather than in the <code class="att">title</code> attribute. 
-               </p>
-               <p>Because of the extensive user agent limitations in supporting access to the title
-                  attribute, authors should use caution in applying this technique. For this reason,
-                  it is preferred that the author use technique <a href="/techniques/css/C7">C7: Using CSS to hide a portion of the link text</a> or <a href="/techniques/html/H30">H30: Providing link text that describes the purpose of a link for anchor elements</a>.
-               </p>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-clarifying-the-purpose-of-a-link">
-                  <h3>Example 1: Clarifying the purpose of a link</h3><pre><code>&lt;a href="http://example.com/WORLD/africa/kenya.elephants.ap/index.html" 
+               </aside>
+               <section id="description">
+                  <h2>Description</h2>
+                  <p>The objective of this technique is to demonstrate how to use a <code class="att">title</code>
+                     attribute on an anchor element to provide additional text describing a link. The
+                     <code class="att">title</code> attribute is used to provide additional information to help clarify
+                     or further describe the purpose of a link. If the supplementary information provided
+                     through the <code class="att">title</code> attribute is something the user should know before
+                     following the link, such as a warning, then it should be provided in the link text
+                     rather than in the <code class="att">title</code> attribute. 
+                  </p>
+                  <p>Because of the extensive user agent limitations in supporting access to the title
+                     attribute, authors should use caution in applying this technique. For this reason,
+                     it is preferred that the author use technique <a href="/techniques/css/C7">C7: Using CSS to hide a portion of the link text</a> or <a href="/techniques/html/H30">H30: Providing link text that describes the purpose of a link for anchor elements</a>.
+                  </p>
+               </section>
+               <section id="examples">
+                  <h2>Examples</h2>
+                  <section class="example" id="example-1-clarifying-the-purpose-of-a-link">
+                     <h3>Example 1: Clarifying the purpose of a link</h3><pre xml:space="preserve">&lt;a href="http://example.com/WORLD/africa/kenya.elephants.ap/index.html" 
    title="Read more about failed elephant evacuation"&gt;
    Evacuation Crumbles Under Jumbo load
-&lt;/a&gt;</code></pre></section>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>Examine the source code for anchor elements. </p>
-                  
-                  <ol>
+&lt;/a&gt;</pre></section>
+               </section>
+               <section id="resources">
+                  <h2>Resources</h2>
+                  <p>Resources are for information purposes only, no endorsement implied.</p>
+                  <ul>
                      
-                     <li>For each anchor element that has a <code class="att">title</code> attribute, check that the
-                        <code class="att">title</code> attribute together with the link text describes the purpose
-                        of the link.
+                     <li>
+                        									         <a href="http://www.brothercake.com/site/resources/scripts/tooltips/">Displaying tooltips when elements receive focus</a>
+                        								       
                      </li>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Check #1 is true.</li>
-                     
                   </ul>
-                  
+               </section>
+               <section id="tests">
+                  <h2>Tests</h2>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <p>Examine the source code for anchor elements. </p>
+                     
+                     <ol>
+                        
+                        <li>For each anchor element that has a <code class="att">title</code> attribute, check that the
+                           <code class="att">title</code> attribute together with the link text describes the purpose
+                           of the link.
+                        </li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li>Check #1 is true.</li>
+                        
+                     </ul>
+                     
+                  </section>
                </section>
             </section>
-         </main>
-         <aside class="your-report your-report--expanded sidebar">
-            <h2>About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion.
-            </p>
-            <dl>
-               <dt>Type of technique 
-                  					<button style="display: inline" type="button" data-tooltip-content="#explain-types-of-techniques"><span class="visuallyhidden">Explain types of techniques</span><span aria-hidden="true" class="more-info__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" style="width: 1em">
-                           <path fill="currentColor" d="M256 344v-40c0-4.5-3.5-8-8-8h-24v-128c0-4.5-3.5-8-8-8h-80c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h24v80h-24c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h112c4.5 0 8-3.5 8-8zM224 120v-40c0-4.5-3.5-8-8-8h-48c-4.5 0-8 3.5-8 8v40c0 4.5 3.5 8 8 8h48c4.5 0 8-3.5 8-8zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path>
-                        </svg></span></button><div id="explain-types-of-techniques" hidden="true">
-                     <p>There are different types of techniques:</p>
-                     <ul>
-                        <li>Sufficient - reliable ways to meet a WCAG Criterion</li>
-                        <li>Advisory - suggested ways to improve accessibility</li>
-                        <li>Failure - things that cause accessibility barriers and fail specific success criteria</li>
-                     </ul>
-                     <p>Note: all techniques are “informative”, that is, you do not have to use them.</p>
-                  </div>
-               </dt>
-               <dd>
-                  		[sufficiencyshort]
-                  		
-               </dd>
-               <dt>Sufficient to meet</dt>
-               <dd><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1#info-and-relationships">1.3.1 Info and relationships</a></dd>
-               <dt>Related Techniques</dt>
-               <dd>
-                  <ul>
-                     
-                     <li><a href="/techniques/css/C7">C7: Using CSS to hide a portion of the link text</a></li>
-                     
-                     <li><a href="/techniques/html/H30">H30: Providing link text that describes the purpose of a link for anchor elements</a></li>
-                     
-                  </ul>
-               </dd>
-            </dl>
-            <h3>Other sources</h3>
-            <p><em>No endorsement implied.</em></p>
-            <ul>
-               
-               <li>
-                  									         <a href="http://www.brothercake.com/site/resources/scripts/tooltips/">Displaying tooltips when elements receive focus</a>
-                  								       
-               </li>
-               
-            </ul>
-         </aside>
-      </div>
-      <div class="default-grid">
-         <aside class="box box-icon box-space-above" id="helpimprove" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
-            <header class="box-h box-h-icon box-h-space-above box-h-icon">
-               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
-                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
-               </svg>
-               <h2>Help improve this page</h2>
-            </header>
-            <div class="box-i">
-               <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                  list  <a href="mailto:public-comments-wcag20@w3.org?subject=Techniques">public-comments-wcag20@w3.org</a> or via GitHub.
+            <aside class="your-report your-report--expanded sidebar" tabindex="-1">
+               <h2 style="margin-top: 0">About this page</h2>
+               <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
                </p>
-               <div class="button-group"><a href="mailto:public-comments-wcag20@w3.org?subject=Techniquesl&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://www.w3.org/WAI/WCAG20/comments/onlineform.html" class="button"><span>Online comment form</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
-            </div>
-         </aside>
-      </div>
-      <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
-         <div class="inner" style="-ms-grid-column: 2; -ms-grid-column-span: 8; grid-column: 2 / 8;">
-            <p><strong>Date:</strong> Published 29 June 2020.
-            </p>
-            <p><strong>Authors</strong>:
-               					<a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a>.
-               					<strong>Editors</strong>:
-               					<a href="group-ag-chairs@w3.org">Alastair Campbell, Michael Cooper, Andrew Kirkpatrick</a>.
-               				
-            </p>
-         </div>
-      </footer>
-      <footer class="site-footer grid-4q" aria-label="Site">
-         <div class="q1-start q3-end about">
-            <div>
-               <p><a class="largelink" href="https://w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
-               <p>Strategies, standards, and supporting resources to make the Web accessible to people
-                  with disabilities.
-               </p>
-            </div>
-            <div class="social" dir="auto" translate="no" lang="en">
+               <h3>Other sources</h3>
+               <p style="margin-top: -.5em; margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  <li><a href="https://twitter.com/w3c_wai">
-                        <svg focusable="false" aria-hidden="true" class="icon-twitter" viewBox="0 0 32 32">
-                           <path d="M31.939 6.092c-1.18 0.519-2.44 0.872-3.767 1.033 1.352-0.815 2.392-2.099 2.884-3.631-1.268 0.74-2.673 1.279-4.169 1.579-1.195-1.279-2.897-2.079-4.788-2.079-3.623 0-6.56 2.937-6.56 6.556 0 0.52 0.060 1.020 0.169 1.499-5.453-0.257-10.287-2.876-13.521-6.835-0.569 0.963-0.888 2.081-0.888 3.3 0 2.28 1.16 4.284 2.917 5.461-1.076-0.035-2.088-0.331-2.971-0.821v0.081c0 3.18 2.257 5.832 5.261 6.436-0.551 0.148-1.132 0.228-1.728 0.228-0.419 0-0.82-0.040-1.221-0.115 0.841 2.604 3.26 4.503 6.139 4.556-2.24 1.759-5.079 2.807-8.136 2.807-0.52 0-1.039-0.031-1.56-0.089 2.919 1.859 6.357 2.945 10.076 2.945 12.072 0 18.665-9.995 18.665-18.648 0-0.279 0-0.56-0.020-0.84 1.281-0.919 2.4-2.080 3.28-3.397l-0.063-0.027z"></path>
-                        </svg>
-                        								Twitter</a></li>
-                  <li><a href="https://w3.org/WAI/feed.xml">
-                        <svg focusable="false" aria-hidden="true" class="icon-rss" viewBox="0 0 32 32">
-                           <path d="M25.599 32c0-14.044-11.555-25.6-25.599-25.6v-6.4c17.553 0 32 14.447 32 32h-6.401zM4.388 23.22c2.419 0 4.391 1.972 4.391 4.393 0 2.417-1.98 4.387-4.401 4.387-2.417 0-4.377-1.965-4.377-4.387s1.967-4.392 4.388-4.393zM21.212 32h-6.22c0-8.225-6.767-14.993-14.992-14.993v-6.22c11.636 0 21.212 9.579 21.212 21.213z"></path>
-                        </svg>
-                        								Feed</a></li>
-                  <li><a href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv">
-                        <svg focusable="false" aria-hidden="true" class="icon-youtube" viewBox="0 0 32 32">
-                           <path d="M31.327 8.273c-0.386-1.353-1.431-2.398-2.756-2.777l-0.028-0.007c-2.493-0.668-12.528-0.668-12.528-0.668s-10.009-0.013-12.528 0.668c-1.353 0.386-2.398 1.431-2.777 2.756l-0.007 0.028c-0.443 2.281-0.696 4.903-0.696 7.585 0 0.054 0 0.109 0 0.163l-0-0.008c-0 0.037-0 0.082-0 0.126 0 2.682 0.253 5.304 0.737 7.845l-0.041-0.26c0.386 1.353 1.431 2.398 2.756 2.777l0.028 0.007c2.491 0.669 12.528 0.669 12.528 0.669s10.008 0 12.528-0.669c1.353-0.386 2.398-1.431 2.777-2.756l0.007-0.028c0.425-2.233 0.668-4.803 0.668-7.429 0-0.099-0-0.198-0.001-0.297l0 0.015c0.001-0.092 0.001-0.201 0.001-0.31 0-2.626-0.243-5.196-0.708-7.687l0.040 0.258zM12.812 20.801v-9.591l8.352 4.803z"></path>
-                        </svg>
-                        								YouTube</a></li>
-                  <li><a href="https://w3.org/WAI/news/subscribe/" class="button">Get News in Email</a></li>
+                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/lists.html#h-10.2">Unordered lists (UL), ordered lists (OL), and list items (LI)</a></li>
+                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/lists.html#h-10.3">Definition lists: the DL, DT, and DD elements</a></li>
                </ul>
-            </div>
-            <div dir="auto" translate="no" lang="en">
-               <p>
-                  						Copyright © 2019 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                  						<a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                  										<a href="https://ev.buaa.edu.cn">Beihang</a>)
-                  										<a href="https://w3.org/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
-                  					
-               </p>
-            </div>
+            </aside>
          </div>
-         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
-            <ul style="margin-bottom: 0;">
-               <li><a href="https://w3.org/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="https://w3.org/WAI/sitemap/">Site Map</a></li>
-               <li><a href="https://w3.org/WAI/news/">News</a></li>
-               <li><a href="https://w3.org/WAI/sitemap/#archive">Archive</a></li>
-               <li><a href="https://w3.org/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="https://w3.org/WAI/translations/"> Translations</a></li>
-               <li><a href="https://w3.org/WAI/roles/">Resources for Roles</a></li>
-            </ul>
-         </div>
-      </footer><script src="../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></body>
+      </main>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>hljs.highlightAll();</script></body>
 </html>
