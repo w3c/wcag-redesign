@@ -8,7 +8,7 @@
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.1: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,210 +28,213 @@
                   </svg></a></div>
          </div>
       </header>
-      <main>
-         <div class="default-grid leftcol">
+      <div class="nav-container">
+         <div class="default-grid">
             <nav class="nav" aria-label="Meta navigation">
                <ul>
                   <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
                   <li class="nav__item"><a href="#">About Techniques</a></li>
                   <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
-                        									
+                        										
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
                         </svg></a></li>
                </ul>
             </nav>
-            <section class="main-content">
-               <h1><span>Technique C22:</span>Using CSS to control visual presentation of text
-               </h1>
-               <aside class="box">
-                  <header class="box-h  box-h-icon">
-                     					About this Technique
-                     				
-                  </header>
-                  <div class="box-i">
-                     <p>This technique is
-                        
-                        						<strong>Advisory</strong> for <a href="/understanding/adaptable">1.3: Adaptable</a> and <strong>Advisory</strong> for <a href="/understanding/distinguishable">1.4: Distinguishable</a> and <strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a>
-                        					.
-                     </p>
-                  </div>
-               </aside>
-               <section id="description">
-                  <h2>Description</h2>
-                  <p>The objective of this technique is to demonstrate how CSS can be used to control the
-                     visual presentation of text. This will allow users to modify, via the user agent,
-                     the visual characteristics of the text to meet their requirement. The text characteristics
-                     include aspects such as size, color, font family and relative placement.
+         </div>
+      </div>
+      <div class="default-grid leftcol">
+         <section class="main-content">
+            <h1><span>Technique C22:</span>Using CSS to control visual presentation of text
+            </h1>
+            <aside class="box">
+               <header class="box-h  box-h-icon">
+                  					About this Technique
+                  				
+               </header>
+               <div class="box-i">
+                  <p>This technique is
+                     
+                     						<strong>Advisory</strong> for <a href="/understanding/adaptable">1.3: Adaptable</a> and <strong>Advisory</strong> for <a href="/understanding/distinguishable">1.4: Distinguishable</a> and <strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a>
+                     					.
                   </p>
-                  <p>CSS benefits accessibility primarily by separating document structure from presentation.
-                     Style sheets were designed to allow precise control - outside of markup - of character
-                     spacing, text alignment, object position on the page, audio and speech output, font
-                     characteristics, etc. By separating style from markup, authors can simplify and clean
-                     up the markup in their content, making it more accessible at the same time.
-                  </p>
-                  <p>Text within images has several accessibility problems, including the inability to:</p>
-                  <ul>
-                     
-                     <li>be scaled according to settings in the browser</li>
-                     
-                     <li>be displayed in colors specified by settings in the browser or rules in user-defined
-                        style sheets
-                     </li>
-                     
-                     <li>honor operating system settings, such as high contrast</li>
-                     
-                  </ul>
-                  <p>It is better to use real text for the text portion of these elements, and a combination
-                     of semantic markup and style sheets to create the appropriate visual presentation.
-                     For this to work effectively, choose fonts that are likely to be available on the
-                     user's system and define fallback fonts for users who may not have the first font
-                     that is specified. Newer machines and user agents often smooth or anti-alias all text,
-                     so it is likely that your headings and buttons will look nice on these systems without
-                     resorting to images of text.
-                  </p>
-                  <p>The following CSS properties are useful to style text and avoid the need for text
-                     in images:
-                  </p>
-                  <ul>
-                     
-                     <li>The font-family property is used to display the code aspect in a monospace font family.</li>
-                     
-                     <li>The text-align property is used to display the text to the right of the viewport.</li>
-                     
-                     <li>The font-size property is used to display the text in a larger size.</li>
-                     
-                     <li>The font-style property is used to display text in italics.</li>
-                     
-                     <li>The font-weight property is used to set how thick or thin characters in text should
-                        be displayed.
-                     </li>
-                     
-                     <li>The color property is used to display the color of text or text containers.</li>
-                     
-                     <li>The line-height property is used to display the line height for a block of text.</li>
-                     
-                     <li>The text-transform property is used to control the case of letters in text.</li>
-                     
-                     <li>The letter-spacing property is used to control the spacing of letters in text.</li>
-                     
-                     <li>The background-image property can be used to display text on a non-text background.</li>
-                     
-                     <li>The first-line pseudo class can be used to modify the presentation of the first line
-                        in a block of text.
-                     </li>
-                     
-                     <li>The :first-letter pseudo class can be used to modify the presentation of the first
-                        letter in a block of text.
-                     </li>
-                     
-                     <li>The :before and :after pseudo classes can be used to insert decorative non-text content
-                        before or after blocks of text.
-                     </li>
-                     
-                  </ul>
-               </section>
-               <section id="examples">
-                  <h2>Examples</h2>
-                  <section class="example" id="example-1-using-css-font-family-to-control-the-font-family-for-text">
-                     <h3>Example 1: Using CSS font-family to control the font family for text</h3>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+               </div>
+            </aside>
+            <section id="description">
+               <h2>Description</h2>
+               <p>The objective of this technique is to demonstrate how CSS can be used to control the
+                  visual presentation of text. This will allow users to modify, via the user agent,
+                  the visual characteristics of the text to meet their requirement. The text characteristics
+                  include aspects such as size, color, font family and relative placement.
+               </p>
+               <p>CSS benefits accessibility primarily by separating document structure from presentation.
+                  Style sheets were designed to allow precise control - outside of markup - of character
+                  spacing, text alignment, object position on the page, audio and speech output, font
+                  characteristics, etc. By separating style from markup, authors can simplify and clean
+                  up the markup in their content, making it more accessible at the same time.
+               </p>
+               <p>Text within images has several accessibility problems, including the inability to:</p>
+               <ul>
+                  
+                  <li>be scaled according to settings in the browser</li>
+                  
+                  <li>be displayed in colors specified by settings in the browser or rules in user-defined
+                     style sheets
+                  </li>
+                  
+                  <li>honor operating system settings, such as high contrast</li>
+                  
+               </ul>
+               <p>It is better to use real text for the text portion of these elements, and a combination
+                  of semantic markup and style sheets to create the appropriate visual presentation.
+                  For this to work effectively, choose fonts that are likely to be available on the
+                  user's system and define fallback fonts for users who may not have the first font
+                  that is specified. Newer machines and user agents often smooth or anti-alias all text,
+                  so it is likely that your headings and buttons will look nice on these systems without
+                  resorting to images of text.
+               </p>
+               <p>The following CSS properties are useful to style text and avoid the need for text
+                  in images:
+               </p>
+               <ul>
+                  
+                  <li>The font-family property is used to display the code aspect in a monospace font family.</li>
+                  
+                  <li>The text-align property is used to display the text to the right of the viewport.</li>
+                  
+                  <li>The font-size property is used to display the text in a larger size.</li>
+                  
+                  <li>The font-style property is used to display text in italics.</li>
+                  
+                  <li>The font-weight property is used to set how thick or thin characters in text should
+                     be displayed.
+                  </li>
+                  
+                  <li>The color property is used to display the color of text or text containers.</li>
+                  
+                  <li>The line-height property is used to display the line height for a block of text.</li>
+                  
+                  <li>The text-transform property is used to control the case of letters in text.</li>
+                  
+                  <li>The letter-spacing property is used to control the spacing of letters in text.</li>
+                  
+                  <li>The background-image property can be used to display text on a non-text background.</li>
+                  
+                  <li>The first-line pseudo class can be used to modify the presentation of the first line
+                     in a block of text.
+                  </li>
+                  
+                  <li>The :first-letter pseudo class can be used to modify the presentation of the first
+                     letter in a block of text.
+                  </li>
+                  
+                  <li>The :before and :after pseudo classes can be used to insert decorative non-text content
+                     before or after blocks of text.
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="examples">
+               <h2>Examples</h2>
+               <section class="example" id="example-1-using-css-font-family-to-control-the-font-family-for-text">
+                  <h3>Example 1: Using CSS font-family to control the font family for text</h3>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p&gt;The Javascript method to convert a string to uppercase is &lt;code&gt;toUpperCase()&lt;/code&gt;.&lt;/p&gt;
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 code { font-family:"Courier New", Courier, monospace }
 </pre></section>
-                  <section class="example" id="example-2-using-css-text-align-to-control-the-placement-alignment-of-text">
-                     <h3>Example 2: Using CSS text-align to control the placement (alignment) of text</h3>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+               <section class="example" id="example-2-using-css-text-align-to-control-the-placement-alignment-of-text">
+                  <h3>Example 2: Using CSS text-align to control the placement (alignment) of text</h3>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p class="right"&gt;This text should be to the right of the viewport.&lt;/p&gt;  
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 .right { text-align: right; }
 </pre></section>
-                  <section class="example" id="example-3--using-css-font-size-to-control-the-size-of-text">
-                     <h3>Example 3:  Using CSS font-size to control the size of text</h3>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+               <section class="example" id="example-3--using-css-font-size-to-control-the-size-of-text">
+                  <h3>Example 3:  Using CSS font-size to control the size of text</h3>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p&gt;09 &lt;strong class="largersize"&gt;March&lt;/strong&gt; 2008&lt;/p&gt;  
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 strong.largersize { font-size: 1.5em; }
 </pre></section>
-                  <section class="example" id="example-4-using-css-color-to-control-the-color-of-text">
-                     <h3>Example 4: Using CSS color to control the color of text</h3>
-                     <div class="note">
-                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                        <div>
-                           
-                           <p>The style used in this example is not used to convey information, structure or relationships.</p>
-                           
-                        </div>
+               <section class="example" id="example-4-using-css-color-to-control-the-color-of-text">
+                  <h3>Example 4: Using CSS color to control the color of text</h3>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                     <div>
+                        
+                        <p>The style used in this example is not used to convey information, structure or relationships.</p>
+                        
                      </div>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+                  </div>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p&gt;09 &lt;em class="highlight"&gt;March&lt;/em&gt; 2008&lt;/p&gt;  
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 .highlight{ color: red; }
 </pre></section>
-                  <section class="example" id="example-5-using-css-font-style-to-italicize-text">
-                     <h3>Example 5: Using CSS font-style to italicize text</h3>
-                     <div class="note">
-                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                        <div>
-                           
-                           <p>The style used in this example is not used to convey information, structure or relationships.</p>
-                           
-                        </div>
+               <section class="example" id="example-5-using-css-font-style-to-italicize-text">
+                  <h3>Example 5: Using CSS font-style to italicize text</h3>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                     <div>
+                        
+                        <p>The style used in this example is not used to convey information, structure or relationships.</p>
+                        
                      </div>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+                  </div>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p&gt;The article is available in the &lt;a href="http://www.example.com" class="featuredsite"&gt;Endocrinology 
 Blog&lt;/a&gt;.&lt;/p&gt;
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 .featuredsite{ font-style:italic; }
 </pre></section>
-                  <section class="example" id="example-6-using-css-font-weight-to-control-the-font-weight-of-the-text">
-                     <h3>Example 6: Using CSS font-weight to control the font weight of the text</h3>
-                     <div class="note">
-                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                        <div>
-                           
-                           <p>The style used in this example is not used to convey information, structure or relationships.</p>
-                           
-                        </div>
+               <section class="example" id="example-6-using-css-font-weight-to-control-the-font-weight-of-the-text">
+                  <h3>Example 6: Using CSS font-weight to control the font weight of the text</h3>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                     <div>
+                        
+                        <p>The style used in this example is not used to convey information, structure or relationships.</p>
+                        
                      </div>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+                  </div>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p&gt;This deal is available &lt;span class="highlight"&gt;now!&lt;/span&gt;&lt;/p&gt; 
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 .highlight { font-weight:bold; color:#990000; }
 </pre></section>
-                  <section class="example" id="example-7-using-css-text-transform-to-control-the-case-of-text">
-                     <h3>Example 7: Using CSS text-transform to control the case of text</h3>
-                     <div class="note">
-                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                        <div>
-                           
-                           <p>The style used in this example is not used to convey information, structure or relationships.</p>
-                           
-                        </div>
+               <section class="example" id="example-7-using-css-text-transform-to-control-the-case-of-text">
+                  <h3>Example 7: Using CSS text-transform to control the case of text</h3>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                     <div>
+                        
+                        <p>The style used in this example is not used to convey information, structure or relationships.</p>
+                        
                      </div>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+                  </div>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p&gt;09 &lt;span class="caps"&gt;March&lt;/span&gt; 2008&lt;/p&gt;  
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 .caps { text-transform:uppercase; }
 </pre></section>
-                  <section class="example" id="example-8-using-css-line-height-to-control-spacing-between-lines-of-text">
-                     <h3>Example 8: Using CSS line-height to control spacing between lines of text</h3>
-                     <p>The CSS line-height property is used to display the line height for the paragraph
-                        at twice the height of the font.
-                     </p>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+               <section class="example" id="example-8-using-css-line-height-to-control-spacing-between-lines-of-text">
+                  <h3>Example 8: Using CSS line-height to control spacing between lines of text</h3>
+                  <p>The CSS line-height property is used to display the line height for the paragraph
+                     at twice the height of the font.
+                  </p>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p&gt;Concern for man and his fate must always form the&lt;br /&gt;  
 chief interest of all technical endeavors. &lt;br /&gt;
 Never forget this in the  midst of your diagrams and equations. &lt;/p&gt;
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 p { line-height:2em; }
 </pre><p>The CSS line-height property is used to display the line height for the text at less
-                        than the height of the font. The second line of text is positioned after the first
-                        line of text and visually appears as though the text is part of the first line but
-                        dropped a little.
-                     </p>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+                     than the height of the font. The second line of text is positioned after the first
+                     line of text and visually appears as though the text is part of the first line but
+                     dropped a little.
+                  </p>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;h1 class="overlap"&gt;&lt;span class="upper"&gt;News&lt;/span&gt;&lt;br /&gt;
 &lt;span class="byline"&gt;today&lt;/span&gt;&lt;/h1&gt;
 </pre><p>The CSS component:</p><pre xml:space="preserve">
@@ -239,12 +242,12 @@ p { line-height:2em; }
 .upper { text-transform:uppercase; }
 .byline { color:red; font-style:italic; font-weight:bold; padding-left:3em; }
 </pre></section>
-                  <section class="example" id="example-9-using-css-letter-spacing-to-space-text">
-                     <h3>Example 9: Using CSS letter-spacing to space text</h3>
-                     <p>The CSS letter-spacing property is used to display the letters farther apart in the
-                        heading.
-                     </p>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+               <section class="example" id="example-9-using-css-letter-spacing-to-space-text">
+                  <h3>Example 9: Using CSS letter-spacing to space text</h3>
+                  <p>The CSS letter-spacing property is used to display the letters farther apart in the
+                     heading.
+                  </p>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;h1 class="overlap"&gt;&lt;span class="upper"&gt;News&lt;/span&gt;&lt;br /&gt;
 &lt;span class="byline"&gt;today&lt;/span&gt;&lt;/h1&gt;
 </pre><p>The CSS component:</p><pre xml:space="preserve">
@@ -252,19 +255,19 @@ p { line-height:2em; }
 .upper { text-transform:uppercase; }
 .byline { color:red; font-style:italic; font-weight:bold; padding-left:3em; letter-spacing:-0.1em; }
 </pre><p>The CSS letter-spacing property is used to display the letters closer together in
-                        the second line of text.
-                     </p>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+                     the second line of text.
+                  </p>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;h1 class="upper2"&gt;News&lt;/h1&gt;
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 .upper2 { text-transform:uppercase; letter-spacing:1em; }
 </pre></section>
-                  <section class="example" id="example-10-using-css-background-image-to-layer-text-and-images">
-                     <h3>Example 10: Using CSS background-image to layer text and images</h3>
-                     <p>The CSS font-style property is used to display the textual component of a banner and
-                        background-image property is used to display a picture behind the text.
-                     </p>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+               <section class="example" id="example-10-using-css-background-image-to-layer-text-and-images">
+                  <h3>Example 10: Using CSS background-image to layer text and images</h3>
+                  <p>The CSS font-style property is used to display the textual component of a banner and
+                     background-image property is used to display a picture behind the text.
+                  </p>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;div id="banner"&gt;&lt;span id="bannerstyle1"&gt;Welcome&lt;/span&gt; 
 &lt;span id="bannerstyle2"&gt;to your local city council&lt;/span&gt;&lt;/div&gt;
 </pre><p>The CSS component:</p><pre xml:space="preserve">
@@ -288,107 +291,106 @@ p { line-height:2em; }
   letter-spacing:-0.1em;
   font-size:1.5em; 
 }</pre></section>
-                  <section class="example" id="example-11-using-css-first-line-to-control-the-presentation-of-the-first-line-of-text">
-                     <h3>Example 11: Using CSS first-line to control the presentation of the first line of
-                        text
-                     </h3>
-                     <p>The CSS :first-line pseudo class is used to display the first line of text in a larger,
-                        red font.
-                     </p>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+               <section class="example" id="example-11-using-css-first-line-to-control-the-presentation-of-the-first-line-of-text">
+                  <h3>Example 11: Using CSS first-line to control the presentation of the first line of
+                     text
+                  </h3>
+                  <p>The CSS :first-line pseudo class is used to display the first line of text in a larger,
+                     red font.
+                  </p>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p class="startline"&gt;Once upon a time...&lt;br /&gt;
 ...in a land far, far away...  &lt;/p&gt;  
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 .startline:first-line { font-size:2em; color:#990000; }
 </pre></section>
-                  <section class="example" id="example-12--using-css-first-letter-to-control-the-presentation-of-the-first-letter-of-text">
-                     <h3>Example 12:  Using CSS first-letter to control the presentation of the first letter
-                        of text
-                     </h3>
-                     <p>The CSS :first-letter pseudo class is used to display the first letter in a larger
-                        font size, red and vertically aligned in the middle.
-                     </p>
-                     <p>The XHTML component:</p><pre xml:space="preserve">
+               <section class="example" id="example-12--using-css-first-letter-to-control-the-presentation-of-the-first-letter-of-text">
+                  <h3>Example 12:  Using CSS first-letter to control the presentation of the first letter
+                     of text
+                  </h3>
+                  <p>The CSS :first-letter pseudo class is used to display the first letter in a larger
+                     font size, red and vertically aligned in the middle.
+                  </p>
+                  <p>The XHTML component:</p><pre xml:space="preserve">
 &lt;p class="startletter"&gt;Once upon a time...&lt;/p&gt;  
 </pre><p>The CSS component:</p><pre xml:space="preserve">
 .startletter:first-letter { font-size:2em; color:#990000; vertical-align:middle; }
 </pre></section>
-               </section>
-               <section id="applicability">
-                  <h2 id="applicability">Applicability</h2>
-                  <p>All technologies that support CSS.</p>
-               </section>
-               <section id="tests">
-                  <h2>Tests</h2>
-                  <section class="procedure" id="procedure">
-                     <h3>Procedure</h3>
-                     
-                     <ol>
-                        
-                        <li>Check whether CSS properties were used to control the visual presentation of text
-                           
-                        </li>
-                        
-                     </ol>
-                     
-                  </section>
-                  <section class="results" id="expected-results">
-                     <h3>Expected Results</h3>
-                     
-                     <ul>
-                        
-                        <li>Check #1 is true.</li>
-                        
-                     </ul>
-                     
-                  </section>
-               </section>
             </section>
-            <aside class="your-report your-report--expanded sidebar" tabindex="-1">
-               <h2 style="margin-top: 0">About this page</h2>
-               <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
-               </p>
-               <section id="resources">
-                  <h3 style="margin-bottom: 0;">Other sources</h3>
-                  <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
+            <section id="applicability">
+               <h2 id="applicability">Applicability</h2>
+               <p>All technologies that support CSS.</p>
+            </section>
+            <section id="tests">
+               <h2>Tests</h2>
+               <section class="procedure" id="procedure">
+                  <h3>Procedure</h3>
+                  
+                  <ol>
+                     
+                     <li>Check whether CSS properties were used to control the visual presentation of text
+                        
+                     </li>
+                     
+                  </ol>
+                  
+               </section>
+               <section class="results" id="expected-results">
+                  <h3>Expected Results</h3>
+                  
                   <ul>
                      
-                     <li>
-                        <a href="https://www.w3.org/TR/CSS21/">CSS2.1 Specification</a>
-                        
-                     </li>
-                     
-                     <li>
-                        <a href="https://www.w3.org/Style/CSS/learning">Learning CSS</a>
-                        
-                     </li>
-                     
-                     <li>
-                        <a href="https://www.w3.org/TR/CSS-access">CSS and Accessibility</a>
-                        
-                     </li>
+                     <li>Check #1 is true.</li>
                      
                   </ul>
+                  
                </section>
-            </aside>
-            <aside class="box box-icon box-space-above" id="helpimprove" style="grid-area: content; grid-row: 3">
-               <header class="box-h  box-h-icon box-h-space-above box-h-icon">
-                  <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
-                     <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
-                  </svg>
-                  <h2> Help improve this page </h2>
-               </header>
-               <div class="box-i">
-                  <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                     list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
-                  </p>
-                  <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
-               </div>
-            </aside>
-         </div>
-      </main>
+            </section>
+         </section>
+         <aside class="your-report your-report--expanded sidebar" tabindex="-1">
+            <h2 style="margin-top: 0">About this page</h2>
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            </p>
+            <section id="resources">
+               <h3 style="margin-bottom: 0;">Other sources</h3>
+               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
+               <ul>
+                  
+                  <li>
+                     <a href="https://www.w3.org/TR/CSS21/">CSS2.1 Specification</a>
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://www.w3.org/Style/CSS/learning">Learning CSS</a>
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://www.w3.org/TR/CSS-access">CSS and Accessibility</a>
+                     
+                  </li>
+                  
+               </ul>
+            </section>
+         </aside>
+         <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
+            <header class="box-h  box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2> Help improve this page </h2>
+            </header>
+            <div class="box-i">
+               <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
+                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+               </p>
+               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+            </div>
+         </aside>
+      </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
-         <div class="inner">
+         <div class="inner" style="grid-column: 2 / 8">
             <p><strong>Date:</strong> Updated @@@. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
@@ -397,48 +399,6 @@ p { line-height:2em; }
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
                with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
             </p>
-         </div>
-      </footer>
-      <footer class="site-footer grid-4q" aria-label="Site">
-         <div class="q1-start q3-end about">
-            <div>
-               <p><a class="largelink" href="https://www.w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
-               <p>Strategies, standards, and supporting resources to make the Web accessible to people
-                  with disabilities.
-               </p>
-            </div>
-            <div class="social" dir="auto" translate="no" lang="en">
-               <ul>
-                  <li><a href="https://twitter.com/w3c_wai">
-                        <svg focusable="false" aria-hidden="true" class="icon-twitter " viewBox="0 0 32 32">
-                           <path d="M31.939 6.092c-1.18 0.519-2.44 0.872-3.767 1.033 1.352-0.815 2.392-2.099 2.884-3.631-1.268 0.74-2.673 1.279-4.169 1.579-1.195-1.279-2.897-2.079-4.788-2.079-3.623 0-6.56 2.937-6.56 6.556 0 0.52 0.060 1.020 0.169 1.499-5.453-0.257-10.287-2.876-13.521-6.835-0.569 0.963-0.888 2.081-0.888 3.3 0 2.28 1.16 4.284 2.917 5.461-1.076-0.035-2.088-0.331-2.971-0.821v0.081c0 3.18 2.257 5.832 5.261 6.436-0.551 0.148-1.132 0.228-1.728 0.228-0.419 0-0.82-0.040-1.221-0.115 0.841 2.604 3.26 4.503 6.139 4.556-2.24 1.759-5.079 2.807-8.136 2.807-0.52 0-1.039-0.031-1.56-0.089 2.919 1.859 6.357 2.945 10.076 2.945 12.072 0 18.665-9.995 18.665-18.648 0-0.279 0-0.56-0.020-0.84 1.281-0.919 2.4-2.080 3.28-3.397l-0.063-0.027z"></path>
-                        </svg> Twitter</a></li>
-                  <li><a href="https://www.w3.org/WAI/feed.xml">
-                        <svg focusable="false" aria-hidden="true" class="icon-rss " viewBox="0 0 32 32">
-                           <path d="M25.599 32c0-14.044-11.555-25.6-25.599-25.6v-6.4c17.553 0 32 14.447 32 32h-6.401zM4.388 23.22c2.419 0 4.391 1.972 4.391 4.393 0 2.417-1.98 4.387-4.401 4.387-2.417 0-4.377-1.965-4.377-4.387s1.967-4.392 4.388-4.393zM21.212 32h-6.22c0-8.225-6.767-14.993-14.992-14.993v-6.22c11.636 0 21.212 9.579 21.212 21.213z"></path>
-                        </svg> Feed</a></li>
-                  <li><a href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv">
-                        <svg focusable="false" aria-hidden="true" class="icon-youtube " viewBox="0 0 32 32">
-                           <path d="M31.327 8.273c-0.386-1.353-1.431-2.398-2.756-2.777l-0.028-0.007c-2.493-0.668-12.528-0.668-12.528-0.668s-10.009-0.013-12.528 0.668c-1.353 0.386-2.398 1.431-2.777 2.756l-0.007 0.028c-0.443 2.281-0.696 4.903-0.696 7.585 0 0.054 0 0.109 0 0.163l-0-0.008c-0 0.037-0 0.082-0 0.126 0 2.682 0.253 5.304 0.737 7.845l-0.041-0.26c0.386 1.353 1.431 2.398 2.756 2.777l0.028 0.007c2.491 0.669 12.528 0.669 12.528 0.669s10.008 0 12.528-0.669c1.353-0.386 2.398-1.431 2.777-2.756l0.007-0.028c0.425-2.233 0.668-4.803 0.668-7.429 0-0.099-0-0.198-0.001-0.297l0 0.015c0.001-0.092 0.001-0.201 0.001-0.31 0-2.626-0.243-5.196-0.708-7.687l0.040 0.258zM12.812 20.801v-9.591l8.352 4.803z"></path>
-                        </svg> YouTube</a></li>
-                  <li><a href="https://www.w3.org/WAI/news/subscribe/" class="button">Get News in Email</a></li>
-               </ul>
-            </div>
-            <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
-               </p>
-            </div>
-         </div>
-         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
-            <ul style="margin-bottom:0">
-               <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/WAI/sitemap/">Site Map</a></li>
-               <li><a href="/WAI/news/">News</a></li>
-               <li><a href="/WAI/sitemap/#archive">Archive</a></li>
-               <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/WAI/translations/"> Translations</a></li>
-               <li><a href="/WAI/roles/">Resources for Roles</a></li>
-            </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>hljs.highlightAll();</script></body>

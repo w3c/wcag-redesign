@@ -1,10 +1,9 @@
 main {
     display: block;
-    background-image: linear-gradient(#d0e1f1 0, #d0e1f1 48px, #fff 48px);
 }
 
-.nav {
-    margin-bottom: 2em;
+.nav-container {
+    background-image: linear-gradient(#d0e1f1 0, #d0e1f1 50px, #fff 50px);
 }
 
 .nav__item a {
@@ -85,23 +84,6 @@ h2:hover .fragmentlink svg {
     visibility: visible;
 }
 
-[data-tooltip-content] {
-    padding: 0;
-    background: none;
-    border: 0;
-    color: black;
-    font-size: inherit;
-    vertical-align: middle;
-}
-
-[data-tooltip-content]:hover {
-    background: none;
-    color: var(--light-blue);
-}
-
-[data-tippy-root] {
-    padding: 0 2em;
-}
 
 dt div {
     font-weight: normal;

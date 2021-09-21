@@ -10,7 +10,7 @@
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.1: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -30,157 +30,160 @@
                   </svg></a></div>
          </div>
       </header>
-      <main>
-         <div class="default-grid leftcol">
+      <div class="nav-container">
+         <div class="default-grid">
             <nav class="nav" aria-label="Meta navigation">
                <ul>
                   <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
                   <li class="nav__item"><a href="#">About Techniques</a></li>
                   <li class="nav__item"><a href="alt-index.html">All WCAG 2 Guidance 
-                        									
+                        										
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
                         </svg></a></li>
                </ul>
             </nav>
-            <section class="main-content">
-               <h1><span>Technique SL14:</span>Providing Custom Control Key Handling for Keyboard Functionality
-                  			in Silverlight
-               </h1>
-               <aside class="box">
-                  <header class="box-h  box-h-icon">
-                     					About this Technique
-                     				
-                  </header>
-                  <div class="box-i">
-                     <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/keyboard-accessible">2.1: Keyboard Accessible</a> when used with <a href="../general/G90">G90: Providing keyboard-triggered event handlers</a></span>.
-                     </p>
-                     <p><em>Note: Microsoft has stopped updating and distributing Silverlight, and authors are
-                           encouraged to use HTML for accessible web content.</em></p>
-                  </div>
-               </aside>
-               <section id="description">
-                  <h2>Description</h2>
-                  <p>The objective of this technique is to implement built-in handling
-                     				of key events in a custom control. If a custom control is correctly
-                     				implemented, then any Silverlight applications that include the control
-                     				can rely on the built-in key handling for some or all of the desired
-                     				keyboard equivalence of a control's functionality. 
+         </div>
+      </div>
+      <div class="default-grid leftcol">
+         <section class="main-content">
+            <h1><span>Technique SL14:</span>Providing Custom Control Key Handling for Keyboard Functionality
+               			in Silverlight
+            </h1>
+            <aside class="box">
+               <header class="box-h  box-h-icon">
+                  					About this Technique
+                  				
+               </header>
+               <div class="box-i">
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/keyboard-accessible">2.1: Keyboard Accessible</a> when used with <a href="../general/G90">G90: Providing keyboard-triggered event handlers</a></span>.
                   </p>
-                  <p>Defining a custom control requires that the control author write a
-                     				default template for the control and also the initialization logic,
-                     				including the default implementations for built-in keyboard equivalence.
-                     				Typically, control authors provide keyboard equivalence for any actions
-                     				that can be activated by a mouse click on the control surface, and
-                     				that are not already providing a keyboard equivalence through the implementation
-                     				of a composite part. 
+                  <p><em>Note: Microsoft has stopped updating and distributing Silverlight, and authors are
+                        encouraged to use HTML for accessible web content.</em></p>
+               </div>
+            </aside>
+            <section id="description">
+               <h2>Description</h2>
+               <p>The objective of this technique is to implement built-in handling
+                  				of key events in a custom control. If a custom control is correctly
+                  				implemented, then any Silverlight applications that include the control
+                  				can rely on the built-in key handling for some or all of the desired
+                  				keyboard equivalence of a control's functionality. 
+               </p>
+               <p>Defining a custom control requires that the control author write a
+                  				default template for the control and also the initialization logic,
+                  				including the default implementations for built-in keyboard equivalence.
+                  				Typically, control authors provide keyboard equivalence for any actions
+                  				that can be activated by a mouse click on the control surface, and
+                  				that are not already providing a keyboard equivalence through the implementation
+                  				of a composite part. 
+               </p>
+               <p>All input events report a specific source that is communicated to
+                  				handler code as an event parameter, so that the application author
+                  				can identify which element in their Silverlight UI was being interacted
+                  				with, and the application can perform an action that is relevant to
+                  				that user input. In the case of mouse events, the event source is the
+                  				element that the mouse pointer is over at the time. In the case of
+                  				key events, the event source is the element that has focus. The element
+                  				that has focus is visually indicated so that the user knows which element
+                  				they are interacting with (see <a href="#SL2"></a>). Assistive technologies
+                  				often have parallel conventions whereby the user is made aware of which
+                  				element is visually focused and is the current input scope presented
+                  				by the assistive technology. 
+               </p>
+               <section id="SL14_hosts">
+                  
+                  <h3> Browser hosts and keyboard events </h3>
+                  
+                  <p>Silverlight is hosted as a plug-in inside a browser host. The Silverlight
+                     					runtime only receives the input events that the browser host forwards
+                     					to hosted plug-ins through a browser-specific program access layer.
+                     					Occasionally the browser host receives input that the browser host
+                     					itself handles in some way, and does not forward the keyboard event.
+                     					An example is that a Silverlight application hosted by an Internet
+                     					Explorer browser host on Windows operating system cannot detect a press
+                     					of the ALT key, because Internet Explorer processes this input and
+                     					performs the action of bringing keyboard focus to the Internet Explorer
+                     					menu bar. Silverlight authors might need to be aware of browser-specific
+                     					input handling models and not rely on key events for keys that are
+                     					essentially reserved for use by a browser host. For more information,
+                     					see <a href="https://msdn.microsoft.com/en-us/library/cc189015(VS.95).aspx">Keyboard
+                        						Support</a>. 
                   </p>
-                  <p>All input events report a specific source that is communicated to
-                     				handler code as an event parameter, so that the application author
-                     				can identify which element in their Silverlight UI was being interacted
-                     				with, and the application can perform an action that is relevant to
-                     				that user input. In the case of mouse events, the event source is the
-                     				element that the mouse pointer is over at the time. In the case of
-                     				key events, the event source is the element that has focus. The element
-                     				that has focus is visually indicated so that the user knows which element
-                     				they are interacting with (see <a href="#SL2"></a>). Assistive technologies
-                     				often have parallel conventions whereby the user is made aware of which
-                     				element is visually focused and is the current input scope presented
-                     				by the assistive technology. 
+                  
+                  <p>Application authors should choose keys that avoid browser conflicts,
+                     					but still are a natural choice for an accelerator. Using the CTRL key
+                     					as a modifier is a convention that is frequently used in existing Silverlight
+                     					applications. 
                   </p>
-                  <section id="SL14_hosts">
-                     
-                     <h3> Browser hosts and keyboard events </h3>
-                     
-                     <p>Silverlight is hosted as a plug-in inside a browser host. The Silverlight
-                        					runtime only receives the input events that the browser host forwards
-                        					to hosted plug-ins through a browser-specific program access layer.
-                        					Occasionally the browser host receives input that the browser host
-                        					itself handles in some way, and does not forward the keyboard event.
-                        					An example is that a Silverlight application hosted by an Internet
-                        					Explorer browser host on Windows operating system cannot detect a press
-                        					of the ALT key, because Internet Explorer processes this input and
-                        					performs the action of bringing keyboard focus to the Internet Explorer
-                        					menu bar. Silverlight authors might need to be aware of browser-specific
-                        					input handling models and not rely on key events for keys that are
-                        					essentially reserved for use by a browser host. For more information,
-                        					see <a href="https://msdn.microsoft.com/en-us/library/cc189015(VS.95).aspx">Keyboard
-                           						Support</a>. 
-                     </p>
-                     
-                     <p>Application authors should choose keys that avoid browser conflicts,
-                        					but still are a natural choice for an accelerator. Using the CTRL key
-                        					as a modifier is a convention that is frequently used in existing Silverlight
-                        					applications. 
-                     </p>
-                     	
-                  </section>
-                  <section id="SL14_which-keys">
-                     
-                     <h3> Informing users of which keys to use for keyboard equivalence </h3>
-                     
-                     <p>If a control supports user interaction, which key to use to engage
-                        					the keyboard equivalent behavior is not always obvious. One way to
-                        					inform users of the possible key options that a control supports is
-                        					to author an <code class="prop">AutomationProperties.HelpText</code> value in
-                        					the application UI that gives instructions such as "Press the
-                        					plus key to increment value". This is up to the application author
-                        					to do; the control definitions do not provide a means to set HelpText
-                        					by default, because any display technique for end user help is potentially
-                        					too application-specific to be encapsulated in control definitions.
-                        					Application authors might also consider using tooltips, providing a
-                        					menu framework that visually indicates the key associations (perhaps
-                        					with the Windows key-underlined convention), providing a generalized
-                        					application Help, or displaying plain text in the user interface. 
-                     </p>
-                     	
-                  </section>
-                  <section id="SL14_on-methods">
-                     
-                     <h3> The On* method pattern in Silverlight </h3>
-                     
-                     <p>Silverlight classes often have methods that follow the naming pattern On* where
-                        					the star is a string that also identifies an event. These On* methods
-                        					are prewired event handlers, defined as virtual methods so that subclasses
-                        					can override them. A consumer of a control class can change or augment
-                        					the default behavior associated with that event by overriding the method,
-                        					and typically also calls the base implementation so that the base functionality
-                        					is preserved. This principle is illustrated in Example 1 by the overrides
-                        					of OnGotFocus and OnLostFocus. Controls that introduce new events should
-                        					consider also exposing a virtual On* method that pairs with the event,
-                        					so that consumers of the custom control can use the same pattern. 
-                     </p>
-                     	
-                  </section>
+                  	
                </section>
-               <section id="examples">
-                  <h2>Examples</h2>
-                  <section class="example" id="example-1-keynumericupdown-control-that-handles-arrow-key-equivalence&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;for-+-and---buttons">
-                     <h3>Example 1: KeyNumericUpDown Control That Handles Arrow Key Equivalence
-                        					for + and - Buttons
-                     </h3>
-                     <p>This example implements a custom Silverlight control that displays
-                        						an integer value, and can increment or decrement the integer value
-                        						based on user actions. When a user interacts with the control, the
-                        						user can click the "+" and "-" buttons that are
-                        						component parts of the control. The "+" and "-" button
-                        						parts are deliberately not in the Silverlight tab sequence, because
-                        						this is intended to be a complete control, where only the control itself
-                        						(and not its constituent parts) are focusable and are reported as an
-                        						element to the accessibility framework. To provide keyboard equivalence,
-                        						the control defines a KeyUp handler. The design of
-                        						the control treats an Up Arrow key press as equivalent to activating
-                        						the "+" button, and the Down Arrow key as equivalent to activating
-                        						the "-" button. The control implementation reinforces this
-                        						behavior by having the button Click event handlers
-                        						and the cases of the KeyUp handler call the same underlying
-                        						helper functions (Increment() and Decrement()). 
-                     </p>
-                     <p>Handling the + and - keys as alternate or additional keyboard equivalents
-                        						for the actions is also possible (if that is desired, handler would
-                        						check for <code class="prop">Key.Add</code> or <code class="prop">Key.Subtract</code> values). 
-                     </p>
-                     <p>The following is the XAML-defined control template for this control.</p><pre xml:space="preserve">   &lt;Style TargetType="local:KeysNumericUpDown"&gt;
+               <section id="SL14_which-keys">
+                  
+                  <h3> Informing users of which keys to use for keyboard equivalence </h3>
+                  
+                  <p>If a control supports user interaction, which key to use to engage
+                     					the keyboard equivalent behavior is not always obvious. One way to
+                     					inform users of the possible key options that a control supports is
+                     					to author an <code class="prop">AutomationProperties.HelpText</code> value in
+                     					the application UI that gives instructions such as "Press the
+                     					plus key to increment value". This is up to the application author
+                     					to do; the control definitions do not provide a means to set HelpText
+                     					by default, because any display technique for end user help is potentially
+                     					too application-specific to be encapsulated in control definitions.
+                     					Application authors might also consider using tooltips, providing a
+                     					menu framework that visually indicates the key associations (perhaps
+                     					with the Windows key-underlined convention), providing a generalized
+                     					application Help, or displaying plain text in the user interface. 
+                  </p>
+                  	
+               </section>
+               <section id="SL14_on-methods">
+                  
+                  <h3> The On* method pattern in Silverlight </h3>
+                  
+                  <p>Silverlight classes often have methods that follow the naming pattern On* where
+                     					the star is a string that also identifies an event. These On* methods
+                     					are prewired event handlers, defined as virtual methods so that subclasses
+                     					can override them. A consumer of a control class can change or augment
+                     					the default behavior associated with that event by overriding the method,
+                     					and typically also calls the base implementation so that the base functionality
+                     					is preserved. This principle is illustrated in Example 1 by the overrides
+                     					of OnGotFocus and OnLostFocus. Controls that introduce new events should
+                     					consider also exposing a virtual On* method that pairs with the event,
+                     					so that consumers of the custom control can use the same pattern. 
+                  </p>
+                  	
+               </section>
+            </section>
+            <section id="examples">
+               <h2>Examples</h2>
+               <section class="example" id="example-1-keynumericupdown-control-that-handles-arrow-key-equivalence&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;for-+-and---buttons">
+                  <h3>Example 1: KeyNumericUpDown Control That Handles Arrow Key Equivalence
+                     					for + and - Buttons
+                  </h3>
+                  <p>This example implements a custom Silverlight control that displays
+                     						an integer value, and can increment or decrement the integer value
+                     						based on user actions. When a user interacts with the control, the
+                     						user can click the "+" and "-" buttons that are
+                     						component parts of the control. The "+" and "-" button
+                     						parts are deliberately not in the Silverlight tab sequence, because
+                     						this is intended to be a complete control, where only the control itself
+                     						(and not its constituent parts) are focusable and are reported as an
+                     						element to the accessibility framework. To provide keyboard equivalence,
+                     						the control defines a KeyUp handler. The design of
+                     						the control treats an Up Arrow key press as equivalent to activating
+                     						the "+" button, and the Down Arrow key as equivalent to activating
+                     						the "-" button. The control implementation reinforces this
+                     						behavior by having the button Click event handlers
+                     						and the cases of the KeyUp handler call the same underlying
+                     						helper functions (Increment() and Decrement()). 
+                  </p>
+                  <p>Handling the + and - keys as alternate or additional keyboard equivalents
+                     						for the actions is also possible (if that is desired, handler would
+                     						check for <code class="prop">Key.Add</code> or <code class="prop">Key.Subtract</code> values). 
+                  </p>
+                  <p>The following is the XAML-defined control template for this control.</p><pre xml:space="preserve">   &lt;Style TargetType="local:KeysNumericUpDown"&gt;
        &lt;Setter Property="BorderThickness" Value="1"/&gt;
        &lt;Setter Property="Height" Value="22"/&gt;
        &lt;Setter Property="BorderBrush"&gt;
@@ -230,10 +233,10 @@
        &lt;/Setter&gt;
    &lt;/Style&gt;
    </pre><p>The following is the implementation of the control class. Overrides
-                        						of the base class are omitted for clarity, as is automation support.
-                        						Note the event wiring in OnApplyTemplate; this is
-                        						a common pattern for custom control definitions. 
-                     </p><pre xml:space="preserve">   public class KeysNumericUpDown : UpDownBase&lt;double&gt;
+                     						of the base class are omitted for clarity, as is automation support.
+                     						Note the event wiring in OnApplyTemplate; this is
+                     						a common pattern for custom control definitions. 
+                  </p><pre xml:space="preserve">   public class KeysNumericUpDown : UpDownBase&lt;double&gt;
    {
        Grid root;
        Button plusButton;
@@ -300,109 +303,108 @@
        }
    }
    </pre><p>When this control is included in application UI, the usage is very
-                        						simple. Note that there are no key handlers on this instance; the
-                        						necessary key handling to wire up the increment/decrement logic is
-                        						already built-in to all instances of the control. 
-                     </p><pre xml:space="preserve">&lt;local:KeysNumericUpDown Width="100" Height="45"/&gt;
+                     						simple. Note that there are no key handlers on this instance; the
+                     						necessary key handling to wire up the increment/decrement logic is
+                     						already built-in to all instances of the control. 
+                  </p><pre xml:space="preserve">&lt;local:KeysNumericUpDown Width="100" Height="45"/&gt;
 </pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-simple-numeric-up-down/">working example of Numeric Up / Down control</a>.
-                     </p>
-                  </section>
-               </section>
-               <section id="applicability">
-                  <h2 id="applicability">Applicability</h2>
-                  <ul id="silverlight.applicability.general">
-                     
-                     <li> Microsoft Silverlight, versions 3 and greater </li>
-                     
-                     <li> Silverlight managed programming model and Silverlight XAML </li>
-                     
-                  </ul>
-               </section>
-               <section id="tests">
-                  <h2>Tests</h2>
-                  <section class="procedure" id="procedure">
-                     <h3>Procedure</h3>
-                     
-                     <ol>
-                        
-                        <li> Using a browser that supports Silverlight, open an HTML page that
-                           					references a Silverlight application through an object tag. 
-                        </li>
-                        
-                        <li> Press TAB key to move keyboard focus to various element parts
-                           						of the user interface, and in particular to areas that are known
-                           						to be custom control implementations. 
-                        </li>
-                        
-                        <li> Check that custom key commands exist for all these user interface
-                           							actions and that these key commands are made known to the user. 
-                        </li>
-                        
-                     </ol>
-                     
-                  </section>
-                  <section class="results" id="expected-results">
-                     <h3>Expected Results</h3>
-                     
-                     <p>#3 is true. </p>
-                     
-                  </section>
+                  </p>
                </section>
             </section>
-            <aside class="your-report your-report--expanded sidebar" tabindex="-1">
-               <h2 style="margin-top: 0">About this page</h2>
-               <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
-               </p>
-               <section id="resources">
-                  <h3 style="margin-bottom: 0;">Other sources</h3>
-                  <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-                  <ul>
+            <section id="applicability">
+               <h2 id="applicability">Applicability</h2>
+               <ul id="silverlight.applicability.general">
+                  
+                  <li> Microsoft Silverlight, versions 3 and greater </li>
+                  
+                  <li> Silverlight managed programming model and Silverlight XAML </li>
+                  
+               </ul>
+            </section>
+            <section id="tests">
+               <h2>Tests</h2>
+               <section class="procedure" id="procedure">
+                  <h3>Procedure</h3>
+                  
+                  <ol>
                      
-                     <li>
-                        <a href="https://msdn.microsoft.com/en-us/library/cc189015(VS.95).aspx">Keyboard
-                           					Support</a> 
-                        
+                     <li> Using a browser that supports Silverlight, open an HTML page that
+                        					references a Silverlight application through an object tag. 
                      </li>
                      
-                     <li>
-                        <a href="https://msdn.microsoft.com/en-us/library/cc903954(VS.95).aspx">Focus
-                           					Overview</a> 
-                        
+                     <li> Press TAB key to move keyboard focus to various element parts
+                        						of the user interface, and in particular to areas that are known
+                        						to be custom control implementations. 
                      </li>
                      
-                     <li>
-                        <a href="https://msdn.microsoft.com/en-us/library/cc278064(VS.95).aspx">Creating
-                           					a New Control by Creating a ControlTemplate</a> 
-                        
+                     <li> Check that custom key commands exist for all these user interface
+                        							actions and that these key commands are made known to the user. 
                      </li>
                      
-                     <li>
-                        <a href="https://msdn.microsoft.com/en-us/library/cc189018(VS.95).aspx">Events
-                           						Overview for Silverlight</a> 
-                        
-                     </li>
-                     
-                  </ul>
+                  </ol>
+                  
                </section>
-            </aside>
-            <aside class="box box-icon box-space-above" id="helpimprove" style="grid-area: content; grid-row: 3">
-               <header class="box-h  box-h-icon box-h-space-above box-h-icon">
-                  <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
-                     <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
-                  </svg>
-                  <h2> Help improve this page </h2>
-               </header>
-               <div class="box-i">
-                  <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
-                     list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
-                  </p>
-                  <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
-               </div>
-            </aside>
-         </div>
-      </main>
+               <section class="results" id="expected-results">
+                  <h3>Expected Results</h3>
+                  
+                  <p>#3 is true. </p>
+                  
+               </section>
+            </section>
+         </section>
+         <aside class="your-report your-report--expanded sidebar" tabindex="-1">
+            <h2 style="margin-top: 0">About this page</h2>
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            </p>
+            <section id="resources">
+               <h3 style="margin-bottom: 0;">Other sources</h3>
+               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
+               <ul>
+                  
+                  <li>
+                     <a href="https://msdn.microsoft.com/en-us/library/cc189015(VS.95).aspx">Keyboard
+                        					Support</a> 
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://msdn.microsoft.com/en-us/library/cc903954(VS.95).aspx">Focus
+                        					Overview</a> 
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://msdn.microsoft.com/en-us/library/cc278064(VS.95).aspx">Creating
+                        					a New Control by Creating a ControlTemplate</a> 
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://msdn.microsoft.com/en-us/library/cc189018(VS.95).aspx">Events
+                        						Overview for Silverlight</a> 
+                     
+                  </li>
+                  
+               </ul>
+            </section>
+         </aside>
+         <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
+            <header class="box-h  box-h-icon box-h-space-above box-h-icon">
+               <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
+                  <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path>
+               </svg>
+               <h2> Help improve this page </h2>
+            </header>
+            <div class="box-i">
+               <p>Please share your ideas, suggestions, or comments via e-mail to the publicly-archived
+                  list <a href="mailto:group-ag-chairs@w3.org@w3.org?subject=Techniques">group-ag-chairs@w3.org</a> or via GitHub
+               </p>
+               <div class="button-group"><a href="mailto:group-ag-chairs@w3.org@w3.org?subject=WCAG%20documents&amp;body=[put%20comment%20here...]" class="button"><span>E-mail</span></a><a href="https://github.com/w3c/wcag/issues/" class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wcag/issues/new" class="button"><span>New GitHub Issue</span></a></div>
+            </div>
+         </aside>
+      </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
-         <div class="inner">
+         <div class="inner" style="grid-column: 2 / 8">
             <p><strong>Date:</strong> Updated @@@. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
@@ -411,48 +413,6 @@
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
                with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
             </p>
-         </div>
-      </footer>
-      <footer class="site-footer grid-4q" aria-label="Site">
-         <div class="q1-start q3-end about">
-            <div>
-               <p><a class="largelink" href="https://www.w3.org/WAI/" dir="auto" translate="no" lang="en">W3C Web Accessibility Initiative (WAI)</a></p>
-               <p>Strategies, standards, and supporting resources to make the Web accessible to people
-                  with disabilities.
-               </p>
-            </div>
-            <div class="social" dir="auto" translate="no" lang="en">
-               <ul>
-                  <li><a href="https://twitter.com/w3c_wai">
-                        <svg focusable="false" aria-hidden="true" class="icon-twitter " viewBox="0 0 32 32">
-                           <path d="M31.939 6.092c-1.18 0.519-2.44 0.872-3.767 1.033 1.352-0.815 2.392-2.099 2.884-3.631-1.268 0.74-2.673 1.279-4.169 1.579-1.195-1.279-2.897-2.079-4.788-2.079-3.623 0-6.56 2.937-6.56 6.556 0 0.52 0.060 1.020 0.169 1.499-5.453-0.257-10.287-2.876-13.521-6.835-0.569 0.963-0.888 2.081-0.888 3.3 0 2.28 1.16 4.284 2.917 5.461-1.076-0.035-2.088-0.331-2.971-0.821v0.081c0 3.18 2.257 5.832 5.261 6.436-0.551 0.148-1.132 0.228-1.728 0.228-0.419 0-0.82-0.040-1.221-0.115 0.841 2.604 3.26 4.503 6.139 4.556-2.24 1.759-5.079 2.807-8.136 2.807-0.52 0-1.039-0.031-1.56-0.089 2.919 1.859 6.357 2.945 10.076 2.945 12.072 0 18.665-9.995 18.665-18.648 0-0.279 0-0.56-0.020-0.84 1.281-0.919 2.4-2.080 3.28-3.397l-0.063-0.027z"></path>
-                        </svg> Twitter</a></li>
-                  <li><a href="https://www.w3.org/WAI/feed.xml">
-                        <svg focusable="false" aria-hidden="true" class="icon-rss " viewBox="0 0 32 32">
-                           <path d="M25.599 32c0-14.044-11.555-25.6-25.599-25.6v-6.4c17.553 0 32 14.447 32 32h-6.401zM4.388 23.22c2.419 0 4.391 1.972 4.391 4.393 0 2.417-1.98 4.387-4.401 4.387-2.417 0-4.377-1.965-4.377-4.387s1.967-4.392 4.388-4.393zM21.212 32h-6.22c0-8.225-6.767-14.993-14.992-14.993v-6.22c11.636 0 21.212 9.579 21.212 21.213z"></path>
-                        </svg> Feed</a></li>
-                  <li><a href="https://www.youtube.com/channel/UCU6ljj3m1fglIPjSjs2DpRA/playlistsv">
-                        <svg focusable="false" aria-hidden="true" class="icon-youtube " viewBox="0 0 32 32">
-                           <path d="M31.327 8.273c-0.386-1.353-1.431-2.398-2.756-2.777l-0.028-0.007c-2.493-0.668-12.528-0.668-12.528-0.668s-10.009-0.013-12.528 0.668c-1.353 0.386-2.398 1.431-2.777 2.756l-0.007 0.028c-0.443 2.281-0.696 4.903-0.696 7.585 0 0.054 0 0.109 0 0.163l-0-0.008c-0 0.037-0 0.082-0 0.126 0 2.682 0.253 5.304 0.737 7.845l-0.041-0.26c0.386 1.353 1.431 2.398 2.756 2.777l0.028 0.007c2.491 0.669 12.528 0.669 12.528 0.669s10.008 0 12.528-0.669c1.353-0.386 2.398-1.431 2.777-2.756l0.007-0.028c0.425-2.233 0.668-4.803 0.668-7.429 0-0.099-0-0.198-0.001-0.297l0 0.015c0.001-0.092 0.001-0.201 0.001-0.31 0-2.626-0.243-5.196-0.708-7.687l0.040 0.258zM12.812 20.801v-9.591l8.352 4.803z"></path>
-                        </svg> YouTube</a></li>
-                  <li><a href="https://www.w3.org/WAI/news/subscribe/" class="button">Get News in Email</a></li>
-               </ul>
-            </div>
-            <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
-               </p>
-            </div>
-         </div>
-         <div dir="auto" translate="no" class="q4-start q4-end" lang="en">
-            <ul style="margin-bottom:0">
-               <li><a href="/WAI/about/contacting/">Contact WAI</a></li>
-               <li><a href="/WAI/sitemap/">Site Map</a></li>
-               <li><a href="/WAI/news/">News</a></li>
-               <li><a href="/WAI/sitemap/#archive">Archive</a></li>
-               <li><a href="/WAI/about/accessibility-statement/">Accessibility Statement</a></li>
-               <li><a href="/WAI/translations/"> Translations</a></li>
-               <li><a href="/WAI/roles/">Resources for Roles</a></li>
-            </ul>
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>hljs.highlightAll();</script></body>
