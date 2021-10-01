@@ -361,5 +361,11 @@ alt="Go to next page"&gt; </pre><div class="note">
             </ul>
          </div>
       </footer>
-      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>hljs.highlightAll();</script></body>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+				document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			  document.querySelectorAll('pre').forEach((el) =&gt; {
+    			hljs.highlightElement(el);
+  				});
+				});
+				</script></body>
 </html>
