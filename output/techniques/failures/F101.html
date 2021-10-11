@@ -53,57 +53,64 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/input-modalities">2.5: Input Modalities</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/pointer-cancellation">2.5.2: Pointer Cancellation</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this Failure is to describe situations where:</p>
-               <ol> 
-                  					
-                  <li>Controls are set to activate functionality on the down-event of a pointer;</li>
-                  					
-                  <li>No further mechanism to abort or undo is available;</li>
-                  					
-                  <li>The up-event does not reverse the outcome of the activation;</li>
-                  					
-                  <li>It is not essential for the functionality to execute and complete on the down-event.</li>
-                  				
-               </ol>
-               <p>Rather than taking advantage of the <code>click</code> event, authors may use down-events such as <code>mousedown</code>, <code>touchstart</code> or <code>pointerdown</code>. As a result, functionality will be executed as soon as a mouse button is pressed
-                  (but not released yet), or a finger or stylus makes contact with a touchscreen.
-               </p>
-               <p>It is possible to use the down event and mitigate potential issues to avoid failing
-                  the Success Criterion. For example, provide a method to easily undo or abort the functionality,
-                  or reverse the outcome on the up-event (when the mouse button is released, or when
-                  the finger or stylus are lifted from the touchscreen). And note that some uses of
-                  the down-event are essential for the functionality (e.g., where the control simulates
-                  the operation of a musical instrument like a set of piano keys, or when the control
-                  is used as an on-screen control for a game where a fast and immediate response is
-                  required), in which case they would not fail this Success Criterion.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>The test procedure outlined below could be supplemented with automated or semi-automated
-                     tests to scan for JavaScript that registers event listeners such as <code>mousedown</code>, <code>touchstart</code>, or <code>pointerdown</code>. The automated test would not be sufficient to make a pass/fail determination, but
-                     it can help narrow down the number of potentially problematic controls.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this Failure is to describe situations where:</p>
+                  <ol> 
+                     					
+                     <li>Controls are set to activate functionality on the down-event of a pointer;</li>
+                     					
+                     <li>No further mechanism to abort or undo is available;</li>
+                     					
+                     <li>The up-event does not reverse the outcome of the activation;</li>
+                     					
+                     <li>It is not essential for the functionality to execute and complete on the down-event.</li>
+                     				
+                  </ol>
+                  <p>Rather than taking advantage of the <code>click</code> event, authors may use down-events such as <code>mousedown</code>, <code>touchstart</code> or <code>pointerdown</code>. As a result, functionality will be executed as soon as a mouse button is pressed
+                     (but not released yet), or a finger or stylus makes contact with a touchscreen.
                   </p>
-               </div>
+                  <p>It is possible to use the down event and mitigate potential issues to avoid failing
+                     the Success Criterion. For example, provide a method to easily undo or abort the functionality,
+                     or reverse the outcome on the up-event (when the mouse button is released, or when
+                     the finger or stylus are lifted from the touchscreen). And note that some uses of
+                     the down-event are essential for the functionality (e.g., where the control simulates
+                     the operation of a musical instrument like a set of piano keys, or when the control
+                     is used as an on-screen control for a game where a fast and immediate response is
+                     required), in which case they would not fail this Success Criterion.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>The test procedure outlined below could be supplemented with automated or semi-automated
+                        tests to scan for JavaScript that registers event listeners such as <code>mousedown</code>, <code>touchstart</code>, or <code>pointerdown</code>. The automated test would not be sufficient to make a pass/fail determination, but
+                        it can help narrow down the number of potentially problematic controls.
+                     </p>
+                  </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-a-close-button-that-triggers-on-down-events">
-                  <h3>Example 1: A close button that triggers on down-events</h3>
-                  <p>A modal dialog contains a lengthy form that a user needs to complete. The modal provides
-                     a simple "Close" control that closes the dialog and loses all information the user
-                     may already have entered in the form. However, instead of simply listening to the
-                     <code>click</code> event - which in most user agents is triggered on the up-event - the author decided
-                     to close the dialog on the down-event. This may lead to the user accidentally closing
-                     the dialog and losing all the data they entered into the form up to that point.
-                  </p><pre><code>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-a-close-button-that-triggers-on-down-events">
+                     <h3>Example 1: A close button that triggers on down-events</h3>
+                     <p>A modal dialog contains a lengthy form that a user needs to complete. The modal provides
+                        a simple "Close" control that closes the dialog and loses all information the user
+                        may already have entered in the form. However, instead of simply listening to the
+                        <code>click</code> event - which in most user agents is triggered on the up-event - the author decided
+                        to close the dialog on the down-event. This may lead to the user accidentally closing
+                        the dialog and losing all the data they entered into the form up to that point.
+                     </p><pre><code>
 
-                        <!-- modal dialog with a form -->
+                           <!-- modal dialog with a form -->
 ...
 &lt;button id="close"&gt;Close&lt;/button&gt;
 ...
@@ -119,44 +126,53 @@ trigger.addEventListener('mousedown', closeDialog);
 trigger.addEventListener('touchstart', closeDialog);
 trigger.addEventListener('pointerdown', closeDialog);
 </code></pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that include interactive controls that can be triggered using a pointer.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies that include interactive controls that can be triggered using a pointer.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <p>Open the content on a device with pointer inputs (mouse, touchscreen, stylus) and
-                     for all available controls (buttons, links, complex widgets):
-                  </p>
-                  <ol>
-                     					
-                     <li>Trigger down-events (e.g. by pressing but not releasing the mouse button, or placing
-                        a finger or stylus on the touchscreen) and check if functionality is executed prior
-                        to the up-event (e.g. releasing the mouse button or lifting the finger/stylus)
-                     </li>
-                     
-                     <li>If functionality was executed on the down-event, check if triggering the up-event
-                        (releasing the pressed mouse button, or lifing the finger or stylus from the touchscreen)
-                        reverses the outcome
-                     </li>
-                     
-                     <li>Evaluate if it could be deemed essential for the controls to execute and complete
-                        functionality on the down-event
-                     </li>
-                     				
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     					
-                     <li>If #1 is true, and #2 and #3 are false then the content fails the Success Criterion.</li>
-                     				
-                  </ul>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <p>Open the content on a device with pointer inputs (mouse, touchscreen, stylus) and
+                        for all available controls (buttons, links, complex widgets):
+                     </p>
+                     <ol>
+                        					
+                        <li>Trigger down-events (e.g. by pressing but not releasing the mouse button, or placing
+                           a finger or stylus on the touchscreen) and check if functionality is executed prior
+                           to the up-event (e.g. releasing the mouse button or lifting the finger/stylus)
+                        </li>
+                        
+                        <li>If functionality was executed on the down-event, check if triggering the up-event
+                           (releasing the pressed mouse button, or lifing the finger or stylus from the touchscreen)
+                           reverses the outcome
+                        </li>
+                        
+                        <li>Evaluate if it could be deemed essential for the controls to execute and complete
+                           functionality on the down-event
+                        </li>
+                        				
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        					
+                        <li>If #1 is true, and #2 and #3 are false then the content fails the Success Criterion.</li>
+                        				
+                     </ul>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -164,7 +180,7 @@ trigger.addEventListener('pointerdown', closeDialog);
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -184,7 +200,7 @@ trigger.addEventListener('pointerdown', closeDialog);
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

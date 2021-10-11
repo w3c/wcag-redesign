@@ -8,7 +8,7 @@
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Understanding</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -70,130 +70,150 @@
                </dl>
             </blockquote>
             <section id="intent">
-               <h2>Intent</h2>
-               <p>The intent of this success criterion is to ensure that functions triggered by moving
-                  a device (for example, shaking or tilting) or by gesturing towards the device (so
-                  that sensors like a camera can pick up and interpret the gesturing), can also be operated
-                  by more conventional user interface components.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>This criterion concerns input through sensors which respond directly to motions such
-                     as gesturing towards, tilting or shaking a device. It does not cover the movement
-                     of users through space as registered by geolocation sensors or beacons, or events
-                     observed by the device other than intentional gesturing by the user. It also does
-                     not cover incidental motion associated with operating a keyboard, pointer, or assistive
-                     technology.
+               <details>
+                  <summary>
+                     <h2>Intent</h2>
+                  </summary>
+                  <p>The intent of this success criterion is to ensure that functions triggered by moving
+                     a device (for example, shaking or tilting) or by gesturing towards the device (so
+                     that sensors like a camera can pick up and interpret the gesturing), can also be operated
+                     by more conventional user interface components.
                   </p>
-               </div>
-               <p>Devices often have sensors that can act as inputs, such as accelerometer and gyroscope
-                  sensors on a phone or tablet device. These sensors can allow the user to control something
-                  by simply changing the orientation or moving the device in particular ways. In other
-                  situations, web content can interpret user gestures via the camera or other sensors
-                  to actuate functions. For example, shaking the device might issue an "Undo" command,
-                  or a gentle hand wave might be used to move forward or backward in a sequence of pages.
-                  Some users with disabilities are not able to operate these device sensors (either
-                  not at all, or not precisely enough) because the device is on a fixed mount (perhaps
-                  a wheelchair) or due to motor impairments. Therefore, functionality offered through
-                  motion must also be available by another mechanism.
-               </p>
-               <p>In addition, some users may accidentally activate sensors due to tremors or other
-                  motor impairments. The user must have the ability to turn off motion actuation to
-                  prevent such accidental triggering of functions. Applications may be able to meet
-                  this requirement by supporting operating system settings which allow the user to disable
-                  motion detection at the system level.
-               </p>
-               <p>There is an exception where motion is essential for the function or not using motions
-                  or gestures would invalidate the activity. Some applications are specifically created
-                  to use device sensor data. Examples of content that are exempt from this requirement
-                  include a pedometer that relies on device motion to count steps.
-               </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>This criterion concerns input through sensors which respond directly to motions such
+                        as gesturing towards, tilting or shaking a device. It does not cover the movement
+                        of users through space as registered by geolocation sensors or beacons, or events
+                        observed by the device other than intentional gesturing by the user. It also does
+                        not cover incidental motion associated with operating a keyboard, pointer, or assistive
+                        technology.
+                     </p>
+                  </div>
+                  <p>Devices often have sensors that can act as inputs, such as accelerometer and gyroscope
+                     sensors on a phone or tablet device. These sensors can allow the user to control something
+                     by simply changing the orientation or moving the device in particular ways. In other
+                     situations, web content can interpret user gestures via the camera or other sensors
+                     to actuate functions. For example, shaking the device might issue an "Undo" command,
+                     or a gentle hand wave might be used to move forward or backward in a sequence of pages.
+                     Some users with disabilities are not able to operate these device sensors (either
+                     not at all, or not precisely enough) because the device is on a fixed mount (perhaps
+                     a wheelchair) or due to motor impairments. Therefore, functionality offered through
+                     motion must also be available by another mechanism.
+                  </p>
+                  <p>In addition, some users may accidentally activate sensors due to tremors or other
+                     motor impairments. The user must have the ability to turn off motion actuation to
+                     prevent such accidental triggering of functions. Applications may be able to meet
+                     this requirement by supporting operating system settings which allow the user to disable
+                     motion detection at the system level.
+                  </p>
+                  <p>There is an exception where motion is essential for the function or not using motions
+                     or gestures would invalidate the activity. Some applications are specifically created
+                     to use device sensor data. Examples of content that are exempt from this requirement
+                     include a pedometer that relies on device motion to count steps.
+                  </p>
+               </details>
             </section>
             <section id="benefits">
-               <h2>Benefits</h2>
-               <ul>
-                  					
-                  <li>This Success Criterion helps people who may be unable to perform particular motions
-                     (such as tilting, shaking, or gesturing) because the device may be mounted or users
-                     may be physically unable to perform the necessary movement. This success criterion
-                     ensures that users can still operate all functionality by other means such as touch
-                     or via assistive technologies.
-                  </li>
-                  
-                  <li>Other users will benefit in situations where they are unable to move their devices.</li>
-                  				
-               </ul>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  				
-                  <li>A user can choose an application setting which turns off Shake to Undo and other motion-activated
-                     features.
-                  </li>
-                  				
-                  <li>After text is input in a field, shaking a device shows a dialog offering users to
-                     undo the input. A cancel button next to the text field offers the same functionality.
-                  </li>
-                  
-                  <li>A user can tilt a device to advance to the next or a previous page. Buttons are also
-                     provided to perform the same function.
-                  </li>
-                  
-                  <li>A user can move or pan a device to change the view in an interactive photo. A control
-                     is also available to perform these same functions.
-                  </li>
-                  
-                  <li>A user can gesture towards the device to navigate content. Controls are also available
-                     to navigate.
-                  </li>
-                  
-                  			
-               </ul>
-            </section>
-            <section id="resources">
-               <h2>Related Resources</h2>
-               <p>Resources are for information purposes only, no endorsement implied.</p>
-               <ul>
-                  
-                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></li>
-                  
-                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent">DeviceMotionEvent</a></li>
-                  			
-               </ul>
-            </section>
-            <section id="techniques">
-               <h2>Techniques</h2>
-               <p>Each numbered item in this section represents a technique or combination of techniques
-                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                  it is not necessary to use these particular techniques. For information on using other
-                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-               </p>
-               <section id="sufficient">
-                  <h3>Sufficient Techniques</h3>
+               <details>
+                  <summary>
+                     <h2>Benefits</h2>
+                  </summary>
                   <ul>
-                     
-                     <li><a href="/techniques/general/G213">G213: Provide conventional controls and an application setting for motion activated input</a></li>
-                     
-                     <li>GXXX: Supporting system level features which allow the user to disable motion actuation</li>
-                     
-                  </ul>
-               </section>
-               <section id="failure">
-                  <h3>Failures</h3>
-                  <p>The following are common mistakes that are considered failures of this Success Criterion
-                     by the WCAG Working Group.
-                  </p>
-                  <ul>
-                     
-                     <li><a href="/techniques/failures/F106">F106: Failure due to inability to deactivate motion actuation</a></li>
-                     
-                     <li>FXXX: Failure of Success Criterion 2.5.4 due to disrupting or disabling system level
-                        features which allow the user to disable motion actuation
+                     					
+                     <li>This Success Criterion helps people who may be unable to perform particular motions
+                        (such as tilting, shaking, or gesturing) because the device may be mounted or users
+                        may be physically unable to perform the necessary movement. This success criterion
+                        ensures that users can still operate all functionality by other means such as touch
+                        or via assistive technologies.
                      </li>
                      
+                     <li>Other users will benefit in situations where they are unable to move their devices.</li>
+                     				
                   </ul>
-               </section>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <ul>
+                     				
+                     <li>A user can choose an application setting which turns off Shake to Undo and other motion-activated
+                        features.
+                     </li>
+                     				
+                     <li>After text is input in a field, shaking a device shows a dialog offering users to
+                        undo the input. A cancel button next to the text field offers the same functionality.
+                     </li>
+                     
+                     <li>A user can tilt a device to advance to the next or a previous page. Buttons are also
+                        provided to perform the same function.
+                     </li>
+                     
+                     <li>A user can move or pan a device to change the view in an interactive photo. A control
+                        is also available to perform these same functions.
+                     </li>
+                     
+                     <li>A user can gesture towards the device to navigate content. Controls are also available
+                        to navigate.
+                     </li>
+                     
+                     			
+                  </ul>
+               </details>
+            </section>
+            <section id="resources">
+               <details>
+                  <summary>
+                     <h2>Related Resources</h2>
+                  </summary>
+                  <p>Resources are for information purposes only, no endorsement implied.</p>
+                  <ul>
+                     
+                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></li>
+                     
+                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent">DeviceMotionEvent</a></li>
+                     			
+                  </ul>
+               </details>
+            </section>
+            <section id="techniques">
+               <details>
+                  <summary>
+                     <h2>Techniques</h2>
+                  </summary>
+                  <p>Each numbered item in this section represents a technique or combination of techniques
+                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                     it is not necessary to use these particular techniques. For information on using other
+                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+                  </p>
+                  <section id="sufficient">
+                     <h3>Sufficient Techniques</h3>
+                     <ul>
+                        
+                        <li><a href="/techniques/general/G213">G213: Provide conventional controls and an application setting for motion activated input</a></li>
+                        
+                        <li>GXXX: Supporting system level features which allow the user to disable motion actuation</li>
+                        
+                     </ul>
+                  </section>
+                  <section id="failure">
+                     <h3>Failures</h3>
+                     <p>The following are common mistakes that are considered failures of this Success Criterion
+                        by the WCAG Working Group.
+                     </p>
+                     <ul>
+                        
+                        <li><a href="/techniques/failures/F106">F106: Failure due to inability to deactivate motion actuation</a></li>
+                        
+                        <li>FXXX: Failure of Success Criterion 2.5.4 due to disrupting or disabling system level
+                           features which allow the user to disable motion actuation
+                        </li>
+                        
+                     </ul>
+                  </section>
+               </details>
             </section>
             <nav class="pager" aria-label="Previous/Next Page">
                <ul id="navigation">
@@ -252,7 +272,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

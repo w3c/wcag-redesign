@@ -53,54 +53,61 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Advisory</strong> for <a href="/understanding/keyboard-accessible">2.1: Keyboard Accessible</a></span>.
+                  <p>This technique is <span><strong>Advisory</strong> for <a href="/understanding/keyboard">2.1.1: Keyboard</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to demonstrate how to provide keyboard access to
-                  a user interface control that is implemented by actions to static HTML elements such
-                  as div or span. This technique ensures that the element is focusable by setting the
-                  tabindex attribute, and it ensures that the action can be triggered from the keyboard
-                  by providing an onkeyup or onkeypress handler in addition to an onclick handler. 
-               </p>
-               <p>When the tabindex attribute has the value 0, the element can be focused via the keyboard
-                  and is included in the tab order of the document. When the tabindex attribute has
-                  the value -1, the element cannot be tabbed to, but focus can be set programmatically,
-                  using element.focus().
-               </p>
-               <p>Because static HTML elements do not have actions associated with them, it is not possible
-                  to provide a backup implementation or explanation in environments in which scripting
-                  is not available. This technique should only be used in environments in which client-side
-                  scripting can be relied upon.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p> Such user interface controls must still satisfy Success Criterion 4.1.2. Applying
-                        this technique without also providing role, name, and state information about the
-                        user interface control will results in Failure F59, Failure of Success Criterion 4.1.2
-                        due to using script to make div or span a user interface control in HTML.
-                     </p>
-                     
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to demonstrate how to provide keyboard access to
+                     a user interface control that is implemented by actions to static HTML elements such
+                     as div or span. This technique ensures that the element is focusable by setting the
+                     tabindex attribute, and it ensures that the action can be triggered from the keyboard
+                     by providing an onkeyup or onkeypress handler in addition to an onclick handler. 
+                  </p>
+                  <p>When the tabindex attribute has the value 0, the element can be focused via the keyboard
+                     and is included in the tab order of the document. When the tabindex attribute has
+                     the value -1, the element cannot be tabbed to, but focus can be set programmatically,
+                     using element.focus().
+                  </p>
+                  <p>Because static HTML elements do not have actions associated with them, it is not possible
+                     to provide a backup implementation or explanation in environments in which scripting
+                     is not available. This technique should only be used in environments in which client-side
+                     scripting can be relied upon.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p> Such user interface controls must still satisfy Success Criterion 4.1.2. Applying
+                           this technique without also providing role, name, and state information about the
+                           user interface control will results in Failure F59, Failure of Success Criterion 4.1.2
+                           due to using script to make div or span a user interface control in HTML.
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1--adding-a-javascript-action-to-a-div-element">
-                  <h3>Example 1:  Adding a JavaScript action to a div element</h3>
-                  <p>The div element on the page is given a unique id attribute and a tabindex attribute
-                     with value 0.  A script uses the Document Object Model (DOM) to find the div element
-                     by its id and add the onclick handler and the onkeyup handler. The onkeyup handler
-                     will invoke the action when the Enter key is pressed. Note that the div element must
-                     be loaded into the DOM before it can be found and modified. This is usually accomplished
-                     by calling the script from the onload event of the body element.  The script to add
-                     the event handlers will only execute if the user agent supports and has JavaScript
-                     enabled.   
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1--adding-a-javascript-action-to-a-div-element">
+                     <h3>Example 1:  Adding a JavaScript action to a div element</h3>
+                     <p>The div element on the page is given a unique id attribute and a tabindex attribute
+                        with value 0.  A script uses the Document Object Model (DOM) to find the div element
+                        by its id and add the onclick handler and the onkeyup handler. The onkeyup handler
+                        will invoke the action when the Enter key is pressed. Note that the div element must
+                        be loaded into the DOM before it can be found and modified. This is usually accomplished
+                        by calling the script from the onload event of the body element.  The script to add
+                        the event handlers will only execute if the user agent supports and has JavaScript
+                        enabled.   
+                     </p><pre xml:space="preserve">
 ...
 &lt;script type="text/javascript"&gt;
  // this is the function to perform the action. This simple example toggles a message.
@@ -149,45 +156,54 @@
  &lt;/div&gt;
 ...
 </pre><p class="working-example">Working example of this code: <a href="../../working-examples/script-action-on-div/">Creating Divs with Actions using JavaScript</a>.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML, Script</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML, Script</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>In a user agent that supports Scripting:</p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Click on the control with the mouse</li>
+                     <p>In a user agent that supports Scripting:</p>
                      
-                     <li>Check that the scripting action executes properly</li>
+                     <ol>
+                        
+                        <li>Click on the control with the mouse</li>
+                        
+                        <li>Check that the scripting action executes properly</li>
+                        
+                        <li>Check that it is possible to navigate to and give focus to the control via the keyboard</li>
+                        
+                        <li>Set keyboard focus to the control</li>
+                        
+                        <li>Check that pressing ENTER or SPACE invokes the scripting action.</li>
+                        
+                     </ol>
                      
-                     <li>Check that it is possible to navigate to and give focus to the control via the keyboard</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Set keyboard focus to the control</li>
+                     <ul>
+                        
+                        <li>All of the checks are true</li>
+                        
+                     </ul>
                      
-                     <li>Check that pressing ENTER or SPACE invokes the scripting action.</li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>All of the checks are true</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -195,7 +211,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -248,7 +264,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

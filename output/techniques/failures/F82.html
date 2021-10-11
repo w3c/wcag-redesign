@@ -56,70 +56,86 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/input-assistance">3.3: Input Assistance</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/labels-or-instructions">3.3.2: Labels or Instructions</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This failure ensures that people with visual or cognitive disabilities will recognize
-                  phone number fields and understand what information to provide to fill in the fields.
-                  Phone numbers are frequently formatted in fixed, distinctive ways, and authors may
-                  feel that just providing visual formatting of the fields will be sufficient to identify
-                  them. However, even if all the fields have programmatically determined names, a text
-                  label must also identify the set of fields as a phone number.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This failure ensures that people with visual or cognitive disabilities will recognize
+                     phone number fields and understand what information to provide to fill in the fields.
+                     Phone numbers are frequently formatted in fixed, distinctive ways, and authors may
+                     feel that just providing visual formatting of the fields will be sufficient to identify
+                     them. However, even if all the fields have programmatically determined names, a text
+                     label must also identify the set of fields as a phone number.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>In the United States, phone numbers are broken into a three digit area code, a three
-                     digit prefix, and a four digit extension. A web page creates fixed length text input
-                     fields for the three parts of the phone number, surrounding the first field with parenthesis
-                     and separating the second and third fields with a dash. Because of this formatting,
-                     some users recognize the fields as a phone number. However, there is no text label
-                     for the phone number on the web page. This is because the label for each field will
-                     be the closest preceding text, so the three fields would be labeled "(", ")" , and
-                     "-" respectively.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>In the United States, phone numbers are broken into a three digit area code, a three
+                        digit prefix, and a four digit extension. A web page creates fixed length text input
+                        fields for the three parts of the phone number, surrounding the first field with parenthesis
+                        and separating the second and third fields with a dash. Because of this formatting,
+                        some users recognize the fields as a phone number. However, there is no text label
+                        for the phone number on the web page. This is because the label for each field will
+                        be the closest preceding text, so the three fields would be labeled "(", ")" , and
+                        "-" respectively.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>For each set of phone number fields in the web page that represents a single phone
-                        number, check that the set of fields are labeled with a visible text label that is
-                        positioned near the set of phone number fields.
-                     </li>
+                     <ol>
+                        
+                        <li>For each set of phone number fields in the web page that represents a single phone
+                           number, check that the set of fields are labeled with a visible text label that is
+                           positioned near the set of phone number fields.
+                        </li>
+                        
+                        <li>For each set of phone number fields in the Web page that represent a single phone
+                           number, instructions are provided about how to fill in the fields.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>For each set of phone number fields in the Web page that represent a single phone
-                        number, instructions are provided about how to fill in the fields.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>If both check #1 and check #2 are false, then this failure condition applies and the
+                           content fails this success criterion.
+                        </li>
+                        
+                     </ul>
                      
-                     <li>If both check #1 and check #2 are false, then this failure condition applies and the
-                        content fails this success criterion.
-                     </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -127,7 +143,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -147,7 +163,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

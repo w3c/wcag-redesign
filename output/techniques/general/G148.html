@@ -56,72 +56,91 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/contrast-minimum">1.4.3: Contrast (Minimum)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/contrast-enhanced">1.4.6: Contrast (Enhanced)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/visual-presentation">1.4.8: Visual Presentation</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to make sure that users can read text
-                  that is presented over a background. With this technique the author avoids
-                  having to do any contrast measures by simply not specifying the text color
-                  and not specifying the background. As a result the colors of both are
-                  completely determined by the user agent.
-               </p>
-               <p>Some people who have vision disabilities set their user agent to override certain
-                  colors that they have trouble seeing. This technique will help avoid a situation where
-                  the user agent and web site conflict with each other over the foreground and/or background
-                  colors resulting in the same color for text and background, which would make it invisible
-                  for user who set their own colors in their browser or Assistive Technology.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to make sure that users can read text
+                     that is presented over a background. With this technique the author avoids
+                     having to do any contrast measures by simply not specifying the text color
+                     and not specifying the background. As a result the colors of both are
+                     completely determined by the user agent.
+                  </p>
+                  <p>Some people who have vision disabilities set their user agent to override certain
+                     colors that they have trouble seeing. This technique will help avoid a situation where
+                     the user agent and web site conflict with each other over the foreground and/or background
+                     colors resulting in the same color for text and background, which would make it invisible
+                     for user who set their own colors in their browser or Assistive Technology.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The author specifies neither text color nor background, and does not use CSS. As a
-                     result the user can set his browser
-                     defaults to provide the colors and contrasts that work well for
-                     them.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The author specifies neither text color nor background, and does not use CSS. As a
+                        result the user can set his browser
+                        defaults to provide the colors and contrasts that work well for
+                        them.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology where text and background color are specified
-                  separately and browsers can control default colors.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology where text and background color are specified
+                     separately and browsers can control default colors.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Look in all places that text color can be specified</li>
+                     <ol>
+                        
+                        <li>Look in all places that text color can be specified</li>
+                        
+                        <li>Check that text color is not specified</li>
+                        
+                        <li>Look in all areas that background color or image used as a background can be
+                           specified
+                        </li>
+                        
+                        <li>Check that no background color or image used as a background is specified</li>
+                        
+                     </ol>
                      
-                     <li>Check that text color is not specified</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Look in all areas that background color or image used as a background can be
-                        specified
-                     </li>
+                     <ul>
+                        
+                        <li># 2 and 4 are true</li>
+                        
+                     </ul>
                      
-                     <li>Check that no background color or image used as a background is specified</li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li># 2 and 4 are true</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -129,7 +148,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -197,7 +216,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

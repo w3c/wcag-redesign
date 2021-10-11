@@ -55,43 +55,50 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/input-assistance">3.3: Input Assistance</a> and <strong>Sufficient</strong> to meet <a href="/understanding/compatible">4.1: Compatible</a>, using a more specific technique.
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/error-identification">3.3.1: Error Identification</a> and <strong>Sufficient</strong> to meet <a href="/understanding/status-messages">4.1.3: Status Messages</a>, using a more specific technique.
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The purpose of this technique is to notify Assistive Technologies (AT) when an input
-                  error occurs. The <code class="att">aria-live</code> attribute makes it possible for an AT (such as a screen reader) to be notified when
-                  error messages are injected into a Live Region container. The content within the <code class="att">aria-live</code> region is automatically read by the AT, without the AT having to focus on the place
-                  where the text is displayed.
-                  
-               </p>
-               <p>There are also a number of <a href="https://www.w3.org/WAI/PF/aria-practices/#chobet">special case live region roles</a> which can be used instead of applying live region properties directly.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The purpose of this technique is to notify Assistive Technologies (AT) when an input
+                     error occurs. The <code class="att">aria-live</code> attribute makes it possible for an AT (such as a screen reader) to be notified when
+                     error messages are injected into a Live Region container. The content within the <code class="att">aria-live</code> region is automatically read by the AT, without the AT having to focus on the place
+                     where the text is displayed.
+                     
+                  </p>
+                  <p>There are also a number of <a href="https://www.w3.org/WAI/PF/aria-practices/#chobet">special case live region roles</a> which can be used instead of applying live region properties directly.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-injecting-error-messages-into-a-container-with-role=alert-already-present-in-the-dom">
-                  <h3>Example 1: Injecting error messages into a container with role=alert already present
-                     in the DOM
-                  </h3>
-                  <p>The following example uses role=alert which is equivalent to using aria-live=assertive.
-                     
-                  </p>
-                  <p>In the example there is an empty error message container element with aria-atomic=true
-                     and an aria-live property or alert role present in the DOM on page load. The error
-                     container must be present in the DOM on page load for the error message to be spoken
-                     by most screen readers. aria-atomic=true is necessary to make Voiceover on iOS read
-                     the error messages after more than one invalid submission. 
-                     
-                  </p>
-                  <p>jQuery is used to test if the inputs are empty on submit and inject error messages
-                     into the live region containers if so. Each time a new submit is attempted the previous
-                     error messages are removed from the container and new error messages injected.
-                     
-                  </p><pre xml:space="preserve">&lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-injecting-error-messages-into-a-container-with-role=alert-already-present-in-the-dom">
+                     <h3>Example 1: Injecting error messages into a container with role=alert already present
+                        in the DOM
+                     </h3>
+                     <p>The following example uses role=alert which is equivalent to using aria-live=assertive.
+                        
+                     </p>
+                     <p>In the example there is an empty error message container element with aria-atomic=true
+                        and an aria-live property or alert role present in the DOM on page load. The error
+                        container must be present in the DOM on page load for the error message to be spoken
+                        by most screen readers. aria-atomic=true is necessary to make Voiceover on iOS read
+                        the error messages after more than one invalid submission. 
+                        
+                     </p>
+                     <p>jQuery is used to test if the inputs are empty on submit and inject error messages
+                        into the live region containers if so. Each time a new submit is attempted the previous
+                        error messages are removed from the container and new error messages injected.
+                        
+                     </p><pre xml:space="preserve">&lt;script src="http://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
 &lt;script&gt;
 $(document).ready(function(e) {
 	$('#signup').submit(function() {
@@ -128,46 +135,55 @@ $(document).ready(function(e) {
     &lt;input type="submit" name="button" id="button" value="Submit"&gt;
   &lt;/p&gt;
 &lt;/form&gt;</pre><p class="working-example">Working example: <a href="../../working-examples/aria-alert-identify-errors/">Using role=alert to identify errors</a>.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Determine that an empty error container role=alert or aria-live=assertive attribute
-                        is present in the DOM at page load.
-                     </li>
-                     
-                     <li> Trigger the error that causes the content in the live region to appear or update.
+                     <ol>
                         
-                     </li>
-                     
-                     <li> Determine that the error message was injected into the already present error container.
+                        <li>Determine that an empty error container role=alert or aria-live=assertive attribute
+                           is present in the DOM at page load.
+                        </li>
                         
-                     </li>
+                        <li> Trigger the error that causes the content in the live region to appear or update.
+                           
+                        </li>
+                        
+                        <li> Determine that the error message was injected into the already present error container.
+                           
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>#1 and #3 are true.</li>
+                     <ul>
+                        
+                        <li>#1 and #3 are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -175,7 +191,7 @@ $(document).ready(function(e) {
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -237,7 +253,7 @@ $(document).ready(function(e) {
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

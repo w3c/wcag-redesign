@@ -53,37 +53,44 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/input-modalities">2.5: Input Modalities</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/concurrent-input-mechanisms">2.5.6: Concurrent Input Mechanisms</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this Failure is to describe situations where users on devices that
-                  have a touchscreen are unable to use other input modalities available to them (such
-                  as an additional/external mouse or keyboard).
-               </p>
-               <p>There are various methods and heuristics for web content to determine if a user's
-                  device has a touchscreen. However, even when a touchscreen is present, other input
-                  modalities may be available to users. It is not necessarily the case that the user
-                  will be interacting with the web content (exclusively, or at all) using the touchscreen.
-               </p>
-               <p>If, when a touchscreen is detected, web content is designed to be operated exclusively
-                  through touch, these users will be unable to operate the content using their other
-                  (possibly preferred) input mechanisms.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this Failure is to describe situations where users on devices that
+                     have a touchscreen are unable to use other input modalities available to them (such
+                     as an additional/external mouse or keyboard).
+                  </p>
+                  <p>There are various methods and heuristics for web content to determine if a user's
+                     device has a touchscreen. However, even when a touchscreen is present, other input
+                     modalities may be available to users. It is not necessarily the case that the user
+                     will be interacting with the web content (exclusively, or at all) using the touchscreen.
+                  </p>
+                  <p>If, when a touchscreen is detected, web content is designed to be operated exclusively
+                     through touch, these users will be unable to operate the content using their other
+                     (possibly preferred) input mechanisms.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-only-using-touch-specific-javascript-event-listeners-when-a-touchscreen-is-detected">
-                  <h3>Example 1: Only using touch-specific JavaScript event listeners when a touchscreen
-                     is detected
-                  </h3>
-                  <p>These types of approaches have historically been popular for "mobile" specific development,
-                     to ensure that touchscreen interactions are more responsive and immediate (due to
-                     the way that touch interactions used to add a delay of approximately 300ms between
-                     a "tap" interaction and the generic <code>click</code> event being fired).
-                  </p><pre><code>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-only-using-touch-specific-javascript-event-listeners-when-a-touchscreen-is-detected">
+                     <h3>Example 1: Only using touch-specific JavaScript event listeners when a touchscreen
+                        is detected
+                     </h3>
+                     <p>These types of approaches have historically been popular for "mobile" specific development,
+                        to ensure that touchscreen interactions are more responsive and immediate (due to
+                        the way that touch interactions used to add a delay of approximately 300ms between
+                        a "tap" interaction and the generic <code>click</code> event being fired).
+                     </p><pre><code>
 /* inferring the presence of a touchscreen based on
    support for the Touch Events API */
 
@@ -111,10 +118,10 @@ if (window.matchMedia &amp;&amp; window.matchMedia("(pointer:coarse)").matches) 
   ...
 }
 				</code></pre><p>Similarly, web content that omits relevant/necessary keyboard event listeners (e.g.
-                     for the correct keyboard interaction with a complex widget, such as a tab interface)
-                     when a touchscreen is detected - under the assumption that on a touch device, keyboard
-                     support won't be necessary.
-                  </p><pre><code>
+                        for the correct keyboard interaction with a complex widget, such as a tab interface)
+                        when a touchscreen is detected - under the assumption that on a touch device, keyboard
+                        support won't be necessary.
+                     </p><pre><code>
 /* inferring the presence of a touchscreen based on
    the navigator.maxTouchPoints property defined in
    the Pointer Events API */
@@ -129,22 +136,22 @@ if (window.PointerEvent &amp;&amp; ('maxTouchPoints' in navigator) &amp;&amp;
   ...
 }
 				</code></pre><div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                     <p>Generally, these approaches will <em>also</em> result in a failure of Success Criterion 2.1.1 Keyboard - but only in situations
-                        where a touchscreen interface was also detected.
-                     </p>
-                  </div>
-               </section>
-               <section class="example" id="example-2-hiding/omitting-controls-for-mouse-and-keyboard-users-when-a-touchscreen-is-detected">
-                  <h3>Example 2: Hiding/omitting controls for mouse and keyboard users when a touchscreen
-                     is detected
-                  </h3>
-                  <p>Web content containing interactive widgets such as content carousels, with visible
-                     buttons to operate the widget (such as previous/next buttons, or a visible scrollbar/slider).
-                     These visible controls are hidden/omitted when a touchscreen is detected, under the
-                     assumption that users will simply use touch gestures to operate the widgets, and no
-                     other alternatives are then provided for keyboard or mouse users.
-                  </p><pre><code>
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <p>Generally, these approaches will <em>also</em> result in a failure of Success Criterion 2.1.1 Keyboard - but only in situations
+                           where a touchscreen interface was also detected.
+                        </p>
+                     </div>
+                  </section>
+                  <section class="example" id="example-2-hiding/omitting-controls-for-mouse-and-keyboard-users-when-a-touchscreen-is-detected">
+                     <h3>Example 2: Hiding/omitting controls for mouse and keyboard users when a touchscreen
+                        is detected
+                     </h3>
+                     <p>Web content containing interactive widgets such as content carousels, with visible
+                        buttons to operate the widget (such as previous/next buttons, or a visible scrollbar/slider).
+                        These visible controls are hidden/omitted when a touchscreen is detected, under the
+                        assumption that users will simply use touch gestures to operate the widgets, and no
+                        other alternatives are then provided for keyboard or mouse users.
+                     </p><pre><code>
 /* using CSS Media Queries 4 Interaction Media Features
    to hide particular elements in the page (such as a container
    with visible controls) when a "coarse" primary input is present */
@@ -153,60 +160,69 @@ if (window.PointerEvent &amp;&amp; ('maxTouchPoints' in navigator) &amp;&amp;
   #widget .controls { display: none; }
 }
 				</code></pre><p>Depending on the specific implementation, authors may allow mouse interactions with
-                     widgets that mirror touch gestures - for instance, allowing mouse users to also drag/swipe
-                     carousels, rather than just relying on clickable previous/next controls or scrollbars.
-                     In these cases, hiding controls when a touchscreen is detected will still allow users
-                     to operate the widget with the mouse (unless this interaction has also been suppressed/omitted
-                     when the touchscreen was detected, as per the previous example). However, if the only
-                     keyboard-operable controls for the widget were hidden, and no alternative for keyboard
-                     users was provided (such as allowing cursor key operation), this situation would still
-                     fail Success Criterion 2.5.6.
-                  </p>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                     <p>Generally, these approaches will <em>also</em> result in a failure of Success Criterion 2.1.1 Keyboard <em>and</em> (depending on the touch gesture that the user is expected to perform) Success Criterion
-                        2.5.1 Pointer Gestures.
+                        widgets that mirror touch gestures - for instance, allowing mouse users to also drag/swipe
+                        carousels, rather than just relying on clickable previous/next controls or scrollbars.
+                        In these cases, hiding controls when a touchscreen is detected will still allow users
+                        to operate the widget with the mouse (unless this interaction has also been suppressed/omitted
+                        when the touchscreen was detected, as per the previous example). However, if the only
+                        keyboard-operable controls for the widget were hidden, and no alternative for keyboard
+                        users was provided (such as allowing cursor key operation), this situation would still
+                        fail Success Criterion 2.5.6.
                      </p>
-                  </div>
-               </section>
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <p>Generally, these approaches will <em>also</em> result in a failure of Success Criterion 2.1.1 Keyboard <em>and</em> (depending on the touch gesture that the user is expected to perform) Success Criterion
+                           2.5.1 Pointer Gestures.
+                        </p>
+                     </div>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that include interactive controls (such as links, form inputs, or
-                  complex custom widgets) and that can detect the presence of different input modalities.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies that include interactive controls (such as links, form inputs, or
+                     complex custom widgets) and that can detect the presence of different input modalities.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <ol>
-                     					
-                     <li>Open the content on a device with a touchscreen and at least one additional input
-                        modality - this includes touch-enabled laptops and touchscreen devices (smartphones
-                        or tablets) with a paired external keyboard and mouse.
-                     </li>
-                     					
-                     <li>Check that all interactive controls can be operated using not only the touchscreen,
-                        but also the additional input mechanisms (keyboard and mouse)
-                     </li>
-                     					
-                     <li>If the presence of the touchscreen caused interactive controls not to be displayed
-                        (compared to the same content when viewed on a device without a touchscreen), check
-                        that there are alternative controls/ways for users of other additional input mechanisms
-                        to operate the content
-                     </li>
-                     				
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     					
-                     <li>If checks #2 or #3 are false, the content fails the Success Criterion.</li>
-                     				
-                  </ul>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <ol>
+                        					
+                        <li>Open the content on a device with a touchscreen and at least one additional input
+                           modality - this includes touch-enabled laptops and touchscreen devices (smartphones
+                           or tablets) with a paired external keyboard and mouse.
+                        </li>
+                        					
+                        <li>Check that all interactive controls can be operated using not only the touchscreen,
+                           but also the additional input mechanisms (keyboard and mouse)
+                        </li>
+                        					
+                        <li>If the presence of the touchscreen caused interactive controls not to be displayed
+                           (compared to the same content when viewed on a device without a touchscreen), check
+                           that there are alternative controls/ways for users of other additional input mechanisms
+                           to operate the content
+                        </li>
+                        				
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        					
+                        <li>If checks #2 or #3 are false, the content fails the Success Criterion.</li>
+                        				
+                     </ul>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -214,7 +230,7 @@ if (window.PointerEvent &amp;&amp; ('maxTouchPoints' in navigator) &amp;&amp;
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -234,7 +250,7 @@ if (window.PointerEvent &amp;&amp; ('maxTouchPoints' in navigator) &amp;&amp;
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

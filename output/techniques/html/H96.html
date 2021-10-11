@@ -53,95 +53,114 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Advisory</strong> for <a href="/understanding/time-based-media">1.2: Time-based Media</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Advisory</strong> for <a href="/understanding/audio-only-and-video-only-prerecorded">1.2.1: Audio-only and Video-only (Prerecorded)</a> and <strong>Advisory</strong> for <a href="/understanding/audio-description-or-media-alternative-prerecorded">1.2.3: Audio Description or Media Alternative (Prerecorded)</a> and <strong>Advisory</strong> for <a href="/understanding/audio-description-prerecorded">1.2.5: Audio Description (Prerecorded)</a> and <strong>Advisory</strong> for <a href="/understanding/extended-audio-description-prerecorded">1.2.7: Extended Audio Description (Prerecorded)</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to use the HTML5 <code class="el">track</code> element to specify a descriptions timed text track for a <code class="el">video</code> element. Audio description timed text tracks contain textual descriptions of the
-                  video component of the media resource, intended for audio synthesis when the visual
-                  component is obscured, unavailable, or not usable. The user agent makes the cues available
-                  to the user in a non-visual fashion, for instance, by synthesizing them into speech.
-               </p>
-               <p>The <code class="att">src</code> attribute of the <code class="el">track</code> element is an URL providing the text track data.
-               </p>
-               <p>The audio description cues must fit into the gaps available in the audio component
-                  of the media resource. If there is not enough time to synthesize the description text
-                  in the track cue's time interval, user agents may truncate the speech. This limits
-                  the amount of supplementary information that can be added.
-               </p>
-               <p>User agents may also support extended audio descriptions by halting the video until
-                  the description has been completely synthesized, then restarting the video.
-               </p>
-               <p>As of February 2019 when this Advisory technique was last reviewed by the Working
-                  Group, there is no native support in user agents for this technique. However, support
-                  is available via JavaScript polyfills.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to use the HTML5 <code class="el">track</code> element to specify a descriptions timed text track for a <code class="el">video</code> element. Audio description timed text tracks contain textual descriptions of the
+                     video component of the media resource, intended for audio synthesis when the visual
+                     component is obscured, unavailable, or not usable. The user agent makes the cues available
+                     to the user in a non-visual fashion, for instance, by synthesizing them into speech.
+                  </p>
+                  <p>The <code class="att">src</code> attribute of the <code class="el">track</code> element is an URL providing the text track data.
+                  </p>
+                  <p>The audio description cues must fit into the gaps available in the audio component
+                     of the media resource. If there is not enough time to synthesize the description text
+                     in the track cue's time interval, user agents may truncate the speech. This limits
+                     the amount of supplementary information that can be added.
+                  </p>
+                  <p>User agents may also support extended audio descriptions by halting the video until
+                     the description has been completely synthesized, then restarting the video.
+                  </p>
+                  <p>As of February 2019 when this Advisory technique was last reviewed by the Working
+                     Group, there is no native support in user agents for this technique. However, support
+                     is available via JavaScript polyfills.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-audio-description-in-one-language">
-                  <h3>Example 1: Audio description in one language</h3>
-                  <p>A <code class="el">video</code> element for a video in the English language. The audio descriptions are provided
-                     in the WebVTT format.
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-audio-description-in-one-language">
+                     <h3>Example 1: Audio description in one language</h3>
+                     <p>A <code class="el">video</code> element for a video in the English language. The audio descriptions are provided
+                        in the WebVTT format.
+                     </p><pre xml:space="preserve">
 			 &lt;video poster="myvideo.png" controls&gt;
 				&lt;source src="myvideo.mp4" srclang="en" type="video/mp4"&gt;
 				&lt;track src="myvideo_en.vtt" kind="descriptions" srclang="en" label="English"&gt;
 			  &lt;/video&gt;
             </pre></section>
-               <section class="example" id="example-2-audio-description-in-multiple-languages">
-                  <h3>Example 2: Audio description in multiple languages</h3>
-                  <p>A <code class="el">video</code> element for a video with both an English and French language source element, and
-                     with an English and a French audio description track using the WebVTT (vtt) file format.
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-2-audio-description-in-multiple-languages">
+                     <h3>Example 2: Audio description in multiple languages</h3>
+                     <p>A <code class="el">video</code> element for a video with both an English and French language source element, and
+                        with an English and a French audio description track using the WebVTT (vtt) file format.
+                     </p><pre xml:space="preserve">
 			 &lt;video poster="myvideo.png" controls&gt;
 				&lt;source src="myvideo.mp4" srclang="en" type="video/mp4"&gt;
 				&lt;source src="myvideo.webm" srclang="fr" type="video/webm"&gt;
 				&lt;track src="myvideo_en.vtt" kind="descriptions" srclang="en" label="English"&gt;
 				&lt;track src="myvideo_fr.vtt" kind="descriptions" srclang="fr" label="French"&gt;
 			  &lt;/video&gt;            </pre></section>
-               <section class="example" id="example-3-captions-in-multiple-languages">
-                  <h3>Example 3: Captions in multiple languages</h3>
-                  <p>A <code class="el">video</code>, "Google self-driving car". with an audio description track.
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-3-captions-in-multiple-languages">
+                     <h3>Example 3: Captions in multiple languages</h3>
+                     <p>A <code class="el">video</code>, "Google self-driving car". with an audio description track.
+                     </p><pre xml:space="preserve">
 			&lt;video controls tabindex="1"&gt;
 				&lt;source src="cdgQpa1pUUE.webm" type="video/webm"&gt;
 				&lt;source src="cdgQpa1pUUE.mp4" type="video/mp4"&gt;
 				&lt;track id="audesc" src="cdgQpa1pUUE.vtt" kind="descriptions" label="English descriptions" srclang="en-us"&gt;&lt;/track&gt;
 			&lt;/video&gt;            </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML5</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML5</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For each <code class="el">video</code> element used to play a video:
-                  </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that the video contains a <code class="el">track</code> element of <code class="att">kind</code> descriptions in the language of the video.
-                     </li>
+                     <p>For each <code class="el">video</code> element used to play a video:
+                     </p>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ol>
+                        
+                        <li>Check that the video contains a <code class="el">track</code> element of <code class="att">kind</code> descriptions in the language of the video.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check #1 is true.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ul>
-                  
-               </section>
+                     <ul>
+                        
+                        <li>Check #1 is true.</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -149,7 +168,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -188,7 +207,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

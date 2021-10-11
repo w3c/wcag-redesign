@@ -55,157 +55,173 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/text-alternatives">1.1: Text Alternatives</a> and <strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a>
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/non-text-content">1.1.1: Non-text Content</a> and <strong>Sufficient</strong> to meet <a href="/understanding/link-purpose-in-context">2.4.4: Link Purpose (In Context)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/link-purpose-link-only">2.4.9: Link Purpose (Link Only)</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to describe the purpose of a link by providing
-                  descriptive text as the content of the <code class="el">a</code> element. The description lets a
-                  user distinguish this link from other links in the Web page and helps the user determine
-                  whether to follow the link. The URI of the destination is generally not sufficiently
-                  descriptive. 
-               </p>
-               <p>When an image is the only content of a link, the text alternative for the image
-                  describes the unique function of the link.
-               </p>
-               <p>When the content of a link contains both text and one or more images, if the text
-                  is
-                  sufficient to describe the purpose of the link, the images may have an empty text
-                  alternative. (See <a href="/techniques/html/H67">H67: Using null alt text and no title attribute on img elements for images that AT should
-                     ignore</a>.)
-                  When the images convey information beyond the purpose of the link, they must also
-                  have
-                  appropriate alt text. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to describe the purpose of a link by providing
+                     descriptive text as the content of the <code class="el">a</code> element. The description lets a
+                     user distinguish this link from other links in the Web page and helps the user determine
+                     whether to follow the link. The URI of the destination is generally not sufficiently
+                     descriptive. 
+                  </p>
+                  <p>When an image is the only content of a link, the text alternative for the image
+                     describes the unique function of the link.
+                  </p>
+                  <p>When the content of a link contains both text and one or more images, if the text
+                     is
+                     sufficient to describe the purpose of the link, the images may have an empty text
+                     alternative. (See <a href="/techniques/html/H67">H67: Using null alt text and no title attribute on img elements for images that AT should
+                        ignore</a>.)
+                     When the images convey information beyond the purpose of the link, they must also
+                     have
+                     appropriate alt text. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>Describing the purpose of a link in HTML in the text content of the <code class="el">a</code>
-                     element.
-                  </p><pre xml:space="preserve">&lt;a href="routes.html"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>Describing the purpose of a link in HTML in the text content of the <code class="el">a</code>
+                        element.
+                     </p><pre xml:space="preserve">&lt;a href="routes.html"&gt;
   Current routes at Boulders Climbing Gym
 &lt;/a&gt;</pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>Using the <code class="att">alt</code> attribute for the <code class="el">img</code> element to describe
-                     the purpose of a graphical link.
-                  </p><pre xml:space="preserve">&lt;a href="routes.html"&gt;
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>Using the <code class="att">alt</code> attribute for the <code class="el">img</code> element to describe
+                        the purpose of a graphical link.
+                     </p><pre xml:space="preserve">&lt;a href="routes.html"&gt;
    &lt;img src="topo.gif" alt="Current routes at Boulders Climbing Gym" /&gt; 
 &lt;/a&gt; </pre></section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>Using an empty <code class="att">alt</code> attribute when the anchor (<code class="el">a</code>) element contains text
-                     that describes the purpose of the link in addition to the <code class="el">img</code> element.
-                     Note that the link text will appear on the page next to the image.
-                  </p><pre xml:space="preserve">&lt;a href="routes.html"&gt;
+                  <section class="example" id="example-3">
+                     <h3>Example 3</h3>
+                     <p>Using an empty <code class="att">alt</code> attribute when the anchor (<code class="el">a</code>) element contains text
+                        that describes the purpose of the link in addition to the <code class="el">img</code> element.
+                        Note that the link text will appear on the page next to the image.
+                     </p><pre xml:space="preserve">&lt;a href="routes.html"&gt;
   &lt;img src="topo.gif" alt="" /&gt;
   Current routes at Boulders Climbing Gym
 &lt;/a&gt;</pre></section>
-               <section class="example" id="example-4">
-                  <h3>Example 4</h3>
-                  <p>A site allows users to provide feedback on products, when the user is logged in, by
-                     clicking on the "Feedback" link in a product detail page. Other users or the product
-                     manufacturer are able to provide a response to any feedback. The feedback link displays
-                     an icon before the "Feedback" text when a response to the user's feedback is available.
-                     The help information describes this icon as a talking bubble containing quotation
-                     marks and includes the icon itself as an example. The icon's text alternative in the
-                     help text is "Response received icon". The same text alternative is used in the product
-                     detail pages (when a response is available) to allow identification of this icon through
-                     multiple modalities.
-                  </p><pre xml:space="preserve">&lt;a href="prod_123_feedback.htm"&gt;Feedback 
+                  <section class="example" id="example-4">
+                     <h3>Example 4</h3>
+                     <p>A site allows users to provide feedback on products, when the user is logged in, by
+                        clicking on the "Feedback" link in a product detail page. Other users or the product
+                        manufacturer are able to provide a response to any feedback. The feedback link displays
+                        an icon before the "Feedback" text when a response to the user's feedback is available.
+                        The help information describes this icon as a talking bubble containing quotation
+                        marks and includes the icon itself as an example. The icon's text alternative in the
+                        help text is "Response received icon". The same text alternative is used in the product
+                        detail pages (when a response is available) to allow identification of this icon through
+                        multiple modalities.
+                     </p><pre xml:space="preserve">&lt;a href="prod_123_feedback.htm"&gt;Feedback 
          &lt;img src="response.gif" width="15" height="15" alt="Response received icon" /&gt;&lt;/a&gt;</pre></section>
-               <section class="example" id="example-5">
-                  <h3>Example 5</h3>
-                  <p>A link contains text and an icon, and the icon provides additional information about
-                     the target. 
-                  </p><pre xml:space="preserve">&lt;a href="WMFP.pdf"&gt;
+                  <section class="example" id="example-5">
+                     <h3>Example 5</h3>
+                     <p>A link contains text and an icon, and the icon provides additional information about
+                        the target. 
+                     </p><pre xml:space="preserve">&lt;a href="WMFP.pdf"&gt;
 Woodend Music Festival Program
 &lt;img src="pdficon.gif" alt="PDF format"/&gt;
 &lt;/a&gt;</pre></section>
-               <section class="example" id="example-6">
-                  <h3>Example 6</h3>
-                  <p>The “MyCorp” company’s annual report is made available on the corporate
-                     				website as a PDF file, and the annual corporate budget is made available as an
-                     				Excel file on the web site.
-                  </p>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                     <div>
-                        
-                        <p>Many users prefer to know the file type when opening a file that results in opening
-                           a new application to view the file, so it is often regarded as useful to include this
-                           additional information. However, this is not required for compliance with this success
-                           criterion.
-                        </p>
-                        
-                     </div>
-                  </div><pre xml:space="preserve">&lt;p&gt;
+                  <section class="example" id="example-6">
+                     <h3>Example 6</h3>
+                     <p>The “MyCorp” company’s annual report is made available on the corporate
+                        				website as a PDF file, and the annual corporate budget is made available as an
+                        				Excel file on the web site.
+                     </p>
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <div>
+                           
+                           <p>Many users prefer to know the file type when opening a file that results in opening
+                              a new application to view the file, so it is often regarded as useful to include this
+                              additional information. However, this is not required for compliance with this success
+                              criterion.
+                           </p>
+                           
+                        </div>
+                     </div><pre xml:space="preserve">&lt;p&gt;
 &lt;a href=”2009mycorp_report.pdf”&gt;MyCorp 2009 Annual Report (pdf)&lt;/a&gt;&lt;br /&gt;
 &lt;a href=”2009mycorp_budget.xls”&gt;MyCorp 2009 Annual Budget (Excel)&lt;/a&gt;
 &lt;/p&gt;</pre></section>
-               <section class="example" id="example-7">
-                  <h3>Example 7</h3>
-                  <p>Using a link to wrap block level elements in HTML5.</p><pre xml:space="preserve">&lt;article&gt;
+                  <section class="example" id="example-7">
+                     <h3>Example 7</h3>
+                     <p>Using a link to wrap block level elements in HTML5.</p><pre xml:space="preserve">&lt;article&gt;
 &lt;a href="news.html"&gt;
 &lt;h3&gt;Budget Debate Continues in Parliament&lt;/h3&gt;
 &lt;p class="subhead"&gt;&lt;img class="alertimg" src="alerticon.png" alt="Breaking News" height="30" width="30"&gt;Members of Parliament continued vigorous debate on three challenging issues surrounding the upcoming year's budget.&lt;/p&gt;
 &lt;p&gt;Read more&lt;/p&gt;
 &lt;/a&gt;
 &lt;/article&gt;</pre><p class="working-example">This is shown in the <a href="../../working-examples/link-wraps-block/">working example of using a link to wrap block level elements</a>.
-                     
-                  </p>
-               </section>
+                        
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML documents that contain links, (&lt;a
-                  href&gt; elements)
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML documents that contain links, (&lt;a
+                     href&gt; elements)
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For each link in the content that uses this technique:</p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that text or a text alternative for non-text content is included in the
-                        <code class="el">a</code> element
-                     </li>
+                     <p>For each link in the content that uses this technique:</p>
                      
-                     <li>If an <code class="el">img</code> element is the only content of the <code class="el">a</code> element,
-                        check that its text alternative describes the purpose of the link
-                     </li>
+                     <ol>
+                        
+                        <li>Check that text or a text alternative for non-text content is included in the
+                           <code class="el">a</code> element
+                        </li>
+                        
+                        <li>If an <code class="el">img</code> element is the only content of the <code class="el">a</code> element,
+                           check that its text alternative describes the purpose of the link
+                        </li>
+                        
+                        <li>If the <code class="el">a</code> element contains one or more <code class="el">img</code> element(s)
+                           and the text alternative of the <code class="el">img</code> element(s) is empty, check that
+                           the text of the link describes the purpose of the link 
+                        </li>
+                        
+                        <li>If the <code class="el">a</code> element only contains text, check that the text describes
+                           the purpose of the link
+                        </li>
+                        
+                     </ol>
                      
-                     <li>If the <code class="el">a</code> element contains one or more <code class="el">img</code> element(s)
-                        and the text alternative of the <code class="el">img</code> element(s) is empty, check that
-                        the text of the link describes the purpose of the link 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>If the <code class="el">a</code> element only contains text, check that the text describes
-                        the purpose of the link
-                     </li>
+                     <ul>
+                        
+                        <li>The above checks are true.</li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>The above checks are true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -213,7 +229,7 @@ Woodend Music Festival Program
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -246,7 +262,7 @@ Woodend Music Festival Program
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

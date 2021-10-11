@@ -53,82 +53,98 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/text-alternatives">1.1: Text Alternatives</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/non-text-content">1.1.1: Non-text Content</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide descriptions of images when a short
-                  text alternative does not adequately convey the function or information provided in
-                  the object. 
-                  
-               </p>
-               <p>A feature of WAI-ARIA is the ability to associate descriptive text with a section,
-                  drawing, form element, picture, and so on using the <code class="prop">aria-describedby</code> property. This is similar to the <code class="att">longdesc</code> attribute in that both are useful for providing additional information to help users
-                  understand complex images. Like <code class="att">longdesc</code>, descriptive text provided using <code class="att">aria-describedby</code> is separate from the short name provided using the <code class="att">alt</code> attribute in HTML. Unlike <code class="att">longdesc</code>, <code class="att">aria-describedby</code> cannot reference descriptions outside of the page containing the image. An advantage
-                  of providing long descriptions using content from the same page as the image is that
-                  the alternative is available to all, including sighted people who do not have assistive
-                  technology. It is worth noting that as of the time of writing (October 2013) some
-                  assistive technologies read <code class="att">aria-describedby</code> content immediately after an image's alt attribute information without user activation
-                  - whereas most implementations of <code class="att">longdesc</code> require the user to take explicit action to read the additional description.
-                  
-               </p>
-               <p>Like <code class="att">aria-labelledby</code>, <code class="att">aria-describedby</code> can accept multiple ids to point to other regions of the page using a space separated
-                  list. It is also limited to ids for defining these sets.
-                  
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide descriptions of images when a short
+                     text alternative does not adequately convey the function or information provided in
+                     the object. 
+                     
+                  </p>
+                  <p>A feature of WAI-ARIA is the ability to associate descriptive text with a section,
+                     drawing, form element, picture, and so on using the <code class="prop">aria-describedby</code> property. This is similar to the <code class="att">longdesc</code> attribute in that both are useful for providing additional information to help users
+                     understand complex images. Like <code class="att">longdesc</code>, descriptive text provided using <code class="att">aria-describedby</code> is separate from the short name provided using the <code class="att">alt</code> attribute in HTML. Unlike <code class="att">longdesc</code>, <code class="att">aria-describedby</code> cannot reference descriptions outside of the page containing the image. An advantage
+                     of providing long descriptions using content from the same page as the image is that
+                     the alternative is available to all, including sighted people who do not have assistive
+                     technology. It is worth noting that as of the time of writing (October 2013) some
+                     assistive technologies read <code class="att">aria-describedby</code> content immediately after an image's alt attribute information without user activation
+                     - whereas most implementations of <code class="att">longdesc</code> require the user to take explicit action to read the additional description.
+                     
+                  </p>
+                  <p>Like <code class="att">aria-labelledby</code>, <code class="att">aria-describedby</code> can accept multiple ids to point to other regions of the page using a space separated
+                     list. It is also limited to ids for defining these sets.
+                     
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-describing-an-image">
-                  <h3>Example 1: Describing an image</h3>
-                  <p>The following example shows how <code class="att">aria-describedby</code> can be applied to an image to provide a long description, where that text description
-                     is on the same page as the image. 
-                     
-                  </p><pre xml:space="preserve">&lt;img src="ladymacbeth.jpg" alt="Lady MacBeth" aria-describedby="p1"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-describing-an-image">
+                     <h3>Example 1: Describing an image</h3>
+                     <p>The following example shows how <code class="att">aria-describedby</code> can be applied to an image to provide a long description, where that text description
+                        is on the same page as the image. 
+                        
+                     </p><pre xml:space="preserve">&lt;img src="ladymacbeth.jpg" alt="Lady MacBeth" aria-describedby="p1"&gt;
 &lt;p id="p1"&gt;This painting dates back to 1730 and is oil on canvas. It was created by 
 Jean-Guy Millome, and represents ...&lt;/p&gt;</pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Examine each image element where a <code class="att">aria-describedby</code> attribute is present.
+                     <ol>
                         
-                     </li>
-                     
-                     <li>Examine whether the <code class="att">aria-describedby</code> attribute  programatically associates an element with its text description, via the
-                        <code class="att">id</code> attribute on the element where the text to be used as the description is found. 
+                        <li>Examine each image element where a <code class="att">aria-describedby</code> attribute is present.
+                           
+                        </li>
                         
-                     </li>
-                     
-                     <li>Examine whether the combined text equivalent and associated text description accurately
-                        describe or provide the equivalent purpose to the object.
+                        <li>Examine whether the <code class="att">aria-describedby</code> attribute  programatically associates an element with its text description, via the
+                           <code class="att">id</code> attribute on the element where the text to be used as the description is found. 
+                           
+                        </li>
                         
-                     </li>
+                        <li>Examine whether the combined text equivalent and associated text description accurately
+                           describe or provide the equivalent purpose to the object.
+                           
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>#1, #2, and #3 are true.</li>
+                     <ul>
+                        
+                        <li>#1, #2, and #3 are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -136,7 +152,7 @@ Jean-Guy Millome, and represents ...&lt;/p&gt;</pre></section>
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -174,7 +190,7 @@ Jean-Guy Millome, and represents ...&lt;/p&gt;</pre></section>
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

@@ -56,124 +56,140 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/text-alternatives">1.1: Text Alternatives</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/non-text-content">1.1.1: Non-text Content</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide a way to link to remote long
-                  descriptions in technologies that do not have a long description feature
-                  built directly into them (e.g., longdesc) or where the feature is known to
-                  not be supported.
-               </p>
-               <p>With this technique, the long description is provided in another location
-                  than the non-text content. This could be at another location within the same
-                  URI or at another URI. A link to that long description is provided that is
-                  immediately adjacent to the non-text content. The link can be immediately
-                  before or after the non-text content. If the description is located along
-                  with other text then put "End of description" at the end so that they know
-                  when to stop reading and return to the main content. If a "Back" button will
-                  not take the person back to the point from which they jumped, then a link
-                  back to the non-text content location is provided.
-               </p>
-               <p>This technique was commonly used in HTML before 'longdesc' was added to the
-                  specification. In HTML it was called a D-Link because it was usually
-                  implemented by putting a D next to images and using the D as a link to the
-                  long description. This technique is not technology specific and can be used
-                  in any technology that supports links.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide a way to link to remote long
+                     descriptions in technologies that do not have a long description feature
+                     built directly into them (e.g., longdesc) or where the feature is known to
+                     not be supported.
+                  </p>
+                  <p>With this technique, the long description is provided in another location
+                     than the non-text content. This could be at another location within the same
+                     URI or at another URI. A link to that long description is provided that is
+                     immediately adjacent to the non-text content. The link can be immediately
+                     before or after the non-text content. If the description is located along
+                     with other text then put "End of description" at the end so that they know
+                     when to stop reading and return to the main content. If a "Back" button will
+                     not take the person back to the point from which they jumped, then a link
+                     back to the non-text content location is provided.
+                  </p>
+                  <p>This technique was commonly used in HTML before 'longdesc' was added to the
+                     specification. In HTML it was called a D-Link because it was usually
+                     implemented by putting a D next to images and using the D as a link to the
+                     long description. This technique is not technology specific and can be used
+                     in any technology that supports links.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-bar-chart">
-                  <h3>Example 1: Bar chart</h3>
-                  <p>There is a bar chart on a Web page showing the sales for the top
-                     three salespeople.
-                  </p>
-                  <p>The short text alternative says "October sales chart for top three
-                     salespeople."
-                  </p>
-                  <p>Immediately after the non-text content is a small image denoting a
-                     long description. The alternate text for the image is "Long
-                     description of chart". The image links to the bottom of the page
-                     where there is a section titled "Description of charts on this
-                     page". The link points to this specific description: "Sales for
-                     October show Mary leading with 400 units. Mike follows closely with
-                     389. Chris rounds out our top 3 with sales of 350. [end of
-                     description]"
-                  </p>
-               </section>
-               <section class="example" id="example-2-bar-chart---in-non-html-technology-where-user-agent-&#34;back&#34;&#xA;--------------is-not-supported-for-security-reasons.">
-                  <h3>Example 2: Bar chart - in non-HTML technology where user agent "back"
-                     is not supported for security reasons.
-                  </h3>
-                  <p>There is a bar chart on a Web page showing the sales for the top
-                     three salespeople.
-                  </p>
-                  <p>The short text alternative says "October sales chart for top three
-                     salespeople."
-                  </p>
-                  <p>Immediately after the non-text content is a small image denoting the
-                     long description. The alternate text for the image is "Long
-                     description of chart". The image links to another page titled
-                     "Description of charts in October Sales Report". The description
-                     link points to this specific description: "Sales for October show
-                     Mary leading with 400 units. Mike follows closely with 389. Chris
-                     rounds out our top 3 with sales of 350. End of description.
-                     &lt;link&gt;Back to Sales Chart&lt;/link&gt;"
-                  </p>
-               </section>
-               <section class="example" id="example-3-caption-used-as-link">
-                  <h3>Example 3: Caption used as link</h3>
-                  <p>There is a chart. The figure caption immediately below the chart
-                     serves as a link to the long description. The Title attribute of the
-                     link makes it clear that this is a link to a long description.
-                  </p>
-               </section>
-               <section class="example" id="example-4-transcript-of-an-audio-only-file">
-                  <h3>Example 4: Transcript of an audio-only file</h3>
-                  <p>There is a recording of a speech by Martin Luther King. Links to the
-                     audio file and the transcript appear side by side.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-bar-chart">
+                     <h3>Example 1: Bar chart</h3>
+                     <p>There is a bar chart on a Web page showing the sales for the top
+                        three salespeople.
+                     </p>
+                     <p>The short text alternative says "October sales chart for top three
+                        salespeople."
+                     </p>
+                     <p>Immediately after the non-text content is a small image denoting a
+                        long description. The alternate text for the image is "Long
+                        description of chart". The image links to the bottom of the page
+                        where there is a section titled "Description of charts on this
+                        page". The link points to this specific description: "Sales for
+                        October show Mary leading with 400 units. Mike follows closely with
+                        389. Chris rounds out our top 3 with sales of 350. [end of
+                        description]"
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-bar-chart---in-non-html-technology-where-user-agent-&#34;back&#34;&#xA;--------------is-not-supported-for-security-reasons.">
+                     <h3>Example 2: Bar chart - in non-HTML technology where user agent "back"
+                        is not supported for security reasons.
+                     </h3>
+                     <p>There is a bar chart on a Web page showing the sales for the top
+                        three salespeople.
+                     </p>
+                     <p>The short text alternative says "October sales chart for top three
+                        salespeople."
+                     </p>
+                     <p>Immediately after the non-text content is a small image denoting the
+                        long description. The alternate text for the image is "Long
+                        description of chart". The image links to another page titled
+                        "Description of charts in October Sales Report". The description
+                        link points to this specific description: "Sales for October show
+                        Mary leading with 400 units. Mike follows closely with 389. Chris
+                        rounds out our top 3 with sales of 350. End of description.
+                        &lt;link&gt;Back to Sales Chart&lt;/link&gt;"
+                     </p>
+                  </section>
+                  <section class="example" id="example-3-caption-used-as-link">
+                     <h3>Example 3: Caption used as link</h3>
+                     <p>There is a chart. The figure caption immediately below the chart
+                        serves as a link to the long description. The Title attribute of the
+                        link makes it clear that this is a link to a long description.
+                     </p>
+                  </section>
+                  <section class="example" id="example-4-transcript-of-an-audio-only-file">
+                     <h3>Example 4: Transcript of an audio-only file</h3>
+                     <p>There is a recording of a speech by Martin Luther King. Links to the
+                        audio file and the transcript appear side by side.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Applies to all technologies</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Applies to all technologies</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>check for the presence of a link immediately before or after the
-                        non-text content
-                     </li>
+                     <ol>
+                        
+                        <li>check for the presence of a link immediately before or after the
+                           non-text content
+                        </li>
+                        
+                        <li>check that the link is a valid link that points directly to the
+                           long description of this particular non-text content.
+                        </li>
+                        
+                        <li>check that the long description conveys the same information as
+                           the non-text content
+                        </li>
+                        
+                        <li>check for the availability of a link or back function to get the
+                           user back to the original location of the non-text content
+                        </li>
+                        
+                     </ol>
                      
-                     <li>check that the link is a valid link that points directly to the
-                        long description of this particular non-text content.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>check that the long description conveys the same information as
-                        the non-text content
-                     </li>
+                     <p>All 4 of the above are true</p>
                      
-                     <li>check for the availability of a link or back function to get the
-                        user back to the original location of the non-text content
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <p>All 4 of the above are true</p>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -181,7 +197,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -201,7 +217,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

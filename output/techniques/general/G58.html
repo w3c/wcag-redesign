@@ -56,35 +56,45 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/time-based-media">1.2: Time-based Media</a> when used with <a href="../general/G69">G69: Providing an alternative for time based media</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/audio-description-or-media-alternative-prerecorded">1.2.3: Audio Description or Media Alternative (Prerecorded)</a> when used with <a href="../general/G69">G69: Providing an alternative for time based media</a> and <strong>Sufficient</strong> to meet <a href="/understanding/media-alternative-prerecorded">1.2.8: Media Alternative (Prerecorded)</a> when used with <a href="../general/G69">G69: Providing an alternative for time based media</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>With this technique, a link to the collated document of captions and audio description
-                  is provided. The collated document could be at another location on the same Web page
-                  or at another URI. A link to the collated document is immediately adjacent to the
-                  non-text content. The link can be immediately before or after the synchronized media
-                  content. If the collated document is on the same Web page as other content then put
-                  "End of document" at the end so that they know when to stop reading and return to
-                  their previous place. If a Back button will not take the person back to the point
-                  from which they jumped, then a link back to the non-text content location is provided.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>With this technique, a link to the collated document of captions and audio description
+                     is provided. The collated document could be at another location on the same Web page
+                     or at another URI. A link to the collated document is immediately adjacent to the
+                     non-text content. The link can be immediately before or after the synchronized media
+                     content. If the collated document is on the same Web page as other content then put
+                     "End of document" at the end so that they know when to stop reading and return to
+                     their previous place. If a Back button will not take the person back to the point
+                     from which they jumped, then a link back to the non-text content location is provided.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-an-.mov-document-in-an-html-document">
-                  <h3>Example 1: An .MOV Document in an HTML Document</h3>
-                  <p>Code on a page called "Olympic_Sports.htm"</p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-an-.mov-document-in-an-html-document">
+                     <h3>Example 1: An .MOV Document in an HTML Document</h3>
+                     <p>Code on a page called "Olympic_Sports.htm"</p><pre xml:space="preserve">
   &lt;a name="Olympic_Wrestling"&gt;&lt;/a&gt;
   &lt;p&gt;&lt;a href="http://www.example.com/movies/olympic_wrestling.mov"&gt;Olympic Wrestling movie&lt;/a&gt;, 
   &lt;a href="http://www.example.com/transcripts/olympic_wrestling_transcript.htm"&gt;Olympic 
   Wrestling collated Transcript&lt;/a&gt;&lt;/p&gt;
             </pre></section>
-               <section class="example" id="example-2-the-link-back-to-the-.mov-document-in-an-html-document">
-                  <h3>Example 2: The link back to the .MOV Document in an HTML Document</h3>
-                  <p>Code on the page olympic_wrestling_transcript.htm</p><pre xml:space="preserve">
+                  <section class="example" id="example-2-the-link-back-to-the-.mov-document-in-an-html-document">
+                     <h3>Example 2: The link back to the .MOV Document in an HTML Document</h3>
+                     <p>Code on the page olympic_wrestling_transcript.htm</p><pre xml:space="preserve">
   &lt;p&gt;Sports announcer 1: This is a great battle tonight between England's "Will Johnson" and 
   "Theodore Derringo" from Argentina&lt;/p&gt;
   &lt;p&gt;Scenery: There is a mat set out in the middle of the stadium with 500 people in the 
@@ -96,43 +106,52 @@
   Will Johnson is the new Gold Medalist. 
   &lt;a href="../movies/Olympic_Sports.htm#Olympic_Wrestling&gt;Return to Movie page&lt;/a&gt; &lt;/p&gt;
             </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>This technique is not technology specific and can be used in any technology that supports
-                  links.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>This technique is not technology specific and can be used in any technology that supports
+                     links.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check for the presence of a link immediately before or after the non-text content.</li>
+                     <ol>
+                        
+                        <li>Check for the presence of a link immediately before or after the non-text content.</li>
+                        
+                        <li>Check that it is a valid link that points directly to the collated document of this
+                           particular synchronized media.
+                        </li>
+                        
+                        <li>Check for the availability of a link or back function to get the user back to the
+                           original location of the synchronized media content.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check that it is a valid link that points directly to the collated document of this
-                        particular synchronized media.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check for the availability of a link or back function to get the user back to the
-                        original location of the synchronized media content.
-                     </li>
+                     <ul>
+                        
+                        <li>Items #1 through 3 are all true.</li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Items #1 through 3 are all true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -140,7 +159,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -160,7 +179,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

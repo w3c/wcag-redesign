@@ -8,7 +8,7 @@
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Understanding</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -83,116 +83,132 @@
                
             </section>
             <section id="intent">
-               <h2>Intent</h2>
-               <p>The intent of this Success Criterion is to ensure that users can successfully navigate
-                  multi-step processes. It reduces cognitive effort where  information is asked for
-                  more than once during steps in a process. It also reduces the need to recall information
-                  provided in a previous  step.
-               </p>
-               <p>Information that is required to be remembered for input can pose a significant barrier
-                  to users with cognitive or memory difficulties. All users experience a natural gradual
-                  mental fatigue as they proceed through steps in a process. This fatigue is accelerated
-                  by the stress of recalling information from short-term working memory. Users with
-                  learning, and cognitive disabilities are highly susceptible to mental fatigue.
-               </p>
-               <p>Requiring people to recall information already entered in the previous steps can cause
-                  them to give up or enter incorrect information. The autocomplete feature of browsers
-                  is not considered sufficient because it is the content (the web site) that needs to
-                  provide the stored information for a redundant entry, or avoid asking for the same
-                  information again.
-               </p>
-               <p>This Success Criterion does not add a requirement to remember information between
-                  sessions. A <a href="#dfn-process">process</a> is defined on the basis of an activity and is not applicable when a user returns
-                  after closing a session or navigating away. However, a process can run across different
-                  domains, so if a check-out process includes a 3rd party payment provider, that would
-                  be in scope.
-               </p>
-               <p>This Success Criterion does not apply if data is provide by the user with a different
-                  method, such as uploading a resume in a document format.
-               </p>
-               <p>This Success Criterion does not impact <a href="accessible-authentication.html">Accessible Authentication</a>, for which allowing auto-filling of passwords is a sufficient technique. In that
-                  case the filling is performed by the user's browser. Redundant Entry is asking for
-                  the website content to make the previous entry available, but not between sessions
-                  or for essential purposes such as asking for a password.
-               </p>
-               <p>There are exceptions for:</p>
-               <ul>
-                  
-                  <li>Essential uses of input re-entry for things like memory games which would be invalidated
-                     if the previous answers were supplied.
-                  </li>
-                  
-                  <li>Security measures such as preventing a password string from being shown or copied.
-                     When creating a password, it should be a unique and complex string and therefore cannot
-                     be validated by the author. If the system requires the user to manually create a password
-                     that is not displayed, having users re-validate their new string is allowed as an
-                     exception.
-                  </li>
-                  
-                  <li>When the previously entered information is no longer valid, it can be requested that
-                     the user enter that information again.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="benefits">
-               <h2>Benefits</h2>
-               <ul>
-                  
-                  <li>Users with cognitive disabilities experience short-term, working memory difficulty.
-                     Not having to repeatedly remember particular information reduces stress and the likelihood
-                     of mistakes.
-                  </li>
-                  
-                  <li>Users who experience difficulty forming new memories, recalling information, and other
-                     functions related to cognition can complete processes without having to unnecessarily
-                     rely on their memory.
-                  </li>
-                  
-                  <li>Users with mobility impairments, for example using switch control or voice input,
-                     benefit from a reduced need for text entry.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>A form requests the user’s corporate identification number (ID) in the first step
-                     of a process to purchase a new computer. In the 3rd step the user is asked to confirm
-                     that the computer will belong to the user (rather than a colleague), and re-shows
-                     the ID. It allows the user to change the ID, but defaults to the previously entered
-                     one.
-                  </li>
-                  
-                  <li>A form on an e-commerce website allows the user to confirm that the billing address
-                     and delivery address are the same address.
-                  </li>
-                  
-                  <li>A search results page pre-fills the search input with the previously entered search
-                     term in the same process.
-                  </li>        
-                  
-               </ul>
-            </section>
-            <section id="techniques">
-               <h2>Techniques</h2>
-               <p>Each numbered item in this section represents a technique or combination of techniques
-                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                  it is not necessary to use these particular techniques. For information on using other
-                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-               </p>
-               <section id="sufficient">
-                  <h3>Sufficient Techniques</h3>
+               <details>
+                  <summary>
+                     <h2>Intent</h2>
+                  </summary>
+                  <p>The intent of this Success Criterion is to ensure that users can successfully navigate
+                     multi-step processes. It reduces cognitive effort where  information is asked for
+                     more than once during steps in a process. It also reduces the need to recall information
+                     provided in a previous  step.
+                  </p>
+                  <p>Information that is required to be remembered for input can pose a significant barrier
+                     to users with cognitive or memory difficulties. All users experience a natural gradual
+                     mental fatigue as they proceed through steps in a process. This fatigue is accelerated
+                     by the stress of recalling information from short-term working memory. Users with
+                     learning, and cognitive disabilities are highly susceptible to mental fatigue.
+                  </p>
+                  <p>Requiring people to recall information already entered in the previous steps can cause
+                     them to give up or enter incorrect information. The autocomplete feature of browsers
+                     is not considered sufficient because it is the content (the web site) that needs to
+                     provide the stored information for a redundant entry, or avoid asking for the same
+                     information again.
+                  </p>
+                  <p>This Success Criterion does not add a requirement to remember information between
+                     sessions. A <a href="#dfn-process">process</a> is defined on the basis of an activity and is not applicable when a user returns
+                     after closing a session or navigating away. However, a process can run across different
+                     domains, so if a check-out process includes a 3rd party payment provider, that would
+                     be in scope.
+                  </p>
+                  <p>This Success Criterion does not apply if data is provide by the user with a different
+                     method, such as uploading a resume in a document format.
+                  </p>
+                  <p>This Success Criterion does not impact <a href="accessible-authentication.html">Accessible Authentication</a>, for which allowing auto-filling of passwords is a sufficient technique. In that
+                     case the filling is performed by the user's browser. Redundant Entry is asking for
+                     the website content to make the previous entry available, but not between sessions
+                     or for essential purposes such as asking for a password.
+                  </p>
+                  <p>There are exceptions for:</p>
                   <ul>
                      
-                     <li><a href="/techniques/general/G221">G221: Provide data from a previous step in a process</a></li>
+                     <li>Essential uses of input re-entry for things like memory games which would be invalidated
+                        if the previous answers were supplied.
+                     </li>
                      
-                     <li>@@@ Not requesting the same information twice in multiple steps.</li>
+                     <li>Security measures such as preventing a password string from being shown or copied.
+                        When creating a password, it should be a unique and complex string and therefore cannot
+                        be validated by the author. If the system requires the user to manually create a password
+                        that is not displayed, having users re-validate their new string is allowed as an
+                        exception.
+                     </li>
+                     
+                     <li>When the previously entered information is no longer valid, it can be requested that
+                        the user enter that information again.
+                     </li>
                      
                   </ul>
-               </section>
+               </details>
+            </section>
+            <section id="benefits">
+               <details>
+                  <summary>
+                     <h2>Benefits</h2>
+                  </summary>
+                  <ul>
+                     
+                     <li>Users with cognitive disabilities experience short-term, working memory difficulty.
+                        Not having to repeatedly remember particular information reduces stress and the likelihood
+                        of mistakes.
+                     </li>
+                     
+                     <li>Users who experience difficulty forming new memories, recalling information, and other
+                        functions related to cognition can complete processes without having to unnecessarily
+                        rely on their memory.
+                     </li>
+                     
+                     <li>Users with mobility impairments, for example using switch control or voice input,
+                        benefit from a reduced need for text entry.
+                     </li>
+                     
+                  </ul>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <ul>
+                     
+                     <li>A form requests the user’s corporate identification number (ID) in the first step
+                        of a process to purchase a new computer. In the 3rd step the user is asked to confirm
+                        that the computer will belong to the user (rather than a colleague), and re-shows
+                        the ID. It allows the user to change the ID, but defaults to the previously entered
+                        one.
+                     </li>
+                     
+                     <li>A form on an e-commerce website allows the user to confirm that the billing address
+                        and delivery address are the same address.
+                     </li>
+                     
+                     <li>A search results page pre-fills the search input with the previously entered search
+                        term in the same process.
+                     </li>        
+                     
+                  </ul>
+               </details>
+            </section>
+            <section id="techniques">
+               <details>
+                  <summary>
+                     <h2>Techniques</h2>
+                  </summary>
+                  <p>Each numbered item in this section represents a technique or combination of techniques
+                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                     it is not necessary to use these particular techniques. For information on using other
+                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+                  </p>
+                  <section id="sufficient">
+                     <h3>Sufficient Techniques</h3>
+                     <ul>
+                        
+                        <li><a href="/techniques/general/G221">G221: Provide data from a previous step in a process</a></li>
+                        
+                        <li>@@@ Not requesting the same information twice in multiple steps.</li>
+                        
+                     </ul>
+                  </section>
+               </details>
             </section>
             <nav class="pager" aria-label="Previous/Next Page">
                <ul id="navigation">
@@ -240,7 +256,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

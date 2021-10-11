@@ -53,71 +53,78 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a>, if combined with <a href="../html/H49">H49: Using semantic markup to mark emphasized or special text</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a>, if combined with <a href="../html/H49">H49: Using semantic markup to mark emphasized or special text</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to mark up the structure of the Web content using
-                  the appropriate semantic elements. In other words, the elements are used according
-                  to their meaning, not because of the way they appear visually.
-               </p>
-               <p>Using the appropriate semantic elements will make sure the structure is available
-                  to the user agent. This involves explicitly indicating the role that different units
-                  have in understanding the meaning of the content. The nature of a piece of content
-                  as a paragraph, header, emphasized text, table, etc. can all be indicated in this
-                  way. In some cases, the relationships between units of content should also be indicated,
-                  such as between headings and subheadings, or amongst the cells of a table. The user
-                  agent can then make the structure perceivable to the user, for example using a different
-                  visual presentation for different types of structures or by using a different voice
-                  or pitch in an auditory presentation.
-               </p>
-               <p>In HTML, for example, phrase-level elements such as
-                  
-                  em
-                  ,
-                  
-                  abbr
-                  , and
-                  
-                  cite
-                  
-                  add semantic information within sentences, marking text for emphasis and identifying
-                  abbreviations and citations, respectively. MathML, a markup language designed to maintain
-                  important distinctions between structure and presentation in mathematics, includes
-                  special "presentation" markup for the complex notations used to represent mathematical
-                  ideas as well as "content" (semantic) markup for the mathematical ideas themselves.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to mark up the structure of the Web content using
+                     the appropriate semantic elements. In other words, the elements are used according
+                     to their meaning, not because of the way they appear visually.
+                  </p>
+                  <p>Using the appropriate semantic elements will make sure the structure is available
+                     to the user agent. This involves explicitly indicating the role that different units
+                     have in understanding the meaning of the content. The nature of a piece of content
+                     as a paragraph, header, emphasized text, table, etc. can all be indicated in this
+                     way. In some cases, the relationships between units of content should also be indicated,
+                     such as between headings and subheadings, or amongst the cells of a table. The user
+                     agent can then make the structure perceivable to the user, for example using a different
+                     visual presentation for different types of structures or by using a different voice
+                     or pitch in an auditory presentation.
+                  </p>
+                  <p>In HTML, for example, phrase-level elements such as
+                     
+                     em
+                     ,
+                     
+                     abbr
+                     , and
+                     
+                     cite
+                     
+                     add semantic information within sentences, marking text for emphasis and identifying
+                     abbreviations and citations, respectively. MathML, a markup language designed to maintain
+                     important distinctions between structure and presentation in mathematics, includes
+                     special "presentation" markup for the complex notations used to represent mathematical
+                     ideas as well as "content" (semantic) markup for the mathematical ideas themselves.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>A paragraph contains a hyperlink to another page. The hyperlink is marked up using
-                     the
-                     
-                     a
-                     
-                     element.
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>A paragraph contains a hyperlink to another page. The hyperlink is marked up using
+                        the
+                        
+                        a
+                        
+                        element.
+                     </p><pre xml:space="preserve">
               &lt;p&gt;Do you want to try our new tool yourself? A free 
                 demonstration version is available in our 
                 &lt;a href="download.html"&gt;download section&lt;/a&gt;&lt;/p&gt;
             </pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>A page about the history of marriage uses a quotation from Jane Austen's novel, Pride
-                     and Prejudice, as an example. The reference to the book is marked up using the
-                     
-                     cite
-                     
-                     element and the quotation itself is marked up using the
-                     
-                     blockquote
-                     
-                     element.
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>A page about the history of marriage uses a quotation from Jane Austen's novel, Pride
+                        and Prejudice, as an example. The reference to the book is marked up using the
+                        
+                        cite
+                        
+                        element and the quotation itself is marked up using the
+                        
+                        blockquote
+                        
+                        element.
+                     </p><pre xml:space="preserve">
               &lt;p&gt;Marriage was considered a logical step for a bachelor, 
                 as can be seen in the first chapter of the novel 
                 &lt;cite&gt;Pride and Prejudice&lt;/cite&gt;:&lt;/p&gt;
@@ -130,40 +137,40 @@
                 the rightful property of some one or other of their daughters.&lt;/p&gt;
                 &lt;/blockquote&gt;
             </pre></section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>A car manual explains how to start the engine. The instructions include a warning
-                     to make sure the gear is in neutral. The author feels the warning is so important
-                     that it should be emphasized so the warning is marked up using the
-                     
-                     strong
-                     
-                     element.
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-3">
+                     <h3>Example 3</h3>
+                     <p>A car manual explains how to start the engine. The instructions include a warning
+                        to make sure the gear is in neutral. The author feels the warning is so important
+                        that it should be emphasized so the warning is marked up using the
+                        
+                        strong
+                        
+                        element.
+                     </p><pre xml:space="preserve">
               &lt;h1&gt;How to start the engine&lt;/h1&gt;
                 &lt;p&gt;Before starting the engine, &lt;strong&gt;make sure the gear 
                 is in neutral&lt;/strong&gt;. Next, turn the key in the ignition. 
                 The engine should start.&lt;/p&gt;
             </pre></section>
-               <section class="example" id="example-4">
-                  <h3>Example 4</h3>
-                  <p>This example shows how to use the
-                     
-                     em
-                     
-                     and
-                     
-                     strong
-                     
-                     elements to emphasize text.
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-4">
+                     <h3>Example 4</h3>
+                     <p>This example shows how to use the
+                        
+                        em
+                        
+                        and
+                        
+                        strong
+                        
+                        elements to emphasize text.
+                     </p><pre xml:space="preserve">
               &lt;p&gt;What she &lt;em&gt;really&lt;/em&gt; meant to say was, 
                 "This is not ok, it is &lt;strong&gt;excellent&lt;/strong&gt;!"&lt;/p&gt;
             </pre></section>
-               <section class="example" id="example-5-using-highlighting-and-background-color-to-visually-and-semantically-identify-important-information.">
-                  <h3>Example 5: Using highlighting and background color to visually and semantically identify
-                     important information.
-                  </h3><pre xml:space="preserve">
+                  <section class="example" id="example-5-using-highlighting-and-background-color-to-visually-and-semantically-identify-important-information.">
+                     <h3>Example 5: Using highlighting and background color to visually and semantically identify
+                        important information.
+                     </h3><pre xml:space="preserve">
               &lt;style type="text/css"&gt;
                 .vocab {
                 background-color:cyan;
@@ -176,37 +183,46 @@
                 &lt;p&gt;The &lt;em class="vocab"&gt;scathing&lt;/em&gt; review of the play 
                 seemed a bit too harsh... &lt;/p&gt;
             </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Markup languages, including HTML 4.01, XHTML 1.x</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Markup languages, including HTML 4.01, XHTML 1.x</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check if there are parts of the content that have a semantic function.</li>
+                     <ol>
+                        
+                        <li>Check if there are parts of the content that have a semantic function.</li>
+                        
+                        <li>For each part that has a semantic function, if corresponding semantic markup exists
+                           in the technology, check that the content has been marked up using that semantic markup.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>For each part that has a semantic function, if corresponding semantic markup exists
-                        in the technology, check that the content has been marked up using that semantic markup.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>Check #2 is true.</li>
+                        
+                     </ul>
                      
-                     <li>Check #2 is true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -214,7 +230,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -266,7 +282,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

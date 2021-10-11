@@ -53,62 +53,69 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/text-alternatives">1.1: Text Alternatives</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/non-text-content">1.1.1: Non-text Content</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>Before graphics became widely used on the internet, ASCII characters were often arranged
-                  to form pictures or graphs. Although ASCII art is not used frequently on the Web anymore,
-                  it must be remembered that, when it is used, it is very confusing to people who are
-                  blind and accessing the internet using screen readers. If it is used it should also
-                  have a text explanation of what the picture is. It is also suggested that there be
-                  a link to skip over the ASCII art (although this is not required).
-               </p>
-               <p>Emoticons are very popular. They include ASCII characters that form facial expressions
-                  and other ways to communicate an emotion. They can be confusing for screen reader
-                  users. When possible it is better simply to use a word like "smile" instead of an
-                  emoticon. But if emoticons are used they should have a text alternative. In some contexts,
-                  blog and forum software for example, plug-ins are available that automatically convert
-                  ASCII characters used as emoticons into HTML images with text alternatives.
-               </p>
-               <p>Leetspeak uses various combinations of characters, including numerals and special
-                  characters, to replace standard characters. Leet has become a part of Internet culture
-                  and slang. Leet is frequently used to beat text and spam filters. It is often incomprehensible
-                  to blind people using screen readers, and therefore requires a text alternative in
-                  order to conform to Success Criteria 1.1.1.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>Because support for this technique is limited, it is recommended that authors provide
-                        the text alternative in text. 
-                     </p>
-                     
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>Before graphics became widely used on the internet, ASCII characters were often arranged
+                     to form pictures or graphs. Although ASCII art is not used frequently on the Web anymore,
+                     it must be remembered that, when it is used, it is very confusing to people who are
+                     blind and accessing the internet using screen readers. If it is used it should also
+                     have a text explanation of what the picture is. It is also suggested that there be
+                     a link to skip over the ASCII art (although this is not required).
+                  </p>
+                  <p>Emoticons are very popular. They include ASCII characters that form facial expressions
+                     and other ways to communicate an emotion. They can be confusing for screen reader
+                     users. When possible it is better simply to use a word like "smile" instead of an
+                     emoticon. But if emoticons are used they should have a text alternative. In some contexts,
+                     blog and forum software for example, plug-ins are available that automatically convert
+                     ASCII characters used as emoticons into HTML images with text alternatives.
+                  </p>
+                  <p>Leetspeak uses various combinations of characters, including numerals and special
+                     characters, to replace standard characters. Leet has become a part of Internet culture
+                     and slang. Leet is frequently used to beat text and spam filters. It is often incomprehensible
+                     to blind people using screen readers, and therefore requires a text alternative in
+                     order to conform to Success Criteria 1.1.1.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>Because support for this technique is limited, it is recommended that authors provide
+                           the text alternative in text. 
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The following shows three options for providing alternatives for an emoticon representing
-                     "fright," which is made out of an equal sign followed by the number eight, a hyphen
-                     and the number zero.
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The following shows three options for providing alternatives for an emoticon representing
+                        "fright," which is made out of an equal sign followed by the number eight, a hyphen
+                        and the number zero.
+                     </p><pre xml:space="preserve">
 =8-0 (fright)
 
 &lt;abbr title="fright"&gt;=8-0&lt;/abbr&gt;
 
 &lt;img src="fright.gif" alt="fright"/&gt;
              </pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>Here is ASCII art with an explanation of the picture preceding it. It includes a link
-                     to skip over the ASCII art. <a href="#H86-ex3">Skip ASCII example</a>.
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>Here is ASCII art with an explanation of the picture preceding it. It includes a link
+                        to skip over the ASCII art. <a href="#H86-ex3">Skip ASCII example</a>.
+                     </p><pre xml:space="preserve">
  Figure 1: ASCII art picture of a butterfly. 
  &lt;a href="#skipbutterfly"&gt;Skip ASCII image&lt;/a&gt;
                                  
@@ -158,43 +165,52 @@ LLLLLLLLLLLLLLLL_  __L       _L  LLLLLLLL      LLL_ LLLLLLLLLLLLLLLLLLLLL
                                LLLLLLLLLLLLL
                                  ~~~~~~~~~
 &lt;a name="skipbutterfly"&gt;&lt;/a&gt;            </pre></section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>The following is Leetspeak for "Austin Rocks". </p><pre xml:space="preserve">
+                  <section class="example" id="example-3">
+                     <h3>Example 3</h3>
+                     <p>The following is Leetspeak for "Austin Rocks". </p><pre xml:space="preserve">
 &lt;abbr title="Austin Rocks"&gt;Au5t1N r0xx0rz&lt;/abbr&gt;             </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Open the page in a common browser.</li>
+                     <ol>
+                        
+                        <li>Open the page in a common browser.</li>
+                        
+                        <li>Check to see that the content contains ASCII art, emoticons and/or leetspeak.</li>
+                        
+                        <li>Check that there is a text alternative immediately before or after all ASCII art,
+                           emoticons and/or Leetspeak.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check to see that the content contains ASCII art, emoticons and/or leetspeak.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that there is a text alternative immediately before or after all ASCII art,
-                        emoticons and/or Leetspeak.
-                     </li>
+                     <ul>
+                        
+                        <li>Test procedure #3 is true.</li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Test procedure #3 is true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -202,7 +218,7 @@ LLLLLLLLLLLLLLLL_  __L       _L  LLLLLLLL      LLL_ LLLLLLLLLLLLLLLLLLLLL
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -222,7 +238,7 @@ LLLLLLLLLLLLLLLL_  __L       _L  LLLLLLLL      LLL_ LLLLLLLLLLLLLLLLLLLLL
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

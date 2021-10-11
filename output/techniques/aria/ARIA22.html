@@ -55,48 +55,55 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/compatible">4.1: Compatible</a>, using a more specific technique. and <strong>Sufficient</strong> to meet <a href="/understanding/compatible">4.1: Compatible</a>, if combined with <a href="../general/G193">G193: Providing help by an assistant in the Web page</a>
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/status-messages">4.1.3: Status Messages</a>, using a more specific technique. and <strong>Sufficient</strong> to meet <a href="/understanding/status-messages">4.1.3: Status Messages</a>, if combined with <a href="../general/G193">G193: Providing help by an assistant in the Web page</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>
-                  				This technique uses the <code>status</code> role from the ARIA specification to notify Assistive Technologies (AT) when content
-                  has been updated with information about the user's or application's status. This is
-                  done by adding <code>role="status"</code> to the element that contains the <a href="https://www.w3.org/TR/WCAG21/#dfn-status-messages">status message</a>. The aria live region role of <code>status</code> has an implicit <code>aria-live</code> value of <code>polite</code>, which allows a user to be notified via AT (such as a screen reader) when status
-                  messages are added. The role of <code>status</code> also has a default <code>aria-atomic</code> value of <code>true</code>, so that updates to the container marked with a role of <code>status</code> will result in the AT presenting the entire contents of the container to the user,
-                  including any author-defined labels (or additional nested elements). Such additional
-                  context can be critical where the status message text alone will not provide an equivalent
-                  to the visual experience. The content of the aria-live container is automatically
-                  read by the AT, without the AT having to focus on the place where the text is displayed.
-                  See <a href="https://www.w3.org/TR/wai-aria-1.1/#status">WAI-ARIA 1.1 status (role)</a> for more details.
-                  
-                  
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>
+                     				This technique uses the <code>status</code> role from the ARIA specification to notify Assistive Technologies (AT) when content
+                     has been updated with information about the user's or application's status. This is
+                     done by adding <code>role="status"</code> to the element that contains the <a href="https://www.w3.org/TR/WCAG21/#dfn-status-messages">status message</a>. The aria live region role of <code>status</code> has an implicit <code>aria-live</code> value of <code>polite</code>, which allows a user to be notified via AT (such as a screen reader) when status
+                     messages are added. The role of <code>status</code> also has a default <code>aria-atomic</code> value of <code>true</code>, so that updates to the container marked with a role of <code>status</code> will result in the AT presenting the entire contents of the container to the user,
+                     including any author-defined labels (or additional nested elements). Such additional
+                     context can be critical where the status message text alone will not provide an equivalent
+                     to the visual experience. The content of the aria-live container is automatically
+                     read by the AT, without the AT having to focus on the place where the text is displayed.
+                     See <a href="https://www.w3.org/TR/wai-aria-1.1/#status">WAI-ARIA 1.1 status (role)</a> for more details.
+                     
+                     
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-including-a-search-results-message">
-                  <h3>Example 1: Including a search results message</h3>
-                  <p>After a user presses a Search button, the page content is updated to include the results
-                     of the search, which are displayed in a section below the Search button. The change
-                     to content also includes the message "5 results returned" near the top of this new
-                     content. This text is given an appropriate role for a status message. A screen reader
-                     will announce "Five results returned".
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-including-a-search-results-message">
+                     <h3>Example 1: Including a search results message</h3>
+                     <p>After a user presses a Search button, the page content is updated to include the results
+                        of the search, which are displayed in a section below the Search button. The change
+                        to content also includes the message "5 results returned" near the top of this new
+                        content. This text is given an appropriate role for a status message. A screen reader
+                        will announce "Five results returned".
+                     </p><pre xml:space="preserve">
 <code>
 	&lt;div role="status"&gt;5 results returned.&lt;/div&gt;
 </code>
 					</pre><p class="working-example"><a href="../../working-examples/aria-role-status-searchresults/">Working example: role=status on search results</a></p>
-               </section>
-               <section class="example" id="example-2-updating-the-shopping-cart-status">
-                  <h3>Example 2: Updating the shopping cart status</h3>
-                  <p>After a user presses an Add to Shopping Cart button, content near the Shopping Cart
-                     icon updates to read "1 items". The container for this text (in this case a <code>&lt;p&gt;</code>) is marked with the role of <code>status</code>. Because it adds visual context, the shopping cart image -- with succinct and accurate
-                     ALT text -- is also placed in the container. Due to the default <code>aria-atomic</code> value, a screen reader will announce "Shopping cart, six items".
-                  </p><pre xml:space="preserve">
+                  </section>
+                  <section class="example" id="example-2-updating-the-shopping-cart-status">
+                     <h3>Example 2: Updating the shopping cart status</h3>
+                     <p>After a user presses an Add to Shopping Cart button, content near the Shopping Cart
+                        icon updates to read "1 items". The container for this text (in this case a <code>&lt;p&gt;</code>) is marked with the role of <code>status</code>. Because it adds visual context, the shopping cart image -- with succinct and accurate
+                        ALT text -- is also placed in the container. Due to the default <code>aria-atomic</code> value, a screen reader will announce "Shopping cart, six items".
+                     </p><pre xml:space="preserve">
 <code>
 	&lt;p role="status" &gt;
 		&lt;img src="shopping-cart.png" alt="Shopping Cart"&gt;
@@ -105,41 +112,50 @@
 	&lt;/p&gt;
 </code>
 </pre><p class="working-example"><a href="../../working-examples/aria-role-status-shoppingcart/">Working example: role=status on a shopping cart</a></p>
-               </section>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Content using <a href="https://www.w3.org/TR/wai-aria/">WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></a>.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Content using <a href="https://www.w3.org/TR/wai-aria/">WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></a>.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <p>For each <a href="https://www.w3.org/TR/WCAG21/#dfn-status-messages">status message</a>:
-                  </p>
-                  <ol>
-                     					
-                     <li>Check that the container destined to hold the status message has a <code>role</code> attribute with a value of <code>status</code> <em>before</em> the status message occurs.
-                     </li>
-                     					
-                     <li>Check that when the status message is triggered, it is inside the container.</li>
-                     					
-                     <li>Check that elements or attributes that provide information equivalent to the visual
-                        experience for the status message (such as a shopping cart image with proper ALT text)
-                        also reside in the container.
-                     </li>
-                     				
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     					
-                     <li>#1, #2 and #3 are true.</li>
-                     				
-                  </ul>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <p>For each <a href="https://www.w3.org/TR/WCAG21/#dfn-status-messages">status message</a>:
+                     </p>
+                     <ol>
+                        					
+                        <li>Check that the container destined to hold the status message has a <code>role</code> attribute with a value of <code>status</code> <em>before</em> the status message occurs.
+                        </li>
+                        					
+                        <li>Check that when the status message is triggered, it is inside the container.</li>
+                        					
+                        <li>Check that elements or attributes that provide information equivalent to the visual
+                           experience for the status message (such as a shopping cart image with proper ALT text)
+                           also reside in the container.
+                        </li>
+                        				
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        					
+                        <li>#1, #2 and #3 are true.</li>
+                        				
+                     </ul>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -147,7 +163,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -167,7 +183,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

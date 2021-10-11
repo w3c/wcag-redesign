@@ -53,77 +53,84 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/readable">3.1: Readable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/pronunciation">3.1.6: Pronunciation</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to use ruby annotation to provide information about
-                  the pronunciation and meaning of a run of text where meaning is determined by
-                  pronunciation.
-               </p>
-               <p>There are many languages in which a run of text may mean different things depending
-                  on
-                  how the text is pronounced. This is common in East Asian languages as well as Hebrew,
-                  Arabic, and other languages; it also occurs in English and other Western European
-                  languages. 
-               </p>
-               <p>Ruby Annotation allows the author to annotate a "base text," providing a guide to
-                  pronunciation and, in some cases, a definition as well. Ruby is commonly used for
-                  text
-                  in Japanese and other East Asian languages. Ruby Annotation is defined as a module
-                  for
-                  XHTML 1.1 or HTML5. 
-               </p>
-               <p>There are two types of Ruby markup: simple and complex. Simple Ruby markup applies
-                  to a
-                  run of text such as a complete word or phrase. This is known as the "base" text
-                  (<code class="el">rb</code> element). The Ruby annotation that indicates how to pronounce the term (the
-                  <code class="el">rt</code> element, or Ruby text) is shown in a smaller font. (The term "Ruby" is
-                  derived from a small font used for this purpose in printed texts.) The Ruby text is
-                  usually rendered above or immediately before the base text, that is, immediately above
-                  horizontal text or immediately to the right of vertical text. Sometimes Japanese uses
-                  Ruby to provide the meaning of text on the other side of the base text (visually)
-                  from
-                  the phonetic annotation. Simple Ruby markup also provides a "fallback" option for
-                  user
-                  agents that do not support Ruby markup (that is, user agents that do not support XHTML
-                  1.1 or HTML5). 
-               </p>
-               <p>Complex Ruby markup makes it possible to divide the base text into smaller units,
-                  each
-                  of which may be associated with a separate Ruby annotation. Complex Ruby markup does
-                  not
-                  support the fallback option. 
-               </p>
-               <p>Ruby annotation is uncommon in languages such as Hebrew, where Unicode fonts can
-                  include diacritical marks that convey pronunciation. It is also uncommon in English
-                  and
-                  European languages. 
-               </p>
-               <p>Note: The primary reason for indicating pronunciation through Ruby or any other means
-                  is to make the content accessible to people with disabilities who could read and
-                  understand the language of the content if information about pronunciation were provided.
-                  It is not necessary to provide information about pronunciation for use by people who
-                  are
-                  not familiar with the language of the content. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to use ruby annotation to provide information about
+                     the pronunciation and meaning of a run of text where meaning is determined by
+                     pronunciation.
+                  </p>
+                  <p>There are many languages in which a run of text may mean different things depending
+                     on
+                     how the text is pronounced. This is common in East Asian languages as well as Hebrew,
+                     Arabic, and other languages; it also occurs in English and other Western European
+                     languages. 
+                  </p>
+                  <p>Ruby Annotation allows the author to annotate a "base text," providing a guide to
+                     pronunciation and, in some cases, a definition as well. Ruby is commonly used for
+                     text
+                     in Japanese and other East Asian languages. Ruby Annotation is defined as a module
+                     for
+                     XHTML 1.1 or HTML5. 
+                  </p>
+                  <p>There are two types of Ruby markup: simple and complex. Simple Ruby markup applies
+                     to a
+                     run of text such as a complete word or phrase. This is known as the "base" text
+                     (<code class="el">rb</code> element). The Ruby annotation that indicates how to pronounce the term (the
+                     <code class="el">rt</code> element, or Ruby text) is shown in a smaller font. (The term "Ruby" is
+                     derived from a small font used for this purpose in printed texts.) The Ruby text is
+                     usually rendered above or immediately before the base text, that is, immediately above
+                     horizontal text or immediately to the right of vertical text. Sometimes Japanese uses
+                     Ruby to provide the meaning of text on the other side of the base text (visually)
+                     from
+                     the phonetic annotation. Simple Ruby markup also provides a "fallback" option for
+                     user
+                     agents that do not support Ruby markup (that is, user agents that do not support XHTML
+                     1.1 or HTML5). 
+                  </p>
+                  <p>Complex Ruby markup makes it possible to divide the base text into smaller units,
+                     each
+                     of which may be associated with a separate Ruby annotation. Complex Ruby markup does
+                     not
+                     support the fallback option. 
+                  </p>
+                  <p>Ruby annotation is uncommon in languages such as Hebrew, where Unicode fonts can
+                     include diacritical marks that convey pronunciation. It is also uncommon in English
+                     and
+                     European languages. 
+                  </p>
+                  <p>Note: The primary reason for indicating pronunciation through Ruby or any other means
+                     is to make the content accessible to people with disabilities who could read and
+                     understand the language of the content if information about pronunciation were provided.
+                     It is not necessary to provide information about pronunciation for use by people who
+                     are
+                     not familiar with the language of the content. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1--ruby-markup-providing-pronunciation-information-for-an-initialism-">
-                  <h3>Example 1:  Ruby markup providing pronunciation information for an initialism </h3>
-                  <p> This example uses Ruby annotation to give the pronunciation of the initialism
-                     (acronym) formed by the first letters of the words Web Content Accessibility
-                     Guidelines. The letters WCAG are the base (the rb element), and the pronunciation
-                     information is shown by the Ruby text (the rt element). The Ruby parenthesis element
-                     <code class="el">rp</code> is used for user agents that do not support Ruby annotations to
-                     indicate that the text in the <code class="el">rt</code> element provides the pronunciation
-                     information. The pronunciation information is rendered in parentheses immediately
-                     following the base text. (User agents that support Ruby do not show the
-                     parentheses.) 
-                  </p><pre xml:space="preserve">&lt;p&gt;When we talk about these guidelines, we often just call them
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1--ruby-markup-providing-pronunciation-information-for-an-initialism-">
+                     <h3>Example 1:  Ruby markup providing pronunciation information for an initialism </h3>
+                     <p> This example uses Ruby annotation to give the pronunciation of the initialism
+                        (acronym) formed by the first letters of the words Web Content Accessibility
+                        Guidelines. The letters WCAG are the base (the rb element), and the pronunciation
+                        information is shown by the Ruby text (the rt element). The Ruby parenthesis element
+                        <code class="el">rp</code> is used for user agents that do not support Ruby annotations to
+                        indicate that the text in the <code class="el">rt</code> element provides the pronunciation
+                        information. The pronunciation information is rendered in parentheses immediately
+                        following the base text. (User agents that support Ruby do not show the
+                        parentheses.) 
+                     </p><pre xml:space="preserve">&lt;p&gt;When we talk about these guidelines, we often just call them
   &lt;ruby&gt;
     &lt;rb&gt;WCAG&lt;/rb&gt;
     &lt;rp&gt;(&lt;/rp&gt;
@@ -131,15 +138,15 @@
     &lt;rp&gt;)&lt;/rp&gt;
   &lt;/ruby&gt;.
 &lt;/p&gt;</pre></section>
-               <section class="example" id="example-2--ruby-annotation-for-japanese-">
-                  <h3>Example 2:  Ruby annotation for Japanese </h3>
-                  <p> The following is an example in Japanese. For Japanese, the Ruby is used to give
-                     the reading of Han characters(Kanji). the Ruby parenthesis element <code class="el">rp</code> is
-                     used for user agents that do not support Ruby annotations to indicate that the text
-                     in the <code class="el">rt</code> element provides the pronunciation information. The pronunciation
-                     information is rendered in parentheses immediately following the base text. (User
-                     agents that support Ruby do not show the parentheses.) 
-                  </p><pre xml:space="preserve">&lt;p&gt;
+                  <section class="example" id="example-2--ruby-annotation-for-japanese-">
+                     <h3>Example 2:  Ruby annotation for Japanese </h3>
+                     <p> The following is an example in Japanese. For Japanese, the Ruby is used to give
+                        the reading of Han characters(Kanji). the Ruby parenthesis element <code class="el">rp</code> is
+                        used for user agents that do not support Ruby annotations to indicate that the text
+                        in the <code class="el">rt</code> element provides the pronunciation information. The pronunciation
+                        information is rendered in parentheses immediately following the base text. (User
+                        agents that support Ruby do not show the parentheses.) 
+                     </p><pre xml:space="preserve">&lt;p&gt;
   &lt;ruby&gt;
     &lt;rb&gt;慶應大学&lt;/rb&gt;
     &lt;rp&gt;(&lt;/rp&gt;
@@ -147,44 +154,53 @@
     &lt;rp&gt;)&lt;/rp&gt;
   &lt;/ruby&gt;
 &lt;/p&gt;    </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>XHTML 1.1 and HTML5</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>XHTML 1.1 and HTML5</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For each run of text where a Ruby annotation is used to provide pronunciation
-                     information: 
-                  </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that a <code class="el">rt</code> element contains pronunciation information for each
-                        run of text defined by the <code class="el">rb</code> element.
-                     </li>
+                     <p>For each run of text where a Ruby annotation is used to provide pronunciation
+                        information: 
+                     </p>
                      
-                     <li>If simple Ruby markup is used, check that the <code class="el">rp</code> element is present
-                        to indicate to user agents that do not support Ruby annotations that the text in
-                        the rt element provides the pronunciation information. .
-                     </li>
+                     <ol>
+                        
+                        <li>Check that a <code class="el">rt</code> element contains pronunciation information for each
+                           run of text defined by the <code class="el">rb</code> element.
+                        </li>
+                        
+                        <li>If simple Ruby markup is used, check that the <code class="el">rp</code> element is present
+                           to indicate to user agents that do not support Ruby annotations that the text in
+                           the rt element provides the pronunciation information. .
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Checks #1 and #2 are true.</li>
+                     <ul>
+                        
+                        <li>Checks #1 and #2 are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -192,7 +208,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -256,7 +272,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

@@ -60,94 +60,110 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/compatible">4.1: Compatible</a>, using a more specific technique.</span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/name-role-value">4.1.2: Name, Role, Value</a>, using a more specific technique.</span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to allow assistive technology to
-                  understand Web content so that it can convey equivalent information to the
-                  user through an alternate user interface.
-               </p>
-               <p>Sometimes content is not created using markup language but rather using a
-                  programming language or tools. In many cases, these technologies have
-                  interface components that are already programmed to interface with
-                  accessibility APIs. If an author uses these components and fills in the
-                  properties (e.g., name, etc.), the resulting user interface components in the
-                  content will be accessible to assistive technology.
-               </p>
-               <p>However, if an author wants to create a user interface component that is new
-                  and they cannot use standard components, then they need to be sure to add
-                  the accessibility provisions themselves - and implement them in a way that
-                  is compatible with the accessibility API.
-               </p>
-               <p>After completion, the custom component should be tested for Accessibility Support.</p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to allow assistive technology to
+                     understand Web content so that it can convey equivalent information to the
+                     user through an alternate user interface.
+                  </p>
+                  <p>Sometimes content is not created using markup language but rather using a
+                     programming language or tools. In many cases, these technologies have
+                     interface components that are already programmed to interface with
+                     accessibility APIs. If an author uses these components and fills in the
+                     properties (e.g., name, etc.), the resulting user interface components in the
+                     content will be accessible to assistive technology.
+                  </p>
+                  <p>However, if an author wants to create a user interface component that is new
+                     and they cannot use standard components, then they need to be sure to add
+                     the accessibility provisions themselves - and implement them in a way that
+                     is compatible with the accessibility API.
+                  </p>
+                  <p>After completion, the custom component should be tested for Accessibility Support.</p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>A Web page uses java to create an applet. A group of
-                     authors wants to create an entirely new type of interface component
-                     so they cannot use existing Java objects. They use Java swing classes
-                     to create their component because the Java swing classes already
-                     have provisions for connecting to different accessibility APIs.
-                     Using the Java swing classes they are able to create an interface
-                     component that exposes its name and role, is able to be set by AT
-                     and alerts AT to any updates.
-                  </li>
-                  
-                  <li>A Web page uses an original ActiveX control that is
-                     written in the C++ programming language. The control is written to
-                     explicitly support the Microsoft Active Accessibility (MSAA) API to
-                     expose information about accept commands. The control then interacts
-                     directly with assistive technology running the user agent on systems
-                     that support MSAA.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Programming technologies that have standard components programmed to interface with
-                  accessibility APIs.
-               </p>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
-                     
-                     <li>Render content using an accessible User Agent.</li>
-                     
-                     <li>Use an Accessibility Tool designed for the Accessibility API of the User agent to
-                        evaluate each user interface component.
-                     </li>
-                     
-                     <li>Check that name and role for each user interface component is found by the tool.</li>
-                     
-                     <li>Change the values on the component.</li>
-                     
-                     <li>Check that the Accessibility tool is alerted.</li>
-                     
-                     <li>Check that the component works with assistive technologies.</li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
                   <ul>
                      
-                     <li>Checks #3, #5 and #6 are true for each user interface component.</li>
+                     <li>A Web page uses java to create an applet. A group of
+                        authors wants to create an entirely new type of interface component
+                        so they cannot use existing Java objects. They use Java swing classes
+                        to create their component because the Java swing classes already
+                        have provisions for connecting to different accessibility APIs.
+                        Using the Java swing classes they are able to create an interface
+                        component that exposes its name and role, is able to be set by AT
+                        and alerts AT to any updates.
+                     </li>
+                     
+                     <li>A Web page uses an original ActiveX control that is
+                        written in the C++ programming language. The control is written to
+                        explicitly support the Microsoft Active Accessibility (MSAA) API to
+                        expose information about accept commands. The control then interacts
+                        directly with assistive technology running the user agent on systems
+                        that support MSAA.
+                     </li>
                      
                   </ul>
-                  
-               </section>
+               </details>
+            </section>
+            <section id="applicability">
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Programming technologies that have standard components programmed to interface with
+                     accessibility APIs.
+                  </p>
+               </details>
+            </section>
+            <section id="tests">
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <ol>
+                        
+                        <li>Render content using an accessible User Agent.</li>
+                        
+                        <li>Use an Accessibility Tool designed for the Accessibility API of the User agent to
+                           evaluate each user interface component.
+                        </li>
+                        
+                        <li>Check that name and role for each user interface component is found by the tool.</li>
+                        
+                        <li>Change the values on the component.</li>
+                        
+                        <li>Check that the Accessibility tool is alerted.</li>
+                        
+                        <li>Check that the component works with assistive technologies.</li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li>Checks #3, #5 and #6 are true for each user interface component.</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -155,7 +171,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -175,7 +191,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

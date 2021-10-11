@@ -53,47 +53,57 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/input-assistance">3.3: Input Assistance</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/error-identification">3.3.1: Error Identification</a> and <strong>Sufficient</strong> to meet <a href="/understanding/error-suggestion">3.3.3: Error Suggestion</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to demonstrate the display of an error message
-                  when client side validation of a form field has failed. Anchor elements are used to
-                  display the error messages in a list and are inserted above the fields to be validated.
-                  Anchor elements are used in the error messages so that focus can be placed on the
-                  error message(s), drawing the user's attention to it. The <code class="att">href</code> of the anchor elements contain an in-page link which references the fields where
-                  error(s) have been found. 
-               </p>
-               <p>In a deployed application, if Javascript is turned off, client side validation will
-                  not occur. Therefore, this technique would only be sufficient in situations where
-                  scripting is relied upon for conformance or when server side validation techniques
-                  are also used to catch any errors and return the page with information about the fields
-                  with errors. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to demonstrate the display of an error message
+                     when client side validation of a form field has failed. Anchor elements are used to
+                     display the error messages in a list and are inserted above the fields to be validated.
+                     Anchor elements are used in the error messages so that focus can be placed on the
+                     error message(s), drawing the user's attention to it. The <code class="att">href</code> of the anchor elements contain an in-page link which references the fields where
+                     error(s) have been found. 
+                  </p>
+                  <p>In a deployed application, if Javascript is turned off, client side validation will
+                     not occur. Therefore, this technique would only be sufficient in situations where
+                     scripting is relied upon for conformance or when server side validation techniques
+                     are also used to catch any errors and return the page with information about the fields
+                     with errors. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>This example validates required fields as well as fields where a specific format is
-                     required. When an error is identified, the script inserts a list of error messages
-                     into the DOM and moves focus to them.
-                  </p>
-                  <figure id="figure-form-errors">
-                     		<img src="img/form2.jpg" />
-                     		
-                     <figcaption>Figure 1 Screenshot showing the error messages for several fields that were not filled out
-                        correctly. Error messages appear as a list of links near the top of the form.
-                     </figcaption>
-                     	
-                  </figure>
-                  <p>
-                     <em>HTML and Javascript code </em>
-                     
-                  </p>
-                  <p>Here is the HTML for the example form: </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>This example validates required fields as well as fields where a specific format is
+                        required. When an error is identified, the script inserts a list of error messages
+                        into the DOM and moves focus to them.
+                     </p>
+                     <figure id="figure-form-errors">
+                        		<img src="img/form2.jpg" />
+                        		
+                        <figcaption>Figure 1 Screenshot showing the error messages for several fields that were not filled out
+                           correctly. Error messages appear as a list of links near the top of the form.
+                        </figcaption>
+                        	
+                     </figure>
+                     <p>
+                        <em>HTML and Javascript code </em>
+                        
+                     </p>
+                     <p>Here is the HTML for the example form: </p><pre xml:space="preserve">
 &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd"&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -169,8 +179,8 @@
         &lt;/form&gt;
     &lt;/body&gt;
 &lt;/html&gt;                      </pre><p>Here is the Javascript which performs the validation and inserts the error messages:
-                     
-                  </p><pre xml:space="preserve">
+                        
+                     </p><pre xml:space="preserve">
 window.onload = initialise;
 
 function initialise()
@@ -448,67 +458,76 @@ function checkOptional(bValid, strValue, arClass)
    return bValid;
    }
    </pre><p class="working-example">Working example of this technique implemented using PHP, Javascript, CSS and XHTML:
-                     <a href="../../working-examples/script-form-validation-2/index.php">Form Validation Example</a>.
-                  </p>
-               </section>
+                        <a href="../../working-examples/script-form-validation-2/index.php">Form Validation Example</a>.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Script used with HTML or XHTML.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Script used with HTML or XHTML.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>Create error messages using anchor tags and appropriate scripting via the technique
-                     above. 
-                  </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Load the page.</li>
+                     <p>Create error messages using anchor tags and appropriate scripting via the technique
+                        above. 
+                     </p>
                      
-                     <li>Enter a valid value in the field(s) associated with an error message and verify that
-                        no error messages are displayed. 
-                     </li>
-                     
-                     <li>Enter an invalid value in the field(s) associated with an error message and verify
-                        that the correct error message for the field is displayed. 
-                     </li>
-                     
-                     <li>Verify that the error messages receive focus.</li>
-                     
-                     <li>Enter a valid value in the field(s) associated with the displayed error message and
-                        verify that the error message is removed. 
-                     </li>
-                     
-                     <li>Repeat for all fields with associated error messages created via anchor tags. </li>
-                     
-                  </ol>
-                  
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                     <div>
+                     <ol>
                         
-                        <p>It is recommended that you also run the above procedure using an assistive technology.
+                        <li>Load the page.</li>
+                        
+                        <li>Enter a valid value in the field(s) associated with an error message and verify that
+                           no error messages are displayed. 
+                        </li>
+                        
+                        <li>Enter an invalid value in the field(s) associated with an error message and verify
+                           that the correct error message for the field is displayed. 
+                        </li>
+                        
+                        <li>Verify that the error messages receive focus.</li>
+                        
+                        <li>Enter a valid value in the field(s) associated with the displayed error message and
+                           verify that the error message is removed. 
+                        </li>
+                        
+                        <li>Repeat for all fields with associated error messages created via anchor tags. </li>
+                        
+                     </ol>
+                     
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <div>
                            
-                        </p>
-                        
+                           <p>It is recommended that you also run the above procedure using an assistive technology.
+                              
+                           </p>
+                           
+                        </div>
                      </div>
-                  </div>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
                      
-                     <li>Checks #2, #3, #4, and #5 are all true.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ul>
-                  
-               </section>
+                     <ul>
+                        
+                        <li>Checks #2, #3, #4, and #5 are all true.</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -516,7 +535,7 @@ function checkOptional(bValid, strValue, arClass)
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -536,7 +555,7 @@ function checkOptional(bValid, strValue, arClass)
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

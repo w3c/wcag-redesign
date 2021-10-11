@@ -56,52 +56,59 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/compatible">4.1: Compatible</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/name-role-value">4.1.2: Name, Role, Value</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p> This failure demonstrates how using generic HTML elements to create user
-                  interface controls can make the controls inaccessible to assistive
-                  technology. Assistive technologies rely on knowledge of the role and current
-                  state of a component in order to provide that information to the user. Many
-                  HTML elements have well defined roles, such as links, buttons, text fields,
-                  etc. Generic elements such as <code class="el">div</code> and <code class="el">span</code> do not
-                  have any predefined roles. When these generic elements are used to create
-                  user interface controls in HTML the assistive technology may not have the
-                  necessary information to describe and interact with the control. 
-               </p>
-               <p>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                     <div>Attaching event handlers to elements that are not normally interactive, such
-                        as <code class="el">span</code> and <code class="el">div</code>, can be disorienting to
-                        users. Even if care is taken to provide keyboard access to such elements,
-                        users may have a difficult time discovering that there are interactive
-                        controls in the content or understanding what type of behavior to expect
-                        from them. For example, users may not know which keystrokes are supported by
-                        the script to activate the element. Additionally, these elements do not
-                        generate the same operating system events as interactive elements, so
-                        assistive technology may not be notified when the user activates them.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p> This failure demonstrates how using generic HTML elements to create user
+                     interface controls can make the controls inaccessible to assistive
+                     technology. Assistive technologies rely on knowledge of the role and current
+                     state of a component in order to provide that information to the user. Many
+                     HTML elements have well defined roles, such as links, buttons, text fields,
+                     etc. Generic elements such as <code class="el">div</code> and <code class="el">span</code> do not
+                     have any predefined roles. When these generic elements are used to create
+                     user interface controls in HTML the assistive technology may not have the
+                     necessary information to describe and interact with the control. 
+                  </p>
+                  <p>
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                        <div>Attaching event handlers to elements that are not normally interactive, such
+                           as <code class="el">span</code> and <code class="el">div</code>, can be disorienting to
+                           users. Even if care is taken to provide keyboard access to such elements,
+                           users may have a difficult time discovering that there are interactive
+                           controls in the content or understanding what type of behavior to expect
+                           from them. For example, users may not know which keystrokes are supported by
+                           the script to activate the element. Additionally, these elements do not
+                           generate the same operating system events as interactive elements, so
+                           assistive technology may not be notified when the user activates them.
+                        </div>
                      </div>
-                  </div>
-               </p>
-               <p> The W3C Candidate Recommendation "<a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a>" describes mechanisms to provide the necessary role and state information to create
-                  fully accessible user interface controls.
-               </p>
+                  </p>
+                  <p> The W3C Candidate Recommendation "<a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a>" describes mechanisms to provide the necessary role and state information to create
+                     fully accessible user interface controls.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The following example fails because it creates a checkbox using a span and an image.</p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The following example fails because it creates a checkbox using a span and an image.</p><pre xml:space="preserve">
   &lt;p&gt; 
   &lt;span  onclick="toggleCheckbox('chkbox')"&gt; 
   &lt;img src="unchecked.gif"  id="chkbox" alt=""&gt; Include Signature 
   &lt;/span&gt; 
   &lt;/p&gt;</pre><p>Here is the scripting code which changes the image source when the <code class="el">span</code> is clicked with the mouse.
-                  </p><pre xml:space="preserve"> 
+                     </p><pre xml:space="preserve"> 
   var CHECKED = "check.gif"; 
   var UNCHECKED = "unchecked.gif"; 
   function toggleCheckbox(imgId) { 
@@ -115,41 +122,50 @@
   // additional code to implement checked action 
   } 
   } </pre><p> A checkbox created in this manner will not work with assistive technology since there
-                     is no information that identifies it as a checkbox. In addition, this example is also
-                     not operable from the keyboard and would fail guideline 2.1.
-                  </p>
-               </section>
+                        is no information that identifies it as a checkbox. In addition, this example is also
+                        not operable from the keyboard and would fail guideline 2.1.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p> HTML and XHTML</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p> HTML and XHTML</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Examine the parsed source code for elements which have event handlers assigned within
-                        the mark-up or via scripting (indicating that the element is a user interface control).
-                     </li>
+                     <ol>
+                        
+                        <li>Examine the parsed source code for elements which have event handlers assigned within
+                           the mark-up or via scripting (indicating that the element is a user interface control).
+                        </li>
+                        
+                        <li>Check if the role of the control is already defined natively in the mark-up language.</li>
+                        
+                        <li>Check if another valid method, such as the assignment of a fitting WAI-ARIA role,
+                           has been used to define the role of the control.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check if the role of the control is already defined natively in the mark-up language.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check if another valid method, such as the assignment of a fitting WAI-ARIA role,
-                        has been used to define the role of the control.
-                     </li>
+                     <p>If check #2 AND check #3 are false, the failure condition applies.</p>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <p>If check #2 AND check #3 are false, the failure condition applies.</p>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -157,7 +173,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -194,7 +210,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

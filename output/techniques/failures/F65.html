@@ -56,89 +56,105 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/text-alternatives">1.1: Text Alternatives</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/non-text-content">1.1.1: Non-text Content</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This describes a failure condition for text alternatives on images. If there is no
-                  source of text to provide an alternative for the image then assistive technologies
-                  are not able to identify the image or to convey its purpose to the user. The <code class="att">alt</code> attribute continues to be the preferred way to provide alternative text for images.
-                  Appropriate WAI-ARIA attributes may be used to provide alternative text, as long as
-                  they are accessibility supported.  For more information about accessibility support,
-                  see <a href="https://www.w3.org/WAI/WCAG21/Understanding/documenting-accessibility-support">Documenting Accessibility Support</a>. The <a href="https://www.w3.org/TR/accname/">Accessible Name and Description Computation</a> described the method of deriving text alternative from the HTML and WAI-ARIA attributes
-                  of an element.
-               </p>
-               <p>
-                  Some Assistive Technologies attempt to compensate for the missing text alternatives
-                  by reading the file name of the image. But it is insufficient to rely simply on the
-                  file name for many reasons. For example, file names may not be descriptive (e.g.,
-                  images/nav01.gif), and technology specifications do not require descriptive file names.
-                  And some Assistive Technologies do not read the file name if there is no text alternative
-                  provided via HTML attributes.
-                  
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This describes a failure condition for text alternatives on images. If there is no
+                     source of text to provide an alternative for the image then assistive technologies
+                     are not able to identify the image or to convey its purpose to the user. The <code class="att">alt</code> attribute continues to be the preferred way to provide alternative text for images.
+                     Appropriate WAI-ARIA attributes may be used to provide alternative text, as long as
+                     they are accessibility supported.  For more information about accessibility support,
+                     see <a href="https://www.w3.org/WAI/WCAG21/Understanding/documenting-accessibility-support">Documenting Accessibility Support</a>. The <a href="https://www.w3.org/TR/accname/">Accessible Name and Description Computation</a> described the method of deriving text alternative from the HTML and WAI-ARIA attributes
+                     of an element.
+                  </p>
+                  <p>
+                     Some Assistive Technologies attempt to compensate for the missing text alternatives
+                     by reading the file name of the image. But it is insufficient to rely simply on the
+                     file name for many reasons. For example, file names may not be descriptive (e.g.,
+                     images/nav01.gif), and technology specifications do not require descriptive file names.
+                     And some Assistive Technologies do not read the file name if there is no text alternative
+                     provided via HTML attributes.
+                     
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-missing-text-alternative">
-                  <h3>Example 1: Missing text alternative</h3>
-                  <p>In the code example below, the person using a screen reader would not know the purpose
-                     of the image.
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-missing-text-alternative">
+                     <h3>Example 1: Missing text alternative</h3>
+                     <p>In the code example below, the person using a screen reader would not know the purpose
+                        of the image.
+                     </p><pre xml:space="preserve">
 &lt;img src="../images/animal.jpg" /&gt;
 </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>Identify <code class="el">img</code>, <code class="el">area</code> and <code class="el">input</code> elements of type <code class="attval">image</code>. For each of these elements:
-                  </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>
-                        									         Check if the <code class="att">alt</code> attribute is present. 
-                        									
+                     <p>Identify <code class="el">img</code>, <code class="el">area</code> and <code class="el">input</code> elements of type <code class="attval">image</code>. For each of these elements:
+                     </p>
+                     
+                     <ol>
                         
-                     </li>
-                     
-                     <li>
-                        Check if <code class="att">aria-labelledby</code> attribute is present AND references one or more id elements in the page AND check
-                        if <code class="att">aria-labelledby</code> is <a href="/guidelines/#" target="terms">accessibility supported</a>.
-                        								       
-                     </li>
-                     
-                     <li>
-                        Check if the <code class="att">aria-label</code> attribute is present AND check if <code class="att">aria-label</code> is <a href="/guidelines/#" target="terms">accessibility supported</a>.
+                        <li>
+                           									         Check if the <code class="att">alt</code> attribute is present. 
+                           									
+                           
+                        </li>
                         
-                     </li>
-                     
-                     <li>
-                        Check if the <code class="att">title</code> attribute is present AND check if <code class="att">title</code> is <a href="/guidelines/#" target="terms"> accessibility supported</a>.
+                        <li>
+                           Check if <code class="att">aria-labelledby</code> attribute is present AND references one or more id elements in the page AND check
+                           if <code class="att">aria-labelledby</code> is <a href="/guidelines/#" target="terms">accessibility supported</a>.
+                           								       
+                        </li>
                         
-                     </li>
+                        <li>
+                           Check if the <code class="att">aria-label</code> attribute is present AND check if <code class="att">aria-label</code> is <a href="/guidelines/#" target="terms">accessibility supported</a>.
+                           
+                        </li>
+                        
+                        <li>
+                           Check if the <code class="att">title</code> attribute is present AND check if <code class="att">title</code> is <a href="/guidelines/#" target="terms"> accessibility supported</a>.
+                           
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>If all of #1, #2, #3 and #4 are false then this failure condition applies.</li>
+                     <ul>
+                        
+                        <li>If all of #1, #2, #3 and #4 are false then this failure condition applies.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -146,7 +162,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -184,7 +200,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

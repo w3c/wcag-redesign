@@ -56,34 +56,41 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/adaptable">1.3: Adaptable</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The CSS :before and :after pseudo-elements specify the location of content before
-                  and after an element's document tree content. The content property, in conjunction
-                  with these pseudo-elements, specifies what is inserted. For users who need to customize
-                  style information in order to view content according to their needs, they may not
-                  be able to access the information that is inserted using CSS. Therefore, it is a failure
-                  to use these properties to insert non-decorative content.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>A common way to test this critieria is to disable CSS styles to view whether content
-                     added using pseudo-elements remains visible.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The CSS :before and :after pseudo-elements specify the location of content before
+                     and after an element's document tree content. The content property, in conjunction
+                     with these pseudo-elements, specifies what is inserted. For users who need to customize
+                     style information in order to view content according to their needs, they may not
+                     be able to access the information that is inserted using CSS. Therefore, it is a failure
+                     to use these properties to insert non-decorative content.
                   </p>
-               </div>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>A common way to test this critieria is to disable CSS styles to view whether content
+                        added using pseudo-elements remains visible.
+                     </p>
+                  </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>In the following example, :before and :after are used to indicate speaker changes
-                     and to insert quotation marks in a screenplay.
-                  </p>
-                  <p>The CSS contains:</p><pre xml:space="preserve"> p.jim:before {	content: "Jim: " }
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>In the following example, :before and :after are used to indicate speaker changes
+                        and to insert quotation marks in a screenplay.
+                     </p>
+                     <p>The CSS contains:</p><pre xml:space="preserve"> p.jim:before {	content: "Jim: " }
 p.mary:before { content: "Mary: " }
 
 q:before { content: open-quote }
@@ -93,51 +100,60 @@ q:after  { content: close-quote }</pre><p>It is used in this excerpt:</p><pre xm
 &lt;p class="mary"&gt;
  &lt;q&gt;It's not looking good.&lt;/q&gt;
 &lt;/p&gt;</pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>In this example, :before is used to differentiate facts from opinions.</p>
-                  <p>The CSS contains:</p><pre xml:space="preserve"> p.fact:before { content: "Fact: "; font-weight: bold; }
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>In this example, :before is used to differentiate facts from opinions.</p>
+                     <p>The CSS contains:</p><pre xml:space="preserve"> p.fact:before { content: "Fact: "; font-weight: bold; }
  p.opinion:before { content: "Opinion: "; font-weight: bold; }</pre><p>It is used in this excerpt:</p><pre xml:space="preserve"> &lt;p class="fact"&gt;
  The defendant was at the scene of the crime when it occurred. 
 &lt;/p&gt;
 &lt;p class="opinion"&gt;
  The defendant committed the crime. 
 &lt;/p&gt;</pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that support CSS.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies that support CSS.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For each instance of content inserted through use of the :before and :after pseudo-elements
-                     and the content property:
-                  </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that non-decorative information presented by the generated content is available
-                        when styles are overridden.
-                     </li>
+                     <p>For each instance of content inserted through use of the :before and :after pseudo-elements
+                        and the content property:
+                     </p>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ol>
+                        
+                        <li>Check that non-decorative information presented by the generated content is available
+                           when styles are overridden.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>If check #1 is false, then this failure condition applies and the content fails this
-                        Success Criterion.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ul>
-                  
-               </section>
+                     <ul>
+                        
+                        <li>If check #1 is false, then this failure condition applies and the content fails this
+                           Success Criterion.
+                        </li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -145,7 +161,7 @@ q:after  { content: close-quote }</pre><p>It is used in this excerpt:</p><pre xm
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -177,7 +193,7 @@ q:after  { content: close-quote }</pre><p>It is used in this excerpt:</p><pre xm
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

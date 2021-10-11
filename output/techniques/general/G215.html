@@ -53,81 +53,97 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/input-modalities">2.5: Input Modalities</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/pointer-gestures">2.5.1: Pointer Gestures</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to ensure that users who have difficulties performing
-                  path-based gestures can operate a content slider with a single pointer (e.g., a single
-                  tap on a touch screen or a single mouse click). A content slider contains chunks of
-                  content in a row. Usually several chunks of content are hidden, and only one chunk
-                  is visible at any time. Left and right horizontal swiping over the visible part of
-                  the slider brings adjacent hidden chunks of content into view. Providing controls
-                  (for example, arrow buttons) as alternative means of input allows advancing the slider
-                  with single pointer input.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>On touch screen devices, author-supplied path-based gestures usually do not work when
-                     OS level assistive technologies (AT) like a built-in screenreader are turned on. This
-                     is because AT generally consumes a path-based gestures so they would not reach the
-                     authored content. For example, a horizontal swipe gesture over the content slider
-                     will not work as intended by the author, but move the screen reader focus to the next
-                     or previous element. Some gestures may work if the user operates "pass-through gestures"
-                     which are often unreliable as they may depend on factors of hardware, operating system,
-                     operating system "skin", operating system setting, or user agent.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to ensure that users who have difficulties performing
+                     path-based gestures can operate a content slider with a single pointer (e.g., a single
+                     tap on a touch screen or a single mouse click). A content slider contains chunks of
+                     content in a row. Usually several chunks of content are hidden, and only one chunk
+                     is visible at any time. Left and right horizontal swiping over the visible part of
+                     the slider brings adjacent hidden chunks of content into view. Providing controls
+                     (for example, arrow buttons) as alternative means of input allows advancing the slider
+                     with single pointer input.
                   </p>
-               </div>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>This technique addresses gestures where support has been implemented by authors, not
-                     gestures provided by the user agent (such as horizontal swiping to move through the
-                     browser history or vertical swiping to scroll through page content) or the operating
-                     system (e.g., gestures to move between open apps, or call up contextual menus of assistive
-                     technologies when these are enabled).
-                  </p>
-               </div>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>On touch screen devices, author-supplied path-based gestures usually do not work when
+                        OS level assistive technologies (AT) like a built-in screenreader are turned on. This
+                        is because AT generally consumes a path-based gestures so they would not reach the
+                        authored content. For example, a horizontal swipe gesture over the content slider
+                        will not work as intended by the author, but move the screen reader focus to the next
+                        or previous element. Some gestures may work if the user operates "pass-through gestures"
+                        which are often unreliable as they may depend on factors of hardware, operating system,
+                        operating system "skin", operating system setting, or user agent.
+                     </p>
+                  </div>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>This technique addresses gestures where support has been implemented by authors, not
+                        gestures provided by the user agent (such as horizontal swiping to move through the
+                        browser history or vertical swiping to scroll through page content) or the operating
+                        system (e.g., gestures to move between open apps, or call up contextual menus of assistive
+                        technologies when these are enabled).
+                     </p>
+                  </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  				
-                  <li>A content slider allows users to swipe left and right to reveal adjacent chunks of
-                     content. There are also next and previous buttons that enable users to advance to
-                     the next or previous chunks of content.
-                  </li>
-                  			
-               </ul>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <ul>
+                     				
+                     <li>A content slider allows users to swipe left and right to reveal adjacent chunks of
+                        content. There are also next and previous buttons that enable users to advance to
+                        the next or previous chunks of content.
+                     </li>
+                     			
+                  </ul>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology that supports pointer input (e.g., supporting any or all of the following:
-                  mouse pointer, touch on touch screen or trackpad, stylus input, or laser pointer input).
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology that supports pointer input (e.g., supporting any or all of the following:
+                     mouse pointer, touch on touch screen or trackpad, stylus input, or laser pointer input).
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <p>For content sliders that respond to path-based gestures:</p>
-                  <ol>
-                     		
-                     <li>Check that single pointer operable controls exist over or adjacent to the content
-                        slider that advance to adjacent chunks of content.
-                     </li>
-                     		
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     			
-                     <li>#1 is true</li>
-                     		
-                  </ul>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <p>For content sliders that respond to path-based gestures:</p>
+                     <ol>
+                        		
+                        <li>Check that single pointer operable controls exist over or adjacent to the content
+                           slider that advance to adjacent chunks of content.
+                        </li>
+                        		
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        			
+                        <li>#1 is true</li>
+                        		
+                     </ul>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -135,7 +151,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -155,7 +171,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

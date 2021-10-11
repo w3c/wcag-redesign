@@ -53,84 +53,100 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a>, if combined with <a href="../html/H64">H64: Using the title attribute of the frame and iframe elements</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a>, if combined with <a href="../html/H64">H64: Using the title attribute of the frame and iframe elements</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to demonstrate how framesets can be used to group
-                  blocks of repeated material. Since most user agents and assistive technology provide
-                  a
-                  way to navigate from frame to frame, using frames to organize elements can provide
-                  a
-                  mechanism for easily bypassing blocks of repeated content. If the site uses framesets,
-                  organize the blocks of content into separate frames. Make certain that the repeated
-                  blocks of content appear in the same frame within the frameset of each Web page. In
-                  addition, each frame element must have a title attribute to describe the content of
-                  the
-                  frame. When frames are properly titled, users can use frame navigation to easily
-                  navigate between blocks of content.
-               </p>
-               <p>This technique is appropriate when framesets are already used to organize the content
-                  of the page; other techniques are preferred for pages that are not already using
-                  framesets, because many people using assistive technology have trouble with frames
-                  . An
-                  advisory technique about using noframes is available in <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content">Success Criterion 1.1.1</a>. 
-               </p>
-               <p>In HTML5 the <code class="el">frame</code> element is marked as obsolete.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to demonstrate how framesets can be used to group
+                     blocks of repeated material. Since most user agents and assistive technology provide
+                     a
+                     way to navigate from frame to frame, using frames to organize elements can provide
+                     a
+                     mechanism for easily bypassing blocks of repeated content. If the site uses framesets,
+                     organize the blocks of content into separate frames. Make certain that the repeated
+                     blocks of content appear in the same frame within the frameset of each Web page. In
+                     addition, each frame element must have a title attribute to describe the content of
+                     the
+                     frame. When frames are properly titled, users can use frame navigation to easily
+                     navigate between blocks of content.
+                  </p>
+                  <p>This technique is appropriate when framesets are already used to organize the content
+                     of the page; other techniques are preferred for pages that are not already using
+                     framesets, because many people using assistive technology have trouble with frames
+                     . An
+                     advisory technique about using noframes is available in <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content">Success Criterion 1.1.1</a>. 
+                  </p>
+                  <p>In HTML5 the <code class="el">frame</code> element is marked as obsolete.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The following example shows the use of two frames to organize content. The source
-                     of the first frame is the Web page, navigation.html, which contains the HTML for the
-                     navigation. This frame has a title attribute which identifies it as a navigation
-                     bar. The second frame contains the main content of the site as indicated by the
-                     source parameter of main.html and the title attribute, "Main News Content" which
-                     identifies its function.
-                  </p><pre xml:space="preserve">&lt;frameset cols="20%, *"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The following example shows the use of two frames to organize content. The source
+                        of the first frame is the Web page, navigation.html, which contains the HTML for the
+                        navigation. This frame has a title attribute which identifies it as a navigation
+                        bar. The second frame contains the main content of the site as indicated by the
+                        source parameter of main.html and the title attribute, "Main News Content" which
+                        identifies its function.
+                     </p><pre xml:space="preserve">&lt;frameset cols="20%, *"&gt;
   &lt;frame src="navigation.html" name="navbar" title="Navigation Bar" /&gt;
   &lt;frame src="main.html" name="maincontent" title="Main News Content" /&gt;
   &lt;noframes&gt;
     &lt;p&gt;View &lt;a href="noframe.html"&gt;no frame version&lt;/a&gt;.&lt;/p&gt;
   &lt;/noframes&gt;
 &lt;/frameset&gt;   </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML documents that use frames </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML documents that use frames </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>If the Web page uses frames to organize content: </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check if repeated blocks of content are organized into separate frames.</li>
+                     <p>If the Web page uses frames to organize content: </p>
                      
-                     <li>Check that the frames with repeated content appear in the same location within
-                        each frameset.
-                     </li>
+                     <ol>
+                        
+                        <li>Check if repeated blocks of content are organized into separate frames.</li>
+                        
+                        <li>Check that the frames with repeated content appear in the same location within
+                           each frameset.
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Checks #1 and #2 are true.</li>
+                     <ul>
+                        
+                        <li>Checks #1 and #2 are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -138,7 +154,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -179,7 +195,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

@@ -53,107 +53,126 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Advisory</strong> for <a href="/understanding/input-assistance">3.3: Input Assistance</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Advisory</strong> for <a href="/understanding/error-identification">3.3.1: Error Identification</a> and <strong>Advisory</strong> for <a href="/understanding/error-suggestion">3.3.3: Error Suggestion</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to help users find input errors where the information
-                  supplied by the user is not accepted. This includes fields with missing required information
-                  and fields with incorrect information. When users enter data input that is checked,
-                  and input errors are detected, a link to that error is provided so that the user does
-                  not have to search for it. One approach is to use server-side validation, and to re-display
-                  the form (including any previously entered data), and a text description at the top
-                  of the page that indicates the fact that there was an input error, describes the nature
-                  of the problem, and provides a link the field(s) with a problem.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to help users find input errors where the information
+                     supplied by the user is not accepted. This includes fields with missing required information
+                     and fields with incorrect information. When users enter data input that is checked,
+                     and input errors are detected, a link to that error is provided so that the user does
+                     not have to search for it. One approach is to use server-side validation, and to re-display
+                     the form (including any previously entered data), and a text description at the top
+                     of the page that indicates the fact that there was an input error, describes the nature
+                     of the problem, and provides a link the field(s) with a problem.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-server-side-error-checking">
-                  <h3>Example 1: Server-side error checking</h3>
-                  <p>The user inputs invalid data on a form field and submits the form. The server returns
-                     the form, with the user's data still present, and indicates clearly in text at the
-                     top of the page that there were not accepted. The text describes the nature of the
-                     error(s) and provides a link to the field that had the problem so the user can easily
-                     navigate to it to fix the problem.
-                  </p>
-               </section>
-               <section class="example" id="example-2-client-side-error-checking-with-a-popup">
-                  <h3>Example 2: Client-side error checking with a popup</h3>
-                  <p>The user inputs invalid data on a form field and attempts to submit the form. Client-side
-                     scripting detects the error, cancels the submit, and modifies the document to provide
-                     a text message describing the error, with links to the field(s) with the error. The
-                     script also modifies the labels of the fields with the problems to highlight them.
-                  </p>
-               </section>
-               <section class="example" id="example-3-client-side-error-checking-with-no-popup">
-                  <h3>Example 3: Client-side error checking with no popup</h3>
-                  <p>When the user submits a form, instead of taking them to a new page, a script automatically
-                     sets focus to a text link that says "Errors have occurred." The link goes to the first
-                     item in an ordered list of descriptive error messages. Each list item is a link to
-                     the control where the error had occurred. And there is a link from the error back
-                     to the ordered list of descriptive error messages. The process is repeated as needed.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-server-side-error-checking">
+                     <h3>Example 1: Server-side error checking</h3>
+                     <p>The user inputs invalid data on a form field and submits the form. The server returns
+                        the form, with the user's data still present, and indicates clearly in text at the
+                        top of the page that there were not accepted. The text describes the nature of the
+                        error(s) and provides a link to the field that had the problem so the user can easily
+                        navigate to it to fix the problem.
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-client-side-error-checking-with-a-popup">
+                     <h3>Example 2: Client-side error checking with a popup</h3>
+                     <p>The user inputs invalid data on a form field and attempts to submit the form. Client-side
+                        scripting detects the error, cancels the submit, and modifies the document to provide
+                        a text message describing the error, with links to the field(s) with the error. The
+                        script also modifies the labels of the fields with the problems to highlight them.
+                     </p>
+                  </section>
+                  <section class="example" id="example-3-client-side-error-checking-with-no-popup">
+                     <h3>Example 3: Client-side error checking with no popup</h3>
+                     <p>When the user submits a form, instead of taking them to a new page, a script automatically
+                        sets focus to a text link that says "Errors have occurred." The link goes to the first
+                        item in an ordered list of descriptive error messages. Each list item is a link to
+                        the control where the error had occurred. And there is a link from the error back
+                        to the ordered list of descriptive error messages. The process is repeated as needed.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Content that accepts user data input, with restrictions on the format, value, and/or
-                  type of the input.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Content that accepts user data input, with restrictions on the format, value, and/or
+                     type of the input.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Fill out a form, deliberately leaving a required (mandatory) field blank, and make
-                        an input error on another field and submit the form.
-                     </li>
-                     
-                     <li>Check that a text message is provided that identifies the field that is missing required
-                        data.
-                     </li>
-                     
-                     <li>Check that a text message is provided that identifies the field with the input error.</li>
-                     
-                     <li>Check that there is a link to each field that is missing required data from the missing
-                        data message
-                     </li>
-                     
-                     <li>Check that there is a link to the list of errors from the error message.</li>
-                     
-                  </ol>
-                  
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                     <div>
+                     <ol>
                         
-                        <p>Success Criterion 3.3.2 requires that if an input error is detected and suggestions
-                           for correction are known and can be provided without jeopardizing the security or
-                           purpose of the content, the suggestions are provided to the user.
-                        </p>
+                        <li>Fill out a form, deliberately leaving a required (mandatory) field blank, and make
+                           an input error on another field and submit the form.
+                        </li>
                         
+                        <li>Check that a text message is provided that identifies the field that is missing required
+                           data.
+                        </li>
+                        
+                        <li>Check that a text message is provided that identifies the field with the input error.</li>
+                        
+                        <li>Check that there is a link to each field that is missing required data from the missing
+                           data message
+                        </li>
+                        
+                        <li>Check that there is a link to the list of errors from the error message.</li>
+                        
+                     </ol>
+                     
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <div>
+                           
+                           <p>Success Criterion 3.3.2 requires that if an input error is detected and suggestions
+                              for correction are known and can be provided without jeopardizing the security or
+                              purpose of the content, the suggestions are provided to the user.
+                           </p>
+                           
+                        </div>
                      </div>
-                  </div>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
                      
-                     <li>If #2 is true, then #4 is true.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>If #3 is true, then #5 is true.</li>
+                     <ul>
+                        
+                        <li>If #2 is true, then #4 is true.</li>
+                        
+                        <li>If #3 is true, then #5 is true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -161,7 +180,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -181,7 +200,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

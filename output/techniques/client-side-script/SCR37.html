@@ -53,52 +53,59 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/focus-order">2.4.3: Focus Order</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>Site designers often want to create dialogs that do not use the pop-up windows supplied
-                  by the browser. This is typically accomplished by enclosing the dialog contents in
-                  a <code class="el">div</code> and placing the <code class="el">div</code> above the page content using z-order and absolute positioning in CSS. 
-               </p>
-               <p>To be accessible, these dialogs must follow a few simple rules. </p>
-               <ol>
-                  
-                  <li>Trigger the script that launches the dialog from the onclick event of a link or button.</li>
-                  
-                  <li>Place the dialog <code class="el">div</code> into the Document Object Model (DOM) immediately after the element that triggered
-                     it. The triggering element will maintain focus, and inserting the dialog content after
-                     that element will make the content inside the dialog next in the screen-reader reading
-                     order and next in the tab order. The dialog can still be absolutely positioned to
-                     be elsewhere on the page visually. This can be done either by creating the dialog
-                     in the HTML and hiding it with CSS, as in the example below, or by inserting it immediately
-                     after the triggering element with script. 
-                  </li>
-                  
-                  <li>Ensure that the HTML inside the dialog div meets the same accessibility standard as
-                     other content.
-                  </li>
-                  
-               </ol>
-               <p>It is also nice, but not always necessary, to make the launching link toggle the dialog
-                  open and closed, and to close the dialog when the keyboard focus leaves it. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>Site designers often want to create dialogs that do not use the pop-up windows supplied
+                     by the browser. This is typically accomplished by enclosing the dialog contents in
+                     a <code class="el">div</code> and placing the <code class="el">div</code> above the page content using z-order and absolute positioning in CSS. 
+                  </p>
+                  <p>To be accessible, these dialogs must follow a few simple rules. </p>
+                  <ol>
+                     
+                     <li>Trigger the script that launches the dialog from the onclick event of a link or button.</li>
+                     
+                     <li>Place the dialog <code class="el">div</code> into the Document Object Model (DOM) immediately after the element that triggered
+                        it. The triggering element will maintain focus, and inserting the dialog content after
+                        that element will make the content inside the dialog next in the screen-reader reading
+                        order and next in the tab order. The dialog can still be absolutely positioned to
+                        be elsewhere on the page visually. This can be done either by creating the dialog
+                        in the HTML and hiding it with CSS, as in the example below, or by inserting it immediately
+                        after the triggering element with script. 
+                     </li>
+                     
+                     <li>Ensure that the HTML inside the dialog div meets the same accessibility standard as
+                        other content.
+                     </li>
+                     
+                  </ol>
+                  <p>It is also nice, but not always necessary, to make the launching link toggle the dialog
+                     open and closed, and to close the dialog when the keyboard focus leaves it. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-an-options-button-that-opens-a-dialog">
-                  <h3>Example 1: An options button that opens a dialog</h3>
-                  <p>The HTML for this example includes a triggering Element, in this case a button, and
-                     a div that acts as the frame for the dialog. 
-                  </p>
-                  <p>The triggering element is a button and the script is triggered from the onclick event.
-                     This sends the appropriate events to the operating system so that assistive technology
-                     is aware of the change in the DOM. 
-                  </p>
-                  <p>In this example, the Submit and Reset buttons inside the dialog simply hide the <code class="el">div</code>. 
-                  </p><pre xml:space="preserve">...
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-an-options-button-that-opens-a-dialog">
+                     <h3>Example 1: An options button that opens a dialog</h3>
+                     <p>The HTML for this example includes a triggering Element, in this case a button, and
+                        a div that acts as the frame for the dialog. 
+                     </p>
+                     <p>The triggering element is a button and the script is triggered from the onclick event.
+                        This sends the appropriate events to the operating system so that assistive technology
+                        is aware of the change in the DOM. 
+                     </p>
+                     <p>In this example, the Submit and Reset buttons inside the dialog simply hide the <code class="el">div</code>. 
+                     </p><pre xml:space="preserve">...
 &lt;button onclick="TogglePopup(event,true)"
 	name="pop0001"&gt;Options&lt;/button&gt;
 
@@ -119,7 +126,7 @@
 &lt;/div&gt;
 ...
 </pre><p>The <code class="el">div</code>, heading and <code class="el">form</code> elements are styled with CSS to look like a dialog. 
-                  </p><pre xml:space="preserve">...
+                     </p><pre xml:space="preserve">...
 a { color:blue; }
 a.clickPopup img { border:none; width:0; }
 
@@ -133,7 +140,7 @@ div.popover h3 { margin:0; padding:0.1em 0.5em; background-color:navy; color:whi
 #pop0001 div.buttons input { width:6em; }
 ...
 </pre><p>The script toggles the display of the popup <code class="el">div</code>, showing it and hiding it. 
-                  </p><pre xml:space="preserve">...
+                     </p><pre xml:space="preserve">...
 function TogglePopup(evt,show)
 {
 	HarmonizeEvent(evt);
@@ -183,45 +190,54 @@ function ResetForm(elem)
 }
 ...
 </pre><p class="working-example">A working example, <a href="../../working-examples/script-options-button-dialog/">an options button that opens a dialog</a>, is available. 
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML used with script.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML used with script.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Find all areas of the page that trigger dialogs that are not pop-up windows. </li>
+                     <ol>
+                        
+                        <li>Find all areas of the page that trigger dialogs that are not pop-up windows. </li>
+                        
+                        <li>Check that the dialogs can be opened by tabbing to the area and hitting enter. </li>
+                        
+                        <li>Check that, once opened, the dialog is next in the tab order. </li>
+                        
+                        <li>Check that the dialogs are triggered from the click event of a button or a link. </li>
+                        
+                        <li>Using a tool that allows you to inspect the DOM generated by script, check that the
+                           dialog is next in the DOM. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check that the dialogs can be opened by tabbing to the area and hitting enter. </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that, once opened, the dialog is next in the tab order. </li>
+                     <ul>
+                        
+                        <li>Checks #2, #3, #4 and #5 are true. </li>
+                        
+                     </ul>
                      
-                     <li>Check that the dialogs are triggered from the click event of a button or a link. </li>
-                     
-                     <li>Using a tool that allows you to inspect the DOM generated by script, check that the
-                        dialog is next in the DOM. 
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Checks #2, #3, #4 and #5 are true. </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -229,7 +245,7 @@ function ResetForm(elem)
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -281,7 +297,7 @@ function ResetForm(elem)
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

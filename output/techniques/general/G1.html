@@ -53,90 +53,106 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide a mechanism to bypass blocks of material
-                  that are repeated on multiple Web pages by skipping directly to the main content of
-                  the Web page. The first interactive item in the Web page is a link to the beginning
-                  of the main content. Activating the link sets focus beyond the other content to the
-                  main content. This technique is most useful when a Web page has one main content area,
-                  rather than a set of content areas that are equally important, and when there are
-                  not multiple navigation sections on the page.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>It is preferable for links to be visible at all times, since users navigating via
-                        the keyboard include switch users, those using techniques that generate keyboard strokes
-                        slowly, screen magnification software users, screen reader users working with sighted
-                        colleagues, keyboard only users and those navigating using voice recognition software.
-                        However, <a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks">Success Criterion 2.4.1</a> does not require that they be visible when they do not have focus, and links that
-                        are visible only when they have focus can meet this success criterion.
-                     </p>
-                     
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide a mechanism to bypass blocks of material
+                     that are repeated on multiple Web pages by skipping directly to the main content of
+                     the Web page. The first interactive item in the Web page is a link to the beginning
+                     of the main content. Activating the link sets focus beyond the other content to the
+                     main content. This technique is most useful when a Web page has one main content area,
+                     rather than a set of content areas that are equally important, and when there are
+                     not multiple navigation sections on the page.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>It is preferable for links to be visible at all times, since users navigating via
+                           the keyboard include switch users, those using techniques that generate keyboard strokes
+                           slowly, screen magnification software users, screen reader users working with sighted
+                           colleagues, keyboard only users and those navigating using voice recognition software.
+                           However, <a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks">Success Criterion 2.4.1</a> does not require that they be visible when they do not have focus, and links that
+                           are visible only when they have focus can meet this success criterion.
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-an-online-newspaper">
-                  <h3>Example 1: An online newspaper</h3>
-                  <p>An on-line newspaper contains many sections of information: a search function, a corporate
-                     banner, sidebars, minor stories, how to contact the newspaper, etc. The lead story
-                     is located in the middle of the page. The first link that the user reaches when tabbing
-                     through the page is titled "Skip to Lead Story". Activating the link moves visual
-                     focus to the story. Pressing tab again takes the user to the first link in the main
-                     story.
-                  </p>
-               </section>
-               <section class="example" id="example-2-a-&#34;skip-to-main-content&#34;-link">
-                  <h3>Example 2: A "Skip to main content" link</h3>
-                  <p>A Web page includes a variety of navigation techniques on each page: a bread crumb
-                     trail, a search tool, a site map, and a list of related resources. The first link
-                     on the page is titled "Skip to Main Content". A user activates the link to skip over
-                     the navigation tools.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-an-online-newspaper">
+                     <h3>Example 1: An online newspaper</h3>
+                     <p>An on-line newspaper contains many sections of information: a search function, a corporate
+                        banner, sidebars, minor stories, how to contact the newspaper, etc. The lead story
+                        is located in the middle of the page. The first link that the user reaches when tabbing
+                        through the page is titled "Skip to Lead Story". Activating the link moves visual
+                        focus to the story. Pressing tab again takes the user to the first link in the main
+                        story.
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-a-&#34;skip-to-main-content&#34;-link">
+                     <h3>Example 2: A "Skip to main content" link</h3>
+                     <p>A Web page includes a variety of navigation techniques on each page: a bread crumb
+                        trail, a search tool, a site map, and a list of related resources. The first link
+                        on the page is titled "Skip to Main Content". A user activates the link to skip over
+                        the navigation tools.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that contain links</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies that contain links</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that a link is the first focusable control on the Web page.</li>
+                     <ol>
+                        
+                        <li>Check that a link is the first focusable control on the Web page.</li>
+                        
+                        <li>Check that the description of the link communicates that it links to the main content.</li>
+                        
+                        <li>Check that the link is either always visible or visible when it has keyboard focus.</li>
+                        
+                        <li>Check that activating the link moves the focus to the main content.</li>
+                        
+                        <li>Check that after activating the link, the keyboard focus has moved to the main content.</li>
+                        
+                     </ol>
                      
-                     <li>Check that the description of the link communicates that it links to the main content.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that the link is either always visible or visible when it has keyboard focus.</li>
+                     <ul>
+                        
+                        <li>All checks above are true.</li>
+                        
+                     </ul>
                      
-                     <li>Check that activating the link moves the focus to the main content.</li>
-                     
-                     <li>Check that after activating the link, the keyboard focus has moved to the main content.</li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>All checks above are true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -144,7 +160,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -176,7 +192,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

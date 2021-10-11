@@ -55,48 +55,55 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Advisory</strong> for <a href="/understanding/adaptable">1.3: Adaptable</a> and <strong>Sufficient</strong> to meet <a href="/understanding/input-assistance">3.3: Input Assistance</a>
+                     						<strong>Advisory</strong> for <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> and <strong>Sufficient</strong> to meet <a href="/understanding/error-suggestion">3.3.3: Error Suggestion</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide programmatic indication that a form
-                  field (which shown through presentation to be required) is mandatory for successful
-                  submission of a form.
-               </p>
-               <p>The fact that the element is required is often visually presented (via a text or non-text
-                  symbol, or text indicating input is required or color / styling) but this is not programmatically
-                  determinable as part of the field's name.
-               </p>
-               <p>The WAI-ARIA <code class="prop">aria-required</code> property indicates that user input is required before submission. The <code class="prop">aria-required</code> property can have values of <code class="attval">true</code> or <code class="attval">false</code>. For example, if a user must fill in an address field, then <code class="att">aria-required</code> is set to <code class="attval">true</code>.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>Use of aria-required="true" might be beneficial even when an asterisk or other text
-                        symbol is programmatically associated with the field as it may reinforce its <code class="prop">required</code> property for some assistive technology users.
-                     </p>
-                     
-                     <p>The fact that the element is required is often visually   presented (such as a sign
-                        or symbol after the control). Using the <code class="prop">aria-required</code> property in addition to the visual presentation makes it much easier   for user agents
-                        to pass on this important information to the user in a   user agent-specific manner.
-                        Refer to <a href="https://www.w3.org/TR/wai-aria-primer/#ariahtml">Supporting   ARIA in XHTML and HTML 4.01</a> for information on how to provide   WAI-ARIA States and Properties with XHTML and
-                        HTML. WAI-ARIA States and   Properties is compatible with other languages as well;
-                        refer to documentation in those languages. 
-                     </p>
-                     
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide programmatic indication that a form
+                     field (which shown through presentation to be required) is mandatory for successful
+                     submission of a form.
+                  </p>
+                  <p>The fact that the element is required is often visually presented (via a text or non-text
+                     symbol, or text indicating input is required or color / styling) but this is not programmatically
+                     determinable as part of the field's name.
+                  </p>
+                  <p>The WAI-ARIA <code class="prop">aria-required</code> property indicates that user input is required before submission. The <code class="prop">aria-required</code> property can have values of <code class="attval">true</code> or <code class="attval">false</code>. For example, if a user must fill in an address field, then <code class="att">aria-required</code> is set to <code class="attval">true</code>.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>Use of aria-required="true" might be beneficial even when an asterisk or other text
+                           symbol is programmatically associated with the field as it may reinforce its <code class="prop">required</code> property for some assistive technology users.
+                        </p>
+                        
+                        <p>The fact that the element is required is often visually   presented (such as a sign
+                           or symbol after the control). Using the <code class="prop">aria-required</code> property in addition to the visual presentation makes it much easier   for user agents
+                           to pass on this important information to the user in a   user agent-specific manner.
+                           Refer to <a href="https://www.w3.org/TR/wai-aria-primer/#ariahtml">Supporting   ARIA in XHTML and HTML 4.01</a> for information on how to provide   WAI-ARIA States and Properties with XHTML and
+                           HTML. WAI-ARIA States and   Properties is compatible with other languages as well;
+                           refer to documentation in those languages. 
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The <code class="prop">required</code> property is indicated by an asterisk placed next to the label element:
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The <code class="prop">required</code> property is indicated by an asterisk placed next to the label element:
+                     </p><pre xml:space="preserve">
 &lt;form action="#" method="post"  id="login1" onsubmit="return errorCheck1()"&gt;
   &lt;p&gt;Note: [*]denotes mandatory field&lt;/p&gt;
   &lt;p&gt;
@@ -112,10 +119,10 @@
   &lt;/p&gt;
 
 &lt;/form&gt;		</pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>The <code class="prop">required</code> property is indicated by the word "required" placed next to the <code class="el">label</code> element:
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>The <code class="prop">required</code> property is indicated by the word "required" placed next to the <code class="el">label</code> element:
+                     </p><pre xml:space="preserve">
 &lt;form action="#" method="post" id="step1" onsubmit="return errorCheck2()"&gt;
   &lt;p&gt;
     &lt;label for="fname"&gt;First name: &lt;/label&gt;
@@ -145,14 +152,14 @@
     &lt;input type="submit" value="Next Step" id="step_btn" name="step_btn" /&gt;
   &lt;/p&gt;
 &lt;/form&gt; </pre></section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>Required fields are indicated by a red border around the fields and a star icon rendered
-                     via CSS using content:before. This example also uses custom radio buttons with role=radio
-                     but the script to make the span actually work like radio buttons is not included in
-                     this example. The CSS properties are available below the form.
-                     
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-3">
+                     <h3>Example 3</h3>
+                     <p>Required fields are indicated by a red border around the fields and a star icon rendered
+                        via CSS using content:before. This example also uses custom radio buttons with role=radio
+                        but the script to make the span actually work like radio buttons is not included in
+                        this example. The CSS properties are available below the form.
+                        
+                     </p><pre xml:space="preserve">
 &lt;form action="#" method="post" id="alerts1"&gt;
   &lt;label for="acctnum" data-required="true"&gt;Account Number&lt;/label&gt;
   &lt;input size="12" type="text" id="acctnum"
@@ -173,12 +180,12 @@
   content: url('/iconStar.gif');
 }
  </pre></section>
-               <section class="example" id="example-4-a-required-text-input-field-in-xhtml">
-                  <h3>Example 4: A required text input field in XHTML</h3>
-                  <p>The following example shows an XHTML document using the <code class="prop">aria-required</code> property to indicate that a form field must be submitted. The mandatory   nature
-                     of the field is also indicated in the label as a fallback for   user agents that do
-                     not support WAI-ARIA. 
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-4-a-required-text-input-field-in-xhtml">
+                     <h3>Example 4: A required text input field in XHTML</h3>
+                     <p>The following example shows an XHTML document using the <code class="prop">aria-required</code> property to indicate that a form field must be submitted. The mandatory   nature
+                        of the field is also indicated in the label as a fallback for   user agents that do
+                        not support WAI-ARIA. 
+                     </p><pre xml:space="preserve">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1
     For Accessible Adaptable Applications//EN"
@@ -204,22 +211,22 @@
   &lt;/body&gt;
 &lt;/html&gt;
 		</pre></section>
-               <section class="example" id="example-5-adding-aria-required-property-via-script">
-                  <h3>Example 5: Adding <code class="prop">aria-required</code> property via script
-                  </h3>
-                  <p>This example uses scripting to add the <code class="prop">aria-required</code> property to a form element. The required property is assigned using the setAttribute()
-                     API. 
-                  </p>
-                  <p>The array variable, <var>requiredIds</var>, is created with the   ids of the elements which need to be marked as required. The
-                     setRequired()   function is called from the onload event of the <code class="obj">window</code>   object. 
-                  </p>
-                  <p>The setRequired() function loops through all of the   ids provided, retrieves the
-                     element and assigns the <code class="prop">aria-required</code> property of true using the setAttribute() function. 
-                  </p>
-                  <p>When this page is accessed using Firefox 3.0 or later and a   screen reader that supports
-                     WAI-ARIA, the screen reader will speak   "required" when reading the label for the
-                     input fields. 
-                  </p><pre xml:space="preserve">&lt;head&gt;
+                  <section class="example" id="example-5-adding-aria-required-property-via-script">
+                     <h3>Example 5: Adding <code class="prop">aria-required</code> property via script
+                     </h3>
+                     <p>This example uses scripting to add the <code class="prop">aria-required</code> property to a form element. The required property is assigned using the setAttribute()
+                        API. 
+                     </p>
+                     <p>The array variable, <var>requiredIds</var>, is created with the   ids of the elements which need to be marked as required. The
+                        setRequired()   function is called from the onload event of the <code class="obj">window</code>   object. 
+                     </p>
+                     <p>The setRequired() function loops through all of the   ids provided, retrieves the
+                        element and assigns the <code class="prop">aria-required</code> property of true using the setAttribute() function. 
+                     </p>
+                     <p>When this page is accessed using Firefox 3.0 or later and a   screen reader that supports
+                        WAI-ARIA, the screen reader will speak   "required" when reading the label for the
+                        input fields. 
+                     </p><pre xml:space="preserve">&lt;head&gt;
  &lt;script type="text/javascript"&gt;
  //&lt;![CDATA[
 
@@ -254,40 +261,49 @@
  &lt;/form&gt;
  &lt;/body&gt;
 </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For each control which is shown via presentation to be required.</p>
-                  
-                  <ol>
-                     			
-                     <li>Check whether the <code class="att">aria-required</code> attribute is present:
-                     </li>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check whether the value of the <code class="att">aria-required</code> attribute is the correct required state of the user interface component.
-                     </li>
+                     <p>For each control which is shown via presentation to be required.</p>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ol>
+                        			
+                        <li>Check whether the <code class="att">aria-required</code> attribute is present:
+                        </li>
+                        
+                        <li>Check whether the value of the <code class="att">aria-required</code> attribute is the correct required state of the user interface component.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Checks #1 and #2 are true</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ul>
-                  
-               </section>
+                     <ul>
+                        
+                        <li>Checks #1 and #2 are true</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -295,7 +311,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -337,7 +353,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

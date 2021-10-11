@@ -56,75 +56,94 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is
+                     
+                     						a <strong>Failure</strong> of <a href="/understanding/contrast-minimum">1.4.3: Contrast (Minimum)</a> and a <strong>Failure</strong> of <a href="/understanding/contrast-enhanced">1.4.6: Contrast (Enhanced)</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This failure occurs when people with low vision are not able to read text that is
-                  displayed over a background image. When there is not sufficient contrast between the
-                  background image and the text, features of the background image can be confused with
-                  the text making it difficult to accurately read the text.
-               </p>
-               <p>To satisfy Success Criterion 1.4.3 and 1.4.6, there must be sufficient contrast between
-                  the text and its background. For pictures, this means that there would need to be
-                  sufficient contrast between the text and those parts of the image that are most like
-                  the text and behind the text. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This failure occurs when people with low vision are not able to read text that is
+                     displayed over a background image. When there is not sufficient contrast between the
+                     background image and the text, features of the background image can be confused with
+                     the text making it difficult to accurately read the text.
+                  </p>
+                  <p>To satisfy Success Criterion 1.4.3 and 1.4.6, there must be sufficient contrast between
+                     the text and its background. For pictures, this means that there would need to be
+                     sufficient contrast between the text and those parts of the image that are most like
+                     the text and behind the text. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-failure-example-1">
-                  <h3>Example 1: Failure Example 1</h3>
-                  <p>Black text overlays an image with black lines. The lines cross behind the letters
-                     making F's look like E's etc.
-                  </p>
-               </section>
-               <section class="example" id="example-2-failure-example-2">
-                  <h3>Example 2: Failure Example 2</h3>
-                  <p>Black text overlays an image with dark gray areas. Wherever the text crosses a dark
-                     gray area the contrast is so bad that the text cannot be read.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-failure-example-1">
+                     <h3>Example 1: Failure Example 1</h3>
+                     <p>Black text overlays an image with black lines. The lines cross behind the letters
+                        making F's look like E's etc.
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-failure-example-2">
+                     <h3>Example 2: Failure Example 2</h3>
+                     <p>Black text overlays an image with dark gray areas. Wherever the text crosses a dark
+                        gray area the contrast is so bad that the text cannot be read.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> 
-                        <strong>Quickcheck:</strong> First do a quick check to see if the contrast between the text and the area of the
-                        image that is darkest (for dark text) or lightest (for light text) meets or exceeds
-                        that required by the Success Criterion (1.4.3 or 1.4.5). If the contrast meets or
-                        exceeds the specified contrast, then there is no failure. 
-                     </li>
+                     <ol>
+                        
+                        <li> 
+                           <strong>Quickcheck:</strong> First do a quick check to see if the contrast between the text and the area of the
+                           image that is darkest (for dark text) or lightest (for light text) meets or exceeds
+                           that required by the Success Criterion (1.4.3 or 1.4.5). If the contrast meets or
+                           exceeds the specified contrast, then there is no failure. 
+                        </li>
+                        
+                        <li>If the Quickcheck is false, then check to see if the background behind each letter
+                           has sufficient contrast with the letter.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>If the Quickcheck is false, then check to see if the background behind each letter
-                        has sufficient contrast with the letter.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>If Quickcheck is false and #2 is false as well then this failure condition applies
+                           and the content fails the contrast Success Criterion.
+                        </li>
+                        
+                     </ul>
                      
-                     <li>If Quickcheck is false and #2 is false as well then this failure condition applies
-                        and the content fails the contrast Success Criterion.
-                     </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -132,7 +151,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -152,7 +171,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

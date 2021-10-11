@@ -55,103 +55,119 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a> and <strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a>
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> and <strong>Sufficient</strong> to meet <a href="/understanding/images-of-text">1.4.5: Images of Text</a> and <strong>Sufficient</strong> to meet <a href="/understanding/images-of-text-no-exception">1.4.9: Images of Text (No Exception)</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to facilitate the interaction of assistive technology
-                  with content by logically separating the content's structural encoding from the presentational
-                  encoding. Structural encoding is the indication of elements such as headings, paragraphs,
-                  lists, tables, etc., and is done by using technology features reserved for the purpose.
-                  By contrast, presentational encoding is the indication of formatting effects, such
-                  as typeface, color, size, position, borders, etc., and is also supported by technology
-                  features.
-               </p>
-               <p>While presentational features visually imply structure — users can determine headings,
-                  paragraphs, lists, etc. from the formatting conventions used — these features do not
-                  encode the structure unambiguously enough for assistive technology to interact with
-                  the page effectively. Providing separate structure, functionality, and presentation
-                  layers allows the semantics implied by the formatting to become programmatically determined
-                  via the structure layer.
-               </p>
-               <p>Following this technique allows user agents to:</p>
-               <ul>
-                  
-                  <li>Perform meaningful structure transformations based on the existing structure of the
-                     content, such as reordering sections or generating a list of sections or a list of
-                     links.
-                  </li>
-                  
-                  <li>Support interaction with content based on structural characteristics that cannot be
-                     determined by assistive technology on the basis of presentational information alone.
-                     For instance, it may be desirable to provide special interactions with lists by indicating
-                     the number of list items or skipping to the end, but this is only possible if the
-                     list structure is encoded in addition to the list presentation.
-                  </li>
-                  
-                  <li>Modify the presentation of content by substituting alternate presentation rules attached
-                     to structural features.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-html-with-css">
-                  <h3>Example 1: HTML with CSS</h3>
-                  <p>An HTML document uses the structural features of HTML, such as paragraphs, lists,
-                     headings, etc., and avoids presentational features such as font changes, layout hints,
-                     etc. CSS is used to format the document based on its structural properties. Well-crafted
-                     "class" attributes in the HTML extend the semantics of the structural markup if needed
-                     to allow more flexible formatting with CSS. Assistive technologies can substitute
-                     or extend the CSS to modify presentation, or ignore the CSS and interact directly
-                     with the structural encoding.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to facilitate the interaction of assistive technology
+                     with content by logically separating the content's structural encoding from the presentational
+                     encoding. Structural encoding is the indication of elements such as headings, paragraphs,
+                     lists, tables, etc., and is done by using technology features reserved for the purpose.
+                     By contrast, presentational encoding is the indication of formatting effects, such
+                     as typeface, color, size, position, borders, etc., and is also supported by technology
+                     features.
                   </p>
-               </section>
-               <section class="example" id="example-2-tagged-pdf">
-                  <h3>Example 2: Tagged PDF</h3>
-                  <p>A PDF document consists mostly of the content embedded with formatting information.
-                     Information about the structure is provided in a separate section of the document
-                     using XML-like tags; this is called "tagged PDF". The information in these tags can
-                     be used by assistive technologies to perform meaningful structure transformations
-                     (e.g., generating a list of sections) or to support interaction with content based
-                     on structural characteristics (e.g., jumping to the start of forms). 
+                  <p>While presentational features visually imply structure — users can determine headings,
+                     paragraphs, lists, etc. from the formatting conventions used — these features do not
+                     encode the structure unambiguously enough for assistive technology to interact with
+                     the page effectively. Providing separate structure, functionality, and presentation
+                     layers allows the semantics implied by the formatting to become programmatically determined
+                     via the structure layer.
                   </p>
-               </section>
-            </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology</p>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
-                     
-                     <li>Examine the encoding of a document.</li>
-                     
-                     <li>Check that structural information and functionality are explicitly provided and is
-                        logically separated from presentational information.
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+                  <p>Following this technique allows user agents to:</p>
                   <ul>
                      
-                     <li>Check #2 is true</li>
+                     <li>Perform meaningful structure transformations based on the existing structure of the
+                        content, such as reordering sections or generating a list of sections or a list of
+                        links.
+                     </li>
+                     
+                     <li>Support interaction with content based on structural characteristics that cannot be
+                        determined by assistive technology on the basis of presentational information alone.
+                        For instance, it may be desirable to provide special interactions with lists by indicating
+                        the number of list items or skipping to the end, but this is only possible if the
+                        list structure is encoded in addition to the list presentation.
+                     </li>
+                     
+                     <li>Modify the presentation of content by substituting alternate presentation rules attached
+                        to structural features.
+                     </li>
                      
                   </ul>
-                  
-               </section>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-html-with-css">
+                     <h3>Example 1: HTML with CSS</h3>
+                     <p>An HTML document uses the structural features of HTML, such as paragraphs, lists,
+                        headings, etc., and avoids presentational features such as font changes, layout hints,
+                        etc. CSS is used to format the document based on its structural properties. Well-crafted
+                        "class" attributes in the HTML extend the semantics of the structural markup if needed
+                        to allow more flexible formatting with CSS. Assistive technologies can substitute
+                        or extend the CSS to modify presentation, or ignore the CSS and interact directly
+                        with the structural encoding.
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-tagged-pdf">
+                     <h3>Example 2: Tagged PDF</h3>
+                     <p>A PDF document consists mostly of the content embedded with formatting information.
+                        Information about the structure is provided in a separate section of the document
+                        using XML-like tags; this is called "tagged PDF". The information in these tags can
+                        be used by assistive technologies to perform meaningful structure transformations
+                        (e.g., generating a list of sections) or to support interaction with content based
+                        on structural characteristics (e.g., jumping to the start of forms). 
+                     </p>
+                  </section>
+               </details>
+            </section>
+            <section id="applicability">
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology</p>
+               </details>
+            </section>
+            <section id="tests">
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <ol>
+                        
+                        <li>Examine the encoding of a document.</li>
+                        
+                        <li>Check that structural information and functionality are explicitly provided and is
+                           logically separated from presentational information.
+                        </li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li>Check #2 is true</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -159,7 +175,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -179,7 +195,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

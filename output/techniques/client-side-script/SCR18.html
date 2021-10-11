@@ -55,55 +55,62 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/input-assistance">3.3: Input Assistance</a> and <strong>Advisory</strong> for <a href="/understanding/input-assistance">3.3: Input Assistance</a>
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/error-identification">3.3.1: Error Identification</a> and <strong>Sufficient</strong> to meet <a href="/understanding/error-suggestion">3.3.3: Error Suggestion</a> and <strong>Advisory</strong> for <a href="/understanding/error-suggestion">3.3.3: Error Suggestion</a> and <strong>Advisory</strong> for <a href="/understanding/error-prevention-legal-financial-data">3.3.4: Error Prevention (Legal, Financial, Data)</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to validate user input as values are entered for
-                  each field, by means of client-side scripting. If errors are found, an alert dialog
-                  describes the nature of the error in text. Once the user dismisses the alert dialog,
-                  it is helpful if the script positions the keyboard focus on the field where the error
-                  occurred.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to validate user input as values are entered for
+                     each field, by means of client-side scripting. If errors are found, an alert dialog
+                     describes the nature of the error in text. Once the user dismisses the alert dialog,
+                     it is helpful if the script positions the keyboard focus on the field where the error
+                     occurred.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-checking-a-single-control-with-an-event-handler">
-                  <h3>Example 1: Checking a single control with an event handler</h3>
-                  <p>The following script will check that a valid date has been entered in the form control.</p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-checking-a-single-control-with-an-event-handler">
+                     <h3>Example 1: Checking a single control with an event handler</h3>
+                     <p>The following script will check that a valid date has been entered in the form control.</p><pre xml:space="preserve">
 &lt;label for="date"&gt;Date:&lt;/label&gt;
 &lt;input type="text" name="date" id="date" 
 onchange="if(isNaN(Date.parse(this.value))) 
 alert('This control is not a valid date. 
 Please re-enter the value.');" /&gt;
 </pre></section>
-               <section class="example" id="example-2-checking-multiple-controls-when-the-user-submits-the-form">
-                  <h3>Example 2: Checking multiple controls when the user submits the form</h3>
-                  <p>The following sample shows multiple controls in a form. The <code class="el">form</code> element uses the <code class="att">onsubmit</code> attribute which creates an event handler to execute the validation script when the
-                     user attempts to submit the form. If the validation is successful, the event returns
-                     <code class="propval">true</code> and the form submission proceeds; if the validation finds errors, it displays an
-                     error message and returns <code class="propval">false</code> to cancel the submit attempt so the user can fix the problems.
-                  </p>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                     <div>
-                        				
-                        <p>This example demonstrates an alert for simplicity. A more helpful notification to
-                           the user would be to highlight the controls with problems and add information to the
-                           page about the nature of the errors and how to navigate to the controls that require
-                           data fixes.
-                        </p>
-                        				
-                        <p>Although this example uses an <code class="att">onsubmit</code> attribute on the <code class="el">form</code> element for brevity, normal practice is to create a submit event listener when the
-                           page is loaded.
-                        </p>
-                        			
+                  <section class="example" id="example-2-checking-multiple-controls-when-the-user-submits-the-form">
+                     <h3>Example 2: Checking multiple controls when the user submits the form</h3>
+                     <p>The following sample shows multiple controls in a form. The <code class="el">form</code> element uses the <code class="att">onsubmit</code> attribute which creates an event handler to execute the validation script when the
+                        user attempts to submit the form. If the validation is successful, the event returns
+                        <code class="propval">true</code> and the form submission proceeds; if the validation finds errors, it displays an
+                        error message and returns <code class="propval">false</code> to cancel the submit attempt so the user can fix the problems.
+                     </p>
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <div>
+                           				
+                           <p>This example demonstrates an alert for simplicity. A more helpful notification to
+                              the user would be to highlight the controls with problems and add information to the
+                              page about the nature of the errors and how to navigate to the controls that require
+                              data fixes.
+                           </p>
+                           				
+                           <p>Although this example uses an <code class="att">onsubmit</code> attribute on the <code class="el">form</code> element for brevity, normal practice is to create a submit event listener when the
+                              page is loaded.
+                           </p>
+                           			
+                        </div>
                      </div>
-                  </div>
-                  <p>Script code:</p><pre xml:space="preserve">
+                     <p>Script code:</p><pre xml:space="preserve">
 function validate() {
 	// initialize error message
 	var msg = "";
@@ -138,39 +145,48 @@ function validate() {
 	&lt;/p&gt;
 &lt;/form&gt;
 </pre><p class="working-example">This is demonstrated in the <a href="../../working-examples/script-check-multiple-controls/">working example of checking multiple controls when the user submits the form</a>.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Content that validates user input.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Content that validates user input.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For form fields that require specific input:</p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>enter invalid data</li>
+                     <p>For form fields that require specific input:</p>
                      
-                     <li>determine if an alert describing the error is provided.</li>
+                     <ol>
+                        
+                        <li>enter invalid data</li>
+                        
+                        <li>determine if an alert describing the error is provided.</li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>#2 is true</li>
+                     <ul>
+                        
+                        <li>#2 is true</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -178,7 +194,7 @@ function validate() {
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -198,7 +214,7 @@ function validate() {
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

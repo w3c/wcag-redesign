@@ -56,45 +56,52 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/text-alternatives">1.1: Text Alternatives</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/non-text-content">1.1.1: Non-text Content</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p> The CSS background-image property provides a way to include images in the
-                  document with CSS without any reference in the HTML code. The CSS
-                  background-image property was designed for decorative purposes and it is not
-                  possible to associate text alternatives with images that are included via
-                  CSS. Text alternatives are necessary for people who cannot see images that
-                  convey important information. Therefore, it is a failure to use this
-                  property to add images to convey important information. This failure would apply equally
-                  in a case where the background image was declared in the HTML style attribute, as
-                  well as in a case where the background image declaration was created dynamically in
-                  a client script (see example 3 below).
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>Embedding information into a background image can also cause problems for people who
-                        use alternate backgrounds in order to increase legibility and for users of high contrast
-                        mode in some operating systems. These users, would lose the information in the background
-                        image due to lack of any alternative text.
-                     </p>
-                     
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p> The CSS background-image property provides a way to include images in the
+                     document with CSS without any reference in the HTML code. The CSS
+                     background-image property was designed for decorative purposes and it is not
+                     possible to associate text alternatives with images that are included via
+                     CSS. Text alternatives are necessary for people who cannot see images that
+                     convey important information. Therefore, it is a failure to use this
+                     property to add images to convey important information. This failure would apply equally
+                     in a case where the background image was declared in the HTML style attribute, as
+                     well as in a case where the background image declaration was created dynamically in
+                     a client script (see example 3 below).
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>Embedding information into a background image can also cause problems for people who
+                           use alternate backgrounds in order to increase legibility and for users of high contrast
+                           mode in some operating systems. These users, would lose the information in the background
+                           image due to lack of any alternative text.
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p> In the following example, part of the content is contained in an
-                     image that is presented by CSS alone. In this example, the image
-                     TopRate.png is a 180 by 200 pixel image that contains the text,
-                     "19.3% APR Typical Variable." 
-                  </p><pre xml:space="preserve"> The CSS contains: 
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p> In the following example, part of the content is contained in an
+                        image that is presented by CSS alone. In this example, the image
+                        TopRate.png is a 180 by 200 pixel image that contains the text,
+                        "19.3% APR Typical Variable." 
+                     </p><pre xml:space="preserve"> The CSS contains: 
 p#bestinterest {
   padding-left: 200px;
   background: transparent url(/images/TopRate.png) no-repeat top left;
@@ -102,13 +109,13 @@ p#bestinterest {
 &lt;p id="bestinterest"&gt;
   Where else would you find a better interest rate?
 &lt;/p&gt;</pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p> A book distributor uses background images to provide icons against a
-                     list of book titles to indicate whether they are new, limited,
-                     in-stock, or out of stock. 
-                  </p>
-                  <p>The CSS contains: </p><pre xml:space="preserve">
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p> A book distributor uses background images to provide icons against a
+                        list of book titles to indicate whether they are new, limited,
+                        in-stock, or out of stock. 
+                     </p>
+                     <p>The CSS contains: </p><pre xml:space="preserve">
 ul#booklist li {
   padding-left: 20px;
 }
@@ -135,11 +142,11 @@ ul#booklist li.outstock {
   ...
   &lt;li class="outstock"&gt;A book you actually want &lt;/li&gt;
 &lt;/ul&gt;</pre></section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>Using the code from example 1, the same background image is declared in the HTML style
-                     attribute:
-                  </p><pre xml:space="preserve">&lt;p id="bestinterest" style="background: transparent url(/images/TopRate.png) no-repeat top left;" &gt;
+                  <section class="example" id="example-3">
+                     <h3>Example 3</h3>
+                     <p>Using the code from example 1, the same background image is declared in the HTML style
+                        attribute:
+                     </p><pre xml:space="preserve">&lt;p id="bestinterest" style="background: transparent url(/images/TopRate.png) no-repeat top left;" &gt;
 Where else would you find a better interest rate?
 &lt;p&gt;</pre><p>In the following code, the background image declaration is created in a client script:</p><pre xml:space="preserve">&lt;script type="text/javascript"&gt;
 var newP = document.createElement('p');
@@ -148,44 +155,53 @@ newP.appendChild(newPText);
 newP.style.background = 'transparent url(/images/TopRate.png) no-repeat top left';
 document.body.appendChild(newP);
 &lt;/script&gt; </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p> All technologies that support CSS. </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p> All technologies that support CSS. </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Examine all images added to the content via CSS, HTML style attributes, or dynamically
-                        in script as background images. 
-                     </li>
+                     <ol>
+                        
+                        <li> Examine all images added to the content via CSS, HTML style attributes, or dynamically
+                           in script as background images. 
+                        </li>
+                        
+                        <li> Check that the images do not convey important information. </li>
+                        
+                        <li>If an image does convey important information,  the information is
+                           provided to assistive technologies and is also available when the CSS image is
+                           not displayed.  
+                        </li>
+                        
+                     </ol>
                      
-                     <li> Check that the images do not convey important information. </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>If an image does convey important information,  the information is
-                        provided to assistive technologies and is also available when the CSS image is
-                        not displayed.  
-                     </li>
+                     <ul>
+                        
+                        <li> If step #2 and step #3 are both false, then this failure condition applies and the
+                           content fails this Success Criterion. 
+                        </li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li> If step #2 and step #3 are both false, then this failure condition applies and the
-                        content fails this Success Criterion. 
-                     </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -193,7 +209,7 @@ document.body.appendChild(newP);
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -213,7 +229,7 @@ document.body.appendChild(newP);
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

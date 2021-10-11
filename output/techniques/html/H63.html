@@ -56,68 +56,75 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to associate header cells with data cells in complex
-                  tables using the
-                  <code class="att">scope</code> attribute. The <code class="att">scope</code> attribute may be used to clarify
-                  the scope of any cell used as a header. The scope identifies whether the cell is a
-                  header for a row, column, or group of rows or columns. The values row,
-                  col, rowgroup, and colgroup identify these
-                  possible scopes respectively.
-               </p>
-               <p>For simple data tables where the header is not in the first row or column, like the
-                  one
-                  in Example 1, this technique can be used. Based on screen reader support today, its
-                  use
-                  is suggested in two situations both relating to simple tables:
-               </p>
-               <ul>
-                  
-                  <li>data cells marked up with <code class="el">td</code> that also function as row header or column
-                     header 
-                  </li>
-                  
-                  <li>header cells marked up with <code class="el">td</code> instead of <code class="el">th</code>. Sometimes, authors
-                     use this to avoid the display characteristics associated with <code class="el">th</code> and also
-                     do not choose to use CSS to control the display for <code class="el">th</code>. 
-                  </li>
-                  
-               </ul>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to associate header cells with data cells in complex
+                     tables using the
+                     <code class="att">scope</code> attribute. The <code class="att">scope</code> attribute may be used to clarify
+                     the scope of any cell used as a header. The scope identifies whether the cell is a
+                     header for a row, column, or group of rows or columns. The values row,
+                     col, rowgroup, and colgroup identify these
+                     possible scopes respectively.
+                  </p>
+                  <p>For simple data tables where the header is not in the first row or column, like the
+                     one
+                     in Example 1, this technique can be used. Based on screen reader support today, its
+                     use
+                     is suggested in two situations both relating to simple tables:
+                  </p>
+                  <ul>
                      
-                     <p>For simple tables that have the headers in the first row or column then it is
-                        sufficient to simply use the TH elements without scope. 
-                     </p>
+                     <li>data cells marked up with <code class="el">td</code> that also function as row header or column
+                        header 
+                     </li>
                      
-                     <p>For complex tables use ids and headers as in <a href="#H43"></a>. 
-                     </p>
+                     <li>header cells marked up with <code class="el">td</code> instead of <code class="el">th</code>. Sometimes, authors
+                        use this to avoid the display characteristics associated with <code class="el">th</code> and also
+                        do not choose to use CSS to control the display for <code class="el">th</code>. 
+                     </li>
                      
-                     <p>Some users may find it easier to work with several simple tables than one more complex
-                        table. Authors may wish to consider whether they can convert complex tables to one
-                        or more simple tables.
-                     </p>
-                     
+                  </ul>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>For simple tables that have the headers in the first row or column then it is
+                           sufficient to simply use the TH elements without scope. 
+                        </p>
+                        
+                        <p>For complex tables use ids and headers as in <a href="#H43"></a>. 
+                        </p>
+                        
+                        <p>Some users may find it easier to work with several simple tables than one more complex
+                           table. Authors may wish to consider whether they can convert complex tables to one
+                           or more simple tables.
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-a-simple-schedule">
-                  <h3>Example 1: A simple schedule</h3>
-                  <p>In the following example, column #1 contains serial numbers for rows in the table
-                     and the second column contains the key value for the row. The cells in the second
-                     column may then use 
-                     									<code class="att">scope</code>="row". The cells in the first row too are
-                     marked up with <code class="el">td</code> and use 
-                     									<code class="att">scope</code>="col". 
-                  </p><pre xml:space="preserve"> &lt;table border="1"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-a-simple-schedule">
+                     <h3>Example 1: A simple schedule</h3>
+                     <p>In the following example, column #1 contains serial numbers for rows in the table
+                        and the second column contains the key value for the row. The cells in the second
+                        column may then use 
+                        									<code class="att">scope</code>="row". The cells in the first row too are
+                        marked up with <code class="el">td</code> and use 
+                        									<code class="att">scope</code>="col". 
+                     </p><pre xml:space="preserve"> &lt;table border="1"&gt;
   &lt;caption&gt;Contact Information&lt;/caption&gt;
   &lt;tr&gt;
     &lt;td&gt;&lt;/td&gt;
@@ -145,44 +152,53 @@
     &lt;td&gt;Houston&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt; </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For each data table: </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that all <code class="el">th</code> elements have a <code class="att">scope</code> attribute.
-                     </li>
+                     <p>For each data table: </p>
                      
-                     <li>Check that all <code class="el">td</code> elements that act as headers for other elements
-                        have a <code class="att">scope</code> attribute.
-                     </li>
+                     <ol>
+                        
+                        <li>Check that all <code class="el">th</code> elements have a <code class="att">scope</code> attribute.
+                        </li>
+                        
+                        <li>Check that all <code class="el">td</code> elements that act as headers for other elements
+                           have a <code class="att">scope</code> attribute.
+                        </li>
+                        
+                        <li>Check that all <code class="att">scope</code> attributes have the value row,
+                           col, rowgroup, or colgroup.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check that all <code class="att">scope</code> attributes have the value row,
-                        col, rowgroup, or colgroup.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>All checks above are true.</li>
+                        
+                     </ul>
                      
-                     <li>All checks above are true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -190,7 +206,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -231,7 +247,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

@@ -58,100 +58,116 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/visual-presentation">1.4.8: Visual Presentation</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>Some Web pages use colors to identify different groupings. The objective of this technique
-                  is to allow users to select specific color combinations for the text and background
-                  of the main content while retaining visual clues to the groupings and organization
-                  of the web page. When a user overrides the foreground and background colors of all
-                  the text on a page, visual clues to the grouping and organization of the Web page
-                  may be lost, making it much more difficult to understand and use. 
-               </p>
-               <p>When an author does not specify the colors of the text and background of the main
-                  content, it is possible to change the colors of those regions in the browser without
-                  the need to override the colors with a user style sheet. Specifying the text and background
-                  colors of secondary content means that the browser will not override those colors.
-               </p>
-               <p>With this technique the author uses the default text color and background color of
-                  the main area. As a result the colors are completely determined by the user agent
-                  via the user's color preferences. The user can ensure that the color selection best
-                  meets his needs and provides the best reading experience. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>Some Web pages use colors to identify different groupings. The objective of this technique
+                     is to allow users to select specific color combinations for the text and background
+                     of the main content while retaining visual clues to the groupings and organization
+                     of the web page. When a user overrides the foreground and background colors of all
+                     the text on a page, visual clues to the grouping and organization of the Web page
+                     may be lost, making it much more difficult to understand and use. 
+                  </p>
+                  <p>When an author does not specify the colors of the text and background of the main
+                     content, it is possible to change the colors of those regions in the browser without
+                     the need to override the colors with a user style sheet. Specifying the text and background
+                     colors of secondary content means that the browser will not override those colors.
+                  </p>
+                  <p>With this technique the author uses the default text color and background color of
+                     the main area. As a result the colors are completely determined by the user agent
+                     via the user's color preferences. The user can ensure that the color selection best
+                     meets his needs and provides the best reading experience. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>An HTML Web page uses CSS to specify the text and background colors of all secondary
-                     content such as navigation bars, menu bars, and the table of contents. Neither the
-                     text color nor background of the main content is specified. The user sets their own
-                     color preferences in the browser so that they view the main content in colors and
-                     contrasts that work well for them. The distinction between the separate sections of
-                     the page are still visually obvious. 
-                  </p>
-               </section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>A music magazine has an article that is blue text on a white background. The site
-                     provides a link near the beginning of the page which assigns a different style sheet
-                     to the page. The new style sheet does not have any colors specified for the text or
-                     background.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>An HTML Web page uses CSS to specify the text and background colors of all secondary
+                        content such as navigation bars, menu bars, and the table of contents. Neither the
+                        text color nor background of the main content is specified. The user sets their own
+                        color preferences in the browser so that they view the main content in colors and
+                        contrasts that work well for them. The distinction between the separate sections of
+                        the page are still visually obvious. 
+                     </p>
+                  </section>
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>A music magazine has an article that is blue text on a white background. The site
+                        provides a link near the beginning of the page which assigns a different style sheet
+                        to the page. The new style sheet does not have any colors specified for the text or
+                        background.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Pages that use CSS.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Pages that use CSS.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>
+                     <ol>
                         
-                        <p>Change the text, link and background colors in the browser settings so they are different
-                           from the default color and different from those specified in the secondary content.
-                        </p>
-                        
-                        <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                           <div>
-                              
-                              <p>Do not select the option that tells the browser to ignore the colors specified in
-                                 the page. 
-                              </p>
-                              
+                        <li>
+                           
+                           <p>Change the text, link and background colors in the browser settings so they are different
+                              from the default color and different from those specified in the secondary content.
+                           </p>
+                           
+                           <div class="note">
+                              <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                              <div>
+                                 
+                                 <p>Do not select the option that tells the browser to ignore the colors specified in
+                                    the page. 
+                                 </p>
+                                 
+                              </div>
                            </div>
-                        </div>
+                           
+                        </li>
                         
-                     </li>
+                        <li>Check that the main content uses the new text, link and background colors. </li>
+                        
+                        <li>Check that the colors of the text, links and backgrounds in the secondary content
+                           has not changed. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check that the main content uses the new text, link and background colors. </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that the colors of the text, links and backgrounds in the secondary content
-                        has not changed. 
-                     </li>
+                     <ul>
+                        
+                        <li>Checks #2 and #3 are true. </li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Checks #2 and #3 are true. </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -159,7 +175,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -191,7 +207,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

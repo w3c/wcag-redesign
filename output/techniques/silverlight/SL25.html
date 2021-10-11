@@ -56,52 +56,59 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a></span>.
                   </p>
                   <p><em>Note: Microsoft has stopped updating and distributing Silverlight, and authors are
                         encouraged to use HTML for accessible web content.</em></p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to use the combination of Silverlight
-                  				control activation and programmatic focus to enable the user to skip
-                  				regions of content in a Silverlight application user interface. 
-               </p>
-               <p>The control that the user activates should clearly indicate that its
-                  				purpose is to skip content, so that the resulting programmatic focus
-                  				shift is not interpreted as an undesired change of context. 
-               </p>
-               <p>The object to call focus to (the receiver of focus after the user-initiated
-                  				action is triggered) has to be a <code class="obj">Control</code> in the Silverlight
-                  				programming model. This is because the Focus method
-                  				must be called on the target, and therefore the target must inherit
-                  				the <code class="obj">Control</code> class. So, an application author might
-                  				call focus to a read-only <code class="obj">TextBox</code>, or perhaps a <code class="obj">RichTextBox</code>,
-                  				depending on the purpose of the Silverlight application and its user
-                  				interface design. You can also focus a <code class="obj">UserControl</code>,
-                  				for cases where the area to call focus to represents a custom control
-                  				implementation. 
-               </p>
-               <section id="-setting-tabindex-not-recommended-">
-                  
-                  <h3> Setting TabIndex (not recommended) </h3>
-                  
-                  <p>Silverlight provides a <code class="prop">TabIndex</code> attribute that can
-                     					be used to override the default-generated tab sequence. Do not attempt
-                     					to adjust tab index as a technique for getting past content blocks.
-                     					Doing so will create a focus order that does not match the apparent
-                     					visual order, as described in <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order">SC
-                        					2.4.3</a>. 
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to use the combination of Silverlight
+                     				control activation and programmatic focus to enable the user to skip
+                     				regions of content in a Silverlight application user interface. 
                   </p>
-                  
-               </section>
+                  <p>The control that the user activates should clearly indicate that its
+                     				purpose is to skip content, so that the resulting programmatic focus
+                     				shift is not interpreted as an undesired change of context. 
+                  </p>
+                  <p>The object to call focus to (the receiver of focus after the user-initiated
+                     				action is triggered) has to be a <code class="obj">Control</code> in the Silverlight
+                     				programming model. This is because the Focus method
+                     				must be called on the target, and therefore the target must inherit
+                     				the <code class="obj">Control</code> class. So, an application author might
+                     				call focus to a read-only <code class="obj">TextBox</code>, or perhaps a <code class="obj">RichTextBox</code>,
+                     				depending on the purpose of the Silverlight application and its user
+                     				interface design. You can also focus a <code class="obj">UserControl</code>,
+                     				for cases where the area to call focus to represents a custom control
+                     				implementation. 
+                  </p>
+                  <section id="-setting-tabindex-not-recommended-">
+                     
+                     <h3> Setting TabIndex (not recommended) </h3>
+                     
+                     <p>Silverlight provides a <code class="prop">TabIndex</code> attribute that can
+                        					be used to override the default-generated tab sequence. Do not attempt
+                        					to adjust tab index as a technique for getting past content blocks.
+                        					Doing so will create a focus order that does not match the apparent
+                        					visual order, as described in <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order">SC
+                           					2.4.3</a>. 
+                     </p>
+                     
+                  </section>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-user-enabled-control-that-programmatically-sets-focus">
-                  <h3>Example 1: User-enabled control that programmatically sets focus</h3>
-                  <p>The following is the XAML for the user interface. </p><pre xml:space="preserve">   &lt;StackPanel Name="LayoutRoot"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-user-enabled-control-that-programmatically-sets-focus">
+                     <h3>Example 1: User-enabled control that programmatically sets focus</h3>
+                     <p>The following is the XAML for the user interface. </p><pre xml:space="preserve">   &lt;StackPanel Name="LayoutRoot"&gt;
        &lt;Button Name="bypassbtn1" Click="bypassbtn1_Click"&gt;Skip menus, go to main page content&lt;/Button&gt;
        &lt;!intervening content--&gt;
        &lt;StackPanel&gt;
@@ -115,46 +122,55 @@
            rtb_MainContent.Focus();
        }
 </pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-programmatic-focus/">working example of Programmatic Focus</a>.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <ul id="silverlight.applicability.general">
-                  
-                  <li> Microsoft Silverlight, versions 3 and greater </li>
-                  
-                  <li> Silverlight managed programming model and Silverlight XAML </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <ul id="silverlight.applicability.general">
+                     
+                     <li> Microsoft Silverlight, versions 3 and greater </li>
+                     
+                     <li> Silverlight managed programming model and Silverlight XAML </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Open the test HTML page for a Silverlight application. </li>
+                     <ol>
+                        
+                        <li> Open the test HTML page for a Silverlight application. </li>
+                        
+                        <li> Check for a control that indicates that activating that control
+                           					can skip to some particular region of the content. 
+                        </li>
+                        
+                        <li> Activate that control. Verify that activating the control causes
+                           						focus to go to that region, and that a repeated block or blocks of
+                           						content are skipped. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li> Check for a control that indicates that activating that control
-                        					can skip to some particular region of the content. 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li> Activate that control. Verify that activating the control causes
-                        						focus to go to that region, and that a repeated block or blocks of
-                        						content are skipped. 
-                     </li>
+                     <p>#2 and #3 are true. </p>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <p>#2 and #3 are true. </p>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -162,7 +178,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -201,7 +217,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

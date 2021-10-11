@@ -57,38 +57,45 @@
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide a mechanism for users to select a preference
-                  for an alternate conforming version of a Web page.
-               </p>
-               <p>Providing preferences to allow users to view conforming alternate versions can be
-                  accomplished in several ways. One common method is to provide a link which triggers
-                  a server-side process that sets a session or persistent cookie that the Web server
-                  uses to modify the page or redirect the user to the alternate version. Other methods
-                  include providing user-specific choices that are stored as part of the user's login
-                  information for a system where users sign in to access a Web page or service. 
-               </p>
-               <p>Users requiring an alternate version will need the mechanism provided in the non-conforming
-                  page to be accessible in order to find and use it. The mechanism itself should conform
-                  to the accessibility level being claimed. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide a mechanism for users to select a preference
+                     for an alternate conforming version of a Web page.
+                  </p>
+                  <p>Providing preferences to allow users to view conforming alternate versions can be
+                     accomplished in several ways. One common method is to provide a link which triggers
+                     a server-side process that sets a session or persistent cookie that the Web server
+                     uses to modify the page or redirect the user to the alternate version. Other methods
+                     include providing user-specific choices that are stored as part of the user's login
+                     information for a system where users sign in to access a Web page or service. 
+                  </p>
+                  <p>Users requiring an alternate version will need the mechanism provided in the non-conforming
+                     page to be accessible in order to find and use it. The mechanism itself should conform
+                     to the accessibility level being claimed. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-setting-a-session-or-persistent-cookie-to-store-a-user-preference-">
-                  <h3>Example 1: Setting a session or persistent cookie to store a user preference </h3>
-                  <p>A Web site offers a link to a "preferences" page on pages within the site. On this
-                     page, there is an option to view an alternate version of the site. There may be various
-                     aspects of the page that are affected, or the user may be opting to view an entirely
-                     alternate version of the site. The preference may be to display a version of the site
-                     where video included on the site displays captioning, or it may be offered because
-                     the primary site contains accessibility conformance issues that are addressed only
-                     via the alternative. 
-                  </p>
-                  <p>A Web page author may choose to handle this preference via a cookie, which may be
-                     handled via a server-side scripting language such as PHP.
-                  </p>
-                  <p>The preferences page may be offered as follows: </p><pre xml:space="preserve"> &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-setting-a-session-or-persistent-cookie-to-store-a-user-preference-">
+                     <h3>Example 1: Setting a session or persistent cookie to store a user preference </h3>
+                     <p>A Web site offers a link to a "preferences" page on pages within the site. On this
+                        page, there is an option to view an alternate version of the site. There may be various
+                        aspects of the page that are affected, or the user may be opting to view an entirely
+                        alternate version of the site. The preference may be to display a version of the site
+                        where video included on the site displays captioning, or it may be offered because
+                        the primary site contains accessibility conformance issues that are addressed only
+                        via the alternative. 
+                     </p>
+                     <p>A Web page author may choose to handle this preference via a cookie, which may be
+                        handled via a server-side scripting language such as PHP.
+                     </p>
+                     <p>The preferences page may be offered as follows: </p><pre xml:space="preserve"> &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
   &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
       &lt;head&gt;
       &lt;title&gt;Site Preferences&lt;/title&gt;
@@ -106,16 +113,16 @@
       &lt;/form&gt;
   &lt;/body&gt;
   &lt;/html&gt;</pre><p>The form is submitted to the pref.php file for processing. A cookie is set, and in
-                     this simple example the user's browser is directed to the site home page.
-                  </p>
-                  <p>pref.php: </p><pre xml:space="preserve">&lt;?php
+                        this simple example the user's browser is directed to the site home page.
+                     </p>
+                     <p>pref.php: </p><pre xml:space="preserve">&lt;?php
     if(isset($site_pref)) {
         setcookie("site_pref",$site_pref, time() + (86400 * 30)); //set for 30 days
         header("location: http://www.example.com"); //redirects to home page
     }
 ?&gt;
 </pre><p>The home page starts with code that implements the user's preference. </p>
-                  <p>index.php: </p><pre xml:space="preserve">&lt;?
+                     <p>index.php: </p><pre xml:space="preserve">&lt;?
 if(isset($site_pref)) {
 	if($site_pref="axx") {
 	header("location: ./accessible/index.php");
@@ -126,48 +133,57 @@ if(isset($site_pref)) {
 &lt;head&gt;
 ...
 </pre><p>For a login-based system, the preference is stored in the user's database record and
-                     referred to by the server-side script generating the pages for the user to view. 
-                  </p>
-               </section>
+                        referred to by the server-side script generating the pages for the user to view. 
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Content created using server-side scripting to store preferences.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Content created using server-side scripting to store preferences.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Change a preference for how pages on the site are displayed. </li>
+                     <ol>
+                        
+                        <li>Change a preference for how pages on the site are displayed. </li>
+                        
+                        <li>Check that the preference itself or a link to that page where it can be set can be
+                           reached from each non-conforming page. 
+                        </li>
+                        
+                        <li>Check that Web pages are displayed according to the selected preference. </li>
+                        
+                        <li>Check that when the preference(s) are set, the Web page conforms as claimed. </li>
+                        
+                        <li>Verify that the resulting page is a conforming alternate version for the original
+                           page. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check that the preference itself or a link to that page where it can be set can be
-                        reached from each non-conforming page. 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that Web pages are displayed according to the selected preference. </li>
+                     <ul>
+                        
+                        <li>Checks #2 and #3 are true. </li>
+                        
+                     </ul>
                      
-                     <li>Check that when the preference(s) are set, the Web page conforms as claimed. </li>
-                     
-                     <li>Verify that the resulting page is a conforming alternate version for the original
-                        page. 
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Checks #2 and #3 are true. </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -175,7 +191,7 @@ if(isset($site_pref)) {
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -207,7 +223,7 @@ if(isset($site_pref)) {
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

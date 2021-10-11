@@ -53,99 +53,115 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/visual-presentation">1.4.8: Visual Presentation</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to include a control on a Web page or set of Web
-                  pages that allows users to specify preferred foreground and background colors for
-                  the content. This technique can be implemented using any technology that allows users
-                  to store preferences that can be used across pages. Using this technique, an author
-                  includes a color picker control on the site which allows users to select and save
-                  foreground and background color preferences for use on other pages in a site. Pages
-                  are designed to look for these preferences and adapt accordingly when saved settings
-                  are found.
-               </p>
-               <p>Many users with cognitive disabilities have trouble with standard black text on a
-                  white background. Sometimes, they can read the text a lot better using different colors
-                  for the text and background and sometimes these color combinations are very specific
-                  and not what would be expected by someone else (for instance brown on blue).
-               </p>
-               <p>Some of these users will have difficulty setting colors using the browser's color
-                  settings or the operating systems color settings. Providing a tool on the web page
-                  that provides a wide range of foreground and background colors will allow them to
-                  easily change the colors without digging into the browser settings.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to include a control on a Web page or set of Web
+                     pages that allows users to specify preferred foreground and background colors for
+                     the content. This technique can be implemented using any technology that allows users
+                     to store preferences that can be used across pages. Using this technique, an author
+                     includes a color picker control on the site which allows users to select and save
+                     foreground and background color preferences for use on other pages in a site. Pages
+                     are designed to look for these preferences and adapt accordingly when saved settings
+                     are found.
+                  </p>
+                  <p>Many users with cognitive disabilities have trouble with standard black text on a
+                     white background. Sometimes, they can read the text a lot better using different colors
+                     for the text and background and sometimes these color combinations are very specific
+                     and not what would be expected by someone else (for instance brown on blue).
+                  </p>
+                  <p>Some of these users will have difficulty setting colors using the browser's color
+                     settings or the operating systems color settings. Providing a tool on the web page
+                     that provides a wide range of foreground and background colors will allow them to
+                     easily change the colors without digging into the browser settings.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The user may type hex values into the text fields. The "pick" link will open a color
-                     selection tool for the adjoining field.
-                  </p>
-                  <figure id="figure-fg-bg-controls">
-                     	<img src="img/colorpicker.jpg" />
-                     	
-                     <figcaption>Figure 1 Screenshot showing the foreground and background color controls, which are text fields
-                        containing hex values. Each field has a link which opens a color picker control positioned
-                        between the label and the text field.
-                     </figcaption>
-                     
-                  </figure>
-                  <p>The color selection tool opened for selecting a color.</p>
-                  <figure id="figure-color-selection-tool">
-                     	<img src="img/opencolorpicker.jpg" />
-                     	
-                     <figcaption>Figure 2 Screenshot showing the color selection tool with the color picker opened to select
-                        a color for the foreground. The user is presented with a choice of 216 colors.
-                     </figcaption>
-                     
-                  </figure>
-                  <p class="working-example">Here is a working example of this technique implemented using PHP, Javascript, CSS
-                     and XHTML:
-                     <a href="../../working-examples/colour-picker/">Color Picker Example</a>.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The user may type hex values into the text fields. The "pick" link will open a color
+                        selection tool for the adjoining field.
+                     </p>
+                     <figure id="figure-fg-bg-controls">
+                        	<img src="img/colorpicker.jpg" />
+                        	
+                        <figcaption>Figure 1 Screenshot showing the foreground and background color controls, which are text fields
+                           containing hex values. Each field has a link which opens a color picker control positioned
+                           between the label and the text field.
+                        </figcaption>
+                        
+                     </figure>
+                     <p>The color selection tool opened for selecting a color.</p>
+                     <figure id="figure-color-selection-tool">
+                        	<img src="img/opencolorpicker.jpg" />
+                        	
+                        <figcaption>Figure 2 Screenshot showing the color selection tool with the color picker opened to select
+                           a color for the foreground. The user is presented with a choice of 216 colors.
+                        </figcaption>
+                        
+                     </figure>
+                     <p class="working-example">Here is a working example of this technique implemented using PHP, Javascript, CSS
+                        and XHTML:
+                        <a href="../../working-examples/colour-picker/">Color Picker Example</a>.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology that allows users to store preferences for reuse on other pages.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology that allows users to store preferences for reuse on other pages.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that there is a control on the page that is identified as a color selection
-                        tool.
-                     </li>
+                     <ol>
+                        
+                        <li>Check that there is a control on the page that is identified as a color selection
+                           tool.
+                        </li>
+                        
+                        <li>Check that the color selection tool provides a variety of colors choices for the text
+                           and background.
+                        </li>
+                        
+                        <li>Select new colors for the text and background using the tool.</li>
+                        
+                        <li>Check that the content is updated to use the selected color combinations.</li>
+                        
+                     </ol>
                      
-                     <li>Check that the color selection tool provides a variety of colors choices for the text
-                        and background.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Select new colors for the text and background using the tool.</li>
+                     <ul>
+                        
+                        <li>Checks #1 and #4 are true.</li>
+                        
+                     </ul>
                      
-                     <li>Check that the content is updated to use the selected color combinations.</li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Checks #1 and #4 are true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -153,7 +169,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -173,7 +189,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

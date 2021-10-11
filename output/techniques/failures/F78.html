@@ -58,71 +58,87 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						a <strong>Failure</strong> of <a href="/understanding/distinguishable">1.4: Distinguishable</a> and a <strong>Failure</strong> of <a href="/understanding/navigable">2.4: Navigable</a>
+                     						a <strong>Failure</strong> of <a href="/understanding/non-text-contrast">1.4.11: Non-text Contrast</a> and a <strong>Failure</strong> of <a href="/understanding/focus-visible">2.4.7: Focus Visible</a> and a <strong>Failure</strong> of <a href="/understanding/focus-appearance-enhanced">2.4.12: Focus Appearance (Enhanced)</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This describes a failure condition that occurs when the user agent's default visual
-                  indication of keyboard focus is turned off or rendered non-visible by other styling
-                  on the page without providing an author-supplied visual focus indicator. Turning off
-                  the focus indicator instructs the user agent not to present the focus indicator. Other
-                  styling may make it difficult to see the focus indicator even though it is present,
-                  such as outlines that look the same as the focus outline, or thick borders that are
-                  the same color as the focus indicator so it cannot be seen against them.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This describes a failure condition that occurs when the user agent's default visual
+                     indication of keyboard focus is turned off or rendered non-visible by other styling
+                     on the page without providing an author-supplied visual focus indicator. Turning off
+                     the focus indicator instructs the user agent not to present the focus indicator. Other
+                     styling may make it difficult to see the focus indicator even though it is present,
+                     such as outlines that look the same as the focus outline, or thick borders that are
+                     the same color as the focus indicator so it cannot be seen against them.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-the-focus-indicator-is-turned-off-with-css">
-                  <h3>Example 1: The focus indicator is turned off with CSS</h3>
-                  <p>The following CSS example will remove the default focus indicator, which fails the
-                     requirement to provide a visible focus indicator.
-                  </p><pre xml:space="preserve">:focus {outline: none}</pre></section>
-               <section class="example" id="example-2-the-outline-of-elements-is-visually-similar-to-the-focus-indicator">
-                  <h3>Example 2: The outline of elements is visually similar to the focus indicator</h3>
-                  <p>The following CSS example will create an outline around links that looks the same
-                     as the focus indicator. This makes it impossible for users to determine which one
-                     in fact has the focus, even though the user agent does draw the focus indicator.
-                  </p><pre xml:space="preserve">a {outline: thin dotted black}</pre></section>
-               <section class="example" id="example-3-elements-have-a-border-that-occludes-the-focus-indicator">
-                  <h3>Example 3: Elements have a border that occludes the focus indicator</h3>
-                  <p>The following CSS example creates a border around links that does not have enough
-                     contrast for the focus indicator to be seen when drawn on top of it. In this case
-                     the focus indicator is drawn just ouside the border, but as both are black and the
-                     border is thicker than the focus indicator, it no longer meets the definition of "visible".
-                  </p><pre xml:space="preserve">a {border: medium solid black}</pre></section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-the-focus-indicator-is-turned-off-with-css">
+                     <h3>Example 1: The focus indicator is turned off with CSS</h3>
+                     <p>The following CSS example will remove the default focus indicator, which fails the
+                        requirement to provide a visible focus indicator.
+                     </p><pre xml:space="preserve">:focus {outline: none}</pre></section>
+                  <section class="example" id="example-2-the-outline-of-elements-is-visually-similar-to-the-focus-indicator">
+                     <h3>Example 2: The outline of elements is visually similar to the focus indicator</h3>
+                     <p>The following CSS example will create an outline around links that looks the same
+                        as the focus indicator. This makes it impossible for users to determine which one
+                        in fact has the focus, even though the user agent does draw the focus indicator.
+                     </p><pre xml:space="preserve">a {outline: thin dotted black}</pre></section>
+                  <section class="example" id="example-3-elements-have-a-border-that-occludes-the-focus-indicator">
+                     <h3>Example 3: Elements have a border that occludes the focus indicator</h3>
+                     <p>The following CSS example creates a border around links that does not have enough
+                        contrast for the focus indicator to be seen when drawn on top of it. In this case
+                        the focus indicator is drawn just ouside the border, but as both are black and the
+                        border is thicker than the focus indicator, it no longer meets the definition of "visible".
+                     </p><pre xml:space="preserve">a {border: medium solid black}</pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Set the focus to all focusable elements on a page using the keyboard.</li>
+                     <ol>
+                        
+                        <li>Set the focus to all focusable elements on a page using the keyboard.</li>
+                        
+                        <li>Check that the focus indicator is visible.</li>
+                        
+                     </ol>
                      
-                     <li>Check that the focus indicator is visible.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>#2 is true.</li>
+                        
+                     </ul>
                      
-                     <li>#2 is true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -130,7 +146,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -150,7 +166,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

@@ -60,54 +60,61 @@
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to ensure that users can obtain an accessible version
-                  of content where both non-conforming and conforming versions are provided.
-               </p>
-               <p>
-                  <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conf-req1">Conformance Requirement 1</a> allows non-conforming pages to be included within the scope of conformance as long
-                  as they have a "<a href="https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version">conforming alternate version</a>". It is not always possible for authors to include accessibility supported links
-                  to conforming content from within non-conforming content. Therefore, authors may need
-                  to rely on the use of Server Side Scripting technologies (ex. PHP, ASP, JSP) to ensure
-                  that the non-conforming version can only be reached from a conforming page.
-               </p>
-               <p>This technique describes how to use information provided by the HTTP referer to ensure
-                  that non-conforming content can only be reached from a conforming page. The HTTP referer
-                  header is set by the user agent and contains the URI of the page (if any) which referred
-                  the user agent to the non-conforming page.
-               </p>
-               <p>To implement this technique, an author identifies the URI for the conforming version
-                  of the content, for each non-conforming page. When a request for the non-conforming
-                  version of a page is received, the server compares the value of the HTTP referer header
-                  against the URI of the conforming version to determine whether the link to the non-conforming
-                  version came from the conforming version. The non-conforming version is only served
-                  if the HTTP referer matches the URI of the non-conforming version. Otherwise, the
-                  user is redirected to the conforming version of the content. Note that when comparing
-                  the URI in the HTTP referer header, non-relevant variations in the URI, such as in
-                  the query and target, should be taken into account.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to ensure that users can obtain an accessible version
+                     of content where both non-conforming and conforming versions are provided.
+                  </p>
+                  <p>
+                     <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conf-req1">Conformance Requirement 1</a> allows non-conforming pages to be included within the scope of conformance as long
+                     as they have a "<a href="https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version">conforming alternate version</a>". It is not always possible for authors to include accessibility supported links
+                     to conforming content from within non-conforming content. Therefore, authors may need
+                     to rely on the use of Server Side Scripting technologies (ex. PHP, ASP, JSP) to ensure
+                     that the non-conforming version can only be reached from a conforming page.
+                  </p>
+                  <p>This technique describes how to use information provided by the HTTP referer to ensure
+                     that non-conforming content can only be reached from a conforming page. The HTTP referer
+                     header is set by the user agent and contains the URI of the page (if any) which referred
+                     the user agent to the non-conforming page.
+                  </p>
+                  <p>To implement this technique, an author identifies the URI for the conforming version
+                     of the content, for each non-conforming page. When a request for the non-conforming
+                     version of a page is received, the server compares the value of the HTTP referer header
+                     against the URI of the conforming version to determine whether the link to the non-conforming
+                     version came from the conforming version. The non-conforming version is only served
+                     if the HTTP referer matches the URI of the non-conforming version. Otherwise, the
+                     user is redirected to the conforming version of the content. Note that when comparing
+                     the URI in the HTTP referer header, non-relevant variations in the URI, such as in
+                     the query and target, should be taken into account.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-interactive-demonstrations-of-physical-processes">
-                  <h3>Example 1: Interactive demonstrations of physical processes</h3>
-                  <p>An online physics course uses a proprietary modeling language to provide interactive
-                     demonstrations of physical processes. The user agent for the modeling language is
-                     not compatible with assistive technology. The site includes a script that uses the
-                     HTTP referer to ensure that unless users attempt to access the interactive demonstration
-                     from a page that contains a conforming description of the process and models, the
-                     server redirects the request to a conforming page which contains a link to the non-conforming
-                     version. Students may choose to access the non-conforming, interactive version, but
-                     those who do not are still able to learn about the process.
-                  </p>
-               </section>
-               <section class="example" id="example-2-using-http-referer-in-php">
-                  <h3>Example 2: Using Http referer in PHP</h3>
-                  <p>The following example illustrates how this technique can be used in PHP. It includes
-                     two files, conforming.php and non-conforming.php which work together to ensure that
-                     the only way to access non-conforming content is from conforming content.
-                  </p>
-                  <p>conforming.php:</p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-interactive-demonstrations-of-physical-processes">
+                     <h3>Example 1: Interactive demonstrations of physical processes</h3>
+                     <p>An online physics course uses a proprietary modeling language to provide interactive
+                        demonstrations of physical processes. The user agent for the modeling language is
+                        not compatible with assistive technology. The site includes a script that uses the
+                        HTTP referer to ensure that unless users attempt to access the interactive demonstration
+                        from a page that contains a conforming description of the process and models, the
+                        server redirects the request to a conforming page which contains a link to the non-conforming
+                        version. Students may choose to access the non-conforming, interactive version, but
+                        those who do not are still able to learn about the process.
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-using-http-referer-in-php">
+                     <h3>Example 2: Using Http referer in PHP</h3>
+                     <p>The following example illustrates how this technique can be used in PHP. It includes
+                        two files, conforming.php and non-conforming.php which work together to ensure that
+                        the only way to access non-conforming content is from conforming content.
+                     </p>
+                     <p>conforming.php:</p><pre xml:space="preserve">
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 	"https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
@@ -148,60 +155,69 @@ header("Location: conforming.php");
 }
 ?&gt;					
     				</pre><p class="working-example">A working example, <a href="../../working-examples/server-referrer-access-nonconforming/non-conforming.php">Conforming content</a>, is available.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Content created using server-side scripting where a conforming version of content
-                  is provided as an alternative to a non-conforming version based on HTTP Referer.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Content created using server-side scripting where a conforming version of content
+                     is provided as an alternative to a non-conforming version based on HTTP Referer.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>Where WCAG-conforming alternatives are provided for non-conforming content:</p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Identify pages that do not conform to WCAG at the conformance Level claimed where
-                        accessible alternatives are served based on HTTP Referrer.
-                     </li>
+                     <p>Where WCAG-conforming alternatives are provided for non-conforming content:</p>
                      
-                     <li>Visit the URI of the non-conforming content.</li>
-                     
-                     <li>
+                     <ol>
                         
-                        <p>Verify that the resulting page is one of the following:</p>
+                        <li>Identify pages that do not conform to WCAG at the conformance Level claimed where
+                           accessible alternatives are served based on HTTP Referrer.
+                        </li>
                         
-                        <ol>
-                           
-                           <li>a <a href="/guidelines/#" target="terms">conforming alternate version</a> for the non-conforming content
-                           </li>
-                           
-                           <li>a page that includes a link to both the conforming alternate version and the non-conforming
-                              content
-                           </li>
-                           
-                        </ol>
+                        <li>Visit the URI of the non-conforming content.</li>
                         
-                     </li>
+                        <li>
+                           
+                           <p>Verify that the resulting page is one of the following:</p>
+                           
+                           <ol>
+                              
+                              <li>a <a href="/guidelines/#" target="terms">conforming alternate version</a> for the non-conforming content
+                              </li>
+                              
+                              <li>a page that includes a link to both the conforming alternate version and the non-conforming
+                                 content
+                              </li>
+                              
+                           </ol>
+                           
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check #3.1 or #3.2 is true.</li>
+                     <ul>
+                        
+                        <li>Check #3.1 or #3.2 is true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -209,7 +225,7 @@ header("Location: conforming.php");
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -229,7 +245,7 @@ header("Location: conforming.php");
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

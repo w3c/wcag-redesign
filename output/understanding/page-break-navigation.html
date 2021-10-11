@@ -8,7 +8,7 @@
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Understanding</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -60,98 +60,118 @@
                
             </section>
             <section id="intent">
-               <h2>Intent</h2>
-               <p>The purpose of this success criterion is to allow people using assistive technology
-                  to find references to content based on the <a href="#dfn-page-break-locators">page break locators</a> found in the default view or printed version of a publication.
-               </p>
-               <p>Page numbering has long been a fundamental way to identify and communicate the location
-                  of written content. Page numbers are used constantly in references, footnotes, endnotes,
-                  and bibliographies. Particularly, they are critical in academic and learning environments.
-               </p>
-               <p>Digital publishing has provided valuable access to content for people who are blind,
-                  have low vision, dyslexia or other cognitive disabilities. In order to consume the
-                  information the content may be adapted to use a different  layout, or presented to
-                  them using assistive technology.  If there is no clear way to find a specific page
-                  from the print version that was referenced by a professor in class, because the electronic
-                  version is zoomed-in and that paragraph is on page 145 of the user's version of the
-                  content, the user misses out on valuable and sometimes critical information to understanding
-                  the reference.
-               </p>
-               <p>The scope of this criterion is web content which is part of a <a href="#dfn-web-page">Web page</a>. EPUB can fulfill this definition if it is available to read at a URI. The more common
-                  case that is in scope is an EPUB book converted to be read by a web browser.
-               </p>
-               <p>In publishing, there can be many different editions of a work, e.g. a second edition
-                  or a paperback edition. There is a requirement (separate from accessibility) for metadata
-                  in  digital publications like EPUB to identify the edition of the title of which this
-                  digital version represents. The page break locaters would be aligned with the specified
-                  edition.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>Statically paginated formats (e.g., PDF) where the user agents include a mechanism
-                     to navigate by page typically meet this success criteria by default. The user agents
-                     for the EPUB format also typically provide the navigation mechanism if a page list
-                     is included. Web browsers do not have a standard page navigation mechanism, so for
-                     HTML content with page break locators it is the author responsibility to add that
-                     mechanism.
+               <details>
+                  <summary>
+                     <h2>Intent</h2>
+                  </summary>
+                  <p>The purpose of this success criterion is to allow people using assistive technology
+                     to find references to content based on the <a href="#dfn-page-break-locators">page break locators</a> found in the default view or printed version of a publication.
                   </p>
-               </div>
-               <p>For a Page Break Locator to be a "programmatically determinable destination marker",
-                  it needs to have a role that identifies it as a page break, and a method of determining
-                  which page in a sequence it represents. This would not apply to an element which visually
-                  shows a page number, unless it also has a recognized role. <a href="/techniques/html/H99">H99: Provide page list navigation</a> provides an example of a page break locator.
-               </p>
+                  <p>Page numbering has long been a fundamental way to identify and communicate the location
+                     of written content. Page numbers are used constantly in references, footnotes, endnotes,
+                     and bibliographies. Particularly, they are critical in academic and learning environments.
+                  </p>
+                  <p>Digital publishing has provided valuable access to content for people who are blind,
+                     have low vision, dyslexia or other cognitive disabilities. In order to consume the
+                     information the content may be adapted to use a different  layout, or presented to
+                     them using assistive technology.  If there is no clear way to find a specific page
+                     from the print version that was referenced by a professor in class, because the electronic
+                     version is zoomed-in and that paragraph is on page 145 of the user's version of the
+                     content, the user misses out on valuable and sometimes critical information to understanding
+                     the reference.
+                  </p>
+                  <p>The scope of this criterion is web content which is part of a <a href="#dfn-web-page">Web page</a>. EPUB can fulfill this definition if it is available to read at a URI. The more common
+                     case that is in scope is an EPUB book converted to be read by a web browser.
+                  </p>
+                  <p>In publishing, there can be many different editions of a work, e.g. a second edition
+                     or a paperback edition. There is a requirement (separate from accessibility) for metadata
+                     in  digital publications like EPUB to identify the edition of the title of which this
+                     digital version represents. The page break locaters would be aligned with the specified
+                     edition.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>Statically paginated formats (e.g., PDF) where the user agents include a mechanism
+                        to navigate by page typically meet this success criteria by default. The user agents
+                        for the EPUB format also typically provide the navigation mechanism if a page list
+                        is included. Web browsers do not have a standard page navigation mechanism, so for
+                        HTML content with page break locators it is the author responsibility to add that
+                        mechanism.
+                     </p>
+                  </div>
+                  <p>For a Page Break Locator to be a "programmatically determinable destination marker",
+                     it needs to have a role that identifies it as a page break, and a method of determining
+                     which page in a sequence it represents. This would not apply to an element which visually
+                     shows a page number, unless it also has a recognized role. <a href="/techniques/html/H99">H99: Provide page list navigation</a> provides an example of a page break locator.
+                  </p>
+               </details>
             </section>
             <section id="benefits">
-               <h2>Benefits</h2>
-               <ul>
-                  
-                  <li>People who use a screenreader or adapt the display of the content will still be able
-                     to find their place and find references to content that are based on page numbers
-                     of the print or default version of the publication.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>An electronic publication (EPUB) document includes navigation to page number references
-                     that match the print version of the publication.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="resources">
-               <h2>Related Resources</h2>
-               <p>Resources are for information purposes only, no endorsement implied.</p>
-               <ul>
-                  
-                  <li><a href="https://kb.daisy.org/publishing/docs/navigation/pagelist.html#ex-01">Example page list for an EPUB 3 document</a></li>
-                  
-                  <li><a href="https://w3c.github.io/dpub-aria/#doc-pagebreak">EPUB page breaks</a></li>
-                  
-               </ul>
-            </section>
-            <section id="techniques">
-               <h2>Techniques</h2>
-               <p>Each numbered item in this section represents a technique or combination of techniques
-                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                  it is not necessary to use these particular techniques. For information on using other
-                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-               </p>
-               <section id="sufficient">
-                  <h3>Sufficient Techniques</h3>
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Benefits</h2>
+                  </summary>
+                  <ul>
                      
-                     <li>
-                        <a class="general" href="/techniques/html/H99">H99: Provide page list navigation</a>
-                        
+                     <li>People who use a screenreader or adapt the display of the content will still be able
+                        to find their place and find references to content that are based on page numbers
+                        of the print or default version of the publication.
                      </li>
                      
-                  </ol>
-               </section>
+                  </ul>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <ul>
+                     
+                     <li>An electronic publication (EPUB) document includes navigation to page number references
+                        that match the print version of the publication.
+                     </li>
+                     
+                  </ul>
+               </details>
+            </section>
+            <section id="resources">
+               <details>
+                  <summary>
+                     <h2>Related Resources</h2>
+                  </summary>
+                  <p>Resources are for information purposes only, no endorsement implied.</p>
+                  <ul>
+                     
+                     <li><a href="https://kb.daisy.org/publishing/docs/navigation/pagelist.html#ex-01">Example page list for an EPUB 3 document</a></li>
+                     
+                     <li><a href="https://w3c.github.io/dpub-aria/#doc-pagebreak">EPUB page breaks</a></li>
+                     
+                  </ul>
+               </details>
+            </section>
+            <section id="techniques">
+               <details>
+                  <summary>
+                     <h2>Techniques</h2>
+                  </summary>
+                  <p>Each numbered item in this section represents a technique or combination of techniques
+                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                     it is not necessary to use these particular techniques. For information on using other
+                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+                  </p>
+                  <section id="sufficient">
+                     <h3>Sufficient Techniques</h3>
+                     <ol>
+                        
+                        <li>
+                           <a class="general" href="/techniques/html/H99">H99: Provide page list navigation</a>
+                           
+                        </li>
+                        
+                     </ol>
+                  </section>
+               </details>
             </section>
             <nav class="pager" aria-label="Previous/Next Page">
                <ul id="navigation">
@@ -202,7 +222,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

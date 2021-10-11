@@ -55,293 +55,300 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a> when used with  and <strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with 
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> and <strong>Sufficient</strong> to meet <a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The purpose of this technique is to show how headings in PDF documents
-                  				can be marked so that they are recognized by assistive technologies. Headings
-                  are marked up using the heading elements (H, H1, H2, ... H6) in the structure tree.
-                  				This is typically accomplished by using a tool for authoring PDF. 
-               </p>
-               <p>Heading markup can be used: </p>
-               <ul>
-                  
-                  <li> to indicate start of main content </li>
-                  
-                  <li> to mark up section headings within the main content area </li>
-                  
-                  <li> to demarcate different navigational sections, such as top or main
-                     				navigation, left or secondary navigation, and footer navigation 
-                  </li>
-                  
-                  <li> to mark up images (containing text) which have the appearance
-                     					of headings visually. 
-                  </li>
-                  
-               </ul>
-               <p>Because headings indicate the start of important sections of content,
-                  				it is possible for assistive technology users to access the list of
-                  				headings and to jump directly to the appropriate heading and begin
-                  				reading the content. This ability to "skim" the content through
-                  				the headings and go directly to content of interest significantly speeds
-                  				interaction for users who would otherwise access the content slowly. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The purpose of this technique is to show how headings in PDF documents
+                     				can be marked so that they are recognized by assistive technologies. Headings
+                     are marked up using the heading elements (H, H1, H2, ... H6) in the structure tree.
+                     				This is typically accomplished by using a tool for authoring PDF. 
+                  </p>
+                  <p>Heading markup can be used: </p>
+                  <ul>
+                     
+                     <li> to indicate start of main content </li>
+                     
+                     <li> to mark up section headings within the main content area </li>
+                     
+                     <li> to demarcate different navigational sections, such as top or main
+                        				navigation, left or secondary navigation, and footer navigation 
+                     </li>
+                     
+                     <li> to mark up images (containing text) which have the appearance
+                        					of headings visually. 
+                     </li>
+                     
+                  </ul>
+                  <p>Because headings indicate the start of important sections of content,
+                     				it is possible for assistive technology users to access the list of
+                     				headings and to jump directly to the appropriate heading and begin
+                     				reading the content. This ability to "skim" the content through
+                     				the headings and go directly to content of interest significantly speeds
+                     				interaction for users who would otherwise access the content slowly. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-adding-or-modifying-tagged-headings-in-pdf-documents&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;with-adobe-acrobat-9-pro">
-                  <h3>Example 1: Adding or modifying tagged headings in PDF documents
-                     					with Adobe Acrobat 9 Pro
-                  </h3>
-                  <p>This example is shown with Adobe Acrobat Pro. There are other software tools that
-                     perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
-                  </p>
-                  <section id="-using-the-touchup-reading-order-tool">
-                     
-                     <h4> Using the Touchup Reading Order tool</h4>
-                     
-                     <p>One method of adding headings to PDF documents uses the Touchup Reading
-                        							Order tool: 
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-adding-or-modifying-tagged-headings-in-pdf-documents&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;with-adobe-acrobat-9-pro">
+                     <h3>Example 1: Adding or modifying tagged headings in PDF documents
+                        					with Adobe Acrobat 9 Pro
+                     </h3>
+                     <p>This example is shown with Adobe Acrobat Pro. There are other software tools that
+                        perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
                      </p>
-                     
+                     <section id="-using-the-touchup-reading-order-tool">
+                        
+                        <h4> Using the Touchup Reading Order tool</h4>
+                        
+                        <p>One method of adding headings to PDF documents uses the Touchup Reading
+                           							Order tool: 
+                        </p>
+                        
+                        <ol>
+                           
+                           <li> Open the PDF document in Adobe Acrobat Pro </li>
+                           
+                           <li> Select Advanced &gt; Accessibility &gt; TouchUp Reading Order... </li>
+                           
+                           <li> Click the Show Order Panel button on the TouchUp Reading Order
+                              							panel 
+                           </li>
+                           
+                           <li> View the tags in the Show Order panel. </li>
+                           
+                        </ol>
+                        
+                        <p>The following image shows a PDF document opened in Adobe Acrobat Pro.
+                           							The Tags panel is open, showing heading text "Cooking techniques"   tagged
+                           							as H1 and "Cooking with oil" tagged as H2. The text "Cooking
+                           							with butter" should be tagged as H2 but is not. 
+                        </p>
+                        
+                        <figure id="figure-tags-headings">
+                           <img src="img/cooking-headings1.gif" />
+                           
+                           
+                           <figcaption>Figure 1 PDF document opened in Adobe Acrobat. The Tags panel shows the headings in the tag
+                              tree. Text that should be tagged as H2 is incorrectly tagged as a paragraph.
+                           </figcaption>
+                           
+                           
+                        </figure>
+                        
+                        <p>To correct the H2 heading, use the TouchUp Reading Order panel as
+                           							follows: 
+                        </p>
+                        
+                        <ol>
+                           
+                           <li> Left click and drag a selection box over the content you want to
+                              							tag. 
+                           </li>
+                           
+                           <li> Select the Heading 2 tag from the TouchUp Reading Order panel. </li>
+                           
+                        </ol>
+                        
+                        <p>The following image shows the PDF document opened in Adobe Acrobat
+                           							Pro. The TouchUp Reading Order panel is visible. A selection box appears
+                           							around the text "Cooking with butter," and Heading 2 on the
+                           							panel is selected. 
+                        </p>
+                        
+                        <figure id="figure-turo-headings">
+                           <img src="img/cooking-headings2.gif" />
+                           
+                           
+                           <figcaption>Figure 2 PDF document opened in Adobe Acrobat. The TouchUp Reading Order panel is visible;
+                              the heading text is selected and Heading 2 on the panel is selected.
+                           </figcaption>
+                           
+                           
+                        </figure>
+                        
+                        <p> Finally, click the Show Order Panel button on the TouchUp Reading Order
+                           							panel. 
+                        </p>
+                        
+                        <p>The following image shows the PDF document opened in Adobe Acrobat
+                           							Pro. The Tags panel is visible, showing that the text   "Cooking
+                           							with butter" is now tagged as H2. 
+                        </p>
+                        
+                        <figure id="figure-turo-correct-headings">
+                           <img src="img/cooking-headings3.gif" />
+                           
+                           
+                           <figcaption>Figure 3 PDF document opened in Adobe Acrobat. The TouchUp Reading Order panel shows the correctly
+                              tagged headings.
+                           </figcaption>
+                           
+                           
+                        </figure>
+                        
+                     </section>
+                     <section id="-using-the-order-and-tags-panels-">
+                        
+                        <h4> Using the Order and Tags panels </h4>
+                        
+                        <p>You can also add or change headings as follows: </p>
+                        
+                        <ol>
+                           
+                           <li> Bring up the Order panel. </li>
+                           
+                           <li> Access the context menu for the text to be changed or added as
+                              							a heading. 
+                           </li>
+                           
+                           <li> Select the correct heading tag for the text. </li>
+                           
+                        </ol>
+                        
+                        <p>The following screenshot shows Order panel and the context menu for
+                           							the text "Cooking with butter." "Tag as heading 2" is
+                           							selected in the context menu. 
+                        </p>
+                        
+                        <figure id="figure-order-panel">
+                           <img src="img/cooking-headings4.gif" />
+                           
+                           
+                           <figcaption>Figure 4 PDF document opened in Adobe Acrobat. The Order panel and context menu show the text
+                              to be changed to Heading 2.
+                           </figcaption>
+                           
+                           
+                        </figure>
+                        
+                        <p>You can then check that the correct heading is applied by opening
+                           							the Tags panel, as shown in the following screenshot. 
+                        </p>
+                        
+                        <figure id="figure-acrobat-tags-panel">
+                           <img src="img/cooking-headings5.gif" />
+                           
+                           
+                           <figcaption>Figure 5 PDF document opened in Adobe Acrobat. The Tags panel confirms the correct heading
+                              tags.
+                           </figcaption>
+                           
+                           
+                        </figure>
+                        	
+                        <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-headings/cooking.docx">working example of adding tagged headings (Word file)</a> and <a href="../../working-examples/pdf-headings/cooking.pdf">working example of adding tagged headings (PDF file)</a>.
+                        </p>
+                        
+                     </section>
+                  </section>
+                  <section class="example" id="example-2-creating-documents-in-microsoft-word-that-have-correctly&#xA;----&#x9;&#x9;&#x9;&#x9;tagged-headings-when-converted-to-pdf">
+                     <h3>Example 2: Creating documents in Microsoft Word that have correctly
+                        				tagged headings when converted to PDF
+                     </h3>
+                     <p>This example is shown with Microsoft Word. There are other software tools that perform
+                        similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                     </p>
+                     <p>Use Styles to create heading formats: Heading 1, Heading 2, Heading
+                        						3, etc. Make styles progress in a logical manner; e.g., a Heading 2
+                        						should come after a Heading 1. 
+                     </p>
+                     <section id="in-microsoft-word-2003-">
+                        
+                        <h4>In Microsoft Word 2003 </h4>
+                        
+                        <ul>
+                           
+                           <li> Select the "Format &gt; Styles and Formatting" menu
+                              							item to reveal the styles and formatting task pane. 
+                           </li>
+                           
+                           <li> Use the Heading 1 to Heading 6 styles provided in the "Styles
+                              								and Formatting" panel. 
+                           </li>
+                           
+                        </ul>
+                        
+                        <figure id="figure-word-heading-styles">
+                           <img src="img/word2003.gif" />
+                           
+                           
+                           <figcaption>Figure 6 Selecting heading styles in Word 2003.</figcaption>
+                           
+                           
+                        </figure>
+                        
+                     </section>
+                     <section id="in-microsoft-word-2007/2010-">
+                        
+                        <h4>In Microsoft Word 2007/2010 </h4>
+                        
+                        <p>Select the Home Ribbon in Word 2007/2010 and select the appropriate
+                           							heading (Heading 1 to Heading 6) from the Styles group. 
+                        </p>
+                        
+                        <figure id="figure-word2007-heading-styles">
+                           <img src="img/word2007.gif" />
+                           
+                           
+                           <figcaption>Figure 7 Selecting heading styles in Word 2007/2010.</figcaption>
+                           
+                           
+                        </figure>
+                        
+                     </section>
+                  </section>
+                  <section class="example" id="example-3-creating-documents-in-openoffice.org-writer-2.2-that-have&#xA;----&#x9;&#x9;&#x9;&#x9;correctly-tagged-headings-when-converted-to-pdf">
+                     <h3>Example 3: Creating documents in OpenOffice.org Writer 2.2 that have
+                        				correctly tagged headings when converted to PDF
+                     </h3>
+                     <p>This example is shown with OpenOffice.org Writer. There are other software tools that
+                        perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                     </p>
+                     <p>Use Styles to create heading formats: Heading 1, Heading 2, Heading
+                        						3, etc. Make styles progress in a logical manner; e.g., a Heading 2
+                        						should come after a Heading 1. 
+                     </p>
+                     <p>Export to PDF as follows: </p>
                      <ol>
                         
-                        <li> Open the PDF document in Adobe Acrobat Pro </li>
+                        <li> From the File menu, select Export as PDF... </li>
                         
-                        <li> Select Advanced &gt; Accessibility &gt; TouchUp Reading Order... </li>
+                        <li> The first time you export as PDF, an Options Dialog appears. </li>
                         
-                        <li> Click the Show Order Panel button on the TouchUp Reading Order
-                           							panel 
-                        </li>
-                        
-                        <li> View the tags in the Show Order panel. </li>
+                        <li> Select Tagged PDF, then select Export. </li>
                         
                      </ol>
-                     
-                     <p>The following image shows a PDF document opened in Adobe Acrobat Pro.
-                        							The Tags panel is open, showing heading text "Cooking techniques"   tagged
-                        							as H1 and "Cooking with oil" tagged as H2. The text "Cooking
-                        							with butter" should be tagged as H2 but is not. 
+                     <p>
+                        
+                        
+                        Selecting heading styles and exporting to PDF in OpenOffice.org Writer.
+                        
+                        
                      </p>
-                     
-                     <figure id="figure-tags-headings">
-                        <img src="img/cooking-headings1.gif" />
-                        
-                        
-                        <figcaption>Figure 1 PDF document opened in Adobe Acrobat. The Tags panel shows the headings in the tag
-                           tree. Text that should be tagged as H2 is incorrectly tagged as a paragraph.
-                        </figcaption>
-                        
-                        
-                     </figure>
-                     
-                     <p>To correct the H2 heading, use the TouchUp Reading Order panel as
-                        							follows: 
-                     </p>
-                     
-                     <ol>
-                        
-                        <li> Left click and drag a selection box over the content you want to
-                           							tag. 
-                        </li>
-                        
-                        <li> Select the Heading 2 tag from the TouchUp Reading Order panel. </li>
-                        
-                     </ol>
-                     
-                     <p>The following image shows the PDF document opened in Adobe Acrobat
-                        							Pro. The TouchUp Reading Order panel is visible. A selection box appears
-                        							around the text "Cooking with butter," and Heading 2 on the
-                        							panel is selected. 
-                     </p>
-                     
-                     <figure id="figure-turo-headings">
-                        <img src="img/cooking-headings2.gif" />
-                        
-                        
-                        <figcaption>Figure 2 PDF document opened in Adobe Acrobat. The TouchUp Reading Order panel is visible;
-                           the heading text is selected and Heading 2 on the panel is selected.
-                        </figcaption>
-                        
-                        
-                     </figure>
-                     
-                     <p> Finally, click the Show Order Panel button on the TouchUp Reading Order
-                        							panel. 
-                     </p>
-                     
-                     <p>The following image shows the PDF document opened in Adobe Acrobat
-                        							Pro. The Tags panel is visible, showing that the text   "Cooking
-                        							with butter" is now tagged as H2. 
-                     </p>
-                     
-                     <figure id="figure-turo-correct-headings">
-                        <img src="img/cooking-headings3.gif" />
-                        
-                        
-                        <figcaption>Figure 3 PDF document opened in Adobe Acrobat. The TouchUp Reading Order panel shows the correctly
-                           tagged headings.
-                        </figcaption>
-                        
-                        
-                     </figure>
-                     
                   </section>
-                  <section id="-using-the-order-and-tags-panels-">
-                     
-                     <h4> Using the Order and Tags panels </h4>
-                     
-                     <p>You can also add or change headings as follows: </p>
-                     
-                     <ol>
-                        
-                        <li> Bring up the Order panel. </li>
-                        
-                        <li> Access the context menu for the text to be changed or added as
-                           							a heading. 
-                        </li>
-                        
-                        <li> Select the correct heading tag for the text. </li>
-                        
-                     </ol>
-                     
-                     <p>The following screenshot shows Order panel and the context menu for
-                        							the text "Cooking with butter." "Tag as heading 2" is
-                        							selected in the context menu. 
+                  <section class="example" id="example-4-marking-up-headings-using-/hn-elements">
+                     <h3>Example 4: Marking up headings using /H<em>n</em> elements
+                     </h3>
+                     <p>Headings within PDF documents can be marked up using /H<em>n</em> elements
+                        						in the structure tree, where <em>n</em> is numeral 1 through 6 (for
+                        						example /H1, /H2, etc.). 
                      </p>
-                     
-                     <figure id="figure-order-panel">
-                        <img src="img/cooking-headings4.gif" />
-                        
-                        
-                        <figcaption>Figure 4 PDF document opened in Adobe Acrobat. The Order panel and context menu show the text
-                           to be changed to Heading 2.
-                        </figcaption>
-                        
-                        
-                     </figure>
-                     
-                     <p>You can then check that the correct heading is applied by opening
-                        							the Tags panel, as shown in the following screenshot. 
-                     </p>
-                     
-                     <figure id="figure-acrobat-tags-panel">
-                        <img src="img/cooking-headings5.gif" />
-                        
-                        
-                        <figcaption>Figure 5 PDF document opened in Adobe Acrobat. The Tags panel confirms the correct heading
-                           tags.
-                        </figcaption>
-                        
-                        
-                     </figure>
-                     	
-                     <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-headings/cooking.docx">working example of adding tagged headings (Word file)</a> and <a href="../../working-examples/pdf-headings/cooking.pdf">working example of adding tagged headings (PDF file)</a>.
-                     </p>
-                     
-                  </section>
-               </section>
-               <section class="example" id="example-2-creating-documents-in-microsoft-word-that-have-correctly&#xA;----&#x9;&#x9;&#x9;&#x9;tagged-headings-when-converted-to-pdf">
-                  <h3>Example 2: Creating documents in Microsoft Word that have correctly
-                     				tagged headings when converted to PDF
-                  </h3>
-                  <p>This example is shown with Microsoft Word. There are other software tools that perform
-                     similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
-                  </p>
-                  <p>Use Styles to create heading formats: Heading 1, Heading 2, Heading
-                     						3, etc. Make styles progress in a logical manner; e.g., a Heading 2
-                     						should come after a Heading 1. 
-                  </p>
-                  <section id="in-microsoft-word-2003-">
-                     
-                     <h4>In Microsoft Word 2003 </h4>
-                     
-                     <ul>
-                        
-                        <li> Select the "Format &gt; Styles and Formatting" menu
-                           							item to reveal the styles and formatting task pane. 
-                        </li>
-                        
-                        <li> Use the Heading 1 to Heading 6 styles provided in the "Styles
-                           								and Formatting" panel. 
-                        </li>
-                        
-                     </ul>
-                     
-                     <figure id="figure-word-heading-styles">
-                        <img src="img/word2003.gif" />
-                        
-                        
-                        <figcaption>Figure 6 Selecting heading styles in Word 2003.</figcaption>
-                        
-                        
-                     </figure>
-                     
-                  </section>
-                  <section id="in-microsoft-word-2007/2010-">
-                     
-                     <h4>In Microsoft Word 2007/2010 </h4>
-                     
-                     <p>Select the Home Ribbon in Word 2007/2010 and select the appropriate
-                        							heading (Heading 1 to Heading 6) from the Styles group. 
-                     </p>
-                     
-                     <figure id="figure-word2007-heading-styles">
-                        <img src="img/word2007.gif" />
-                        
-                        
-                        <figcaption>Figure 7 Selecting heading styles in Word 2007/2010.</figcaption>
-                        
-                        
-                     </figure>
-                     
-                  </section>
-               </section>
-               <section class="example" id="example-3-creating-documents-in-openoffice.org-writer-2.2-that-have&#xA;----&#x9;&#x9;&#x9;&#x9;correctly-tagged-headings-when-converted-to-pdf">
-                  <h3>Example 3: Creating documents in OpenOffice.org Writer 2.2 that have
-                     				correctly tagged headings when converted to PDF
-                  </h3>
-                  <p>This example is shown with OpenOffice.org Writer. There are other software tools that
-                     perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
-                  </p>
-                  <p>Use Styles to create heading formats: Heading 1, Heading 2, Heading
-                     						3, etc. Make styles progress in a logical manner; e.g., a Heading 2
-                     						should come after a Heading 1. 
-                  </p>
-                  <p>Export to PDF as follows: </p>
-                  <ol>
-                     
-                     <li> From the File menu, select Export as PDF... </li>
-                     
-                     <li> The first time you export as PDF, an Options Dialog appears. </li>
-                     
-                     <li> Select Tagged PDF, then select Export. </li>
-                     
-                  </ol>
-                  <p>
-                     
-                     
-                     Selecting heading styles and exporting to PDF in OpenOffice.org Writer.
-                     
-                     
-                  </p>
-               </section>
-               <section class="example" id="example-4-marking-up-headings-using-/hn-elements">
-                  <h3>Example 4: Marking up headings using /H<em>n</em> elements
-                  </h3>
-                  <p>Headings within PDF documents can be marked up using /H<em>n</em> elements
-                     						in the structure tree, where <em>n</em> is numeral 1 through 6 (for
-                     						example /H1, /H2, etc.). 
-                  </p>
-                  <p>The following code fragment illustrates code that is typical for using
-                     						the /H<em>n</em> elements to mark content. Note that /H1 has been role-mapped to /Head1 in this example.
-                     This is typically accomplished
-                     						by an authoring tool. 
-                  </p><pre xml:space="preserve">0 obj% Document catalog
+                     <p>The following code fragment illustrates code that is typical for using
+                        						the /H<em>n</em> elements to mark content. Note that /H1 has been role-mapped to /Head1 in this example.
+                        This is typically accomplished
+                        						by an authoring tool. 
+                     </p><pre xml:space="preserve">0 obj% Document catalog
   &lt;&lt; /Type /Catalog
      /Pages 100 0 R                  % Page tree
      /StructTreeRoot 300 0 R         % Structure tree root
@@ -391,9 +398,9 @@ endobj
 endobj
 ...
 </pre><p>Within marked content containers, headings can be marked up using
-                     						/Head<em>n</em> elements as follows for a first-level heading in
-                     						a PDF document: 
-                  </p><pre xml:space="preserve">BT		 		% Start of text object
+                        						/Head<em>n</em> elements as follows for a first-level heading in
+                        						a PDF document: 
+                     </p><pre xml:space="preserve">BT		 		% Start of text object
   /Head1 &lt;&lt;/MCID 0 &gt;&gt;   	% Start of marked-content sequence
      BDC
         ...
@@ -403,60 +410,69 @@ endobj
      ...
 ET				% End of text object
 </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Tagged PDF documents with headings</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Tagged PDF documents with headings</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>
+                     <ol>
                         
-                        <p>For all PDF content that is divided into separate sections, use
-                           					one of the following to verify that headings are tagged correctly:
-                        </p>
+                        <li>
+                           
+                           <p>For all PDF content that is divided into separate sections, use
+                              					one of the following to verify that headings are tagged correctly:
+                           </p>
+                           
+                           <ul>
+                              
+                              <li> Read the PDF document with a screen reader, listening to hear
+                                 						that the list of headings is announced correctly. 
+                              </li>
+                              
+                              <li> Using a PDF editor, 
+                                 							make sure the headings are tagged correctly. 
+                              </li>
+                              
+                              <li> Use a tool that is capable of showing the /Head<em>n</em> entries
+                                 								to open the PDF document and verify that headings are tagged
+                                 								correctly. 
+                              </li>
+                              
+                              <li> Use a tool that exposes the document through the accessibility
+                                 									API and verify that the headings are tagged correctly. 
+                              </li>
+                              
+                           </ul>
+                           
+                        </li>
                         
-                        <ul>
-                           
-                           <li> Read the PDF document with a screen reader, listening to hear
-                              						that the list of headings is announced correctly. 
-                           </li>
-                           
-                           <li> Using a PDF editor, 
-                              							make sure the headings are tagged correctly. 
-                           </li>
-                           
-                           <li> Use a tool that is capable of showing the /Head<em>n</em> entries
-                              								to open the PDF document and verify that headings are tagged
-                              								correctly. 
-                           </li>
-                           
-                           <li> Use a tool that exposes the document through the accessibility
-                              									API and verify that the headings are tagged correctly. 
-                           </li>
-                           
-                        </ul>
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
                         
-                     </li>
+                        <li>#1 is true. </li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>#1 is true. </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -464,7 +480,7 @@ ET				% End of text object
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -507,7 +523,7 @@ ET				% End of text object
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

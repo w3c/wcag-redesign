@@ -53,107 +53,123 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/enough-time">2.2: Enough Time</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/re-authenticating">2.2.5: Re-authenticating</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>Web servers that require user authentication often terminate the session after a set
-                  period of time if there is no activity from the user. If the user is unable to input
-                  the data quickly enough and the session times out before they submit, the server will
-                  require re-authentication before proceeding. When this happens, the server passes
-                  (as hidden data) the information from the form into the page that is used for re-authentication.
-                  Then, when the user re-authenticates, the server can use the information passed on
-                  from the re-authentication page to submit the form directly or to present a page that
-                  includes the data that is to be submitted for review. In this technique, the server
-                  does not have to store any user-submitted data on server. This is an important technique
-                  for those cases where it is either illegal or a security risk for the server to store
-                  information temporarily. It also is useful in that it frees the server from having
-                  to maintain the stored information and reconnect it with the newly authenticated session.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>If the data users are submitting is sensitive or presents a security risk, authors
-                        should consider the process used to pass the data to the re-authentication page and,
-                        after re-authentication, to the page that will process the original data in order
-                        to ensure that the data is protected.
-                     </p>
-                     
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>Web servers that require user authentication often terminate the session after a set
+                     period of time if there is no activity from the user. If the user is unable to input
+                     the data quickly enough and the session times out before they submit, the server will
+                     require re-authentication before proceeding. When this happens, the server passes
+                     (as hidden data) the information from the form into the page that is used for re-authentication.
+                     Then, when the user re-authenticates, the server can use the information passed on
+                     from the re-authentication page to submit the form directly or to present a page that
+                     includes the data that is to be submitted for review. In this technique, the server
+                     does not have to store any user-submitted data on server. This is an important technique
+                     for those cases where it is either illegal or a security risk for the server to store
+                     information temporarily. It also is useful in that it frees the server from having
+                     to maintain the stored information and reconnect it with the newly authenticated session.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>If the data users are submitting is sensitive or presents a security risk, authors
+                           should consider the process used to pass the data to the re-authentication page and,
+                           after re-authentication, to the page that will process the original data in order
+                           to ensure that the data is protected.
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>A user has logged in to use a wiki and begins editing a page. The time taken to complete
-                     the edits exceeds the time allowed by the server for session inactivity. When the
-                     user submits the edits, the user is notified that the session has timed out and is
-                     redirected to a login page. The script that handles the original form submission passes
-                     the edits as a variable to the login page and when the user successfully logs in,
-                     passes the users edits back to the script that handles form submissions and the edits
-                     are processed as though no session timeout had occurred.
-                  </li>
-                  
-                  <li>A user had logged in to a secure shopping site and fills out some of the information
-                     on an order form. For security reasons, the session times out after 30 mintues, but
-                     the user does not submit the form until 45 minutes after loading the page. The user
-                     is informed of the time out and is prompted to log-in again. If the user logs in correctly,
-                     the order form is presented to the user with all of the data previously entered and
-                     the user is able to review their submission and submit the form. If the log-in is
-                     not successfully completed, then the form data is discarded by the server.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Pages that require user authentication where the time available for submitting data
-                  is limited.
-               </p>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>On a site that requires user login to submit data:</p>
-                  
-                  <ol>
-                     
-                     <li>Log in and begin the timed activity.</li>
-                     
-                     <li>Allow the session to time out.</li>
-                     
-                     <li>Submit the data.</li>
-                     
-                     <li>Re-authenticate.</li>
-                     
-                     <li>Check that the process can continue and be completed without loss of data, including
-                        the original data and any changes made after re-authentication.
-                     </li>
-                     
-                     <li>Check that the process used to save the information submitted in step 3 is not stored
-                        on the server. (Note: This requires knowledge of the technology and features used
-                        to implement the technique.)
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
                   <ul>
                      
-                     <li>Checks #5 and #6 are true.</li>
+                     <li>A user has logged in to use a wiki and begins editing a page. The time taken to complete
+                        the edits exceeds the time allowed by the server for session inactivity. When the
+                        user submits the edits, the user is notified that the session has timed out and is
+                        redirected to a login page. The script that handles the original form submission passes
+                        the edits as a variable to the login page and when the user successfully logs in,
+                        passes the users edits back to the script that handles form submissions and the edits
+                        are processed as though no session timeout had occurred.
+                     </li>
+                     
+                     <li>A user had logged in to a secure shopping site and fills out some of the information
+                        on an order form. For security reasons, the session times out after 30 mintues, but
+                        the user does not submit the form until 45 minutes after loading the page. The user
+                        is informed of the time out and is prompted to log-in again. If the user logs in correctly,
+                        the order form is presented to the user with all of the data previously entered and
+                        the user is able to review their submission and submit the form. If the log-in is
+                        not successfully completed, then the form data is discarded by the server.
+                     </li>
                      
                   </ul>
-                  
-               </section>
+               </details>
+            </section>
+            <section id="applicability">
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Pages that require user authentication where the time available for submitting data
+                     is limited.
+                  </p>
+               </details>
+            </section>
+            <section id="tests">
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <p>On a site that requires user login to submit data:</p>
+                     
+                     <ol>
+                        
+                        <li>Log in and begin the timed activity.</li>
+                        
+                        <li>Allow the session to time out.</li>
+                        
+                        <li>Submit the data.</li>
+                        
+                        <li>Re-authenticate.</li>
+                        
+                        <li>Check that the process can continue and be completed without loss of data, including
+                           the original data and any changes made after re-authentication.
+                        </li>
+                        
+                        <li>Check that the process used to save the information submitted in step 3 is not stored
+                           on the server. (Note: This requires knowledge of the technology and features used
+                           to implement the technique.)
+                        </li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li>Checks #5 and #6 are true.</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -161,7 +177,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -181,7 +197,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

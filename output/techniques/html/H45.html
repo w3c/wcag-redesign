@@ -53,79 +53,95 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/text-alternatives">1.1: Text Alternatives</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/non-text-content">1.1.1: Non-text Content</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p> The objective of this technique is to provide information in a file designated by
-                  the
-                  <code class="att">longdesc</code> attribute when a short text alternative does not adequately convey the function
-                  or information provided in the image. The <code class="att">longdesc</code> attribute is a URI, the target of
-                  which contains a long description of the non-text content. 
-               </p>
-               <p>Authors can provide a description for an image by including text in a separate resource
-                  or within the text of the page containing the image.  An advantage of using a separate
-                  resource for the description is that it is easily reusable for multiple instances
-                  of the same image, it does not add on-page visual clutter to the original document,
-                  and the description's end-point is apparent to the user. An advantage of providing
-                  the description within the same page as the image is that all users can access the
-                  description.  A limitation of the on-page method, as well as in providing multiple
-                  descriptions on a single separate page, is that current implementations supporting
-                  longdesc do not identify the long description's end-point. Authors can solve this
-                  by providing a well-formed description, which identifies the where the description
-                  ends.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p> The objective of this technique is to provide information in a file designated by
+                     the
+                     <code class="att">longdesc</code> attribute when a short text alternative does not adequately convey the function
+                     or information provided in the image. The <code class="att">longdesc</code> attribute is a URI, the target of
+                     which contains a long description of the non-text content. 
+                  </p>
+                  <p>Authors can provide a description for an image by including text in a separate resource
+                     or within the text of the page containing the image.  An advantage of using a separate
+                     resource for the description is that it is easily reusable for multiple instances
+                     of the same image, it does not add on-page visual clutter to the original document,
+                     and the description's end-point is apparent to the user. An advantage of providing
+                     the description within the same page as the image is that all users can access the
+                     description.  A limitation of the on-page method, as well as in providing multiple
+                     descriptions on a single separate page, is that current implementations supporting
+                     longdesc do not identify the long description's end-point. Authors can solve this
+                     by providing a well-formed description, which identifies the where the description
+                     ends.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-using-longdesc-to-refer-to-a-long-description-contained-on-a-separate-resource.">
-                  <h3>Example 1: Using longdesc to refer to a long description contained on a separate resource.</h3><pre xml:space="preserve">&lt;p&gt;&lt;img src="chart.gif" alt="a complex chart" longdesc="chartdesc.html"/&gt;&lt;/p&gt;</pre></section>
-               <section class="example" id="example-2-using-longdesc-to-refer-to-a-long-description-within-the-same-page.">
-                  <h3>Example 2: Using longdesc to refer to a long description within the same page.</h3><pre xml:space="preserve">&lt;img longdesc="thispage.html#desc" alt="Line graph of the number of subscribers" src="http://www.company/images/graph.png"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-using-longdesc-to-refer-to-a-long-description-contained-on-a-separate-resource.">
+                     <h3>Example 1: Using longdesc to refer to a long description contained on a separate resource.</h3><pre xml:space="preserve">&lt;p&gt;&lt;img src="chart.gif" alt="a complex chart" longdesc="chartdesc.html"/&gt;&lt;/p&gt;</pre></section>
+                  <section class="example" id="example-2-using-longdesc-to-refer-to-a-long-description-within-the-same-page.">
+                     <h3>Example 2: Using longdesc to refer to a long description within the same page.</h3><pre xml:space="preserve">&lt;img longdesc="thispage.html#desc" alt="Line graph of the number of subscribers" src="http://www.company/images/graph.png"&gt;
 &lt;div id="desc"&gt;
 &lt;h3&gt;Long Description: Line graph of the number of subscribers&lt;/h3&gt;
 &lt;!-- Full Description of Graph --&gt;
 &lt;p&gt;Long description ends.&lt;/p&gt;
 &lt;div&gt;</pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML documents that include images that cannot be
-                  described in a short text alternative. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML documents that include images that cannot be
+                     described in a short text alternative. 
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that the <code class="el">img</code> element has a longdesc attribute. 
-                     </li>
+                     <ol>
+                        
+                        <li>Check that the <code class="el">img</code> element has a longdesc attribute. 
+                        </li>
+                        
+                        <li>Check that the value of the <code class="att">longdesc</code> attribute is a valid URI of an existing resource.
+                        </li>
+                        
+                        <li>Check that the content at the target of that URI contains a long description describing
+                           the original non-text content associated with it.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check that the value of the <code class="att">longdesc</code> attribute is a valid URI of an existing resource.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that the content at the target of that URI contains a long description describing
-                        the original non-text content associated with it.
-                     </li>
+                     <ul>
+                        
+                        <li> #1 through #3 are all true </li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li> #1 through #3 are all true </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -133,7 +149,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -170,7 +186,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

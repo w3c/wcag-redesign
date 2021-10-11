@@ -56,26 +56,33 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/visual-presentation">1.4.8: Visual Presentation</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>Many people with cognitive disabilities have a great deal of trouble with blocks of
-                  text that are justified (aligned to both the left and the right margins). The spaces
-                  between words create "rivers of white" running down the page, which can make the text
-                  difficult for some people to read. This failure describes situations where this confusing
-                  text layout occurs. The best way to avoid this problem is not to create text layout
-                  that is fully justified (aligned to both the left and the right margins).
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>Many people with cognitive disabilities have a great deal of trouble with blocks of
+                     text that are justified (aligned to both the left and the right margins). The spaces
+                     between words create "rivers of white" running down the page, which can make the text
+                     difficult for some people to read. This failure describes situations where this confusing
+                     text layout occurs. The best way to avoid this problem is not to create text layout
+                     that is fully justified (aligned to both the left and the right margins).
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>In the following example of a failure, the HTML <code class="att">align</code> attribute is used to create justified text.
-                  </p><pre xml:space="preserve"> 
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>In the following example of a failure, the HTML <code class="att">align</code> attribute is used to create justified text.
+                     </p><pre xml:space="preserve"> 
 &lt;p align="justify"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum sit amet pede. Phasellus 
 nec sem id mauris vehicula tincidunt. Morbi ac arcu. Maecenas vehicula velit et orci. Donec 
 ullamcorper porttitor velit. Sed arcu lorem, cursus sit amet, auctor eu, convallis ut, purus. 
@@ -83,11 +90,11 @@ Vivamus imperdiet accumsan nunc. Maecenas pellentesque nunc a libero. Vestibulum
 primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur pharetra commodo 
 justo. Nulla facilisi. Phasellus nulla lacus, tempor quis, tincidunt ac, rutrum et, mauris.
 &lt;/p&gt;</pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>In this example of a failure, the CSS text-align property is used to create justified
-                     text.
-                  </p><pre xml:space="preserve"> 
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>In this example of a failure, the CSS text-align property is used to create justified
+                        text.
+                     </p><pre xml:space="preserve"> 
 ...
 p {text-align: justify}
 
@@ -99,37 +106,46 @@ ullamcorper porttitor velit. Sed arcu lorem, cursus sit amet, auctor eu, convall
 Vivamus imperdiet accumsan nunc. Maecenas pellentesque nunc a libero. Vestibulum ante ipsum 
 primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur pharetra commodo 
 justo. Nulla facilisi. Phasellus nulla lacus, tempor quis, tincidunt ac, rutrum et, mauris.&lt;/p&gt;</pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Open the page in a common browser.</li>
+                     <ol>
+                        
+                        <li>Open the page in a common browser.</li>
+                        
+                        <li>Verify that content is not justified (aligned to both the left and the right margins).</li>
+                        
+                     </ol>
                      
-                     <li>Verify that content is not justified (aligned to both the left and the right margins).</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>If test procedure #2 is false, then this failure condition applies and the content
+                           fails to meet Success Criterion 1.4.8.
+                        </li>
+                        
+                     </ul>
                      
-                     <li>If test procedure #2 is false, then this failure condition applies and the content
-                        fails to meet Success Criterion 1.4.8.
-                     </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -137,7 +153,7 @@ justo. Nulla facilisi. Phasellus nulla lacus, tempor quis, tincidunt ac, rutrum 
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -157,7 +173,7 @@ justo. Nulla facilisi. Phasellus nulla lacus, tempor quis, tincidunt ac, rutrum 
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

@@ -56,32 +56,39 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/compatible">4.1: Compatible</a> when used with <a href="../general/G10">G10: Creating components using a technology that supports the accessibility notification
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/name-role-value">4.1.2: Name, Role, Value</a> when used with <a href="../general/G10">G10: Creating components using a technology that supports the accessibility notification
                            of changes</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to use <a href="https://www.w3.org/TR/wai-aria/#states_and_properties">WAI-ARIA state and property attributes</a> to expose the state, properties and values of a user interface component so that
-                  they can be read and set by assistive technology, and so that assistive technology
-                  is notified of changes to these values. The WAI-ARIA specification provides a normative
-                  description of each attribute, and the role of the user interface elements that they
-                  support. When rich internet applications define new user interface widgets, exposing
-                  the state and property attributes enables users to understand the widget and how to
-                  interact with it.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to use <a href="https://www.w3.org/TR/wai-aria/#states_and_properties">WAI-ARIA state and property attributes</a> to expose the state, properties and values of a user interface component so that
+                     they can be read and set by assistive technology, and so that assistive technology
+                     is notified of changes to these values. The WAI-ARIA specification provides a normative
+                     description of each attribute, and the role of the user interface elements that they
+                     support. When rich internet applications define new user interface widgets, exposing
+                     the state and property attributes enables users to understand the widget and how to
+                     interact with it.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-a-toggle-button">
-                  <h3>Example 1: A toggle button</h3>
-                  <p>A widget with role <code class="att">button</code> acts as a toggle button when it implements the attribute <code class="att">aria-pressed</code>. When <code class="att">aria-pressed</code> is true, the button is in a "pressed" state. When <code class="att">aria-pressed</code> is false, it is not pressed. If the attribute is not present, the button is a simple
-                     command button.
-                  </p>
-                  <p>The following snippet from The Open Ajax Accessibility Examples, Example 38, shows
-                     WAI-ARIA mark-up for a toggle button that selects bold text:
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-a-toggle-button">
+                     <h3>Example 1: A toggle button</h3>
+                     <p>A widget with role <code class="att">button</code> acts as a toggle button when it implements the attribute <code class="att">aria-pressed</code>. When <code class="att">aria-pressed</code> is true, the button is in a "pressed" state. When <code class="att">aria-pressed</code> is false, it is not pressed. If the attribute is not present, the button is a simple
+                        command button.
+                     </p>
+                     <p>The following snippet from The Open Ajax Accessibility Examples, Example 38, shows
+                        WAI-ARIA mark-up for a toggle button that selects bold text:
+                     </p><pre xml:space="preserve">
   &lt;li id="bold1"  
     class="toggleButton"
     role="button"
@@ -92,8 +99,8 @@
     &lt;img src="http://www.oaa-accessibility.org/media/examples/images/button-bold.png" alt="bold text" align="middle"&gt;
 &lt;/li&gt;
 </pre><p>The <code class="el">li</code> element has a role of "button" and an "aria-pressed" attribute. The following excerpt
-                     from the Javascript for this example updates the value of the "aria-pressed" attribute:
-                  </p><pre xml:space="preserve">                   
+                        from the Javascript for this example updates the value of the "aria-pressed" attribute:
+                     </p><pre xml:space="preserve">                   
                              /**
    * togglePressed() toggles the aria-pressed atribute between true or false
    *
@@ -112,76 +119,85 @@
     }
   }
                             </pre><p>This button is available as part of the <a href="http://www.oaa-accessibility.org/examplep/toolbar1/">working example of Example 38 - Toolbar using inline images for visual state</a>, on the OpenAjax Alliance site.
-                  </p>
-               </section>
-               <section class="example" id="example-2-a-slider">
-                  <h3>Example 2: A slider</h3>
-                  <p>A widget with role <code class="att">slider</code> lets a user select a value from within a given range. The slider represents the current
-                     value and the range of possible values via the size of the slider and the position
-                     of the handle. These properties of the slider are represented by the attributes <code class="att">aria-valuemin</code>, <code class="att">aria-valuemax</code>, and <code class="att">aria-valuenow</code>.
-                  </p>
-                  <p>The following snippet from The Open Ajax Accessibility Examples, Example 32, shows
-                     WAI-ARIA mark-up for a slider created in Javascript. Note that the javascript sets
-                     the attributes aria-valuemin, aria-valuemax, and aria-valuenow:
-                  </p><pre xml:space="preserve">   var handle = '&lt;img id="' + id + '" class="' + (this.vert == true ? 'v':'h') +'sliderHandle" ' +
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-a-slider">
+                     <h3>Example 2: A slider</h3>
+                     <p>A widget with role <code class="att">slider</code> lets a user select a value from within a given range. The slider represents the current
+                        value and the range of possible values via the size of the slider and the position
+                        of the handle. These properties of the slider are represented by the attributes <code class="att">aria-valuemin</code>, <code class="att">aria-valuemax</code>, and <code class="att">aria-valuenow</code>.
+                     </p>
+                     <p>The following snippet from The Open Ajax Accessibility Examples, Example 32, shows
+                        WAI-ARIA mark-up for a slider created in Javascript. Note that the javascript sets
+                        the attributes aria-valuemin, aria-valuemax, and aria-valuenow:
+                     </p><pre xml:space="preserve">   var handle = '&lt;img id="' + id + '" class="' + (this.vert == true ? 'v':'h') +'sliderHandle" ' +
     'src="http://www.oaa-accessibility.org/media/examples/images/slider_' + (this.vert == true ? 'v':'h') + '.png" ' + 'role="slider" ' +
     'aria-valuemin="' + this.min +
     '" aria-valuemax="' + this.max +
     '" aria-valuenow="' + (val == undefined ? this.min : val) +
            '" aria-labelledby="' + label +
            '" aria-controls="' + controls + '" tabindex="0"&gt;&lt;/img&gt;';</pre><p>The following excerpt from the Javascript for this example updates the value of the
-                     "aria-valuenow" attribute when the value of the slider handle is changed:
-                  </p><pre xml:space="preserve"> slider.prototype.positionHandle = function($handle, val) {
+                        "aria-valuenow" attribute when the value of the slider handle is changed:
+                     </p><pre xml:space="preserve"> slider.prototype.positionHandle = function($handle, val) {
     ...
    // Set the aria-valuenow position of the handle
   $handle.attr('aria-valuenow', val);
    ...
   }
 </pre><p>This slider is available as part of the <a href="http://oaa-accessibility.org/example/32/">working example of Example 32 - Slider</a>, on the OpenAjax Alliance site.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>
-                     <a href="https://www.w3.org/TR/wai-aria/#roles_categorization">The WAI-ARIA specification, Section 5.3, Categorization of Roles</a> defines the required and inherited states and properties for each role.
-                  </p>
-                  
-                  <p>For a user interface component using the WAI-ARIA role attribute:</p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that the required states and properties for the role are present.</li>
+                     <p>
+                        <a href="https://www.w3.org/TR/wai-aria/#roles_categorization">The WAI-ARIA specification, Section 5.3, Categorization of Roles</a> defines the required and inherited states and properties for each role.
+                     </p>
                      
-                     <li>Check that no WAI-ARIA states or properties that are neither required, supported,
-                        nor inherited are present.
-                     </li>
+                     <p>For a user interface component using the WAI-ARIA role attribute:</p>
                      
-                     <li>Check that the state and property values are updated to reflect the current state
-                        when the user interface component changes state.
-                     </li>
+                     <ol>
+                        
+                        <li>Check that the required states and properties for the role are present.</li>
+                        
+                        <li>Check that no WAI-ARIA states or properties that are neither required, supported,
+                           nor inherited are present.
+                        </li>
+                        
+                        <li>Check that the state and property values are updated to reflect the current state
+                           when the user interface component changes state.
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>#1, #2, and #3 are true.</li>
+                     <ul>
+                        
+                        <li>#1, #2, and #3 are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -189,7 +205,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -247,7 +263,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

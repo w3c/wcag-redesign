@@ -55,51 +55,58 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a> when used with  and <strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a>, using a more specific technique.
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/resize-text">1.4.4: Resize text</a> and <strong>Sufficient</strong> to meet <a href="/understanding/visual-presentation">1.4.8: Visual Presentation</a>, using a more specific technique.
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to be able to present content without introducing
-                  horizontal scroll bars by using layout techniques that adapt to the available horizontal
-                  space. Liquid layouts define layout regions that both resize with text, and
-                  reflow as needed to display the region on the screen. Although the exact layout therefore
-                  varies, the relationship of elements and the reading order remains the same. This
-                  is an effective way to create designs that present well on different devices and for
-                  users with different font size preferences.
-               </p>
-               <p>The basic principles of liquid layouts are to:</p>
-               <ol>
-                  
-                  <li>Define the size of layout regions using units that will cause the region to scale
-                     relative to text, so they enlarge or shrink as text is enlarged or shrunk;
-                  </li>
-                  
-                  <li>Position the layout regions as a row of adjacent floating boxes, which wrap to new
-                     rows as needed in much the same way as words in a paragraph wrap.
-                  </li>
-                  
-               </ol>
-               <p>Complex liquid layouts may be achieved by nesting layout regions, thus creating localized
-                  liquid layouts within a larger liquid layout. Even simple liquid layouts require design
-                  finesse to achieve good-looking results at a wide range of text sizes, but well-designed
-                  liquid layouts can be the most effective page design.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to be able to present content without introducing
+                     horizontal scroll bars by using layout techniques that adapt to the available horizontal
+                     space. Liquid layouts define layout regions that both resize with text, and
+                     reflow as needed to display the region on the screen. Although the exact layout therefore
+                     varies, the relationship of elements and the reading order remains the same. This
+                     is an effective way to create designs that present well on different devices and for
+                     users with different font size preferences.
+                  </p>
+                  <p>The basic principles of liquid layouts are to:</p>
+                  <ol>
+                     
+                     <li>Define the size of layout regions using units that will cause the region to scale
+                        relative to text, so they enlarge or shrink as text is enlarged or shrunk;
+                     </li>
+                     
+                     <li>Position the layout regions as a row of adjacent floating boxes, which wrap to new
+                        rows as needed in much the same way as words in a paragraph wrap.
+                     </li>
+                     
+                  </ol>
+                  <p>Complex liquid layouts may be achieved by nesting layout regions, thus creating localized
+                     liquid layouts within a larger liquid layout. Even simple liquid layouts require design
+                     finesse to achieve good-looking results at a wide range of text sizes, but well-designed
+                     liquid layouts can be the most effective page design.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-simple-liquid-layout-in-html-and-css">
-                  <h3>Example 1: Simple liquid layout in HTML and CSS</h3>
-                  <p>The following fairly simple example uses HTML and CSS to create a liquid layout. The
-                     three columns adjust their size as text size is adjusted. When the total horizontal
-                     width exceeds the available width of the columns, the last column wraps to be positioned
-                     below, rather than beside, the previous column. The font size can be increased without
-                     either clipping or introducing horizontal scrolling until the longest word no longer
-                     fits in a column. This particular example uses percent sizes for the columns and defines
-                     them as floating regions using the "float" property.
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-simple-liquid-layout-in-html-and-css">
+                     <h3>Example 1: Simple liquid layout in HTML and CSS</h3>
+                     <p>The following fairly simple example uses HTML and CSS to create a liquid layout. The
+                        three columns adjust their size as text size is adjusted. When the total horizontal
+                        width exceeds the available width of the columns, the last column wraps to be positioned
+                        below, rather than beside, the previous column. The font size can be increased without
+                        either clipping or introducing horizontal scrolling until the longest word no longer
+                        fits in a column. This particular example uses percent sizes for the columns and defines
+                        them as floating regions using the "float" property.
+                     </p><pre xml:space="preserve">
               &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
                 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
                 &lt;head&gt;
@@ -146,37 +153,46 @@
                 &lt;/body&gt;
                 &lt;/html&gt;
             </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Applies to all technologies.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Applies to all technologies.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Display content in a user agent.</li>
+                     <ol>
+                        
+                        <li>Display content in a user agent.</li>
+                        
+                        <li>Increase text size to 200%.</li>
+                        
+                        <li>Check whether all content and functionality is available with no horizontal scrolling.</li>
+                        
+                     </ol>
                      
-                     <li>Increase text size to 200%.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check whether all content and functionality is available with no horizontal scrolling.</li>
+                     <ul>
+                        
+                        <li>Check #3 is true.</li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Check #3 is true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -184,7 +200,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -216,7 +232,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

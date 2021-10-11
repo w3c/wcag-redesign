@@ -55,94 +55,110 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Advisory</strong> for <a href="/understanding/navigable">2.4: Navigable</a> and <strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with <a href="../general/G127">G127: Identifying a Web page's relationship to a larger collection of Web pages</a>
+                     						<strong>Advisory</strong> for <a href="/understanding/multiple-ways">2.4.5: Multiple Ways</a> and <strong>Sufficient</strong> to meet <a href="/understanding/location">2.4.8: Location</a> when used with <a href="../general/G127">G127: Identifying a Web page's relationship to a larger collection of Web pages</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to describe how the <code class="el">link</code> element can
-                  provide metadata about the position of an HTML page within a set of Web pages or can
-                  assist in locating content with a set of Web pages. The value of the <code class="att">rel</code>
-                  attributes indicates what type of relation is being described, and the <code class="att">href</code>
-                  attribute provides a link to the document having that relation. Multiple
-                  <code class="el">link</code> elements can provide multiple relationships. Several values of
-                  <code class="att">rel</code> are useful: 
-               </p>
-               <ul>
-                  
-                  <li>Start: Refers to the first document in a collection of documents.</li>
-                  
-                  <li>Next: Refers to the next document in a linear sequence of documents.</li>
-                  
-                  <li>Prev: Refers to the previous document in an ordered series of documents.</li>
-                  
-                  <li>Contents: Refers to a document serving as a table of contents.</li>
-                  
-                  <li>Index: Refers to a document providing an index for the current document.</li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to describe how the <code class="el">link</code> element can
+                     provide metadata about the position of an HTML page within a set of Web pages or can
+                     assist in locating content with a set of Web pages. The value of the <code class="att">rel</code>
+                     attributes indicates what type of relation is being described, and the <code class="att">href</code>
+                     attribute provides a link to the document having that relation. Multiple
+                     <code class="el">link</code> elements can provide multiple relationships. Several values of
+                     <code class="att">rel</code> are useful: 
+                  </p>
+                  <ul>
+                     
+                     <li>Start: Refers to the first document in a collection of documents.</li>
+                     
+                     <li>Next: Refers to the next document in a linear sequence of documents.</li>
+                     
+                     <li>Prev: Refers to the previous document in an ordered series of documents.</li>
+                     
+                     <li>Contents: Refers to a document serving as a table of contents.</li>
+                     
+                     <li>Index: Refers to a document providing an index for the current document.</li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>A Web page for Chapter 2 of an on-line book might contain the following links
-                     within the <code class="el">head</code> section.
-                  </p><pre xml:space="preserve">&lt;link rel="Contents" href="Contents.html" title="Table of Contents"  /&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>A Web page for Chapter 2 of an on-line book might contain the following links
+                        within the <code class="el">head</code> section.
+                     </p><pre xml:space="preserve">&lt;link rel="Contents" href="Contents.html" title="Table of Contents"  /&gt;
 &lt;link rel="Index" href="Index.html" title="Index" /&gt;
 &lt;link rel="Prev" href="Chapter01.html" title="01. Why Volunteer?" /&gt;
 &lt;link rel="Next" href="Chapter03.html" title="03. Who Volunteers?" /&gt;</pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For a Web page that is within a sequence or collection of Web pages: </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that all <code class="el">link</code> elements pertaining to navigation occur in the
-                        <code class="el">head</code> section of the document.
-                     </li>
+                     <p>For a Web page that is within a sequence or collection of Web pages: </p>
                      
-                     <li>
+                     <ol>
                         
-                        <p>For each <code class="el">link</code> element in the <code class="el">head</code> section of the
-                           document which pertains to navigation, check that it contains at least: 
-                        </p>
+                        <li>Check that all <code class="el">link</code> elements pertaining to navigation occur in the
+                           <code class="el">head</code> section of the document.
+                        </li>
                         
-                        <ol>
+                        <li>
                            
-                           <li>a <code class="att">rel</code> attribute identifying the link type
-                           </li>
+                           <p>For each <code class="el">link</code> element in the <code class="el">head</code> section of the
+                              document which pertains to navigation, check that it contains at least: 
+                           </p>
                            
-                           <li>a valid <code class="att">href</code> attribute to locate the appropriate resource
-                           </li>
+                           <ol>
+                              
+                              <li>a <code class="att">rel</code> attribute identifying the link type
+                              </li>
+                              
+                              <li>a valid <code class="att">href</code> attribute to locate the appropriate resource
+                              </li>
+                              
+                           </ol>
                            
-                        </ol>
+                        </li>
                         
-                     </li>
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>All of the checks above are true.</li>
+                     <ul>
+                        
+                        <li>All of the checks above are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -150,7 +166,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -199,7 +215,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

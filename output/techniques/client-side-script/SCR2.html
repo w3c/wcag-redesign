@@ -53,53 +53,60 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/keyboard-accessible">2.1: Keyboard Accessible</a> when used with <a href="../general/G90">G90: Providing keyboard-triggered event handlers</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/keyboard">2.1.1: Keyboard</a> when used with <a href="../general/G90">G90: Providing keyboard-triggered event handlers</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to demonstrate using device independent events
-                  to change a decorative image in response to a mouse or focus event. Use the onmouseover
-                  and onmouseout events to change a decorative image when the mouse moves on top of
-                  or away from an element on the page. Also, use the onfocus and onblur events to change
-                  the image when the element receives and loses focus.
-               </p>
-               <p>The example below has a decorative image in front of an anchor element. When the user
-                  mouses over the anchor tag, the decorative image in front of the anchor is changed.
-                  When the mouse moves off of the anchor, the image is changed back to its original
-                  version. The same image change effect occurs when the user gives keyboard focus to
-                  the anchor element. When focus is received the image changes, when focus is lost the
-                  image is changed back. This is accomplished by attaching onmouseover, onmouseout,
-                  onfocus and onblur event handlers to the anchor element. The event handler is a JavaScript
-                  function called updateImage(), which changes the src attribute of the image. The updateImage()
-                  is called in response to the onmouseover, onmouseout, onfocus, and onblur events.
-               </p>
-               <p>Each image is given a unique id. This unique id is passed to updateImage() along with
-                  a boolean value indicating which image is to be used: updateImage(imgId, isOver);.
-                  The boolean value of true is passed when the mouse is over the anchor element or it
-                  has focus. A false value is passed when the mouse moves off of the anchor element
-                  or it loses focus. The updateImage() function uses the image id to load the image
-                  and then changes the src attribue based on the boolean value. Note that since the
-                  image is for decorative purposes, it has a null alt attribute. 
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>It is best to use images that are similar in size and to specify the height and width
-                        attributes on the image element. This will prevent any changes to the layout of the
-                        page when the image is updated. This example uses images which are identical in size.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to demonstrate using device independent events
+                     to change a decorative image in response to a mouse or focus event. Use the onmouseover
+                     and onmouseout events to change a decorative image when the mouse moves on top of
+                     or away from an element on the page. Also, use the onfocus and onblur events to change
+                     the image when the element receives and loses focus.
+                  </p>
+                  <p>The example below has a decorative image in front of an anchor element. When the user
+                     mouses over the anchor tag, the decorative image in front of the anchor is changed.
+                     When the mouse moves off of the anchor, the image is changed back to its original
+                     version. The same image change effect occurs when the user gives keyboard focus to
+                     the anchor element. When focus is received the image changes, when focus is lost the
+                     image is changed back. This is accomplished by attaching onmouseover, onmouseout,
+                     onfocus and onblur event handlers to the anchor element. The event handler is a JavaScript
+                     function called updateImage(), which changes the src attribute of the image. The updateImage()
+                     is called in response to the onmouseover, onmouseout, onfocus, and onblur events.
+                  </p>
+                  <p>Each image is given a unique id. This unique id is passed to updateImage() along with
+                     a boolean value indicating which image is to be used: updateImage(imgId, isOver);.
+                     The boolean value of true is passed when the mouse is over the anchor element or it
+                     has focus. A false value is passed when the mouse moves off of the anchor element
+                     or it loses focus. The updateImage() function uses the image id to load the image
+                     and then changes the src attribue based on the boolean value. Note that since the
+                     image is for decorative purposes, it has a null alt attribute. 
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
                         
-                     </p>
-                     
+                        <p>It is best to use images that are similar in size and to specify the height and width
+                           attributes on the image element. This will prevent any changes to the layout of the
+                           page when the image is updated. This example uses images which are identical in size.
+                           
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3><pre xml:space="preserve">
 &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "https://www.w3.org/TR/html4/loose.dtd"&gt;
  &lt;html lang="en"&gt;
  &lt;head&gt;
@@ -139,77 +146,86 @@
  &lt;/body&gt;
  &lt;/html&gt;
 </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML with scripting support. </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML with scripting support. </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>Load the Web page and test the events using a mouse and via the keyboard. </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that the "standard" image is displayed as expected when the Web page is loaded.
-                        
-                     </li>
+                     <p>Load the Web page and test the events using a mouse and via the keyboard. </p>
                      
-                     <li>
+                     <ol>
                         
-                        <p>Using the Mouse </p>
-                        
-                        <ol>
+                        <li>Check that the "standard" image is displayed as expected when the Web page is loaded.
                            
-                           <li>Move the mouse over the element containing the event handlers (in this example it
-                              is an anchor element). Check that the image changes to the expected image.
-                           </li>
-                           
-                           <li>Move the mouse off of the element. Check that the image changes back to the "standard"
-                              image. 
-                           </li>
-                           
-                        </ol>
+                        </li>
                         
-                     </li>
-                     
-                     <li>
-                        
-                        <p>Using the Keyboard </p>
-                        
-                        <ol>
+                        <li>
                            
-                           <li>Use the keyboard to set focus to the element containing the event handlers. Check
-                              that the image changes to the expected image. 
-                           </li>
+                           <p>Using the Mouse </p>
                            
-                           <li>Use the keyboard to remove focus from the element (generally by moving focus to another
-                              element). Check that the image changes to the "standard" image.
-                           </li>
+                           <ol>
+                              
+                              <li>Move the mouse over the element containing the event handlers (in this example it
+                                 is an anchor element). Check that the image changes to the expected image.
+                              </li>
+                              
+                              <li>Move the mouse off of the element. Check that the image changes back to the "standard"
+                                 image. 
+                              </li>
+                              
+                           </ol>
                            
-                        </ol>
+                        </li>
                         
-                     </li>
+                        <li>
+                           
+                           <p>Using the Keyboard </p>
+                           
+                           <ol>
+                              
+                              <li>Use the keyboard to set focus to the element containing the event handlers. Check
+                                 that the image changes to the expected image. 
+                              </li>
+                              
+                              <li>Use the keyboard to remove focus from the element (generally by moving focus to another
+                                 element). Check that the image changes to the "standard" image.
+                              </li>
+                              
+                           </ol>
+                           
+                        </li>
+                        
+                        <li>Verify that the layout of other elements on the page is not affected when the image
+                           is changed. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Verify that the layout of other elements on the page is not affected when the image
-                        is changed. 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>All of the steps for the above checks are true. </li>
+                        
+                     </ul>
                      
-                     <li>All of the steps for the above checks are true. </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -217,7 +233,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -237,7 +253,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

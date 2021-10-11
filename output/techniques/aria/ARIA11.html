@@ -55,175 +55,191 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a> and <strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with 
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> and <strong>Sufficient</strong> to meet <a href="/understanding/identify-purpose">1.3.6: Identify Purpose</a> and <strong>Sufficient</strong> to meet <a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The purpose of this technique is to provide programmatic access to sections of a web
-                  page.  Landmark roles (or "landmarks") programmatically identify sections of a page.
-                  Landmarks help assistive technology (AT) users orient themselves to a page and help
-                  them navigate easily to various sections of a page. 
-                  
-               </p>
-               <p>They also provide an easy way for users of assistive technology to skip over blocks
-                  of content that are repeated on multiple pages and notify them of programmatic structure
-                  of a page. For instance, if there is a common navigation menu found on every page,
-                  landmark roles (or "landmarks") can be used to skip over it and navigate from section
-                  to section. This will save assistive technology users and keyboard users the trouble
-                  and time of tabbing through a large amount of content to find what they are really
-                  after, much like a traditional "skip links" mechanism. (Refer to User Agent Notes
-                  above for specifics of AT support). A blind user who may be familiar with a news site's
-                  menu, and is only interested in getting to the top story could easily navigate to
-                  the "main" landmark, and bypass dozens of menu links. In another circumstance, a user
-                  who is blind may want to quickly find a navigation menu, and can do so by jumping
-                  to the navigation landmark. 
-                  
-               </p>
-               <p>Landmarks also can help sighted keyboard-only users navigate to sections of a page
-                  using a <a href="https://www.paciellogroup.com/blog/2013/07/enabling-landmark-based-keyboard-navigation-in-firefox/">browser plugin</a>. 
-                  
-               </p>
-               <p>Landmarks are inserted into the page using the role attribute on an element that marks
-                  the section. The value of the attribute is the name of the landmark. These role values
-                  are listed below:
-                  
-               </p>
-               <ul>
-                  
-                  <li>banner: A region that contains the prime heading or internal title of a page.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The purpose of this technique is to provide programmatic access to sections of a web
+                     page.  Landmark roles (or "landmarks") programmatically identify sections of a page.
+                     Landmarks help assistive technology (AT) users orient themselves to a page and help
+                     them navigate easily to various sections of a page. 
                      
-                  </li>
-                  
-                  <li>complementary: Any section of the document that supports the main content, yet is
-                     separate and meaningful on its own.
+                  </p>
+                  <p>They also provide an easy way for users of assistive technology to skip over blocks
+                     of content that are repeated on multiple pages and notify them of programmatic structure
+                     of a page. For instance, if there is a common navigation menu found on every page,
+                     landmark roles (or "landmarks") can be used to skip over it and navigate from section
+                     to section. This will save assistive technology users and keyboard users the trouble
+                     and time of tabbing through a large amount of content to find what they are really
+                     after, much like a traditional "skip links" mechanism. (Refer to User Agent Notes
+                     above for specifics of AT support). A blind user who may be familiar with a news site's
+                     menu, and is only interested in getting to the top story could easily navigate to
+                     the "main" landmark, and bypass dozens of menu links. In another circumstance, a user
+                     who is blind may want to quickly find a navigation menu, and can do so by jumping
+                     to the navigation landmark. 
                      
-                  </li>
-                  
-                  <li>contentinfo:  A region that contains information about the parent document such as
-                     copyrights and links to privacy statements.
+                  </p>
+                  <p>Landmarks also can help sighted keyboard-only users navigate to sections of a page
+                     using a <a href="https://www.paciellogroup.com/blog/2013/07/enabling-landmark-based-keyboard-navigation-in-firefox/">browser plugin</a>. 
                      
-                  </li>
-                  
-                  <li>form: A region of the document that represents a collection of form-associated elements,
-                     some of which can represent editable values that can be submitted to a server for
-                     processing.
+                  </p>
+                  <p>Landmarks are inserted into the page using the role attribute on an element that marks
+                     the section. The value of the attribute is the name of the landmark. These role values
+                     are listed below:
                      
-                  </li>
-                  
-                  <li>main: Main content in a document. In almost all cases a page will have only one role="main".
+                  </p>
+                  <ul>
                      
-                  </li>
-                  
-                  <li>navigation: A collection of links suitable for use when navigating the document or
-                     related documents.
+                     <li>banner: A region that contains the prime heading or internal title of a page.
+                        
+                     </li>
                      
-                  </li>
-                  
-                  <li>search: The search tool of a Web document.
+                     <li>complementary: Any section of the document that supports the main content, yet is
+                        separate and meaningful on its own.
+                        
+                     </li>
                      
-                  </li>
-                  
-               </ul>
-               <p>There are cases when a particular landmark role could be used more than once on a
-                  page, such as on primary and secondary navigation menus. In these cases, identical
-                  roles should be disambiguated from each other using a valid technique for labelling
-                  regions (see examples below).
-                  
-               </p>
-               <p>Landmarks should supplement native semantic markup such as HTML headings, lists and
-                  other structural markup. Landmarks are interpretable by WAI-ARIA-aware assistive technologies
-                  and are not exposed by browsers directly to users.
-                  
-               </p>
-               <p>It is a best practice to include ALL content on the page in landmarks, so that screen
-                  reader users who rely on them to navigate from section to section do not lose track
-                  of content.
-                  
-               </p>
+                     <li>contentinfo:  A region that contains information about the parent document such as
+                        copyrights and links to privacy statements.
+                        
+                     </li>
+                     
+                     <li>form: A region of the document that represents a collection of form-associated elements,
+                        some of which can represent editable values that can be submitted to a server for
+                        processing.
+                        
+                     </li>
+                     
+                     <li>main: Main content in a document. In almost all cases a page will have only one role="main".
+                        
+                     </li>
+                     
+                     <li>navigation: A collection of links suitable for use when navigating the document or
+                        related documents.
+                        
+                     </li>
+                     
+                     <li>search: The search tool of a Web document.
+                        
+                     </li>
+                     
+                  </ul>
+                  <p>There are cases when a particular landmark role could be used more than once on a
+                     page, such as on primary and secondary navigation menus. In these cases, identical
+                     roles should be disambiguated from each other using a valid technique for labelling
+                     regions (see examples below).
+                     
+                  </p>
+                  <p>Landmarks should supplement native semantic markup such as HTML headings, lists and
+                     other structural markup. Landmarks are interpretable by WAI-ARIA-aware assistive technologies
+                     and are not exposed by browsers directly to users.
+                     
+                  </p>
+                  <p>It is a best practice to include ALL content on the page in landmarks, so that screen
+                     reader users who rely on them to navigate from section to section do not lose track
+                     of content.
+                     
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-simple-landmarks">
-                  <h3>Example 1: Simple landmarks</h3>
-                  <p>The following example shows how landmarks might be added to an HTML4 or XHTML 1.0
-                     document:
-                  </p><pre xml:space="preserve">&lt;div id="header" role="banner"&gt;A banner image and introductory title&lt;/div&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-simple-landmarks">
+                     <h3>Example 1: Simple landmarks</h3>
+                     <p>The following example shows how landmarks might be added to an HTML4 or XHTML 1.0
+                        document:
+                     </p><pre xml:space="preserve">&lt;div id="header" role="banner"&gt;A banner image and introductory title&lt;/div&gt;
 &lt;div id="sitelookup" role="search"&gt;....&lt;/div&gt;
 &lt;div id="nav" role="navigation"&gt;...a list of links here ... &lt;/div&gt;
 &lt;div id="content" role="main"&gt; ... Ottawa is the capital of Canada ...&lt;/div&gt;
 &lt;div id="rightsideadvert" role="complementary"&gt;....an advertisement here...&lt;/div&gt;
 &lt;div id="footer" role="contentinfo"&gt;(c)The Freedom Company, 123 Freedom Way, Helpville, USA&lt;/div&gt;</pre></section>
-               <section class="example" id="example-2-multiple-landmarks-of-the-same-type-and-aria-labelledby">
-                  <h3>Example 2: Multiple landmarks of the same type and aria-labelledby</h3>
-                  <p>The following example shows a best practice of how landmarks might be added to an
-                     HTML4 or XHTML 1.0 document in situations where there are more than two of the same
-                     type of landmark on the same page. For instance, if a navigation role is used multiple
-                     times on a Web page, each instance may have a unique label specified using <code class="att">aria-labelledby</code>:
-                     
-                     
-                  </p><pre xml:space="preserve">&lt;div id="leftnav" role="navigation" aria-labelledby="leftnavheading"&gt;
+                  <section class="example" id="example-2-multiple-landmarks-of-the-same-type-and-aria-labelledby">
+                     <h3>Example 2: Multiple landmarks of the same type and aria-labelledby</h3>
+                     <p>The following example shows a best practice of how landmarks might be added to an
+                        HTML4 or XHTML 1.0 document in situations where there are more than two of the same
+                        type of landmark on the same page. For instance, if a navigation role is used multiple
+                        times on a Web page, each instance may have a unique label specified using <code class="att">aria-labelledby</code>:
+                        
+                        
+                     </p><pre xml:space="preserve">&lt;div id="leftnav" role="navigation" aria-labelledby="leftnavheading"&gt;
 &lt;h2 id="leftnavheading"&gt;Institutional Links&lt;/h2&gt;
 &lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;
 &lt;div id="rightnav" role="navigation" aria-labelledby="rightnavheading"&gt;
 &lt;h2 id="rightnavheading"&gt;Related topics&lt;/h2&gt;
 &lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</pre></section>
-               <section class="example" id="example-3-multiple-landmarks-of-the-same-type-and-aria-label">
-                  <h3>Example 3: Multiple landmarks of the same type and aria-label</h3>
-                  <p>The following example shows a best practice of how landmarks might be added to an
-                     HTML4 or XHTML 1.0 document in situations where there are more than two of the same
-                     type of landmark on the same page, and there is no existing text on the page that
-                     can be referenced as the label.
-                  </p><pre xml:space="preserve">&lt;div id="leftnav" role="navigation" aria-label="Primary"&gt;
+                  <section class="example" id="example-3-multiple-landmarks-of-the-same-type-and-aria-label">
+                     <h3>Example 3: Multiple landmarks of the same type and aria-label</h3>
+                     <p>The following example shows a best practice of how landmarks might be added to an
+                        HTML4 or XHTML 1.0 document in situations where there are more than two of the same
+                        type of landmark on the same page, and there is no existing text on the page that
+                        can be referenced as the label.
+                     </p><pre xml:space="preserve">&lt;div id="leftnav" role="navigation" aria-label="Primary"&gt;
 &lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt;&lt;/ul&gt; &lt;/div&gt;
 &lt;div id="rightnav" role="navigation" aria-label="Secondary"&gt;
 &lt;ul&gt;&lt;li&gt;...a list of links here ...&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;</pre></section>
-               <section class="example" id="example-4-search-form">
-                  <h3>Example 4: Search form</h3>
-                  <p>The following example shows a search form with a "search" landmark. The search role
-                     typically goes on the form field or a div surrounding the search form.
-                  </p><pre xml:space="preserve">&lt;form role="search"&gt;
+                  <section class="example" id="example-4-search-form">
+                     <h3>Example 4: Search form</h3>
+                     <p>The following example shows a search form with a "search" landmark. The search role
+                        typically goes on the form field or a div surrounding the search form.
+                     </p><pre xml:space="preserve">&lt;form role="search"&gt;
 &lt;label for="s6"&gt;search&lt;/label&gt;&lt;input id="s6" type="text" size="20"&gt;
 ...
 &lt;/form&gt; </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Examine each element with a <a href="https://www.w3.org/TR/wai-aria/#landmark_roles">landmark role</a>.
+                     <ol>
                         
-                     </li>
-                     
-                     <li>Examine whether the landmark role attribute is applied to the section of the page
-                        that corresponds with that role. (i.e., the "navigation" role is applied to a navigation
-                        section, the "main" role is applied to where the main content begins.)
+                        <li>Examine each element with a <a href="https://www.w3.org/TR/wai-aria/#landmark_roles">landmark role</a>.
+                           
+                        </li>
                         
-                     </li>
+                        <li>Examine whether the landmark role attribute is applied to the section of the page
+                           that corresponds with that role. (i.e., the "navigation" role is applied to a navigation
+                           section, the "main" role is applied to where the main content begins.)
+                           
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>#1 and #2 are true.</li>
+                     <ul>
+                        
+                        <li>#1 and #2 are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -231,7 +247,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -283,7 +299,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

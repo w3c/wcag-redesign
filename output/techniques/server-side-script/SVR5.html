@@ -53,37 +53,44 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Advisory</strong> for <a href="/understanding/readable">3.1: Readable</a></span>.
+                  <p>This technique is <span><strong>Advisory</strong> for <a href="/understanding/language-of-page">3.1.1: Language of Page</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide information on the  primary language
-                  or languages in a Web Page, in order to identify the  audience of the content. The
-                  Content-Language HTTP header can contain a  list of one or more language codes, which
-                  can be used for language  negotiation between a user agent and a server. If the language
-                  preferences in a user agent are set correctly, language negotiation can  help the
-                  user to find a language version of the content that suits  his/her preferences. 
-               </p>
-               <p>Note that the Content-Language HTTP header does not serve to  identify the language
-                  used for processing the content. The content  processing language can be identified
-                  by means of other techniques,  such as the attributes lang and xml:lang in markup
-                  languages. 
-               </p>
-               <p>This technique ensures that the primary language of the  document, as specified for
-                  example in the lang or xml:lang attribute,  is listed in the Content-Language HTTP
-                  header. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide information on the  primary language
+                     or languages in a Web Page, in order to identify the  audience of the content. The
+                     Content-Language HTTP header can contain a  list of one or more language codes, which
+                     can be used for language  negotiation between a user agent and a server. If the language
+                     preferences in a user agent are set correctly, language negotiation can  help the
+                     user to find a language version of the content that suits  his/her preferences. 
+                  </p>
+                  <p>Note that the Content-Language HTTP header does not serve to  identify the language
+                     used for processing the content. The content  processing language can be identified
+                     by means of other techniques,  such as the attributes lang and xml:lang in markup
+                     languages. 
+                  </p>
+                  <p>This technique ensures that the primary language of the  document, as specified for
+                     example in the lang or xml:lang attribute,  is listed in the Content-Language HTTP
+                     header. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-setting-content-language-in-java-servlet-and-jsp">
-                  <h3>Example 1: Setting content language in Java Servlet and JSP</h3>
-                  <p>In Java Servlet or JavaServer Pages (JSP), developers can use response.setHeader("Content-Language",
-                     lang), in which "lang" stands for a language tag (for example, "en" for English):
-                     
-                  </p><pre xml:space="preserve">…
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-setting-content-language-in-java-servlet-and-jsp">
+                     <h3>Example 1: Setting content language in Java Servlet and JSP</h3>
+                     <p>In Java Servlet or JavaServer Pages (JSP), developers can use response.setHeader("Content-Language",
+                        lang), in which "lang" stands for a language tag (for example, "en" for English):
+                        
+                     </p><pre xml:space="preserve">…
 public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException 
 {
@@ -92,44 +99,53 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
   PrintWriter out = response.getWriter();
 …
 }</pre></section>
-               <section class="example" id="example-2-setting-content-language-in-php">
-                  <h3>Example 2: Setting content language in PHP</h3>
-                  <p>In PHP, developers can send a raw HTTP header with the header method. The following
-                     example sets the language to French: 
-                  </p><pre xml:space="preserve">&lt;?php  header('Content-language: fr');  …  ?&gt;  </pre></section>
+                  <section class="example" id="example-2-setting-content-language-in-php">
+                     <h3>Example 2: Setting content language in PHP</h3>
+                     <p>In PHP, developers can send a raw HTTP header with the header method. The following
+                        example sets the language to French: 
+                     </p><pre xml:space="preserve">&lt;?php  header('Content-language: fr');  …  ?&gt;  </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Server-side technologies, including server-side scripting languages and server configuration
-                  files for setting HTTP headers. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Server-side technologies, including server-side scripting languages and server configuration
+                     files for setting HTTP headers. 
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Use a Live HTTP Header viewer to find the value of the "Content-Language" header.
+                     <ol>
                         
-                     </li>
+                        <li> Use a Live HTTP Header viewer to find the value of the "Content-Language" header.
+                           
+                        </li>
+                        
+                        <li> Check that this value matches the default language of the Web page. </li>
+                        
+                     </ol>
                      
-                     <li> Check that this value matches the default language of the Web page. </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li> Step #2 is true. </li>
+                        
+                     </ul>
                      
-                     <li> Step #2 is true. </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -137,7 +153,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -173,7 +189,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

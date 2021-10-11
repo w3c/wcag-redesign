@@ -56,52 +56,59 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/enough-time">2.2: Enough Time</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/timing-adjustable">2.2.1: Timing Adjustable</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>Some Web pages display scrolling text because there is limited space available. Scrolling
-                  the text in a small text window makes the content available for users who can read
-                  quickly enough, but causes problems for users who read more slowly or use assistive
-                  technology. This technique provides a mechanism to stop the movement and make the
-                  entire block of text available statically. The text may be made available in a separate
-                  window or in a (larger) section of the page. Users can then read the text at their
-                  own speed. 
-               </p>
-               <p>This technique does not apply when the text that is moving can not be displayed all
-                  at once on the screen (e.g., a long chat conversation).
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>This technique can be used in combination with a style switching technique to present
-                        a page that is a <a href="/guidelines/#" target="terms">conforming alternate version</a> for non-conforming content. Refer to <a href="/techniques/css/C29">C29: Using a style switcher to provide a conforming alternate version</a> and <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions">Understanding Conforming Alternate Versions</a> for more information. 
-                     </p>
-                     
-                  </div>
-               </div>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-expanding-scrolling-text-in-place-">
-                  <h3>Example 1: Expanding Scrolling Text in Place </h3>
-                  <p>A large block of text is scrolled through a small marquee area of the page. A button
-                     lets the user stop the scrolling and display the entire block of text. 
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>Some Web pages display scrolling text because there is limited space available. Scrolling
+                     the text in a small text window makes the content available for users who can read
+                     quickly enough, but causes problems for users who read more slowly or use assistive
+                     technology. This technique provides a mechanism to stop the movement and make the
+                     entire block of text available statically. The text may be made available in a separate
+                     window or in a (larger) section of the page. Users can then read the text at their
+                     own speed. 
+                  </p>
+                  <p>This technique does not apply when the text that is moving can not be displayed all
+                     at once on the screen (e.g., a long chat conversation).
                   </p>
                   <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
                      <div>
                         
-                        <p>This code example requires that both CSS and JavaScript be turned on and available.
-                           
+                        <p>This technique can be used in combination with a style switching technique to present
+                           a page that is a <a href="/guidelines/#" target="terms">conforming alternate version</a> for non-conforming content. Refer to <a href="/techniques/css/C29">C29: Using a style switcher to provide a conforming alternate version</a> and <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions">Understanding Conforming Alternate Versions</a> for more information. 
                         </p>
                         
                      </div>
                   </div>
-                  <p>The CSS component:</p><pre xml:space="preserve">#scrollContainer {
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-expanding-scrolling-text-in-place-">
+                     <h3>Example 1: Expanding Scrolling Text in Place </h3>
+                     <p>A large block of text is scrolled through a small marquee area of the page. A button
+                        lets the user stop the scrolling and display the entire block of text. 
+                     </p>
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <div>
+                           
+                           <p>This code example requires that both CSS and JavaScript be turned on and available.
+                              
+                           </p>
+                           
+                        </div>
+                     </div>
+                     <p>The CSS component:</p><pre xml:space="preserve">#scrollContainer {
         visibility: visible;
         overflow: hidden;
         top: 50px; left: 10px;
@@ -163,14 +170,19 @@
   &lt;/div&gt;
 ...
 </pre><p class="working-example">Working example of this code: <a href="../../working-examples/script-scroll-text-expand/">Expanding Scrolling Text in Place</a>.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology that moves, blinks, or updates text and can create a static block of
-                  text. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology that moves, blinks, or updates text and can create a static block of
+                     text. 
+                  </p>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -178,7 +190,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -198,7 +210,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

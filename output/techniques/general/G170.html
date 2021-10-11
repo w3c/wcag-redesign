@@ -56,81 +56,97 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/audio-control">1.4.2: Audio Control</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The intent of this technique is to allow a user to turn off sounds that start automatically
-                  when a page loads. The control to turn off the sounds should be located near the beginning
-                  of the page to allow the control to be easily and quickly discovered by users. This
-                  is useful for those who utilize assistive technologies (such as screen readers, screen
-                  magnifiers, switch mechanisms, etc.) and those who may not (such as those with cognitive,
-                  learning and language disabilities).
-               </p>
-               <p>In this technique, an author includes a control that makes it possible for users to
-                  turn off any sounds that are played automatically. The control should be keyboard
-                  operable, located early in the tab and reading order, and clearly labeled to indicate
-                  that it will turn off the sounds that are playing.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The intent of this technique is to allow a user to turn off sounds that start automatically
+                     when a page loads. The control to turn off the sounds should be located near the beginning
+                     of the page to allow the control to be easily and quickly discovered by users. This
+                     is useful for those who utilize assistive technologies (such as screen readers, screen
+                     magnifiers, switch mechanisms, etc.) and those who may not (such as those with cognitive,
+                     learning and language disabilities).
+                  </p>
+                  <p>In this technique, an author includes a control that makes it possible for users to
+                     turn off any sounds that are played automatically. The control should be keyboard
+                     operable, located early in the tab and reading order, and clearly labeled to indicate
+                     that it will turn off the sounds that are playing.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>A Web page contains a time-based media presentation that includes an audio track as
-                     well as an animated video describing how to repair a lawnmower engine. The page contains
-                     2 buttons that say "Pause" and "Stop", which give the user control over when and if
-                     the time-based media plays.
-                  </p>
-               </section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>A Web page contains an embedded short film. The page contains a button that says "Pause
-                     the movie", which allows the user to pause the film.
-                  </p>
-               </section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>A Web page contains a presentation that includes video and audio. The page contains
-                     a button that says "Turn off multimedia", which allows the user to stop any video
-                     and audio from playing.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>A Web page contains a time-based media presentation that includes an audio track as
+                        well as an animated video describing how to repair a lawnmower engine. The page contains
+                        2 buttons that say "Pause" and "Stop", which give the user control over when and if
+                        the time-based media plays.
+                     </p>
+                  </section>
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>A Web page contains an embedded short film. The page contains a button that says "Pause
+                        the movie", which allows the user to pause the film.
+                     </p>
+                  </section>
+                  <section class="example" id="example-3">
+                     <h3>Example 3</h3>
+                     <p>A Web page contains a presentation that includes video and audio. The page contains
+                        a button that says "Turn off multimedia", which allows the user to stop any video
+                        and audio from playing.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies where sound can be played automatically.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies where sound can be played automatically.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Load a Web page.</li>
+                     <ol>
+                        
+                        <li>Load a Web page.</li>
+                        
+                        <li>Check for music or sounds that start automatically.</li>
+                        
+                        <li>Check that a control that allows the user to turn off the sounds is provided near
+                           the beginning of the page.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check for music or sounds that start automatically.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that a control that allows the user to turn off the sounds is provided near
-                        the beginning of the page.
-                     </li>
+                     <ul>
+                        
+                        <li>Check  #3 is true.</li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Check  #3 is true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -138,7 +154,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -158,7 +174,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

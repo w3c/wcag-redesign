@@ -53,39 +53,46 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This technique allows users to skip repeated material by placing that material in
-                  a menu that can be expanded or collapsed under user control. The user can skip the
-                  repeated material by collapsing the menu. The user invokes a user interface control
-                  to hide or remove the elements of the menu. The resources section lists several techniques
-                  for menus, toolbars and trees, any of which can be used to provide a mechanism for
-                  skipping navigation.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>Similiar approaches can be implemented using server-side scripting and reloading a
-                        modified version of the Web page.
-                     </p>
-                     
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This technique allows users to skip repeated material by placing that material in
+                     a menu that can be expanded or collapsed under user control. The user can skip the
+                     repeated material by collapsing the menu. The user invokes a user interface control
+                     to hide or remove the elements of the menu. The resources section lists several techniques
+                     for menus, toolbars and trees, any of which can be used to provide a mechanism for
+                     skipping navigation.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>Similiar approaches can be implemented using server-side scripting and reloading a
+                           modified version of the Web page.
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The navigation links at top of a Web page are all entries in a menu implemented using
-                     HTML, CSS, and Javascript. When the navigation bar is expanded, the navigation links
-                     are available to the user. When the navigation bar is collapsed, the links are not
-                     available.
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The navigation links at top of a Web page are all entries in a menu implemented using
+                        HTML, CSS, and Javascript. When the navigation bar is expanded, the navigation links
+                        are available to the user. When the navigation bar is collapsed, the links are not
+                        available.
+                     </p><pre xml:space="preserve">
 ...
 
   &lt;script type="text/javascript"&gt;
@@ -108,14 +115,14 @@
 
 ...
 </pre><p class="working-example">Working example of this code: <a href="../../working-examples/script-toggle-navbar-link/">Toggle navigation bar with a link</a>.
-                  </p>
-               </section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>The table of contents for a set of Web pages is repeated near the beginning of each
-                     Web page. A button at the beginning of the table of contents lets the user remove
-                     or restore it on the page.
-                  </p><pre xml:space="preserve">
+                     </p>
+                  </section>
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>The table of contents for a set of Web pages is repeated near the beginning of each
+                        Web page. A button at the beginning of the table of contents lets the user remove
+                        or restore it on the page.
+                     </p><pre xml:space="preserve">
 ...
 
    &lt;script type="text/javascript"&gt;
@@ -134,45 +141,54 @@
 
 ...
 </pre><p class="working-example">Working example of this code: <a href="../../working-examples/script-toggle-toc-button/">Toggle table of contents with a button</a>.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Technologies that provide client side scripting.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Technologies that provide client side scripting.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that some user interface control allows the repeated content to be expanded
-                        or collapsed.
-                     </li>
+                     <ol>
+                        
+                        <li>Check that some user interface control allows the repeated content to be expanded
+                           or collapsed.
+                        </li>
+                        
+                        <li>Check that when the content is expanded, it is included in the programmatically determined
+                           content at a logical place in the reading order.
+                        </li>
+                        
+                        <li>Check that when the content is collapsed, it is not part of the programmatically determined
+                           content.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check that when the content is expanded, it is included in the programmatically determined
-                        content at a logical place in the reading order.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that when the content is collapsed, it is not part of the programmatically determined
-                        content.
-                     </li>
+                     <ul>
+                        
+                        <li>All checks above are true.</li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>All checks above are true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -180,7 +196,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -217,7 +233,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

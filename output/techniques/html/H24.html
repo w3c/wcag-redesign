@@ -55,29 +55,36 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/text-alternatives">1.1: Text Alternatives</a> and <strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a>
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/non-text-content">1.1.1: Non-text Content</a> and <strong>Sufficient</strong> to meet <a href="/understanding/link-purpose-in-context">2.4.4: Link Purpose (In Context)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/link-purpose-link-only">2.4.9: Link Purpose (Link Only)</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide text alternatives that serve the same
-                  purpose as the selectable regions of an image map. An image map is an image divided
-                  into
-                  selectable regions defined by <code class="el">area</code> elements. Each area is a link to another
-                  Web page or another part of the current Web page. The <code class="att">alt</code> attribute of each
-                  <code class="el">area</code> element serves the same purpose as the selectable area of the
-                  image.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide text alternatives that serve the same
+                     purpose as the selectable regions of an image map. An image map is an image divided
+                     into
+                     selectable regions defined by <code class="el">area</code> elements. Each area is a link to another
+                     Web page or another part of the current Web page. The <code class="att">alt</code> attribute of each
+                     <code class="el">area</code> element serves the same purpose as the selectable area of the
+                     image.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>This example uses the <code class="att">alt</code> attribute of the <code class="el">area</code> element
-                     to provide text that describes the purpose of the image map areas.
-                  </p><pre xml:space="preserve">&lt;img src="welcome.gif" usemap="#map1" 
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>This example uses the <code class="att">alt</code> attribute of the <code class="el">area</code> element
+                        to provide text that describes the purpose of the image map areas.
+                     </p><pre xml:space="preserve">&lt;img src="welcome.gif" usemap="#map1" 
     alt="Areas in the library. Select an area for
 more information on that area." /&gt; 
 &lt;map id="map1" name="map1"&gt;
@@ -86,43 +93,52 @@ more information on that area." /&gt;
   &lt;area shape="rect" coords="34,34,100,100"
     href="media.html" alt="Audio visual lab" /&gt;
 &lt;/map&gt;   </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML Documents that contain <code class="el">area</code> elements.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML Documents that contain <code class="el">area</code> elements.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For each <code class="el">area</code> element in an image map: 
-                  </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that the <code class="el">area</code> element has an <code class="att">alt</code> attribute.
-                     </li>
+                     <p>For each <code class="el">area</code> element in an image map: 
+                     </p>
                      
-                     <li>Check that the text alternative specified by the <code class="att">alt</code> attribute serves the same
-                        purpose as the part of image map image referenced by the <code class="el">area</code> element
-                        of the imagemap.
-                     </li>
+                     <ol>
+                        
+                        <li>Check that the <code class="el">area</code> element has an <code class="att">alt</code> attribute.
+                        </li>
+                        
+                        <li>Check that the text alternative specified by the <code class="att">alt</code> attribute serves the same
+                           purpose as the part of image map image referenced by the <code class="el">area</code> element
+                           of the imagemap.
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>The above checks are true.</li>
+                     <ul>
+                        
+                        <li>The above checks are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -130,7 +146,7 @@ more information on that area." /&gt;
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -169,7 +185,7 @@ more information on that area." /&gt;
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

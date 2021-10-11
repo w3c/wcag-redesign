@@ -55,77 +55,84 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with  and <strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a>
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a> and <strong>Sufficient</strong> to meet <a href="/understanding/section-headings">2.4.10: Section Headings</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to use section headings to convey the structure
-                  of
-                  		the content. Heading markup can be used:
-               </p>
-               <ul>
-                  
-                  <li>to indicate start of main content</li>
-                  
-                  <li>to mark up section headings within the main content area</li>
-                  
-                  <li>to demarcate different navigational sections like top or main navigation, left or
-                     				secondary navigation and footer navigation
-                  </li>
-                  
-                  <li>to mark up images of text that are used as headings</li>
-                  		 
-                  <li>to allow users the ability to navigate a page by sections or skip repeated blocks
-                     of information
-                  </li>
-                  
-               </ul>
-               <p>Headings are designed to convey logical hierarchy. Skipping
-                  		levels in the sequence of headings may create the impression that the structure
-                  of the
-                  		document has not been properly thought through or that specific headings have been
-                  		chosen for their visual rendering rather than their meaning. Authors are encouraged
-                  to
-                  		nest headings hierarchically. When headings are nested hierarchically, the most
-                  important information is given the highest logical level, and subsections are given
-                  subsequent logical levels.(i.e., h2 is a subsection of h1). Providing this type of
-                  structure will help users understand the overall organization of the content more
-                  easily.
-               </p>
-               <p>Since headings indicate the start of important sections of content, it is possible
-                  for
-                  		users with assistive technology to jump directly to the appropriate heading and
-                  begin
-                  		reading the content. This significantly speeds interaction for users who would otherwise
-                  		access the content slowly. Headings create chunks of information that can be found
-                  easily by people with disabilities, such as a blind person using a screen reader,
-                  or a person with a cognitive disability who uses assistive technology that delineates
-                  groups of information, or someone with a communication disability or illiteracy, who
-                  uses a screen reader to assist them in their reading.
-                  					
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to use section headings to convey the structure
+                     of
+                     		the content. Heading markup can be used:
+                  </p>
+                  <ul>
                      
-                     <p>All of our techniques assume that people needing special user agents (including AT
-                        or special plug-ins) will get and be using that type user agent (eg screen reader,
-                        or plug-in that allows keyboard navigation of properly marked up content, etc).
-                     </p>
+                     <li>to indicate start of main content</li>
                      
+                     <li>to mark up section headings within the main content area</li>
+                     
+                     <li>to demarcate different navigational sections like top or main navigation, left or
+                        				secondary navigation and footer navigation
+                     </li>
+                     
+                     <li>to mark up images of text that are used as headings</li>
+                     		 
+                     <li>to allow users the ability to navigate a page by sections or skip repeated blocks
+                        of information
+                     </li>
+                     
+                  </ul>
+                  <p>Headings are designed to convey logical hierarchy. Skipping
+                     		levels in the sequence of headings may create the impression that the structure
+                     of the
+                     		document has not been properly thought through or that specific headings have been
+                     		chosen for their visual rendering rather than their meaning. Authors are encouraged
+                     to
+                     		nest headings hierarchically. When headings are nested hierarchically, the most
+                     important information is given the highest logical level, and subsections are given
+                     subsequent logical levels.(i.e., h2 is a subsection of h1). Providing this type of
+                     structure will help users understand the overall organization of the content more
+                     easily.
+                  </p>
+                  <p>Since headings indicate the start of important sections of content, it is possible
+                     for
+                     		users with assistive technology to jump directly to the appropriate heading and
+                     begin
+                     		reading the content. This significantly speeds interaction for users who would otherwise
+                     		access the content slowly. Headings create chunks of information that can be found
+                     easily by people with disabilities, such as a blind person using a screen reader,
+                     or a person with a cognitive disability who uses assistive technology that delineates
+                     groups of information, or someone with a communication disability or illiteracy, who
+                     uses a screen reader to assist them in their reading.
+                     					
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>All of our techniques assume that people needing special user agents (including AT
+                           or special plug-ins) will get and be using that type user agent (eg screen reader,
+                           or plug-in that allows keyboard navigation of properly marked up content, etc).
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>This example organizes the sections of a search page by marking each section
-                     heading using <code class="el">h2</code> elements.
-                  </p><pre xml:space="preserve">&lt;h1&gt;Search Technical Periodicals&lt;/h1&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>This example organizes the sections of a search page by marking each section
+                        heading using <code class="el">h2</code> elements.
+                     </p><pre xml:space="preserve">&lt;h1&gt;Search Technical Periodicals&lt;/h1&gt;
  &lt;h2&gt;Search&lt;/h2&gt;
  &lt;form action="search.php"&gt;
   &lt;p&gt;&lt;label for="searchInput"&gt;Enter search topic: &lt;/label&gt;
@@ -140,11 +147,11 @@
  &lt;/div&gt;
  &lt;h2&gt;Search Results&lt;/h2&gt;
  ... search results are returned in this section ...   </pre></section>
-               <section class="example" id="example-2-headings-show-the-overall-organization-of-the-content">
-                  <h3>Example 2: Headings show the overall organization of the content</h3>
-                  <p>In this example, heading markup is used to make the navigation and main content
-                     sections perceivable.
-                  </p><pre xml:space="preserve">&lt;!-- Logo, banner graphic, search form, etc.  --&gt;
+                  <section class="example" id="example-2-headings-show-the-overall-organization-of-the-content">
+                     <h3>Example 2: Headings show the overall organization of the content</h3>
+                     <p>In this example, heading markup is used to make the navigation and main content
+                        sections perceivable.
+                     </p><pre xml:space="preserve">&lt;!-- Logo, banner graphic, search form, etc.  --&gt;
   &lt;h2&gt;Navigation&lt;/h2&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href="about.htm"&gt;About us&lt;/a&gt;&lt;/li&gt;
@@ -154,13 +161,13 @@
   &lt;h2&gt;All about headings&lt;/h2&gt;
    &lt;!-- Text, images, other material making up the main content... --&gt; 
             </pre></section>
-               <section class="example" id="example-3-headings-show-the-organization-of-material-within-the-main-content">
-                  <h3>Example 3: Headings show the organization of material within the main content</h3>
-                  <p>Note that in HTML 4.01 and XHTML 1.x, heading elements only mark the beginning of
-                     	sections. Because there is no markup to associate a heading element with the section
-                     content explicitly, users will assume that the heading applies to all following content
-                     until the next heading element is encountered.
-                  </p><pre xml:space="preserve"> &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+                  <section class="example" id="example-3-headings-show-the-organization-of-material-within-the-main-content">
+                     <h3>Example 3: Headings show the organization of material within the main content</h3>
+                     <p>Note that in HTML 4.01 and XHTML 1.x, heading elements only mark the beginning of
+                        	sections. Because there is no markup to associate a heading element with the section
+                        content explicitly, users will assume that the heading applies to all following content
+                        until the next heading element is encountered.
+                     </p><pre xml:space="preserve"> &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
   &lt;head&gt;
     &lt;title&gt;Cooking techniques&lt;/title&gt;  
   &lt;/head&gt;   
@@ -179,37 +186,46 @@
     &lt;/p&gt;   
   &lt;/body&gt; 
 &lt;/html&gt;    </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
-                     			
-                     <li>Check that the content is divided into separate sections</li>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that each section on the page starts with a heading.</li>
+                     <ol>
+                        			
+                        <li>Check that the content is divided into separate sections</li>
+                        
+                        <li>Check that each section on the page starts with a heading.</li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>For 2.4.1 check #2 is true.</li>
-                     			
-                     <li>For 2.4.10 checks #1 and #2 are true.</li>
+                     <ul>
+                        
+                        <li>For 2.4.1 check #2 is true.</li>
+                        			
+                        <li>For 2.4.10 checks #1 and #2 are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -217,7 +233,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -290,7 +306,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

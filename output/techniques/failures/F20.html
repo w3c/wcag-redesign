@@ -60,76 +60,92 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						a <strong>Failure</strong> of <a href="/understanding/text-alternatives">1.1: Text Alternatives</a> and a <strong>Failure</strong> of <a href="/understanding/compatible">4.1: Compatible</a>
+                     						a <strong>Failure</strong> of <a href="/understanding/non-text-content">1.1.1: Non-text Content</a> and a <strong>Failure</strong> of <a href="/understanding/name-role-value">4.1.2: Name, Role, Value</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p> The objective of this failure condition is to address situations where the
-                  non-text content is updated, but the text alternative is not updated at the
-                  same time. If the text in the text alternative cannot still be used in
-                  place of the non-text content without losing information or function, then
-                  it fails because it is no longer a text alternative for the non-text
-                  content. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p> The objective of this failure condition is to address situations where the
+                     non-text content is updated, but the text alternative is not updated at the
+                     same time. If the text in the text alternative cannot still be used in
+                     place of the non-text content without losing information or function, then
+                     it fails because it is no longer a text alternative for the non-text
+                     content. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li> 
-                     <strong>Failure Example 1:</strong> A Sales chart is updated
-                     to October results, but the text alternative still describes
-                     September results. 
-                  </li>
-                  
-                  <li> 
-                     <strong>Failure Example 2:</strong> Pictures on a home page
-                     change daily, but text alternatives are not updated at the same
-                     time. 
-                  </li>
-                  
-                  <li> 
-                     <strong>Failure Example 3:</strong> The source attribute of
-                     images on a page is updated periodically using script, but the text
-                     alternatives are not updated at the same time. 
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p> Applies to all technologies. </p>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
-                     
-                     <li> Check each text alternative to see if it is describing content
-                        other than the currently-displayed non-text content. 
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
                   <ul>
                      
-                     <li> If step #1 is true then the text alternative is not up to date with
-                        current item, this failure condition applies, and content fails
-                        these Success Criteria. 
+                     <li> 
+                        <strong>Failure Example 1:</strong> A Sales chart is updated
+                        to October results, but the text alternative still describes
+                        September results. 
+                     </li>
+                     
+                     <li> 
+                        <strong>Failure Example 2:</strong> Pictures on a home page
+                        change daily, but text alternatives are not updated at the same
+                        time. 
+                     </li>
+                     
+                     <li> 
+                        <strong>Failure Example 3:</strong> The source attribute of
+                        images on a page is updated periodically using script, but the text
+                        alternatives are not updated at the same time. 
                      </li>
                      
                   </ul>
-                  
-               </section>
+               </details>
+            </section>
+            <section id="applicability">
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p> Applies to all technologies. </p>
+               </details>
+            </section>
+            <section id="tests">
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <ol>
+                        
+                        <li> Check each text alternative to see if it is describing content
+                           other than the currently-displayed non-text content. 
+                        </li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li> If step #1 is true then the text alternative is not up to date with
+                           current item, this failure condition applies, and content fails
+                           these Success Criteria. 
+                        </li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -137,7 +153,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -157,7 +173,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

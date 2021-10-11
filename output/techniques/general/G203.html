@@ -53,96 +53,115 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/time-based-media">1.2: Time-based Media</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/audio-description-or-media-alternative-prerecorded">1.2.3: Audio Description or Media Alternative (Prerecorded)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/audio-description-prerecorded">1.2.5: Audio Description (Prerecorded)</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The purpose of this technique is to provide an alternative to audio description for
-                  synchronized media that has no important time based information contained in the video
-                  portion of the media. This particularly applies to "talking head" videos where a person
-                  is talking in front of an unchanging background, such as a press conference, company
-                  president talk, or government announcement, etc. In this case there are no "important
-                  visual details" which would warrant audio description.
-                  			
-               </p>
-               <p>Audio description is not necessary when there is one person speaking against an unchanging
-                  background because there is no time-based visual information in the video that is
-                  "important" to the understanding of the content. The environment is static and therefore
-                  can be described in a non-multimedia static format such as alternative text that is
-                  programmatically associated with the video.
-                  			
-               </p>
-               <p>All that is necessary in this case is a static text alternative which would contain
-                  a general description of the context of the environment, any opening/closing credits,
-                  any text that appears in the bottom of the video with the name of the speaker, and
-                  other basic information, if these are seen on the screen and cannot be heard in the
-                  audio.
-                  			
-               </p>
-               <p>This technique does NOT apply to a situation where there are multiple speakers and
-                  where the identity of each new speaker is not evident in the audio track but is identified
-                  on screen with visual text as they speak. In this case, audio description should be
-                  used, and this  technique would not apply.
-                  			
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The purpose of this technique is to provide an alternative to audio description for
+                     synchronized media that has no important time based information contained in the video
+                     portion of the media. This particularly applies to "talking head" videos where a person
+                     is talking in front of an unchanging background, such as a press conference, company
+                     president talk, or government announcement, etc. In this case there are no "important
+                     visual details" which would warrant audio description.
+                     			
+                  </p>
+                  <p>Audio description is not necessary when there is one person speaking against an unchanging
+                     background because there is no time-based visual information in the video that is
+                     "important" to the understanding of the content. The environment is static and therefore
+                     can be described in a non-multimedia static format such as alternative text that is
+                     programmatically associated with the video.
+                     			
+                  </p>
+                  <p>All that is necessary in this case is a static text alternative which would contain
+                     a general description of the context of the environment, any opening/closing credits,
+                     any text that appears in the bottom of the video with the name of the speaker, and
+                     other basic information, if these are seen on the screen and cannot be heard in the
+                     audio.
+                     			
+                  </p>
+                  <p>This technique does NOT apply to a situation where there are multiple speakers and
+                     where the identity of each new speaker is not evident in the audio track but is identified
+                     on screen with visual text as they speak. In this case, audio description should be
+                     used, and this  technique would not apply.
+                     			
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-a-video-of-a-ceo-speaking-to-shareholders">
-                  <h3>Example 1: A video of a CEO speaking to shareholders</h3>
-                  <p>A CEO is speaking to shareholders from his office. The video has a title page at the
-                     beginning of the video giving the date. When the speaker begins, there is a strip
-                     of text at the bottom of the video saying "John Doe, President of XYZ Cooperation".
-                     At the end of the video are title credits that say "produced by the Honest TV Productions
-                     Ltd."
-                     					
-                  </p>
-                  <p>As an alternative, there is a paragraph below the video which is associated with the
-                     video file using aria-describedby which says: "July 22, 2011, John Doe, President
-                     of XYZ cooperation, speaking from his office. Video produced by the Honest TV Productions
-                     Ltd."
-                     					
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-a-video-of-a-ceo-speaking-to-shareholders">
+                     <h3>Example 1: A video of a CEO speaking to shareholders</h3>
+                     <p>A CEO is speaking to shareholders from his office. The video has a title page at the
+                        beginning of the video giving the date. When the speaker begins, there is a strip
+                        of text at the bottom of the video saying "John Doe, President of XYZ Cooperation".
+                        At the end of the video are title credits that say "produced by the Honest TV Productions
+                        Ltd."
+                        					
+                     </p>
+                     <p>As an alternative, there is a paragraph below the video which is associated with the
+                        video file using aria-describedby which says: "July 22, 2011, John Doe, President
+                        of XYZ cooperation, speaking from his office. Video produced by the Honest TV Productions
+                        Ltd."
+                        					
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Videos of only a speaker</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Videos of only a speaker</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Check that there is no important time-based information in the video track
-                        				
-                     </li>
+                     <ol>
+                        
+                        <li> Check that there is no important time-based information in the video track
+                           				
+                        </li>
+                        
+                        <li> Check that the programmatically associated description of the media contains any
+                           context of the content that is not contained in the audio track (e.g. speaker identification,
+                           credits, context)
+                           				
+                        </li>
+                        
+                     </ol>
                      
-                     <li> Check that the programmatically associated description of the media contains any
-                        context of the content that is not contained in the audio track (e.g. speaker identification,
-                        credits, context)
-                        				
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li> All checks are true.
+                           				
+                        </li>
+                        
+                     </ul>
                      
-                     <li> All checks are true.
-                        				
-                     </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -150,7 +169,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -170,7 +189,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

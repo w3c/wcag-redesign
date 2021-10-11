@@ -56,80 +56,96 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/compatible">4.1: Compatible</a>, using a more specific technique.</span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/name-role-value">4.1.2: Name, Role, Value</a>, using a more specific technique.</span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to allow assistive technology to
-                  understand Web content so that it can convey equivalent information to the
-                  user through an alternate user interface and allow them to operate controls
-                  through the AT.
-               </p>
-               <p>This technique involves using standard, documented and supported features to
-                  expose these properties to AT. It relies on the fact that these standard
-                  controls in standard browsers meet the requirements.
-               </p>
-               <p>For HTML these assumptions are good. They may also be appropriate for some
-                  other technologies.
-               </p>
-               <p>Even when the components support accessibility, it is essential that some
-                  information be provided by the author. For example, a control may have the
-                  ability to provide a name but the author still has to provide the name. The
-                  role attribute however may already be provided since it is a standard
-                  component with a fixed role.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to allow assistive technology to
+                     understand Web content so that it can convey equivalent information to the
+                     user through an alternate user interface and allow them to operate controls
+                     through the AT.
+                  </p>
+                  <p>This technique involves using standard, documented and supported features to
+                     expose these properties to AT. It relies on the fact that these standard
+                     controls in standard browsers meet the requirements.
+                  </p>
+                  <p>For HTML these assumptions are good. They may also be appropriate for some
+                     other technologies.
+                  </p>
+                  <p>Even when the components support accessibility, it is essential that some
+                     information be provided by the author. For example, a control may have the
+                     ability to provide a name but the author still has to provide the name. The
+                     role attribute however may already be provided since it is a standard
+                     component with a fixed role.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>Example 1: A Web page written in HTML or XHTML uses standard form
-                     controls, and identifies the form control using the title attribute.
-                     The user agent makes information about these controls, including the
-                     name, available to assistive technology through the DOM and through
-                     a platform-specific Accessibility API.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>Example 1: A Web page written in HTML or XHTML uses standard form
+                        controls, and identifies the form control using the title attribute.
+                        The user agent makes information about these controls, including the
+                        name, available to assistive technology through the DOM and through
+                        a platform-specific Accessibility API.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Markup technologies where it is possible to expose the name and role, allow
-                  user-settable properties to be directly set, and provide notification of
-                  changes.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Markup technologies where it is possible to expose the name and role, allow
+                     user-settable properties to be directly set, and provide notification of
+                     changes.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Visually inspect the markup or use a tool.</li>
+                     <ol>
+                        
+                        <li>Visually inspect the markup or use a tool.</li>
+                        
+                        <li>Check that proper markup is used such that the name and role,
+                           for each user interface component can be determined.
+                        </li>
+                        
+                        <li>Check that proper markup is used such that the user interface
+                           components that accept user input can all be operated from AT.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check that proper markup is used such that the name and role,
-                        for each user interface component can be determined.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that proper markup is used such that the user interface
-                        components that accept user input can all be operated from AT.
-                     </li>
+                     <ul>
+                        
+                        <li>Step #2 and #3 are both true for each user interface component</li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Step #2 and #3 are both true for each user interface component</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -137,7 +153,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -157,7 +173,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

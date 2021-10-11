@@ -56,109 +56,125 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/use-of-color">1.4.1: Use of Color</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The intent of this technique is to provide a redundant visual cue for users who may
-                  not be able to discern a difference in text color. Color is commonly used to indicate
-                  the different status of words that are part of a paragraph or other block of text
-                  or where special characters or graphics cannot be used to indicate which words have
-                  special status. For example, scattered words in text may be hypertext links that are
-                  marked as such by being printed in a different color. This technique describes a way
-                  to provide cues in addition to color so that users who may have difficulty perceiving
-                  color differences or have low vision can identify them.
-               </p>
-               <p>To use this technique, an author incorporates a visual cue in addition to color for
-                  each place where color alone is used to convey information. Visual cues can take many
-                  forms including changes to the font style, the addition of underlines, bold, or italics,
-                  or changes to the font size.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>While this technique is sufficient to meet the visual requirements of Success Criterion
-                        1.4.1, the information conveyed by the color must also be available programmatically
-                        to satisfy Success Criterion 1.3.1. See
-                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships">How to Meet 1.3.1</a>.
-                     </p>
-                     
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The intent of this technique is to provide a redundant visual cue for users who may
+                     not be able to discern a difference in text color. Color is commonly used to indicate
+                     the different status of words that are part of a paragraph or other block of text
+                     or where special characters or graphics cannot be used to indicate which words have
+                     special status. For example, scattered words in text may be hypertext links that are
+                     marked as such by being printed in a different color. This technique describes a way
+                     to provide cues in addition to color so that users who may have difficulty perceiving
+                     color differences or have low vision can identify them.
+                  </p>
+                  <p>To use this technique, an author incorporates a visual cue in addition to color for
+                     each place where color alone is used to convey information. Visual cues can take many
+                     forms including changes to the font style, the addition of underlines, bold, or italics,
+                     or changes to the font size.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>While this technique is sufficient to meet the visual requirements of Success Criterion
+                           1.4.1, the information conveyed by the color must also be available programmatically
+                           to satisfy Success Criterion 1.3.1. See
+                           <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships">How to Meet 1.3.1</a>.
+                        </p>
+                        
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>The default formatting for links on a page includes presenting them both in a different
-                     color than the other text on the page underlining them to make the links identifiable
-                     even without color vision.
-                  </li>
-                  
-                  <li>An article comparing the use of similar elements in different markup languages uses
-                     colored text to identify the elements from each language. Elements from the first
-                     markup language are identified using BLUE, bolded text. Elements from the second are
-                     presented as RED, italicized text.
-                  </li>
-                  
-                  <li>A news site lists links to the articles appearing on its site. Additional information
-                     such as the section the article appears in, the time the article was posted, a related
-                     location or an indication that it is accompanied by live video appears in some cases.
-                     The links to the articles are in a different color than the additional information
-                     but the links are not underlined, and each link is presented in a larger font than
-                     the rest of the information so that users who have problems distinguishing between
-                     colors can identify the links more easily.
-                  </li>
-                  
-                  <li>Short news items sometimes have sentences that are also links to more information.
-                     Those sentences are printed in color and use a sans-serif font face while the rest
-                     of the paragraph is in black Times-Roman.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Colored text when the color is used to convey information such as:</p>
-               <ul>
-                  
-                  <li>Words that are links in a paragraph</li>
-                  
-                  <li>Items in a list where some are different than others and are presented in colored
-                     text
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
-                     
-                     <li>Locate all instances where the color of text is used to convey information.</li>
-                     
-                     <li>Check that any text where color is used to convey information is also styled or uses
-                        a font that makes it visually distinct from other text around it.
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
                   <ul>
                      
-                     <li>Check #2 is true.</li>
+                     <li>The default formatting for links on a page includes presenting them both in a different
+                        color than the other text on the page underlining them to make the links identifiable
+                        even without color vision.
+                     </li>
+                     
+                     <li>An article comparing the use of similar elements in different markup languages uses
+                        colored text to identify the elements from each language. Elements from the first
+                        markup language are identified using BLUE, bolded text. Elements from the second are
+                        presented as RED, italicized text.
+                     </li>
+                     
+                     <li>A news site lists links to the articles appearing on its site. Additional information
+                        such as the section the article appears in, the time the article was posted, a related
+                        location or an indication that it is accompanied by live video appears in some cases.
+                        The links to the articles are in a different color than the additional information
+                        but the links are not underlined, and each link is presented in a larger font than
+                        the rest of the information so that users who have problems distinguishing between
+                        colors can identify the links more easily.
+                     </li>
+                     
+                     <li>Short news items sometimes have sentences that are also links to more information.
+                        Those sentences are printed in color and use a sans-serif font face while the rest
+                        of the paragraph is in black Times-Roman.
+                     </li>
                      
                   </ul>
-                  
-               </section>
+               </details>
+            </section>
+            <section id="applicability">
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Colored text when the color is used to convey information such as:</p>
+                  <ul>
+                     
+                     <li>Words that are links in a paragraph</li>
+                     
+                     <li>Items in a list where some are different than others and are presented in colored
+                        text
+                     </li>
+                     
+                  </ul>
+               </details>
+            </section>
+            <section id="tests">
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <ol>
+                        
+                        <li>Locate all instances where the color of text is used to convey information.</li>
+                        
+                        <li>Check that any text where color is used to convey information is also styled or uses
+                           a font that makes it visually distinct from other text around it.
+                        </li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li>Check #2 is true.</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -166,7 +182,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -186,7 +202,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

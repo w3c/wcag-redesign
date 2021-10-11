@@ -8,7 +8,7 @@
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Understanding</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -60,145 +60,161 @@
                </p>
             </blockquote>
             <section id="intent">
-               <h2>Intent</h2>
-               <p>The intent of this Success Criterion is to ensure that that content does not "trap"
-                  keyboard focus within subsections of content on a Web page. This is a common problem
-                  when multiple formats are combined within a page and rendered using plug-ins or embedded
-                  applications.
-                  
-               </p>
-               <p>There may be times when the functionality of the Web page restricts the focus to a
-                  subsection of the content, as long as the user knows how to leave that state and "untrap"
-                  the focus.
-                  
-               </p>
+               <details>
+                  <summary>
+                     <h2>Intent</h2>
+                  </summary>
+                  <p>The intent of this Success Criterion is to ensure that that content does not "trap"
+                     keyboard focus within subsections of content on a Web page. This is a common problem
+                     when multiple formats are combined within a page and rendered using plug-ins or embedded
+                     applications.
+                     
+                  </p>
+                  <p>There may be times when the functionality of the Web page restricts the focus to a
+                     subsection of the content, as long as the user knows how to leave that state and "untrap"
+                     the focus.
+                     
+                  </p>
+               </details>
             </section>
             <section id="benefits">
-               <h2>Benefits</h2>
-               <ul>
-                  
-                  
-                  <li>People who rely on a keyboard or keyboard interface to use the Web including people
-                     who are blind and people with physical disabilities.
-                     
-                  </li>
-                  
-                  
-               </ul>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  
-                  <li>
-                     
-                     
-                     <p>
-                        								       
-                        <strong>A calendar widget</strong>
-                        							     
-                        
-                     </p>
-                     
-                     
-                     <p>A calendar widget allows users to add, remove or update items in their calendar using
-                        the keyboard. The controls in the widget are part of the tab order within the Web
-                        page, allowing users to tab through the controls in the widget as well as to any links
-                        or controls that follow.
-                        
-                     </p>
-                     
-                     
-                  </li>
-                  
-                  
-                  <li>
-                     
-                     
-                     <p>
-                        								       
-                        <strong>A puzzle applet</strong>
-                        							     
-                        
-                     </p>
-                     
-                     
-                     <p>Once a user tabs into an applet, further tabs and other keystrokes are handled by
-                        the applet. Instructions describing the keystroke used to exit the applet are provided
-                        prior to the applet as well as within the applet itself.
-                        
-                     </p>
-                     
-                     
-                  </li>
-                  
-                  
-                  <li>
-                     
-                     
-                     <p>
-                        								       
-                        <strong>A modal dialog box</strong>
-                        							     
-                        
-                     </p>
-                     
-                     
-                     <p>A Web application brings up a dialog box. At the bottom of the dialog are two buttons,
-                        Cancel and OK. When the dialog has been opened, focus is trapped within the dialog;
-                        tabbing from the last control in the dialog takes focus to the first control in the
-                        dialog. The dialog is dismissed by activating the Cancel button or the OK button.
-                        
-                     </p>
-                     
-                     
-                  </li>
-                  
-                  
-               </ul>
-            </section>
-            <section id="techniques">
-               <h2>Techniques</h2>
-               <p>Each numbered item in this section represents a technique or combination of techniques
-                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                  it is not necessary to use these particular techniques. For information on using other
-                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-               </p>
-               <section id="sufficient">
-                  <h3>Sufficient Techniques</h3>
-                  <ol>
-                     
-                     
-                     <li>
-                        									         
-                        <a class="general" href="/techniques/general/G21">G21: Ensuring that users are not trapped in content</a>
-                        								       
-                        
-                     </li>
-                     
-                     
-                  </ol>
-               </section>
-               <section id="failure">
-                  <h3>Failures</h3>
-                  <p>The following are common mistakes that are considered failures of this Success Criterion
-                     by the WCAG Working Group.
-                  </p>
+               <details>
+                  <summary>
+                     <h2>Benefits</h2>
+                  </summary>
                   <ul>
                      
                      
-                     <li>
-                        									         
-                        <a class="failure" href="/techniques/failures/F10">F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining
-                           multiple content formats in a way that traps users inside one format type</a>
-                        								       
+                     <li>People who rely on a keyboard or keyboard interface to use the Web including people
+                        who are blind and people with physical disabilities.
                         
                      </li>
                      
                      
                   </ul>
-               </section>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <ul>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>
+                           								       
+                           <strong>A calendar widget</strong>
+                           							     
+                           
+                        </p>
+                        
+                        
+                        <p>A calendar widget allows users to add, remove or update items in their calendar using
+                           the keyboard. The controls in the widget are part of the tab order within the Web
+                           page, allowing users to tab through the controls in the widget as well as to any links
+                           or controls that follow.
+                           
+                        </p>
+                        
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>
+                           								       
+                           <strong>A puzzle applet</strong>
+                           							     
+                           
+                        </p>
+                        
+                        
+                        <p>Once a user tabs into an applet, further tabs and other keystrokes are handled by
+                           the applet. Instructions describing the keystroke used to exit the applet are provided
+                           prior to the applet as well as within the applet itself.
+                           
+                        </p>
+                        
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        
+                        
+                        <p>
+                           								       
+                           <strong>A modal dialog box</strong>
+                           							     
+                           
+                        </p>
+                        
+                        
+                        <p>A Web application brings up a dialog box. At the bottom of the dialog are two buttons,
+                           Cancel and OK. When the dialog has been opened, focus is trapped within the dialog;
+                           tabbing from the last control in the dialog takes focus to the first control in the
+                           dialog. The dialog is dismissed by activating the Cancel button or the OK button.
+                           
+                        </p>
+                        
+                        
+                     </li>
+                     
+                     
+                  </ul>
+               </details>
+            </section>
+            <section id="techniques">
+               <details>
+                  <summary>
+                     <h2>Techniques</h2>
+                  </summary>
+                  <p>Each numbered item in this section represents a technique or combination of techniques
+                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                     it is not necessary to use these particular techniques. For information on using other
+                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+                  </p>
+                  <section id="sufficient">
+                     <h3>Sufficient Techniques</h3>
+                     <ol>
+                        
+                        
+                        <li>
+                           									         
+                           <a class="general" href="/techniques/general/G21">G21: Ensuring that users are not trapped in content</a>
+                           								       
+                           
+                        </li>
+                        
+                        
+                     </ol>
+                  </section>
+                  <section id="failure">
+                     <h3>Failures</h3>
+                     <p>The following are common mistakes that are considered failures of this Success Criterion
+                        by the WCAG Working Group.
+                     </p>
+                     <ul>
+                        
+                        
+                        <li>
+                           									         
+                           <a class="failure" href="/techniques/failures/F10">F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining
+                              multiple content formats in a way that traps users inside one format type</a>
+                           								       
+                           
+                        </li>
+                        
+                        
+                     </ul>
+                  </section>
+               </details>
             </section>
             <nav class="pager" aria-label="Previous/Next Page">
                <ul id="navigation">
@@ -245,7 +261,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

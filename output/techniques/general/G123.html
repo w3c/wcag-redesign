@@ -56,58 +56,65 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide a mechanism to bypass a block of material
-                  by skipping to the end of the block. The first link in the block or the link directly
-                  preceding the block moves focus to the content immediately after the block. Activating
-                  the link advances the keyboard focus past the block. When there are multiple blocks
-                  to be skipped, the user skips from block to block via these links.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide a mechanism to bypass a block of material
+                     by skipping to the end of the block. The first link in the block or the link directly
+                     preceding the block moves focus to the content immediately after the block. Activating
+                     the link advances the keyboard focus past the block. When there are multiple blocks
+                     to be skipped, the user skips from block to block via these links.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-skip-navigation-links">
-                  <h3>Example 1: Skip navigation links</h3>
-                  <p>The pages on an organization's Web site include a navigation bar or main menu containing
-                     links to major sections of the site, the site map, information about the organization,
-                     and how to contact the organization. The first link in this area is titled "Skip Navigation
-                     Links". A user activates the link to skip over these links.
-                  </p>
-               </section>
-               <section class="example" id="example-2-a-book-index">
-                  <h3>Example 2: A book index</h3>
-                  <p>A book contains an index that is divided into a set of pages. In the content at the
-                     beginning of each page of the index are links for each letter of the alphabet, linking
-                     into the index where the entries start with that letter. The first link in the set
-                     is titled "Skip Links into Index". A user activates this link to skip over the links.
-                  </p>
-               </section>
-               <section class="example" id="example-3-several-sets-of-links">
-                  <h3>Example 3: Several sets of links</h3>
-                  <p>All the pages on a Web site include a section containing links to the site map, information
-                     about the organization, and how to contact the organization. All the pages in each
-                     section of the site also contain a set of links to its subsections. The first link
-                     in the first block is titled "Skip Navigation Links" and skips over the first set
-                     of links. The first link in the second block is titled "Skip Section Links" and skips
-                     over the subsection links.
-                  </p>
-               </section>
-               <section class="example" id="example-4-html-page-with-several-blocks-of-navigation-links">
-                  <h3>Example 4: HTML page with several blocks of navigation links</h3>
-                  <p>This example demonstrates both the use of Heading elements at the beginning of each
-                     section (H69) and links that skip to the end of each section. This allows people to
-                     skip blocks of repeated content using keyboard navigation or using heading navigation,
-                     depending on the capabilities of their user agents. Note that some sections of the
-                     content are wrapped in a
-                     <code class="el">div</code>
-                     element to work around a limitation of Internet Explorer (see the User Agents Notes
-                     for Creating HTML links to skip blocks of content (future link)).
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-skip-navigation-links">
+                     <h3>Example 1: Skip navigation links</h3>
+                     <p>The pages on an organization's Web site include a navigation bar or main menu containing
+                        links to major sections of the site, the site map, information about the organization,
+                        and how to contact the organization. The first link in this area is titled "Skip Navigation
+                        Links". A user activates the link to skip over these links.
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-a-book-index">
+                     <h3>Example 2: A book index</h3>
+                     <p>A book contains an index that is divided into a set of pages. In the content at the
+                        beginning of each page of the index are links for each letter of the alphabet, linking
+                        into the index where the entries start with that letter. The first link in the set
+                        is titled "Skip Links into Index". A user activates this link to skip over the links.
+                     </p>
+                  </section>
+                  <section class="example" id="example-3-several-sets-of-links">
+                     <h3>Example 3: Several sets of links</h3>
+                     <p>All the pages on a Web site include a section containing links to the site map, information
+                        about the organization, and how to contact the organization. All the pages in each
+                        section of the site also contain a set of links to its subsections. The first link
+                        in the first block is titled "Skip Navigation Links" and skips over the first set
+                        of links. The first link in the second block is titled "Skip Section Links" and skips
+                        over the subsection links.
+                     </p>
+                  </section>
+                  <section class="example" id="example-4-html-page-with-several-blocks-of-navigation-links">
+                     <h3>Example 4: HTML page with several blocks of navigation links</h3>
+                     <p>This example demonstrates both the use of Heading elements at the beginning of each
+                        section (H69) and links that skip to the end of each section. This allows people to
+                        skip blocks of repeated content using keyboard navigation or using heading navigation,
+                        depending on the capabilities of their user agents. Note that some sections of the
+                        content are wrapped in a
+                        <code class="el">div</code>
+                        element to work around a limitation of Internet Explorer (see the User Agents Notes
+                        for Creating HTML links to skip blocks of content (future link)).
+                     </p><pre xml:space="preserve">
               &lt;p&gt;&lt;a href="#content"&gt;Content title&lt;/a&gt;&lt;/p&gt;
                 &lt;h2&gt;Main Navigation&lt;/h2&gt;
                 &lt;ul&gt;
@@ -149,43 +156,52 @@
                 width: 100%;
                 }
             </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that contain links.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies that contain links.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check that a link is the last focusable control before the block of repeated content
-                        or the first link in the block.
-                     </li>
+                     <ol>
+                        
+                        <li>Check that a link is the last focusable control before the block of repeated content
+                           or the first link in the block.
+                        </li>
+                        
+                        <li>Check that the description of the link communicates that it skips the block.</li>
+                        
+                        <li>Check that the link is either always visible or visible when it has keyboard focus.</li>
+                        
+                        <li>Check that after activating the link, the keyboard focus has moved to the content
+                           immediately after the block.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Check that the description of the link communicates that it skips the block.</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that the link is either always visible or visible when it has keyboard focus.</li>
+                     <ul>
+                        
+                        <li>All checks above are true.</li>
+                        
+                     </ul>
                      
-                     <li>Check that after activating the link, the keyboard focus has moved to the content
-                        immediately after the block.
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>All checks above are true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -193,7 +209,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -225,7 +241,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

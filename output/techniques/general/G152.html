@@ -53,105 +53,121 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/enough-time">2.2: Enough Time</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/pause-stop-hide">2.2.2: Pause, Stop, Hide</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to ensure that animated gif images stop blinking
-                  within five seconds. There are three aspects of the design of animated gif images
-                  that work together to determine how long the image blinks (or otherwise animates):
-               </p>
-               <ul>
-                  
-                  <li>the number of
-                     <strong>frames</strong>
-                     in the image, which are discrete images in the animation sequence;
-                  </li>
-                  
-                  <li>the
-                     <strong>frame rate</strong>, which is how long each image is displayed;
-                  </li>
-                  
-                  <li>the number of
-                     <strong>repetitions</strong>, which is how many times the entire animation is performed;
-                  </li>
-                  
-               </ul>
-               <p>At its simplest, the duration of the animation is the number of frames times the frame
-                  rate times the number of repetitions. For example, a simple blinking image with 2
-                  frames, a frame rate of .5 seconds, and 3 repetitions will have a duration of (2 *
-                  0.5 * 3) seconds, or exactly 3 seconds.
-               </p>
-               <p>Many animated gif images have a constant frame rate, i.e., the amount of time each
-                  frame is displayed is the same. However, it is possible to set a different frame rate
-                  for each frame, to allow certain frames to be displayed longer than others. In this
-                  case, the duration of the animation is the sum of the frame rates times the number
-                  of repetitions. For example, a simple image with two frames, the first of which displays
-                  for .75 seconds and the second for .25 seconds, and three repetitions will have a
-                  duration of ((.75 + .25) * 3) seconds, also exactly 3 seconds.
-               </p>
-               <p>For an image to stop blinking within 5 seconds, one of the three variables must be
-                  adjusted. Most commonly, set the number of repetitions to five seconds divided by
-                  the product of the number of frames times the frame rate (or by the sum of the frame
-                  rate). Truncate this number down to the nearest integer, do not round up to the next
-                  integer, to ensure that the image will stop within five seconds.
-               </p>
-               <p>If even one repetition results in more than five seconds of animation, one of the
-                  other factors must be adjusted. Reduce the number of frames in the image, or increase
-                  the frame rate. Be careful when increasing the frame rate that the resulting image
-                  does not fail the requirement not to exceed the general flash or red flash thresholds;
-                  attention to this is especially important for large images.
-               </p>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>
-                     <strong>A simple blinking image.</strong>
-                     An image has 2 frames, a frame rate of .5 seconds, and 3 repetitions. The animation
-                     has a duration of (2 * 0.5 * 3) seconds, or exactly 3 seconds, and therefore meets
-                     the requirements of the success criterion.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology that supports animated gif (GIF89a)</p>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
-                     
-                     <li>Display an animated gif and time how long it animates.</li>
-                     
-                     <li>Alternatively, use an image editor to determine the number of frames, the frame rate,
-                        and the number of repetitions. Calculate the product of the number of frames multiplied
-                        by the frame rate times the number of repetitions. If the frame rates are not uniform,
-                        calculate the product of the sum of the frame rates multiplied by the number of repetitions.
-                     </li>
-                     
-                     <li>Using either method, the duration of animation should be less than or equal to 5 seconds.</li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to ensure that animated gif images stop blinking
+                     within five seconds. There are three aspects of the design of animated gif images
+                     that work together to determine how long the image blinks (or otherwise animates):
+                  </p>
                   <ul>
                      
-                     <li>Check #3 is true</li>
+                     <li>the number of
+                        <strong>frames</strong>
+                        in the image, which are discrete images in the animation sequence;
+                     </li>
+                     
+                     <li>the
+                        <strong>frame rate</strong>, which is how long each image is displayed;
+                     </li>
+                     
+                     <li>the number of
+                        <strong>repetitions</strong>, which is how many times the entire animation is performed;
+                     </li>
                      
                   </ul>
-                  
-               </section>
+                  <p>At its simplest, the duration of the animation is the number of frames times the frame
+                     rate times the number of repetitions. For example, a simple blinking image with 2
+                     frames, a frame rate of .5 seconds, and 3 repetitions will have a duration of (2 *
+                     0.5 * 3) seconds, or exactly 3 seconds.
+                  </p>
+                  <p>Many animated gif images have a constant frame rate, i.e., the amount of time each
+                     frame is displayed is the same. However, it is possible to set a different frame rate
+                     for each frame, to allow certain frames to be displayed longer than others. In this
+                     case, the duration of the animation is the sum of the frame rates times the number
+                     of repetitions. For example, a simple image with two frames, the first of which displays
+                     for .75 seconds and the second for .25 seconds, and three repetitions will have a
+                     duration of ((.75 + .25) * 3) seconds, also exactly 3 seconds.
+                  </p>
+                  <p>For an image to stop blinking within 5 seconds, one of the three variables must be
+                     adjusted. Most commonly, set the number of repetitions to five seconds divided by
+                     the product of the number of frames times the frame rate (or by the sum of the frame
+                     rate). Truncate this number down to the nearest integer, do not round up to the next
+                     integer, to ensure that the image will stop within five seconds.
+                  </p>
+                  <p>If even one repetition results in more than five seconds of animation, one of the
+                     other factors must be adjusted. Reduce the number of frames in the image, or increase
+                     the frame rate. Be careful when increasing the frame rate that the resulting image
+                     does not fail the requirement not to exceed the general flash or red flash thresholds;
+                     attention to this is especially important for large images.
+                  </p>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <ul>
+                     
+                     <li>
+                        <strong>A simple blinking image.</strong>
+                        An image has 2 frames, a frame rate of .5 seconds, and 3 repetitions. The animation
+                        has a duration of (2 * 0.5 * 3) seconds, or exactly 3 seconds, and therefore meets
+                        the requirements of the success criterion.
+                     </li>
+                     
+                  </ul>
+               </details>
+            </section>
+            <section id="applicability">
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology that supports animated gif (GIF89a)</p>
+               </details>
+            </section>
+            <section id="tests">
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <ol>
+                        
+                        <li>Display an animated gif and time how long it animates.</li>
+                        
+                        <li>Alternatively, use an image editor to determine the number of frames, the frame rate,
+                           and the number of repetitions. Calculate the product of the number of frames multiplied
+                           by the frame rate times the number of repetitions. If the frame rates are not uniform,
+                           calculate the product of the sum of the frame rates multiplied by the number of repetitions.
+                        </li>
+                        
+                        <li>Using either method, the duration of animation should be less than or equal to 5 seconds.</li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li>Check #3 is true</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -159,7 +175,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -179,7 +195,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

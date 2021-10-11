@@ -53,65 +53,81 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/input-modalities">2.5: Input Modalities</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/motion-actuation">2.5.4: Motion Actuation</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This describes the failure condition that results when motion actuation can not be
-                  deactivated.  People who may accidentally activate sensors due to tremors or other
-                  motor impairments need the ability to turn off motion actuation to prevent such accidental
-                  triggering of functions.  
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>The type of motion covered by the <a href="../../guidelines/sc/21/motion-actuation.html">Motion Actuation Success Criterion</a> does not relate to the movement of users through space as registered by geolocation
-                     sensors or beacons, or events observed by the device other than intentional gesturing
-                     by the user. It also does not cover indirect motion associated with operating a keyboard,
-                     pointer, or assistive technology.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This describes the failure condition that results when motion actuation can not be
+                     deactivated.  People who may accidentally activate sensors due to tremors or other
+                     motor impairments need the ability to turn off motion actuation to prevent such accidental
+                     triggering of functions.  
                   </p>
-               </div>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>The type of motion covered by the <a href="../../guidelines/sc/21/motion-actuation.html">Motion Actuation Success Criterion</a> does not relate to the movement of users through space as registered by geolocation
+                        sensors or beacons, or events observed by the device other than intentional gesturing
+                        by the user. It also does not cover indirect motion associated with operating a keyboard,
+                        pointer, or assistive technology.
+                     </p>
+                  </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-motion-activated-slider">
-                  <h3>Example 1: Motion Activated Slider</h3>
-                  <p>A slider which uses tilting motion to increase or decrease the value of an input,
-                     with no mechanism to deactivate the motion detection.
-                  </p>
-                  <p class="working-example"><a href="../../working-examples/device-motion-sensor-input-failure/">Working example of a motion activated slider that can not be deactivated</a></p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-motion-activated-slider">
+                     <h3>Example 1: Motion Activated Slider</h3>
+                     <p>A slider which uses tilting motion to increase or decrease the value of an input,
+                        with no mechanism to deactivate the motion detection.
+                     </p>
+                     <p class="working-example"><a href="../../working-examples/device-motion-sensor-input-failure/">Working example of a motion activated slider that can not be deactivated</a></p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Content using technologies that can support the detection of device or user motion
-                  such as shaking or tilting and use these motions as a means of input.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Content using technologies that can support the detection of device or user motion
+                     such as shaking or tilting and use these motions as a means of input.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <p>For each function that is triggered by a motion sensor:</p>
-                  <ol>
-                     					
-                     <li>Check if the use of a motion sensor is essential or required to make the function
-                        accessibility supported.
-                     </li>
-                     					
-                     <li>Check if there is a user setting which disables the motion detection.</li>
-                     				
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     					
-                     <li>If #1 and 2 are false then the control fails this success criterion. </li>
-                     				
-                  </ul>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <p>For each function that is triggered by a motion sensor:</p>
+                     <ol>
+                        					
+                        <li>Check if the use of a motion sensor is essential or required to make the function
+                           accessibility supported.
+                        </li>
+                        					
+                        <li>Check if there is a user setting which disables the motion detection.</li>
+                        				
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        					
+                        <li>If #1 and 2 are false then the control fails this success criterion. </li>
+                        				
+                     </ul>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -119,7 +135,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -139,7 +155,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

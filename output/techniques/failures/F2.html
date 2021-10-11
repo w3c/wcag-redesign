@@ -56,27 +56,34 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/adaptable">1.3: Adaptable</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This document describes a failure that occurs when a change in the appearance of text
-                  conveys meaning without using appropriate semantic markup. This failure also applies
-                  to images of text that are not enclosed in the appropriate semantic markup.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This document describes a failure that occurs when a change in the appearance of text
+                     conveys meaning without using appropriate semantic markup. This failure also applies
+                     to images of text that are not enclosed in the appropriate semantic markup.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-using-css-to-style-the-p-element-to-look-like-a-heading">
-                  <h3>Example 1: Using CSS to style the <code class="el">p</code> element to look like a heading
-                  </h3>
-                  <p>The author intended to make a heading but didn't want the look of the default HTML
-                     heading. So they used CSS to style the P element to look like a heading and they called
-                     it a heading. But they failed to use the proper HTML heading element. Therefore, the
-                     Assisitive Technology could not distinguish it as a heading.
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-using-css-to-style-the-p-element-to-look-like-a-heading">
+                     <h3>Example 1: Using CSS to style the <code class="el">p</code> element to look like a heading
+                     </h3>
+                     <p>The author intended to make a heading but didn't want the look of the default HTML
+                        heading. So they used CSS to style the P element to look like a heading and they called
+                        it a heading. But they failed to use the proper HTML heading element. Therefore, the
+                        Assisitive Technology could not distinguish it as a heading.
+                     </p><pre xml:space="preserve">
  &lt;style type="text/css"&gt;
  .heading1{
         font-family: Times, serif;
@@ -90,38 +97,38 @@
  ........
  &lt;/p&gt;
 </pre><div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                     <div>
-                        
-                        <p>In this case, the proper approach would be to use CSS to style the <code class="el">H1</code> element in HTML.
-                        </p>
-                        
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <div>
+                           
+                           <p>In this case, the proper approach would be to use CSS to style the <code class="el">H1</code> element in HTML.
+                           </p>
+                           
+                        </div>
                      </div>
-                  </div>
-               </section>
-               <section class="example" id="example-2-images-of-text-used-as-headings-where-the-images-are-not-marked-up-with-heading-tags">
-                  <h3>Example 2: Images of text used as headings where the images are not marked up with
-                     heading tags
-                  </h3>
-                  <p>Chapter1.gif is an image of the words, "Chapter One" in a Garamond font sized at 20
-                     pixels. This is a failure because at a minimum the img element should be enclosed
-                     within a header element. A better solution would be to eliminate the image and to
-                     enclose the text within a header element which has been styled using CSS.
-                  </p><pre xml:space="preserve">
+                  </section>
+                  <section class="example" id="example-2-images-of-text-used-as-headings-where-the-images-are-not-marked-up-with-heading-tags">
+                     <h3>Example 2: Images of text used as headings where the images are not marked up with
+                        heading tags
+                     </h3>
+                     <p>Chapter1.gif is an image of the words, "Chapter One" in a Garamond font sized at 20
+                        pixels. This is a failure because at a minimum the img element should be enclosed
+                        within a header element. A better solution would be to eliminate the image and to
+                        enclose the text within a header element which has been styled using CSS.
+                     </p><pre xml:space="preserve">
 &lt;img src="Chapter1.gif" alt="Chapter One"&gt;
  
 &lt;p&gt;Once upon a time in the land of the Web.....
 &lt;/p&gt;
 </pre></section>
-               <section class="example" id="example-3-using-css-to-visually-emphasize-a-phrase-or-word-without-conveying-that-emphasis-semantically">
-                  <h3>Example 3: Using CSS to visually emphasize a phrase or word without conveying that
-                     emphasis semantically
-                  </h3>
-                  <p>The following example fails because the information conveyed by using the CSS font-weight
-                     property to change to a bold font is not conveyed through semantic markup or stated
-                     explicitly in the text.
-                  </p>
-                  <p>Here is a CSS class to specify bold:</p><pre xml:space="preserve">
+                  <section class="example" id="example-3-using-css-to-visually-emphasize-a-phrase-or-word-without-conveying-that-emphasis-semantically">
+                     <h3>Example 3: Using CSS to visually emphasize a phrase or word without conveying that
+                        emphasis semantically
+                     </h3>
+                     <p>The following example fails because the information conveyed by using the CSS font-weight
+                        property to change to a bold font is not conveyed through semantic markup or stated
+                        explicitly in the text.
+                     </p>
+                     <p>Here is a CSS class to specify bold:</p><pre xml:space="preserve">
 .yell {
   font-weight:bold;
   text-transform: uppercase;
@@ -133,65 +140,74 @@
  fourth time for an ice cream cone. 
  &lt;/p&gt;
 </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that support images or presentation markup.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies that support images or presentation markup.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>
+                     <ol>
                         
-                        <p>For images of text:</p>
+                        <li>
+                           
+                           <p>For images of text:</p>
+                           
+                           <ol>
+                              
+                              <li>Check if any images of text are used to convey structural information of the document.</li>
+                              
+                              <li>Check that the proper semantic structure (e.g., HTML headings) is used with the text
+                                 to convey the information.
+                              </li>
+                              
+                           </ol>
+                           
+                        </li>
                         
-                        <ol>
+                        <li>
                            
-                           <li>Check if any images of text are used to convey structural information of the document.</li>
+                           <p>For styled text that conveys information:</p>
                            
-                           <li>Check that the proper semantic structure (e.g., HTML headings) is used with the text
-                              to convey the information.
-                           </li>
+                           <ol>
+                              
+                              <li>Check if there is any styled text that conveys structural information.</li>
+                              
+                              <li>Check that in addition to styling, the proper semantic structure is used with the
+                                 text to convey the information.
+                              </li>
+                              
+                           </ol>
                            
-                        </ol>
+                        </li>
                         
-                     </li>
+                     </ol>
                      
-                     <li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
                         
-                        <p>For styled text that conveys information:</p>
+                        <li>If check #1.1 is true, then #1.2 is true.</li>
                         
-                        <ol>
-                           
-                           <li>Check if there is any styled text that conveys structural information.</li>
-                           
-                           <li>Check that in addition to styling, the proper semantic structure is used with the
-                              text to convey the information.
-                           </li>
-                           
-                        </ol>
+                        <li>If check #2.1 is true, then #2.2 is true.</li>
                         
-                     </li>
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>If check #1.1 is true, then #1.2 is true.</li>
-                     
-                     <li>If check #2.1 is true, then #2.2 is true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -199,7 +215,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -219,7 +235,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

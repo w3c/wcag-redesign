@@ -53,92 +53,108 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/input-modalities">2.5: Input Modalities</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/pointer-cancellation">2.5.2: Pointer Cancellation</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to ensure that users who attempt to interact with
-                  a control do not trigger the action of the event accidentally. This can be accomplished
-                  most directly by relying on the pointer's up-event (for example, the onclick or mouseup
-                  event).  
-               </p>
-               <p>The easiest way to meet this success criterion is simply to use the default behavior
-                  of controls and not override that behaviour with an explicit down-event trigger. The
-                  up-event is the default behaviour for almost all controls and any programming or markup
-                  language.  
-               </p>
-               <p>In native languages where a control is fired on the down event it is usually for good
-                  reason and is easily recoverable. For instance, an HTML input element could have the
-                  cursor enter the editable area on the “pointer down” event, because the action is
-                  trivially reversible, and as such meets the requirements of the Pointer Cancellation
-                  SC. This is because if the user realizes they made a mistake after pressing down the
-                  control, they can simply move their pointer away from the hit area while still holding
-                  down the pointer, then release their pointer and the event is not triggered. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to ensure that users who attempt to interact with
+                     a control do not trigger the action of the event accidentally. This can be accomplished
+                     most directly by relying on the pointer's up-event (for example, the onclick or mouseup
+                     event).  
+                  </p>
+                  <p>The easiest way to meet this success criterion is simply to use the default behavior
+                     of controls and not override that behaviour with an explicit down-event trigger. The
+                     up-event is the default behaviour for almost all controls and any programming or markup
+                     language.  
+                  </p>
+                  <p>In native languages where a control is fired on the down event it is usually for good
+                     reason and is easily recoverable. For instance, an HTML input element could have the
+                     cursor enter the editable area on the “pointer down” event, because the action is
+                     trivially reversible, and as such meets the requirements of the Pointer Cancellation
+                     SC. This is because if the user realizes they made a mistake after pressing down the
+                     control, they can simply move their pointer away from the hit area while still holding
+                     down the pointer, then release their pointer and the event is not triggered. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-using-an-native-onclick-event-in-javascript">
-                  <h3>Example 1: Using an native onclick event in JavaScript</h3>
-                  <p>In JavaScript native onclick events are triggered on the up-event by default.</p>
-               </section>
-               <section class="example" id="example-2-using-a-native-button-or-link-in-html">
-                  <h3>Example 2: Using a native button or link in HTML</h3>
-                  <p>In HTML native <code>&lt;button&gt;</code> or <code>&lt;a href ....&gt;</code> onclick events are triggered on the up-event by default.
-                  </p>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                     <p> The <code>&lt;button&gt;</code> element doesn't do anything on its own (unless its part of a <code>&lt;form&gt;</code>, and does NOT have <code>&lt;type="button"&gt;</code>, in which case it submits the form). Authors should rely on input-agnostic click
-                        handlers.
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-using-an-native-onclick-event-in-javascript">
+                     <h3>Example 1: Using an native onclick event in JavaScript</h3>
+                     <p>In JavaScript native onclick events are triggered on the up-event by default.</p>
+                  </section>
+                  <section class="example" id="example-2-using-a-native-button-or-link-in-html">
+                     <h3>Example 2: Using a native button or link in HTML</h3>
+                     <p>In HTML native <code>&lt;button&gt;</code> or <code>&lt;a href ....&gt;</code> onclick events are triggered on the up-event by default.
                      </p>
-                  </div>
-               </section>
-               <section class="example" id="example-3-using-a-native-button-in-ios-or-android">
-                  <h3>Example 3: Using a native button in iOS or Android</h3>
-                  <p>In native buttons in iOS and Android onclick events are triggered on the up-event
-                     by default.
-                  </p>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                     <p>The WCAG standard itself applies to <a href="https://www.w3.org/TR/WCAG21/#dfn-web-page-s">web pages at a URL</a>, and therefore this example is provided as helpful supplementary advice for those
-                        looking to implement the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/non-web-ict/">WCAG2ICT</a> for native applications.
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <p> The <code>&lt;button&gt;</code> element doesn't do anything on its own (unless its part of a <code>&lt;form&gt;</code>, and does NOT have <code>&lt;type="button"&gt;</code>, in which case it submits the form). Authors should rely on input-agnostic click
+                           handlers.
+                        </p>
+                     </div>
+                  </section>
+                  <section class="example" id="example-3-using-a-native-button-in-ios-or-android">
+                     <h3>Example 3: Using a native button in iOS or Android</h3>
+                     <p>In native buttons in iOS and Android onclick events are triggered on the up-event
+                        by default.
                      </p>
-                  </div>
-               </section>
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                        <p>The WCAG standard itself applies to <a href="https://www.w3.org/TR/WCAG21/#dfn-web-page-s">web pages at a URL</a>, and therefore this example is provided as helpful supplementary advice for those
+                           looking to implement the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/non-web-ict/">WCAG2ICT</a> for native applications.
+                        </p>
+                     </div>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>This technique applies to nearly all technologies.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>This technique applies to nearly all technologies.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <p>For all clickable controls:</p>
-                  <ol>
-                     					
-                     <li>Activate the down-event then move the pointer outside the target before triggering
-                        the up-event, and then release the pointer to trigger the up-event.
-                     </li> 
-                     					
-                     <li>Check that the action was not triggered when the pointer is released outside of the
-                        hit area for the target.
-                     </li>
-                     					
-                     <li>If the action is triggered, check that the action is reversible.</li>	
-                     				
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     					
-                     <li>Check #2 or #3 is true. </li>
-                     				
-                  </ul>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <p>For all clickable controls:</p>
+                     <ol>
+                        					
+                        <li>Activate the down-event then move the pointer outside the target before triggering
+                           the up-event, and then release the pointer to trigger the up-event.
+                        </li> 
+                        					
+                        <li>Check that the action was not triggered when the pointer is released outside of the
+                           hit area for the target.
+                        </li>
+                        					
+                        <li>If the action is triggered, check that the action is reversible.</li>	
+                        				
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        					
+                        <li>Check #2 or #3 is true. </li>
+                        				
+                     </ul>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -146,7 +162,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -175,7 +191,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

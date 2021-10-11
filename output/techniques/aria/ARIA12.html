@@ -53,56 +53,63 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The purpose of this technique is to provide a way for Assistive Technologies (AT)
-                  to identify 
-                  a piece of content as a heading. Applying role="heading" to an element causes an AT
-                  (like a 
-                  screen reader) to treat it as though it were a heading. 
-                  
-               </p>
-               <p>If there is more than one heading on the page and the heading hierarchy is defined
-                  through the 
-                  visual presentation, the <code class="att">aria-level</code> attribute should be used to indicate the hierarchical level of 
-                  the heading. 
-                  
-               </p>
-               <p>When possible, use native heading mark-up directly. For example, it is preferable
-                  
-                  to use <code class="el">h1</code> rather than using &lt;div role="heading" aria-level="1"&gt;. However, the use of the 
-                  heading role, instead of heading mark-up, may be necessary. For example, when retrofitting
-                  a legacy site where scripts depend on the existing element hierarchy.
-                  
-               </p>
-               <p>The use of the <code class="prop">heading</code> role and nesting levels is discussed in <a href="https://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices 1.1</a>.
-                  
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The purpose of this technique is to provide a way for Assistive Technologies (AT)
+                     to identify 
+                     a piece of content as a heading. Applying role="heading" to an element causes an AT
+                     (like a 
+                     screen reader) to treat it as though it were a heading. 
+                     
+                  </p>
+                  <p>If there is more than one heading on the page and the heading hierarchy is defined
+                     through the 
+                     visual presentation, the <code class="att">aria-level</code> attribute should be used to indicate the hierarchical level of 
+                     the heading. 
+                     
+                  </p>
+                  <p>When possible, use native heading mark-up directly. For example, it is preferable
+                     
+                     to use <code class="el">h1</code> rather than using &lt;div role="heading" aria-level="1"&gt;. However, the use of the 
+                     heading role, instead of heading mark-up, may be necessary. For example, when retrofitting
+                     a legacy site where scripts depend on the existing element hierarchy.
+                     
+                  </p>
+                  <p>The use of the <code class="prop">heading</code> role and nesting levels is discussed in <a href="https://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices 1.1</a>.
+                     
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-simple-headings">
-                  <h3>Example 1: Simple headings</h3>
-                  <p>This example demonstrates how to implement simple headings using role="heading" when
-                     retrofitting a legacy site where scripts depend on the existing element hierarchy
-                     or the level is unknown. For example, web content which is syndicated from various
-                     sources may be constructed without knowledge of what the final presentation will be.
-                     
-                  </p><pre xml:space="preserve">&lt;div role="heading"&gt;Global News items&lt;/div&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-simple-headings">
+                     <h3>Example 1: Simple headings</h3>
+                     <p>This example demonstrates how to implement simple headings using role="heading" when
+                        retrofitting a legacy site where scripts depend on the existing element hierarchy
+                        or the level is unknown. For example, web content which is syndicated from various
+                        sources may be constructed without knowledge of what the final presentation will be.
+                        
+                     </p><pre xml:space="preserve">&lt;div role="heading"&gt;Global News items&lt;/div&gt;
 ... a list of global news with editorial comment....
 
 &lt;div role="heading"&gt;Local News items&lt;/div&gt;
 ... a list of local news, with editorial comment ...</pre></section>
-               <section class="example" id="example-2-additional-heading-levels">
-                  <h3>Example 2: Additional heading levels</h3>
-                  <p>This example demonstrates how to implement a level 7 heading using role="heading"
-                     and the <code class="att">aria-level</code> attribute. Since HTML only supports headings through level 6, there is no native
-                     element to provide these semantics.
-                  </p><pre xml:space="preserve">...
+                  <section class="example" id="example-2-additional-heading-levels">
+                     <h3>Example 2: Additional heading levels</h3>
+                     <p>This example demonstrates how to implement a level 7 heading using role="heading"
+                        and the <code class="att">aria-level</code> attribute. Since HTML only supports headings through level 6, there is no native
+                        element to provide these semantics.
+                     </p><pre xml:space="preserve">...
 &lt;h5&gt;Fruit Trees&lt;/h5&gt;
 ...
 &lt;h6&gt;Apples&lt;/h6&gt;
@@ -110,44 +117,53 @@
 ...
 &lt;div role="heading" aria-level="7"&gt;Jonagold/div&gt;
 &lt;p&gt;Jonagold is a cross between the Golden Delicious and Jonathan varieties...&lt;/p&gt;</pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. 
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Examine each element with the attribute role="heading".
+                     <ol>
                         
-                     </li>
-                     
-                     <li> Determine whether the content of the element is appropriate as a heading.
+                        <li> Examine each element with the attribute role="heading".
+                           
+                        </li>
                         
-                     </li>
-                     
-                     <li> If the element has an <code class="att">aria-level</code> attribute, determine whether the value is the appropriate hierarchical level.
+                        <li> Determine whether the content of the element is appropriate as a heading.
+                           
+                        </li>
                         
-                     </li>
+                        <li> If the element has an <code class="att">aria-level</code> attribute, determine whether the value is the appropriate hierarchical level.
+                           
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>#2 and #3 are true.</li>
+                     <ul>
+                        
+                        <li>#2 and #3 are true.</li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -155,7 +171,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -192,7 +208,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

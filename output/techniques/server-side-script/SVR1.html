@@ -56,135 +56,151 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/predictable">3.2: Predictable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/change-on-request">3.2.5: Change on Request</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p> The objective of this technique is to avoid confusion that may be caused
-                  when two new pages are loaded in quick succession because one page (the one
-                  requested by the user) redirects to another. Some user agents support the
-                  use of the HTML meta element to redirect the user to another page
-                  after a specified number of seconds. This makes a page inaccessible to some
-                  users, especially users with screen readers. Server-side technologies
-                  provide methods to implement redirects in a way that does not confuse users.
-                  A server-side script or configuration file can cause the server to send an
-                  appropriate HTTP response with a status code in the 3xx range and a Location
-                  header with another URL. When the browser receives this response, the location
-                  bar changes and the browser makes a request with the new URL. 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p> The objective of this technique is to avoid confusion that may be caused
+                     when two new pages are loaded in quick succession because one page (the one
+                     requested by the user) redirects to another. Some user agents support the
+                     use of the HTML meta element to redirect the user to another page
+                     after a specified number of seconds. This makes a page inaccessible to some
+                     users, especially users with screen readers. Server-side technologies
+                     provide methods to implement redirects in a way that does not confuse users.
+                     A server-side script or configuration file can cause the server to send an
+                     appropriate HTTP response with a status code in the 3xx range and a Location
+                     header with another URL. When the browser receives this response, the location
+                     bar changes and the browser makes a request with the new URL. 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-jsp/servlets">
-                  <h3>Example 1: JSP/Servlets</h3>
-                  <p> In Java Servlets or JavaServer Pages (JSP), developers can use
-                     HttpServletResponse.sendRedirect(String url). 
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-jsp/servlets">
+                     <h3>Example 1: JSP/Servlets</h3>
+                     <p> In Java Servlets or JavaServer Pages (JSP), developers can use
+                        HttpServletResponse.sendRedirect(String url). 
+                     </p><pre xml:space="preserve">
 …
 public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 …
   response.sendRedirect("/newUserLogin.do");
 }</pre><p> This sends a response with a 302 status code ("Found") and a
-                     Location header with the new URL to the user agent. It is also
-                     possible to set another status code with
-                     response.sendError(int code, String message) with
-                     one of the constants defined in the interface
-                     javax.servlet.http.HttpServletResponse as status code. 
-                  </p><pre xml:space="preserve">
+                        Location header with the new URL to the user agent. It is also
+                        possible to set another status code with
+                        response.sendError(int code, String message) with
+                        one of the constants defined in the interface
+                        javax.servlet.http.HttpServletResponse as status code. 
+                     </p><pre xml:space="preserve">
 …
 public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 …
   response.sendError(response.SC_MOVED_PERMANENTLY, "/newUserLogin.do");
 }</pre><p> If an application uses HttpServletResponse.encodeURL(String
-                     url) for URL rewriting because the application depends on
-                     sessions, the method
-                     HttpServletResponse.encodeRedirectURL(String url)
-                     should be used instead of
-                     HttpServletResponse.sendRedirect(String url). It is
-                     also possible to rewrite a URL with
-                     HttpServletResponse.encodeURL(String url) and then
-                     pass this URL to HttpServletResponse.sendRedirect(String
-                     url). 
-                  </p>
-               </section>
-               <section class="example" id="example-2-asp">
-                  <h3>Example 2: ASP</h3>
-                  <p> In Active Server Page (ASP) with VBScript, developers can use
-                     Response.Redirect. 
-                  </p><pre xml:space="preserve">
+                        url) for URL rewriting because the application depends on
+                        sessions, the method
+                        HttpServletResponse.encodeRedirectURL(String url)
+                        should be used instead of
+                        HttpServletResponse.sendRedirect(String url). It is
+                        also possible to rewrite a URL with
+                        HttpServletResponse.encodeURL(String url) and then
+                        pass this URL to HttpServletResponse.sendRedirect(String
+                        url). 
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-asp">
+                     <h3>Example 2: ASP</h3>
+                     <p> In Active Server Page (ASP) with VBScript, developers can use
+                        Response.Redirect. 
+                     </p><pre xml:space="preserve">
   Response.Redirect "newUserLogin.asp"</pre><p> or </p><pre xml:space="preserve">
 Response.Redirect("newUserLogin.asp")</pre><p> The code below is a more complete example with a specific HTTP
-                     status code. 
-                  </p><pre xml:space="preserve">
+                        status code. 
+                     </p><pre xml:space="preserve">
 Response.Clear
 Response.Status = 301
 Response.AddHeader "Location", "newUserLogin.asp"
 Response.Flush
 Response.End</pre></section>
-               <section class="example" id="example-3-php">
-                  <h3>Example 3: PHP</h3>
-                  <p> In PHP, developers can send a raw HTTP header with the
-                     header method. The code below sends a 301 status code
-                     and a new location. If the status is not explicitly set, the
-                     redirect response sends an HTTP status code 302. 
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-3-php">
+                     <h3>Example 3: PHP</h3>
+                     <p> In PHP, developers can send a raw HTTP header with the
+                        header method. The code below sends a 301 status code
+                        and a new location. If the status is not explicitly set, the
+                        redirect response sends an HTTP status code 302. 
+                     </p><pre xml:space="preserve">
  &lt;?php
 header("HTTP/1.1 301 Moved Permanently);
 header("Location: http://www.example.com/newUserLogin.php");
 ?&gt;</pre></section>
-               <section class="example" id="example-4-apache">
-                  <h3>Example 4: Apache</h3>
-                  <p> Developers can configure the Apache Web server to handle redirects,
-                     as in the following example. 
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-4-apache">
+                     <h3>Example 4: Apache</h3>
+                     <p> Developers can configure the Apache Web server to handle redirects,
+                        as in the following example. 
+                     </p><pre xml:space="preserve">
 redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p> Server-side technologies, including server-side scripting languages and
-                  server configuration files with URLs or URL patterns for redirects. 
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p> Server-side technologies, including server-side scripting languages and
+                     server configuration files with URLs or URL patterns for redirects. 
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Find each link or programmatic reference to another page or
-                        Web page. 
-                     </li>
+                     <ol>
+                        
+                        <li> Find each link or programmatic reference to another page or
+                           Web page. 
+                        </li>
+                        
+                        <li> For each link or programmatic reference to a URI in the set of
+                           Web pages being evaluated, check if the referenced
+                           Web page contains code (e.g., meta element or script) that
+                           causes a client-side redirect. 
+                        </li>
+                        
+                        <li> For each link or programmatic reference to a URI in the set of
+                           Web pages being evaluated, check if the referenced URI
+                           does not cause a redirect OR causes a server-side redirect
+                           without a time-out. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li> For each link or programmatic reference to a URI in the set of
-                        Web pages being evaluated, check if the referenced
-                        Web page contains code (e.g., meta element or script) that
-                        causes a client-side redirect. 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li> For each link or programmatic reference to a URI in the set of
-                        Web pages being evaluated, check if the referenced URI
-                        does not cause a redirect OR causes a server-side redirect
-                        without a time-out. 
-                     </li>
+                     <ul>
+                        
+                        <li> Step 2 is false AND step 3 is true. </li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li> Step 2 is false AND step 3 is true. </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -192,7 +208,7 @@ redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</pre></sec
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -257,7 +273,7 @@ redirect 301 /oldUserLogin.jsp http://www.example.com/newUserLogin.do</pre></sec
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

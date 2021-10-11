@@ -58,74 +58,81 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/compatible">4.1: Compatible</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/name-role-value">4.1.2: Name, Role, Value</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This failure describes a problem that occurs when a form control does not have a name
-                  exposed to assistive technologies. The result is that some users will not be able
-                  to identify the purpose of the form control. The name can be provided in multiple
-                  ways, including the <code class="el">label</code> element. Other options include use of the <code class="att">title</code> attribute and <code class="att">aria-label</code> which are used to directly provide text that is used for the accessibility name or
-                  <code class="att">aria-labelledby</code> which indicates an association with other text on a page that is providing the name.
-                  Button controls can have a name assigned in other ways, as indicated below, but in
-                  certain situations may require use of <code class="att">label</code>, <code class="att">title</code>, <code class="att">aria-label</code>, or <code class="att">aria-labelledby</code>.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>Elements that can use an explicitly-associated <code class="el">label</code> element are:
-                     </p>
-                     
-                     <ul>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This failure describes a problem that occurs when a form control does not have a name
+                     exposed to assistive technologies. The result is that some users will not be able
+                     to identify the purpose of the form control. The name can be provided in multiple
+                     ways, including the <code class="el">label</code> element. Other options include use of the <code class="att">title</code> attribute and <code class="att">aria-label</code> which are used to directly provide text that is used for the accessibility name or
+                     <code class="att">aria-labelledby</code> which indicates an association with other text on a page that is providing the name.
+                     Button controls can have a name assigned in other ways, as indicated below, but in
+                     certain situations may require use of <code class="att">label</code>, <code class="att">title</code>, <code class="att">aria-label</code>, or <code class="att">aria-labelledby</code>.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
                         
-                        <li>
-                           <code class="el">input</code>
+                        <p>Elements that can use an explicitly-associated <code class="el">label</code> element are:
+                        </p>
+                        
+                        <ul>
                            
-                        </li>
-                        
-                        <li>
-                           <code class="el">textarea</code>
+                           <li>
+                              <code class="el">input</code>
+                              
+                           </li>
                            
-                        </li>
-                        
-                        <li>
-                           <code class="el">select</code>
+                           <li>
+                              <code class="el">textarea</code>
+                              
+                           </li>
                            
-                        </li>
+                           <li>
+                              <code class="el">select</code>
+                              
+                           </li>
+                           
+                        </ul>
                         
-                     </ul>
-                     
-                     <p>The <code class="el">label</code> element is not used for the following because labels for these elements are provided
-                        via the <code class="att">value</code> attribute (for Submit and Reset buttons), the <code class="att">alt</code> attribute (for image buttons), or element content itself (<code class="el">button</code>):
-                     </p>
-                     
-                     <ul>
+                        <p>The <code class="el">label</code> element is not used for the following because labels for these elements are provided
+                           via the <code class="att">value</code> attribute (for Submit and Reset buttons), the <code class="att">alt</code> attribute (for image buttons), or element content itself (<code class="el">button</code>):
+                        </p>
                         
-                        <li>Submit and Reset buttons (input type="submit" or input type="reset")</li>
+                        <ul>
+                           
+                           <li>Submit and Reset buttons (input type="submit" or input type="reset")</li>
+                           
+                           <li>Image buttons (input type="image")</li>
+                           
+                           <li>Hidden input fields (input type="hidden")</li>
+                           
+                           <li>Buttons (button elements or &lt;input type="button"&gt;)</li>
+                           
+                        </ul>
                         
-                        <li>Image buttons (input type="image")</li>
-                        
-                        <li>Hidden input fields (input type="hidden")</li>
-                        
-                        <li>Buttons (button elements or &lt;input type="button"&gt;)</li>
-                        
-                     </ul>
-                     
+                     </div>
                   </div>
-               </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The following example demonstrates a form that visually presents labels for form controls,
-                     but does not use the <code class="el">label</code> element to associate them with their controls. The code example below is a failure
-                     because assistive technology may not be able to determine which label goes with which
-                     control.
-                  </p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The following example demonstrates a form that visually presents labels for form controls,
+                        but does not use the <code class="el">label</code> element to associate them with their controls. The code example below is a failure
+                        because assistive technology may not be able to determine which label goes with which
+                        control.
+                     </p><pre xml:space="preserve">
 &lt;form&gt;
  First name: 
  &lt;input type="text" name="firstname"&gt;
@@ -137,11 +144,11 @@
  I have a cat &lt;input type="checkbox" name="pet" value="cat"&gt;
 &lt;/form&gt;
 </pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>In the following code example, <code class="el">label</code> elements are present, but they are not programmatically linked to the corresponding
-                     input controls and may therefore not be properly determined by assistive technology.
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>In the following code example, <code class="el">label</code> elements are present, but they are not programmatically linked to the corresponding
+                        input controls and may therefore not be properly determined by assistive technology.
+                     </p><pre xml:space="preserve">
 &lt;form action="..." method="post"&gt; 
 &lt;p&gt; 
 &lt;label&gt;First Name&lt;/label&gt;
@@ -151,74 +158,83 @@
 &lt;/p&gt; 
 &lt;/form&gt;
 </pre></section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>The search text box in the following code example does not have a programmatically
-                     determinable name. The name can be supplied with any of the approaches mentioned above.
-                  </p><pre xml:space="preserve">
+                  <section class="example" id="example-3">
+                     <h3>Example 3</h3>
+                     <p>The search text box in the following code example does not have a programmatically
+                        determinable name. The name can be supplied with any of the approaches mentioned above.
+                     </p><pre xml:space="preserve">
 &lt;input type="text" value="Type your search here"&gt;&lt;input type="submit" type="submit" value="Search"&gt;
 </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML controls</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML controls</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For all <code class="el">input</code>, <code class="el">textarea</code> and <code class="el">select</code> elements in the Web page (except inputs of type <code class="attval">hidden</code>, <code class="attval">submit</code>, <code class="attval">reset</code>, or <code class="attval">button</code>:
-                  </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>
+                     <p>For all <code class="el">input</code>, <code class="el">textarea</code> and <code class="el">select</code> elements in the Web page (except inputs of type <code class="attval">hidden</code>, <code class="attval">submit</code>, <code class="attval">reset</code>, or <code class="attval">button</code>:
+                     </p>
+                     
+                     <ol>
                         
-                        <p>Check that each element has a programmatically determined name using one of the following
-                           ways:
-                        </p>
+                        <li>
+                           
+                           <p>Check that each element has a programmatically determined name using one of the following
+                              ways:
+                           </p>
+                           
+                           <ol>
+                              				  
+                              <li>the text label or labels are programmatically associated with the control element
+                                 via the <code class="att">aria-labelledby</code> attribute (each id given as a value in the <code class="att">aria-labelledby</code> attribute matches the <code class="att">id</code> of the text label element).
+                              </li>
+                              				  
+                              <li>the control is programmatically determined through the value of its <code class="att">aria-label</code> attribute.
+                              </li>
+                              
+                              <li>the text label is contained in a <code class="el">label</code> element that is correctly associated to the respective <code class="el">input</code> element via the label's <code class="att">for</code> attribute (the <code class="att">id</code> given as value in the <code class="att">for</code> attribute matches the <code class="att">id</code> of the input element).
+                              </li>
+                              
+                              <li>the control is contained within a <code class="el">label</code> element that also contains the label text.
+                              </li>
+                              				  
+                              <li>the control is an <code class="el">input</code> of <code class="att">type</code> <code class="attval">image</code> and the <code class="att">alt</code> attribute provides a text label.
+                              </li>
+                              
+                              <li>the control is programmatically determined through the value of <code class="att">title</code> attribute.
+                              </li>
+                              
+                           </ol>
+                           
+                        </li>
                         
-                        <ol>
-                           				  
-                           <li>the text label or labels are programmatically associated with the control element
-                              via the <code class="att">aria-labelledby</code> attribute (each id given as a value in the <code class="att">aria-labelledby</code> attribute matches the <code class="att">id</code> of the text label element).
-                           </li>
-                           				  
-                           <li>the control is programmatically determined through the value of its <code class="att">aria-label</code> attribute.
-                           </li>
-                           
-                           <li>the text label is contained in a <code class="el">label</code> element that is correctly associated to the respective <code class="el">input</code> element via the label's <code class="att">for</code> attribute (the <code class="att">id</code> given as value in the <code class="att">for</code> attribute matches the <code class="att">id</code> of the input element).
-                           </li>
-                           
-                           <li>the control is contained within a <code class="el">label</code> element that also contains the label text.
-                           </li>
-                           				  
-                           <li>the control is an <code class="el">input</code> of <code class="att">type</code> <code class="attval">image</code> and the <code class="att">alt</code> attribute provides a text label.
-                           </li>
-                           
-                           <li>the control is programmatically determined through the value of <code class="att">title</code> attribute.
-                           </li>
-                           
-                        </ol>
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
                         
-                     </li>
+                        <li>If all options of check #1 are false, then this failure condition applies and the
+                           content fails the Success Criteria.
+                        </li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>If all options of check #1 are false, then this failure condition applies and the
-                        content fails the Success Criteria.
-                     </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -226,7 +242,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -258,7 +274,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

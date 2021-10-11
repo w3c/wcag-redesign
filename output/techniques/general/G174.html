@@ -56,115 +56,134 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/contrast-minimum">1.4.3: Contrast (Minimum)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/contrast-enhanced">1.4.6: Contrast (Enhanced)</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>When the contrast between the text and its background for some portion of the page
-                  has not been designed to meet the contrast level for
-                  <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum">Success Criterion 1.4.3</a>
-                  or
-                  <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced">1.4.6</a>, it is possible to meet these guidelines using the "Alternate Version" clause in
-                  the conformance requirements (<a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conf-req1">Conformance Requirement 1</a>). A link or control on the page can either change the page so that all aspects conform,
-                  or it could take the viewer to a new version of the page that does conform at the
-                  desired level. Placing the link or control prominently on the page will assist users
-                  in accessing the conforming content readily.
-               </p>
-               <p>For this technique to be used successfully, three things must be true:</p>
-               <ol>
-                  
-                  <li>The link or control on the original page must itself meet the contrast requirement
-                     of the desired SC. (If the user cannot see the control they may not be able to use
-                     it to go to the new page.)
-                  </li>
-                  
-                  <li>The new page must contain all the same information and functionality as the original
-                     page.
-                  </li>
-                  
-                  <li>The new page must conform to all of the SC for the desired level of conformance. (i.e.,
-                     the new page cannot just have the desired level of contrast but otherwise not conform).
-                  </li>
-                  
-               </ol>
-               <p>This technique can be used to meet Success Criterion 1.4.3 by having text (or images
-                  of text) on the alternate version of the page be 4.5:1 contrast and any large text
-                  (or images of large text) be 3:1 contrast with its background. If the alternate version
-                  of the page has all text (or images of text) with 7:1 contrast and large text (or
-                  images of large text) with 4.5:1 contrast then it would satisfy both Success Criterion
-                  1.4.3 and 1.4.6.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <div>
-                     
-                     <p>This technique can be used in combination with a style switching technique to present
-                        a page that is a
-                        <a href="/guidelines/#" target="terms">conforming alternate version</a>
-                        for non-conforming content. Refer to
-                        <a href="/techniques/css/C29">C29: Using a style switcher to provide a conforming alternate version</a>
-                        and
-                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions">Understanding Conforming Alternate Versions</a>
-                        for more information.
-                     </p>
-                     
-                  </div>
-               </div>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>A page with some headlines that do not meet the 3:1 contrast requirements has a high
-                     contrast (5:1) link at the top of the page that takes the user to a new version of
-                     the page with minimum 4.5:1 contrast on all text and images of text.
-                  </li>
-                  
-                  <li>A page uses shaded backgrounds for effect but results in text to background contrast
-                     of 4:1. A control at the top of the page says "high contrast". Clicking on it causes
-                     different styles to be used and dropping the background colors to achieve 7:1 contrast.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Any technology.</p>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>When the contrast between the text and its background for some portion of the page
+                     has not been designed to meet the contrast level for
+                     <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum">Success Criterion 1.4.3</a>
+                     or
+                     <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced">1.4.6</a>, it is possible to meet these guidelines using the "Alternate Version" clause in
+                     the conformance requirements (<a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conf-req1">Conformance Requirement 1</a>). A link or control on the page can either change the page so that all aspects conform,
+                     or it could take the viewer to a new version of the page that does conform at the
+                     desired level. Placing the link or control prominently on the page will assist users
+                     in accessing the conforming content readily.
+                  </p>
+                  <p>For this technique to be used successfully, three things must be true:</p>
                   <ol>
                      
-                     <li>Check that a link or control exists on the original page that provides access to the
-                        alternate version.
+                     <li>The link or control on the original page must itself meet the contrast requirement
+                        of the desired SC. (If the user cannot see the control they may not be able to use
+                        it to go to the new page.)
                      </li>
                      
-                     <li>Check that the link or control on the original page conforms to all success criteria
-                        for the conformance level being tested.
+                     <li>The new page must contain all the same information and functionality as the original
+                        page.
                      </li>
                      
-                     <li>Check that the alternate version meets the contrast and all other success criteria
-                        for the conformance level being tested.
+                     <li>The new page must conform to all of the SC for the desired level of conformance. (i.e.,
+                        the new page cannot just have the desired level of contrast but otherwise not conform).
                      </li>
                      
                   </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+                  <p>This technique can be used to meet Success Criterion 1.4.3 by having text (or images
+                     of text) on the alternate version of the page be 4.5:1 contrast and any large text
+                     (or images of large text) be 3:1 contrast with its background. If the alternate version
+                     of the page has all text (or images of text) with 7:1 contrast and large text (or
+                     images of large text) with 4.5:1 contrast then it would satisfy both Success Criterion
+                     1.4.3 and 1.4.6.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <div>
+                        
+                        <p>This technique can be used in combination with a style switching technique to present
+                           a page that is a
+                           <a href="/guidelines/#" target="terms">conforming alternate version</a>
+                           for non-conforming content. Refer to
+                           <a href="/techniques/css/C29">C29: Using a style switcher to provide a conforming alternate version</a>
+                           and
+                           <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions">Understanding Conforming Alternate Versions</a>
+                           for more information.
+                        </p>
+                        
+                     </div>
+                  </div>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
                   <ul>
                      
-                     <li>All three checks are true.</li>
+                     <li>A page with some headlines that do not meet the 3:1 contrast requirements has a high
+                        contrast (5:1) link at the top of the page that takes the user to a new version of
+                        the page with minimum 4.5:1 contrast on all text and images of text.
+                     </li>
+                     
+                     <li>A page uses shaded backgrounds for effect but results in text to background contrast
+                        of 4:1. A control at the top of the page says "high contrast". Clicking on it causes
+                        different styles to be used and dropping the background colors to achieve 7:1 contrast.
+                     </li>
                      
                   </ul>
-                  
-               </section>
+               </details>
+            </section>
+            <section id="applicability">
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Any technology.</p>
+               </details>
+            </section>
+            <section id="tests">
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <ol>
+                        
+                        <li>Check that a link or control exists on the original page that provides access to the
+                           alternate version.
+                        </li>
+                        
+                        <li>Check that the link or control on the original page conforms to all success criteria
+                           for the conformance level being tested.
+                        </li>
+                        
+                        <li>Check that the alternate version meets the contrast and all other success criteria
+                           for the conformance level being tested.
+                        </li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li>All three checks are true.</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -172,7 +191,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -192,7 +211,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

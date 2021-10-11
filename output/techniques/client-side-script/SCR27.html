@@ -53,42 +53,49 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/focus-order">2.4.3: Focus Order</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide a mechanism for re-ordering component
-                  which is both highly usable and accessible. The two most common mechanisms for reordering
-                  are to send users to a set-up page where they can number components, or to allow them
-                  to drag and drop components to the desired location. The drag and drop method is much
-                  more usable, as it allows the user to arrange the items in place, one at a time, and
-                  get a feeling for the results. Unfortunately, drag and drop relies on the use of a
-                  mouse. This technique allows users to interact with a menu on the components to reorder
-                  them in place in a device independent way. It can be used in place of, or in conjunction
-                  with drag and drop reordering functionality.
-               </p>
-               <p>The menu is a list of links using the device-independent onclick event to trigger
-                  scripts which re-order the content. The content is re-ordered in the Document Object
-                  Model (DOM), not just visually, so that it is in the correct order for all devices.
-                  
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide a mechanism for re-ordering component
+                     which is both highly usable and accessible. The two most common mechanisms for reordering
+                     are to send users to a set-up page where they can number components, or to allow them
+                     to drag and drop components to the desired location. The drag and drop method is much
+                     more usable, as it allows the user to arrange the items in place, one at a time, and
+                     get a feeling for the results. Unfortunately, drag and drop relies on the use of a
+                     mouse. This technique allows users to interact with a menu on the components to reorder
+                     them in place in a device independent way. It can be used in place of, or in conjunction
+                     with drag and drop reordering functionality.
+                  </p>
+                  <p>The menu is a list of links using the device-independent onclick event to trigger
+                     scripts which re-order the content. The content is re-ordered in the Document Object
+                     Model (DOM), not just visually, so that it is in the correct order for all devices.
+                     
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>This example does up and down reordering. This approach can also be used for two-dimensional
-                     reordering by adding left and right options.
-                  </p>
-                  <p>The components in this example are list items in an unordered list. Unordered lists
-                     are a very good semantic model for sets of similar items, like these components. The
-                     menu approach can also be used for other types of groupings.
-                  </p>
-                  <p>The modules are list items, and each module, in addition to content in div elements,
-                     contains a menu represented as a nested list. 
-                  </p><pre xml:space="preserve">&lt;ul id="swapper"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>This example does up and down reordering. This approach can also be used for two-dimensional
+                        reordering by adding left and right options.
+                     </p>
+                     <p>The components in this example are list items in an unordered list. Unordered lists
+                        are a very good semantic model for sets of similar items, like these components. The
+                        menu approach can also be used for other types of groupings.
+                     </p>
+                     <p>The modules are list items, and each module, in addition to content in div elements,
+                        contains a menu represented as a nested list. 
+                     </p><pre xml:space="preserve">&lt;ul id="swapper"&gt;
     &lt;li id="black"&gt;
         &lt;div class="module"&gt;
             &lt;div class="module_header"&gt;
@@ -109,14 +116,14 @@
     &lt;/li&gt;
     ...
 &lt;/ul&gt;</pre><p>Since we've covered the showing and hiding of menus in the simple tree samples, we'll
-                     focus here just on the code that swaps the modules. Once we harmonize the events and
-                     cancel the default link action, we go to work. First, we set a bunch of local variables
-                     for the elements with which we'll be working: the menu, the module to be reordered,
-                     the menuLink. Then, after checking the reorder direction, we try to grab the node
-                     to swap. If we find one, we then call swapNode() to swap our two modules, and PositionElement()
-                     to move the absolutely-positioned menu along with the module, and then set focus back
-                     on the menu item which launched the whole thing.
-                  </p><pre xml:space="preserve">function MoveNode(evt,dir)
+                        focus here just on the code that swaps the modules. Once we harmonize the events and
+                        cancel the default link action, we go to work. First, we set a bunch of local variables
+                        for the elements with which we'll be working: the menu, the module to be reordered,
+                        the menuLink. Then, after checking the reorder direction, we try to grab the node
+                        to swap. If we find one, we then call swapNode() to swap our two modules, and PositionElement()
+                        to move the absolutely-positioned menu along with the module, and then set focus back
+                        on the menu item which launched the whole thing.
+                     </p><pre xml:space="preserve">function MoveNode(evt,dir)
 {
     HarmonizeEvent(evt);
     evt.preventDefault();
@@ -155,8 +162,8 @@
     }
     src.focus();
 }</pre><p>The CSS for the node swap is not much different than that of our previous tree samples,
-                     with some size and color adjustment for the modules and the small menu.
-                  </p><pre xml:space="preserve">ul#swapper { margin:0px; padding:0px; list-item-style:none; }
+                        with some size and color adjustment for the modules and the small menu.
+                     </p><pre xml:space="preserve">ul#swapper { margin:0px; padding:0px; list-item-style:none; }
 ul#swapper li { padding:0; margin:1em; list-style:none; height:5em; width:15em; 
     border:1px solid black; }
 ul#swapper li a { color:white; text-decoration:none; font-size:90%; }
@@ -171,43 +178,52 @@ ul#swapper ul.menu li { height:auto; border:none; margin:0; text-align:left;
 ul#swapper ul.menu li a { text-decoration:none; color:black; padding:0 0.1em; 
     display:block; width:100%; }
 </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML, script</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML, script</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Find all components in the Web Unit which can be reordered via drag and drop.</li>
+                     <ol>
+                        
+                        <li>Find all components in the Web Unit which can be reordered via drag and drop.</li>
+                        
+                        <li>Check that there is also a mechanism to reorder them using menus build of lists of
+                           links.
+                        </li>
+                        
+                        <li>Check that the menus are contained within the reorderable items in the DOM.</li>
+                        
+                        <li>Check that scripts for reordering are triggered only from the onclick event of links.</li>
+                        
+                        <li>Check that items are reordered in the DOM, not only visually.</li>
+                        
+                     </ol>
                      
-                     <li>Check that there is also a mechanism to reorder them using menus build of lists of
-                        links.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Check that the menus are contained within the reorderable items in the DOM.</li>
+                     <ul>
+                        
+                        <li>#2 through #5 are true.</li>
+                        
+                     </ul>
                      
-                     <li>Check that scripts for reordering are triggered only from the onclick event of links.</li>
-                     
-                     <li>Check that items are reordered in the DOM, not only visually.</li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>#2 through #5 are true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -215,7 +231,7 @@ ul#swapper ul.menu li a { text-decoration:none; color:black; padding:0 0.1em;
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -235,7 +251,7 @@ ul#swapper ul.menu li a { text-decoration:none; color:black; padding:0 0.1em;
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

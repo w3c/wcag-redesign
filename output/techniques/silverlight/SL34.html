@@ -58,7 +58,7 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a> and <strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a> when used with 
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/meaningful-sequence">1.3.2: Meaningful Sequence</a> and <strong>Sufficient</strong> to meet <a href="/understanding/focus-order">2.4.3: Focus Order</a>
                      					.
                   </p>
                   <p><em>Note: Microsoft has stopped updating and distributing Silverlight, and authors are
@@ -66,146 +66,153 @@
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to use the default Silverlight
-                  				tab sequence, or alternatively to apply the options that Silverlight
-                  				application authors can use for altering the tab sequence. Application
-                  				authors might alter the tab sequence in cases where the default tab
-                  				sequence is not desirable for some reason, and those reasons might
-                  				vary per application or application scenario. The tab sequence can
-                  				be altered in order to create a meaningful sequence in the tab order,
-                  				so that assistive technologies that rely on traversal of focusable
-                  				elements can use and determine the meaningful sequence. 
-               </p>
-               <p>Silverlight uses structured definitions for defining its user interface
-                  				presentations, where the declaration order is significant because it
-                  				becomes the structure of the run-time visual tree. The structured definitions
-                  				also define the layout and presentation structure in most cases. The
-                  				structured definition concept is described in more detail in <a href="#silverlight_notes"></a>. 
-               </p>
-               <p>The Silverlight development platform attempts to create an overall
-                  				system where the logical order of how elements are defined in XAML
-                  				and code, and then presented in a user interface, will also match a
-                  				logical tab sequence and logical reading order when presented to the
-                  				user. In many cases, a Silverlight application author can write an
-                  				application without necessarily worrying about the tab sequence, can
-                  				test the tab sequence during a verification and testing phase of development,
-                  				and will not need to set any specific properties to adjust the tab
-                  				sequence. As a broad generalization, a Silverlight tab sequence will
-                  				be constructed so that it traverses elements left to right, and top
-                  				to bottom, and will behave similarly to how HTML would behave if the
-                  				HTML analogs of Silverlight elements were constructed and presented
-                  				in the same way. However, there are specific Silverlight controls that
-                  				deliberately alter the tab sequence, or whose elements are made keyboard-accessible
-                  				through a keyboard navigation technique other than TAB. For more information,
-                  				see <a href="https://msdn.microsoft.com/en-us/library/cc903954(VS.95).aspx">Focus
-                     				Overview on MSDN</a>. 
-               </p>
-               <section id="SL34_tab-sequence">
-                  
-                  <h3> How Silverlight implements tab sequence concepts </h3>
-                  
-                  <p>The Silverlight programming model defines a <code class="obj">Control</code> class
-                     					that is a base class of many of the practical controls that produce
-                     					a Silverlight application user interface. One of the behaviors of the <code class="obj">Control</code> class
-                     					is that only a <code class="obj">Control</code> can receive keyboard focus
-                     					as a discrete element within the Silverlight content area. 
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to use the default Silverlight
+                     				tab sequence, or alternatively to apply the options that Silverlight
+                     				application authors can use for altering the tab sequence. Application
+                     				authors might alter the tab sequence in cases where the default tab
+                     				sequence is not desirable for some reason, and those reasons might
+                     				vary per application or application scenario. The tab sequence can
+                     				be altered in order to create a meaningful sequence in the tab order,
+                     				so that assistive technologies that rely on traversal of focusable
+                     				elements can use and determine the meaningful sequence. 
                   </p>
-                  
-                  <p>When a Silverlight application user interface is constructed from
-                     					the visual tree, a default tab sequence for all Silverlight content
-                     					is also constructed, using the same principles of order that were used
-                     					by the visible layout. This default tab sequence is usually adequate
-                     					as a tab sequence that supports users that press the TAB key to traverse
-                     					the UI. The same TAB sequence and/or the focusable state of controls
-                     					is also used by many assistive technologies or modes of assistive technologies
-                     					to construct the representation of the interface for the Silverlight
-                     					content. 
+                  <p>Silverlight uses structured definitions for defining its user interface
+                     				presentations, where the declaration order is significant because it
+                     				becomes the structure of the run-time visual tree. The structured definitions
+                     				also define the layout and presentation structure in most cases. The
+                     				structured definition concept is described in more detail in <a href="#silverlight_notes"></a>. 
                   </p>
-                  
-                  <p>For cases where developers decide that the default tab sequence is
-                     					not adequate, the developer can take one of two approaches for changing
-                     					the tab sequence: 
+                  <p>The Silverlight development platform attempts to create an overall
+                     				system where the logical order of how elements are defined in XAML
+                     				and code, and then presented in a user interface, will also match a
+                     				logical tab sequence and logical reading order when presented to the
+                     				user. In many cases, a Silverlight application author can write an
+                     				application without necessarily worrying about the tab sequence, can
+                     				test the tab sequence during a verification and testing phase of development,
+                     				and will not need to set any specific properties to adjust the tab
+                     				sequence. As a broad generalization, a Silverlight tab sequence will
+                     				be constructed so that it traverses elements left to right, and top
+                     				to bottom, and will behave similarly to how HTML would behave if the
+                     				HTML analogs of Silverlight elements were constructed and presented
+                     				in the same way. However, there are specific Silverlight controls that
+                     				deliberately alter the tab sequence, or whose elements are made keyboard-accessible
+                     				through a keyboard navigation technique other than TAB. For more information,
+                     				see <a href="https://msdn.microsoft.com/en-us/library/cc903954(VS.95).aspx">Focus
+                        				Overview on MSDN</a>. 
                   </p>
-                  
-                  <ul>
+                  <section id="SL34_tab-sequence">
                      
-                     <li> Change other properties of the control where a change to the tab
-                        				sequence happens as a secondary effect. 
-                     </li>
+                     <h3> How Silverlight implements tab sequence concepts </h3>
                      
-                     <li> Reorder the tab sequence directly. </li>
+                     <p>The Silverlight programming model defines a <code class="obj">Control</code> class
+                        					that is a base class of many of the practical controls that produce
+                        					a Silverlight application user interface. One of the behaviors of the <code class="obj">Control</code> class
+                        					is that only a <code class="obj">Control</code> can receive keyboard focus
+                        					as a discrete element within the Silverlight content area. 
+                     </p>
                      
-                  </ul>
-                  	
-               </section>
-               <section id="SL34_control-properties">
-                  
-                  <h3> Changing control properties </h3>
-                  
-                  <ul>
+                     <p>When a Silverlight application user interface is constructed from
+                        					the visual tree, a default tab sequence for all Silverlight content
+                        					is also constructed, using the same principles of order that were used
+                        					by the visible layout. This default tab sequence is usually adequate
+                        					as a tab sequence that supports users that press the TAB key to traverse
+                        					the UI. The same TAB sequence and/or the focusable state of controls
+                        					is also used by many assistive technologies or modes of assistive technologies
+                        					to construct the representation of the interface for the Silverlight
+                        					content. 
+                     </p>
                      
-                     <li> Setting the <code class="prop">Visibility</code> property of a control
-                        					to <code class="prop">Collapsed</code> causes the control to no longer render
-                        					in the UI. As a secondary effect, that control is removed from the
-                        					tab sequence. 
-                     </li>
+                     <p>For cases where developers decide that the default tab sequence is
+                        					not adequate, the developer can take one of two approaches for changing
+                        					the tab sequence: 
+                     </p>
                      
-                     <li> Setting the <code class="prop">IsEnabled</code> property of a control to
-                        						false causes the control to no longer be focusable by keyboard or
-                        						clickable by the mouse. In many cases, the visual appearance of the
-                        						control changes also, through a theme style. For example, the control
-                        						may appear as gray rather than black. As a secondary effect, that
-                        						control is removed from the tab sequence. 
-                     </li>
+                     <ul>
+                        
+                        <li> Change other properties of the control where a change to the tab
+                           				sequence happens as a secondary effect. 
+                        </li>
+                        
+                        <li> Reorder the tab sequence directly. </li>
+                        
+                     </ul>
+                     	
+                  </section>
+                  <section id="SL34_control-properties">
                      
-                  </ul>
-                  	
-               </section>
-               <section id="SL34_tab-properties">
-                  
-                  <h3> Changing specific tab properties </h3>
-                  
-                  <ul>
+                     <h3> Changing control properties </h3>
                      
-                     <li> Setting the <code class="prop">IsTabStop</code> property of a control to
-                        					false causes the control to no longer be focusable by keyboard or
-                        					programmatic focus, and that control is removed from the tab sequence. 
-                     </li>
+                     <ul>
+                        
+                        <li> Setting the <code class="prop">Visibility</code> property of a control
+                           					to <code class="prop">Collapsed</code> causes the control to no longer render
+                           					in the UI. As a secondary effect, that control is removed from the
+                           					tab sequence. 
+                        </li>
+                        
+                        <li> Setting the <code class="prop">IsEnabled</code> property of a control to
+                           						false causes the control to no longer be focusable by keyboard or
+                           						clickable by the mouse. In many cases, the visual appearance of the
+                           						control changes also, through a theme style. For example, the control
+                           						may appear as gray rather than black. As a secondary effect, that
+                           						control is removed from the tab sequence. 
+                        </li>
+                        
+                     </ul>
+                     	
+                  </section>
+                  <section id="SL34_tab-properties">
                      
-                     <li> Setting the <code class="prop">TabIndex</code> property of a control to
-                        						a specific index causes the control to be inserted at that position
-                        						in the tab sequence. The default value of <code class="prop">TabIndex</code> is
-                        						Single.MaxValue, therefore any non-default value promotes that control
-                        						to be first in an otherwise default tab sequence. More typically,
-                        						authors would specify a <code class="prop">TabIndex</code> for any controls
-                        						that are involved in a deliberate segment of tab order re-ordering. 
-                     </li>
+                     <h3> Changing specific tab properties </h3>
                      
-                  </ul>
-                  	
-               </section>
-               <section id="SL34_tab-order">
-                  
-                  <h3> Tab order and language </h3>
-                  
-                  <p>Left-to-right is the default only for languages that use left-to-right
-                     					reading order. For languages that use right-to-left reading order,
-                     					right-to-left is also the default tab order as implemented by Silverlight
-                     					runtime behavior. That language preference is declared by the acting <code class="obj">CultureInfo</code>.
-                     					For more information on <code class="obj">CultureInfo</code>, see <a href="#SL27"></a>. 
-                  </p>
-                  	
-               </section>
+                     <ul>
+                        
+                        <li> Setting the <code class="prop">IsTabStop</code> property of a control to
+                           					false causes the control to no longer be focusable by keyboard or
+                           					programmatic focus, and that control is removed from the tab sequence. 
+                        </li>
+                        
+                        <li> Setting the <code class="prop">TabIndex</code> property of a control to
+                           						a specific index causes the control to be inserted at that position
+                           						in the tab sequence. The default value of <code class="prop">TabIndex</code> is
+                           						Single.MaxValue, therefore any non-default value promotes that control
+                           						to be first in an otherwise default tab sequence. More typically,
+                           						authors would specify a <code class="prop">TabIndex</code> for any controls
+                           						that are involved in a deliberate segment of tab order re-ordering. 
+                        </li>
+                        
+                     </ul>
+                     	
+                  </section>
+                  <section id="SL34_tab-order">
+                     
+                     <h3> Tab order and language </h3>
+                     
+                     <p>Left-to-right is the default only for languages that use left-to-right
+                        					reading order. For languages that use right-to-left reading order,
+                        					right-to-left is also the default tab order as implemented by Silverlight
+                        					runtime behavior. That language preference is declared by the acting <code class="obj">CultureInfo</code>.
+                        					For more information on <code class="obj">CultureInfo</code>, see <a href="#SL27"></a>. 
+                     </p>
+                     	
+                  </section>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-default-tab-order-based-on-ordering-in-the-stackpanel">
-                  <h3>Example 1: Default tab order, based on ordering in the StackPanel</h3>
-                  <p>In this example, a <code class="obj">StackPanel</code> has a natural layout
-                     						order of top-to-bottom, and that will also be the tab order of each <code class="obj">StackPanel</code> child
-                     						element (FirstName, then LastName). 
-                  </p><pre xml:space="preserve">   &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-default-tab-order-based-on-ordering-in-the-stackpanel">
+                     <h3>Example 1: Default tab order, based on ordering in the StackPanel</h3>
+                     <p>In this example, a <code class="obj">StackPanel</code> has a natural layout
+                        						order of top-to-bottom, and that will also be the tab order of each <code class="obj">StackPanel</code> child
+                        						element (FirstName, then LastName). 
+                     </p><pre xml:space="preserve">   &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
        &lt;StackPanel Orientation="Horizontal"&gt;
            &lt;TextBlock Name="lbl_FirstName"&gt;First name&lt;/TextBlock&gt;
            &lt;TextBox AutomationProperties.LabeledBy="{Binding ElementName=lbl_FirstName}" Name="tbFirstName" Width="100"/&gt;
@@ -216,20 +223,20 @@
        &lt;/StackPanel&gt;
    &lt;/StackPanel&gt;
 </pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-tab-sequence/">working example of Tab Sequence</a>.
-                  </p>
-               </section>
-               <section class="example" id="example-2-tab-order-modified-by-tabindex">
-                  <h3>Example 2: Tab order, modified by TabIndex</h3>
-                  <p>A form is marked up using a data table that includes the fields of
-                     						the groom in the first column and the fields of the bride in the second
-                     						column. The order in the content is row by row but the author feels
-                     						it is more logical for users to navigate the form column by column.
-                     						This way, all the groom's criteria can be filled in before moving on
-                     						to the bride's criteria. The <code class="prop">TabIndex</code> attributes of
-                     						the Silverlight elements are used to specify a tab order that navigates
-                     						column by column. This example specifically illustrates how changing
-                     						tab order can change the meaningful sequence. 
-                  </p><pre xml:space="preserve"> &lt;UserControl x:Class="TabSequence.MainPage"
+                     </p>
+                  </section>
+                  <section class="example" id="example-2-tab-order-modified-by-tabindex">
+                     <h3>Example 2: Tab order, modified by TabIndex</h3>
+                     <p>A form is marked up using a data table that includes the fields of
+                        						the groom in the first column and the fields of the bride in the second
+                        						column. The order in the content is row by row but the author feels
+                        						it is more logical for users to navigate the form column by column.
+                        						This way, all the groom's criteria can be filled in before moving on
+                        						to the bride's criteria. The <code class="prop">TabIndex</code> attributes of
+                        						the Silverlight elements are used to specify a tab order that navigates
+                        						column by column. This example specifically illustrates how changing
+                        						tab order can change the meaningful sequence. 
+                     </p><pre xml:space="preserve"> &lt;UserControl x:Class="TabSequence.MainPage"
  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
  &gt;
@@ -265,18 +272,18 @@
    &lt;/StackPanel&gt;
  &lt;/UserControl&gt;
  </pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-tab-sequence-tab-index/">working example of Tab Sequence TabIndex</a>.
-                  </p>
-               </section>
-               <section class="example" id="example-3-tab-order-modified-by-changing-runtime-control-properties">
-                  <h3>Example 3: Tab order, modified by changing runtime Control properties</h3>
-                  <p>In this example, a radio button choice in a form controls whether
-                     						certain other fields in the form are relevant or not relevant. The
-                     						current radio button selection toggles the <code class="prop">IsEnabled</code> property
-                     						in such fields to enable or disable them based on how the user selected
-                     						the preceding logical element, which also affects whether the fields
-                     						appear in the further tab sequence. The following is UI definition
-                     						in XAML. 
-                  </p><pre xml:space="preserve">&lt;UserControl x:Class="TabSequence.MainPage"
+                     </p>
+                  </section>
+                  <section class="example" id="example-3-tab-order-modified-by-changing-runtime-control-properties">
+                     <h3>Example 3: Tab order, modified by changing runtime Control properties</h3>
+                     <p>In this example, a radio button choice in a form controls whether
+                        						certain other fields in the form are relevant or not relevant. The
+                        						current radio button selection toggles the <code class="prop">IsEnabled</code> property
+                        						in such fields to enable or disable them based on how the user selected
+                        						the preceding logical element, which also affects whether the fields
+                        						appear in the further tab sequence. The following is UI definition
+                        						in XAML. 
+                     </p><pre xml:space="preserve">&lt;UserControl x:Class="TabSequence.MainPage"
    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 &gt;
@@ -316,50 +323,59 @@
            tb_ln.IsEnabled = false;
        }
        </pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-tab-sequence-enabled/">working example of Tab Sequence Enabled</a>.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <ul id="silverlight.applicability.general">
-                  
-                  <li> Microsoft Silverlight, versions 3 and greater </li>
-                  
-                  <li> Silverlight managed programming model and Silverlight XAML </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <ul id="silverlight.applicability.general">
+                     
+                     <li> Microsoft Silverlight, versions 3 and greater </li>
+                     
+                     <li> Silverlight managed programming model and Silverlight XAML </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Using a browser that supports Silverlight, open an HTML page that
-                        					references a Silverlight application through an object tag. 
-                     </li>
+                     <ol>
+                        
+                        <li> Using a browser that supports Silverlight, open an HTML page that
+                           					references a Silverlight application through an object tag. 
+                        </li>
+                        
+                        <li> Engage the screen reader. Press the TAB key to traverse the sequence
+                           						of elements inside the Silverlight content area. 
+                        </li>
+                        
+                        <li> Verify that the order in which elements are traversed in a tab
+                           							sequence is also the expected order of the elements as they are presented
+                           							visually, particularly in such cases where the order of each element
+                           							is significant per <a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence">SC
+                              								1.3.2</a>. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li> Engage the screen reader. Press the TAB key to traverse the sequence
-                        						of elements inside the Silverlight content area. 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li> Verify that the order in which elements are traversed in a tab
-                        							sequence is also the expected order of the elements as they are presented
-                        							visually, particularly in such cases where the order of each element
-                        							is significant per <a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence">SC
-                           								1.3.2</a>. 
-                     </li>
+                     <p>#3 is true. </p>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <p>#3 is true. </p>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -367,7 +383,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -412,7 +428,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

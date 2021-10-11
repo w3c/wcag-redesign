@@ -58,91 +58,107 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/predictable">3.2: Predictable</a> and <strong>Advisory</strong> for <a href="/understanding/input-assistance">3.3: Input Assistance</a>
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/on-input">3.2.2: On Input</a> and <strong>Advisory</strong> for <a href="/understanding/labels-or-instructions">3.3.2: Labels or Instructions</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide information to users about
-                  what will happen when a change to a form control results in a change of
-                  context. Because changing the value of a form control does not typically
-                  result in a change of context, it is important that authors provide
-                  instructions that make the user aware of the behavior in advance. Where
-                  possible, it is a good idea to programmatically associate the instructions
-                  describing the change with the form control itself.
-               </p>
-               <p>The following are some examples of how to provide the instruction in different situations.</p>
-               <ul>
-                  
-                  <li>Provide instruction on the Web page with reading order that precedes the user interface
-                     element that causes change of context by change of setting.
-                  </li>
-                  
-                  <li>For a multi-step process where users must complete particular steps in order to reach
-                     the user interface element where changes of setting would cause a change of context,
-                     provide the instruction as part of the process prior to the step where they would
-                     encounter the change of context.
-                  </li>
-                  
-                  <li>In the case of an intranet where user training is required prior to the use of a Web
-                     application where user interface elements that cause changes of context when settings
-                     are changed, instruction is provided as part of the training.
-                  </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide information to users about
+                     what will happen when a change to a form control results in a change of
+                     context. Because changing the value of a form control does not typically
+                     result in a change of context, it is important that authors provide
+                     instructions that make the user aware of the behavior in advance. Where
+                     possible, it is a good idea to programmatically associate the instructions
+                     describing the change with the form control itself.
+                  </p>
+                  <p>The following are some examples of how to provide the instruction in different situations.</p>
+                  <ul>
+                     
+                     <li>Provide instruction on the Web page with reading order that precedes the user interface
+                        element that causes change of context by change of setting.
+                     </li>
+                     
+                     <li>For a multi-step process where users must complete particular steps in order to reach
+                        the user interface element where changes of setting would cause a change of context,
+                        provide the instruction as part of the process prior to the step where they would
+                        encounter the change of context.
+                     </li>
+                     
+                     <li>In the case of an intranet where user training is required prior to the use of a Web
+                        application where user interface elements that cause changes of context when settings
+                        are changed, instruction is provided as part of the training.
+                     </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>A series of radio buttons at the top of a page include
-                     options for German, French and Spanish. Instructions precede
-                     the buttons that instruct the user that the language will be
-                     changed upon selecting an option.
-                  </li>
-                  
-                  <li>A 50 question online survey displays one question at a time.
-                     Instructions appear at the beginning of the survey that
-                     explain that users will be taken to the next question of the
-                     survey upon selecting an answer to each question.
-                  </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <ul>
+                     
+                     <li>A series of radio buttons at the top of a page include
+                        options for German, French and Spanish. Instructions precede
+                        the buttons that instruct the user that the language will be
+                        changed upon selecting an option.
+                     </li>
+                     
+                     <li>A 50 question online survey displays one question at a time.
+                        Instructions appear at the beginning of the survey that
+                        explain that users will be taken to the next question of the
+                        survey upon selecting an answer to each question.
+                     </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Applies to all technologies.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Applies to all technologies.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ul>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Locate content where changing the setting of a form control
-                        results in a change of context
-                     </li>
+                     <ul>
+                        
+                        <li>Locate content where changing the setting of a form control
+                           results in a change of context
+                        </li>
+                        
+                        <li>Check to see that an explanation of what will happen when the
+                           control is changed is available prior to the controls activation
+                        </li>
+                        
+                     </ul>
                      
-                     <li>Check to see that an explanation of what will happen when the
-                        control is changed is available prior to the controls activation
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ul>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>Check #2 is true.</li>
+                        
+                     </ul>
                      
-                     <li>Check #2 is true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -150,7 +166,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -170,7 +186,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

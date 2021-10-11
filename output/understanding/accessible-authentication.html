@@ -8,7 +8,7 @@
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Understanding</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -66,164 +66,184 @@
                
             </section>
             <section id="intent">
-               <h2>Intent</h2>
-               <p>The purpose of this success criterion is to ensure there is an accessible, easy-to-use,
-                  and secure method to log in and access content. Most web sites rely on usernames and
-                  passwords for logging in. Memorizing a username and password (or transcribing it manually)
-                  places a very high or impossible burden upon people with certain cognitive disabilities.
-               </p>
-               <p>Remembering a site-specific password is a <a href="#dfn-cognitive-function-test">cognitive function test</a>. Such tests are known to be problematic for many people with cognitive disabilities.
-                  Whether it is remembering random strings of characters, a pattern gesture to perform
-                  on a touch screen, or identifying which images include a particular object, cognitive
-                  function tests will exclude some people. When a cognitive function test is used, at
-                  least one other authentication method must be available which is not a cognitive function
-                  test.
-               </p>
-               <p>If there is more than one step in the authentication process, such as with multi-factor
-                  authentication, all steps should comply with this success criterion. There should
-                  be a path through authentication that does not rely on cognitive function tests.
-               </p>
-               <p>Being able to recover or change the email and password is an important part of authentication.
-                  If the user is authenticating with alternative information in order to recover their
-                  account, there needs to be a method that is not a cognitive function test.
-               </p>
-               <p>Web sites can employ username (or email) and password inputs as an authentication
-                  method if it enables the user-agent (browsers and 3rd party password managers) to
-                  fill in the fields automatically. If the login form meets <a href="identify-input-purpose">Success Criterion 1.3.5 Input Purpose</a>, and the form controls have an appropriate accessible name in accordance with <a href="name-role-value">Success Criterion 4.1.2 Name, Role, Value</a>, the user-agent can reliably recognize the fields and automatically fill them in.
-                  However, if the user-agent is blocked from filling in the fields by a script then
-                  the page would not pass this criterion because it prevents the mechanism from working.
-               </p>
-               <p>Copy and paste can be relied on to avoid transcription. Users can copy their login
-                  credentials from a local source (such as a standalone 3rd party password manager)
-                  and paste it into the username and password fields on a login form, or into a web-based
-                  command line interfaces asking for a password. Blocking people from pasting into authentication
-                  fields, or using a different format between the copied text and the input field (e.g.
-                  "Enter the 3rd, 4th, and 6th character of your password"), would force the user to
-                  transcribe information and therefore fail this criterion, unless another method is
-                  available.
-               </p>
-               <p>If a <a href="https://www.w3.org/TR/turingtest/">CAPTCHA</a> is used as part of an authentication process, there must be a method that does not
-                  include a cognitive function test. If the test is based on something the website has
-                  set such as remembering or transcribing a word, or recognizing a picture the website
-                  provided, that would be a cognitive functional test. Recognizing common objects, or
-                  a picture the user has provided, would not be a cognitive function test. Some forms
-                  of object recognition may require an understanding of a particular culture. For example,
-                  taxis can appear differently in different locales. This is an issue for many people,
-                  including people with disabilities, but it is not considered an accessibility-specific
-                  issue.
-               </p>
-               <p>Some CAPTCHAs and cognitive function tests used for authentication may only appear
-                  in certain situations, such as when ad blockers are present, or after repeated incorrect
-                  password entry. This criterion applies when these tests are used regardless of whether
-                  they are used every time or only triggered by specific scenarios.
-               </p>
-               <p>Another factor that can contribute to cognitive load is hiding characters when typing.
-                  Although this criterion requires that users do not have to type in (transcribe) a
-                  password, there are scenarios where that is necessary such as creating a password
-                  to be saved by a password manager. Providing a feature to optionally show a password
-                  can improve the chance of success for some people with cognitive disabilities or those
-                  who have difficulties with accurately typing.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Intent</h2>
+                  </summary>
+                  <p>The purpose of this success criterion is to ensure there is an accessible, easy-to-use,
+                     and secure method to log in and access content. Most web sites rely on usernames and
+                     passwords for logging in. Memorizing a username and password (or transcribing it manually)
+                     places a very high or impossible burden upon people with certain cognitive disabilities.
+                  </p>
+                  <p>Remembering a site-specific password is a <a href="#dfn-cognitive-function-test">cognitive function test</a>. Such tests are known to be problematic for many people with cognitive disabilities.
+                     Whether it is remembering random strings of characters, a pattern gesture to perform
+                     on a touch screen, or identifying which images include a particular object, cognitive
+                     function tests will exclude some people. When a cognitive function test is used, at
+                     least one other authentication method must be available which is not a cognitive function
+                     test.
+                  </p>
+                  <p>If there is more than one step in the authentication process, such as with multi-factor
+                     authentication, all steps should comply with this success criterion. There should
+                     be a path through authentication that does not rely on cognitive function tests.
+                  </p>
+                  <p>Being able to recover or change the email and password is an important part of authentication.
+                     If the user is authenticating with alternative information in order to recover their
+                     account, there needs to be a method that is not a cognitive function test.
+                  </p>
+                  <p>Web sites can employ username (or email) and password inputs as an authentication
+                     method if it enables the user-agent (browsers and 3rd party password managers) to
+                     fill in the fields automatically. If the login form meets <a href="identify-input-purpose">Success Criterion 1.3.5 Input Purpose</a>, and the form controls have an appropriate accessible name in accordance with <a href="name-role-value">Success Criterion 4.1.2 Name, Role, Value</a>, the user-agent can reliably recognize the fields and automatically fill them in.
+                     However, if the user-agent is blocked from filling in the fields by a script then
+                     the page would not pass this criterion because it prevents the mechanism from working.
+                  </p>
+                  <p>Copy and paste can be relied on to avoid transcription. Users can copy their login
+                     credentials from a local source (such as a standalone 3rd party password manager)
+                     and paste it into the username and password fields on a login form, or into a web-based
+                     command line interfaces asking for a password. Blocking people from pasting into authentication
+                     fields, or using a different format between the copied text and the input field (e.g.
+                     "Enter the 3rd, 4th, and 6th character of your password"), would force the user to
+                     transcribe information and therefore fail this criterion, unless another method is
+                     available.
+                  </p>
+                  <p>If a <a href="https://www.w3.org/TR/turingtest/">CAPTCHA</a> is used as part of an authentication process, there must be a method that does not
+                     include a cognitive function test. If the test is based on something the website has
+                     set such as remembering or transcribing a word, or recognizing a picture the website
+                     provided, that would be a cognitive functional test. Recognizing common objects, or
+                     a picture the user has provided, would not be a cognitive function test. Some forms
+                     of object recognition may require an understanding of a particular culture. For example,
+                     taxis can appear differently in different locales. This is an issue for many people,
+                     including people with disabilities, but it is not considered an accessibility-specific
+                     issue.
+                  </p>
+                  <p>Some CAPTCHAs and cognitive function tests used for authentication may only appear
+                     in certain situations, such as when ad blockers are present, or after repeated incorrect
+                     password entry. This criterion applies when these tests are used regardless of whether
+                     they are used every time or only triggered by specific scenarios.
+                  </p>
+                  <p>Another factor that can contribute to cognitive load is hiding characters when typing.
+                     Although this criterion requires that users do not have to type in (transcribe) a
+                     password, there are scenarios where that is necessary such as creating a password
+                     to be saved by a password manager. Providing a feature to optionally show a password
+                     can improve the chance of success for some people with cognitive disabilities or those
+                     who have difficulties with accurately typing.
+                  </p>
+               </details>
             </section>
             <section id="benefits">
-               <h2>Benefits</h2>
-               <p>People with cognitive issues relating to memory, reading (e.g. dyslexia), numbers
-                  (e.g. dyscalculia), or perception-processing limitations will be able to authenticate
-                  irrespective of the level of their cognitive abilities.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Benefits</h2>
+                  </summary>
+                  <p>People with cognitive issues relating to memory, reading (e.g. dyslexia), numbers
+                     (e.g. dyscalculia), or perception-processing limitations will be able to authenticate
+                     irrespective of the level of their cognitive abilities.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>A web site uses a properly marked up username (or email) and password fields as the
-                     login authentication (meeting <a href="identify-input-purpose">Success Criterion 1.3.5 Input Purpose</a> and <a href="name-role-value">Success Criterion 4.1.2: Name, Role, Value</a>). The user's browser or integrated 3rd party password manager extension can identify
-                     the purpose of the inputs and automatically fill in the username and password.
-                  </li>
-                  
-                  <li>A web site does not block paste functionality. The user is able to use a 3rd party
-                     password manager to store credentials, copy them, and paste them directly into a login
-                     form.
-                  </li>
-                  
-                  <li>A web site uses WebAuthn so the user can authenticate with their device instead of
-                     username/password. The user's device could use any available modality. Common methods
-                     on laptops and phones are facial-scan, fingerprint, and pin number. The web site is
-                     not enforcing any particular use, it is assumed a user will setup a method that suits
-                     them.
-                  </li>
-                  
-                  <li>A web site offers the ability to login with a 3rd party provider using the OAuth method.</li>
-                  
-                  <li>A web site that requires 2-factor authentication allows for multiple options for the
-                     2nd factor, including a USB-based method where the user simply presses a button to
-                     enter a time-based token.
-                  </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <ul>
+                     
+                     <li>A web site uses a properly marked up username (or email) and password fields as the
+                        login authentication (meeting <a href="identify-input-purpose">Success Criterion 1.3.5 Input Purpose</a> and <a href="name-role-value">Success Criterion 4.1.2: Name, Role, Value</a>). The user's browser or integrated 3rd party password manager extension can identify
+                        the purpose of the inputs and automatically fill in the username and password.
+                     </li>
+                     
+                     <li>A web site does not block paste functionality. The user is able to use a 3rd party
+                        password manager to store credentials, copy them, and paste them directly into a login
+                        form.
+                     </li>
+                     
+                     <li>A web site uses WebAuthn so the user can authenticate with their device instead of
+                        username/password. The user's device could use any available modality. Common methods
+                        on laptops and phones are facial-scan, fingerprint, and pin number. The web site is
+                        not enforcing any particular use, it is assumed a user will setup a method that suits
+                        them.
+                     </li>
+                     
+                     <li>A web site offers the ability to login with a 3rd party provider using the OAuth method.</li>
+                     
+                     <li>A web site that requires 2-factor authentication allows for multiple options for the
+                        2nd factor, including a USB-based method where the user simply presses a button to
+                        enter a time-based token.
+                     </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="resources">
-               <h2>Related Resources</h2>
-               <p>Resources are for information purposes only, no endorsement implied.</p>
-               <ul>
-                  
-                  <li><a href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">Security and Privacy Technologies issue paper from the Cognitive Task Force</a>.
-                  </li>
-                  
-                  <li><a href="https://www.w3.org/TR/webauthn/">WebAuthN specification</a>.
-                  </li>
-                  
-                  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API on MDN</a>.
-                  </li>
-                  
-                  <li><a href="https://webauthn.io/">WebAuthN Demo site</a>.
-                  </li>
-                  
-                  <li><a href="https://en.wikipedia.org/wiki/OAuth">OAuth on Wikipedia</a>.
-                  </li>
-                  
-                  <li><a href="https://www.ncsc.gov.uk/blog-post/let-them-paste-passwords">"Let them paste passwords", from the UK's National Cyber Security Centre</a></li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2>Related Resources</h2>
+                  </summary>
+                  <p>Resources are for information purposes only, no endorsement implied.</p>
+                  <ul>
+                     
+                     <li><a href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">Security and Privacy Technologies issue paper from the Cognitive Task Force</a>.
+                     </li>
+                     
+                     <li><a href="https://www.w3.org/TR/webauthn/">WebAuthN specification</a>.
+                     </li>
+                     
+                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API on MDN</a>.
+                     </li>
+                     
+                     <li><a href="https://webauthn.io/">WebAuthN Demo site</a>.
+                     </li>
+                     
+                     <li><a href="https://en.wikipedia.org/wiki/OAuth">OAuth on Wikipedia</a>.
+                     </li>
+                     
+                     <li><a href="https://www.ncsc.gov.uk/blog-post/let-them-paste-passwords">"Let them paste passwords", from the UK's National Cyber Security Centre</a></li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="techniques">
-               <h2>Techniques</h2>
-               <p>Each numbered item in this section represents a technique or combination of techniques
-                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                  it is not necessary to use these particular techniques. For information on using other
-                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-               </p>
-               <section id="sufficient">
-                  <h3>Sufficient Techniques</h3>
-                  <ol>
-                     
-                     <li>
-                        <a class="general" href="/techniques/general/G218">G218: Email link authentication</a>
+               <details>
+                  <summary>
+                     <h2>Techniques</h2>
+                  </summary>
+                  <p>Each numbered item in this section represents a technique or combination of techniques
+                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                     it is not necessary to use these particular techniques. For information on using other
+                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+                  </p>
+                  <section id="sufficient">
+                     <h3>Sufficient Techniques</h3>
+                     <ol>
                         
-                     </li>
-                     
-                     <li>
-                        @@ Providing a properly marked up email and password inputs.
+                        <li>
+                           <a class="general" href="/techniques/general/G218">G218: Email link authentication</a>
+                           
+                        </li>
                         
-                     </li>
-                     
-                     <li>
-                        @@ Providing WebAuthn as an alternative to username/password.
+                        <li>
+                           @@ Providing a properly marked up email and password inputs.
+                           
+                        </li>
                         
-                     </li>
-                     
-                     <li>
-                        @@ Providing a 3rd party login using oAuth.
+                        <li>
+                           @@ Providing WebAuthn as an alternative to username/password.
+                           
+                        </li>
                         
-                     </li>
-                     
-                     <li>
-                        @@ Using two techniques to provide 2 factor authentication.
+                        <li>
+                           @@ Providing a 3rd party login using oAuth.
+                           
+                        </li>
                         
-                     </li>
-                     
-                  </ol>
-               </section>
+                        <li>
+                           @@ Using two techniques to provide 2 factor authentication.
+                           
+                        </li>
+                        
+                     </ol>
+                  </section>
+               </details>
             </section>
             <nav class="pager" aria-label="Previous/Next Page">
                <ul id="navigation">
@@ -270,7 +290,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

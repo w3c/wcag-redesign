@@ -53,41 +53,48 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/page-break-navigation">2.4.13: Page Break Navigation</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to ensure that a page list navigation aid is provided
-                  and that it includes a list of all the available locations in the digital publication.
-               </p>
-               <p>The page list provides a way to locate static page break locations (i.e., where each
-                  new page begins) within a digital publication. These locations typically come from
-                  a print equivalent of the edition and allow synchronization in, for example, mixed
-                  print-digital environments such as schools and universities.
-               </p>
-               <p>The source of pagination is not limited to print but could match up to any statically
-                  paginated alternative, such as a PDF or even a fixed-layout EPUB (i.e., where the
-                  content does not reflow to fit the available screen size).
-               </p>
-               <p>The order of the page break locations in a digital publication is not sequential in
-                  all cases, and not all page breaks may be represented. Publishers often rearrange
-                  and remove content from the paginated source content when creating a digital version.
-               </p>
-               <p>Page lists are a central feature of many digital publishing formats. EPUB 3 defines
-                  the page list in its navigation document,<a href="#footnote1">[1]</a> while EPUB 2 and DAISY 3 use the pageList element in the NCX.<a href="#footnote2">[2]</a> 
-               </p>
-               <p>The DPUB-ARIA module also includes a doc-pagelist role for identifying the navigation
-                  element containing the page list.<a href="#footnote3">[3]</a></p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to ensure that a page list navigation aid is provided
+                     and that it includes a list of all the available locations in the digital publication.
+                  </p>
+                  <p>The page list provides a way to locate static page break locations (i.e., where each
+                     new page begins) within a digital publication. These locations typically come from
+                     a print equivalent of the edition and allow synchronization in, for example, mixed
+                     print-digital environments such as schools and universities.
+                  </p>
+                  <p>The source of pagination is not limited to print but could match up to any statically
+                     paginated alternative, such as a PDF or even a fixed-layout EPUB (i.e., where the
+                     content does not reflow to fit the available screen size).
+                  </p>
+                  <p>The order of the page break locations in a digital publication is not sequential in
+                     all cases, and not all page breaks may be represented. Publishers often rearrange
+                     and remove content from the paginated source content when creating a digital version.
+                  </p>
+                  <p>Page lists are a central feature of many digital publishing formats. EPUB 3 defines
+                     the page list in its navigation document,<a href="#footnote1">[1]</a> while EPUB 2 and DAISY 3 use the pageList element in the NCX.<a href="#footnote2">[2]</a> 
+                  </p>
+                  <p>The DPUB-ARIA module also includes a doc-pagelist role for identifying the navigation
+                     element containing the page list.<a href="#footnote3">[3]</a></p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-example-1-–-page-list-in-html-publications">
-                  <h3>Example 1: Example 1 – Page list in HTML publications</h3>
-                  <p>To add a page list to a web-based document, the role "doc-pagelist" is added to the
-                     element (typically a nav element) that encloses the list and its title.
-                  </p><pre><code>&lt;nav role="doc-pagelist" aria-labelledby="pglist"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-example-1-–-page-list-in-html-publications">
+                     <h3>Example 1: Example 1 – Page list in HTML publications</h3>
+                     <p>To add a page list to a web-based document, the role "doc-pagelist" is added to the
+                        element (typically a nav element) that encloses the list and its title.
+                     </p><pre><code>&lt;nav role="doc-pagelist" aria-labelledby="pglist"&gt;
  &lt;h2 id="pglist"&gt;Page List&lt;/h2&gt;
  &lt;ol&gt;
    &lt;li&gt;&lt;a href="intro.xhtml#pg1"&gt;1&lt;/a&gt;&lt;/li&gt;
@@ -96,14 +103,14 @@
  &lt;/ol&gt;
 &lt;/nav&gt;
 </code></pre><p>The destinations of the page list links are usually explicit page break markers like
-                     the following:
-                  </p><pre><code>&lt;span id="pg1" role="doc-pagebreak" aria-label="page 1"&gt;</code></pre><p>EPUB 3 uses the epub:type attribute to identify the page list in the navigation document.
-                     The attribute is used on a nav element with the value "page-list" (note the different
-                     hyphenation). The ARIA role attribute has no effect unless the navigation document
-                     can be directly accessed by users (i.e., the document is in the EPUB spine). Like
-                     the previous HTML example, the contents of the nav element is a list of links to the
-                     page break locations.
-                  </p><pre><code>&lt;nav epub:type="page-list" role="doc-pagelist" aria-labelledby="pglist"&gt;
+                        the following:
+                     </p><pre><code>&lt;span id="pg1" role="doc-pagebreak" aria-label="page 1"&gt;</code></pre><p>EPUB 3 uses the epub:type attribute to identify the page list in the navigation document.
+                        The attribute is used on a nav element with the value "page-list" (note the different
+                        hyphenation). The ARIA role attribute has no effect unless the navigation document
+                        can be directly accessed by users (i.e., the document is in the EPUB spine). Like
+                        the previous HTML example, the contents of the nav element is a list of links to the
+                        page break locations.
+                     </p><pre><code>&lt;nav epub:type="page-list" role="doc-pagelist" aria-labelledby="pglist"&gt;
    &lt;h2 id="pglist"&gt;Page List&lt;/h2&gt;
    &lt;ol&gt;
       &lt;li&gt;&lt;a href="chapter01.xhtml#page001"&gt;1&lt;/a&gt;&lt;/li&gt;
@@ -112,10 +119,10 @@
       …
    &lt;/ol&gt;
    &lt;/nav&gt;</code></pre><p>The EPUB 2 and DAISY 3 formats both use an XML grammar called the NCX for expressing
-                     navigation aids. The page list is defined within the ncx element using the pageList
-                     tag. Each pageTarget within this element identifies a page break, providing both a
-                     label and a destination.
-                  </p><pre><code>&lt;ncx xmlns="http://www.daisy.org/z3986/2005/ncx/"
+                        navigation aids. The page list is defined within the ncx element using the pageList
+                        tag. Each pageTarget within this element identifies a page break, providing both a
+                        label and a destination.
+                     </p><pre><code>&lt;ncx xmlns="http://www.daisy.org/z3986/2005/ncx/"
      version="2005-1"
      xml:lang="en-US"&gt;
    …
@@ -130,42 +137,51 @@
       &lt;/pageTarget&gt;
    &lt;/pageList&gt;
 &lt;/ncx&gt;</code></pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Content structured in <a href="https://www.w3.org/TR/html/"><abbr title="HyperText Markup Language">HTML</abbr></a>.
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Content structured in <a href="https://www.w3.org/TR/html/"><abbr title="HyperText Markup Language">HTML</abbr></a>.
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  			
-                  <h3>Procedure</h3>
-                  				
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     			
+                     <h3>Procedure</h3>
                      				
-                     <li>Check that a page list, or a link to a page list exists in the publication.</li>
+                     <ol>
+                        				
+                        <li>Check that a page list, or a link to a page list exists in the publication.</li>
+                        				
+                        <li>Check that all the static page break locations in the publication are represented
+                           in the page list.
+                        </li>
+                        				
+                        <li>Check that the entries in the page list link to the correct location in the publication.</li>
+                        				
+                     </ol>
+                     			
+                  </section>
+                  <section class="results" id="expected-results">
+                     			
+                     <h3>Expected Results</h3>
                      				
-                     <li>Check that all the static page break locations in the publication are represented
-                        in the page list.
-                     </li>
-                     				
-                     <li>Check that the entries in the page list link to the correct location in the publication.</li>
-                     				
-                  </ol>
-                  			
-               </section>
-               <section class="results" id="expected-results">
-                  			
-                  <h3>Expected Results</h3>
-                  				
-                  <ul>
-                     				
-                     <li>#1, #2 and #3 are true.</li>
-                     				
-                  </ul>
-                  		
-               </section>
+                     <ul>
+                        				
+                        <li>#1, #2 and #3 are true.</li>
+                        				
+                     </ul>
+                     		
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -173,7 +189,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -193,7 +209,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

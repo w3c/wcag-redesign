@@ -56,36 +56,43 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to associate each data cell (in a data table) with
-                  the appropriate headers. This technique adds a <code class="att">headers</code> attribute to each
-                  data cell (<code class="el">td</code> element). It also adds an <code class="att">id</code> attribute to any
-                  cell used as a header for other cells. The <code class="att">headers</code> attribute of a cell
-                  contains a list of the <code class="att">id</code> attributes of the associated header cells. If
-                  there is more than one <code class="att">id</code>, they are separated by spaces.
-               </p>
-               <p>This technique is used when data cells are associated with more than one row and/or
-                  one
-                  column header. This allows screen readers to speak the headers associated with each
-                  data
-                  cell when the relationships are too complex to be identified using the <code class="el">th</code>
-                  element alone or the <code class="el">th</code> element with the <code class="att">scope</code> attribute.
-                  Using this technique also makes these complex relationships perceivable when the
-                  presentation format changes.
-               </p>
-               <p>This technique is not recommended for layout tables since its use implies a
-                  relationship between cells that is not meaningful when tables are used for layout.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to associate each data cell (in a data table) with
+                     the appropriate headers. This technique adds a <code class="att">headers</code> attribute to each
+                     data cell (<code class="el">td</code> element). It also adds an <code class="att">id</code> attribute to any
+                     cell used as a header for other cells. The <code class="att">headers</code> attribute of a cell
+                     contains a list of the <code class="att">id</code> attributes of the associated header cells. If
+                     there is more than one <code class="att">id</code>, they are separated by spaces.
+                  </p>
+                  <p>This technique is used when data cells are associated with more than one row and/or
+                     one
+                     column header. This allows screen readers to speak the headers associated with each
+                     data
+                     cell when the relationships are too complex to be identified using the <code class="el">th</code>
+                     element alone or the <code class="el">th</code> element with the <code class="att">scope</code> attribute.
+                     Using this technique also makes these complex relationships perceivable when the
+                     presentation format changes.
+                  </p>
+                  <p>This technique is not recommended for layout tables since its use implies a
+                     relationship between cells that is not meaningful when tables are used for layout.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-a-table-with-multiple-rows-of-headers">
-                  <h3>Example 1: A table with multiple rows of headers</h3><pre xml:space="preserve">&lt;table&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-a-table-with-multiple-rows-of-headers">
+                     <h3>Example 1: A table with multiple rows of headers</h3><pre xml:space="preserve">&lt;table&gt;
    &lt;tr&gt;
      &lt;th rowspan="2" id="h"&gt;Homework&lt;/th&gt;
      &lt;th colspan="3" id="e"&gt;Exams&lt;/th&gt;
@@ -109,76 +116,85 @@
     &lt;td headers="p pf"&gt;15%&lt;/td&gt;
    &lt;/tr&gt;
   &lt;/table&gt;</pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check for layout tables: determine whether the content has a relationship with
-                        other content in both its column and its row. If “no," the table is a layout
-                        table. If “yes," the table is a data table.
-                     </li>
-                     
-                     <li>For data tables, check that any cell that is associated with more than one row
-                        and/or one column header contains a <code class="att">headers</code> attribute that lists the
-                        <code class="att">id</code> for all headers associated with that cell.
-                     </li>
-                     
-                     <li>
+                     <ol>
                         
-                        <p>For data tables where any cell contains an <code class="att">id</code> or
-                           <code class="att">headers</code> attribute, 
-                        </p>
+                        <li>Check for layout tables: determine whether the content has a relationship with
+                           other content in both its column and its row. If “no," the table is a layout
+                           table. If “yes," the table is a data table.
+                        </li>
                         
-                        <ol>
-                           
-                           <li>Check that each <code class="att">id</code> listed in the <code class="att">headers</code> attribute
-                              of the data cell matches the <code class="att">id</code> attribute of a cell that is used
-                              as a header element
-                           </li>
-                           
-                           <li>Check that the <code class="att">headers</code> attribute of a data cell contains the
-                              <code class="att">id</code> attribute of all headers associated with the data cell
-                           </li>
-                           
-                           <li>Check that all ids are unique (that is, no two elements in the page have the
-                              same id)
-                           </li>
-                           
-                        </ol>
+                        <li>For data tables, check that any cell that is associated with more than one row
+                           and/or one column header contains a <code class="att">headers</code> attribute that lists the
+                           <code class="att">id</code> for all headers associated with that cell.
+                        </li>
                         
-                     </li>
+                        <li>
+                           
+                           <p>For data tables where any cell contains an <code class="att">id</code> or
+                              <code class="att">headers</code> attribute, 
+                           </p>
+                           
+                           <ol>
+                              
+                              <li>Check that each <code class="att">id</code> listed in the <code class="att">headers</code> attribute
+                                 of the data cell matches the <code class="att">id</code> attribute of a cell that is used
+                                 as a header element
+                              </li>
+                              
+                              <li>Check that the <code class="att">headers</code> attribute of a data cell contains the
+                                 <code class="att">id</code> attribute of all headers associated with the data cell
+                              </li>
+                              
+                              <li>Check that all ids are unique (that is, no two elements in the page have the
+                                 same id)
+                              </li>
+                              
+                           </ol>
+                           
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>If table is a layout table, no cells contain <code class="att">headers</code> or
-                        <code class="att">id</code> attributes
-                     </li>
+                     <ul>
+                        
+                        <li>If table is a layout table, no cells contain <code class="att">headers</code> or
+                           <code class="att">id</code> attributes
+                        </li>
+                        
+                        <li>If table is a data table and any cell contains an <code class="att">id</code> attribute,
+                           checks #3.a, #3.b, and #3.c are true.
+                        </li>
+                        
+                        <li>If table is a data table and any cell is associated with more than one row and/or
+                           one column header, check #2 is true.
+                        </li>
+                        
+                     </ul>
                      
-                     <li>If table is a data table and any cell contains an <code class="att">id</code> attribute,
-                        checks #3.a, #3.b, and #3.c are true.
-                     </li>
-                     
-                     <li>If table is a data table and any cell is associated with more than one row and/or
-                        one column header, check #2 is true.
-                     </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -186,7 +202,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -217,7 +233,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

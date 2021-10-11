@@ -55,53 +55,60 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a> when used with  and <strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a> when used with <a href="../general/G146">G146: Using liquid layout</a> and <strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a>
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/resize-text">1.4.4: Resize text</a> and <strong>Sufficient</strong> to meet <a href="/understanding/visual-presentation">1.4.8: Visual Presentation</a> when used with <a href="../general/G146">G146: Using liquid layout</a> and <strong>Sufficient</strong> to meet <a href="/understanding/reflow">1.4.10: Reflow</a>
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to calculate the size and position of elements
-                  in a way that will scale appropriately as the text size is scaled. 
-               </p>
-               <p>There are four properties in JavaScript that help determine the size and position
-                  of elements: 
-               </p>
-               <ul>
-                  
-                  <li>
-                     offsetHeight (the height of the element in pixels) 
-                  </li>
-                  
-                  <li>
-                     offsetWidth (the width of the element in pixels) 
-                  </li>
-                  
-                  <li>
-                     offsetLeft (the distance of the element from the left of its parent (offsetParent)
-                     in pixels) 
-                  </li>
-                  
-                  <li>
-                     offsetTop (the distance of the element from the top of its parent (offsetParent) in
-                     pixels) 
-                  </li>
-                  
-               </ul>
-               <p>Calculating the height and width using offsetHeight and offsetWidth is straightforward,
-                  but when calculating an object's left and top position as absolute values, we need
-                  to consider the parent element. The calculatePosition function below iterates through
-                  all of an element's parent nodes to give a final value. The function takes two parameters;
-                  objElement (the name of the element in question), and the offset property (offsetLeft
-                  or offsetTop): 
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to calculate the size and position of elements
+                     in a way that will scale appropriately as the text size is scaled. 
+                  </p>
+                  <p>There are four properties in JavaScript that help determine the size and position
+                     of elements: 
+                  </p>
+                  <ul>
+                     
+                     <li>
+                        offsetHeight (the height of the element in pixels) 
+                     </li>
+                     
+                     <li>
+                        offsetWidth (the width of the element in pixels) 
+                     </li>
+                     
+                     <li>
+                        offsetLeft (the distance of the element from the left of its parent (offsetParent)
+                        in pixels) 
+                     </li>
+                     
+                     <li>
+                        offsetTop (the distance of the element from the top of its parent (offsetParent) in
+                        pixels) 
+                     </li>
+                     
+                  </ul>
+                  <p>Calculating the height and width using offsetHeight and offsetWidth is straightforward,
+                     but when calculating an object's left and top position as absolute values, we need
+                     to consider the parent element. The calculatePosition function below iterates through
+                     all of an element's parent nodes to give a final value. The function takes two parameters;
+                     objElement (the name of the element in question), and the offset property (offsetLeft
+                     or offsetTop): 
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The Javascript function:</p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The Javascript function:</p><pre xml:space="preserve">
 function calculatePosition(objElement, strOffset)
 {
     var iOffset = 0;
@@ -119,8 +126,8 @@ function calculatePosition(objElement, strOffset)
 }
 
 </pre><p>The following example illustrates using the function above by aligning an object beneath
-                     a reference object, the same distance from the left: 
-                  </p><pre xml:space="preserve">
+                        a reference object, the same distance from the left: 
+                     </p><pre xml:space="preserve">
 // Get a reference object
 var objReference = document.getElementById('refobject');
 // Get the object to be aligned
@@ -130,45 +137,54 @@ objAlign.style.position = 'absolute';
 objAlign.style.left = calculatePosition(objReference, 'offsetLeft') + 'px';
 objAlign.style.top = calculatePosition(objReference, 'offsetTop') + objReference.offsetHeight + 'px'; 
 </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Client-side scripting.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Client-side scripting.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Open a page that is designed to adjust container sizes as text size changes. </li>
+                     <ol>
+                        
+                        <li>Open a page that is designed to adjust container sizes as text size changes. </li>
+                        
+                        <li>Increase the text size up to 200% using the browser's text size adjustment (not the
+                           zoom feature). 
+                        </li>
+                        
+                        <li>Examine the text to ensure the text container size is adjusted to accommodate the
+                           size of the text. 
+                        </li>
+                        
+                        <li>Ensure that no text is "clipped" or has disappeared as a result of the increase in
+                           text size. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li>Increase the text size up to 200% using the browser's text size adjustment (not the
-                        zoom feature). 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>Examine the text to ensure the text container size is adjusted to accommodate the
-                        size of the text. 
-                     </li>
+                     <ul>
+                        
+                        <li>Checks #3 and #4 are true.</li>
+                        
+                     </ul>
                      
-                     <li>Ensure that no text is "clipped" or has disappeared as a result of the increase in
-                        text size. 
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>Checks #3 and #4 are true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -176,7 +192,7 @@ objAlign.style.top = calculatePosition(objReference, 'offsetTop') + objReference
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -208,7 +224,7 @@ objAlign.style.top = calculatePosition(objReference, 'offsetTop') + objReference
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

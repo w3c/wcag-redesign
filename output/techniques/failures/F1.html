@@ -56,48 +56,55 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/adaptable">1.3: Adaptable</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/meaningful-sequence">1.3.2: Meaningful Sequence</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This describes the failure condition that results when CSS, rather than
-                  structural markup, is used to modify the visual layout of the content, and
-                  the modified layout changes the meaning of the content. Using the
-                  positioning properties of CSS2, content may be displayed at any position on
-                  the user's viewport. The order in which items appear on a screen may be
-                  different than the order they are found in the source document. Assistive
-                  technologies rely on the source code or other programmatically determined
-                  order to render the content in the correct sequence. Thus, it is important
-                  not to rely on CSS to visually position content in a specific sequence if this sequence
-                  results in a meaning that is different from the programmatically determined reading
-                  order. 
-                  
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This describes the failure condition that results when CSS, rather than
+                     structural markup, is used to modify the visual layout of the content, and
+                     the modified layout changes the meaning of the content. Using the
+                     positioning properties of CSS2, content may be displayed at any position on
+                     the user's viewport. The order in which items appear on a screen may be
+                     different than the order they are found in the source document. Assistive
+                     technologies rely on the source code or other programmatically determined
+                     order to render the content in the correct sequence. Thus, it is important
+                     not to rely on CSS to visually position content in a specific sequence if this sequence
+                     results in a meaning that is different from the programmatically determined reading
+                     order. 
+                     
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>The following example demonstrates how CSS has been improperly used
-                     to create a set of columns. In addition, the text appears visually
-                     in the browser in a different order than in the markup. 
-                  </p>
-                  <p>In this example a class is defined for each object that is being
-                     positioned. When style sheets are applied, the text appears in two
-                     columns. Elements of class "menu1" (Products) and "menu2"
-                     (Locations) appear as column headings. "Telephones, Computers, and
-                     Portable MP3 Players" are listed under Products and "Idaho" and
-                     "Wisconsin" are listed under Locations (note the different order for
-                     Idaho and Wisconsin in the source code order). 
-                  </p>
-                  <p>Since appropriate structural elements have not been used, when style
-                     sheets are not applied, all of the text appears in one line in the
-                     source order, "Products Locations Telephones Computers Portable MP3
-                     Players Wisconsin Idaho." 
-                  </p>
-                  <p>Here is the HTML content:</p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>The following example demonstrates how CSS has been improperly used
+                        to create a set of columns. In addition, the text appears visually
+                        in the browser in a different order than in the markup. 
+                     </p>
+                     <p>In this example a class is defined for each object that is being
+                        positioned. When style sheets are applied, the text appears in two
+                        columns. Elements of class "menu1" (Products) and "menu2"
+                        (Locations) appear as column headings. "Telephones, Computers, and
+                        Portable MP3 Players" are listed under Products and "Idaho" and
+                        "Wisconsin" are listed under Locations (note the different order for
+                        Idaho and Wisconsin in the source code order). 
+                     </p>
+                     <p>Since appropriate structural elements have not been used, when style
+                        sheets are not applied, all of the text appears in one line in the
+                        source order, "Products Locations Telephones Computers Portable MP3
+                        Players Wisconsin Idaho." 
+                     </p>
+                     <p>Here is the HTML content:</p><pre xml:space="preserve">
 &lt;div class="box"&gt;      
      &lt;span class="menu1"&gt;Products&lt;/span&gt;       
      &lt;span class="menu2"&gt;Locations&lt;/span&gt;       
@@ -163,61 +170,70 @@
      left: 5em 
 } 
 </pre><p>A better solution for this content would be to use more meaningful
-                     elements, such as a table or a definition list.
-                  </p>
-                  <ul>
-                     
-                     <li class="working-example"> 
-                        <a href="../../working-examples/failure-css-positioning/">Example
-                           of CSS positioning failure</a>
-                        									         
-                     </li>
-                     
-                     <li class="working-example"> 
-                        	<a href="../../working-examples/failure-css-positioning/styles-removed">Example of CSS positioning failure with styles
-                           removed</a>
-                        									         
-                     </li>
-                     
-                  </ul>
-               </section>
+                        elements, such as a table or a definition list.
+                     </p>
+                     <ul>
+                        
+                        <li class="working-example"> 
+                           <a href="../../working-examples/failure-css-positioning/">Example
+                              of CSS positioning failure</a>
+                           									         
+                        </li>
+                        
+                        <li class="working-example"> 
+                           	<a href="../../working-examples/failure-css-positioning/styles-removed">Example of CSS positioning failure with styles
+                              removed</a>
+                           									         
+                        </li>
+                        
+                     </ul>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that support CSS.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies that support CSS.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <p>For content which uses CSS for positioning: </p>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Remove the style information from the document or turn off use of
-                        style sheets in the user agent.
-                     </li>
+                     <p>For content which uses CSS for positioning: </p>
                      
-                     <li>Check that the reading order of the content is correct and the
-                        meaning of the content is preserved.
-                     </li>
+                     <ol>
+                        
+                        <li>Remove the style information from the document or turn off use of
+                           style sheets in the user agent.
+                        </li>
+                        
+                        <li>Check that the reading order of the content is correct and the
+                           meaning of the content is preserved.
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li>If step #2 is false, then this failure condition applies and the
-                        content fails this Success Criterion.
-                     </li>
+                     <ul>
+                        
+                        <li>If step #2 is false, then this failure condition applies and the
+                           content fails this Success Criterion.
+                        </li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -225,7 +241,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -245,7 +261,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

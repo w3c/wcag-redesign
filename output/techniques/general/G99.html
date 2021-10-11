@@ -53,69 +53,85 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/input-assistance">3.3: Input Assistance</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/error-prevention-legal-financial-data">3.3.4: Error Prevention (Legal, Financial, Data)</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>When a Web application provides the capability of deleting information, the server
-                  can provide a means to recover information that was deleted in error by a user. One
-                  approach is to delay deleting the data by merely marking it for deletion or moving
-                  it to a holding area (such as a trash can) and waiting some period of time before
-                  actually deleting it. During this time period, the user can request that the data
-                  be restored or can retrieve it from the holding area. Another approach is to record
-                  all delete transactions in such a way that data can be restored if requested by the
-                  user, such as in the edit history stored by wikis and source control applications.The
-                  retrievable information that is stored should be that which would be needed to correct
-                  the transaction.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>When a Web application provides the capability of deleting information, the server
+                     can provide a means to recover information that was deleted in error by a user. One
+                     approach is to delay deleting the data by merely marking it for deletion or moving
+                     it to a holding area (such as a trash can) and waiting some period of time before
+                     actually deleting it. During this time period, the user can request that the data
+                     be restored or can retrieve it from the holding area. Another approach is to record
+                     all delete transactions in such a way that data can be restored if requested by the
+                     user, such as in the edit history stored by wikis and source control applications.The
+                     retrievable information that is stored should be that which would be needed to correct
+                     the transaction.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>A Web application allows users to set up folders and store data within them. Each
-                     folder and data item is accompanied by a checkbox to mark it for action, and two buttons,
-                     one to move and one to delete. If the user selects the delete button by mistake, large
-                     amounts of data could be lost. The application presents the data as deleted to the
-                     user right away, but schedules it for actual deletion in one week. During the week,
-                     the user may go into a "deleted items" folder and request any folder or data item
-                     awaiting actual deletion to be restored.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Content where user actions cause content to be deleted.</p>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
-                     
-                     <li>Identify functionality that allows deleting content</li>
-                     
-                     <li>Delete content and attempt to recover it.</li>
-                     
-                     <li>Check if deleted information can be recovered.</li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
                   <ul>
                      
-                     <li>#3 is true.</li>
+                     <li>A Web application allows users to set up folders and store data within them. Each
+                        folder and data item is accompanied by a checkbox to mark it for action, and two buttons,
+                        one to move and one to delete. If the user selects the delete button by mistake, large
+                        amounts of data could be lost. The application presents the data as deleted to the
+                        user right away, but schedules it for actual deletion in one week. During the week,
+                        the user may go into a "deleted items" folder and request any folder or data item
+                        awaiting actual deletion to be restored.
+                     </li>
                      
                   </ul>
-                  
-               </section>
+               </details>
+            </section>
+            <section id="applicability">
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Content where user actions cause content to be deleted.</p>
+               </details>
+            </section>
+            <section id="tests">
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <ol>
+                        
+                        <li>Identify functionality that allows deleting content</li>
+                        
+                        <li>Delete content and attempt to recover it.</li>
+                        
+                        <li>Check if deleted information can be recovered.</li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li>#3 is true.</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -123,7 +139,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -143,7 +159,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

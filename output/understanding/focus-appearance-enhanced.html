@@ -8,7 +8,7 @@
    </head>
    <body>
       <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Understanding</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -76,112 +76,128 @@
                
             </section>
             <section id="intent">
-               <h2>Intent</h2>
-               <p>The purpose of this success criterion is to ensure a keyboard focus indicator is highly
-                  visible. This criterion is closely related to <a href="./focus-appearance-minimum.html">Success Criterion 2.4.11 Focus Appearance (Minimum)</a> and defines a higher level of visibility for the focus indicator.
-               </p>
-               <p>In relation to Focus Visible (enhanced) this criterion:</p>
-               <ul>
-                  
-                  <li>Expands the minimum area to 2 CSS pixels around the perimeter.</li>
-                  
-                  <li>Increases the change of contrast to 4.5:1.</li>
-                  
-                  <li>Does not allow for any part of the element to be obscured by other content.</li>
-                  
-               </ul>
-               <p>The other aspects of the success criterion are the same as Focus Visible (Minimum).</p>
-            </section>
-            <section id="benefits">
-               <h2>Benefits</h2>
-               <p>The benefits of this success criterion are similar to Focus Appearance (Minimum).</p>
-               <ul>
-                  
-                  <li>Sighted keyboard users can visually determine which component will be interacted with
-                     using keyboard operations.
-                  </li>
-                  
-                  <li>People with low vision are better able to follow a highly visible focus indicator.</li>
-                  
-                  <li>People with attention limitations, short term memory limitations, or limitations in
-                     executive processes benefit by being able to discover where the focus is located.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <p>The examples of this success criterion are similar to Focus Appearance (Minimum).</p>
-               <ul>
-                  
-                  <li>When links receive focus, an outline is displayed around the link that contrasts with
-                     the background adjacent to the link.
-                  </li>
-                  
-                  <li>When buttons receive focus, and outline is displayed within the button (around the
-                     text) that contrasts with the button’s background.
-                  </li>
-                  
-                  <li>When text fields receive focus, an outline is displayed around the field, indicating
-                     that the input has focus.
-                  </li>  
-                  
-                  <li>When radio buttons receive focus, an outline is displayed around the control, indicating
-                     that the input has focus.
-                  </li>        
-                  
-               </ul>
-            </section>
-            <section id="techniques">
-               <h2>Techniques</h2>
-               <p>Each numbered item in this section represents a technique or combination of techniques
-                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                  it is not necessary to use these particular techniques. For information on using other
-                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-               </p>
-               <section id="sufficient">
-                  <h3>Sufficient Techniques</h3>
-                  <p>@@@ Create a new techniques based on:</p>
-                  <ol>
-                     
-                     <li>
-                        <a class="general" href="/techniques/general/G195">G195: Using an author-supplied, highly visible focus indicator</a>
-                        
-                     </li>
-                     
-                     <li>
-                        <a href="/techniques/css/C40">C40: Creating a two-color focus indicator to ensure sufficient contrast with all components</a>
-                        
-                     </li>
-                     
-                     <li>
-                        	<a href="/techniques/css/C41">C41: Creating a strong focus indicator within the component</a>
-                        
-                     </li>
-                     
-                  </ol>
-               </section>
-               <section id="failure">
-                  <h3>Failures</h3>
-                  <p>The following are common mistakes that are considered failures of this Success Criterion
-                     by the WCAG Working Group.
+               <details>
+                  <summary>
+                     <h2>Intent</h2>
+                  </summary>
+                  <p>The purpose of this success criterion is to ensure a keyboard focus indicator is highly
+                     visible. This criterion is closely related to <a href="./focus-appearance-minimum.html">Success Criterion 2.4.11 Focus Appearance (Minimum)</a> and defines a higher level of visibility for the focus indicator.
                   </p>
+                  <p>In relation to Focus Visible (enhanced) this criterion:</p>
                   <ul>
                      
-                     <li>								         
-                        <a class="failure" href="/techniques/failures/F78">F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders in
-                           a way that removes or renders non-visible the visual focus indicator</a>						       
-                        
+                     <li>Expands the minimum area to 2 CSS pixels around the perimeter.</li>
+                     
+                     <li>Increases the change of contrast to 4.5:1.</li>
+                     
+                     <li>Does not allow for any part of the element to be obscured by other content.</li>
+                     
+                  </ul>
+                  <p>The other aspects of the success criterion are the same as Focus Visible (Minimum).</p>
+               </details>
+            </section>
+            <section id="benefits">
+               <details>
+                  <summary>
+                     <h2>Benefits</h2>
+                  </summary>
+                  <p>The benefits of this success criterion are similar to Focus Appearance (Minimum).</p>
+                  <ul>
+                     
+                     <li>Sighted keyboard users can visually determine which component will be interacted with
+                        using keyboard operations.
                      </li>
                      
-                     <li>								         
-                        <a class="failure" href="/techniques/failures/F55">F55:  Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove
-                           focus when focus is received</a>						       
-                        
+                     <li>People with low vision are better able to follow a highly visible focus indicator.</li>
+                     
+                     <li>People with attention limitations, short term memory limitations, or limitations in
+                        executive processes benefit by being able to discover where the focus is located.
                      </li>
                      
                   </ul>
-               </section>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <p>The examples of this success criterion are similar to Focus Appearance (Minimum).</p>
+                  <ul>
+                     
+                     <li>When links receive focus, an outline is displayed around the link that contrasts with
+                        the background adjacent to the link.
+                     </li>
+                     
+                     <li>When buttons receive focus, and outline is displayed within the button (around the
+                        text) that contrasts with the button’s background.
+                     </li>
+                     
+                     <li>When text fields receive focus, an outline is displayed around the field, indicating
+                        that the input has focus.
+                     </li>  
+                     
+                     <li>When radio buttons receive focus, an outline is displayed around the control, indicating
+                        that the input has focus.
+                     </li>        
+                     
+                  </ul>
+               </details>
+            </section>
+            <section id="techniques">
+               <details>
+                  <summary>
+                     <h2>Techniques</h2>
+                  </summary>
+                  <p>Each numbered item in this section represents a technique or combination of techniques
+                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                     it is not necessary to use these particular techniques. For information on using other
+                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+                  </p>
+                  <section id="sufficient">
+                     <h3>Sufficient Techniques</h3>
+                     <p>@@@ Create a new techniques based on:</p>
+                     <ol>
+                        
+                        <li>
+                           <a class="general" href="/techniques/general/G195">G195: Using an author-supplied, highly visible focus indicator</a>
+                           
+                        </li>
+                        
+                        <li>
+                           <a href="/techniques/css/C40">C40: Creating a two-color focus indicator to ensure sufficient contrast with all components</a>
+                           
+                        </li>
+                        
+                        <li>
+                           	<a href="/techniques/css/C41">C41: Creating a strong focus indicator within the component</a>
+                           
+                        </li>
+                        
+                     </ol>
+                  </section>
+                  <section id="failure">
+                     <h3>Failures</h3>
+                     <p>The following are common mistakes that are considered failures of this Success Criterion
+                        by the WCAG Working Group.
+                     </p>
+                     <ul>
+                        
+                        <li>								         
+                           <a class="failure" href="/techniques/failures/F78">F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders in
+                              a way that removes or renders non-visible the visual focus indicator</a>						       
+                           
+                        </li>
+                        
+                        <li>								         
+                           <a class="failure" href="/techniques/failures/F55">F55:  Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove
+                              focus when focus is received</a>						       
+                           
+                        </li>
+                        
+                     </ul>
+                  </section>
+               </details>
             </section>
             <nav class="pager" aria-label="Previous/Next Page">
                <ul id="navigation">
@@ -232,7 +248,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

@@ -55,51 +55,58 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a> and <strong>Sufficient</strong> to meet <a href="/understanding/adaptable">1.3: Adaptable</a>, using a more specific technique.
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/meaningful-sequence">1.3.2: Meaningful Sequence</a> and <strong>Sufficient</strong> to meet <a href="/understanding/meaningful-sequence">1.3.2: Meaningful Sequence</a>, using a more specific technique.
                      					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to ensure that the order of content presented to
-                  assistive technologies allows the user to make sense of the content. Some techniques
-                  permit the content to be rendered visually in a meaningful sequence even if this is
-                  different from the order in which the content is encoded in the underlying source
-                  file.
-               </p>
-               <p>For example, when mixing languages with different directionality in HTML, the bidirectional
-                  algorithm may position punctuation in the wrong location in the visual rendering.
-                  The visual rendering problem could be corrected by moving the punctuation in the content
-                  stream so that the bidirectional algorithm positions it as desired, but this would
-                  expose the incorrect content order to assistive technology. The content is both rendered
-                  in the correct order visually and exposed to assistive technology in the correct order
-                  by using markup to override the bidirectional algorithm.
-               </p>
-               <p>When rendered visually, white space characters such as space or tab may not appear
-                  to be part of the content. However, when inserted into the content to control visual
-                  formatting, they may interfere with the meaning of the content.
-               </p>
-               <p>At a larger granularity, controlling the placement of blocks of content in an HTML
-                  document using layout tables may produce a rendering in which related information
-                  is positioned together visually, but separated in the content stream. Since layout
-                  tables are read row by row, if the caption of an illustration is placed in the row
-                  following the illustration, it may be impossible to associate the caption with the
-                  image.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to ensure that the order of content presented to
+                     assistive technologies allows the user to make sense of the content. Some techniques
+                     permit the content to be rendered visually in a meaningful sequence even if this is
+                     different from the order in which the content is encoded in the underlying source
+                     file.
+                  </p>
+                  <p>For example, when mixing languages with different directionality in HTML, the bidirectional
+                     algorithm may position punctuation in the wrong location in the visual rendering.
+                     The visual rendering problem could be corrected by moving the punctuation in the content
+                     stream so that the bidirectional algorithm positions it as desired, but this would
+                     expose the incorrect content order to assistive technology. The content is both rendered
+                     in the correct order visually and exposed to assistive technology in the correct order
+                     by using markup to override the bidirectional algorithm.
+                  </p>
+                  <p>When rendered visually, white space characters such as space or tab may not appear
+                     to be part of the content. However, when inserted into the content to control visual
+                     formatting, they may interfere with the meaning of the content.
+                  </p>
+                  <p>At a larger granularity, controlling the placement of blocks of content in an HTML
+                     document using layout tables may produce a rendering in which related information
+                     is positioned together visually, but separated in the content stream. Since layout
+                     tables are read row by row, if the caption of an illustration is placed in the row
+                     following the illustration, it may be impossible to associate the caption with the
+                     image.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>A Web page from a museum exhibition contains a navigation bar containing a long list
-                     of links. The page also contains an image of one of the pictures from the exhibition,
-                     a heading for the picture, and a detailed description of the picture. The links in
-                     the navigation bar form a meaningful sequence. The heading, image, and text of the
-                     description also form a meaningful sequence. CSS is used to position the elements
-                     on the page.
-                  </p>
-                  <p>Markup:</p><pre xml:space="preserve">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>A Web page from a museum exhibition contains a navigation bar containing a long list
+                        of links. The page also contains an image of one of the pictures from the exhibition,
+                        a heading for the picture, and a detailed description of the picture. The links in
+                        the navigation bar form a meaningful sequence. The heading, image, and text of the
+                        description also form a meaningful sequence. CSS is used to position the elements
+                        on the page.
+                     </p>
+                     <p>Markup:</p><pre xml:space="preserve">
   &lt;h1&gt;My Museum Page&lt;/h1&gt;
   &lt;ul id="nav"&gt;
     &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
@@ -134,37 +141,46 @@
     margin-left: 11em;
   }
         </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Linearize content using a standard approach for the technology (e.g., removing layout
-                        styles or running a linearization tool)
-                     </li>
+                     <ol>
+                        
+                        <li>Linearize content using a standard approach for the technology (e.g., removing layout
+                           styles or running a linearization tool)
+                        </li>
+                        
+                        <li>Check to see if the order of content yields the same meaning as the original</li>
+                        
+                     </ol>
                      
-                     <li>Check to see if the order of content yields the same meaning as the original</li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>Check #2 is true.</li>
+                        
+                     </ul>
                      
-                     <li>Check #2 is true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -172,7 +188,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -192,7 +208,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

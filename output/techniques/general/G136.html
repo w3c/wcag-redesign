@@ -60,70 +60,86 @@
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to enable users to access alternate content that
-                  conforms to WCAG if the primary content, or the default content that users encounter
-                  when visiting a particular URI, does not conform. The alternate page, or conforming
-                  alternate version, may make some design or functionality compromises in order to conform,
-                  but must meet the requirements described in the definition in order to be a conforming
-                  alternate version. The definition of "conforming alternate version" is:
-               </p>
-               <p id="copyconforming-alternate-versiondef"></p>
-               <p>When using this techique, placing a WCAG-conforming link to alternate content at the
-                  top of the page allows users to find the link quickly and to move to the conforming
-                  alternate version. To ensure users can always find the alternate version, regardless
-                  of where they enter the site, each page that does not conform at the specified level
-                  would include a link to the conforming alternate version.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to enable users to access alternate content that
+                     conforms to WCAG if the primary content, or the default content that users encounter
+                     when visiting a particular URI, does not conform. The alternate page, or conforming
+                     alternate version, may make some design or functionality compromises in order to conform,
+                     but must meet the requirements described in the definition in order to be a conforming
+                     alternate version. The definition of "conforming alternate version" is:
+                  </p>
+                  <p id="copyconforming-alternate-versiondef"></p>
+                  <p>When using this techique, placing a WCAG-conforming link to alternate content at the
+                     top of the page allows users to find the link quickly and to move to the conforming
+                     alternate version. To ensure users can always find the alternate version, regardless
+                     of where they enter the site, each page that does not conform at the specified level
+                     would include a link to the conforming alternate version.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li>On a Web site, for each page that does not conform to WCAG at the declared level,
-                     the first link on the page is called "Accessible version" (or using other link text
-                     that properly conveys the purpose of the link). The target of this link is the alternate
-                     version of the page that conforms to WCAG at the declared level.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Primary content does not conform to WCAG but alternate versions exist that do conform
-                  to WCAG. This technique can only be used if a technology makes it possible to create
-                  an accessible link to an alternate version.
-               </p>
-            </section>
-            <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
-                     
-                     <li>Identify a page that does not conform to WCAG at the claimed conformance level.</li>
-                     
-                     <li>Determine if the page contains a link to a conforming alternate version of the page.</li>
-                     
-                     <li>Determine if the alternate version is a
-                        <a href="/guidelines/#" target="terms">conforming alternate version</a>
-                        of the original page and that it conforms to WCAG 2.0 at the claimed conformance level.
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
                   <ul>
                      
-                     <li>Both #2 and #3 are true.</li>
+                     <li>On a Web site, for each page that does not conform to WCAG at the declared level,
+                        the first link on the page is called "Accessible version" (or using other link text
+                        that properly conveys the purpose of the link). The target of this link is the alternate
+                        version of the page that conforms to WCAG at the declared level.
+                     </li>
                      
                   </ul>
-                  
-               </section>
+               </details>
+            </section>
+            <section id="applicability">
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Primary content does not conform to WCAG but alternate versions exist that do conform
+                     to WCAG. This technique can only be used if a technology makes it possible to create
+                     an accessible link to an alternate version.
+                  </p>
+               </details>
+            </section>
+            <section id="tests">
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
+                     
+                     <ol>
+                        
+                        <li>Identify a page that does not conform to WCAG at the claimed conformance level.</li>
+                        
+                        <li>Determine if the page contains a link to a conforming alternate version of the page.</li>
+                        
+                        <li>Determine if the alternate version is a
+                           <a href="/guidelines/#" target="terms">conforming alternate version</a>
+                           of the original page and that it conforms to WCAG 2.0 at the claimed conformance level.
+                        </li>
+                        
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
+                        
+                        <li>Both #2 and #3 are true.</li>
+                        
+                     </ul>
+                     
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -131,7 +147,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -151,7 +167,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

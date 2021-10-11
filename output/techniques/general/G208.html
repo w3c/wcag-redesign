@@ -53,118 +53,134 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/input-modalities">2.5: Input Modalities</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/label-in-name">2.5.3: Label in Name</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to ensure that speech input users can operate web
-                  content reliably.
-               </p>
-               <p>When speech input users interact with a web page, they usually speak a command followed
-                  by the reference to some visible label (like text in a button, the link text, or the
-                  text labelling input fields). For example, they may speak "click search" to activate
-                  a search button.
-               </p>
-               <p>When speech recognition software processes speech input and looks for matches, it
-                  uses the "accessible name" of controls, which can be different from the visible label.
-                  For example, a  button following a search input field may contain the text "go" but
-                  uses an invisible <code>aria-label</code> attribute with the value "search". Since aria-label takes precedence over the text
-                  included in the button, the accessible name of this button will be "search", not "go".
-                  The <a href="https://www.w3.org/TR/accname/">Accessible Name and Description Computation</a> defines how the accessible name is constructed.
-               </p>
-               <p>In situations where the visible label is considered inadequate as the accessible name,
-                  it is possible to supplement text in the accessible name. However, in order to meet
-                  2.5.3 Label in Name, the text string that makes up the visible label must occur in
-                  its entirety in the accessible name. In most situations, where it is felt that additional
-                  context is needed, it is recommended that the visible text should precede the additional
-                  text. When authors make sure that the visible label of a control is included, intact,
-                  in the accessible name of that control, speech input users can be confident that their
-                  input will be correctly interpreted.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>Additional context may be more appropriately included using the Accessible Description
-                     (including through use of <code>aria-describedby</code>). This has the signficant benefit of improving context for some users of assistive
-                     technology without altering the accessible name.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to ensure that speech input users can operate web
+                     content reliably.
                   </p>
-               </div>
+                  <p>When speech input users interact with a web page, they usually speak a command followed
+                     by the reference to some visible label (like text in a button, the link text, or the
+                     text labelling input fields). For example, they may speak "click search" to activate
+                     a search button.
+                  </p>
+                  <p>When speech recognition software processes speech input and looks for matches, it
+                     uses the "accessible name" of controls, which can be different from the visible label.
+                     For example, a  button following a search input field may contain the text "go" but
+                     uses an invisible <code>aria-label</code> attribute with the value "search". Since aria-label takes precedence over the text
+                     included in the button, the accessible name of this button will be "search", not "go".
+                     The <a href="https://www.w3.org/TR/accname/">Accessible Name and Description Computation</a> defines how the accessible name is constructed.
+                  </p>
+                  <p>In situations where the visible label is considered inadequate as the accessible name,
+                     it is possible to supplement text in the accessible name. However, in order to meet
+                     2.5.3 Label in Name, the text string that makes up the visible label must occur in
+                     its entirety in the accessible name. In most situations, where it is felt that additional
+                     context is needed, it is recommended that the visible text should precede the additional
+                     text. When authors make sure that the visible label of a control is included, intact,
+                     in the accessible name of that control, speech input users can be confident that their
+                     input will be correctly interpreted.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>Additional context may be more appropriately included using the Accessible Description
+                        (including through use of <code>aria-describedby</code>). This has the signficant benefit of improving context for some users of assistive
+                        technology without altering the accessible name.
+                     </p>
+                  </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-link-text-matches-the-beginning-of-the-accessible-name">
-                  <h3>Example 1: Link text matches the beginning of the accessible name</h3>
-                  <p>A link contains visible text and hidden link text. Both together make up the link's
-                     accessible name. The visible text comes first. The idea is to make the link more descriptive
-                     for users of assistive technologies. 
-                  </p><code>&lt;p&gt;Go to &lt;a href="code-of-conduct.html"&gt;Code of conduct &lt;span class="hidden_accessibly"&gt;
-                     of ACME Corporation&lt;/span&gt;&lt;/a&gt;&lt;p&gt;</code></section>
-               <section class="example" id="example-2-generic-link-text-concatenated-with-heading">
-                  <h3>Example 2: Generic link text concatenated with heading</h3>
-                  <p>A generic link is combined with the heading of the paragraph to give context. It is
-                     a variation on the first example, this time using <code>aria-labelledby</code>. The advantage of this implementation is that it uses existing visible text on the
-                     page, and so is more likely to be properly translated during any localization transformations.
-                  </p><code>
-                     					&lt;h4 id="poor"&gt;Insufficient Link Names Invade Community&lt;/h4&gt;<br />
-                     &lt;p&gt;Citizens are reeling from the growing invasion of useless "read more" links appearing
-                     in their online resources. &lt;a href="poor.html" aria-labelledby="generic poor"&gt;&lt;span
-                     id="generic"&gt;More...&lt;/span&gt;&lt;/a&gt;
-                     </code><section id="insufficient-link-names-invade-community">
-                     		
-                     <h4>Insufficient Link Names Invade Community</h4>
-                     
-                     <p>[The following link opens nothing] Citizens are reeling from the growing invasion
-                        of useless "read more" links appearing in their online resources. <a href="#poor" target="_blank" aria-labelledby="generic poor"><span id="generic">More...</span></a></p>
-                     		
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-link-text-matches-the-beginning-of-the-accessible-name">
+                     <h3>Example 1: Link text matches the beginning of the accessible name</h3>
+                     <p>A link contains visible text and hidden link text. Both together make up the link's
+                        accessible name. The visible text comes first. The idea is to make the link more descriptive
+                        for users of assistive technologies. 
+                     </p><code>&lt;p&gt;Go to &lt;a href="code-of-conduct.html"&gt;Code of conduct &lt;span class="hidden_accessibly"&gt;
+                        of ACME Corporation&lt;/span&gt;&lt;/a&gt;&lt;p&gt;</code></section>
+                  <section class="example" id="example-2-generic-link-text-concatenated-with-heading">
+                     <h3>Example 2: Generic link text concatenated with heading</h3>
+                     <p>A generic link is combined with the heading of the paragraph to give context. It is
+                        a variation on the first example, this time using <code>aria-labelledby</code>. The advantage of this implementation is that it uses existing visible text on the
+                        page, and so is more likely to be properly translated during any localization transformations.
+                     </p><code>
+                        					&lt;h4 id="poor"&gt;Insufficient Link Names Invade Community&lt;/h4&gt;<br />
+                        &lt;p&gt;Citizens are reeling from the growing invasion of useless "read more" links appearing
+                        in their online resources. &lt;a href="poor.html" aria-labelledby="generic poor"&gt;&lt;span
+                        id="generic"&gt;More...&lt;/span&gt;&lt;/a&gt;
+                        </code><section id="insufficient-link-names-invade-community">
+                        		
+                        <h4>Insufficient Link Names Invade Community</h4>
+                        
+                        <p>[The following link opens nothing] Citizens are reeling from the growing invasion
+                           of useless "read more" links appearing in their online resources. <a href="#poor" target="_blank" aria-labelledby="generic poor"><span id="generic">More...</span></a></p>
+                        		
+                     </section>
                   </section>
-               </section>
-               <section class="example" id="example-3-link-text-included-in-aria-label">
-                  <h3>Example 3: Link text included in <code>aria-label</code></h3>
-                  <p>Where two strings cannot be grammatically or seamlessly combined using <code>aria-labelledby</code>, <code>aria-label</code> can be used to make a new name which includes the visible label.
-                  </p><code>
-                     			...end of news story. &lt;a href="poor.html" aria-label="Read more about Insufficient
-                     link names"&gt;Read more&lt;/a&gt;
-                     		</code></section>
-               <section class="example" id="example-4-the-visible-button-text-matches-the-beginning-of-the-accessible-name">
-                  <h3>Example 4: The visible button text matches the beginning of the accessible name</h3>
-                  <p>The visible text inside a <code>button</code> element matches the beginning of accessible name, which also includes hidden text.
-                     The idea of the hidden text is to make the button more descriptive for users of assistive
-                     technologies.
-                  </p><code>&lt;button&gt;Send &lt;span class="accessibly-hidden"&gt; Mail&lt;/span&gt;&lt;/button&gt;</code></section>
+                  <section class="example" id="example-3-link-text-included-in-aria-label">
+                     <h3>Example 3: Link text included in <code>aria-label</code></h3>
+                     <p>Where two strings cannot be grammatically or seamlessly combined using <code>aria-labelledby</code>, <code>aria-label</code> can be used to make a new name which includes the visible label.
+                     </p><code>
+                        			...end of news story. &lt;a href="poor.html" aria-label="Read more about Insufficient
+                        link names"&gt;Read more&lt;/a&gt;
+                        		</code></section>
+                  <section class="example" id="example-4-the-visible-button-text-matches-the-beginning-of-the-accessible-name">
+                     <h3>Example 4: The visible button text matches the beginning of the accessible name</h3>
+                     <p>The visible text inside a <code>button</code> element matches the beginning of accessible name, which also includes hidden text.
+                        The idea of the hidden text is to make the button more descriptive for users of assistive
+                        technologies.
+                     </p><code>&lt;button&gt;Send &lt;span class="accessibly-hidden"&gt; Mail&lt;/span&gt;&lt;/button&gt;</code></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>This Technique applies to all web technologies that include interactive controls (such
-                  as links or form inputs)
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>This Technique applies to all web technologies that include interactive controls (such
+                     as links or form inputs)
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <p>For all controls with a visible label, check that:</p>
-                  <ol>
-                     					
-                     <li>The accessible name of the control contains the same letters in the same order as
-                        the visible label.
-                     </li>
-                     
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     					
-                     <li>Check #1 true.</li>
-                     				
-                  </ul>
-                  <p>If this is a sufficient technique for a success criterion, failing this test procedure
-                     does not necessarily mean that the success criterion has not been satisfied in some
-                     other way, only that this technique has not been successfully implemented and can
-                     not be used to claim conformance.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <p>For all controls with a visible label, check that:</p>
+                     <ol>
+                        					
+                        <li>The accessible name of the control contains the same letters in the same order as
+                           the visible label.
+                        </li>
+                        
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        					
+                        <li>Check #1 true.</li>
+                        				
+                     </ul>
+                     <p>If this is a sufficient technique for a success criterion, failing this test procedure
+                        does not necessarily mean that the success criterion has not been satisfied in some
+                        other way, only that this technique has not been successfully implemented and can
+                        not be used to claim conformance.
+                     </p>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -172,7 +188,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -203,7 +219,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

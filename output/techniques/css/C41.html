@@ -53,26 +53,36 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/focus-appearance-minimum">2.4.11: Focus Appearance (Minimum)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/focus-appearance-enhanced">2.4.12: Focus Appearance (Enhanced)</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to create a highly visible focus indicator that
-                  has sufficient contrast against the internal background color of a component.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to create a highly visible focus indicator that
+                     has sufficient contrast against the internal background color of a component.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <p>The examples demonstrate a simple implementation where a focus styles is applied to
-                  blue background. As the indicator is contained inside the component, you can be sure
-                  it maintains contrast whatever background the component is placed on
-               </p>
-               <section class="example" id="example-1-inner-border">
-                  <h3>Example 1: Inner border</h3>
-                  <p>HTML</p><pre><code>&lt;button&gt;Example button&lt;/button&gt;</code></pre><p>CSS to provide the indicator. It narrows the scope to buttons within the <code>main</code> element.
-                  </p><pre><code>button { 
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <p>The examples demonstrate a simple implementation where a focus styles is applied to
+                     blue background. As the indicator is contained inside the component, you can be sure
+                     it maintains contrast whatever background the component is placed on
+                  </p>
+                  <section class="example" id="example-1-inner-border">
+                     <h3>Example 1: Inner border</h3>
+                     <p>HTML</p><pre><code>&lt;button&gt;Example button&lt;/button&gt;</code></pre><p>CSS to provide the indicator. It narrows the scope to buttons within the <code>main</code> element.
+                     </p><pre><code>button { 
     background-color: #236AB8 /* medium-dark blue */
     color: white;
     padding: 10px;
@@ -81,48 +91,57 @@ main button:focus {
     outline: 3px #fff5be solid; /* light yellow */
     outline-offset: -4px;
 }</code></pre><figure id="focus-indicator-inside">
-                     <img src="../../understanding/22/img/focus-indicator-innerline-strong.png" alt="Three blue buttons with a dark border, the middle button showing a bright yellow outline inside the button." width="300" />
-                     
-                     <figcaption>Figure 1 The default and focused states of the button.</figcaption>
-                     
-                  </figure>
-               </section>
+                        <img src="../../understanding/22/img/focus-indicator-innerline-strong.png" alt="Three blue buttons with a dark border, the middle button showing a bright yellow outline inside the button." width="300" />
+                        
+                        <figcaption>Figure 1 The default and focused states of the button.</figcaption>
+                        
+                     </figure>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that support CSS.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies that support CSS.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <p>For each focusable user interface element: </p>
-                  <ol>
-                     
-                     <li>Place keyboard focus on each focusable user interface element on the page using the
-                        keyboard.
-                     </li>
-                     
-                     <li>Check that the focus indicator area is at least the size of a 2 CSS px border around
-                        the component.
-                     </li>
-                     
-                     <li>Check that the change of contrast of the indicator between focused and unfocused states
-                        has a ratio of 4.5:1 for the minimum focus indicator area.
-                     </li>
-                     				
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     					
-                     <li>#2 and #3 are true.</li>
-                     				
-                  </ul>
-                  <p>The required change of contrast for <a href="../../understanding/22/focus-appearance-minimum.html">Focus Appearance Minimum</a> is 3:1, this technique also applies to <a href="../../understanding/22/focus-appearance-enhanced.html">Focus Appearance Enhanced</a>, which has a higher requirement of 4.5:1.
-                  </p>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <p>For each focusable user interface element: </p>
+                     <ol>
+                        
+                        <li>Place keyboard focus on each focusable user interface element on the page using the
+                           keyboard.
+                        </li>
+                        
+                        <li>Check that the focus indicator area is at least the size of a 2 CSS px border around
+                           the component.
+                        </li>
+                        
+                        <li>Check that the change of contrast of the indicator between focused and unfocused states
+                           has a ratio of 4.5:1 for the minimum focus indicator area.
+                        </li>
+                        				
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        					
+                        <li>#2 and #3 are true.</li>
+                        				
+                     </ul>
+                     <p>The required change of contrast for <a href="../../understanding/22/focus-appearance-minimum.html">Focus Appearance Minimum</a> is 3:1, this technique also applies to <a href="../../understanding/22/focus-appearance-enhanced.html">Focus Appearance Enhanced</a>, which has a higher requirement of 4.5:1.
+                     </p>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -130,7 +149,7 @@ main button:focus {
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -161,7 +180,7 @@ main button:focus {
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

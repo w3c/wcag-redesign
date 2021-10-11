@@ -56,91 +56,107 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is <span>a <strong>Failure</strong> of <a href="/understanding/reflow">1.4.10: Reflow</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>This document describes a failure that occurs when a change of the viewport width
-                  to 320px makes content disappear that was available at wider viewport widths. Some
-                  content available at wider widths may not be shown in the same way or at the same
-                  position at the viewport width of 320px, simply because there is less space (screen
-                  'real estate') to display it. This content, however, should still be available after
-                  reflow to 320px viewport width, either by being repositioned in a single column view,
-                  or through some interaction offering the information in some other way, for example,
-                  in a disclosure area, a dialog, or via a link to another view.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>This document describes a failure that occurs when a change of the viewport width
+                     to 320px makes content disappear that was available at wider viewport widths. Some
+                     content available at wider widths may not be shown in the same way or at the same
+                     position at the viewport width of 320px, simply because there is less space (screen
+                     'real estate') to display it. This content, however, should still be available after
+                     reflow to 320px viewport width, either by being repositioned in a single column view,
+                     or through some interaction offering the information in some other way, for example,
+                     in a disclosure area, a dialog, or via a link to another view.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <p>The following examples demonstrate the failure to make content visible at a wider
-                  viewport width also available after a reflow to 320px:
-               </p>
-               <ul>
-                  
-                  <li>A block of blog entry links in a side column disappears entirely after reflow (i.e.,
-                     it is not available further down in the single column view).
-                  </li>
-                  
-                  <li>Labels above text inputs are hidden and replaced by placeholder text after reflow,
-                     without a technique showing dedicated labels when focusing the fields.
-                  </li>
-                  
-                  <li>Sections of content text disappear after reflow, without being available via some
-                     disclosure widget.
-                  </li>
-                  
-                  <li>Information-carrying images disappear after reflow, without link or the availability
-                     of an equivalent alternative.
-                  </li>
-                  
-                  <li>A global search field disappears after reflow, without an icon or menu option to reveal
-                     a search function or reach an equivalent search page.
-                  </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <p>The following examples demonstrate the failure to make content visible at a wider
+                     viewport width also available after a reflow to 320px:
+                  </p>
+                  <ul>
+                     
+                     <li>A block of blog entry links in a side column disappears entirely after reflow (i.e.,
+                        it is not available further down in the single column view).
+                     </li>
+                     
+                     <li>Labels above text inputs are hidden and replaced by placeholder text after reflow,
+                        without a technique showing dedicated labels when focusing the fields.
+                     </li>
+                     
+                     <li>Sections of content text disappear after reflow, without being available via some
+                        disclosure widget.
+                     </li>
+                     
+                     <li>Information-carrying images disappear after reflow, without link or the availability
+                        of an equivalent alternative.
+                     </li>
+                     
+                     <li>A global search field disappears after reflow, without an icon or menu option to reveal
+                        a search function or reach an equivalent search page.
+                     </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies.</p>
-               <p>This technique relates to:</p>
-               <ul>
-                  
-                  <li>Success Criterion 1.4.10: Reflow (Failure)</li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies.</p>
+                  <p>This technique relates to:</p>
+                  <ul>
+                     
+                     <li>Success Criterion 1.4.10: Reflow (Failure)</li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <ol>
-                     					
-                     <li>Check visible content elements at a desktop viewport width such as 1280px</li>
-                     
-                     <li>Set the viewport width to 320px by narrowing the browser window, or by zooming in
-                        so that the viewport width is now 320px (when starting with a 1280px viewport width
-                        at 100% browser zoom, this can be done by zooming in to 400%)
-                     </li>
-                     
-                     <li>For each content element that is not provided at the viewport width of 320px, check
-                        that there is a way to reach the same or equivalent content via discolure widgets,
-                        pop-ups, or links to other views
-                     </li>
-                     				
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     					
-                     <li>If #3 is false, then this failure condition applies and the content fails this Success
-                        Criterion. 
-                     </li>
-                     				
-                  </ul>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <ol>
+                        					
+                        <li>Check visible content elements at a desktop viewport width such as 1280px</li>
+                        
+                        <li>Set the viewport width to 320px by narrowing the browser window, or by zooming in
+                           so that the viewport width is now 320px (when starting with a 1280px viewport width
+                           at 100% browser zoom, this can be done by zooming in to 400%)
+                        </li>
+                        
+                        <li>For each content element that is not provided at the viewport width of 320px, check
+                           that there is a way to reach the same or equivalent content via discolure widgets,
+                           pop-ups, or links to other views
+                        </li>
+                        				
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        					
+                        <li>If #3 is false, then this failure condition applies and the content fails this Success
+                           Criterion. 
+                        </li>
+                        				
+                     </ul>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -148,7 +164,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -168,7 +184,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

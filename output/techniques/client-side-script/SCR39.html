@@ -53,53 +53,60 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/distinguishable">1.4: Distinguishable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/content-on-hover-or-focus">1.4.13: Content on Hover or Focus</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>Additional content that is displayed when a user moves the pointer over a trigger
-                  or moves the keyboard focus to the trigger (for example, a pop-up) must remain visible
-                  to allow users time to read and interact with the content and must allow the user
-                  to move the pointer over the additional content.
-               </p>
-               <p>Low vision users who magnify their screens often see only a small part of the screen
-                  at a time (their viewport).
-                  This means that the additional content may not be fully visible in the current viewport
-                  and users may need to move
-                  their mouse over the additional content to read it. Web authors should therefore ensue
-                  that additional content stays visible
-                  when the pointer moves away from the trigger to the (mostly adjacent) additional content.
-                  additional content should also be
-                  dismissible without moving the focus, so that users can read content covered by the
-                  additional content.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>Additional content that is displayed when a user moves the pointer over a trigger
+                     or moves the keyboard focus to the trigger (for example, a pop-up) must remain visible
+                     to allow users time to read and interact with the content and must allow the user
+                     to move the pointer over the additional content.
+                  </p>
+                  <p>Low vision users who magnify their screens often see only a small part of the screen
+                     at a time (their viewport).
+                     This means that the additional content may not be fully visible in the current viewport
+                     and users may need to move
+                     their mouse over the additional content to read it. Web authors should therefore ensue
+                     that additional content stays visible
+                     when the pointer moves away from the trigger to the (mostly adjacent) additional content.
+                     additional content should also be
+                     dismissible without moving the focus, so that users can read content covered by the
+                     additional content.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-content-preview-for-links">
-                  <h3>Example 1: Content preview for links</h3>
-                  <p>When hovering over or focusing on a link, a content preview for the link appears just
-                     above or below that link.
-                     			Users can move the pointer over the additional content (pop-up) so that they can
-                     fully read the additional content. Pressing the Esc
-                     			key dismisses (closes) the additional content.
-                  </p>
-                  <section id="html-of-example-1">
-                     			
-                     <h4>HTML of example 1</h4>
-                     			<pre><code>&lt;p&gt;This is the &lt;a class="a-and-tooltip" id="parent" href="index.html"&gt;trigger
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-content-preview-for-links">
+                     <h3>Example 1: Content preview for links</h3>
+                     <p>When hovering over or focusing on a link, a content preview for the link appears just
+                        above or below that link.
+                        			Users can move the pointer over the additional content (pop-up) so that they can
+                        fully read the additional content. Pressing the Esc
+                        			key dismisses (closes) the additional content.
+                     </p>
+                     <section id="html-of-example-1">
+                        			
+                        <h4>HTML of example 1</h4>
+                        			<pre><code>&lt;p&gt;This is the &lt;a class="a-and-tooltip" id="parent" href="index.html"&gt;trigger
 &lt;span id="popup" role="tooltip"&gt;And this additional text 
 gives additional context on the trigger term&lt;/span&gt;&lt;/a&gt;.
 Text and popup are &lt;strong&gt;in one link (a)&lt;/strong&gt; element.&lt;/p&gt;</code></pre>
-                     <hr />
-                     		
-                  </section>
-                  <section id="css-of-example-1">
-                     			
-                     <h4>CSS of example 1</h4>
-                     			<pre><code>[role="tooltip"] {
+                        <hr />
+                        		
+                     </section>
+                     <section id="css-of-example-1">
+                        			
+                        <h4>CSS of example 1</h4>
+                        			<pre><code>[role="tooltip"] {
     display: none;
     padding: 0.5em;
     background:white;
@@ -117,13 +124,13 @@ Text and popup are &lt;strong&gt;in one link (a)&lt;/strong&gt; element.&lt;/p&g
     left:0;
     top:1em;
 }</code></pre>
-                     			<hr />
-                     		
-                  </section>
-                  <section id="javascript-of-example-1">
-                     			
-                     <h4>JavaScript of example 1</h4>
-                     			<pre><code>// trigger and popup inside the same link
+                        			<hr />
+                        		
+                     </section>
+                     <section id="javascript-of-example-1">
+                        			
+                        <h4>JavaScript of example 1</h4>
+                        			<pre><code>// trigger and popup inside the same link
 
 var parent = document.getElementById('parent');
 
@@ -149,62 +156,71 @@ document.addEventListener('keydown', (e) =&gt; {
   if ((e.keyCode || e.which) === 27)
        document.getElementById('popup').style.display = 'none';
 });</code></pre>
-                     		</section>
-                  <p class="working-example"><a href="../../working-examples/script-hoverable/">Working example of content on hover
-                        or focus</a></p>
-               </section>
+                        		</section>
+                     <p class="working-example"><a href="../../working-examples/script-hoverable/">Working example of content on hover
+                           or focus</a></p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>The Technique is applicable to any technology that supports the display of additional
-                  content on pointer hover.
-                  
-               </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>The Technique is applicable to any technology that supports the display of additional
+                     content on pointer hover.
+                     
+                  </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <p>For additional content that appears on hover check that:</p>
-                  <ol>
-                     
-                     <li>The pointer can be moved over the additional content without the additional content
-                        disappearing.
-                     </li>
-                     
-                     <li>The additional content stays visible and does not automatically close after a time.</li>
-                     
-                     <li>The content can be closed without moving the pointer way from the trigger. Either
-                        by pressing <kbd>Esc</kbd>, by pressing another documented keyboard shortcut, or by activating the trigger.
-                     </li>
-                     	
-                  </ol>
-                  <p>For additional content that appears on focus check that:</p>
-                  <ol>
-                     
-                     <li>The additional content stays visible and does not automatically close after a time.</li>
-                     
-                     <li>The content can be closed without moving the focus way from the trigger. Either by
-                        pressing <kbd>Esc</kbd>, by  pressing another other documented keyboard shortcut, or by activating the trigger.
-                     </li>
-                     
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <p>For content that appears on hover:</p>
-                  <ul>
-                     
-                     <li>#1, #2 and #3 are true.</li>
-                     	
-                  </ul>
-                  <p>For content that appears on focus:</p>
-                  <ul>
-                     
-                     <li>#1 and #2 are true.</li>
-                     
-                  </ul>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <p>For additional content that appears on hover check that:</p>
+                     <ol>
+                        
+                        <li>The pointer can be moved over the additional content without the additional content
+                           disappearing.
+                        </li>
+                        
+                        <li>The additional content stays visible and does not automatically close after a time.</li>
+                        
+                        <li>The content can be closed without moving the pointer way from the trigger. Either
+                           by pressing <kbd>Esc</kbd>, by pressing another documented keyboard shortcut, or by activating the trigger.
+                        </li>
+                        	
+                     </ol>
+                     <p>For additional content that appears on focus check that:</p>
+                     <ol>
+                        
+                        <li>The additional content stays visible and does not automatically close after a time.</li>
+                        
+                        <li>The content can be closed without moving the focus way from the trigger. Either by
+                           pressing <kbd>Esc</kbd>, by  pressing another other documented keyboard shortcut, or by activating the trigger.
+                        </li>
+                        
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <p>For content that appears on hover:</p>
+                     <ul>
+                        
+                        <li>#1, #2 and #3 are true.</li>
+                        	
+                     </ul>
+                     <p>For content that appears on focus:</p>
+                     <ul>
+                        
+                        <li>#1 and #2 are true.</li>
+                        
+                     </ul>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -212,7 +228,7 @@ document.addEventListener('keydown', (e) =&gt; {
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
          </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
@@ -232,7 +248,7 @@ document.addEventListener('keydown', (e) =&gt; {
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

@@ -53,235 +53,251 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/predictable">3.2: Predictable</a> when used with <a href="../general/G80">G80: Providing a submit button to initiate a change of context</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/on-input">3.2.2: On Input</a> when used with <a href="../general/G80">G80: Providing a submit button to initiate a change of context</a></span>.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide a mechanism that allows
-                  				users to explicitly request a change of context using the submit-form
-                  				action in a PDF form. The intended use of a submit button is to generate
-                  				an HTTP request that submits data entered in a form, so it is an appropriate
-                  				control to use for causing a change of context. In PDF documents, submit buttons
-                  are normally implemented using a tool for authoring PDF. 
-               </p>
-               <p>Examples 1 and 2 demonstrate how to add a submit button using specific
-                  authoring tools. There are other PDF tools that perform similar
-                  functions. Check the functionality provided by <a href="#pdf_notes_acc-sup_files_applications"></a>.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide a mechanism that allows
+                     				users to explicitly request a change of context using the submit-form
+                     				action in a PDF form. The intended use of a submit button is to generate
+                     				an HTTP request that submits data entered in a form, so it is an appropriate
+                     				control to use for causing a change of context. In PDF documents, submit buttons
+                     are normally implemented using a tool for authoring PDF. 
+                  </p>
+                  <p>Examples 1 and 2 demonstrate how to add a submit button using specific
+                     authoring tools. There are other PDF tools that perform similar
+                     functions. Check the functionality provided by <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-adding-a-submit-button-using-adobe-acrobat-9-pro">
-                  <h3>Example 1: Adding a submit button using Adobe Acrobat 9 Pro</h3>
-                  <p>This example is shown with Adobe Acrobat Pro. There are other software tools that
-                     perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
-                  </p>
-                  <ol>
-                     
-                     <li> From the toolbar, select Forms &gt; Form Tools &gt; Button and
-                        						create a button on the form. 
-                     </li>
-                     
-                     <li> Access the context menu for the button and select Properties...
-                        							to open the Button Properties dialog. 
-                     </li>
-                     
-                     <li> In the General tab, provide a tooltip for the button. </li>
-                     
-                     <li> In the Options tab, choose an option in the Layout menu for the
-                        								button label, icon image, or both. Then, type text in the Label box
-                        								to identify the button as a submit button and/or click Choose Icon
-                        								and locate the image file you want to use. 
-                     </li>
-                     
-                     <li>
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-adding-a-submit-button-using-adobe-acrobat-9-pro">
+                     <h3>Example 1: Adding a submit button using Adobe Acrobat 9 Pro</h3>
+                     <p>This example is shown with Adobe Acrobat Pro. There are other software tools that
+                        perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                     </p>
+                     <ol>
                         
-                        <p> In the Actions tab:</p>
+                        <li> From the toolbar, select Forms &gt; Form Tools &gt; Button and
+                           						create a button on the form. 
+                        </li>
                         
-                        <ul>
-                           
-                           <li> For Select Trigger, choose Mouse Up. (The Mouse Up event is
-                              										keyboard accessible and, in addition, ensures that the button
-                              										will not change context unexpectedly, as it might with, e.g.,
-                              										a Mouse Enter event.) 
-                           </li>
-                           
-                           <li> For Select Action, choose Submit A Form. </li>
-                           
-                           <li> Click Add. </li>
-                           
-                        </ul>
+                        <li> Access the context menu for the button and select Properties...
+                           							to open the Button Properties dialog. 
+                        </li>
                         
-                     </li>
-                     
-                     <li> In the Add dialog, enter a URL to collect data on a server or
-                        									collect form data as e-mail attachments. 
-                     </li>
-                     
-                  </ol>
-                  <p>The following image shows the Options tab on the Button Properties
-                     						dialog. 
-                  </p>
-                  <figure id="figure-options-tab">
-                     <img src="img/submit-button2.jpg" />
-                     
-                     
-                     <figcaption>Figure 1 The Options tab in the Button Properties dialog, showing the layout and label button
-                        properties.
-                     </figcaption>
-                     
-                     
-                  </figure>
-                  <p>The following image shows the Actions tab on the Button Properties
-                     						dialog. 
-                  </p>
-                  <figure id="figure-action-tab">
-                     <img src="img/submit-button.jpg" />
-                     
-                     
-                     <figcaption>Figure 2 The Action tab in the Button Properties dialog with the Select Action option specified.</figcaption>
-                     
-                     
-                  </figure>
-               </section>
-               <section class="example" id="example-2-adding-a-submit-button-using-adobe-livecycle-designer&#xA;----&#x9;&#x9;&#x9;&#x9;es-8.2.1">
-                  <h3>Example 2: Adding a submit button using Adobe LiveCycle Designer
-                     				ES 8.2.1
-                  </h3>
-                  <p>This example is shown with Adobe LiveCycle Designer. There are other software tools
-                     that perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
-                  </p>
-                  <ol>
-                     
-                     <li> On the Insert &gt; Standard menu, select the HTTP Submit Button
-                        						item. 
-                     </li>
-                     
-                     <li> On the Object panel for the HTTP Submit Button, insert the URL
-                        							for form-submission processing. 
-                     </li>
-                     
-                  </ol>
-                  <p>The following image shows the Standard menu with the list of form
-                     						controls. 
-                  </p>
-                  <figure id="figure-standard-menu">
-                     <img src="img/http.gif" />
-                     
-                     
-                     <figcaption>Figure 3 The Standard menu showing the list of form controls, including the selection of the
-                        HTTP Submit Button.
-                     </figcaption>
-                     
-                     
-                  </figure>
-                  <p>The following image shows the Object panel with the URL and other
-                     						fields for button appearance. 
-                  </p>
-                  <figure id="figure-object-panel">
-                     <img src="img/submit-panel.gif" />
-                     
-                     
-                     <figcaption>Figure 4 The Object panel showing the URL and other fields for specifying the submit button's
-                        appearance and action.
-                     </figcaption>
-                     
-                     
-                  </figure>
-               </section>
-               <section class="example" id="example-3-adding-a-script-action-to-a-submit-button-in-a-pdf-document&#xA;----&#x9;&#x9;&#x9;&#x9;using-javascript">
-                  <h3>Example 3: Adding a script action to a submit button in a PDF document
-                     				using JavaScript
-                  </h3>
-                  <p>The following JavaScript code illustrates the use of a script to specify
-                     						the submit-form action. To add this script to the form field: 
-                  </p>
-                  <ol>
-                     
-                     <li> Open the Button Properties dialog, as shown in Example 1, and
-                        						select the Actions tab 
-                     </li>
-                     
-                     <li> Select Run a JavaScript from the drop-down list, and select the
-                        							Add button 
-                     </li>
-                     
-                     <li> Enter JavaScript code in the JavaScript Editor dialog, for example: </li>
-                     
-                  </ol><pre xml:space="preserve">var aSubmitFields = new Array( "name", "id", "juser" );
+                        <li> In the General tab, provide a tooltip for the button. </li>
+                        
+                        <li> In the Options tab, choose an option in the Layout menu for the
+                           								button label, icon image, or both. Then, type text in the Label box
+                           								to identify the button as a submit button and/or click Choose Icon
+                           								and locate the image file you want to use. 
+                        </li>
+                        
+                        <li>
+                           
+                           <p> In the Actions tab:</p>
+                           
+                           <ul>
+                              
+                              <li> For Select Trigger, choose Mouse Up. (The Mouse Up event is
+                                 										keyboard accessible and, in addition, ensures that the button
+                                 										will not change context unexpectedly, as it might with, e.g.,
+                                 										a Mouse Enter event.) 
+                              </li>
+                              
+                              <li> For Select Action, choose Submit A Form. </li>
+                              
+                              <li> Click Add. </li>
+                              
+                           </ul>
+                           
+                        </li>
+                        
+                        <li> In the Add dialog, enter a URL to collect data on a server or
+                           									collect form data as e-mail attachments. 
+                        </li>
+                        
+                     </ol>
+                     <p>The following image shows the Options tab on the Button Properties
+                        						dialog. 
+                     </p>
+                     <figure id="figure-options-tab">
+                        <img src="img/submit-button2.jpg" />
+                        
+                        
+                        <figcaption>Figure 1 The Options tab in the Button Properties dialog, showing the layout and label button
+                           properties.
+                        </figcaption>
+                        
+                        
+                     </figure>
+                     <p>The following image shows the Actions tab on the Button Properties
+                        						dialog. 
+                     </p>
+                     <figure id="figure-action-tab">
+                        <img src="img/submit-button.jpg" />
+                        
+                        
+                        <figcaption>Figure 2 The Action tab in the Button Properties dialog with the Select Action option specified.</figcaption>
+                        
+                        
+                     </figure>
+                  </section>
+                  <section class="example" id="example-2-adding-a-submit-button-using-adobe-livecycle-designer&#xA;----&#x9;&#x9;&#x9;&#x9;es-8.2.1">
+                     <h3>Example 2: Adding a submit button using Adobe LiveCycle Designer
+                        				ES 8.2.1
+                     </h3>
+                     <p>This example is shown with Adobe LiveCycle Designer. There are other software tools
+                        that perform similar functions. See the list of other software tools in <a href="#pdf_notes_acc-sup_files_applications"></a>.
+                     </p>
+                     <ol>
+                        
+                        <li> On the Insert &gt; Standard menu, select the HTTP Submit Button
+                           						item. 
+                        </li>
+                        
+                        <li> On the Object panel for the HTTP Submit Button, insert the URL
+                           							for form-submission processing. 
+                        </li>
+                        
+                     </ol>
+                     <p>The following image shows the Standard menu with the list of form
+                        						controls. 
+                     </p>
+                     <figure id="figure-standard-menu">
+                        <img src="img/http.gif" />
+                        
+                        
+                        <figcaption>Figure 3 The Standard menu showing the list of form controls, including the selection of the
+                           HTTP Submit Button.
+                        </figcaption>
+                        
+                        
+                     </figure>
+                     <p>The following image shows the Object panel with the URL and other
+                        						fields for button appearance. 
+                     </p>
+                     <figure id="figure-object-panel">
+                        <img src="img/submit-panel.gif" />
+                        
+                        
+                        <figcaption>Figure 4 The Object panel showing the URL and other fields for specifying the submit button's
+                           appearance and action.
+                        </figcaption>
+                        
+                        
+                     </figure>
+                  </section>
+                  <section class="example" id="example-3-adding-a-script-action-to-a-submit-button-in-a-pdf-document&#xA;----&#x9;&#x9;&#x9;&#x9;using-javascript">
+                     <h3>Example 3: Adding a script action to a submit button in a PDF document
+                        				using JavaScript
+                     </h3>
+                     <p>The following JavaScript code illustrates the use of a script to specify
+                        						the submit-form action. To add this script to the form field: 
+                     </p>
+                     <ol>
+                        
+                        <li> Open the Button Properties dialog, as shown in Example 1, and
+                           						select the Actions tab 
+                        </li>
+                        
+                        <li> Select Run a JavaScript from the drop-down list, and select the
+                           							Add button 
+                        </li>
+                        
+                        <li> Enter JavaScript code in the JavaScript Editor dialog, for example: </li>
+                        
+                     </ol><pre xml:space="preserve">var aSubmitFields = new Array( "name", "id", "juser" );
 this.submitForm({
   cURL: "http://www.example.com/cgi-bin/myscript.cgi#FDF",
   aFields: aSubmitFields,
   cSubmitAs: "FDF" // the default, not needed here
 });
 </pre><p>The following images illustrate this process: </p>
-                  <figure id="figure-button-props-dialog">
-                     <img src="img/submit-button1.jpg" />
-                     
-                     
-                     <figcaption>Figure 5 The Button Properties dialog for a submit button.</figcaption>
-                     
-                     
-                  </figure>
-                  <figure id="figure-javascript-action-tab">
-                     <img src="img/submit-button3.jpg" />
-                     
-                     
-                     <figcaption>Figure 6 The JavaScript added to the Action tab of the Button Properties dialog.</figcaption>
-                     
-                     
-                  </figure>
-                  <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-submit-button/submit-button-js.pdf">working example of adding a script action to a submit button</a>.
-                  </p>
-               </section>
+                     <figure id="figure-button-props-dialog">
+                        <img src="img/submit-button1.jpg" />
+                        
+                        
+                        <figcaption>Figure 5 The Button Properties dialog for a submit button.</figcaption>
+                        
+                        
+                     </figure>
+                     <figure id="figure-javascript-action-tab">
+                        <img src="img/submit-button3.jpg" />
+                        
+                        
+                        <figcaption>Figure 6 The JavaScript added to the Action tab of the Button Properties dialog.</figcaption>
+                        
+                        
+                     </figure>
+                     <p class="working-example">This example is shown in operation in the <a href="../../working-examples/pdf-submit-button/submit-button-js.pdf">working example of adding a script action to a submit button</a>.
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>Tagged PDF documents with forms. </p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>Tagged PDF documents with forms. </p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>
+                     <ol>
                         
-                        <p> For each page that submits a form, visually verify that the form
-                           					contains a submit button and check one of the following:
-                        </p>
+                        <li>
+                           
+                           <p> For each page that submits a form, visually verify that the form
+                              					contains a submit button and check one of the following:
+                           </p>
+                           
+                           <ul>
+                              
+                              <li> Tab to the button and check that it submits the form in response
+                                 						to user action to select the button. 
+                              </li>
+                              
+                              <li> Open the PDF document with a tool that is capable of showing
+                                 								the submit-form action and check that the button action is to
+                                 								submit the form. 
+                              </li>
+                              
+                           </ul>
+                           
+                        </li>
                         
-                        <ul>
-                           
-                           <li> Tab to the button and check that it submits the form in response
-                              						to user action to select the button. 
-                           </li>
-                           
-                           <li> Open the PDF document with a tool that is capable of showing
-                              								the submit-form action and check that the button action is to
-                              								submit the form. 
-                           </li>
-                           
-                        </ul>
+                     </ol>
+                     
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <ul>
                         
-                     </li>
+                        <li>#1 is true for each page that contains a form. </li>
+                        
+                     </ul>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
-                     
-                     <li>#1 is true for each page that contains a form. </li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -289,7 +305,7 @@ this.submitForm({
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -338,7 +354,7 @@ this.submitForm({
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

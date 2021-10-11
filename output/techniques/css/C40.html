@@ -53,59 +53,69 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/navigable">2.4: Navigable</a></span>.
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/focus-visible">2.4.7: Focus Visible</a> and <strong>Sufficient</strong> to meet <a href="/understanding/focus-appearance-minimum">2.4.11: Focus Appearance (Minimum)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/focus-appearance-enhanced">2.4.12: Focus Appearance (Enhanced)</a>
+                     					.
                   </p>
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to create a two-color focus indicator that has
-                  sufficient contrast against any background color. This technique eliminates the need
-                  for multiple classes to ensure sufficient contrast of the focus indicator when viewed
-                  against different backgrounds.
-               </p>
-               <p>The default focus indicators provided by browsers are typically one color, so they
-                  are highly visible when some components have focus and not well seen on other components.
-                  For instance, if a focus indicator is dark blue and a button is on a white background
-                  then it will be easily seen, but if the background is also blue it will not be easily
-                  seen.
-               </p>
-               <p>Although it is possible to create individual CSS classes to address the different
-                  buttons across a site, this can be time consuming and easy to miss some types of interactive
-                  content. However, if the focus indicator is two colors - a light color and a dark
-                  color - then it will always have sufficient contrast against any background color.
-                  Currently, this can be done by combining the <code>text-shadow</code> property with the <code>outline</code> property on the <code>focus</code> indicator.
-               </p>
-               <p>Developers may apply this technique to parts of the site where its hard to keep track
-                  of the focus indicator (such as when there are lots of different component colors).
-                  Developers can also provide a single-color focus indicator for components such as
-                  a navigation menus that are used across a site, have specific design requirements,
-                  and are easy to test and maintain.
-               </p>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>If it can be determined that the two-color focus indicator CSS takes precedence then
-                     the test can be applied programmatically rather than by manually focusing on each
-                     interface component.
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to create a two-color focus indicator that has
+                     sufficient contrast against any background color. This technique eliminates the need
+                     for multiple classes to ensure sufficient contrast of the focus indicator when viewed
+                     against different backgrounds.
                   </p>
-               </div>
+                  <p>The default focus indicators provided by browsers are typically one color, so they
+                     are highly visible when some components have focus and not well seen on other components.
+                     For instance, if a focus indicator is dark blue and a button is on a white background
+                     then it will be easily seen, but if the background is also blue it will not be easily
+                     seen.
+                  </p>
+                  <p>Although it is possible to create individual CSS classes to address the different
+                     buttons across a site, this can be time consuming and easy to miss some types of interactive
+                     content. However, if the focus indicator is two colors - a light color and a dark
+                     color - then it will always have sufficient contrast against any background color.
+                     Currently, this can be done by combining the <code>text-shadow</code> property with the <code>outline</code> property on the <code>focus</code> indicator.
+                  </p>
+                  <p>Developers may apply this technique to parts of the site where its hard to keep track
+                     of the focus indicator (such as when there are lots of different component colors).
+                     Developers can also provide a single-color focus indicator for components such as
+                     a navigation menus that are used across a site, have specific design requirements,
+                     and are easy to test and maintain.
+                  </p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>If it can be determined that the two-color focus indicator CSS takes precedence then
+                        the test can be applied programmatically rather than by manually focusing on each
+                        interface component.
+                     </p>
+                  </div>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <p>The examples demonstrate a simple implementation where focus styles are applied to
-                  all links and inputs. In use on a more complex website care would need to be taken
-                  that these styles are not overridden by more specific styles.
-               </p>
-               <section class="example" id="example-1-a-light-and-dark-dotted-indicator">
-                  <h3>Example 1: A light and dark dotted indicator</h3>
-                  <p>Description</p><pre><code>*:focus {
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <p>The examples demonstrate a simple implementation where focus styles are applied to
+                     all links and inputs. In use on a more complex website care would need to be taken
+                     that these styles are not overridden by more specific styles.
+                  </p>
+                  <section class="example" id="example-1-a-light-and-dark-dotted-indicator">
+                     <h3>Example 1: A light and dark dotted indicator</h3>
+                     <p>Description</p><pre><code>*:focus {
 	box-shadow: 0 0 0px 2px white;
 	outline: dotted;
 }</code></pre><p class="working-example"><a href="../../working-examples/css-two-focus-colors/dotted.html">Working example of combining a dark outline and light text shadow</a></p>
-               </section>
-               <section class="example" id="example-2-a-thicker-light-and-dark-indicator">
-                  <h3>Example 2: A thicker light and dark indicator</h3>
-                  <p>Description</p><pre><code>*:focus { 
+                  </section>
+                  <section class="example" id="example-2-a-thicker-light-and-dark-indicator">
+                     <h3>Example 2: A thicker light and dark indicator</h3>
+                     <p>Description</p><pre><code>*:focus { 
 	/* ensure high-contrast mode still has an indicator */
 	outline: 2px transparent solid;
 
@@ -113,37 +123,46 @@
 	   a thin dark blue indicator in the middle */
 	box-shadow: 0 0 0 2px #F9F9D1, 0 0 0 4px #396196, 0 0 4px 8px #F9F9D1;
 }</code></pre><p class="working-example"><a href="../../working-examples/css-two-focus-colors/lined.html">Working example of combining a dark outline and light text shadow</a></p>
-               </section>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that support CSS.</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>All technologies that support CSS.</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="test-procedure">
-                  <h3>Procedure</h3>
-                  <p>For each focusable user interface element:</p>
-                  <ol>
-                     					
-                     <li>Check that the two-colors in the focus indicator are adjacent and have a contrast
-                        ratio that is 3:1 or greater with each other.
-                     </li>
-                     					
-                     <li>Check that the colors used contrast with the adjacent colors, or are at least 2 CSS
-                        pixels thick.
-                     </li>
-                     				
-                  </ol>
-               </section>
-               <section class="test-results">
-                  <h3>Expected Results</h3>
-                  <ul>
-                     					
-                     <li>#1 and #2 are true.</li>
-                     				
-                  </ul>
-               </section>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="test-procedure">
+                     <h3>Procedure</h3>
+                     <p>For each focusable user interface element:</p>
+                     <ol>
+                        					
+                        <li>Check that the two-colors in the focus indicator are adjacent and have a contrast
+                           ratio that is 3:1 or greater with each other.
+                        </li>
+                        					
+                        <li>Check that the colors used contrast with the adjacent colors, or are at least 2 CSS
+                           pixels thick.
+                        </li>
+                        				
+                     </ol>
+                  </section>
+                  <section class="test-results">
+                     <h3>Expected Results</h3>
+                     <ul>
+                        					
+                        <li>#1 and #2 are true.</li>
+                        				
+                     </ul>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -151,7 +170,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -182,7 +201,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).

@@ -57,43 +57,50 @@
                </div>
             </aside>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to provide a logical tab order when the default
-                  tab
-                  order does not suffice. Often, <a href="/techniques/general/G59">G59: Placing the interactive elements in an order that follows sequences and relationships
-                     within the content</a> is sufficient and this technique is not necessary. It can be very easy
-                  to introduce usability bugs when setting the tab order explicitly.
-               </p>
-               <p>In some cases, the author may want to specify a tab order that follows relationships
-                  in
-                  the content without following the order of the interactive elements in the code. In
-                  these cases, an alternative order can be specified using the <code class="att">tabindex</code>
-                  attribute of the interactive element. The <code class="att">tabindex</code> is given a value between
-                  0 and 32767. 
-               </p>
-               <p>When the interactive elements are navigated using the tab key, the elements are given
-                  focus in increasing order of the value of their <code class="att">tabindex</code> attribute.
-                  Elements that have a <code class="att">tabindex</code> value higher than zero will receive focus
-                  before elements without a <code class="att">tabindex</code> or a <code class="att">tabindex</code> of 0. After
-                  all of the elements with a tabindex higher than 0 have received focus, the rest of
-                  the
-                  interactive elements are given focus in the order in which they appear in the Web
-                  page.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to provide a logical tab order when the default
+                     tab
+                     order does not suffice. Often, <a href="/techniques/general/G59">G59: Placing the interactive elements in an order that follows sequences and relationships
+                        within the content</a> is sufficient and this technique is not necessary. It can be very easy
+                     to introduce usability bugs when setting the tab order explicitly.
+                  </p>
+                  <p>In some cases, the author may want to specify a tab order that follows relationships
+                     in
+                     the content without following the order of the interactive elements in the code. In
+                     these cases, an alternative order can be specified using the <code class="att">tabindex</code>
+                     attribute of the interactive element. The <code class="att">tabindex</code> is given a value between
+                     0 and 32767. 
+                  </p>
+                  <p>When the interactive elements are navigated using the tab key, the elements are given
+                     focus in increasing order of the value of their <code class="att">tabindex</code> attribute.
+                     Elements that have a <code class="att">tabindex</code> value higher than zero will receive focus
+                     before elements without a <code class="att">tabindex</code> or a <code class="att">tabindex</code> of 0. After
+                     all of the elements with a tabindex higher than 0 have received focus, the rest of
+                     the
+                     interactive elements are given focus in the order in which they appear in the Web
+                     page.
+                  </p>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>A genealogical search form searches for marriage records. The search form includes
-                     several input fields for the bride and the groom. The form is marked up using a data
-                     table that includes the fields of the groom in the first column and the fields of
-                     the bride in the second column. The order in the content is row by row but the
-                     author feels it is more logical to navigate the form column by column. This way, all
-                     the groom's criteria can be filled in before moving on to the bride's criteria. The
-                     <code class="att">tabindex</code> attributes of the input fields are used to specify a tab
-                     order that navigates column by column.
-                  </p><pre xml:space="preserve">&lt;form action="#" method="post"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1">
+                     <h3>Example 1</h3>
+                     <p>A genealogical search form searches for marriage records. The search form includes
+                        several input fields for the bride and the groom. The form is marked up using a data
+                        table that includes the fields of the groom in the first column and the fields of
+                        the bride in the second column. The order in the content is row by row but the
+                        author feels it is more logical to navigate the form column by column. This way, all
+                        the groom's criteria can be filled in before moving on to the bride's criteria. The
+                        <code class="att">tabindex</code> attributes of the input fields are used to specify a tab
+                        order that navigates column by column.
+                     </p><pre xml:space="preserve">&lt;form action="#" method="post"&gt;
  &lt;table summary="the first column contains the search criteria 
   of the groom, the second column the search criteria of 
   of the bride"&gt;
@@ -126,64 +133,73 @@
  &lt;/tr&gt;
 &lt;/table&gt;
 &lt;/form&gt;      </pre></section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>A Web page contains a search field in the upper right corner. The field is given
-                     tabindex="1" so that it will occur first in the tab order, even though it is not
-                     first in the content order.
-                  </p>
-               </section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>
-                     								       <code class="att">Tabindex</code> values need not be sequential nor must they begin with any
-                     particular value. The values do not have to be unique. Elements that have identical
-                     <code class="att">tabindex</code> values are navigated in the order they appear in the
-                     character stream. 
-                  </p>
-                  <p>In sections of the content where the tab order follows the content order, it can be
-                     less error prone to give all elements the same tabindex value rather than specifying
-                     a different number for each element. Then it is easy to rearrange those elements or
-                     add new elements and maintain a logical tab order.
-                  </p><pre xml:space="preserve"> &lt;a href="xxx" tabindex = "1"&gt;First link in list&lt;/a&gt;
+                  <section class="example" id="example-2">
+                     <h3>Example 2</h3>
+                     <p>A Web page contains a search field in the upper right corner. The field is given
+                        tabindex="1" so that it will occur first in the tab order, even though it is not
+                        first in the content order.
+                     </p>
+                  </section>
+                  <section class="example" id="example-3">
+                     <h3>Example 3</h3>
+                     <p>
+                        								       <code class="att">Tabindex</code> values need not be sequential nor must they begin with any
+                        particular value. The values do not have to be unique. Elements that have identical
+                        <code class="att">tabindex</code> values are navigated in the order they appear in the
+                        character stream. 
+                     </p>
+                     <p>In sections of the content where the tab order follows the content order, it can be
+                        less error prone to give all elements the same tabindex value rather than specifying
+                        a different number for each element. Then it is easy to rearrange those elements or
+                        add new elements and maintain a logical tab order.
+                     </p><pre xml:space="preserve"> &lt;a href="xxx" tabindex = "1"&gt;First link in list&lt;/a&gt;
 &lt;a href="xxx" tabindex = "1"&gt;Second link in list&lt;/a&gt;
 &lt;a href="xxx" tabindex = "1"&gt;Link that was added long 
   after the original list was created&lt;/a&gt;
 &lt;a href="xxx" tabindex = "1"&gt;Third link in list&lt;/a&gt;
   ...
 &lt;a href="xxx" tabindex = "1"&gt;Twentieth link in list&lt;/a&gt;      </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <p>HTML and XHTML</p>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li>Check if <code class="att">tabindex</code> is used
-                     </li>
+                     <ol>
+                        
+                        <li>Check if <code class="att">tabindex</code> is used
+                        </li>
+                        
+                        <li>If <code class="att">tabindex</code> is used, check that the tab order specified by the
+                           <code class="att">tabindex</code> attributes follows relationships in the content.
+                        </li>
+                        
+                     </ol>
                      
-                     <li>If <code class="att">tabindex</code> is used, check that the tab order specified by the
-                        <code class="att">tabindex</code> attributes follows relationships in the content.
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <ul>
+                     <ul>
+                        
+                        <li>Check #2 is true.</li>
+                        
+                     </ul>
                      
-                     <li>Check #2 is true.</li>
-                     
-                  </ul>
-                  
-               </section>
+                  </section>
+               </details>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
@@ -191,7 +207,7 @@
                   			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -224,7 +240,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 11 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
