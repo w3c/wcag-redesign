@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
-      <header id="site-header" class="default-grid with-gap">
+      <header class="default-grid with-gap minimal-header-container">
          <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
@@ -61,8 +61,9 @@
                   </p>
                </div>
             </aside>
+            <div class="excol-all"></div>
             <section id="description">
-               <details>
+               <details open="open">
                   <summary>
                      <h2>Description</h2>
                   </summary>
@@ -216,7 +217,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 12 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -267,10 +268,13 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script><link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
 				document.addEventListener('DOMContentLoaded', (event) => {
 			  	document.querySelectorAll('pre').forEach((el) => {
     				hljs.highlightElement(el);
   				});
-				});</script></body>
+				});
+				var translationStrings = {}; /* fix WAI JS */
+				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>
