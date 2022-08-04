@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3f3f6c5b-949a-4a91-ab06-8c677dd102c2/deploy-status)](https://app.netlify.com/sites/draft-wcag-redesign/deploys)
+
 Temporary repository to preview WCAG redesign work to stakeholders:
 
 * [Techniques](https://draft-wcag-redesign.netlify.app/techniques/)
