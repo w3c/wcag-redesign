@@ -8,8 +8,10 @@
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Understanding documents</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,368 +30,446 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Understanding documents">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Understanding Docs">
                <ul>
-                  <li class="nav__item"><a href=".">
-                        										All Understanding documents</a></li>
-                  <li class="nav__item"><a href="/understanding/about">About Understanding documents</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                  <li><a href=".">
+                        								All Understanding Docs
+                        							</a></li>
+                  <li><a href="readable" aria-current="page" class="active">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Guideline: Readable</a></li>
+                  <li><a href="language-of-page">
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+                        </svg>Previous SC: Language of Page</a></li>
+                  <li><a href="unusual-words">Next SC: Unusual Words
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
-            <h1><span class="standalone-resource__type-of-guidance">Understanding:</span>Success Criterion 3.1.2: Language of Parts
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Page Contents</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#intent">Intent</a></li>
+                     <li><a href="#benefits">Benefits</a></li>
+                     <li><a href="#examples">Examples</a></li>
+                     <li><a href="#resources">Related Resources</a></li>
+                     <li><a href="#techniques">Techniques</a></li>
+                     <li><a href="#key-terms">Key Terms</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Understanding SC 3.1.2:</span>Language of Parts (Level AA)
             </h1>
-            <blockquote class="scquote">
-               <p>Success Criterion <a href="/guidelines/#language-of-parts" style="font-weight: bold;">3.1.2 Language of Parts</a> (Level AA): The <a href="#dfn-human-language">human language</a> of each passage or phrase in the content can be <a href="#dfn-programmatically-determined">programmatically determined</a> except for proper names, technical terms, words of indeterminate language, and words
-                  or phrases that have become part of the vernacular of the immediately surrounding
+            <aside class="box">
+               <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
+               <div class="box-i">
+                  <p>The <a href="#dfn-human-language">human language</a> of each passage or phrase in the content can be <a href="#dfn-programmatically-determined">programmatically determined</a> except for proper names, technical terms, words of indeterminate language, and words
+                     or phrases that have become part of the vernacular of the immediately surrounding
+                     text.
+                     
+                  </p>
+               </div>
+            </aside>
+            <div class="excol-all"></div>
+            <section id="intent">
+               <h2>Intent</h2>
+               <p>The intent of this Success Criterion is to ensure that user agents can correctly present
+                  content written in multiple languages. This makes it possible for user agents and
+                  assistive technologies to present content according to the  presentation and pronunciation
+                  rules for that language. This applies to graphical browsers as well as screen readers,
+                  braille displays, and other voice browsers.
+                  
+               </p>
+               <p>Both assistive technologies and conventional user agents can render text more accurately
+                  if the language of each passage of text is identified. Screen readers can use the
+                  pronunciation rules of the language of the text. Visual browsers can display characters
+                  and scripts in appropriate ways. This is especially important when switching between
+                  languages that read from left to right and languages that read from right to left,
+                  or when text is rendered in a language that uses a different alphabet. Users with
+                  disabilities who know all the languages used in the Web page will be better able to
+                  understand the content when each passage is rendered appropriately. 
+                  
+               </p>
+               <p>When no other language has been specified for a phrase or passage of text, its human
+                  language is the default human language of the Web page (see <a href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html">Success Criterion 3.1.1</a>). So the human language of all content in single language documents can be programmatically
+                  determined. 
+                  
+               </p>
+               <p>Individual words or phrases in one language can become part of another language. For
+                  example, "rendezvous" is a French word that has been adopted in English, appears in
+                  English dictionaries, and is properly pronounced by English screen readers. Hence
+                  a passage of English text may contain the word "rendezvous" without specifying that
+                  its human language is French and still satisfy this Success Criterion. Frequently,
+                  when the human language of text appears to be changing for a single word, that word
+                  has become part of the language of the surrounding text. Because this is so common
+                  in some languages, single words should be considered part of the language of the surrounding
+                  text unless it is clear that a change in language was intended. If there is doubt
+                  whether a change in language is intended, consider whether the word would be pronounced
+                  the same (except for accent or intonation) in the language of the immediately surrounding
                   text.
                   
                </p>
-            </blockquote>
-            <div class="excol-all"></div>
-            <section id="intent">
-               <details>
-                  <summary>
-                     <h2>Intent</h2>
-                  </summary>
-                  <p>The intent of this Success Criterion is to ensure that user agents can correctly present
-                     content written in multiple languages. This makes it possible for user agents and
-                     assistive technologies to present content according to the  presentation and pronunciation
-                     rules for that language. This applies to graphical browsers as well as screen readers,
-                     braille displays, and other voice browsers.
+               <p>Most professions require frequent use of technical terms which may originate from
+                  a foreign language. Such terms are usually not translated to all languages. The universal
+                  nature of technical terms also facilitate communication between professionals.
+                  
+               </p>
+               <p>Some common examples of technical terms include: Homo sapiens, Alpha Centauri, hertz,
+                  and habeas corpus.
+                  
+               </p>
+               <p>Identifying changes in language is important for a number of reasons:</p>
+               <ul>
+                  
+                  
+                  <li>It allows braille translation software to follow changes in language, e.g., substitute
+                     control codes for accented characters, and insert control codes necessary to prevent
+                     erroneous creation of Grade 2 braille contractions.
                      
-                  </p>
-                  <p>Both assistive technologies and conventional user agents can render text more accurately
-                     if the language of each passage of text is identified. Screen readers can use the
-                     pronunciation rules of the language of the text. Visual browsers can display characters
-                     and scripts in appropriate ways. This is especially important when switching between
-                     languages that read from left to right and languages that read from right to left,
-                     or when text is rendered in a language that uses a different alphabet. Users with
-                     disabilities who know all the languages used in the Web page will be better able to
-                     understand the content when each passage is rendered appropriately. 
+                  </li>
+                  
+                  
+                  <li>Speech synthesizers that support multiple languages will be able to speak the text
+                     in the appropriate accent with proper pronunciation. If changes are not marked, the
+                     synthesizer will try its best to speak the words in the  default language it works
+                     in. Thus, the French word for car, "<span lang="fr">voiture</span>" would be pronounced "voyture" by a speech
+                     synthesizer that uses English as its default language. 
                      
-                  </p>
-                  <p>When no other language has been specified for a phrase or passage of text, its human
-                     language is the default human language of the Web page (see Success Criterion 3.1.1).
-                     So the human language of all content in single language documents can be programmatically
-                     determined. 
+                  </li>
+                  
+                  
+                  <li>Marking changes in language can benefit future developments in technology, for example
+                     users who are unable to translate between languages themselves will be able to use
+                     machines to translate unfamiliar languages.  
                      
-                  </p>
-                  <p>Individual words or phrases in one language can become part of another language. For
-                     example, "rendezvous" is a French word that has been adopted in English, appears in
-                     English dictionaries, and is properly pronounced by English screen readers. Hence
-                     a passage of English text may contain the word "rendezvous" without specifying that
-                     its human language is French and still satisfy this Success Criterion. Frequently,
-                     when the human language of text appears to be changing for a single word, that word
-                     has become part of the language of the surrounding text. Because this is so common
-                     in some languages, single words should be considered part of the language of the surrounding
-                     text unless it is clear that a change in language was intended. If there is doubt
-                     whether a change in language is intended, consider whether the word would be pronounced
-                     the same (except for accent or intonation) in the language of the immediately surrounding
-                     text.
+                  </li>
+                  
+                  
+                  <li>Marking changes in language can also assist user agents in providing definitions using
+                     a dictionary. 
                      
-                     
-                  </p>
-                  <p>Most professions require frequent use of technical terms which may originate from
-                     a foreign language. Such terms are usually not translated to all languages. The universal
-                     nature of technical terms also facilitate communication between professionals.
-                     
-                  </p>
-                  <p>Some common examples of technical terms include: Homo sapiens, Alpha Centauri, hertz,
-                     and habeas corpus.
-                     
-                  </p>
-                  <p>Identifying changes in language is important for a number of reasons:
-                     	
-                     
-                  </p>
-                  <ul>
-                     
-                     
-                     <li>It allows braille translation software to follow changes in language, e.g., substitute
-                        control codes for accented characters, and insert control codes necessary to prevent
-                        erroneous creation of Grade 2 braille contractions.
-                        
-                     </li>
-                     
-                     
-                     <li>Speech synthesizers that support multiple languages will be able to speak the text
-                        in the appropriate accent with proper pronunciation. If changes are not marked, the
-                        synthesizer will try its best to speak the words in the  default language it works
-                        in. Thus, the French word for car, "voiture" would be pronounced "voyture" by a speech
-                        synthesizer that uses English as its  default language. 
-                        
-                     </li>
-                     
-                     
-                     <li>Marking changes in language can benefit future developments in technology, for example
-                        users who are unable to translate between languages themselves will be able to use
-                        machines to translate unfamiliar languages.  
-                        
-                     </li>
-                     
-                     
-                     <li>Marking changes in language can also assist user agents in providing definitions using
-                        a dictionary. 
-                        
-                     </li>
-                     
-                     
-                  </ul>
-               </details>
+                  </li>
+                  
+                  
+               </ul>
             </section>
             <section id="benefits">
-               <details>
-                  <summary>
-                     <h2>Benefits</h2>
-                  </summary>
-                  <p>This Success Criterion helps:</p>
-                  <ul>
+               <h2>Benefits</h2>
+               <p>This Success Criterion helps:</p>
+               <ul>
+                  
+                  <li>people who use screen readers or other technologies that convert text into synthetic
+                     speech;
+                     
+                  </li>
+                  
+                  
+                  <li>people who find it difficult to read written material with fluency and accuracy, such
+                     as recognizing characters and alphabets, decoding words, and understanding words and
+                     phrases;
+                     
+                  </li>
+                  
+                  
+                  <li>people with certain cognitive, language and learning disabilities who use text-to-speech
+                     software;
                      
                      
-                     <li>people who use screen readers or other technologies that convert text into synthetic
-                        speech;
-                        
-                     </li>
+                  </li>
+                  
+                  
+                  <li>people who rely on captions to recognize language changes in the soundtrack of synchronized
+                     media content.
                      
-                     
-                     <li>people who find it difficult to read written material with fluency and accuracy, such
-                        as recognizing characters and alphabets, decoding words, and understanding words and
-                        phrases;
-                        
-                     </li>
-                     
-                     
-                     <li>people with certain cognitive, language and learning disabilities who use text-to-speech
-                        software;
-                        
-                        
-                     </li>
-                     
-                     
-                     <li>people who rely on captions to recognize language changes in the soundtrack of synchronized
-                        media content.
-                        
-                     </li>
-                     
-                     
-                  </ul>
-               </details>
+                  </li>
+                  
+                  
+               </ul>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <ol>
+               <h2>Examples</h2>
+               <ol>   
+                  
+                  <li>  
                      
+                     <p>  								       
+                        <strong>A German phrase in an English sentence.</strong>							     
+                        
+                     </p>
                      
-                     <li>
+                     <p>In the sentence, "He maintained that the DDR (German Democratic Republic) was just
+                        a '<span lang="de">Treppenwitz der Weltgeschichte</span>'," the German phrase '<span lang="de">Treppenwitz der Weltgeschichte</span>' is marked as German. Depending on the markup language, English may either be marked
+                        as the language for the entire document except where specified, or marked at the paragraph
+                        level. When a screen reader encounters the German phrase, it changes pronunciation
+                        rules from English to German to pronounce the word correctly.
                         
-                        
-                        <p>
-                           								       
-                           <strong>A German phrase in an English sentence. </strong>
-                           							     
-                           
-                        </p>
-                        
-                        
-                        <p>In the sentence, "He maintained that the DDR (German Democratic Republic) was just
-                           a 'Treppenwitz der Weltgeschichte'," the German phrase 'Treppenwitz der Weltgeschichte'
-                           is marked as German. Depending on the markup language, English may either be marked
-                           as the language for the entire document except where specified, or marked at the paragraph
-                           level. When a screen reader encounters the German phrase, it changes pronunciation
-                           rules from English to German to pronounce the word correctly.
-                           
-                        </p>
-                        
-                        
-                     </li>
+                     </p>
                      
+                  </li>
+                  
+                  <li>
                      
-                     <li>
+                     <p>  								       
+                        <strong>Alternative language links</strong>							     
                         
-                        
-                        <p>
-                           								       
-                           <strong>Alternative language links</strong>
-                           							     
-                           
-                        </p>
-                        
-                        
-                        <p>An HTML Web page includes links to versions of the page in other languages (e.g.,
-                           Deutsch, Français, Nederlands, Castellano, etc.). The text of each link is the name
-                           of the language, in that language. The language of each link is indicated via a lang
-                           attribute.
-                           
-                           
-                        </p>
-                        
-                        
-                     </li>
+                     </p>
                      
+                     <p>An HTML Web page includes links to versions of the page in other languages (e.g.,
+                        <span lang="de">Deutsch</span>, <span lang="fr">Français</span>, <span lang="nl">Nederlands</span>, <span lang="ca">Catalan</span>, etc.). The text of each link is the name of the language, in that language. The
+                        language of each link is indicated via a <code class="att">lang</code> attribute.
+                        
+                     </p>
                      
-                     <li>
+                  </li>
+                  
+                  <li>
+                     
+                     <p>  								       
+                        <strong>"Podcast" used in a French sentence.</strong>							     
                         
-                        
-                        <p>
-                           								       
-                           <strong>"Podcast" used in a French sentence.</strong>
-                           							     
-                           
-                        </p>
-                        
-                        
-                        <p>Because "podcast" is part of the vernacular of the immediately surrounding text in
-                           the following excerpt, "À l'occasion de l'exposition "Energie éternelle. 1500 ans
-                           d'art indien", le Palais
+                     </p>
+                     
+                     <p>Because "podcast" is part of the vernacular of the immediately surrounding text in
+                        the following excerpt, "<span lang="fr">À l'occasion de l'exposition "Energie éternelle. 1500 ans d'art indien", le Palais
                            des Beaux-Arts de Bruxelles a lancé son premier podcast. Vous pouvez télécharger ce
-                           podcast au format M4A et MP3," no indication of language change is required.
-                           
-                        </p>
+                           podcast au format M4A et MP3</span>", no indication of language change is required.
                         
-                        
-                     </li>
+                     </p>
                      
-                     
-                  </ol>
-               </details>
+                  </li>
+                  
+               </ol>
             </section>
             <section id="resources">
-               <details>
-                  <summary>
-                     <h2>Related Resources</h2>
-                  </summary>
-                  <p>Resources are for information purposes only, no endorsement implied.</p>
-                  <ul>
+               <h2>Related Resources</h2>
+               <p>Resources are for information purposes only, no endorsement implied.</p>
+               <ul>
+                  
+                  <li>
+                     <a href="https://html.spec.whatwg.org/multipage/dom.html#attr-lang">HTML - The <code class="att">lang</code> and <code class="att">xml:lang</code> attributes</a>.
                      
+                  </li>
+                  
+                  <li>
+                     <a href="https://www.w3.org/International/articles/language-tags/index.en">Language tags in HTML and XML</a>.
                      
-                     <li> 
-                        
-                        <a href="https://www.w3.org/International/articles/language-tags/Overview.en.php">Language tags in HTML and XML</a> - W3C Internationalization Working Group
-                        
-                     </li>
+                  </li>
+                  
+                  <li>							       
+                     <a href="https://www.w3.org/TR/i18n-html-tech-lang/">Authoring HTML: Language declarations</a>.							     
                      
-                     
-                     <li>
-                        								       
-                        <a href="https://www.w3.org/TR/i18n-html-tech-lang/">Internationalization Best Practices: Specifying Language in XHTML &amp; HTML Content</a>
-                        							     
-                        
-                     </li>
-                     
-                     
-                     
-                  </ul>
-               </details>
+                  </li>
+                  
+               </ul>
             </section>
             <section id="techniques">
+               <h2>Techniques</h2>
+               <p>Each numbered item in this section represents a technique or combination of techniques
+                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                  it is not necessary to use these particular techniques. For information on using other
+                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+               </p>
+               <section id="sufficient">
+                  <h3>Sufficient Techniques</h3>
+                  <ol> 
+                     
+                     <li>  									         
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H58" class="html">Using the lang attribute to identify changes in the human language</a>.	       
+                        
+                     </li>
+                     
+                     <li>
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF19" class="pdf">Specifying the language for a passage or phrase with the Lang entry in PDF documents</a>.
+                        
+                     </li>
+                     
+                  </ol>
+               </section>
+            </section>
+            <section id="key-terms">
                <details>
                   <summary>
-                     <h2>Techniques</h2>
+                     <h2>Key Terms</h2>
                   </summary>
-                  <p>Each numbered item in this section represents a technique or combination of techniques
-                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                     it is not necessary to use these particular techniques. For information on using other
-                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-                  </p>
-                  <section id="sufficient">
-                     <h3>Sufficient Techniques</h3>
-                     <ol>
+                  <dt id="dfn-assistive-technology">assistive technology</dt>
+                  <dd>
+                     <definition xmlns="">
                         
                         
-                        <li>
-                           									         
-                           <a class="html" href="/techniques/html/H58">H58: Using language attributes to identify changes in the human language </a>
-                           								       
+                        <p xmlns="http://www.w3.org/1999/xhtml">hardware and/or software that acts as a <a href="#dfn-user-agent">user agent</a>, or along with a mainstream user agent, to provide functionality to meet the requirements
+                           of users with disabilities that go beyond those offered by mainstream user agents
                            
-                        </li>
+                        </p>
                         
                         
-                        <li>
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
+                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                           voice), additional navigation or orientation mechanisms, and content transformations
+                           (e.g., to make tables more accessible).
                            
-                           <a class="pdf" href="/techniques/pdf/PDF19">PDF19: Specifying the language for a passage or phrase with the Lang entry in PDF documents</a>
-                           
-                           
-                        </li>
+                        </p>
                         
                         
-                        <li>
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
+                           by using and monitoring APIs.
                            
-                           <a class="silverlight" href="/techniques/silverlight/SL4">SL4: Declaring Discrete Silverlight Objects to Specify Language Parts in the HTML DOM</a>
-                           
-                           
-                        </li>
+                        </p>
                         
                         
-                     </ol>
-                  </section>
-                  <section id="advisory">
-                     <h3>Advisory Techniques</h3>
-                     <p>Although not required for conformance, the following additional techniques should
-                        be considered in order to make content more accessible. Not all techniques can be
-                        used or would be effective in all situations.
-                     </p>
-                     <ul>
-                        
-                        
-                        <li>
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
+                           Many mainstream user agents provide some features to assist individuals with disabilities.
+                           The basic difference is that mainstream user agents target broad and diverse audiences
+                           that usually include people with and without disabilities. Assistive technologies
+                           target narrowly defined populations of users with specific disabilities. The assistance
+                           provided by an assistive technology is more specific and appropriate to the needs
+                           of its target users. The mainstream user agent may provide important functionality
+                           to assistive technologies like retrieving Web content from program objects or parsing
+                           markup into identifiable bundles.
                            
-                           <a class="silverlight" href="/techniques/silverlight/SL27">SL27: Using Language/Culture Properties as Exposed by Silverlight Applications and Assistive
-                              Technologies</a>
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
+                           the following:
+                           
+                        </p>
+                        
+                        
+                        <ul xmlns="http://www.w3.org/1999/xhtml">
                            
                            
-                        </li>
+                           <li>screen magnifiers, and other visual reading assistants, which are used by people with
+                              visual, perceptual and physical print disabilities to change text font, size, spacing,
+                              color, synchronization with speech, etc. in order to improve the visual readability
+                              of rendered text and images;
+                              
+                           </li>
+                           
+                           
+                           <li>screen readers, which are used by people who are blind to read textual information
+                              through synthesized speech or braille;
+                              
+                           </li>
+                           
+                           
+                           <li>text-to-speech software, which is used by some people with cognitive, language, and
+                              learning disabilities to convert text into synthetic speech;
+                              
+                           </li>
+                           
+                           
+                           <li>speech recognition software, which may be used by people who have some physical disabilities;</li>
+                           
+                           
+                           <li>alternative keyboards, which are used by people with certain physical disabilities
+                              to simulate the keyboard (including alternate keyboards that use head pointers, single
+                              switches, sip/puff and other special input devices.);
+                              
+                           </li>
+                           
+                           
+                           <li>alternative pointing devices, which are used by people with certain physical disabilities
+                              to simulate mouse pointing and button activations.
+                              
+                           </li>
+                           
+                           
+                        </ul>
                         
                         
-                     </ul>
-                  </section>
+                     </definition>
+                  </dd>
+                  <dt id="dfn-human-language">human language</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">language that is spoken, written or signed (through visual or tactile means) to communicate
+                           with humans
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">See also <a href="#dfn-sign-language">sign language</a>.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-programmatically-determined">programmatically determined</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">determined by software from author-supplied data provided in a way that different
+                           <a href="#dfn-user-agent">user agents</a>, including <a href="#dfn-assistive-technology">assistive technologies</a>, can extract and present this information to users in different modalities
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Determined in a markup language from elements and attributes that are accessed directly
+                           by commonly available assistive technology.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Determined from technology-specific data structures in a non-markup language and exposed
+                           to assistive technology via an accessibility API that is supported by commonly available
+                           assistive technology.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-sign-language">sign language</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">a language using combinations of movements of the hands and arms, facial expressions,
+                           or body positions to convey meaning
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-user-agent">user agent</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">any software that retrieves and presents Web content for users</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Web browsers, media players, plug-ins, and other programs — including <a href="#dfn-assistive-technology">assistive technologies</a> — that help in retrieving, rendering, and interacting with Web content.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
                </details>
-            </section>
-            <nav class="pager" aria-label="Previous/Next Page">
-               <ul id="navigation">
-                  <li class="pager--item context"><a href="readable"><span class="pager--item-text"><span class="pager--item-text-direction"><abbr title="Guideline">Part of Guideline</abbr>:</span><span class="pager--item-text-target">Readable</span></span></a></li>
-                  <li class="pager--item previous"><a href="language-of-page">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-                           <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Language of Page</span></span></a></li>
-                  <li class="pager--item next"><a href="unusual-words">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right pager--item-icon" viewBox="0 0 23 28">
-                           <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Unusual Words</span></span></a></li>
-               </ul>
-            </nav><a class="button button-backtotop" href="#top"><span>
+            </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
-            </p>
-            <dl>
-               <dt>Level</dt>
-               <dd>AA</dd>
-               <dt>Key terms</dt>
-               <dd id="dfn-assistive-technology">assistive technology</dd>
-               <dd id="dfn-human-language">human language</dd>
-               <dd id="dfn-programmatically-determined">programmatically determined</dd>
-               <dd id="dfn-sign-language">sign language</dd>
-               <dd id="dfn-user-agent">user agent</dd>
-            </dl>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -407,13 +487,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -443,7 +524,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

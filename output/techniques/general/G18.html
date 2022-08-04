@@ -11,8 +11,10 @@
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -31,342 +33,18 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Techniques">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Techniques">
                <ul>
-                  <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
-                  <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a></li>
+                  <li><a href="/techniques/#techniques">All Techniques</a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
-            <h1><span>Technique G18:</span>Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of
-               text) 
-               and background behind the text
-            </h1>
-            <aside class="box">
-               <header class="box-h  box-h-icon">
-                  					About this Technique
-                  				
-               </header>
-               <div class="box-i">
-                  <p>This technique is
-                     
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/contrast-minimum">1.4.3: Contrast (Minimum)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/contrast-enhanced">1.4.6: Contrast (Enhanced)</a>
-                     					.
-                  </p>
-               </div>
-            </aside>
-            <div class="excol-all"></div>
-            <section id="description">
-               <details open="open">
-                  <summary>
-                     <h2>Description</h2>
-                  </summary>
-                  <p>The objective of this technique is to make sure that users can read text
-                     that is presented over a background. For Success Criterion 1.4.3, this technique describes
-                     the minimum contrast ratio for text that is less than 18 point (if not bold) and less
-                     than 14 point (if bold). For Success Criterion 1.4.5, this technique relaxes the 7:1
-                     contrast ratio requirement  for text that is at least 18 point (if not bold) or at
-                     least 14 point (if bold).
-                  </p>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                     <div>
-                        
-                        <p>When evaluating this success criterion, the font size in points should be obtained
-                           from the user agent or calculated on font metrics in the way that user agents do.
-                           Point sizes are based on the CSS pt size <a href="https://www.w3.org/TR/css3-values/#absolute-lengths">CSS3 Values</a>. The ratio between sizes in points and CSS pixels is 1pt = 1.333px, therefore 14pt
-                           and 18pt are equivalent to approximately 18.5px and 24px.
-                        </p>
-                        
-                     </div>
-                  </div>
-                  <p>If the background is a solid color (or all black or all white) then the
-                     relative luminance of the text can be maintained by making sure that each
-                     of the text letters have 4.5:1 contrast ratio with the background.
-                  </p>
-                  <p>If the background or the letters vary in relative luminance (or are patterned) then
-                     the background around the letters can be chosen or shaded so that the
-                     letters maintain a 4.5:1 contrast ratio with the background behind them
-                     even if they do not have that contrast ratio with the entire background.
-                  </p>
-                  <p>For example, if a letter is lighter at the top than it is a the bottom, it may be
-                     difficult to maintain the contrast ratio between the letter and the background over
-                     the full letter. In this case, the designer might darken the background behind the
-                     letter, or add a thin black outline (at least one pixel wide) around the letter in
-                     order to keep the contrast ratio between the letter and the background above 4.5:1.
-                  </p>
-                  <p>The contrast ratio can sometimes be maintained by changing the
-                     relative luminance of the letters as the relative luminance of the background changes
-                     across
-                     the page.
-                  </p>
-                  <p>For example, if a page is very light on one edge and fades to very dark on the other
-                     edge, there is no color that can run across the page and meet the contrast guidelines
-                     on both edges. One way of addressing this would be to change the lightness of the
-                     letters as well so that each letter always meets the contrast ratio for the background
-                     that is immediately behind the letter.
-                  </p>
-                  <p>Another method is to provide a halo around the text that provides the
-                     necessary contrast ratio if the background image or color would not
-                     normally be sufficiently different in relative luminance.
-                  </p>
-               </details>
-            </section>
-            <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <ul>
-                     
-                     <li>A black background is chosen so that light colored letters that match the company
-                        logo can be used.
-                     </li>
-                     
-                     <li>
-                        
-                        <p>Text is placed over a picture of the college campus.
-                           Since a wide variety of colors and shades appear in the picture,
-                           the area behind the text is fogged white so that the picture is very
-                           faint and the maximum darkness is still light enough to maintain a
-                           4.5:1 contrast ratio with the black text written over the picture.
-                        </p>
-                        
-                        <p>See also the contrast samples in related resources.</p>
-                        
-                     </li>
-                     
-                  </ul>
-               </details>
-            </section>
-            <section id="applicability">
-               <details>
-                  <summary>
-                     <h2 id="applicability">Applicability</h2>
-                  </summary>
-                  <p>Any technology that produces visual output.</p>
-               </details>
-            </section>
-            <section id="tests">
-               <details>
-                  <summary>
-                     <h2>Tests</h2>
-                  </summary>
-                  <section class="procedure" id="procedure">
-                     <h3>Procedure</h3>
-                     
-                     <ol>
-                        
-                        <li>
-                           
-                           <p>Measure the relative luminance of each letter (unless they are all
-                              uniform) using the formula:
-                           </p>
-                           
-                           <ul>
-                              
-                              <li>
-                                 
-                                 <p>L = 0.2126 *
-                                    <strong>R</strong>
-                                    + 0.7152 *
-                                    <strong>G</strong>
-                                    + 0.0722 *
-                                    <strong>B</strong>
-                                    where
-                                    <strong>R</strong>,
-                                    <strong>G</strong>
-                                    and
-                                    <strong>B</strong>
-                                    are defined as:
-                                 </p>
-                                 
-                                 <ul>
-                                    
-                                    <li>if R
-                                       sRGB
-                                       &lt;= 0.04045 then
-                                       <strong>R</strong>
-                                       = R
-                                       sRGB
-                                       /12.92 else
-                                       <strong>R</strong>
-                                       = ((R
-                                       sRGB
-                                       +0.055)/1.055) ^ 2.4
-                                    </li>
-                                    
-                                    <li>if G
-                                       sRGB
-                                       &lt;= 0.04045 then
-                                       <strong>G</strong>
-                                       = G
-                                       sRGB
-                                       /12.92 else
-                                       <strong>G</strong>
-                                       = ((G
-                                       sRGB
-                                       +0.055)/1.055) ^ 2.4
-                                    </li>
-                                    
-                                    <li>if B
-                                       sRGB
-                                       &lt;= 0.04045 then
-                                       <strong>B</strong>
-                                       = B
-                                       sRGB
-                                       /12.92 else
-                                       <strong>B</strong>
-                                       = ((B
-                                       sRGB
-                                       +0.055)/1.055) ^ 2.4
-                                    </li>
-                                    
-                                 </ul>
-                                 
-                                 <div class="note">
-                                    <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                                    <div>
-                                       
-                                       <p>and R
-                                          sRGB, G
-                                          sRGB, and B
-                                          sRGB
-                                          are defined as:
-                                       </p>
-                                       
-                                    </div>
-                                 </div>
-                                 
-                                 <ul>
-                                    
-                                    <li>R
-                                       sRGB
-                                       = R
-                                       8bit
-                                       /255
-                                    </li>
-                                    
-                                    <li>G
-                                       sRGB
-                                       = G
-                                       8bit
-                                       /255
-                                    </li>
-                                    
-                                    <li>B
-                                       sRGB
-                                       = B
-                                       8bit
-                                       /255
-                                    </li>
-                                    
-                                 </ul>
-                                 
-                                 <div class="note">
-                                    <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                                    <div>
-                                       
-                                       <p>The "^" character is the exponentiation operator.</p>
-                                       
-                                    </div>
-                                 </div>
-                                 
-                              </li>
-                              
-                           </ul>
-                           
-                           <div class="note">
-                              <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                              <div>
-                                 
-                                 <p>For aliased letters, use the relative luminance value found two pixels in
-                                    from the edge of the letter.
-                                 </p>
-                                 
-                              </div>
-                           </div>
-                           
-                        </li>
-                        
-                        <li>Measure the relative luminance of the background pixels
-                           immediately next to the letter using same formula.
-                        </li>
-                        
-                        <li>
-                           
-                           <p>Calculate the contrast ratio using the following
-                              formula.
-                           </p>
-                           
-                           <ul>
-                              
-                              <li>
-                                 
-                                 <p>(L1 + 0.05) / (L2 + 0.05), where</p>
-                                 
-                                 <ul>
-                                    
-                                    <li>L1 is the
-                                       <a href="/guidelines/#" target="terms">relative luminance</a>
-                                       of the lighter of the foreground or background colors, and
-                                    </li>
-                                    
-                                    <li>L2 is the
-                                       <a href="/guidelines/#" target="terms">relative luminance</a>
-                                       of the darker of the foreground or background colors.
-                                    </li>
-                                    
-                                 </ul>
-                                 
-                              </li>
-                              
-                           </ul>
-                           
-                        </li>
-                        
-                        <li>Check that the contrast ratio is equal to or
-                           greater than 4.5:1
-                        </li>
-                        
-                     </ol>
-                     
-                  </section>
-                  <section class="results" id="expected-results">
-                     <h3>Expected Results</h3>
-                     
-                     <ul>
-                        
-                        <li>#4 is true.</li>
-                        
-                     </ul>
-                     
-                  </section>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                     <p>Before May 2021 the value of 0.04045 in the definition was different (0.03928). It
-                        was taken from an older version of the specification and has been updated. It has
-                        no practical effect on the calculations in the context of these guidelines.
-                     </p>
-                  </div>
-               </details>
-            </section><a class="button button-backtotop" href="#top"><span>
-                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
-                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
-                  </svg> Back to Top
-                  			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
             <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
@@ -391,7 +69,7 @@
                   </li>
                   
                   <li>
-                     <a href="http://trace.wisc.edu/contrast-ratio-examples/">Color Contrast Samples</a>
+                     <a href="https://web.archive.org/web/20160814160227/http://trace.wisc.edu/contrast-ratio-examples">Color Contrast Samples</a>
                      
                   </li>
                   
@@ -419,6 +97,300 @@
                </ul>
             </section>
          </aside>
+         <main class="standalone-resource__main">
+            <h1><span>Technique G18:</span>Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of
+               text) 
+               and background behind the text
+            </h1>
+            <aside class="box">
+               <header class="box-h  box-h-icon">
+                  					About this Technique
+                  				
+               </header>
+               <div class="box-i">
+                  <p>This technique is
+                     
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/contrast-minimum">1.4.3: Contrast (Minimum)</a> and <strong>Sufficient</strong> to meet <a href="/understanding/contrast-enhanced">1.4.6: Contrast (Enhanced)</a>
+                     					.
+                  </p>
+               </div>
+            </aside>
+            <div class="excol-all"></div>
+            <section id="description">
+               <h2>Description</h2>
+               <p>The objective of this technique is to make sure that users can read text
+                  that is presented over a background. For Success Criterion 1.4.3, this technique describes
+                  the minimum contrast ratio for text that is less than 18 point (if not bold) and less
+                  than 14 point (if bold). For Success Criterion 1.4.6, this technique relaxes the 7:1
+                  contrast ratio requirement  for text that is at least 18 point (if not bold) or at
+                  least 14 point (if bold).
+               </p>
+               <div class="note">
+                  
+                  <p>When evaluating this success criterion, the font size in points should be obtained
+                     from the user agent or calculated on font metrics in the way that user agents do.
+                     Point sizes are based on the CSS pt size <a href="https://www.w3.org/TR/css3-values/#absolute-lengths">CSS3 Values</a>. The ratio between sizes in points and CSS pixels is 1pt = 1.333px, therefore 14pt
+                     and 18pt are equivalent to approximately 18.5px and 24px.
+                  </p>
+                  
+               </div>
+               <p>If the background is a solid color (or all black or all white) then the
+                  relative luminance of the text can be maintained by making sure that each
+                  of the text letters have 4.5:1 contrast ratio with the background.
+               </p>
+               <p>If the background or the letters vary in relative luminance (or are patterned) then
+                  the background around the letters can be chosen or shaded so that the
+                  letters maintain a 4.5:1 contrast ratio with the background behind them
+                  even if they do not have that contrast ratio with the entire background.
+               </p>
+               <p>For example, if a letter is lighter at the top than it is a the bottom, it may be
+                  difficult to maintain the contrast ratio between the letter and the background over
+                  the full letter. In this case, the designer might darken the background behind the
+                  letter, or add a thin black outline (at least one pixel wide) around the letter in
+                  order to keep the contrast ratio between the letter and the background above 4.5:1.
+               </p>
+               <p>The contrast ratio can sometimes be maintained by changing the
+                  relative luminance of the letters as the relative luminance of the background changes
+                  across
+                  the page.
+               </p>
+               <p>For example, if a page is very light on one edge and fades to very dark on the other
+                  edge, there is no color that can run across the page and meet the contrast guidelines
+                  on both edges. One way of addressing this would be to change the lightness of the
+                  letters as well so that each letter always meets the contrast ratio for the background
+                  that is immediately behind the letter.
+               </p>
+               <p>Another method is to provide a halo around the text that provides the
+                  necessary contrast ratio if the background image or color would not
+                  normally be sufficiently different in relative luminance.
+               </p>
+            </section>
+            <section id="examples">
+               <h2>Examples</h2>
+               <ul>
+                  
+                  <li>A black background is chosen so that light colored letters that match the company
+                     logo can be used.
+                  </li>
+                  
+                  <li>
+                     
+                     <p>Text is placed over a picture of the college campus.
+                        Since a wide variety of colors and shades appear in the picture,
+                        the area behind the text is fogged white so that the picture is very
+                        faint and the maximum darkness is still light enough to maintain a
+                        4.5:1 contrast ratio with the black text written over the picture.
+                     </p>
+                     
+                     <p>See also the contrast samples in related resources.</p>
+                     
+                  </li>
+                  
+               </ul>
+            </section>
+            <section id="applicability">
+               <h2 id="applicability">Applicability</h2>
+               <p>Any technology that produces visual output.</p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="/understanding/contrast-minimum">1.4.3: Contrast (Minimum)</a> (Sufficient)
+                  </li>
+                  <li><a href="/understanding/contrast-enhanced">1.4.6: Contrast (Enhanced)</a> (Sufficient)
+                  </li>
+               </ul>
+            </section>
+            <section id="tests">
+               <h2>Tests</h2>
+               <section class="procedure" id="procedure">
+                  <h3>Procedure</h3>
+                  
+                  <ol>
+                     
+                     <li>
+                        
+                        <p>Measure the relative luminance of each letter (unless they are all
+                           uniform) using the formula:
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>L = 0.2126 *
+                                 <strong>R</strong>
+                                 + 0.7152 *
+                                 <strong>G</strong>
+                                 + 0.0722 *
+                                 <strong>B</strong>
+                                 where
+                                 <strong>R</strong>,
+                                 <strong>G</strong>
+                                 and
+                                 <strong>B</strong>
+                                 are defined as:
+                              </p>
+                              
+                              <ul>
+                                 
+                                 <li>if R
+                                    sRGB
+                                    &lt;= 0.04045 then
+                                    <strong>R</strong>
+                                    = R
+                                    sRGB
+                                    /12.92 else
+                                    <strong>R</strong>
+                                    = ((R
+                                    sRGB
+                                    +0.055)/1.055) ^ 2.4
+                                 </li>
+                                 
+                                 <li>if G
+                                    sRGB
+                                    &lt;= 0.04045 then
+                                    <strong>G</strong>
+                                    = G
+                                    sRGB
+                                    /12.92 else
+                                    <strong>G</strong>
+                                    = ((G
+                                    sRGB
+                                    +0.055)/1.055) ^ 2.4
+                                 </li>
+                                 
+                                 <li>if B
+                                    sRGB
+                                    &lt;= 0.04045 then
+                                    <strong>B</strong>
+                                    = B
+                                    sRGB
+                                    /12.92 else
+                                    <strong>B</strong>
+                                    = ((B
+                                    sRGB
+                                    +0.055)/1.055) ^ 2.4
+                                 </li>
+                                 
+                              </ul>
+                              
+                              <div class="note">
+                                 
+                                 <p>and R
+                                    sRGB, G
+                                    sRGB, and B
+                                    sRGB
+                                    are defined as:
+                                 </p>
+                                 
+                              </div>
+                              
+                              <ul>
+                                 
+                                 <li>R
+                                    sRGB
+                                    = R
+                                    8bit
+                                    /255
+                                 </li>
+                                 
+                                 <li>G
+                                    sRGB
+                                    = G
+                                    8bit
+                                    /255
+                                 </li>
+                                 
+                                 <li>B
+                                    sRGB
+                                    = B
+                                    8bit
+                                    /255
+                                 </li>
+                                 
+                              </ul>
+                              
+                              <div class="note">
+                                 
+                                 <p>The "^" character is the exponentiation operator.</p>
+                                 
+                              </div>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                        <div class="note">
+                           
+                           <p>For aliased letters, use the relative luminance value found two pixels in
+                              from the edge of the letter.
+                           </p>
+                           
+                        </div>
+                        
+                     </li>
+                     
+                     <li>Measure the relative luminance of the background pixels
+                        immediately next to the letter using same formula.
+                     </li>
+                     
+                     <li>
+                        
+                        <p>Calculate the contrast ratio using the following
+                           formula.
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p>(L1 + 0.05) / (L2 + 0.05), where</p>
+                              
+                              <ul>
+                                 
+                                 <li>L1 is the
+                                    <a href="/guidelines/#dfn-relative-luminance" target="terms">relative luminance</a>
+                                    of the lighter of the foreground or background colors, and
+                                 </li>
+                                 
+                                 <li>L2 is the
+                                    <a href="/guidelines/#dfn-relative-luminance" target="terms">relative luminance</a>
+                                    of the darker of the foreground or background colors.
+                                 </li>
+                                 
+                              </ul>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </li>
+                     
+                     <li>Check that the contrast ratio is equal to or
+                        greater than 4.5:1
+                     </li>
+                     
+                  </ol>
+                  
+               </section>
+               <section class="results" id="expected-results">
+                  <h3>Expected Results</h3>
+                  
+                  <ul>
+                     
+                     <li>#4 is true.</li>
+                     
+                  </ul>
+                  
+               </section>
+               <p class="note">Before May 2021 the value of 0.04045 in the definition was different (0.03928). It
+                  was taken from an older version of the specification and has been updated. It has
+                  no practical effect on the calculations in the context of these guidelines.
+               </p>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -436,13 +408,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -472,7 +445,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

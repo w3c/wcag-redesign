@@ -3,13 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H99: Provide page list navigation</title>
+      <title>H99: Provide a page-selection mechanism</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,25 +30,24 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Techniques">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Techniques">
                <ul>
-                  <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
-                  <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a></li>
+                  <li><a href="/techniques/#techniques">All Techniques</a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
-            <h1><span>Technique H99:</span>Provide page list navigation
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="about-this-page">
+            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
+            </p>
+         </aside>
+         <main class="standalone-resource__main">
+            <h1><span>Technique H99:</span>Provide a page-selection mechanism
             </h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
@@ -54,49 +55,40 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/page-break-navigation">2.4.13: Page Break Navigation</a></span>.
-                  </p>
+                  <p>This technique is not referenced from any Understanding document.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="description">
-               <details open="open">
-                  <summary>
-                     <h2>Description</h2>
-                  </summary>
-                  <p>The objective of this technique is to ensure that a page list navigation aid is provided
-                     and that it includes a list of all the available locations in the digital publication.
-                  </p>
-                  <p>The page list provides a way to locate static page break locations (i.e., where each
-                     new page begins) within a digital publication. These locations typically come from
-                     a print equivalent of the edition and allow synchronization in, for example, mixed
-                     print-digital environments such as schools and universities.
-                  </p>
-                  <p>The source of pagination is not limited to print but could match up to any statically
-                     paginated alternative, such as a PDF or even a fixed-layout EPUB (i.e., where the
-                     content does not reflow to fit the available screen size).
-                  </p>
-                  <p>The order of the page break locations in a digital publication is not sequential in
-                     all cases, and not all page breaks may be represented. Publishers often rearrange
-                     and remove content from the paginated source content when creating a digital version.
-                  </p>
-                  <p>Page lists are a central feature of many digital publishing formats. EPUB 3 defines
-                     the page list in its navigation document,<a href="#footnote1">[1]</a> while EPUB 2 and DAISY 3 use the pageList element in the NCX.<a href="#footnote2">[2]</a> 
-                  </p>
-                  <p>The DPUB-ARIA module also includes a doc-pagelist role for identifying the navigation
-                     element containing the page list.<a href="#footnote3">[3]</a></p>
-               </details>
+               <h2>Description</h2>
+               <p>The objective of this technique is to ensure that a page-selection mechanism is provided
+                  that makes available programmatically all set page locations in the digital publication.
+               </p>
+               <p>The page-selection mechanism provides a way to locate static page break locations
+                  (i.e., where each new page begins) within a digital publication. These locations typically
+                  come from a print equivalent of the edition and allow synchronization in, for example,
+                  a mix of print and digital publications in environments such as schools and universities.
+               </p>
+               <p>The source of pagination is not limited to print but could match up to any statically
+                  paginated alternative, such as a PDF or even a fixed-layout EPUB (i.e., where the
+                  content does not reflow to fit the available screen size).
+               </p>
+               <p>The order of the page break locations in a digital publication is not sequential in
+                  all cases, and not all page breaks may be represented. Publishers often rearrange
+                  and remove content from the paginated source content when creating a digital version.
+               </p>
+               <p>Page lists are a central feature of many digital publishing formats. <a href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-nav-pagelist">EPUB 3 defines the page list</a> in its navigation document while EPUB 2 and DAISY 3 use the <a href="http://www.daisy.org/z3986/2005/Z3986-2005.html#NCXElem">pageList element in the NCX</a>. The <a href="https://www.w3.org/TR/dpub-aria-1.0/#doc-pagelist">DPUB-ARIA module</a> also includes a doc-pagelist role for identifying the navigation element containing
+                  the page list.
+               </p>
+               <p>Other publications provide a means of page navigation through a 'go to' mechanism.</p>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <section class="example" id="example-1-example-1-–-page-list-in-html-publications">
-                     <h3>Example 1: Example 1 – Page list in HTML publications</h3>
-                     <p>To add a page list to a web-based document, the role "doc-pagelist" is added to the
-                        element (typically a nav element) that encloses the list and its title.
-                     </p><pre><code>&lt;nav role="doc-pagelist" aria-labelledby="pglist"&gt;
+               <h2>Examples</h2>
+               <section class="example" id="example-1-page-list-in-html-publications">
+                  <h3>Example 1: Page list in HTML publications</h3>
+                  <p>To add a page list to a web-based document, the role "doc-pagelist" is added to the
+                     element (typically a nav element) that encloses the list and its title.
+                  </p><pre><code>&lt;nav role="doc-pagelist" aria-labelledby="pglist"&gt;
  &lt;h2 id="pglist"&gt;Page List&lt;/h2&gt;
  &lt;ol&gt;
    &lt;li&gt;&lt;a href="intro.xhtml#pg1"&gt;1&lt;/a&gt;&lt;/li&gt;
@@ -105,14 +97,17 @@
  &lt;/ol&gt;
 &lt;/nav&gt;
 </code></pre><p>The destinations of the page list links are usually explicit page break markers like
-                        the following:
-                     </p><pre><code>&lt;span id="pg1" role="doc-pagebreak" aria-label="page 1"&gt;</code></pre><p>EPUB 3 uses the epub:type attribute to identify the page list in the navigation document.
-                        The attribute is used on a nav element with the value "page-list" (note the different
-                        hyphenation). The ARIA role attribute has no effect unless the navigation document
-                        can be directly accessed by users (i.e., the document is in the EPUB spine). Like
-                        the previous HTML example, the contents of the nav element is a list of links to the
-                        page break locations.
-                     </p><pre><code>&lt;nav epub:type="page-list" role="doc-pagelist" aria-labelledby="pglist"&gt;
+                     the following:
+                  </p><pre><code>&lt;span id="pg1" role="doc-pagebreak" aria-label="page 1"&gt;</code></pre></section>
+               <section class="example" id="example-2-page-list-in-epub-3-publications">
+                  <h3>Example 2: Page list in EPUB 3 publications</h3>
+                  <p>EPUB 3 uses the epub:type attribute to identify the page list in the navigation document.
+                     The attribute is used on a nav element with the value "page-list" (note the different
+                     hyphenation). The ARIA role attribute has no effect unless the navigation document
+                     can be directly accessed by users (i.e., the document is in the EPUB spine). Like
+                     the previous HTML example, the contents of the nav element is a list of links to the
+                     page break locations.
+                  </p><pre><code>&lt;nav epub:type="page-list" role="doc-pagelist" aria-labelledby="pglist"&gt;
    &lt;h2 id="pglist"&gt;Page List&lt;/h2&gt;
    &lt;ol&gt;
       &lt;li&gt;&lt;a href="chapter01.xhtml#page001"&gt;1&lt;/a&gt;&lt;/li&gt;
@@ -120,11 +115,14 @@
       &lt;li&gt;&lt;a href="chapter01.xhtml#page003"&gt;3&lt;/a&gt;&lt;/li&gt;
       …
    &lt;/ol&gt;
-   &lt;/nav&gt;</code></pre><p>The EPUB 2 and DAISY 3 formats both use an XML grammar called the NCX for expressing
-                        navigation aids. The page list is defined within the ncx element using the pageList
-                        tag. Each pageTarget within this element identifies a page break, providing both a
-                        label and a destination.
-                     </p><pre><code>&lt;ncx xmlns="http://www.daisy.org/z3986/2005/ncx/"
+   &lt;/nav&gt;</code></pre></section>
+               <section class="example" id="example-3-page-list-in-epub-2-and-daisy-publications">
+                  <h3>Example 3: Page list in EPUB 2 and DAISY publications</h3>
+                  <p>The EPUB 2 and DAISY 3 formats both use an XML grammar called the NCX for expressing
+                     navigation aids. The page list is defined within the ncx element using the pageList
+                     tag. Each pageTarget within this element identifies a page break, providing both a
+                     label and a destination.
+                  </p><pre><code>&lt;ncx xmlns="http://www.daisy.org/z3986/2005/ncx/"
      version="2005-1"
      xml:lang="en-US"&gt;
    …
@@ -139,61 +137,56 @@
       &lt;/pageTarget&gt;
    &lt;/pageList&gt;
 &lt;/ncx&gt;</code></pre></section>
-               </details>
+               <section class="example" id="example-4-go-to-page-mechanism">
+                  <h3>Example 4: Go to page mechanism</h3>
+                  <p>A mechanism provides the ability to enter a page number as an input and reposition
+                     the user to the matching target page location.
+                  </p>
+               </section>
             </section>
             <section id="applicability">
-               <details>
-                  <summary>
-                     <h2 id="applicability">Applicability</h2>
-                  </summary>
-                  <p>Content structured in <a href="https://www.w3.org/TR/html/"><abbr title="HyperText Markup Language">HTML</abbr></a>.
-                  </p>
-               </details>
+               <h2 id="applicability">Applicability</h2>
+               <p>Content structured in <a href="https://www.w3.org/TR/html/"><abbr title="HyperText Markup Language">HTML</abbr></a>.
+               </p>
+               <p>This technique is not referenced from any Understanding document.</p>
             </section>
             <section id="tests">
-               <details>
-                  <summary>
-                     <h2>Tests</h2>
-                  </summary>
-                  <section class="procedure" id="procedure">
-                     			
-                     <h3>Procedure</h3>
+               <h2>Tests</h2>
+               <section class="procedure" id="procedure">
+                  			
+                  <h3>Procedure</h3>
+                  				
+                  <ol>
                      				
-                     <ol>
-                        				
-                        <li>Check that a page list, or a link to a page list exists in the publication.</li>
-                        				
-                        <li>Check that all the static page break locations in the publication are represented
-                           in the page list.
-                        </li>
-                        				
-                        <li>Check that the entries in the page list link to the correct location in the publication.</li>
-                        				
-                     </ol>
-                     			
-                  </section>
-                  <section class="results" id="expected-results">
-                     			
-                     <h3>Expected Results</h3>
+                     <li>Check that a page-selection mechanism exists in the publication.</li>
                      				
-                     <ul>
-                        				
-                        <li>#1, #2 and #3 are true.</li>
-                        				
-                     </ul>
-                     		
-                  </section>
-               </details>
+                     <li>Check that all the static page break locations in the publication are represented
+                        in the selection mechanism.
+                     </li>
+                     				
+                     <li>Check that the entries in the page-selection mechanism link to the correct location
+                        in the publication.
+                     </li>
+                     				
+                  </ol>
+                  			
+               </section>
+               <section class="results" id="expected-results">
+                  			
+                  <h3>Expected Results</h3>
+                  				
+                  <ul>
+                     				
+                     <li>#1, #2 and #3 are true.</li>
+                     				
+                  </ul>
+                  		
+               </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
-            </p>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -211,13 +204,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -247,7 +241,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

@@ -8,8 +8,10 @@
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Understanding documents</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,39 +30,62 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Understanding documents">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Understanding Docs">
                <ul>
-                  <li class="nav__item"><a href=".">
-                        										All Understanding documents</a></li>
-                  <li class="nav__item"><a href="/understanding/about">About Understanding documents</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                  <li><a href=".">
+                        								All Understanding Docs
+                        							</a></li>
+                  <li><a href="input-modalities" aria-current="page" class="active">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Guideline: Input Modalities</a></li>
+                  <li><a href="concurrent-input-mechanisms">
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+                        </svg>Previous SC: Concurrent Input Mechanisms</a></li>
+                  <li><a href="target-size-minimum">Next SC: Target Size (Minimum)
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
-            <h1><span class="standalone-resource__type-of-guidance">Understanding:</span>Success Criterion 2.5.7: Dragging Movements
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Page Contents</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#intent">Intent</a></li>
+                     <li><a href="#benefits">Benefits</a></li>
+                     <li><a href="#examples">Examples</a></li>
+                     <li><a href="#techniques">Techniques</a></li>
+                     <li><a href="#key-terms">Key Terms</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Understanding SC 2.5.7:</span>Dragging Movements (Level AA)
             </h1>
-            <blockquote class="scquote">
-               <p>Success Criterion <a href="/guidelines/#dragging-movements" style="font-weight: bold;">2.5.7 Dragging Movements</a> (Level AA): All functionality that uses a <a href="#dfn-dragging-movement">dragging movement</a> for operation can be achieved by a single pointer without dragging, unless dragging
-                  is <a href="#dfn-essential">essential</a>.
-               </p>
-               <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this
-                  does not apply to actions that are required to operate the user agent or assistive
-                  technology).
-               </p>
-               <p class="ednote">Is there an assistive technology that helps for people with mobility impairments?
-                  The group would like feedback on the frontier between AT &amp; author responsibility.
-               </p>
-            </blockquote>
+            <aside class="box">
+               <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
+               <div class="box-i">
+                  <p>All functionality that uses a <a href="#dfn-dragging-movement">dragging movement</a> for operation can be achieved by a <a href="#dfn-single-pointer">single pointer</a> without dragging, unless dragging is <a href="#dfn-essential">essential</a> or the functionality is determined by the user agent and not modified by the author.
+                  </p>
+                  <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this
+                     does not apply to actions that are required to operate the user agent or assistive
+                     technology).
+                  </p>
+                  <p class="ednote">Is there an assistive technology that helps for people with mobility impairments?
+                     The group would like feedback on the frontier between AT &amp; author responsibility.
+                  </p>
+               </div>
+            </aside>
             <div class="excol-all"></div>
             <section id="status" class="advisement">
                
@@ -71,167 +96,216 @@
                
             </section>
             <section id="intent">
-               <details>
-                  <summary>
-                     <h2>Intent</h2>
-                  </summary>
-                  <p>The intent of this Success Criterion is to ensure functionality that uses a dragging
-                     movement (e.g. sliders, drag-and-drop interfaces) has another <a href="https://www.w3.org/TR/WCAG22/#dfn-single-pointer">single pointer</a> mode of operation without the need for the dexterity required to drag elements.
-                  </p>
-                  <p>Some people cannot perform dragging motions in a precise manner. Others use a specialized
-                     or adapted input device such as a head pointer, eye-gaze system, or speech-controlled
-                     mouse emulator, which makes dragging cumbersome, error-prone, or outright impossible.
-                  </p>
-                  <p>When an interface implements functionality that uses dragging motions, some users
-                     can tap or click, but not accurately maintain contact whilst performing a dragging
-                     motion. An alternative method must be provided so that users with mobility impairments
-                     that use a pointer (mouse, pen, or touch contact) can use the functionality.
-                  </p>
+               <h2>Intent</h2>
+               <p>The intent of this Success Criterion is to ensure functionality that uses a dragging
+                  movement (e.g., sliders, drag-and-drop interfaces) has another <a href="#dfn-single-pointer">single pointer</a> mode of operation without the need for the dexterity required to drag elements.
+               </p>
+               <p>Some people cannot perform dragging movements in a precise manner. Others use a specialized
+                  or adapted input device such as a head pointer, eye-gaze system, or speech-controlled
+                  mouse emulator, which makes dragging cumbersome, error-prone, or outright impossible.
+               </p>
+               <p>When an interface implements functionality that uses dragging movements, users perform
+                  four discrete actions:
+               </p>
+               <ol>
+                  
+                  <li>tap or click to establish a starting point, then</li>
+                  
+                  <li>press and hold that contact while...</li>
+                  
+                  <li>performing a repositioning of the pointer, before...</li>
+                  
+                  <li>releasing the pointer at the end point.</li>
+                  
+               </ol>
+               <p>Not all users can accurately press and hold that contact while also repositioning
+                  the pointer. An alternative method must be provided so that users with mobility impairments
+                  who use a pointer (mouse, pen, or touch contact) can use the functionality.
+               </p>
+               <section id="relationship-to-other-requirements">
+                  <h3>Relationship to other requirements</h3>
+                  
                   <p>Success Criteria 2.1.1 Keyboard and 2.1.3 Keyboard (No Exception) require dragging
-                     features to be keyboard accessible; however, it is possible to create an interface
-                     that works with dragging and keyboard controls that does not work using only clicks
-                     or taps.
+                     features to be keyboard accessible. However, achieving keyboard equivalence for a
+                     dragging operation does not automatically meet this Success Criterion; it is possible
+                     to create an interface that works with dragging and keyboard controls that does not
+                     work using only clicks or taps. While many designs can be created for a dragging alternative
+                     which address both keyboard accessibility and operability by single pointer operation,
+                     the two requirements should be assessed independently. 
                   </p>
-                  <p>This Success Criterion applies to dragging motions as opposed to pointer gestures,
-                     which are covered in Success Criterion 2.5.1 Pointer Gestures. Pointer gestures include
-                     directional path-based as well as multi-point gestures. In contrast, for dragging
-                     motions, only the start and end point of the motion matters, not the actual path.
+                  
+                  
+                  
+                  <p>This Success Criterion applies to dragging movements as opposed to pointer gestures,
+                     which are covered in <a href="pointer-gestures">Success Criterion 2.5.1 Pointer Gestures</a>. Pointer gestures include directional path-based as well as multi-point gestures.
+                     In contrast, for dragging movements, only the start and end point of the movement
+                     matters, not the actual path.
                   </p>
-                  <p>There may be cases where a dragging movement is essential, for example, drawing a
-                     freeform figure, or playing a game where the aim is to follow a particular track as
-                     accurately as possible. The criterion has an exception for these cases where the task
-                     requires dragging.
+                  
+                  
+                  <p>Additional examples are selection rectangles that set the first x/y rectangle coordinate
+                     at the pointer position via a pointer down-event, and the second x/y coordinate, after
+                     a dragging movement, at the next up-event. A similar example is a connecting line
+                     drawn between two different items on the screen, as in an allocation test where users
+                     are required to draw a line between questions and corresponding answers. In these
+                     cases, the dragging movement requires an alternative way to accomplish the same action
+                     that does not rely on the dragging movement. For example, two separate single tap
+                     or click actions may define the rectangle coordinates or the start and end points
+                     of a connecting line.
                   </p>
-                  <p>Some tasks may typically involve dragging, such as sorting items in a list, but as
-                     there are other ways to achieve that task they are not considered essential.
-                  </p>
+               </section>
+               <section id="alternatives-for-dragging-movements-on-the-same-page">
+                  <h3>Alternatives for dragging movements on the same page</h3>
+                  
+                  
+                  <p>Where functionality can be executed via dragging movements and an equivalent option
+                     exists that allows for single-pointer access without dragging, this Success Criterion
+                     is passed. It does not have to be the same component, so long as the functionality
+                     is equivalent. An example is a color wheel where a color can be changed by dragging
+                     an indicator. In addition, text fields for the numerical input of color values allow
+                     the definition of a color without requiring dragging movements. (Note that a text
+                     input is considered device agnostic; although the purpose is to enter characters,
+                     text entry can take place through voice, pointer or keyboard.)
+                  </p> 
+               </section>
+               <section id="distinguishing-dragging-movements-from-path-based-pointer-gestures">
+                  <h3>Distinguishing dragging movements from path-based pointer gestures</h3>
+                  
+                  
                   <p>Dragging movements covered in this Success Criterion are pointer interactions where
-                     only the endpoints matter. Once the pointer engages with a target, the direction of
-                     the dragging motion does not factor into the interaction until the pointer disengages
-                     the target. Since the dragging movement does not have an intermediate point, the dragging
-                     motion can go in any direction.
-                  </p>
-                  <p>Path-based gestures covered in Success Criterion 2.5.1 Pointer Gestures are pointer
-                     interactions that involve at least an initial directionality. The pointer motion must
-                     include at least one intermediate point to qualify as a path-based gesture. The intermediate
-                     point defines the motion as a gesture by requiring a specific path, even when the
-                     entire path to complete the interaction is not predefined. While a user may use dragging
-                     movements to perform the interaction, path-based gestures requires following a path
-                     to an intermediate point. For more details, refer to <a href="pointer-gestures.html">Understanding Success Criterion 2.5.1 Pointer Gestures</a>.
-                  </p>
-               </details>
+                     only the start- and endpoints matter. Once the pointer engages with a target, the
+                     direction of the dragging movement does not factor into the interaction until the
+                     pointer disengages the target. Since the dragging movement does not have an intermediate
+                     point, the dragging movement can go in any direction. Path-based gestures are covered
+                     in Success Criterion 2.5.1 Pointer Gestures. For more details, refer to <a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html">Understanding Success Criterion 2.5.1 Pointer Gestures</a></p> 
+               </section>
             </section>
             <section id="benefits">
-               <details>
-                  <summary>
-                     <h2>Benefits</h2>
-                  </summary>
-                  <ul>
-                     
-                     <li>Users who struggle with performing dragging motions can still operate an interface
-                        with a pointer interface.
-                     </li>
-                     
-                  </ul>
-               </details>
+               <h2>Benefits</h2>
+               <ul>
+                  
+                  <li>Users who struggle with performing dragging movements can still operate an interface
+                     with a pointer interface.
+                  </li>
+                  
+               </ul>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <ul>
-                     
-                     <li>A sortable list of elements may, after focussing a list element, provide adjacent
-                        controls for moving the element up or down in the list by simply tapping/clicking
-                        on those controls.
-                     </li>
-                     
-                     <li>A kanban implementation may provide an additional pop-up menu for focused elements
-                        that can be activated by simple clicks/taps providing an option for moving the selected
-                        element to another kanban silo.
-                     </li>
-                     
-                     <li>A radial control widget where the value can be set by dragging includes a text field
-                        that presents the current value and offers the input of the desired value via a keyboard
-                        (including on-screen virtual keyboards).
-                     </li>  
-                     
-                     <li>A map allows users to drag the view of the map around, and the map has up/down/left/right
-                        buttons to move the view as well.
-                     </li>        
-                     
-                  </ul>
-               </details>
+               <h2>Examples</h2>
+               <ul>
+                  
+                  <li>A map allows users to drag the view of the map around, and the map has up/down/left/right
+                     buttons to move the view as well.
+                  </li>
+                  
+                  <li>A sortable list of elements may, after tapping or clicking on a list element, provide
+                     adjacent controls for moving the element up or down in the list by simply tapping
+                     or clicking on those controls.
+                  </li>
+                  
+                  <li>A kanban implementation may provide an additional pop-up menu after tapping or clicking
+                     on elements for moving the selected element to another kanban silo by tapping or clicking
+                     on pop-up menu entries.
+                  </li>
+                  
+                  <li>A radial control widget (color wheel) where the value can be set by dragging the marker
+                     for the currently selected color to another position, also allows picking another
+                     color value by tapping or clicking on another place in the color wheel.
+                  </li>
+                  
+                  <li> A linear slider control widget, where the value can be set by dragging the visual
+                     indicator (thumb) showing the current value, allows tapping or clicking on any point
+                     of the slider track to change the value and set the thumb to that position. 
+                  </li>           
+                  
+               </ul>
             </section>
             <section id="techniques">
+               <h2>Techniques</h2>
+               <p>Each numbered item in this section represents a technique or combination of techniques
+                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                  it is not necessary to use these particular techniques. For information on using other
+                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+               </p>
+               <section id="sufficient">
+                  <h3>Sufficient Techniques</h3>
+                  <ol>
+                     
+                     <li>
+                        <a href="../../techniques/general/G219" class="general">Ensuring that a single pointer operable alternative is available for dragging movements
+                           that operate on content</a>
+                        
+                     </li>
+                     
+                  </ol>
+               </section>
+               <section id="failure">
+                  <h3>Failures</h3>
+                  <p>The following are common mistakes that are considered failures of this Success Criterion
+                     by the WCAG Working Group.
+                  </p>
+                  <ul>
+                     
+                     <li>								         
+                        <a href="../../techniques/failures/F108" class="failure">Failure of Success Criterion 2.5.X Dragging due to not providing a single pointer
+                           method for the user to operate a function that does not require a dragging movement</a>						       
+                        
+                     </li>
+                     
+                  </ul>
+               </section>
+            </section>
+            <section id="key-terms">
                <details>
                   <summary>
-                     <h2>Techniques</h2>
+                     <h2>Key Terms</h2>
                   </summary>
-                  <p>Each numbered item in this section represents a technique or combination of techniques
-                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                     it is not necessary to use these particular techniques. For information on using other
-                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-                  </p>
-                  <section id="sufficient">
-                     <h3>Sufficient Techniques</h3>
-                     <ol>
+                  <dt id="dfn-dragging-movement">dragging movement</dt>
+                  <dd>
+                     <definition xmlns="">
+                        	        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
+                        					
                         
-                        <li>
-                           <a class="general" href="/techniques/general/G219">G219: Ensuring that a single pointer operable alternative is available for dragging movements
-                              that operate on content</a>
+                        <p xmlns="http://www.w3.org/1999/xhtml">an operation where the pointer engages with an element on the down event and the element
+                           (or a representation of its position) follows the pointer
+                        </p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The element could be, for example, a list item, a text element, or an image.</p>
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-essential">essential</dt>
+                  <dd>
+                     <definition xmlns="">
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">if removed, would fundamentally change the information or functionality of the content,
+                           <strong>and</strong> information and functionality cannot be achieved in another way that would conform
                            
-                        </li>
+                        </p>
+                        				
                         
-                     </ol>
-                  </section>
-                  <section id="failure">
-                     <h3>Failures</h3>
-                     <p>The following are common mistakes that are considered failures of this Success Criterion
-                        by the WCAG Working Group.
-                     </p>
-                     <ul>
+                     </definition>
+                  </dd>
+                  <dt id="dfn-single-pointer">single pointer</dt>
+                  <dd>
+                     <definition xmlns="">
+                        	
                         
-                        <li>								         
-                           <a class="failure" href="/techniques/failures/F108">F108: Failure of Success Criterion 2.5.X Dragging due to not providing a single pointer
-                              method for the user to operate a function that does not require a dragging movement</a>						       
-                           
-                        </li>
+                        <p xmlns="http://www.w3.org/1999/xhtml">pointer input that operates with one point of contact with the screen, including single
+                           taps and clicks, double-taps and clicks, long presses, and path-based gestures
+                        </p>
+                        				
                         
-                     </ul>
-                  </section>
+                     </definition>
+                  </dd>
                </details>
-            </section>
-            <nav class="pager" aria-label="Previous/Next Page">
-               <ul id="navigation">
-                  <li class="pager--item context"><a href="input-modalities"><span class="pager--item-text"><span class="pager--item-text-direction"><abbr title="Guideline">Part of Guideline</abbr>:</span><span class="pager--item-text-target">Input Modalities</span></span></a></li>
-                  <li class="pager--item previous"><a href="concurrent-input-mechanisms">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-                           <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Concurrent Input Mechanisms</span></span></a></li>
-                  <li class="pager--item next"><a href="target-size-minimum">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right pager--item-icon" viewBox="0 0 23 28">
-                           <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Target Size (Minimum)</span></span></a></li>
-               </ul>
-            </nav><a class="button button-backtotop" href="#top"><span>
+            </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
-            </p>
-            <dl>
-               <dt>Level</dt>
-               <dd>AA</dd>
-               <dt>Key terms</dt>
-               <dd id="dfn-dragging-movement">dragging movement</dd>
-               <dd id="dfn-essential">essential</dd>
-            </dl>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -249,13 +323,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -285,7 +360,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

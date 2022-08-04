@@ -8,8 +8,10 @@
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Understanding documents</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,173 +30,292 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Understanding documents">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Understanding Docs">
                <ul>
-                  <li class="nav__item"><a href=".">
-                        										All Understanding documents</a></li>
-                  <li class="nav__item"><a href="/understanding/about">About Understanding documents</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                  <li><a href=".">
+                        								All Understanding Docs
+                        							</a></li>
+                  <li><a href="navigable" aria-current="page" class="active">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Guideline: Navigable</a></li>
+                  <li><a href="bypass-blocks">
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+                        </svg>Previous SC: Bypass Blocks</a></li>
+                  <li><a href="focus-order">Next SC: Focus Order
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
-            <h1><span class="standalone-resource__type-of-guidance">Understanding:</span>Success Criterion 2.4.2: Page Titled
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Page Contents</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#intent">Intent</a></li>
+                     <li><a href="#benefits">Benefits</a></li>
+                     <li><a href="#examples">Examples</a></li>
+                     <li><a href="#resources">Related Resources</a></li>
+                     <li><a href="#techniques">Techniques</a></li>
+                     <li><a href="#test-rules">Test Rules</a></li>
+                     <li><a href="#key-terms">Key Terms</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Understanding SC 2.4.2:</span>Page Titled (Level A)
             </h1>
-            <blockquote class="scquote">
-               <p>Success Criterion <a href="/guidelines/#page-titled" style="font-weight: bold;">2.4.2 Page Titled</a> (Level A): 
-                  <a href="#dfn-web-page">Web pages</a> have titles that describe topic or purpose.
-                  
-               </p>
-            </blockquote>
+            <aside class="box">
+               <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
+               <div class="box-i">
+                  <p>
+                     <a href="#dfn-web-page">Web pages</a> have titles that describe topic or purpose.
+                     
+                  </p>
+               </div>
+            </aside>
             <div class="excol-all"></div>
             <section id="intent">
-               <details>
-                  <summary>
-                     <h2>Intent</h2>
-                  </summary>
-                  <p>The intent of this Success Criterion is to help users find content and orient themselves
-                     within it by ensuring that each Web page has a descriptive title. Titles identify
-                     the current location without requiring users to read or interpret page content. When
-                     titles appear in site maps or lists of search results, users can more quickly identify
-                     the content they need. User agents make the title of the page easily available to
-                     the user for identifying the page. For instance, a user agent may display the page
-                     title in the  window title bar or as the name of the tab containing the page.
-                     
-                  </p>
-                  <p>In cases where the page is a document or a web application, the name of the document
-                     or web application would be sufficient to describe the purpose of the page. Note that
-                     it is not required to use the name of the document or web application; other things
-                     may also describe the purpose or the topic of the page. 
-                     
-                  </p>
-                  <p>
-                     
-                     <a href="link-purpose-in-context" class="understanding">Success Criteria 2.4.4</a> and 
-                     <a href="link-purpose-link-only" class="understanding">2.4.9</a> deal with the purpose of links, many of which are links to web pages. Here also,
-                     the name of a document or web application being linked to would be sufficient to describe
-                     the purpose of the link. Having the link and the title agree, or be very similar,
-                     is good practice and provides continuity between the link 'clicked on' and the web
-                     page that the user lands on. 
-                     
-                  </p>
-               </details>
+               <h2>Intent</h2>
+               <p>The intent of this Success Criterion is to help users find content and orient themselves
+                  within it by ensuring that each Web page has a descriptive title. Titles identify
+                  the current location without requiring users to read or interpret page content. When
+                  titles appear in site maps or lists of search results, users can more quickly identify
+                  the content they need. User agents make the title of the page easily available to
+                  the user for identifying the page. For instance, a user agent may display the page
+                  title in the  window title bar or as the name of the tab containing the page.
+                  
+               </p>
+               <p>In cases where the page is a document or a web application, the name of the document
+                  or web application would be sufficient to describe the purpose of the page. Note that
+                  it is not required to use the name of the document or web application; other things
+                  may also describe the purpose or the topic of the page. 
+                  
+               </p>
+               <p>
+                  
+                  <a href="link-purpose-in-context" class="understanding">Success Criteria 2.4.4</a> and 
+                  <a href="link-purpose-link-only" class="understanding">2.4.9</a> deal with the purpose of links, many of which are links to web pages. Here also,
+                  the name of a document or web application being linked to would be sufficient to describe
+                  the purpose of the link. Having the link and the title agree, or be very similar,
+                  is good practice and provides continuity between the link 'clicked on' and the web
+                  page that the user lands on. 
+                  
+               </p>
             </section>
             <section id="benefits">
-               <details>
-                  <summary>
-                     <h2>Benefits</h2>
-                  </summary>
-                  <ul>
+               <h2>Benefits</h2>
+               <ul>
+                  
+                  
+                  <li>
+                     This criterion benefits all users in allowing users to quickly and easily identify
+                     whether the information contained in the Web page is relevant to their needs. 
                      
                      
-                     <li>
-                        This criterion benefits all users in allowing users to quickly and easily identify
-                        whether the information contained in the Web page is relevant to their needs. 
-                        
-                        
-                     </li>
+                  </li>
+                  
+                  
+                  <li>
+                     People with visual disabilities will benefit from being able to differentiate content
+                     when multiple Web pages are open. 
                      
                      
-                     <li>
-                        People with visual disabilities will benefit from being able to differentiate content
-                        when multiple Web pages are open. 
-                        
-                        
-                     </li>
+                  </li>
+                  
+                  
+                  <li>
+                     People with cognitive disabilities, limited short-term memory and reading disabilities
+                     also benefit from the ability to identify content by its title. 
                      
                      
-                     <li>
-                        People with cognitive disabilities, limited short-term memory and reading disabilities
-                        also benefit from the ability to identify content by its title. 
-                        
-                        
-                     </li>
+                  </li>
+                  
+                  
+                  <li>
+                     This criterion also benefits people with severe mobility impairments whose mode of
+                     operation relies on audio when navigating between Web pages. 
                      
                      
-                     <li>
-                        This criterion also benefits people with severe mobility impairments whose mode of
-                        operation relies on audio when navigating between Web pages. 
-                        
-                        
-                     </li>
-                     
-                     
-                  </ul>
-               </details>
+                  </li>
+                  
+                  
+               </ul>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <ul>
+               <h2>Examples</h2>
+               <ul>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>
+                        								       
+                        <strong>An HTML Web page</strong>
+                        							     
+                        
+                     </p>
+                     
+                     
+                     <p>The descriptive title of an HTML Web page is marked up with the &lt;title&gt; element so
+                        that it will be displayed in the title bar of the user agent.
+                        
+                     </p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>
+                        								       
+                        <strong>A document collection.</strong>
+                        							     
+                        
+                     </p>
+                     
+                     
+                     <p>The title of 
+                        <a href="https://www.w3.org/WAI/WCAG21/Understanding/">Understanding WCAG 2.1 </a> is "Understanding WCAG 2.1."
+                        
+                     </p>
+                     
+                     
+                     <ul>
+                        
+                        
+                        <li>The introduction page has the title "Introduction to Understanding WCAG 2.0."</li>
+                        
+                        
+                        <li>Major sections of the document are pages titled "Understanding Guideline X" and "Understanding
+                           Success Criterion X." 
+                           
+                        </li>
+                        
+                        
+                        <li>Appendix A has the title "Glossary."</li>
+                        
+                        
+                        <li>Appendix B has the title "Acknowledgements."</li>
+                        
+                        
+                        <li>Appendix C has the title "References."</li>
+                        
+                        
+                     </ul>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>
+                        								       
+                        <strong>A Web application.</strong>
+                        							     
+                        
+                     </p>
+                     
+                     
+                     <p>
+                        A banking application lets a user inspect his bank accounts, view past statements,
+                        and perform transactions. The Web application dynamically generates titles for each
+                        Web page, e.g., "Bank XYZ, accounts for John Smith" "Bank XYZ, December 2005 statement
+                        for Account 1234-5678". 
+                        
+                        
+                        
+                     </p>
+                     
+                     
+                  </li>
+                  
+                  
+               </ul>
+            </section>
+            <section id="resources">
+               <h2>Related Resources</h2>
+               <p>Resources are for information purposes only, no endorsement implied.</p>
+               <ul>
+                  
+                  
+                  <li> 
+                     
+                     <a href="https://socialpatterns.com/writing-better-titles/">Writing Better Web Page Titles</a>. How to write titles for Web pages that will enhance search engine effectiveness.
+                     
+                  </li>
+                  
+                  
+                  <li> 
+                     
+                     <a href="https://redish.net/wp-content/uploads/Theorfanos_Redish_InteractionsPaperAuthorsVer.pdf">Guidelines for Accessible and Usable Web Sites: Observing Users Who Work With Screen
+                        Readers (PDF)
+                        </a>. Theofanos, M.F., and Redish, J. (2003).  Interactions, Volume X, Issue 6, November-December
+                     2003, pages 38-51, 
+                     <a href="https://dl.acm.org/doi/10.1145/947226.947227">https://dl.acm.org/doi/10.1145/947226.947227</a>
+                     							     
+                     
+                  </li>
+                  
+                  
+               </ul>
+            </section>
+            <section id="techniques">
+               <h2>Techniques</h2>
+               <p>Each numbered item in this section represents a technique or combination of techniques
+                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                  it is not necessary to use these particular techniques. For information on using other
+                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+               </p>
+               <section id="sufficient">
+                  <h3>Sufficient Techniques</h3>
+                  <ol>
                      
                      
                      <li>
                         
                         
-                        <p>
-                           								       
-                           <strong>An HTML Web page</strong>
-                           							     
+                        <p> 
                            
-                        </p>
-                        
-                        
-                        <p>The descriptive title of an HTML Web page is marked up with the &lt;title&gt; element so
-                           that it will be displayed in the title bar of the user agent.
+                           <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G88" class="general">Providing descriptive titles for Web pages</a> 
                            
-                        </p>
-                        
-                        
-                     </li>
-                     
-                     
-                     <li>
-                        
-                        
-                        <p>
-                           								       
-                           <strong>A document collection.</strong>
-                           							     
+                           <strong>AND</strong> associating a title with a Web page using one of the following techniques:
                            
-                        </p>
-                        
-                        
-                        <p>The title of 
-                           <a href="https://www.w3.org/WAI/WCAG21/Understanding/">Understanding WCAG 2.1 </a> is "Understanding WCAG 2.1."
                            
                         </p>
                         
                         
                         <ul>
+                           	
                            
-                           
-                           <li>The introduction page has the title "Introduction to Understanding WCAG 2.0."</li>
-                           
-                           
-                           <li>Major sections of the document are pages titled "Understanding Guideline X" and "Understanding
-                              Success Criterion X." 
+                           <li>
+                              											             
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H25" class="html">Providing a title using the title element</a>
+                              										           
                               
                            </li>
                            
                            
-                           <li>Appendix A has the title "Glossary."</li>
-                           
-                           
-                           <li>Appendix B has the title "Acknowledgements."</li>
-                           
-                           
-                           <li>Appendix C has the title "References."</li>
+                           <li>
+                              
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF18" class="pdf"></a>
+                              
+                              
+                           </li>
                            
                            
                         </ul>
@@ -203,191 +324,212 @@
                      </li>
                      
                      
-                     <li>
-                        
-                        
-                        <p>
-                           								       
-                           <strong>A Web application.</strong>
-                           							     
-                           
-                        </p>
-                        
-                        
-                        <p>
-                           A banking application lets a user inspect his bank accounts, view past statements,
-                           and perform transactions. The Web application dynamically generates titles for each
-                           Web page, e.g., "Bank XYZ, accounts for John Smith" "Bank XYZ, December 2005 statement
-                           for Account 1234-5678". 
-                           
-                           
-                           
-                        </p>
-                        
-                        
-                     </li>
-                     
-                     
-                  </ul>
-               </details>
-            </section>
-            <section id="resources">
-               <details>
-                  <summary>
-                     <h2>Related Resources</h2>
-                  </summary>
-                  <p>Resources are for information purposes only, no endorsement implied.</p>
+                  </ol>
+               </section>
+               <section id="advisory">
+                  <h3>Advisory Techniques</h3>
+                  <p>Although not required for conformance, the following additional techniques should
+                     be considered in order to make content more accessible. Not all techniques can be
+                     used or would be effective in all situations.
+                  </p>
                   <ul>
                      
                      
-                     <li> 
-                        
-                        <a href="http://www.socialpatterns.com/search-engine-optimization/writing-better-web-page-titles/">Writing Better Web Page Titles</a> How to write titles for Web pages that will enhance search engine effectiveness.
-                        
-                     </li>
-                     
-                     
-                     <li> 
-                        
-                        <a href="http://redish.net/images/stories/PDF/interactions.html">Guidelines for Accessible and Usable Web Sites: Observing Users Who Work With Screen
-                           Readers
-                           </a>. Theofanos, M.F., and Redish, J. (2003).  Interactions, Volume X, Issue 6, November-December
-                        2003, pages 38-51, 
-                        <a href="http://dl.acm.org/citation.cfm?doid=947226.947227">http://dl.acm.org/citation.cfm?doid=947226.947227</a>
-                        							     
+                     <li>
+                        									         
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G127" class="general">Identifying a Web page's relationship to a larger collection of Web pages</a>
+                        								       
                         
                      </li>
                      
                      
                   </ul>
-               </details>
+               </section>
+               <section id="failure">
+                  <h3>Failures</h3>
+                  <p>The following are common mistakes that are considered failures of this Success Criterion
+                     by the WCAG Working Group.
+                  </p>
+                  <ul>
+                     
+                     
+                     <li>
+                        									         
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F25" class="failure">Failure due to the title of a Web page not identifying the contents</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                  </ul>
+               </section>
             </section>
-            <section id="techniques">
+            <section id="key-terms">
                <details>
                   <summary>
-                     <h2>Techniques</h2>
+                     <h2>Key Terms</h2>
                   </summary>
-                  <p>Each numbered item in this section represents a technique or combination of techniques
-                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                     it is not necessary to use these particular techniques. For information on using other
-                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-                  </p>
-                  <section id="sufficient">
-                     <h3>Sufficient Techniques</h3>
-                     <ol>
+                  <dt id="dfn-assistive-technology">assistive technology</dt>
+                  <dd>
+                     <definition xmlns="">
                         
                         
-                        <li>
+                        <p xmlns="http://www.w3.org/1999/xhtml">hardware and/or software that acts as a <a href="#dfn-user-agent">user agent</a>, or along with a mainstream user agent, to provide functionality to meet the requirements
+                           of users with disabilities that go beyond those offered by mainstream user agents
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
+                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                           voice), additional navigation or orientation mechanisms, and content transformations
+                           (e.g., to make tables more accessible).
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
+                           by using and monitoring APIs.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
+                           Many mainstream user agents provide some features to assist individuals with disabilities.
+                           The basic difference is that mainstream user agents target broad and diverse audiences
+                           that usually include people with and without disabilities. Assistive technologies
+                           target narrowly defined populations of users with specific disabilities. The assistance
+                           provided by an assistive technology is more specific and appropriate to the needs
+                           of its target users. The mainstream user agent may provide important functionality
+                           to assistive technologies like retrieving Web content from program objects or parsing
+                           markup into identifiable bundles.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
+                           the following:
+                           
+                        </p>
+                        
+                        
+                        <ul xmlns="http://www.w3.org/1999/xhtml">
                            
                            
-                           <p> 
+                           <li>screen magnifiers, and other visual reading assistants, which are used by people with
+                              visual, perceptual and physical print disabilities to change text font, size, spacing,
+                              color, synchronization with speech, etc. in order to improve the visual readability
+                              of rendered text and images;
                               
-                              <a class="general" href="/techniques/general/G88">G88: Providing descriptive titles for Web pages</a> 
-                              
-                              <strong>AND</strong> associating a title with a Web page using one of the following techniques:
-                              
-                              
-                           </p>
+                           </li>
                            
                            
-                           <ul>
-                              	
+                           <li>screen readers, which are used by people who are blind to read textual information
+                              through synthesized speech or braille;
                               
-                              <li>
-                                 											             
-                                 <a class="html" href="/techniques/html/H25">H25: Providing a title using the title element</a>
-                                 										           
-                                 
-                              </li>
-                              
-                              
-                              <li>
-                                 
-                                 <a class="pdf" href="/techniques/pdf/PDF18">PDF18: Specifying the document title using the Title entry in the document information dictionary
-                                    of a PDF document</a>
-                                 
-                                 
-                              </li>
-                              
-                              
-                           </ul>
+                           </li>
                            
                            
-                        </li>
-                        
-                        
-                     </ol>
-                  </section>
-                  <section id="advisory">
-                     <h3>Advisory Techniques</h3>
-                     <p>Although not required for conformance, the following additional techniques should
-                        be considered in order to make content more accessible. Not all techniques can be
-                        used or would be effective in all situations.
-                     </p>
-                     <ul>
-                        
-                        
-                        <li>
-                           									         
-                           <a class="general" href="/techniques/general/G127">G127: Identifying a Web page's relationship to a larger collection of Web pages</a>
-                           								       
+                           <li>text-to-speech software, which is used by some people with cognitive, language, and
+                              learning disabilities to convert text into synthetic speech;
+                              
+                           </li>
                            
-                        </li>
-                        
-                        
-                     </ul>
-                  </section>
-                  <section id="failure">
-                     <h3>Failures</h3>
-                     <p>The following are common mistakes that are considered failures of this Success Criterion
-                        by the WCAG Working Group.
-                     </p>
-                     <ul>
-                        
-                        
-                        <li>
-                           									         
-                           <a class="failure" href="/techniques/failures/F25">F25: Failure of Success Criterion 2.4.2 due to the title of a Web page not identifying
-                              the contents</a>
-                           								       
                            
-                        </li>
+                           <li>speech recognition software, which may be used by people who have some physical disabilities;</li>
+                           
+                           
+                           <li>alternative keyboards, which are used by people with certain physical disabilities
+                              to simulate the keyboard (including alternate keyboards that use head pointers, single
+                              switches, sip/puff and other special input devices.);
+                              
+                           </li>
+                           
+                           
+                           <li>alternative pointing devices, which are used by people with certain physical disabilities
+                              to simulate mouse pointing and button activations.
+                              
+                           </li>
+                           
+                           
+                        </ul>
                         
                         
-                     </ul>
-                  </section>
+                     </definition>
+                  </dd>
+                  <dt id="dfn-user-agent">user agent</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">any software that retrieves and presents Web content for users</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Web browsers, media players, plug-ins, and other programs — including <a href="#dfn-assistive-technology">assistive technologies</a> — that help in retrieving, rendering, and interacting with Web content.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-web-page">web page</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">a non-embedded resource obtained from a single URI using HTTP plus any other resources
+                           that are used in the rendering or intended to be rendered together with it by a <a href="#dfn-user-agent">user agent</a>
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Although any "other resources" would be rendered together with the primary resource,
+                           they would not necessarily be rendered simultaneously with each other.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">For the purposes of conformance with these guidelines, a resource must be "non-embedded"
+                           within the scope of conformance to be considered a Web page.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web resource including all embedded images and media.</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web mail program built using Asynchronous JavaScript and XML (AJAX). The program
+                           lives entirely at http://example.com/mail, but includes an inbox, a contacts area
+                           and a calendar. Links or buttons are provided that cause the inbox, contacts, or calendar
+                           to display, but do not change the URI of the page as a whole.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A customizable portal site, where users can choose content to display from a set of
+                           different content modules.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">When you enter "http://shopping.example.com/" in your browser, you enter a movie-like
+                           interactive shopping environment where you visually move around in a store dragging
+                           products off of the shelves around you and into a visual shopping cart in front of
+                           you. Clicking on a product causes it to be demonstrated with a specification sheet
+                           floating alongside. This might be a single-page Web site or just one page within a
+                           Web site.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
                </details>
-            </section>
-            <nav class="pager" aria-label="Previous/Next Page">
-               <ul id="navigation">
-                  <li class="pager--item context"><a href="navigable"><span class="pager--item-text"><span class="pager--item-text-direction"><abbr title="Guideline">Part of Guideline</abbr>:</span><span class="pager--item-text-target">Navigable</span></span></a></li>
-                  <li class="pager--item previous"><a href="bypass-blocks">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-                           <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Bypass Blocks</span></span></a></li>
-                  <li class="pager--item next"><a href="focus-order">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right pager--item-icon" viewBox="0 0 23 28">
-                           <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Focus Order</span></span></a></li>
-               </ul>
-            </nav><a class="button button-backtotop" href="#top"><span>
+            </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
-            </p>
-            <dl>
-               <dt>Level</dt>
-               <dd>A</dd>
-               <dt>Key terms</dt>
-               <dd id="dfn-assistive-technology">assistive technology</dd>
-               <dd id="dfn-user-agent">user agent</dd>
-               <dd id="dfn-web-page">web page</dd>
-            </dl>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -405,13 +547,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -441,7 +584,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

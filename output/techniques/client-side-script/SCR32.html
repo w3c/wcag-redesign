@@ -8,8 +8,10 @@
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,24 +30,23 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Techniques">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Techniques">
                <ul>
-                  <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
-                  <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a></li>
+                  <li><a href="/techniques/#techniques">All Techniques</a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="about-this-page">
+            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
+            </p>
+         </aside>
+         <main class="standalone-resource__main">
             <h1><span>Technique SCR32:</span>Providing client-side validation and adding error text via the DOM
             </h1>
             <aside class="box">
@@ -63,49 +64,42 @@
             </aside>
             <div class="excol-all"></div>
             <section id="description">
-               <details open="open">
-                  <summary>
-                     <h2>Description</h2>
-                  </summary>
-                  <p>The objective of this technique is to demonstrate the display of an error message
-                     when client side validation of a form field has failed. Anchor elements are used to
-                     display the error messages in a list and are inserted above the fields to be validated.
-                     Anchor elements are used in the error messages so that focus can be placed on the
-                     error message(s), drawing the user's attention to it. The <code class="att">href</code> of the anchor elements contain an in-page link which references the fields where
-                     error(s) have been found. 
-                  </p>
-                  <p>In a deployed application, if Javascript is turned off, client side validation will
-                     not occur. Therefore, this technique would only be sufficient in situations where
-                     scripting is relied upon for conformance or when server side validation techniques
-                     are also used to catch any errors and return the page with information about the fields
-                     with errors. 
-                  </p>
-               </details>
+               <h2>Description</h2>
+               <p>The objective of this technique is to demonstrate the display of an error message
+                  when client side validation of a form field has failed. Anchor elements are used to
+                  display the error messages in a list and are inserted above the fields to be validated.
+                  Anchor elements are used in the error messages so that focus can be placed on the
+                  error message(s), drawing the user's attention to it. The <code class="att">href</code> of the anchor elements contain an in-page link which references the fields where
+                  error(s) have been found. 
+               </p>
+               <p>In a deployed application, if Javascript is turned off, client side validation will
+                  not occur. Therefore, this technique would only be sufficient in situations where
+                  scripting is relied upon for conformance or when server side validation techniques
+                  are also used to catch any errors and return the page with information about the fields
+                  with errors. 
+               </p>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <section class="example" id="example-1">
-                     <h3>Example 1</h3>
-                     <p>This example validates required fields as well as fields where a specific format is
-                        required. When an error is identified, the script inserts a list of error messages
-                        into the DOM and moves focus to them.
-                     </p>
-                     <figure id="figure-form-errors">
-                        		<img src="img/form2.jpg" />
-                        		
-                        <figcaption>Figure 1 Screenshot showing the error messages for several fields that were not filled out
-                           correctly. Error messages appear as a list of links near the top of the form.
-                        </figcaption>
-                        	
-                     </figure>
-                     <p>
-                        <em>HTML and Javascript code </em>
-                        
-                     </p>
-                     <p>Here is the HTML for the example form: </p><pre xml:space="preserve">
+               <h2>Examples</h2>
+               <section class="example" id="example-1">
+                  <h3>Example 1</h3>
+                  <p>This example validates required fields as well as fields where a specific format is
+                     required. When an error is identified, the script inserts a list of error messages
+                     into the DOM and moves focus to them.
+                  </p>
+                  <figure id="figure-form-errors">
+                     		<img src="img/form2.jpg" />
+                     		
+                     <figcaption>Screenshot showing the error messages for several fields that were not filled out
+                        correctly. Error messages appear as a list of links near the top of the form.
+                     </figcaption>
+                     	
+                  </figure>
+                  <p>
+                     <em>HTML and Javascript code </em>
+                     
+                  </p>
+                  <p>Here is the HTML for the example form: </p><pre xml:space="preserve">
 &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd"&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -181,8 +175,8 @@
         &lt;/form&gt;
     &lt;/body&gt;
 &lt;/html&gt;                      </pre><p>Here is the Javascript which performs the validation and inserts the error messages:
-                        
-                     </p><pre xml:space="preserve">
+                     
+                  </p><pre xml:space="preserve">
 window.onload = initialise;
 
 function initialise()
@@ -460,86 +454,76 @@ function checkOptional(bValid, strValue, arClass)
    return bValid;
    }
    </pre><p class="working-example">Working example of this technique implemented using PHP, Javascript, CSS and XHTML:
-                        <a href="../../working-examples/script-form-validation-2/index.php">Form Validation Example</a>.
-                     </p>
-                  </section>
-               </details>
+                     <a href="../../working-examples/script-form-validation-2/index.php">Form Validation Example</a>.
+                  </p>
+               </section>
             </section>
             <section id="applicability">
-               <details>
-                  <summary>
-                     <h2 id="applicability">Applicability</h2>
-                  </summary>
-                  <p>Script used with HTML or XHTML.</p>
-               </details>
+               <h2 id="applicability">Applicability</h2>
+               <p>Script used with HTML or XHTML.</p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="/understanding/error-identification">3.3.1: Error Identification</a> (Sufficient)
+                  </li>
+                  <li><a href="/understanding/error-suggestion">3.3.3: Error Suggestion</a> (Sufficient)
+                  </li>
+               </ul>
             </section>
             <section id="tests">
-               <details>
-                  <summary>
-                     <h2>Tests</h2>
-                  </summary>
-                  <section class="procedure" id="procedure">
-                     <h3>Procedure</h3>
+               <h2>Tests</h2>
+               <section class="procedure" id="procedure">
+                  <h3>Procedure</h3>
+                  
+                  <p>Create error messages using anchor tags and appropriate scripting via the technique
+                     above. 
+                  </p>
+                  
+                  <ol>
                      
-                     <p>Create error messages using anchor tags and appropriate scripting via the technique
-                        above. 
+                     <li>Load the page.</li>
+                     
+                     <li>Enter a valid value in the field(s) associated with an error message and verify that
+                        no error messages are displayed. 
+                     </li>
+                     
+                     <li>Enter an invalid value in the field(s) associated with an error message and verify
+                        that the correct error message for the field is displayed. 
+                     </li>
+                     
+                     <li>Verify that the error messages receive focus.</li>
+                     
+                     <li>Enter a valid value in the field(s) associated with the displayed error message and
+                        verify that the error message is removed. 
+                     </li>
+                     
+                     <li>Repeat for all fields with associated error messages created via anchor tags. </li>
+                     
+                  </ol>
+                  
+                  <div class="note">
+                     
+                     <p>It is recommended that you also run the above procedure using an assistive technology.
+                        
                      </p>
                      
-                     <ol>
-                        
-                        <li>Load the page.</li>
-                        
-                        <li>Enter a valid value in the field(s) associated with an error message and verify that
-                           no error messages are displayed. 
-                        </li>
-                        
-                        <li>Enter an invalid value in the field(s) associated with an error message and verify
-                           that the correct error message for the field is displayed. 
-                        </li>
-                        
-                        <li>Verify that the error messages receive focus.</li>
-                        
-                        <li>Enter a valid value in the field(s) associated with the displayed error message and
-                           verify that the error message is removed. 
-                        </li>
-                        
-                        <li>Repeat for all fields with associated error messages created via anchor tags. </li>
-                        
-                     </ol>
+                  </div>
+                  
+               </section>
+               <section class="results" id="expected-results">
+                  <h3>Expected Results</h3>
+                  
+                  <ul>
                      
-                     <div class="note">
-                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                        <div>
-                           
-                           <p>It is recommended that you also run the above procedure using an assistive technology.
-                              
-                           </p>
-                           
-                        </div>
-                     </div>
+                     <li>Checks #2, #3, #4, and #5 are all true.</li>
                      
-                  </section>
-                  <section class="results" id="expected-results">
-                     <h3>Expected Results</h3>
-                     
-                     <ul>
-                        
-                        <li>Checks #2, #3, #4, and #5 are all true.</li>
-                        
-                     </ul>
-                     
-                  </section>
-               </details>
+                  </ul>
+                  
+               </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
-            </p>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -557,13 +541,14 @@ function checkOptional(bValid, strValue, arClass)
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -593,7 +578,7 @@ function checkOptional(bValid, strValue, arClass)
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

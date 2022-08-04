@@ -8,8 +8,10 @@
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,24 +30,42 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Techniques">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Techniques">
                <ul>
-                  <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
-                  <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a></li>
+                  <li><a href="/techniques/#techniques">All Techniques</a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="about-this-page">
+            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
+            </p>
+            <section id="resources">
+               <h3 style="margin-bottom: 0;">Other sources</h3>
+               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
+               <ul>
+                  
+                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/tables.html#h-11.2.1">Table Element</a>
+                     								       
+                  </li>
+                  
+                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/tables.html#h-11.2.5">Table rows: The TR element</a>
+                     								       
+                  </li>
+                  
+                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/tables.html#h-11.2.6">Table cells: The TH and TD elements</a>
+                     								       
+                  </li>
+                  
+               </ul>
+            </section>
+         </aside>
+         <main class="standalone-resource__main">
             <h1><span>Technique H51:</span>Using table markup to present tabular information
             </h1>
             <aside class="box">
@@ -60,59 +80,52 @@
             </aside>
             <div class="excol-all"></div>
             <section id="description">
-               <details open="open">
-                  <summary>
-                     <h2>Description</h2>
-                  </summary>
-                  <p>The objective of this technique is to present tabular information in a way that
-                     preserves relationships within the information even when users cannot see the table
-                     or
-                     the presentation format is changed. Information is considered tabular when logical
-                     relationships among text, numbers, images, or other data exist in two dimensions
-                     (vertical and horizontal). These relationships are represented in columns and rows,
-                     and
-                     the columns and rows must be recognizable in order for the logical relationships to
-                     be
-                     perceived.
-                  </p>
-                  <p>Using the <code class="el">table</code> element with the child elements <code class="el">tr</code>,
-                     <code class="el">th</code>, and <code class="el">td</code> makes these relationships perceivable. Techniques
-                     such as inserting tabs to create columns or using the <code class="el">pre</code> element are
-                     purely visual, and visually implied logical relationships are lost if the user cannot
-                     see the table or the visual presentation is changed.
-                  </p>
-                  <p>Simple tables generally have only one level of headers for columns and/or one level
-                     of headers on the rows. 
-                  </p>
-                  <p>Usually, for simple tables, row 1 column 1 is either blank or describes the contents
-                     of the entire column 1. Row 1 columns are not blank (i.e. they contain "column headings"),
-                     describe the contents of the entire column, and allow the reader to distinguish the
-                     difference in meaning between that column and other columns. 
-                  </p>
-                  <p>Column 1 rows are usually not blank, they often contain "row headings" which describe
-                     the contents of the entire row, and allow the reader to distinguish the difference
-                     in meaning between that row and the other rows. Otherwise, the Column 1 would contain
-                     simple data.
-                  </p>
-               </details>
+               <h2>Description</h2>
+               <p>The objective of this technique is to present tabular information in a way that
+                  preserves relationships within the information even when users cannot see the table
+                  or
+                  the presentation format is changed. Information is considered tabular when logical
+                  relationships among text, numbers, images, or other data exist in two dimensions
+                  (vertical and horizontal). These relationships are represented in columns and rows,
+                  and
+                  the columns and rows must be recognizable in order for the logical relationships to
+                  be
+                  perceived.
+               </p>
+               <p>Using the <code class="el">table</code> element with the child elements <code class="el">tr</code>,
+                  <code class="el">th</code>, and <code class="el">td</code> makes these relationships perceivable. Techniques
+                  such as inserting tabs to create columns or using the <code class="el">pre</code> element are
+                  purely visual, and visually implied logical relationships are lost if the user cannot
+                  see the table or the visual presentation is changed.
+               </p>
+               <p>Simple tables generally have only one level of headers for columns and/or one level
+                  of headers on the rows. 
+               </p>
+               <p>Usually, for simple tables, row 1 column 1 is either blank or describes the contents
+                  of the entire column 1. Row 1 columns are not blank (i.e. they contain "column headings"),
+                  describe the contents of the entire column, and allow the reader to distinguish the
+                  difference in meaning between that column and other columns. 
+               </p>
+               <p>Column 1 rows are usually not blank, they often contain "row headings" which describe
+                  the contents of the entire row, and allow the reader to distinguish the difference
+                  in meaning between that row and the other rows. Otherwise, the Column 1 would contain
+                  simple data.
+               </p>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <section class="example" id="example-1-a-schedule-marked-up-as-a-simple-data-table-with-column-and-row-headers">
-                     <h3>Example 1: A schedule marked up as a simple data table with column and row headers</h3>
-                     <p>This example uses markup for a simple data table. The first row shows the days of
-                        the week. Time intervals are shown in the first column. These cells are marked with
-                        the <code class="el">th</code> element. This identifies the days of the week as column headers
-                        and the time intervals as row headers.
-                     </p>
-                     <p>Screen readers speak header information that changes as the user navigates the
-                        table. Thus, when screen reader users move to left or right along a row, they will
-                        hear the day of the week (the column header) followed by the appointment (if any).
-                        They will hear the time interval as they move up or down within the same column.
-                     </p><pre xml:space="preserve"> &lt;table&gt;
+               <h2>Examples</h2>
+               <section class="example" id="example-1-a-schedule-marked-up-as-a-simple-data-table-with-column-and-row-headers">
+                  <h3>Example 1: A schedule marked up as a simple data table with column and row headers</h3>
+                  <p>This example uses markup for a simple data table. The first row shows the days of
+                     the week. Time intervals are shown in the first column. These cells are marked with
+                     the <code class="el">th</code> element. This identifies the days of the week as column headers
+                     and the time intervals as row headers.
+                  </p>
+                  <p>Screen readers speak header information that changes as the user navigates the
+                     table. Thus, when screen reader users move to left or right along a row, they will
+                     hear the day of the week (the column header) followed by the appointment (if any).
+                     They will hear the time interval as they move up or down within the same column.
+                  </p><pre xml:space="preserve"> &lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt; &lt;/td&gt;
     &lt;th&gt;Monday&lt;/th&gt;
@@ -138,85 +151,57 @@
     &lt;td&gt;Leave for San Antonio&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt; </pre></section>
-               </details>
             </section>
             <section id="applicability">
-               <details>
-                  <summary>
-                     <h2 id="applicability">Applicability</h2>
-                  </summary>
-                  <p>HTML and XHTML</p>
-               </details>
+               <h2 id="applicability">Applicability</h2>
+               <p>HTML and XHTML</p>
+               <p>This technique relates to <span><a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> (Sufficient when used with Making information and relationships conveyed through
+                     presentation programmatically
+                     determinable using the following techniques:
+                     )</span>.
+               </p>
             </section>
             <section id="tests">
-               <details>
-                  <summary>
-                     <h2>Tests</h2>
-                  </summary>
-                  <section class="procedure" id="procedure">
-                     <h3>Procedure</h3>
+               <h2>Tests</h2>
+               <section class="procedure" id="procedure">
+                  <h3>Procedure</h3>
+                  
+                  <ol>
                      
-                     <ol>
+                     <li>Check for the presence of tabular information.</li>
+                     
+                     <li>
                         
-                        <li>Check for the presence of tabular information.</li>
+                        <p>For each occurrence of tabular information: </p>
                         
-                        <li>
+                        <ol>
                            
-                           <p>For each occurrence of tabular information: </p>
+                           <li>Check that table markup with at least the elements <code class="el">table</code>,
+                              <code class="el">tr</code>, <code class="el">th</code>, and <code class="el">td</code> is used. 
+                           </li>
                            
-                           <ol>
-                              
-                              <li>Check that table markup with at least the elements <code class="el">table</code>,
-                                 <code class="el">tr</code>, <code class="el">th</code>, and <code class="el">td</code> is used. 
-                              </li>
-                              
-                           </ol>
-                           
-                        </li>
+                        </ol>
                         
-                     </ol>
+                     </li>
                      
-                  </section>
-                  <section class="results" id="expected-results">
-                     <h3>Expected Results</h3>
+                  </ol>
+                  
+               </section>
+               <section class="results" id="expected-results">
+                  <h3>Expected Results</h3>
+                  
+                  <ul>
                      
-                     <ul>
-                        
-                        <li>All checks above are true.</li>
-                        
-                     </ul>
+                     <li>All checks above are true.</li>
                      
-                  </section>
-               </details>
+                  </ul>
+                  
+               </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
-            </p>
-            <section id="resources">
-               <h3 style="margin-bottom: 0;">Other sources</h3>
-               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-               <ul>
-                  
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/tables.html#h-11.2.1">Table Element</a>
-                     								       
-                  </li>
-                  
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/tables.html#h-11.2.5">Table rows: The TR element</a>
-                     								       
-                  </li>
-                  
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/tables.html#h-11.2.6">Table cells: The TH and TD elements</a>
-                     								       
-                  </li>
-                  
-               </ul>
-            </section>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -234,13 +219,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -270,7 +256,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

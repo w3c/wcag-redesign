@@ -8,8 +8,10 @@
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,24 +30,32 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Techniques">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Techniques">
                <ul>
-                  <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
-                  <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a></li>
+                  <li><a href="/techniques/#techniques">All Techniques</a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="about-this-page">
+            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
+            </p>
+            <section id="resources">
+               <h3 style="margin-bottom: 0;">Other sources</h3>
+               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
+               <ul>
+                  				
+                  <li>Link</li>
+                  			
+               </ul>
+            </section>
+         </aside>
+         <main class="standalone-resource__main">
             <h1><span>Technique G217:</span>Providing a mechanism to allow users to remap or turn off character key shortcuts
             </h1>
             <aside class="box">
@@ -60,127 +70,95 @@
             </aside>
             <div class="excol-all"></div>
             <section id="description">
-               <details open="open">
-                  <summary>
-                     <h2>Description</h2>
-                  </summary>
-                  <p>Some authors provide shortcuts in their applications to allow for faster user interaction.
-                     However, where such shortcuts involve only character keys (letters, numbers, punctuation
-                     or symbol characters) without modifiers, they create challenges for speech input users
-                     as well as some keyboard users who lack the ability to type accurately.
-                  </p>
-                  <p>To prevent accidental activation, authors must allow users to turn off or reconfigure
-                     shortcuts that are made up of only character keys. Reconfiguring the shortcut may
-                     involve the ability to add a modifier key such as Ctrl, or authors may elect to allow
-                     users to alter the character keys assigned in addition to adding a modifer. Providing
-                     a mechanism to turn off or reassign the shortcut ensures more users can successfully
-                     interact with the application.
-                  </p>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                     <p>If the keyboard shortcut is only active when a particular user interface component
-                        has focus, then the author does not need to provide an override mechanism. For example,
-                        in a <code>select</code> element, it is expected behaviour that pressing a letter key will reposition to the
-                        next item within the select element that begins with that character. This shortcut
-                        is only triggered when the select element has focus, and so it does not interfere
-                        with a user's ability to interact with the rest of the page.
-                     </p>
-                  </div>
-                  <p>An initial challenge for testers is identifying if author-created shortcuts exist,
-                     and then determining if existing shortcuts are triggered by character keys without
-                     modifiers. Where testers have access to the develop team, the existence and nature
-                     of shortcut keys can often be determined simply by asking involved designers and developers.
-                     Where reliable information from the authors is not available, the presence of shortcuts
-                     can possibly be identified by checking code (for example, in javascript, the presence
-                     of <code>keydown</code>, <code>keyup</code> and <code>keypress</code> listeners). Another means of identifying shortcuts is to review documentation. Where
-                     none of these strategies provide information on the presence of keyboard shortcuts,
-                     manual tests will need to be completed to search for the existence of character key
-                     shortcuts. Review the test procedure in <a href="/techniques/failures/F99">F99: Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that
-                        cannot be turned off or remapped</a> for guidance.
-                  </p>
-               </details>
+               <h2>Description</h2>
+               <p>Some authors provide shortcuts in their applications to allow for faster user interaction.
+                  However, where such shortcuts involve only character keys (letters, numbers, punctuation
+                  or symbol characters) without modifiers, they create challenges for speech input users
+                  as well as some keyboard users who lack the ability to type accurately.
+               </p>
+               <p>To prevent accidental activation, authors must allow users to turn off or reconfigure
+                  shortcuts that are made up of only character keys. Reconfiguring the shortcut may
+                  involve the ability to add a modifier key such as Ctrl, or authors may elect to allow
+                  users to alter the character keys assigned in addition to adding a modifer. Providing
+                  a mechanism to turn off or reassign the shortcut ensures more users can successfully
+                  interact with the application.
+               </p>
+               <p class="note">If the keyboard shortcut is only active when a particular user interface component
+                  has focus, then the author does not need to provide an override mechanism. For example,
+                  in a <code>select</code> element, it is expected behaviour that pressing a letter key will reposition to the
+                  next item within the select element that begins with that character. This shortcut
+                  is only triggered when the select element has focus, and so it does not interfere
+                  with a user's ability to interact with the rest of the page.
+               </p>
+               <p>An initial challenge for testers is identifying if author-created shortcuts exist,
+                  and then determining if existing shortcuts are triggered by character keys without
+                  modifiers. Where testers have access to the develop team, the existence and nature
+                  of shortcut keys can often be determined simply by asking involved designers and developers.
+                  Where reliable information from the authors is not available, the presence of shortcuts
+                  can possibly be identified by checking code (for example, in javascript, the presence
+                  of <code>keydown</code>, <code>keyup</code> and <code>keypress</code> listeners). Another means of identifying shortcuts is to review documentation. Where
+                  none of these strategies provide information on the presence of keyboard shortcuts,
+                  manual tests will need to be completed to search for the existence of character key
+                  shortcuts. Review the test procedure in <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F99">failure technique F99</a> for guidance.
+               </p>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <section class="example" id="example-1-author-provides-a-simple-mechanism-to-disable-shortcuts-in-a-web-based-email-client">
-                     <h3>Example 1: Author provides a simple mechanism to disable shortcuts in a web-based
-                        email client
-                     </h3>
-                     <p>An email client contains single-character shortcuts so that keyboard users can more
-                        rapidly interact with the application (e.g., the R key replies to the current item
-                        in the inbox, the D key deletes it, the S key stars it). These keys do not apply while
-                        users are composing emails; however, users may become confused about whether the keyboard
-                        focus is in a compose pane or the inbox and, while in the inbox, inadvertently delete
-                        a message by trying to compose a word containing the letter D. To overcome this problem,
-                        the author provides a toggle button for the shortcuts, allowing users to easily turn
-                        them off or on.
-                     </p>
-                  </section>
-                  <section class="example" id="example-2-author-provides-a-menu-option-where-users-can-remap-shortcuts">
-                     <h3>Example 2: Author provides a menu option where users can remap shortcuts</h3>
-                     <p>A web-based application has single-character shortcuts for functions which are different
-                        than those a user regularly uses with a software application installed locally. Since
-                        the author has provided a menu where the user can reassign both the shortcut keys
-                        and the modifiers, the user is able to reassign the shortcut to a familiar combination.
-                     </p>
-                  </section>
-               </details>
+               <h2>Examples</h2>
+               <section class="example" id="example-1-author-provides-a-simple-mechanism-to-disable-shortcuts-in-a-web-based-email-client">
+                  <h3>Example 1: Author provides a simple mechanism to disable shortcuts in a web-based
+                     email client
+                  </h3>
+                  <p>An email client contains single-character shortcuts so that keyboard users can more
+                     rapidly interact with the application (e.g., the R key replies to the current item
+                     in the inbox, the D key deletes it, the S key stars it). These keys do not apply while
+                     users are composing emails; however, users may become confused about whether the keyboard
+                     focus is in a compose pane or the inbox and, while in the inbox, inadvertently delete
+                     a message by trying to compose a word containing the letter D. To overcome this problem,
+                     the author provides a toggle button for the shortcuts, allowing users to easily turn
+                     them off or on.
+                  </p>
+               </section>
+               <section class="example" id="example-2-author-provides-a-menu-option-where-users-can-remap-shortcuts">
+                  <h3>Example 2: Author provides a menu option where users can remap shortcuts</h3>
+                  <p>A web-based application has single-character shortcuts for functions which are different
+                     than those a user regularly uses with a software application installed locally. Since
+                     the author has provided a menu where the user can reassign both the shortcut keys
+                     and the modifiers, the user is able to reassign the shortcut to a familiar combination.
+                  </p>
+               </section>
             </section>
             <section id="applicability">
-               <details>
-                  <summary>
-                     <h2 id="applicability">Applicability</h2>
-                  </summary>
-                  <p>Content implemented in any technology.</p>
-               </details>
+               <h2 id="applicability">Applicability</h2>
+               <p>Content implemented in any technology.</p>
+               <p>This technique relates to <span><a href="/understanding/character-key-shortcuts">2.1.4: Character Key Shortcuts</a> (Sufficient)</span>.
+               </p>
             </section>
             <section id="tests">
-               <details>
-                  <summary>
-                     <h2>Tests</h2>
-                  </summary>
-                  <section class="test-procedure">
-                     <h3>Procedure</h3>
-                     <p>For each character key shortcut:</p>
-                     <ol>
-                        					
-                        <li>Determine if the user has the ability either to turn off the shortcut or to remap
-                           it to a combination that includes one or more modifier keys.
-                        </li>
-                        				
-                     </ol>
-                  </section>
-                  <section class="test-results">
-                     <h3>Expected Results</h3>
-                     <ul>
-                        					
-                        <li>#1 is true.</li>
-                        				
-                     </ul>
-                  </section>
-               </details>
+               <h2>Tests</h2>
+               <section class="test-procedure">
+                  <h3>Procedure</h3>
+                  <p>For each character key shortcut:</p>
+                  <ol>
+                     					
+                     <li>Determine if the user has the ability either to turn off the shortcut or to remap
+                        it to a combination that includes one or more modifier keys.
+                     </li>
+                     				
+                  </ol>
+               </section>
+               <section class="test-results">
+                  <h3>Expected Results</h3>
+                  <ul>
+                     					
+                     <li>#1 is true.</li>
+                     				
+                  </ul>
+               </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
-            </p>
-            <section id="resources">
-               <h3 style="margin-bottom: 0;">Other sources</h3>
-               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-               <ul>
-                  				
-                  <li>Link</li>
-                  			
-               </ul>
-            </section>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -198,13 +176,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -234,7 +213,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

@@ -8,8 +8,10 @@
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,24 +30,40 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Techniques">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Techniques">
                <ul>
-                  <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
-                  <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a></li>
+                  <li><a href="/techniques/#techniques">All Techniques</a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="about-this-page">
+            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
+            </p>
+            <section id="resources">
+               <h3 style="margin-bottom: 0;">Other sources</h3>
+               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
+               <ul>
+                  
+                  <li>
+                     <a href="https://www.w3.org/TR/wai-aria-1.1/#states_and_properties">Supported States and Properties: WAI-ARIA 1.1</a>
+                     
+                  </li>
+                  
+                  <li>
+                     	<a href="http://www.deque.com/blog/aria-invalid-error-indication/">Using Aria-invalid for Error Indication</a>
+                     
+                  </li>
+                  
+               </ul>
+            </section>
+         </aside>
+         <main class="standalone-resource__main">
             <h1><span>Technique ARIA21:</span>Using Aria-Invalid to Indicate An Error Field
             </h1>
             <aside class="box">
@@ -60,61 +78,51 @@
             </aside>
             <div class="excol-all"></div>
             <section id="description">
-               <details open="open">
-                  <summary>
-                     <h2>Description</h2>
-                  </summary>
-                  <p>This technique demonstrates how <code class="att">aria-invalid</code> may be employed to specifically identify fields that have failed validation. Its
-                     use is most suitable when:
+               <h2>Description</h2>
+               <p>This technique demonstrates how <code class="att">aria-invalid</code> may be employed to specifically identify fields that have failed validation. Its
+                  use is most suitable when:
+               </p>
+               <ul>
+                  
+                  <li>The error description does not programmatically identify the failed fields</li>
+                  
+                  <li>The failed fields are identified in a manner that is not available to some users -
+                     for example by using an error-icon rendered visually by some technique that does not
+                     rely on color such as a visual cue like a border.
+                  </li>
+                  
+               </ul>
+               <div class="note">
+                  <p>One of the above two situations may be true for a field which has programmatically
+                     associated label and / or instructions that conveys data format, a data range, or
+                     the <code class="prop">required</code> property.
                   </p>
-                  <ul>
-                     
-                     <li>The error description does not programmatically identify the failed fields</li>
-                     
-                     <li>The failed fields are identified in a manner that is not available to some users -
-                        for example by using an error-icon rendered visually by some technique that does not
-                        rely on color such as a visual cue like a border.
-                     </li>
-                     
-                  </ul>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                     <div>
-                        <p>One of the above two situations may be true for a field which has programmatically
-                           associated label and / or instructions that conveys data format, a data range, or
-                           the <code class="prop">required</code> property.
-                        </p>
-                     </div>
-                  </div>
-                  <p>While it is always preferable to programmatically associate specific error description
-                     with the failed field, the page's design or the framework employed may sometimes constrain
-                     the author's ability to do so. In these cases, authors may programmatically set <code class="att">aria-invalid</code> to "true" on the fields that have failed validation. This is interpretable mainly
-                     by assistive technologies (like screen readers / screen magnifiers) employed by users
-                     who are vision impaired. When a field has <code class="att">aria-invalid</code> set to “true”, VoiceOver in Safari announces “invalid data” when the field gets focus;
-                     JAWS and NVDA notify the error as an “invalid entry”.
-                  </p>
-                  <p>This ARIA attribute has to be set / turned on programmatically. It should not be set
-                     to “true” before input validation is performed or the form is submitted. Setting <code class="att">aria-invalid</code> to “false” is the same as not placing the attribute for the form control at all.
-                     Quite understandably, nothing is conveyed by assistive technology to users in this
-                     case.
-                  </p>
-                  <p>When visible text is used to programmatically identify a failed field and / or convey
-                     how the error can be corrected, setting <code class="att">aria-invalid</code> to "true" is not required from a strict compliance standpoint but may still provide
-                     helpful information for users.
-                  </p>
-               </details>
+               </div>
+               <p>While it is always preferable to programmatically associate specific error description
+                  with the failed field, the page's design or the framework employed may sometimes constrain
+                  the author's ability to do so. In these cases, authors may programmatically set <code class="att">aria-invalid</code> to "true" on the fields that have failed validation. This is interpretable mainly
+                  by assistive technologies (like screen readers / screen magnifiers) employed by users
+                  who are vision impaired. When a field has <code class="att">aria-invalid</code> set to “true”, VoiceOver in Safari announces “invalid data” when the field gets focus;
+                  JAWS and NVDA notify the error as an “invalid entry”.
+               </p>
+               <p>This ARIA attribute has to be set / turned on programmatically. It should not be set
+                  to “true” before input validation is performed or the form is submitted. Setting <code class="att">aria-invalid</code> to “false” is the same as not placing the attribute for the form control at all.
+                  Quite understandably, nothing is conveyed by assistive technology to users in this
+                  case.
+               </p>
+               <p>When visible text is used to programmatically identify a failed field and / or convey
+                  how the error can be corrected, setting <code class="att">aria-invalid</code> to "true" is not required from a strict compliance standpoint but may still provide
+                  helpful information for users.
+               </p>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <section class="example" id="example-1-using-aria-invalid-on-required-fields">
-                     <h3>Example 1: Using aria-invalid on required fields</h3>
-                     <p>The <code class="att">aria-invalid</code> attribute is used on required fields that have no input. A message above the form
-                        conveys that form submission has failed due to this.
-                     </p>
-                     <p>A portion of the jQuery code and the HTML form markup follow:</p><pre xml:space="preserve">
+               <h2>Examples</h2>
+               <section class="example" id="example-1-using-aria-invalid-on-required-fields">
+                  <h3>Example 1: Using aria-invalid on required fields</h3>
+                  <p>The <code class="att">aria-invalid</code> attribute is used on required fields that have no input. A message above the form
+                     conveys that form submission has failed due to this.
+                  </p>
+                  <p>A portion of the jQuery code and the HTML form markup follow:</p><pre xml:space="preserve">
 &lt;code&gt;
 &lt;script&gt;
 ...
@@ -157,18 +165,18 @@ label.failed {
   &lt;/p&gt;
 &lt;/form&gt;
 &lt;/code&gt;            </pre><p class="working-example"><a href="../../working-examples/aria-invalid-required-fields/">Working example: Using aria-invalid on required fields</a>.
-                     </p>
-                  </section>
-                  <section class="example" id="example-2-identifying-errors-in-data-format">
-                     <h3>Example 2: Identifying errors in data format</h3>
-                     <p><code class="att">Aria-invalid</code> and <code class="att">aria-describedby</code> are used together to indicate an error when the personal identification number (PIN),
-                        email address, or start date are not in the expected format. The error message is
-                        associated with the field using <code class="att">aria-describedby</code>, and <code class="att">aria-invalid</code> makes it easier to programmatically find fields with errors.
-                     </p>
-                     <p>Below is the rendered HTML code for the email address field in Example 1: When an
-                        invalid email address is entered by the user such as "samexample.com" (instead of
-                        sam@example.com), the HTML code is:
-                     </p><pre xml:space="preserve">
+                  </p>
+               </section>
+               <section class="example" id="example-2-identifying-errors-in-data-format">
+                  <h3>Example 2: Identifying errors in data format</h3>
+                  <p><code class="att">Aria-invalid</code> and <code class="att">aria-describedby</code> are used together to indicate an error when the personal identification number (PIN),
+                     email address, or start date are not in the expected format. The error message is
+                     associated with the field using <code class="att">aria-describedby</code>, and <code class="att">aria-invalid</code> makes it easier to programmatically find fields with errors.
+                  </p>
+                  <p>Below is the rendered HTML code for the email address field in Example 1: When an
+                     invalid email address is entered by the user such as "samexample.com" (instead of
+                     sam@example.com), the HTML code is:
+                  </p><pre xml:space="preserve">
 &lt;div class="control"&gt;
 &lt;p&gt;&lt;label for="email"&gt;Email address: [*]&lt;/label&gt; 
 &lt;input type="text" name="email" id="email" class="error" aria-invalid="true" aria-describedBy="err_1" /&gt;&lt;/p&gt; 
@@ -180,10 +188,10 @@ label.failed {
 &lt;span class="errtext" id="err_2"&gt;
  Error: Input data missing&lt;/span&gt;
 &lt;/div&gt;            </pre><p>jQuery code: jQuery is used to add aria-invalid or aria-describedby attributes as
-                        well as the class attribute and append the error text. This is the code that inserts
-                        aria-invalid and class="error" but does not associate the error text "incorrect data"
-                        with the control programmatically:
-                     </p><pre xml:space="preserve">
+                     well as the class attribute and append the error text. This is the code that inserts
+                     aria-invalid and class="error" but does not associate the error text "incorrect data"
+                     with the control programmatically:
+                  </p><pre xml:space="preserve">
 $(errFld).attr("aria-invalid", "true").attr("class", "error");
 // Suffix error text: 
 $(errFld).parent().append('&lt;span class="errtext"&gt;Error: Incorrect data&lt;/span&gt;');
@@ -197,83 +205,54 @@ span.errtext {
 	background-repeat:no-repeat; 	background-position:right;	
 }
             </pre><p class="working-example"><a href="../../working-examples/aria-invalid-data-format/">Working example: Identifying errors in data format</a>.
-                     </p>
-                  </section>
-               </details>
+                  </p>
+               </section>
             </section>
             <section id="applicability">
-               <details>
-                  <summary>
-                     <h2 id="applicability">Applicability</h2>
-                  </summary>
-                  <p>HTML with <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications</a>.
-                  </p>
-               </details>
+               <h2 id="applicability">Applicability</h2>
+               <p>HTML with <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications</a>.
+               </p>
+               <p>This technique relates to <span><a href="/understanding/error-identification">3.3.1: Error Identification</a> (Sufficient)</span>.
+               </p>
             </section>
             <section id="tests">
-               <details>
-                  <summary>
-                     <h2>Tests</h2>
-                  </summary>
-                  <section class="procedure" id="procedure">
-                     <h3>Procedure</h3>
+               <h2>Tests</h2>
+               <section class="procedure" id="procedure">
+                  <h3>Procedure</h3>
+                  
+                  <p>For each form control that relies on <code class="att">aria-invalid</code> to convey a validation failure:
+                  </p>
+                  
+                  <ol>
                      
-                     <p>For each form control that relies on <code class="att">aria-invalid</code> to convey a validation failure:
-                     </p>
+                     <li>Check that <code class="att">aria-invalid</code> is not set to true when a validation failure does not exist.
+                     </li>
                      
-                     <ol>
-                        
-                        <li>Check that <code class="att">aria-invalid</code> is not set to true when a validation failure does not exist.
-                        </li>
-                        
-                        <li>Check that <code class="att">aria-invalid</code> is set to true when a validation failure does exist.
-                        </li>
-                        
-                        <li>Check that the programmatically associated labels / programmatically associated instructional
-                           text for the field provide enough information to understand the error.
-                        </li>
-                        
-                     </ol>
+                     <li>Check that <code class="att">aria-invalid</code> is set to true when a validation failure does exist.
+                     </li>
                      
-                  </section>
-                  <section class="results" id="expected-results">
-                     <h3>Expected Results</h3>
+                     <li>Check that the programmatically associated labels / programmatically associated instructional
+                        text for the field provide enough information to understand the error.
+                     </li>
                      
-                     <ul>
-                        
-                        <li>Checks #1-3 are true.</li>
-                        
-                     </ul>
+                  </ol>
+                  
+               </section>
+               <section class="results" id="expected-results">
+                  <h3>Expected Results</h3>
+                  
+                  <ul>
                      
-                  </section>
-               </details>
+                     <li>Checks #1-3 are true.</li>
+                     
+                  </ul>
+                  
+               </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
-            </p>
-            <section id="resources">
-               <h3 style="margin-bottom: 0;">Other sources</h3>
-               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-               <ul>
-                  
-                  <li>
-                     <a href="https://www.w3.org/TR/wai-aria-1.1/#states_and_properties">Supported States and Properties: WAI-ARIA 1.1</a>
-                     
-                  </li>
-                  
-                  <li>
-                     	<a href="http://www.deque.com/blog/aria-invalid-error-indication/">Using Aria-invalid for Error Indication</a>
-                     
-                  </li>
-                  
-               </ul>
-            </section>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -291,13 +270,14 @@ span.errtext {
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -327,7 +307,7 @@ span.errtext {
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

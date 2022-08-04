@@ -8,8 +8,10 @@
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Understanding documents</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,287 +30,578 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Understanding documents">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Understanding Docs">
                <ul>
-                  <li class="nav__item"><a href=".">
-                        										All Understanding documents</a></li>
-                  <li class="nav__item"><a href="/understanding/about">About Understanding documents</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                  <li><a href=".">
+                        								All Understanding Docs
+                        							</a></li>
+                  <li><a href="predictable" aria-current="page" class="active">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Guideline: Predictable</a></li>
+                  <li></li>
+                  <li><a href="on-input">Next SC: On Input
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
-            <h1><span class="standalone-resource__type-of-guidance">Understanding:</span>Success Criterion 3.2.1: On Focus
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Page Contents</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#intent">Intent</a></li>
+                     <li><a href="#benefits">Benefits</a></li>
+                     <li><a href="#examples">Examples</a></li>
+                     <li><a href="#techniques">Techniques</a></li>
+                     <li><a href="#key-terms">Key Terms</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Understanding SC 3.2.1:</span>On Focus (Level A)
             </h1>
-            <blockquote class="scquote">
-               <p>Success Criterion <a href="/guidelines/#on-focus" style="font-weight: bold;">3.2.1 On Focus</a> (Level A): When any <a href="#dfn-user-interface-component">user interface component</a> receives focus, it does not initiate a <a href="#dfn-changes-of-context">change of context</a>.
-                  
-               </p>
-            </blockquote>
+            <aside class="box">
+               <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
+               <div class="box-i">
+                  <p>When any <a href="#dfn-user-interface-component">user interface component</a> receives focus, it does not initiate a <a href="#dfn-changes-of-context">change of context</a>.
+                     
+                  </p>
+               </div>
+            </aside>
             <div class="excol-all"></div>
             <section id="intent">
-               <details>
-                  <summary>
-                     <h2>Intent</h2>
-                  </summary>
-                  <p>The intent of this Success Criterion is to ensure that functionality is predictable
-                     as visitors navigate their way through a document. Any component that is able to trigger
-                     an event when it receives focus must not change the context.          Examples of
-                     changing context when a component receives focus include, but are not limited to:
-                     
+               <h2>Intent</h2>
+               <p>The intent of this Success Criterion is to ensure that functionality is predictable
+                  as visitors navigate their way through a document. Any component that is able to trigger
+                  an event when it receives focus must not change the context.          Examples of
+                  changing context when a component receives focus include, but are not limited to:
+                  
+                  
+               </p>
+               <ul>
+                  
+                  
+                  <li>forms submitted automatically when a component receives focus;</li>
+                  
+                  
+                  <li>new windows launched when a component receives focus;</li>
+                  
+                  
+                  <li>focus is changed to another component when that component receives focus;</li>
+                  
+                  
+               </ul>
+               <p>Focus may be moved to a control either via the keyboard (e.g. tabbing to a control)
+                  or the mouse (e.g. clicking on a text field). Moving the mouse over a control does
+                  not move the focus
+                  unless scripting implements this behavior. Note that for some types of controls, clicking
+                  on a control may also activate the control (e.g. button), which may, in turn, initiate
+                  a change in context.
+                  					
+                  
+               </p>
+               <div class="note">
+                  
+                  
+                  <p>What is meant by "component" here is also sometimes called "user interface element"
+                     or "user interface component".
                      
                   </p>
-                  <ul>
-                     
-                     
-                     <li>forms submitted automatically when a component receives focus;</li>
-                     
-                     
-                     <li>new windows launched when a component receives focus;</li>
-                     
-                     
-                     <li>focus is changed to another component when that component receives focus;</li>
-                     
-                     
-                  </ul>
-                  <p>Focus may be moved to a control either via the keyboard (e.g. tabbing to a control)
-                     or the mouse (e.g. clicking on a text field). Moving the mouse over a control does
-                     not move the focus
-                     unless scripting implements this behavior. Note that for some types of controls, clicking
-                     on a control may also activate the control (e.g. button), which may, in turn, initiate
-                     a change in context.
-                     					
-                     
-                  </p>
-                  <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                     <div>
-                        
-                        
-                        <p>What is meant by "component" here is also sometimes called "user interface element"
-                           or "user interface component''.
-                           
-                        </p>
-                        
-                        
-                     </div>
-                  </div>
-               </details>
+                  
+                  
+               </div>
             </section>
             <section id="benefits">
-               <details>
-                  <summary>
-                     <h2>Benefits</h2>
-                  </summary>
-                  <ul>
+               <h2>Benefits</h2>
+               <ul>
+                  
+                  
+                  <li>This Success Criterion helps people with visual disabilities, cognitive limitations,
+                     and motor impairments by reducing the chance that a change of context will occur unexpectedly.
                      
-                     
-                     <li>This Success Criterion helps people with visual disabilities, cognitive limitations,
-                        and motor impairments by reducing the chance that a change of context will occur unexpectedly.
-                        
-                     </li>
-                     
-                     
-                  </ul>
-               </details>
+                  </li>
+                  
+                  
+               </ul>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
+               <h2>Examples</h2>
+               <ul>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>
+                        								       
+                        <strong>Example 1:  A dropdown menu</strong>
+                        							     
+                        
+                     </p>
+                     
+                     
+                     <p>A dropdown menu on a page allows users to choose between jump destinations. If the
+                        person uses the keyboard to move down to a choice and activates it (with a spacebar
+                        or enter key) it will jump to a new page.  However, if the person moves down to a
+                        choice and either hits the escape or the tab key to move out of the pulldown menu
+                        – it does not jump to a new screen as the focus shifts out of the dropdown menu. 
+                        
+                     </p>
+                     
+                     
+                  </li>
+                  
+                  
+                  <li>
+                     
+                     
+                     <p>
+                        								       
+                        <strong>
+                           Example of a Failure:  A help dialog
+                           
+                           </strong>
+                        							     
+                        
+                     </p>
+                     
+                     
+                     <p>
+                        When a field receives focus, a help dialog window describing the field and providing
+                        options opens. As a keyboard user tabs through the Web page, the dialog opens, moving
+                        the keyboard focus away from the control every time the user attempts to tab past
+                        the field.
+                        
+                        
+                     </p>
+                     
+                     
+                  </li>
+                  
+                  
+               </ul>
+            </section>
+            <section id="techniques">
+               <h2>Techniques</h2>
+               <p>Each numbered item in this section represents a technique or combination of techniques
+                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                  it is not necessary to use these particular techniques. For information on using other
+                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+               </p>
+               <section id="sufficient">
+                  <h3>Sufficient Techniques</h3>
+                  <ol>
+                     
+                     
+                     <li>
+                        									         
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G107" class="general">Using "activate" rather than "focus" as a trigger for changes of context</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                  </ol>
+                  <div class="note">
+                     
+                     
+                     <p>A change of content is not always a 
+                        <a href="#dfn-changes-of-context">change of context</a>. This success criterion is automatically met if changes in content are not also changes
+                        of context.
+                        
+                     </p>
+                     
+                     
+                  </div>
+               </section>
+               <section id="advisory">
+                  <h3>Advisory Techniques</h3>
+                  <p>Although not required for conformance, the following additional techniques should
+                     be considered in order to make content more accessible. Not all techniques can be
+                     used or would be effective in all situations.
+                  </p>
                   <ul>
                      
                      
                      <li>
-                        
-                        
-                        <p>
-                           								       
-                           <strong>Example 1:  A dropdown menu</strong>
-                           							     
-                           
-                        </p>
-                        
-                        
-                        <p>A dropdown menu on a page allows users to choose between jump destinations. If the
-                           person uses the keyboard to move down to a choice and activates it (with a spacebar
-                           or enter key) it will jump to a new page.  However, if the person moves down to a
-                           choice and either hits the escape or the tab key to move out of the pulldown menu
-                           – it does not jump to a new screen as the focus shifts out of the dropdown menu. 
-                           
-                        </p>
-                        
+                        									         
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G200" class="general">Opening new windows and tabs from a link only when necessary</a>
+                        								       
                         
                      </li>
                      
                      
                      <li>
-                        
-                        
-                        <p>
-                           								       
-                           <strong>
-                              Example of a Failure:  A help dialog
-                              
-                              </strong>
-                           							     
-                           
-                        </p>
-                        
-                        
-                        <p>
-                           When a field receives focus, a help dialog window describing the field and providing
-                           options opens. As a keyboard user tabs through the Web page, the dialog opens, moving
-                           the keyboard focus away from the control every time the user attempts to tab past
-                           the field.
-                           
-                           
-                        </p>
-                        
+                        									         
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G201" class="general">Giving users advanced warning when opening a new window</a>
+                        								       
                         
                      </li>
                      
                      
                   </ul>
-               </details>
+               </section>
+               <section id="failure">
+                  <h3>Failures</h3>
+                  <p>The following are common mistakes that are considered failures of this Success Criterion
+                     by the WCAG Working Group.
+                  </p>
+                  <ul>
+                     
+                     
+                     <li>
+                        									         
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F55" class="failure">Failure due to using script to remove focus when focus is received</a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                  </ul>
+               </section>
             </section>
-            <section id="techniques">
+            <section id="key-terms">
                <details>
                   <summary>
-                     <h2>Techniques</h2>
+                     <h2>Key Terms</h2>
                   </summary>
-                  <p>Each numbered item in this section represents a technique or combination of techniques
-                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                     it is not necessary to use these particular techniques. For information on using other
-                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-                  </p>
-                  <section id="sufficient">
-                     <h3>Sufficient Techniques</h3>
-                     <ol>
+                  <dt id="dfn-assistive-technology">assistive technology</dt>
+                  <dd>
+                     <definition xmlns="">
                         
                         
-                        <li>
-                           									         
-                           <a class="general" href="/techniques/general/G107">G107: Using "activate" rather than "focus" as a trigger for changes of context</a>
-                           								       
+                        <p xmlns="http://www.w3.org/1999/xhtml">hardware and/or software that acts as a <a href="#dfn-user-agent">user agent</a>, or along with a mainstream user agent, to provide functionality to meet the requirements
+                           of users with disabilities that go beyond those offered by mainstream user agents
                            
-                        </li>
+                        </p>
                         
                         
-                     </ol>
-                     <div class="note">
-                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                        <div>
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
+                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                           voice), additional navigation or orientation mechanisms, and content transformations
+                           (e.g., to make tables more accessible).
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
+                           by using and monitoring APIs.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
+                           Many mainstream user agents provide some features to assist individuals with disabilities.
+                           The basic difference is that mainstream user agents target broad and diverse audiences
+                           that usually include people with and without disabilities. Assistive technologies
+                           target narrowly defined populations of users with specific disabilities. The assistance
+                           provided by an assistive technology is more specific and appropriate to the needs
+                           of its target users. The mainstream user agent may provide important functionality
+                           to assistive technologies like retrieving Web content from program objects or parsing
+                           markup into identifiable bundles.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
+                           the following:
+                           
+                        </p>
+                        
+                        
+                        <ul xmlns="http://www.w3.org/1999/xhtml">
                            
                            
-                           <p>A change of content is not always a 
-                              <a href="#dfn-changes-of-context">change of context</a>. This success criterion is automatically met if changes in content are not also changes
-                              of context.
+                           <li>screen magnifiers, and other visual reading assistants, which are used by people with
+                              visual, perceptual and physical print disabilities to change text font, size, spacing,
+                              color, synchronization with speech, etc. in order to improve the visual readability
+                              of rendered text and images;
                               
-                           </p>
+                           </li>
                            
                            
-                        </div>
-                     </div>
-                  </section>
-                  <section id="advisory">
-                     <h3>Advisory Techniques</h3>
-                     <p>Although not required for conformance, the following additional techniques should
-                        be considered in order to make content more accessible. Not all techniques can be
-                        used or would be effective in all situations.
-                     </p>
-                     <ul>
-                        
-                        
-                        <li>
-                           									         
-                           <a class="general" href="/techniques/general/G200">G200: Opening new windows and tabs from a link only when necessary</a>
-                           								       
+                           <li>screen readers, which are used by people who are blind to read textual information
+                              through synthesized speech or braille;
+                              
+                           </li>
                            
-                        </li>
-                        
-                        
-                        <li>
-                           									         
-                           <a class="general" href="/techniques/general/G201">G201: Giving users advanced warning when opening a new window</a>
-                           								       
                            
-                        </li>
-                        
-                        
-                     </ul>
-                  </section>
-                  <section id="failure">
-                     <h3>Failures</h3>
-                     <p>The following are common mistakes that are considered failures of this Success Criterion
-                        by the WCAG Working Group.
-                     </p>
-                     <ul>
-                        
-                        
-                        <li>
-                           									         
-                           <a class="failure" href="/techniques/failures/F55">F55:  Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove
-                              focus when focus is received</a>
-                           								       
+                           <li>text-to-speech software, which is used by some people with cognitive, language, and
+                              learning disabilities to convert text into synthetic speech;
+                              
+                           </li>
                            
-                        </li>
+                           
+                           <li>speech recognition software, which may be used by people who have some physical disabilities;</li>
+                           
+                           
+                           <li>alternative keyboards, which are used by people with certain physical disabilities
+                              to simulate the keyboard (including alternate keyboards that use head pointers, single
+                              switches, sip/puff and other special input devices.);
+                              
+                           </li>
+                           
+                           
+                           <li>alternative pointing devices, which are used by people with certain physical disabilities
+                              to simulate mouse pointing and button activations.
+                              
+                           </li>
+                           
+                           
+                        </ul>
                         
                         
-                     </ul>
-                  </section>
+                     </definition>
+                  </dd>
+                  <dt id="dfn-changes-of-context">changes of context</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">major changes that, if made without user awareness, can disorient users who are not
+                           able to view
+                           the entire page simultaneously
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">Changes in context include changes of:</p>
+                        
+                        
+                        <ol xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>
+                              <a href="#dfn-user-agent">user agent</a>;
+                              
+                           </li>
+                           
+                           
+                           <li>
+                              <a href="#dfn-viewport">viewport</a>;
+                              
+                           </li>
+                           
+                           
+                           <li>focus;</li>
+                           
+                           
+                           <li>
+                              <a href="#dfn-content">content</a> that changes the meaning of the <a href="#dfn-web-page">Web page</a>
+                              
+                           </li>
+                           
+                           
+                        </ol>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">A change of content is not always a change of context. Changes in content, such as
+                           an expanding outline, dynamic menu, or a tab control do not necessarily change the
+                           context, unless they also change one of the above (e.g., focus).
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Opening a new window, moving focus to a different component, going to a new page (including
+                           anything that would look to a user as if they had moved to a new page) or significantly
+                           re-arranging the content of a page are examples of changes of context.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-content">content</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">information and sensory experience to be communicated to the user by means of a <a href="#dfn-user-agent">user agent</a>, including code or markup that defines the content's <a href="#dfn-structure">structure</a>, <a href="#dfn-presentation">presentation</a>, and interactions
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-presentation">presentation</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">rendering of the <a href="#dfn-content">content</a> in a form to be perceived by users
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-structure">structure</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <ol xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>The way the parts of a <a href="#dfn-web-page">Web page</a> are organized in relation to each other; and
+                              
+                           </li>
+                           
+                           
+                           <li>The way a collection of <a href="#dfn-web-page">Web pages</a> is organized
+                              
+                           </li>
+                           
+                           
+                        </ol>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-user-agent">user agent</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">any software that retrieves and presents Web content for users</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Web browsers, media players, plug-ins, and other programs — including <a href="#dfn-assistive-technology">assistive technologies</a> — that help in retrieving, rendering, and interacting with Web content.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-user-interface-component">user interface component</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">a part of the content that is perceived by users as a single control for a distinct
+                           function
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Multiple user interface components may be implemented as a single programmatic element.
+                           "Components" here is not tied to programming techniques, but rather to what the user
+                           perceives as separate controls.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">User interface components include form elements and links as well as components generated
+                           by scripts.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">What is meant by "component" or "user interface component" here is also sometimes
+                           called "user interface element".
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">An applet has a "control" that can be used to move through content by line or page
+                           or random access. Since each of these would need to have a name and be settable independently,
+                           they would each be a "user interface component."
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-viewport">viewport</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">object in which the user agent presents content</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The <a href="#dfn-user-agent">user agent</a> presents content through one or more viewports. Viewports include windows, frames,
+                           loudspeakers, and virtual magnifying glasses. A viewport may contain another viewport
+                           (e.g., nested frames). Interface components created by the user agent such as prompts,
+                           menus, and alerts are not viewports.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">This definition is based on <a href="https://www.w3.org/TR/WAI-USERAGENT/glossary.html">User Agent Accessibility Guidelines 1.0 Glossary</a> [[UAAG10]].
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-web-page">web page</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">a non-embedded resource obtained from a single URI using HTTP plus any other resources
+                           that are used in the rendering or intended to be rendered together with it by a <a href="#dfn-user-agent">user agent</a>
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Although any "other resources" would be rendered together with the primary resource,
+                           they would not necessarily be rendered simultaneously with each other.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">For the purposes of conformance with these guidelines, a resource must be "non-embedded"
+                           within the scope of conformance to be considered a Web page.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web resource including all embedded images and media.</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web mail program built using Asynchronous JavaScript and XML (AJAX). The program
+                           lives entirely at http://example.com/mail, but includes an inbox, a contacts area
+                           and a calendar. Links or buttons are provided that cause the inbox, contacts, or calendar
+                           to display, but do not change the URI of the page as a whole.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A customizable portal site, where users can choose content to display from a set of
+                           different content modules.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">When you enter "http://shopping.example.com/" in your browser, you enter a movie-like
+                           interactive shopping environment where you visually move around in a store dragging
+                           products off of the shelves around you and into a visual shopping cart in front of
+                           you. Clicking on a product causes it to be demonstrated with a specification sheet
+                           floating alongside. This might be a single-page Web site or just one page within a
+                           Web site.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
                </details>
-            </section>
-            <nav class="pager" aria-label="Previous/Next Page">
-               <ul id="navigation">
-                  <li class="pager--item context"><a href="predictable"><span class="pager--item-text"><span class="pager--item-text-direction"><abbr title="Guideline">Part of Guideline</abbr>:</span><span class="pager--item-text-target">Predictable</span></span></a></li>
-                  <li class="pager--item previous"><a href="pronunciation">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-                           <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Pronunciation</span></span></a></li>
-                  <li class="pager--item previous"><a href="pronunciation">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-                           <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Pronunciation</span></span></a></li>
-                  <li class="pager--item next"><a href="on-input">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right pager--item-icon" viewBox="0 0 23 28">
-                           <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">On Input</span></span></a></li>
-               </ul>
-            </nav><a class="button button-backtotop" href="#top"><span>
+            </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
-            </p>
-            <dl>
-               <dt>Level</dt>
-               <dd>A</dd>
-               <dt>Key terms</dt>
-               <dd id="dfn-assistive-technology">assistive technology</dd>
-               <dd id="dfn-changes-of-context">changes of context</dd>
-               <dd id="dfn-content">content</dd>
-               <dd id="dfn-presentation">presentation</dd>
-               <dd id="dfn-structure">structure</dd>
-               <dd id="dfn-user-agent">user agent</dd>
-               <dd id="dfn-user-interface-component">user interface component</dd>
-               <dd id="dfn-viewport">viewport</dd>
-               <dd id="dfn-web-page">web page</dd>
-            </dl>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -326,13 +619,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -362,7 +656,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

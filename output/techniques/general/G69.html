@@ -8,8 +8,10 @@
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -28,24 +30,23 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Techniques">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Techniques">
                <ul>
-                  <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
-                  <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a></li>
+                  <li><a href="/techniques/#techniques">All Techniques</a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="about-this-page">
+            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
+            </p>
+         </aside>
+         <main class="standalone-resource__main">
             <h1><span>Technique G69:</span>Providing an alternative for time based media
             </h1>
             <aside class="box">
@@ -63,142 +64,128 @@
             </aside>
             <div class="excol-all"></div>
             <section id="description">
-               <details open="open">
-                  <summary>
-                     <h2>Description</h2>
-                  </summary>
-                  <p>The purpose of this technique is to provide an accessible alternative way of presenting
-                     the information in a synchronized media presentation.
-                  </p>
-                  <p>In a synchronized media presentation, information is presented in a variety of ways
-                     including:
-                  </p>
-                  <ul>
-                     
-                     <li>dialogue,</li>
-                     
-                     <li>sounds (natural and artificial),</li>
-                     
-                     <li>the setting and background,</li>
-                     
-                     <li>the actions and expressions of people, animals, etc.,</li>
-                     
-                     <li>text or graphics,</li>
-                     
-                     <li>and more.</li>
-                     
-                  </ul>
-                  <p>In order to present the same information in accessible form, this technique involves
-                     creating a document that tells the same story and presents the same information as
-                     the synchronized media.  Such a document is sometimes called a screenplay. It includes
-                     all the important dialogue and actions as well as descriptions of backgrounds etc.
-                     that are part of the story.
-                  </p>
-                  <p>If an actual screenplay was used to create the synchronized media in the first place,
-                     this can be a good place to start.  In production and editing however, the synchronized
-                     media usually changes from the screenplay.  For this technique, the original screenplay
-                     would be corrected to match the dialogue and what actually happens in the final edited
-                     form of the synchronized media.
-                  </p>
-                  <p>In addition, some special types of synchronized media include interaction that has
-                     to occur at particular places in the playing of the synchronized media.   Sometimes
-                     it may result in an action taking place (e.g., something is purchased, sent, done,
-                     etc.). Sometimes it may change the course of the synchronized media (e.g., the synchronized
-                     media has multiple paths that are determined by user input).  In those cases links
-                     or some other mechanism would be used in the alternative for time-based media to allow
-                     people using the alternative to be able to have the same options and abilities as
-                     those using the synchronized media.
-                  </p>
-               </details>
+               <h2>Description</h2>
+               <p>The purpose of this technique is to provide an accessible alternative way of presenting
+                  the information in a synchronized media presentation.
+               </p>
+               <p>In a synchronized media presentation, information is presented in a variety of ways
+                  including:
+               </p>
+               <ul>
+                  
+                  <li>dialogue,</li>
+                  
+                  <li>sounds (natural and artificial),</li>
+                  
+                  <li>the setting and background,</li>
+                  
+                  <li>the actions and expressions of people, animals, etc.,</li>
+                  
+                  <li>text or graphics,</li>
+                  
+                  <li>and more.</li>
+                  
+               </ul>
+               <p>In order to present the same information in accessible form, this technique involves
+                  creating a document that tells the same story and presents the same information as
+                  the synchronized media.  Such a document is sometimes called a screenplay. It includes
+                  all the important dialogue and actions as well as descriptions of backgrounds etc.
+                  that are part of the story.
+               </p>
+               <p>If an actual screenplay was used to create the synchronized media in the first place,
+                  this can be a good place to start.  In production and editing however, the synchronized
+                  media usually changes from the screenplay.  For this technique, the original screenplay
+                  would be corrected to match the dialogue and what actually happens in the final edited
+                  form of the synchronized media.
+               </p>
+               <p>In addition, some special types of synchronized media include interaction that has
+                  to occur at particular places in the playing of the synchronized media.   Sometimes
+                  it may result in an action taking place (e.g., something is purchased, sent, done,
+                  etc.). Sometimes it may change the course of the synchronized media (e.g., the synchronized
+                  media has multiple paths that are determined by user input).  In those cases links
+                  or some other mechanism would be used in the alternative for time-based media to allow
+                  people using the alternative to be able to have the same options and abilities as
+                  those using the synchronized media.
+               </p>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <ul>
-                     
-                     <li>A training film shows employees how to use a new piece of equipment.  It involves
-                        a person talking throughout while they demonstrate the operation.  The screenplay
-                        used to create the training film is used as a starting point. It is then edited and
-                        corrected to match the dialogue etc.  The film and the resulting alternative for time-based
-                        media are then made available on the company Web site. Employees can then use either
-                        or both to learn how to use the machine.
-                     </li>
-                     
-                     <li>An interactive shopping environment is created that allows users to steer themselves
-                        around in a virtual store and shop.  An alternative for time-based media allows the
-                        users to access the same shopping in text with links to choose aisles and to purchase
-                        things instead of dragging them into a virtual shopping basket.
-                     </li>
-                     
-                  </ul>
-               </details>
+               <h2>Examples</h2>
+               <ul>
+                  
+                  <li>A training film shows employees how to use a new piece of equipment.  It involves
+                     a person talking throughout while they demonstrate the operation.  The screenplay
+                     used to create the training film is used as a starting point. It is then edited and
+                     corrected to match the dialogue etc.  The film and the resulting alternative for time-based
+                     media are then made available on the company Web site. Employees can then use either
+                     or both to learn how to use the machine.
+                  </li>
+                  
+                  <li>An interactive shopping environment is created that allows users to steer themselves
+                     around in a virtual store and shop.  An alternative for time-based media allows the
+                     users to access the same shopping in text with links to choose aisles and to purchase
+                     things instead of dragging them into a virtual shopping basket.
+                  </li>
+                  
+               </ul>
             </section>
             <section id="applicability">
-               <details>
-                  <summary>
-                     <h2 id="applicability">Applicability</h2>
-                  </summary>
-                  <p>General technique. Applies to all technologies</p>
-               </details>
+               <h2 id="applicability">Applicability</h2>
+               <p>General technique. Applies to all technologies</p>
+               <p>This technique relates to:</p>
+               <ul>
+                  <li><a href="/understanding/audio-description-or-media-alternative-prerecorded">1.2.3: Audio Description or Media Alternative (Prerecorded)</a> (Sufficient using a more specific technique)
+                  </li>
+                  <li><a href="/understanding/media-alternative-prerecorded">1.2.8: Media Alternative (Prerecorded)</a> (Sufficient using a more specific technique)
+                  </li>
+               </ul>
             </section>
             <section id="tests">
-               <details>
-                  <summary>
-                     <h2>Tests</h2>
-                  </summary>
-                  <section class="procedure" id="procedure">
-                     <h3>Procedure</h3>
+               <h2>Tests</h2>
+               <section class="procedure" id="procedure">
+                  <h3>Procedure</h3>
+                  
+                  <ol>
                      
-                     <ol>
-                        
-                        <li>View the synchronized media presentation while referring to the alternative for time-based
-                           media.
-                        </li>
-                        
-                        <li>Check that the dialogue in the alternative for time-based media matches the dialogue
-                           in the synchronized media presentation.
-                        </li>
-                        
-                        <li>Check that the alternative for time-based media has descriptions of sounds.</li>
-                        
-                        <li>Check that the alternative for time-based media has descriptions of setting and setting
-                           changes.
-                        </li>
-                        
-                        <li>Check that  the alternative for time-based media has descriptions of actions and expressions
-                           of any 'actors' (people, animals etc).
-                        </li>
-                        
-                        <li>If the alternate version(s) are on a separate page, check for the availability of
-                           link(s) to allow the user to get to the other versions.
-                        </li>
-                        
-                     </ol>
+                     <li>View the synchronized media presentation while referring to the alternative for time-based
+                        media.
+                     </li>
                      
-                  </section>
-                  <section class="results" id="expected-results">
-                     <h3>Expected Results</h3>
+                     <li>Check that the dialogue in the alternative for time-based media matches the dialogue
+                        in the synchronized media presentation.
+                     </li>
                      
-                     <ul>
-                        
-                        <li>#2, 3, 4, 5 are true.</li>
-                        
-                     </ul>
+                     <li>Check that the alternative for time-based media has descriptions of sounds.</li>
                      
-                  </section>
-               </details>
+                     <li>Check that the alternative for time-based media has descriptions of setting and setting
+                        changes.
+                     </li>
+                     
+                     <li>Check that  the alternative for time-based media has descriptions of actions and expressions
+                        of any 'actors' (people, animals etc).
+                     </li>
+                     
+                     <li>If the alternate version(s) are on a separate page, check for the availability of
+                        link(s) to allow the user to get to the other versions.
+                     </li>
+                     
+                  </ol>
+                  
+               </section>
+               <section class="results" id="expected-results">
+                  <h3>Expected Results</h3>
+                  
+                  <ul>
+                     
+                     <li>#2, 3, 4, 5 are true.</li>
+                     
+                  </ul>
+                  
+               </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
-            </p>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -216,13 +203,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -252,7 +240,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>

@@ -11,8 +11,10 @@
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
-      <header class="default-grid with-gap minimal-header-container">
-         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -31,24 +33,23 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Techniques">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Techniques">
                <ul>
-                  <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
-                  <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        									
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
-                        </svg></a></li>
+                  <li><a href="/techniques/#techniques">All Techniques</a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="about-this-page">
+            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
+            </p>
+         </aside>
+         <main class="standalone-resource__main">
             <h1><span>Technique F49:</span>
                Failure of Success Criterion 1.3.2 due to using an HTML layout table that does not
                make sense when linearized  
@@ -65,51 +66,44 @@
             </aside>
             <div class="excol-all"></div>
             <section id="description">
-               <details open="open">
-                  <summary>
-                     <h2>Description</h2>
-                  </summary>
-                  <p>Although WCAG 2 does not prohibit the use of layout tables, CSS-based layouts are
-                     recommended in order to retain the defined semantic meaning of the HTML <code class="el">table</code> elements and to conform to the coding practice of separating presentation from content.
-                     If a layout table is used, however, it is important that the content make sense when
-                     linearized.
-                     
-                  </p>
-                  <p>This failure occurs when a meaningful sequence of content conveyed through
-                     presentation is lost because HTML tables used to control the visual
-                     placement of the content do not “linearize" correctly. Tables present
-                     content in two visual dimensions, horizontal and vertical. However, screen
-                     readers present this two-dimensional content in linear order of the content
-                     in the source, beginning with the first cell in the first row and ending
-                     with the last cell in the last row. The screen reader reads the table from
-                     top to bottom, reading the entire contents of each row before moving to the
-                     next row. The complete content of each cell in each row is spoken—including
-                     the complete content of any table nested within a cell. This is called
-                     linearization.
-                  </p>
-                  <p>Suppose that a Web page is laid out using a table with 9 columns and 22 rows.
-                     The screen reader speaks the content of the cell at Column 1, Row 1 followed
-                     by the cells in columns 2, 3, 4 and so on to column 9. However, if any cell
-                     contains a nested table, the screen reader will read the entire nested table
-                     before it reads the next cell in the original (outer) table. For example, if
-                     the cell at column 3, row 6 contains a table with 6 columns and 5 rows, all
-                     of those cells will be read before Column 4, Row 6 of the original (outer)
-                     table. As a result, the meaningful sequence conveyed through visual
-                     presentation may not be perceivable when the content is spoken by a screen
-                     reader.
-                  </p>
-               </details>
+               <h2>Description</h2>
+               <p>Although WCAG 2 does not prohibit the use of layout tables, CSS-based layouts are
+                  recommended in order to retain the defined semantic meaning of the HTML <code class="el">table</code> elements and to conform to the coding practice of separating presentation from content.
+                  If a layout table is used, however, it is important that the content make sense when
+                  linearized.
+                  
+               </p>
+               <p>This failure occurs when a meaningful sequence of content conveyed through
+                  presentation is lost because HTML tables used to control the visual
+                  placement of the content do not “linearize" correctly. Tables present
+                  content in two visual dimensions, horizontal and vertical. However, screen
+                  readers present this two-dimensional content in linear order of the content
+                  in the source, beginning with the first cell in the first row and ending
+                  with the last cell in the last row. The screen reader reads the table from
+                  top to bottom, reading the entire contents of each row before moving to the
+                  next row. The complete content of each cell in each row is spoken—including
+                  the complete content of any table nested within a cell. This is called
+                  linearization.
+               </p>
+               <p>Suppose that a Web page is laid out using a table with 9 columns and 22 rows.
+                  The screen reader speaks the content of the cell at Column 1, Row 1 followed
+                  by the cells in columns 2, 3, 4 and so on to column 9. However, if any cell
+                  contains a nested table, the screen reader will read the entire nested table
+                  before it reads the next cell in the original (outer) table. For example, if
+                  the cell at column 3, row 6 contains a table with 6 columns and 5 rows, all
+                  of those cells will be read before Column 4, Row 6 of the original (outer)
+                  table. As a result, the meaningful sequence conveyed through visual
+                  presentation may not be perceivable when the content is spoken by a screen
+                  reader.
+               </p>
             </section>
             <section id="examples">
-               <details>
-                  <summary>
-                     <h2>Examples</h2>
-                  </summary>
-                  <section class="example" id="example-1-a-layout-table-that-does-not-linearize-correctly">
-                     <h3>Example 1: A layout table that does not linearize correctly</h3>
-                     <p>An advertisement makes clever use of visual positioning, but changes
-                        meaning when linearized.
-                     </p><pre xml:space="preserve">
+               <h2>Examples</h2>
+               <section class="example" id="example-1-a-layout-table-that-does-not-linearize-correctly">
+                  <h3>Example 1: A layout table that does not linearize correctly</h3>
+                  <p>An advertisement makes clever use of visual positioning, but changes
+                     meaning when linearized.
+                  </p><pre xml:space="preserve">
 &lt;table&gt;
 &lt;tr&gt;
   &lt;td &gt;&lt;img src="logo.gif" alt="XYZ mountaineering"&gt;&lt;/td&gt;
@@ -119,30 +113,30 @@
   &lt;td&gt;XYZ gets you to the&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;</pre><p>The reading order from this example would be: </p>
-                     <ul>
-                        
-                        <li>XYZ mountaineering top! </li>
-                        
-                        <li>XYZ gets you to the</li>
-                        
-                     </ul>
-                  </section>
-                  <section class="example" id="example-2-a-layout-table-that-separates-a-meaningful-sequence-when-linearized">
-                     <h3>Example 2: A layout table that separates a meaningful sequence when linearized</h3>
-                     <p>A Web page from a museum exhibition positions a navigation bar
-                        containing a long list of links on the left side of the page. To the
-                        right of the navigation bar is an image of one of the pictures from
-                        the exhibition. To the right of the image is the kind of "placard"
-                        text you'd see on the wall next to the object if you were at the
-                        museum. Below that text is a heading that says "Description," and
-                        below that heading is a description of the image. The image, placard
-                        text, Description heading, and text of the description form a
-                        meaningful sequence.
-                     </p>
-                     <p>A layout table is used to position the elements of the page. The
-                        links in the navigation bar are split into different cells in the
-                        leftmost column.
-                     </p><pre xml:space="preserve">
+                  <ul>
+                     
+                     <li>XYZ mountaineering top! </li>
+                     
+                     <li>XYZ gets you to the</li>
+                     
+                  </ul>
+               </section>
+               <section class="example" id="example-2-a-layout-table-that-separates-a-meaningful-sequence-when-linearized">
+                  <h3>Example 2: A layout table that separates a meaningful sequence when linearized</h3>
+                  <p>A Web page from a museum exhibition positions a navigation bar
+                     containing a long list of links on the left side of the page. To the
+                     right of the navigation bar is an image of one of the pictures from
+                     the exhibition. To the right of the image is the kind of "placard"
+                     text you'd see on the wall next to the object if you were at the
+                     museum. Below that text is a heading that says "Description," and
+                     below that heading is a description of the image. The image, placard
+                     text, Description heading, and text of the description form a
+                     meaningful sequence.
+                  </p>
+                  <p>A layout table is used to position the elements of the page. The
+                     links in the navigation bar are split into different cells in the
+                     leftmost column.
+                  </p><pre xml:space="preserve">
 &lt;table&gt;
 &lt;tr&gt;
 	&lt;td&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/td&gt;
@@ -184,109 +178,97 @@
 &lt;/tr&gt;
 &lt;/table&gt;
 </pre><p>The reading order from this example would be: </p>
-                     <ul>
-                        
-                        <li>Link 1</li>
-                        
-                        <li>Image</li>
-                        
-                        <li>Placard Text</li>
-                        
-                        <li>Link 2</li>
-                        
-                        <li>Link 3</li>
-                        
-                        <li>Link 4</li>
-                        
-                        <li>Link 5</li>
-                        
-                        <li>Link 6</li>
-                        
-                        <li>Link 7</li>
-                        
-                        <li>Image Heading</li>
-                        
-                        <li>Link 8</li>
-                        
-                        <li>Link 9</li>
-                        
-                        <li>Link 10</li>
-                        
-                        <li>...</li>
-                        
-                        <li>Link 20</li>
-                        
-                     </ul>
-                     <p>Because the navigation bar links are interleaved with the content
-                        describing the image, screen readers cannot present the content in a
-                        meaningful sequence corresponding to the sequence presented
-                        visually.
-                     </p>
-                  </section>
-               </details>
+                  <ul>
+                     
+                     <li>Link 1</li>
+                     
+                     <li>Image</li>
+                     
+                     <li>Placard Text</li>
+                     
+                     <li>Link 2</li>
+                     
+                     <li>Link 3</li>
+                     
+                     <li>Link 4</li>
+                     
+                     <li>Link 5</li>
+                     
+                     <li>Link 6</li>
+                     
+                     <li>Link 7</li>
+                     
+                     <li>Image Heading</li>
+                     
+                     <li>Link 8</li>
+                     
+                     <li>Link 9</li>
+                     
+                     <li>Link 10</li>
+                     
+                     <li>...</li>
+                     
+                     <li>Link 20</li>
+                     
+                  </ul>
+                  <p>Because the navigation bar links are interleaved with the content
+                     describing the image, screen readers cannot present the content in a
+                     meaningful sequence corresponding to the sequence presented
+                     visually.
+                  </p>
+               </section>
             </section>
             <section id="applicability">
-               <details>
-                  <summary>
-                     <h2 id="applicability">Applicability</h2>
-                  </summary>
-                  <p>HTML and XHTML</p>
-               </details>
+               <h2 id="applicability">Applicability</h2>
+               <p>HTML and XHTML</p>
+               <p>This technique relates to <span><a href="/understanding/meaningful-sequence">1.3.2: Meaningful Sequence</a> (Failure)</span>.
+               </p>
             </section>
             <section id="tests">
-               <details>
-                  <summary>
-                     <h2>Tests</h2>
-                  </summary>
-                  <section class="procedure" id="procedure">
-                     <h3>Procedure</h3>
+               <h2>Tests</h2>
+               <section class="procedure" id="procedure">
+                  <h3>Procedure</h3>
+                  
+                  <ol>
                      
-                     <ol>
+                     <li>
                         
-                        <li>
+                        <p>Linearize the content in either of the following ways: </p>
+                        
+                        <ul>
                            
-                           <p>Linearize the content in either of the following ways: </p>
+                           <li>Present the content in source code order</li>
                            
-                           <ul>
-                              
-                              <li>Present the content in source code order</li>
-                              
-                              <li>Remove the table markup from around the content</li>
-                              
-                           </ul>
+                           <li>Remove the table markup from around the content</li>
                            
-                        </li>
+                        </ul>
                         
-                        <li>Check that the linear reading order matches any meaningful
-                           sequence conveyed through presentation.
-                        </li>
-                        
-                     </ol>
+                     </li>
                      
-                  </section>
-                  <section class="results" id="expected-results">
-                     <h3>Expected Results</h3>
+                     <li>Check that the linear reading order matches any meaningful
+                        sequence conveyed through presentation.
+                     </li>
                      
-                     <ul>
-                        
-                        <li>If check #2 is false, then this failure condition applies and the
-                           content fails this Success Criterion.
-                        </li>
-                        
-                     </ul>
+                  </ol>
+                  
+               </section>
+               <section class="results" id="expected-results">
+                  <h3>Expected Results</h3>
+                  
+                  <ul>
                      
-                  </section>
-               </details>
+                     <li>If check #2 is false, then this failure condition applies and the
+                        content fails this Success Criterion.
+                     </li>
+                     
+                  </ul>
+                  
+               </section>
             </section><a class="button button-backtotop" href="#top"><span>
                   <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
                      <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
                   </svg> Back to Top
                   			</span></a></main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
-            </p>
-         </aside>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -304,13 +286,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -340,7 +323,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
