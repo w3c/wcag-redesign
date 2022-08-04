@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
    <head>
       <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Understanding Success Criterion 3.2.7: Visible Controls</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
-   <body>
-      <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+   <body dir="ltr">
+      <header class="default-grid with-gap minimal-header-container">
+         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Understanding documents</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -30,12 +31,13 @@
       </header>
       <div class="nav-container">
          <div class="default-grid">
-            <nav class="nav" aria-label="Meta navigation">
+            <nav class="nav" aria-label="Understanding documents">
                <ul>
-                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
-                  <li class="nav__item"><a href="#">About Understanding documents</a></li>
+                  <li class="nav__item"><a href=".">
+                        										All Understanding documents</a></li>
+                  <li class="nav__item"><a href="/understanding/about">About Understanding documents</a></li>
                   <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        										
+                        									
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
                         </svg></a></li>
@@ -72,6 +74,7 @@
                   by the user agent that should not be in scope.
                </p>
             </blockquote>
+            <div class="excol-all"></div>
             <section id="status" class="advisement">
                
                <h2>Status</h2>
@@ -81,146 +84,162 @@
                
             </section>
             <section id="intent">
-               <h2>Intent</h2>
-               <p>The intent of this Success Criterion is to ensure that user interface components (controls)
-                  can be found easily by people with cognitive disabilities, vision loss, and mobility
-                  and motor impairments.
-               </p>
-               <p>Some design approaches hide controls and require certain user interactions (such as
-                  mouseover) to display them. Where the hidden controls are needed to complete tasks,
-                  the difficulty in discovering the controls can leave some users with disabilities
-                  without a path forward.
-               </p>
-               <p>People with low executive function, impaired memory, and other cognitive and learning
-                  disabilities may not be able to find hidden controls. If a hidden control is needed
-                  in order to progress, this can prevent some users from completing a task. Users who
-                  discover controls that display on hover may not remember how to show and operate the
-                  controls the next time they interact with the site. So even when a user is able to
-                  proceed, time on task can be affected for both one-time and repeated uses.
-               </p>
-               <p>People with vision loss may not see controls that display only on hover or focus,
-                  particularly if they display outside of the viewport. For users who require enlarged
-                  or magnified content, the portion of the content in the viewport may be significantly
-                  reduced. Low vision users may have 800 x 600 resolution as the default browser zoom.
-                  They may look closely at the monitor, say four inches from the display, due to limited
-                  acuity (inability to see detail) or Scotomas (blind spots). One of the main challenges
-                  for people with vision loss is simply locating related controls on the screen, moving
-                  the mouse from control to control, and getting the keyboard to the point where they
-                  are looking. They may have a significant amount of head and neck movement while using
-                  content. When users don't see something on the screen, they may assume they are missing
-                  it — for example, that it’s in their blind spot or hidden in a menu — and go searching
-                  until they either find it or give up searching. This success criterion can help reduce
-                  that cumulative load.
-               </p>
-               <p>People who use alternative input methods may have difficulty locating and operating
-                  controls that display only on hover or focus. For example, speech recognition users
-                  activate controls by speaking the name of the control. Functions that are only exposed
-                  through hover interaction or keyboard focus pose significant barriers to alternative
-                  input methods, such as speech.
-               </p>
-               <p>Information needed to identify controls does not need to be visible all the time.
-                  But information needed to identify controls must be visible <i>when the controls are needed</i> without hover interaction or keyboard focus. Controls can be available through a
-                  persistent <b><i>visible entry point</i></b>, such as a menu button that opens subitems. In a multi-step process or multi-part
-                  form, controls may be hidden in an earlier step or part; however, at the time the
-                  user can move the process forward, the information needed to identify the control,
-                  which is usually the control itself, must be visible without hover interaction or
-                  keyboard focus.
-               </p>
-               <p>In some cases, controls are provided in multiple locations on a page or at multiple
-                  points within a process. In these cases, at least one of the instances of the control
-                  must be visible without hover interaction or keyboard focus. For example, on an email
-                  listing page some controls such as trash may be visible using pointer hover in the
-                  inbox list view. However, those controls are always visible on the email page. Because
-                  the controls are persistently visible on the email view, they do not need to be persistently
-                  visible on the inbox view.
-               </p>
-               <p>Information needed to identify user interface components is usually the component
-                  itself; however, there are situations where controls are not visible. Complex components
-                  such as video players and carousels often include controls that are visible on hover.
-                  The presence of the complex component — for example, the carousel component or the
-                  video image — provides the “Information needed to identify the user interface components.”
-                  For a carousel, controls displayed on hover should also be displayed when the carousel
-                  is activated. For a video player, activating the video image should launch the video
-                  (sometimes in a new window), at which point more video player controls, including
-                  controls displayed previously on hover, should be visible. Some users may still struggle
-                  if video controls are not persistently visible, so there is benefit to providing a
-                  mechanism that allows users to have the controls persistently visible.
-               </p>
+               <details>
+                  <summary>
+                     <h2>Intent</h2>
+                  </summary>
+                  <p>The intent of this Success Criterion is to ensure that user interface components (controls)
+                     can be found easily by people with cognitive disabilities, vision loss, and mobility
+                     and motor impairments.
+                  </p>
+                  <p>Some design approaches hide controls and require certain user interactions (such as
+                     mouseover) to display them. Where the hidden controls are needed to complete tasks,
+                     the difficulty in discovering the controls can leave some users with disabilities
+                     without a path forward.
+                  </p>
+                  <p>People with low executive function, impaired memory, and other cognitive and learning
+                     disabilities may not be able to find hidden controls. If a hidden control is needed
+                     in order to progress, this can prevent some users from completing a task. Users who
+                     discover controls that display on hover may not remember how to show and operate the
+                     controls the next time they interact with the site. So even when a user is able to
+                     proceed, time on task can be affected for both one-time and repeated uses.
+                  </p>
+                  <p>People with vision loss may not see controls that display only on hover or focus,
+                     particularly if they display outside of the viewport. For users who require enlarged
+                     or magnified content, the portion of the content in the viewport may be significantly
+                     reduced. Low vision users may have 800 x 600 resolution as the default browser zoom.
+                     They may look closely at the monitor, say four inches from the display, due to limited
+                     acuity (inability to see detail) or Scotomas (blind spots). One of the main challenges
+                     for people with vision loss is simply locating related controls on the screen, moving
+                     the mouse from control to control, and getting the keyboard to the point where they
+                     are looking. They may have a significant amount of head and neck movement while using
+                     content. When users don't see something on the screen, they may assume they are missing
+                     it — for example, that it’s in their blind spot or hidden in a menu — and go searching
+                     until they either find it or give up searching. This success criterion can help reduce
+                     that cumulative load.
+                  </p>
+                  <p>People who use alternative input methods may have difficulty locating and operating
+                     controls that display only on hover or focus. For example, speech recognition users
+                     activate controls by speaking the name of the control. Functions that are only exposed
+                     through hover interaction or keyboard focus pose significant barriers to alternative
+                     input methods, such as speech.
+                  </p>
+                  <p>Information needed to identify controls does not need to be visible all the time.
+                     But information needed to identify controls must be visible <i>when the controls are needed</i> without hover interaction or keyboard focus. Controls can be available through a
+                     persistent <b><i>visible entry point</i></b>, such as a menu button that opens subitems. In a multi-step process or multi-part
+                     form, controls may be hidden in an earlier step or part; however, at the time the
+                     user can move the process forward, the information needed to identify the control,
+                     which is usually the control itself, must be visible without hover interaction or
+                     keyboard focus.
+                  </p>
+                  <p>In some cases, controls are provided in multiple locations on a page or at multiple
+                     points within a process. In these cases, at least one of the instances of the control
+                     must be visible without hover interaction or keyboard focus. For example, on an email
+                     listing page some controls such as trash may be visible using pointer hover in the
+                     inbox list view. However, those controls are always visible on the email page. Because
+                     the controls are persistently visible on the email view, they do not need to be persistently
+                     visible on the inbox view.
+                  </p>
+                  <p>Information needed to identify user interface components is usually the component
+                     itself; however, there are situations where controls are not visible. Complex components
+                     such as video players and carousels often include controls that are visible on hover.
+                     The presence of the complex component — for example, the carousel component or the
+                     video image — provides the “Information needed to identify the user interface components.”
+                     For a carousel, controls displayed on hover should also be displayed when the carousel
+                     is activated. For a video player, activating the video image should launch the video
+                     (sometimes in a new window), at which point more video player controls, including
+                     controls displayed previously on hover, should be visible. Some users may still struggle
+                     if video controls are not persistently visible, so there is benefit to providing a
+                     mechanism that allows users to have the controls persistently visible.
+                  </p>
+               </details>
             </section>
             <section id="benefits">
-               <h2>Benefits</h2>
-               <ul>
-                  
-                  <li>People with cognitive and learning disabilities can more easily locate controls that
-                     allow them to successfully progress through a process.
-                  </li>
-                  
-                  <li>People with memory impairments do not need to remember where controls are located.</li>
-                  
-                  <li>People with low vision do not need to combine visually searching for controls with
-                     moving pointer hover or keyboard focus.
-                  </li>
-                  
-                  <li>People with mobility and motor impairments who use speech or other input methods do
-                     not need to use hover or focus to locate and operate controls.
-                  </li>
-                  
-               </ul>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <ul>
-                  
-                  <li><strong>Indication of which fields are editable: </strong>
-                     In a web editor, once a page is open for editing, all possible fields that can be
-                     activated to edit always display a clear visible activation control, such as a pencil
-                     icon.
-                  </li>
-                  
-                  <li><strong>Enable user to always show controls hidden until revealed by hover:</strong> In a web editor that reveals hidden editing controls when a user hovers over them,
-                     a setting can be changed so that the editing controls are always shown by default,
-                     without requiring a hover event.
-                  </li>
-                  
-                  <li><strong>Visible access to email controls: </strong> When viewing a list of emails the controls needed to delete or forward the email
-                     are not visible unless hovered. When an email has been selected the same controls
-                     are persistently visible.
-                  </li>
-                  
-               </ul>
-               <div class="note">
-                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                  <p>Other success criteria apply to the requirement for controls being “visible." Visibility
-                     is not limited to appearing graphically on the screen, but also includes following
-                     a meaningful sequence, not relying on sensory characteristics, and all other requirements
-                     under <a href="../../understanding/distinguishable">1.4: Distinguishable</a>.
-                  </p>
-               </div>
-            </section>
-            <section id="techniques">
-               <h2>Techniques</h2>
-               <p>Each numbered item in this section represents a technique or combination of techniques
-                  that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
-                  it is not necessary to use these particular techniques. For information on using other
-                  techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
-               </p>
-               <section id="sufficient">
-                  <h3>Sufficient Techniques</h3>
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Benefits</h2>
+                  </summary>
+                  <ul>
                      
-                     <li>
-                        <a class="general" href="/techniques/general/G222">G222: Provide persistently visible controls </a>
-                        
+                     <li>People with cognitive and learning disabilities can more easily locate controls that
+                        allow them to successfully progress through a process.
                      </li>
                      
-                     <!--<li>
+                     <li>People with memory impairments do not need to remember where controls are located.</li>
+                     
+                     <li>People with low vision do not need to combine visually searching for controls with
+                        moving pointer hover or keyboard focus.
+                     </li>
+                     
+                     <li>People with mobility and motor impairments who use speech or other input methods do
+                        not need to use hover or focus to locate and operate controls.
+                     </li>
+                     
+                  </ul>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <ul>
+                     
+                     <li><strong>Indication of which fields are editable: </strong>
+                        In a web editor, once a page is open for editing, all possible fields that can be
+                        activated to edit always display a clear visible activation control, such as a pencil
+                        icon.
+                     </li>
+                     
+                     <li><strong>Enable user to always show controls hidden until revealed by hover:</strong> In a web editor that reveals hidden editing controls when a user hovers over them,
+                        a setting can be changed so that the editing controls are always shown by default,
+                        without requiring a hover event.
+                     </li>
+                     
+                     <li><strong>Visible access to email controls: </strong> When viewing a list of emails the controls needed to delete or forward the email
+                        are not visible unless hovered. When an email has been selected the same controls
+                        are persistently visible.
+                     </li>
+                     
+                  </ul>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>Other success criteria apply to the requirement for controls being “visible." Visibility
+                        is not limited to appearing graphically on the screen, but also includes following
+                        a meaningful sequence, not relying on sensory characteristics, and all other requirements
+                        under <a href="../../understanding/distinguishable">1.4: Distinguishable</a>.
+                     </p>
+                  </div>
+               </details>
+            </section>
+            <section id="techniques">
+               <details>
+                  <summary>
+                     <h2>Techniques</h2>
+                  </summary>
+                  <p>Each numbered item in this section represents a technique or combination of techniques
+                     that the WCAG Working Group deems sufficient for meeting this Success Criterion. However,
+                     it is not necessary to use these particular techniques. For information on using other
+                     techniques, see <a href="understanding-techniques">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.
+                  </p>
+                  <section id="sufficient">
+                     <h3>Sufficient Techniques</h3>
+                     <ol>
+                        
+                        <li>
+                           <a class="general" href="/techniques/general/G222">G222: Provide persistently visible controls </a>
+                           
+                        </li>
+                        
+                        <!--<li>
                <a href="../../techniques/general/hidden-control-2.html" class="general">Provide a setting to make controls visibly persist</a>
             </li>-->
-                     			
-                     <li>Indicate programmatically that a control is important (future)</li>
-                     
-                  </ol>
-               </section>
+                        			
+                        <li>Indicate programmatically that a control is important (future)</li>
+                        
+                     </ol>
+                  </section>
+               </details>
             </section>
             <nav class="pager" aria-label="Previous/Next Page">
                <ul id="navigation">
@@ -234,8 +253,11 @@
                            <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
                         </svg><span class="pager--item-text"><span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Error Identification</span></span></a></li>
                </ul>
-            </nav>
-         </main>
+            </nav><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Back to Top
+                  			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
             <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
@@ -264,7 +286,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -315,6 +337,7 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer>
-   </body>
+      </footer><script>
+				var translationStrings = {}; /* fix WAI JS */
+				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

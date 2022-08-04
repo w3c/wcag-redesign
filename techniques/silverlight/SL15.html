@@ -2,15 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
    <head>
       <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>SL15: Providing Keyboard Shortcuts that Work Across the Entire Silverlight
          			Application
       </title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
-   <body>
-      <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+   <body class="wcag-docs" dir="ltr">
+      <header class="default-grid with-gap minimal-header-container">
+         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -32,12 +33,12 @@
       </header>
       <div class="nav-container">
          <div class="default-grid">
-            <nav class="nav" aria-label="Meta navigation">
+            <nav class="nav" aria-label="Techniques">
                <ul>
                   <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
                   <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
                   <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        										
+                        									
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
                         </svg></a></li>
@@ -56,102 +57,110 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/keyboard-accessible">2.1: Keyboard Accessible</a> when used with </span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/keyboard">2.1.1: Keyboard</a></span>.
                   </p>
                   <p><em>Note: Microsoft has stopped updating and distributing Silverlight, and authors are
                         encouraged to use HTML for accessible web content.</em></p>
                </div>
             </aside>
+            <div class="excol-all"></div>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to introduce key handling that
-                  				exists at the application root level of a Silverlight application,
-                  				rather than per-element key handling. Event handling at the application
-                  				level as opposed to at the element level is one way to address key
-                  				equivalence. The key events provide key equivalence for particular
-                  				user interface elements that a user might otherwise interact with using
-                  				a mouse. This technique is related to events in the Silverlight programming
-                  				model, as opposed to in the HTML DOM. 
-               </p>
-               <p>Handling key events at the root level of an application rather than
-                  				only on the element that was the "source" of a key event
-                  				is possible because of a Silverlight programming model feature known
-                  				as event routing. For more information on event routing and how it
-                  				works, see <a href="https://msdn.microsoft.com/en-us/library/cc189018(VS.95).aspx">Events
-                     					Overview for Silverlight</a>. 
-               </p>
-               <p>This technique demonstrates a "menu" approach to key handling
-                  				and user interaction. This technique is presented as a companion to <a href="#SL9"></a>, which
-                  				can be thought of as an "accelerator key/hotkey" approach.
-                  				The   "menu" approach towards keyboard equivalence is perhaps
-                  				just as common as the "hotkey" approach. It is often simpler
-                  				to document a menu's key equivalence in a user interface than it is
-                  				to document key equivalents of particular regions of an application,
-                  				or to communicate to users that where the current focus is placed is
-                  				relevant to how keyboard keys are interpreted by the application, even
-                  				if the key action is relevant to only one of the controls in an interface.
-                  				If all keys are handled at the top level, the specific focused element
-                  				is no longer relevant. 
-               </p>
-               <p>In order to originate a key event that Silverlight application code
-                  				can detect, some element in the Silverlight application must have keyboard
-                  				focus. One way to assure keyboard focus is to focus the Silverlight
-                  				plug-in as a whole, as called from within an event handler for Application.Startup.
-                  				This is shown in the examples. 
-               </p>
-               <p>If an application does handle keys at top level, care should be taken
-                  				to not interfere with specific text entry control behavior, such as
-                  				typing into a <code class="obj">TextBox</code>. To avoid interactions, the
-                  				design of key equivalence at the top level of an application typically
-                  				relies on combinations with key modifiers. The Control/CTRL key is
-                  				a key that is often used for this purpose. Application authors should
-                  				also be aware of the implications of browser hosts that might handle
-                  				the key event at HTML DOM level without making that event available
-                  				to the Silverlight programming surface. For more information on this
-                  				concept, see "Keyboard Events and Browser Hosts" section
-                  				of <a href="https://msdn.microsoft.com/en-us/library/cc189015(VS.95).aspx">Keyboard
-                     					Support Overview for Silverlight on MSDN</a>. 
-               </p>
-               <p>Application authors are responsible for correctly documenting the
-                  				accelerator keys that are pertinent for their application. There are
-                  				a variety of techniques for documenting user interface actions that
-                  				are not described here. One possible suggestion is to include a generalized "Help"
-                  button
-                  				that appears early in the application's reading order, which is focusable
-                  				and has an <code class="prop">AutomationProperties.Name</code> value available as the text content
-                  				or equivalent. Such a button can be activated without knowing any of
-                  				the application's accelerator keys, and the activation result could
-                  				be a new text element that enumerates the possible keys. For example,
-                  				the application could display a Silverlight <code class="obj">Popup</code> with
-                  				the following content: 
-               </p>
-               <figure id="figure-silverlight-popup-control">
-                  <img src="img/popup_keys.png" />
-                  
-                  
-                  <figcaption>Figure 1 A screen shot of a sample Popup control that documents specific accelerator keys</figcaption>
-                  
-                  
-               </figure>
+               <details open="open">
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to introduce key handling that
+                     				exists at the application root level of a Silverlight application,
+                     				rather than per-element key handling. Event handling at the application
+                     				level as opposed to at the element level is one way to address key
+                     				equivalence. The key events provide key equivalence for particular
+                     				user interface elements that a user might otherwise interact with using
+                     				a mouse. This technique is related to events in the Silverlight programming
+                     				model, as opposed to in the HTML DOM. 
+                  </p>
+                  <p>Handling key events at the root level of an application rather than
+                     				only on the element that was the "source" of a key event
+                     				is possible because of a Silverlight programming model feature known
+                     				as event routing. For more information on event routing and how it
+                     				works, see <a href="https://msdn.microsoft.com/en-us/library/cc189018(VS.95).aspx">Events
+                        					Overview for Silverlight</a>. 
+                  </p>
+                  <p>This technique demonstrates a "menu" approach to key handling
+                     				and user interaction. This technique is presented as a companion to <a href="#SL9"></a>, which
+                     				can be thought of as an "accelerator key/hotkey" approach.
+                     				The   "menu" approach towards keyboard equivalence is perhaps
+                     				just as common as the "hotkey" approach. It is often simpler
+                     				to document a menu's key equivalence in a user interface than it is
+                     				to document key equivalents of particular regions of an application,
+                     				or to communicate to users that where the current focus is placed is
+                     				relevant to how keyboard keys are interpreted by the application, even
+                     				if the key action is relevant to only one of the controls in an interface.
+                     				If all keys are handled at the top level, the specific focused element
+                     				is no longer relevant. 
+                  </p>
+                  <p>In order to originate a key event that Silverlight application code
+                     				can detect, some element in the Silverlight application must have keyboard
+                     				focus. One way to assure keyboard focus is to focus the Silverlight
+                     				plug-in as a whole, as called from within an event handler for Application.Startup.
+                     				This is shown in the examples. 
+                  </p>
+                  <p>If an application does handle keys at top level, care should be taken
+                     				to not interfere with specific text entry control behavior, such as
+                     				typing into a <code class="obj">TextBox</code>. To avoid interactions, the
+                     				design of key equivalence at the top level of an application typically
+                     				relies on combinations with key modifiers. The Control/CTRL key is
+                     				a key that is often used for this purpose. Application authors should
+                     				also be aware of the implications of browser hosts that might handle
+                     				the key event at HTML DOM level without making that event available
+                     				to the Silverlight programming surface. For more information on this
+                     				concept, see "Keyboard Events and Browser Hosts" section
+                     				of <a href="https://msdn.microsoft.com/en-us/library/cc189015(VS.95).aspx">Keyboard
+                        					Support Overview for Silverlight on MSDN</a>. 
+                  </p>
+                  <p>Application authors are responsible for correctly documenting the
+                     				accelerator keys that are pertinent for their application. There are
+                     				a variety of techniques for documenting user interface actions that
+                     				are not described here. One possible suggestion is to include a generalized "Help"
+                     button
+                     				that appears early in the application's reading order, which is focusable
+                     				and has an <code class="prop">AutomationProperties.Name</code> value available as the text content
+                     				or equivalent. Such a button can be activated without knowing any of
+                     				the application's accelerator keys, and the activation result could
+                     				be a new text element that enumerates the possible keys. For example,
+                     				the application could display a Silverlight <code class="obj">Popup</code> with
+                     				the following content: 
+                  </p>
+                  <figure id="figure-silverlight-popup-control">
+                     <img src="img/popup_keys.png" />
+                     
+                     
+                     <figcaption>Figure 1 A screen shot of a sample Popup control that documents specific accelerator keys</figcaption>
+                     
+                     
+                  </figure>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-key-handling-by-application-root-usercontrol">
-                  <h3>Example 1: Key handling by application root UserControl</h3>
-                  <p>This example has only one interactive control for simplicity, but
-                     						with two possible key combinations for that control being handled as
-                     						actions. The purpose and explanation of the control is reported through
-                     						a <code class="obj">TextBlock</code> that is associated with the labeled control
-                     						through use of <a href="https://msdn.microsoft.com/en-us/library/system.windows.automation.automationproperties.labeledby%28VS.95%29.aspx">AutomationProperties.LabeledBy</a> in
-                     						XAML. The control being illustrated is <code class="obj">MultiScaleImage</code>,
-                     						which supports a zoom-in metaphor for examining an image that redraws
-                     						at increasingly fine resolutions. For more information on <code class="obj">MultiScaleImage</code>,
-                     						see <a href="https://msdn.microsoft.com/en-us/library/cc645050(VS.95).aspx">Deep
-                        							Zoom on MSDN</a>. 
-                  </p>
-                  <p>The following is the startup logic at application level that sends
-                     					focus to Silverlight in the HTML DOM. 
-                  </p><pre xml:space="preserve">       private void Application_Startup(object sender, StartupEventArgs e)
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-key-handling-by-application-root-usercontrol">
+                     <h3>Example 1: Key handling by application root UserControl</h3>
+                     <p>This example has only one interactive control for simplicity, but
+                        						with two possible key combinations for that control being handled as
+                        						actions. The purpose and explanation of the control is reported through
+                        						a <code class="obj">TextBlock</code> that is associated with the labeled control
+                        						through use of <a href="https://msdn.microsoft.com/en-us/library/system.windows.automation.automationproperties.labeledby%28VS.95%29.aspx">AutomationProperties.LabeledBy</a> in
+                        						XAML. The control being illustrated is <code class="obj">MultiScaleImage</code>,
+                        						which supports a zoom-in metaphor for examining an image that redraws
+                        						at increasingly fine resolutions. For more information on <code class="obj">MultiScaleImage</code>,
+                        						see <a href="https://msdn.microsoft.com/en-us/library/cc645050(VS.95).aspx">Deep
+                           							Zoom on MSDN</a>. 
+                     </p>
+                     <p>The following is the startup logic at application level that sends
+                        					focus to Silverlight in the HTML DOM. 
+                     </p><pre xml:space="preserve">       private void Application_Startup(object sender, StartupEventArgs e)
        {
            this.RootVisual = new MainPage();
            //bring overall DOM focus to Silverlight area, so that keys are captured by Silverlight
@@ -196,8 +205,8 @@
          AutomationProperties.LabeledBy="{Binding ElementName=lblInstructions}"/&gt;
     &lt;/StackPanel&gt;
  &lt;/UserControl&gt;</pre><p>The following is the C# logic. Note how the key handlers and mouse
-                     					handlers reference the same logic function. 
-                  </p><pre xml:space="preserve">        private void UserControl_KeyUp(object sender, KeyEventArgs e)
+                        					handlers reference the same logic function. 
+                     </p><pre xml:space="preserve">        private void UserControl_KeyUp(object sender, KeyEventArgs e)
         {
             if ((Keyboard.Modifiers &amp; ModifierKeys.Control) == ModifierKeys.Control &amp;&amp;
                 (Keyboard.Modifiers &amp; ModifierKeys.Alt) == ModifierKeys.Alt &amp;&amp;
@@ -244,66 +253,78 @@
             p.IsOpen = false;
 
         }</pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-application-level-key-handling/">working example of Application Level Key Handling</a>.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <ul id="silverlight.applicability.general">
-                  
-                  <li> Microsoft Silverlight, versions 3 and greater </li>
-                  
-                  <li> Silverlight managed programming model and Silverlight XAML </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <ul id="silverlight.applicability.general">
+                     
+                     <li> Microsoft Silverlight, versions 3 and greater </li>
+                     
+                     <li> Silverlight managed programming model and Silverlight XAML </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Using a browser that supports Silverlight, open an HTML page that
-                        					references a Silverlight application through an object tag. 
-                     </li>
-                     
-                     <li> Verify that keyboard focus is somewhere within the Silverlight
-                        						content area, and not elsewhere in the hosting HTML or hosting browser
-                        						user interface. If necessary, use TAB key to traverse the overall
-                        						HTML tab sequence until an interface element within Silverlight displays
-                        						a visual focus indicator. 
-                     </li>
-                     
-                     <li> Verify that the keys to be used as keyboard equivalent action
-                        							triggers for the application as a whole are documented for users.
-                        							For example, text or long text alternative documents key / key combinations
-                        							and short descriptions of actions. 
-                     </li>
-                     
-                     <li> Verify that pressing the application-specific keys results in
-                        					the action as expected in the application. 
-                     </li>
-                     
-                     <li> Move keyboard focus throughout other areas of the Silverlight
-                        					application, and verify that the same keys continue to function application-wide.
+                     <ol>
                         
-                     </li>
+                        <li> Using a browser that supports Silverlight, open an HTML page that
+                           					references a Silverlight application through an object tag. 
+                        </li>
+                        
+                        <li> Verify that keyboard focus is somewhere within the Silverlight
+                           						content area, and not elsewhere in the hosting HTML or hosting browser
+                           						user interface. If necessary, use TAB key to traverse the overall
+                           						HTML tab sequence until an interface element within Silverlight displays
+                           						a visual focus indicator. 
+                        </li>
+                        
+                        <li> Verify that the keys to be used as keyboard equivalent action
+                           							triggers for the application as a whole are documented for users.
+                           							For example, text or long text alternative documents key / key combinations
+                           							and short descriptions of actions. 
+                        </li>
+                        
+                        <li> Verify that pressing the application-specific keys results in
+                           					the action as expected in the application. 
+                        </li>
+                        
+                        <li> Move keyboard focus throughout other areas of the Silverlight
+                           					application, and verify that the same keys continue to function application-wide.
+                           
+                        </li>
+                        
+                     </ol>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <p>#3, #4 and #5 are true. </p>
-                  
-               </section>
-            </section>
-         </main>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
+                     
+                     <p>#3, #4 and #5 are true. </p>
+                     
+                  </section>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Back to Top
+                  			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -348,7 +369,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -400,5 +421,12 @@
             </ul>
          </div>
       </footer>
-      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>hljs.highlightAll();</script></body>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+				document.addEventListener('DOMContentLoaded', (event) => {
+			  	document.querySelectorAll('pre').forEach((el) => {
+    				hljs.highlightElement(el);
+  				});
+				});
+				var translationStrings = {}; /* fix WAI JS */
+				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

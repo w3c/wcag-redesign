@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
    <head>
       <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Understanding Conformance</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
-   <body>
-      <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+   <body dir="ltr">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -27,24 +30,44 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Meta navigation">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Understanding Docs">
                <ul>
-                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
-                  <li class="nav__item"><a href="#">About Understanding documents</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        										
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                  <li><a href=".">
+                        								All Understanding Docs
+                        							</a></li>
+                  <li>~Beginning of suite~</li>
+                  <li><a href="refer-to-wcag">Next : How to Refer to WCAG  from Other Documents
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Page Contents</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#conformance-whatis">What does conformance mean?</a></li>
+                     <li><a href="#conformance-requirements">Understanding Conformance Requirements</a></li>
+                     <li><a href="#conformance-claims">Understanding Conformance Claims</a></li>
+                     <li><a href="#levels">Understanding Levels of Conformance</a></li>
+                     <li><a href="#accessibility-support">Understanding Accessibility Support</a></li>
+                     <li><a href="#programmatically-determined">Understanding "Programmatically Determined"</a></li>
+                     <li><a href="#conforming-alt-versions">Understanding Conforming Alternate Versions</a></li>
+                     <li><a href="#web-page">Understanding "Web Page"</a></li>
+                     <li><a href="#text-alternatives">Understanding "Text Alternatives"</a></li>
+                     <li><a href="#key-terms">Key Terms</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main class="standalone-resource__main">
             <h1>Understanding Conformance</h1>
             <div>
                
@@ -86,17 +109,14 @@
                   
                   
                   <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                     <div>
+                     
+                     
+                     <p>This means that if there is no content to which a success criterion applies, the success
+                        criterion is satisfied.
                         
-                        
-                        <p>This means that if there is no content to which a success criterion applies, the success
-                           criterion is satisfied.
-                           
-                        </p>
-                        
-                        
-                     </div>
+                     </p>
+                     
+                     
                   </div>
                   
                   
@@ -151,21 +171,15 @@
                            	
                         </ul>
                         	
-                        <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                           <p>Although conformance can only be achieved at the stated levels, authors are encouraged
-                              to report (in their claim) any progress toward meeting success criteria from all levels
-                              beyond the achieved level of conformance.
-                           </p>
-                        </div>
+                        <p class="note">Although conformance can only be achieved at the stated levels, authors are encouraged
+                           to report (in their claim) any progress toward meeting success criteria from all levels
+                           beyond the achieved level of conformance.
+                        </p>
                         	
-                        <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                           <p>It is not recommended that Level AAA conformance be required as a general policy for
-                              entire sites because it is not possible to satisfy all Level AAA Success Criteria
-                              for some content.
-                           </p>
-                        </div>
+                        <p class="note">It is not recommended that Level AAA conformance be required as a general policy for
+                           entire sites because it is not possible to satisfy all Level AAA Success Criteria
+                           for some content.
+                        </p>
                         	
                         
                      </blockquote>
@@ -206,29 +220,20 @@
                         <p><strong>Full pages</strong>: <a href="#dfn-conformance">Conformance</a> (and conformance level) is for full <a href="#dfn-web-page">Web page(s)</a> only, and cannot be achieved if part of a Web page is excluded.
                         </p>
                         	
-                        <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                           <p>For the purpose of determining conformance, alternatives to part of a page's content
-                              are considered part of the page when the alternatives can be obtained directly from
-                              the page, e.g., a long description or an alternative presentation of a video.
-                           </p>
-                        </div>
+                        <p class="note">For the purpose of determining conformance, alternatives to part of a page's content
+                           are considered part of the page when the alternatives can be obtained directly from
+                           the page, e.g., a long description or an alternative presentation of a video.
+                        </p>
                         	
-                        <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                           <p>Authors of Web pages that cannot conform due to content outside of the author's control
-                              may consider a <a href="#conformance-partial">Statement of Partial Conformance</a>.
-                           </p>
-                        </div>
+                        <p class="note">Authors of Web pages that cannot conform due to content outside of the author's control
+                           may consider a <a href="#conformance-partial">Statement of Partial Conformance</a>.
+                        </p>
                         	
-                        <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                           <p>A full page includes each variation of the page that is automatically presented by
-                              the page for various screen sizes (e.g. variations in a responsive Web page). Each
-                              of these variations needs to conform (or needs to have a conforming alternate version)
-                              in order for the entire page to conform.
-                           </p>
-                        </div>
+                        <p class="note">A full page includes each variation of the page that is automatically presented by
+                           the page for various screen sizes (e.g. variations in a responsive Web page). Each
+                           of these variations needs to conform (or needs to have a conforming alternate version)
+                           in order for the entire page to conform.
+                        </p>
                         
                      </blockquote>
                      
@@ -253,25 +258,22 @@
                      
                      
                      <div class="note">
-                        <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                        <div>
+                        
+                        
+                        <p>Because of conformance requirement 5, a whole page may conform even if parts of the
+                           page use non accessibility-supported content technologies as long as they do not interfere
+                           with the rest of the page and all information and function is available elsewhere
+                           on or from the page.
                            
+                        </p>
+                        
+                        
+                        <p>It is possible to include non-conforming content. See 
+                           <a href="#conf-req5">Understanding Conformance Requirement 5</a>.
                            
-                           <p>Because of conformance requirement 5, a whole page may conform even if parts of the
-                              page use non accessibility-supported content technologies as long as they do not interfere
-                              with the rest of the page and all information and function is available elsewhere
-                              on or from the page.
-                              
-                           </p>
-                           
-                           
-                           <p>It is possible to include non-conforming content. See 
-                              <a href="#conf-req5">Understanding Conformance Requirement 5</a>.
-                              
-                           </p>
-                           
-                           
-                        </div>
+                        </p>
+                        
+                        
                      </div>
                      
                      
@@ -380,12 +382,9 @@
                            		
                         </ul>
                         		
-                        <div class="note">
-                           <div role="heading" class="note-title marker" aria-level="4">Note</div>
-                           <p>If a page cannot conform (for example, a conformance test page or an example page),
-                              it cannot be included in the scope of conformance or in a conformance claim.
-                           </p>
-                        </div>
+                        <p class="note">If a page cannot conform (for example, a conformance test page or an example page),
+                           it cannot be included in the scope of conformance or in a conformance claim.
+                        </p>
                         	
                      </blockquote>
                      
@@ -511,21 +510,18 @@
                   
                   
                   <div class="note">
-                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
-                     <div>
+                     
+                     
+                     <p>When talking about technologies that are "relied upon," we're talking about Web content
+                        technologies (HTML, CSS, JavaScript, etc.), not user agents (browsers, assistive technologies,
+                        etc.).
                         
-                        
-                        <p>When talking about technologies that are "relied upon," we're talking about Web content
-                           technologies (HTML, CSS, JavaScript, etc.), not user agents (browsers, assistive technologies,
-                           etc.).
-                           
-                        </p>
-                        
-                        
-                        <p>Conformance claims are not usually located on each Web page within the scope of conformance.</p>
-                        
-                        
-                     </div>
+                     </p>
+                     
+                     
+                     <p>Conformance claims are not usually located on each Web page within the scope of conformance.</p>
+                     
+                     
                   </div>
                   
                   
@@ -629,47 +625,42 @@
                         <ul>
                            
                            <li>   
-                              <a class="script" href="/techniques/client-side-script/SCR38">SCR38: Creating a conforming alternate version for a web page designed with progressive enhancement</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR38" class="script"></a>
                               
                            </li>         
                            
                            <li>   
-                              <a class="script" href="/techniques/server-side-script/SVR2">SVR2: Using .htaccess to ensure that the only way to access non-conforming content is from
-                                 conforming content</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR2" class="script"></a>
                               
                            </li>         
                            
                            <li>   
-                              <a class="script" href="/techniques/server-side-script/SVR3">SVR3: Using HTTP referer to ensure that the only way to access non-conforming content is
-                                 from conforming content</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR3" class="script"></a>
                               
                            </li>         
                            
                            <li>   
-                              <a class="script" href="/techniques/server-side-script/SVR4">SVR4: Allowing users to provide preferences for the display of conforming alternate versions</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR4" class="script"></a>
                               
                            </li>         
                            
                            <li>   
-                              <a class="css" href="/techniques/css/C29">C29: Using a style switcher to provide a conforming alternate version</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C29" class="css"></a>
                               
                            </li>         
                            
                            <li>   
-                              <a class="failure" href="/techniques/failures/F19">F19: Failure of Conformance Requirement 1 due to not providing a method for the user to
-                                 find the alternative conforming version of a non-conforming Web page</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F19" class="failure"></a>
                               
                            </li>         
                            
                            <li>   
-                              <a class="general" href="/techniques/general/G136">G136: Providing a link at the beginning of a nonconforming Web page that points to a conforming
-                                 alternate version</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G136" class="general"></a>
                               
                            </li>         
                            
                            <li>   
-                              <a class="general" href="/techniques/general/G190">G190: Providing a link adjacent to or associated with a non-conforming object that links
-                                 to a conforming alternate version</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G190" class="general"></a>
                               
                            </li>         
                            
@@ -1008,116 +999,7 @@
                      </p>
                      
                      	
-                     <blockquote class="scquote"><dt><dfn data-lt="accessibility-supported|accessibility support">accessibility supported</dfn></dt>
-<dd>
-   
-   <p>supported by users' <a>assistive technologies</a> as well as the accessibility features in browsers and other <a>user agents</a></p>
-   
-   <p>To qualify as an accessibility-supported use of a Web content technology (or feature
-      of a technology), both 1 and 2 must be satisfied for a Web content technology (or
-      feature):
-   </p>
-   
-   <ol>
-      
-      <li>
-         
-         <p><strong>The way that the <a>Web content technology</a> is used must be supported by users' assistive technology (AT). </strong> This means that the way that the technology is used has been tested for interoperability
-            with users' assistive technology in the <a>human language(s)</a> of the content,
-         </p>
-         
-         <p><strong>AND</strong></p>
-         
-      </li>
-      
-      <li>
-         
-         <p><strong>The Web content technology must have accessibility-supported user agents that are
-               available to users. </strong> This means that at least one of the following four statements is true:
-         </p>
-         
-         <ol>
-            
-            <li>
-               
-               <p>The technology is supported natively in widely-distributed user agents that are also
-                  accessibility supported (such as HTML and CSS);
-               </p>
-               
-               <p><strong>OR</strong></p>
-            </li>
-            
-            <li>
-               <p>The technology is supported in a widely-distributed plug-in that is also accessibility
-                  supported;
-               </p>
-               
-               <p><strong>OR</strong></p>
-            </li>
-            
-            <li>
-               <p>The content is available in a closed environment, such as a university or corporate
-                  network, where the user agent required by the technology and used by the organization
-                  is also accessibility supported;
-               </p>
-               
-               <p><strong>OR</strong></p>
-            </li>
-            
-            <li>
-               <p>The user agent(s) that support the technology are accessibility supported and are
-                  available for download or purchase in a way that:
-               </p>
-               
-               <ul>
-                  
-                  <li>does not cost a person with a disability any more than a person without a disability
-                     <strong>and</strong></li>
-                  
-                  <li>is as easy to find and obtain for a person with a disability as it is for a person
-                     without disabilities.
-                  </li>
-                  
-               </ul>
-               
-            </li>
-            
-         </ol>
-         
-      </li>
-      
-   </ol>
-   
-   <p class="note">The Accessibility Guidelines Working Group and the W3C do not specify which or how much support by assistive
-      technologies there must be for a particular use of a Web technology in order for it
-      to be classified as accessibility supported. (See <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#support-level">Level of Assistive Technology Support Needed for "Accessibility Support"</a>.)
-   </p>
-   
-   <p class="note">Web technologies can be used in ways that are not accessibility supported as long
-      as they are not <a>relied upon</a> and the page as a whole meets the conformance requirements, including <a href="#cc4">Conformance Criterion 4</a> and <a href="#cc5">Conformance Criterion 5</a>, are met.
-   </p>
-   
-   <p class="note">When a <a>Web Technology</a> is used in a way that is "accessibility supported," it does not imply that the entire
-      technology or all uses of the technology are supported. Most technologies, including
-      HTML, lack support for at least one feature or use. Pages conform to WCAG only if
-      the uses of the technology that are accessibility supported can be relied upon to
-      meet WCAG requirements.
-   </p>
-   
-   <p class="note">When citing Web content technologies that have multiple versions, the version(s) supported
-      should be specified.
-   </p>
-   
-   <p class="note">One way for authors to locate uses of a technology that are accessibility supported
-      would be to consult compilations of uses that are documented to be accessibility supported.
-      (See <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#documented-lists">Understanding Accessibility-Supported Web Technology Uses</a>.) Authors, companies, technology vendors, or others may document accessibility-supported
-      ways of using Web content technologies. However, all ways of using technologies in
-      the documentation would need to meet the definition of accessibility-supported Web
-      content technologies above.
-   </p>
-   
-</dd>
-</blockquote>
+                     <blockquote class="scquote" data-include="../guidelines/terms/20/accessibility-supported.html">accessibility supported</blockquote>
                      
                      
                   </section>
@@ -1324,76 +1206,7 @@
                   </p>
                   
                   	
-                  <blockquote class="scquote"><dt><dfn data-lt="conforming alternate versions">conforming alternate version</dfn></dt>
-<dd>
-   
-   <p>version that</p>
-   
-   <ol>
-      
-      <li>conforms at the designated level, and</li>
-      
-      <li>provides all of the same information and <a>functionality</a> in the same <a>human language</a>, and
-      </li>
-      
-      <li>is as up to date as the non-conforming content, and</li>
-      
-      <li>
-         <p>for which at least one of the following is true:</p>
-         
-         <ol>
-            
-            <li>the conforming version can be reached from the non-conforming page via an <a>accessibility-supported</a>
-               <a>mechanism</a>, or
-            </li>
-            
-            <li>the non-conforming version can only be reached from the conforming version, or</li>
-            
-            <li>the non-conforming version can only be reached from a conforming page that also provides
-               a mechanism to reach the conforming version
-            </li>
-            
-         </ol>
-         
-      </li>
-      
-   </ol>
-   
-   <p class="note">In this definition, "can only be reached" means that there is some mechanism, such
-      as a conditional redirect, that prevents a user from "reaching" (loading) the non-conforming
-      page unless the user had just come from the conforming version.
-   </p>
-   
-   <p class="note">The alternate version does not need to be matched page for page with the original
-      (e.g., the conforming alternate version may consist of multiple pages).
-   </p>
-   
-   <p class="note">If multiple language versions are available, then conforming alternate versions are
-      required for each language offered.
-   </p>
-   
-   <p class="note">Alternate versions may be provided to accommodate different technology environments
-      or user groups. Each version should be as conformant as possible. One version would
-      need to be fully conformant in order to meet <a href="#cc1">conformance requirement 1</a>.
-   </p>
-   
-   <p class="note">The conforming alternative version does not need to reside within the scope of conformance,
-      or even on the same Web site, as long as it is as freely available as the non-conforming
-      version.
-   </p>
-   
-   <p class="note">Alternate versions should not be confused with <a>supplementary content</a>, which support the original page and enhance comprehension.
-   </p>
-   
-   <p class="note">Setting user preferences within the content to produce a conforming version is an
-      acceptable mechanism for reaching another version as long as the method used to set
-      the preferences is accessibility supported.
-   </p>
-   
-   <p>See <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions">Understanding Conforming Alternate Versions</a></p>
-   
-</dd>
-</blockquote>
+                  <blockquote class="scquote" data-include="../guidelines/terms/20/conforming-alternate-version.html">conforming alternate version</blockquote>
                   
                   
                   <p>This ensures that all of the information and all of the functionality that is on the
@@ -1580,8 +1393,9 @@
                            
                            <li>
                               										                    
-                              <a href="/techniques/general/G136">G136: Providing a link at the beginning of a nonconforming Web page that points to a conforming
-                                 alternate version</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G136">Providing a link at the beginning of the nonconforming content that points to an alternate
+                                 version that does meet WCAG 2.0 Level A Success Criteria
+                                 </a>
                               									                  
                               
                            </li>
@@ -1589,8 +1403,9 @@
                            
                            <li>
                               										                    
-                              <a href="/techniques/general/G190">G190: Providing a link adjacent to or associated with a non-conforming object that links
-                                 to a conforming alternate version</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G190">Providing a link adjacent to or associated with a non-conforming object that links
+                                 to a conforming alternate version
+                                 </a>
                               									                  
                               
                            </li>
@@ -1598,7 +1413,7 @@
                            
                            <li>
                               										                    
-                              <a href="/techniques/css/C29">C29: Using a style switcher to provide a conforming alternate version</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C29">C29: Using a style switcher to provide a conforming alternate version</a>
                               									                  
                               
                            </li>
@@ -1606,7 +1421,9 @@
                            
                            <li>
                               										                    
-                              <a href="/techniques/client-side-script/SCR38">SCR38: Creating a conforming alternate version for a web page designed with progressive enhancement</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR38">SCR38: Creating a conforming alternate version for a web page designed with progressive
+                                 enhancement
+                                 </a>
                               									                  
                               
                            </li>
@@ -1614,8 +1431,9 @@
                            
                            <li>
                               										                    
-                              <a href="/techniques/server-side-script/SVR2">SVR2: Using .htaccess to ensure that the only way to access non-conforming content is from
-                                 conforming content</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR2">Using .htaccess to ensure that the only way to access non-conforming content is from
+                                 conforming content
+                                 </a>
                               									                  
                               
                            </li>
@@ -1623,8 +1441,9 @@
                            
                            <li>
                               										                    
-                              <a href="/techniques/server-side-script/SVR3">SVR3: Using HTTP referer to ensure that the only way to access non-conforming content is
-                                 from conforming content</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR3">SVR3: Using HTTP referer to ensure that the only way to access non-conforming content
+                                 is from conforming content
+                                 </a>
                               									                  
                               
                            </li>
@@ -1632,7 +1451,7 @@
                            
                            <li>
                               										                    
-                              <a href="/techniques/server-side-script/SVR4">SVR4: Allowing users to provide preferences for the display of conforming alternate versions</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/server-side-script/SVR4">Allowing users to provide preferences for the display of conforming alternate versions</a>
                               									                  
                               
                            </li>
@@ -1654,8 +1473,9 @@
                            
                            <li>
                               										                    
-                              <a href="/techniques/failures/F19">F19: Failure of Conformance Requirement 1 due to not providing a method for the user to
-                                 find the alternative conforming version of a non-conforming Web page</a>
+                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F19">F19: Failure of Conformance Requirement 1 due to not providing a method for the user
+                                 to find the alternative conforming version of a non-conforming Web page
+                                 </a>
                               									                  
                               
                            </li>
@@ -1789,42 +1609,7 @@
                   <p>The definition of a Web Page is:</p>
                   
                   	
-                  <blockquote class="scquote"><dt><dfn data-lt="web page(s)|web pages">Web page</dfn></dt>
-<dd>
-   
-   <p>a non-embedded resource obtained from a single URI using HTTP plus any other resources
-      that are used in the rendering or intended to be rendered together with it by a <a>user agent</a></p>
-   
-   <p class="note">Although any "other resources" would be rendered together with the primary resource,
-      they would not necessarily be rendered simultaneously with each other.
-   </p>
-   
-   <p class="note">For the purposes of conformance with these guidelines, a resource must be "non-embedded"
-      within the scope of conformance to be considered a Web page.
-   </p>
-   
-   <p class="example">A Web resource including all embedded images and media.</p>
-   
-   <p class="example">A Web mail program built using Asynchronous JavaScript and XML (AJAX). The program
-      lives entirely at http://example.com/mail, but includes an inbox, a contacts area
-      and a calendar. Links or buttons are provided that cause the inbox, contacts, or calendar
-      to display, but do not change the URI of the page as a whole.
-   </p>
-   
-   <p class="example">A customizable portal site, where users can choose content to display from a set of
-      different content modules.
-   </p>
-   
-   <p class="example">When you enter "http://shopping.example.com/" in your browser, you enter a movie-like
-      interactive shopping environment where you visually move around in a store dragging
-      products off of the shelves around you and into a visual shopping cart in front of
-      you. Clicking on a product causes it to be demonstrated with a specification sheet
-      floating alongside. This might be a single-page Web site or just one page within a
-      Web site.
-   </p>
-   
-</dd>
-</blockquote>
+                  <blockquote class="scquote" data-include="../guidelines/terms/20/web-page.html">web page</blockquote>
                   
                   
                   <p>It is important to note that, in this standard, the term "Web page" includes much
@@ -1881,68 +1666,11 @@
                
                
                
-               <dd id="dfn-accessibility-supported">accessibility supported</dd>
-               <dd id="dfn-assistive-technology">assistive technology</dd>
-               <dd id="dfn-conformance">conformance</dd>
-               <dd id="dfn-conforming-alternate-version">conforming alternate version</dd>
-               <dd id="dfn-content">content</dd>
-               <dd id="dfn-functionality">functionality</dd>
-               <dd id="dfn-human-language">human language</dd>
-               <dd id="dfn-mechanism">mechanism</dd>
-               <dd id="dfn-presentation">presentation</dd>
-               <dd id="dfn-process">process</dd>
-               <dd id="dfn-relied-upon">relied upon</dd>
-               <dd id="dfn-satisfies-a-success-criterion">satisfies a success criterion</dd>
-               <dd id="dfn-sign-language">sign language</dd>
-               <dd id="dfn-structure">structure</dd>
-               <dd id="dfn-supplemental-content">supplemental content</dd>
-               <dd id="dfn-technology">technology</dd>
-               <dd id="dfn-user-agent">user agent</dd>
-               <dd id="dfn-web-page">web page</dd>
-            </div>
-            <nav class="pager" aria-label="Previous/Next Page">
-               <ul id="navigation">
-                  <li class="pager--item previous"><a href="compatible">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-                           <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-                        </svg><span class="pager--item-text-direction"><span class="pager--item-text">Previous Guideline:</span><span class="pager--item-text-target">Compatible</span></span></a></li>
-                  <li class="pager--item previous"><a href="status-messages">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-                           <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Status Messages</span></span></a></li>
-                  <li class="pager--item next"><a href="refer-to-wcag">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right pager--item-icon" viewBox="0 0 23 28">
-                           <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Next: </span><span class="pager--item-text-target">How to Refer to WCAG  from Other Documents</span></span></a></li>
-               </ul>
-            </nav>
-         </main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
-            </p>
-            <dl>
-               <dt>Key terms</dt>
-               <dd id="dfn-accessibility-supported">accessibility supported</dd>
-               <dd id="dfn-assistive-technology">assistive technology</dd>
-               <dd id="dfn-conformance">conformance</dd>
-               <dd id="dfn-conforming-alternate-version">conforming alternate version</dd>
-               <dd id="dfn-content">content</dd>
-               <dd id="dfn-functionality">functionality</dd>
-               <dd id="dfn-human-language">human language</dd>
-               <dd id="dfn-mechanism">mechanism</dd>
-               <dd id="dfn-presentation">presentation</dd>
-               <dd id="dfn-process">process</dd>
-               <dd id="dfn-relied-upon">relied upon</dd>
-               <dd id="dfn-satisfies-a-success-criterion">satisfies a success criterion</dd>
-               <dd id="dfn-sign-language">sign language</dd>
-               <dd id="dfn-structure">structure</dd>
-               <dd id="dfn-supplemental-content">supplemental content</dd>
-               <dd id="dfn-technology">technology</dd>
-               <dd id="dfn-user-agent">user agent</dd>
-               <dd id="dfn-web-page">web page</dd>
-            </dl>
-         </aside>
+            </div><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -1960,13 +1688,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -1996,7 +1725,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
@@ -2011,6 +1740,7 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer>
-   </body>
+      </footer><script>
+				var translationStrings = {}; /* fix WAI JS */
+				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

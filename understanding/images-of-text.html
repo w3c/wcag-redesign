@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
    <head>
       <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Understanding Success Criterion 1.4.5: Images of Text</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
-   <body>
-      <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+   <body dir="ltr">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -27,64 +30,91 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Meta navigation">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Understanding Docs">
                <ul>
-                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
-                  <li class="nav__item"><a href="#">About Understanding documents</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        										
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                  <li><a href=".">
+                        								All Understanding Docs
+                        							</a></li>
+                  <li><a href="distinguishable" aria-current="page" class="active">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Guideline: Distinguishable</a></li>
+                  <li><a href="resize-text">
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+                        </svg>Previous SC: Resize text</a></li>
+                  <li><a href="contrast-enhanced">Next SC: Contrast (Enhanced)
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
-            <h1><span class="standalone-resource__type-of-guidance">Understanding:</span>Success Criterion 1.4.5: Images of Text
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Page Contents</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#intent">Intent</a></li>
+                     <li><a href="#benefits">Benefits</a></li>
+                     <li><a href="#examples">Examples</a></li>
+                     <li><a href="#resources">Related Resources</a></li>
+                     <li><a href="#techniques">Techniques</a></li>
+                     <li><a href="#key-terms">Key Terms</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Understanding SC 1.4.5:</span>Images of Text (Level AA)
             </h1>
-            <blockquote class="scquote">
-               <p>Success Criterion <a href="/guidelines/#images-of-text" style="font-weight: bold;">1.4.5 Images of Text</a> (Level AA): If the technologies being used can achieve the visual presentation, <a href="#dfn-text">text</a> is used to convey information rather than <a href="#dfn-image-of-text">images of text</a> except for the following:
-                  
-               </p>
-               <dl>
-                  
-                  
-                  <dt>Customizable</dt>
-                  
-                  
-                  <dd>
+            <aside class="box">
+               <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
+               <div class="box-i">
+                  <p>If the technologies being used can achieve the visual presentation, <a href="#dfn-text">text</a> is used to convey information rather than <a href="#dfn-image-of-text">images of text</a> except for the following:
+                     
+                  </p>
+                  <dl>
                      
                      
-                     <p>The image of text can be <a href="#dfn-visually-customized">visually customized</a> to the user's requirements;
+                     <dt>Customizable</dt>
+                     
+                     
+                     <dd>
                         
-                     </p>
-                     
-                     
-                  </dd>
-                  
-                  
-                  <dt>Essential</dt>
-                  
-                  
-                  <dd>
-                     
-                     
-                     <p>A particular presentation of text is <a href="#dfn-essential">essential</a> to the information being conveyed.
                         
-                     </p>
+                        <p>The image of text can be <a href="#dfn-visually-customized">visually customized</a> to the user's requirements;
+                           
+                        </p>
+                        
+                        
+                     </dd>
                      
                      
-                  </dd>
-                  
-                  
-               </dl>
-               <p class="note">Logotypes (text that is part of a logo or brand name) are considered essential.</p>
-            </blockquote>
+                     <dt>Essential</dt>
+                     
+                     
+                     <dd>
+                        
+                        
+                        <p>A particular presentation of text is <a href="#dfn-essential">essential</a> to the information being conveyed.
+                           
+                        </p>
+                        
+                        
+                     </dd>
+                     
+                     
+                  </dl>
+                  <p class="note">Logotypes (text that is part of a logo or brand name) are considered essential.</p>
+               </div>
+            </aside>
+            <div class="excol-all"></div>
             <section id="intent">
                <h2>Intent</h2>
                <p>The intent of this Success Criterion is to encourage authors, who are using technologies
@@ -410,24 +440,7 @@
                      
                      <li>
                         									         
-                        <a class="css" href="/techniques/css/C22">C22: Using CSS to control visual presentation of text</a>
-                        								       
-                        
-                     </li>
-                     
-                     
-                     <li>
-                        
-                        <a class="silverlight" href="/techniques/silverlight/SL31">SL31: Using Silverlight Font Properties to Control Text Presentation</a>
-                        
-                        
-                     </li>
-                     
-                     
-                     <li>
-                        									         
-                        <a class="css" href="/techniques/css/C30">C30: Using CSS to replace text with images of text and providing user interface controls
-                           to switch</a>
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C22" class="css">Using CSS to control visual presentation of text</a>
                         								       
                         
                      </li>
@@ -435,7 +448,19 @@
                      
                      <li>
                         									         
-                        <a class="general" href="/techniques/general/G140">G140: Separating information and structure from presentation to enable different presentations</a>
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C30" class="css">Using CSS to replace text with images of text and providing user interface controls
+                           to switch
+                           </a>
+                        								       
+                        
+                     </li>
+                     
+                     
+                     <li>
+                        									         
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G140" class="general">Separating information and structure from presentation so that Web pages can be presented
+                           different ways without losing information
+                           </a>
                         								       
                         
                      </li>
@@ -443,7 +468,7 @@
                      
                      <li>
                         
-                        <a class="pdf" href="/techniques/pdf/PDF7">PDF7: Performing OCR on a scanned PDF document to provide actual text</a>
+                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" class="pdf"></a>
                         
                         
                      </li>
@@ -468,7 +493,7 @@
                         
                         <li>
                            										           
-                           <a class="css" href="/techniques/css/C12">C12: Using percent for font sizes</a>
+                           <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C12" class="css">Using percent for font sizes</a>
                            									         
                            
                         </li>
@@ -476,7 +501,7 @@
                         
                         <li>
                            										           
-                           <a class="css" href="/techniques/css/C13">C13: Using named font sizes</a>
+                           <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C13" class="css">Using named font sizes</a>
                            									         
                            
                         </li>
@@ -484,7 +509,7 @@
                         
                         <li>
                            										           
-                           <a class="css" href="/techniques/css/C14">C14: Using em units for font sizes</a>
+                           <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C14" class="css">Using em units for font sizes</a>
                            									         
                            
                         </li>
@@ -492,7 +517,7 @@
                         
                         <li>
                            										           
-                           <a class="css" href="/techniques/css/C8">C8: Using CSS letter-spacing to control spacing within a word</a>
+                           <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C8" class="css">Using CSS letter-spacing to control spacing within a word</a>
                            									         
                            
                         </li>
@@ -500,7 +525,7 @@
                         
                         <li>
                            										           
-                           <a class="css" href="/techniques/css/C6">C6: Positioning content based on structural markup</a>
+                           <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C6" class="css">Positioning content based on structural markup</a>
                            									         
                            
                         </li>
@@ -512,39 +537,233 @@
                   </section>
                </section>
             </section>
-            <nav class="pager" aria-label="Previous/Next Page">
-               <ul id="navigation">
-                  <li class="pager--item context"><a href="distinguishable"><span class="pager--item-text"><span class="pager--item-text-direction"><abbr title="Guideline">Part of Guideline</abbr>:</span><span class="pager--item-text-target">Distinguishable</span></span></a></li>
-                  <li class="pager--item previous"><a href="resize-text">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-                           <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Resize text</span></span></a></li>
-                  <li class="pager--item next"><a href="contrast-enhanced">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right pager--item-icon" viewBox="0 0 23 28">
-                           <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Contrast (Enhanced)</span></span></a></li>
-               </ul>
-            </nav>
-         </main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
-            </p>
-            <dl>
-               <dt>Level</dt>
-               <dd>AA</dd>
-               <dt>Key terms</dt>
-               <dd id="dfn-assistive-technology">assistive technology</dd>
-               <dd id="dfn-essential">essential</dd>
-               <dd id="dfn-human-language">human language</dd>
-               <dd id="dfn-image-of-text">image of text</dd>
-               <dd id="dfn-programmatically-determined">programmatically determined</dd>
-               <dd id="dfn-sign-language">sign language</dd>
-               <dd id="dfn-text">text</dd>
-               <dd id="dfn-user-agent">user agent</dd>
-               <dd id="dfn-visually-customized">visually customized</dd>
-            </dl>
-         </aside>
+            <section id="key-terms">
+               <details>
+                  <summary>
+                     <h2>Key Terms</h2>
+                  </summary>
+                  <dt id="dfn-assistive-technology">assistive technology</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">hardware and/or software that acts as a <a href="#dfn-user-agent">user agent</a>, or along with a mainstream user agent, to provide functionality to meet the requirements
+                           of users with disabilities that go beyond those offered by mainstream user agents
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
+                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                           voice), additional navigation or orientation mechanisms, and content transformations
+                           (e.g., to make tables more accessible).
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
+                           by using and monitoring APIs.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
+                           Many mainstream user agents provide some features to assist individuals with disabilities.
+                           The basic difference is that mainstream user agents target broad and diverse audiences
+                           that usually include people with and without disabilities. Assistive technologies
+                           target narrowly defined populations of users with specific disabilities. The assistance
+                           provided by an assistive technology is more specific and appropriate to the needs
+                           of its target users. The mainstream user agent may provide important functionality
+                           to assistive technologies like retrieving Web content from program objects or parsing
+                           markup into identifiable bundles.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
+                           the following:
+                           
+                        </p>
+                        
+                        
+                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>screen magnifiers, and other visual reading assistants, which are used by people with
+                              visual, perceptual and physical print disabilities to change text font, size, spacing,
+                              color, synchronization with speech, etc. in order to improve the visual readability
+                              of rendered text and images;
+                              
+                           </li>
+                           
+                           
+                           <li>screen readers, which are used by people who are blind to read textual information
+                              through synthesized speech or braille;
+                              
+                           </li>
+                           
+                           
+                           <li>text-to-speech software, which is used by some people with cognitive, language, and
+                              learning disabilities to convert text into synthetic speech;
+                              
+                           </li>
+                           
+                           
+                           <li>speech recognition software, which may be used by people who have some physical disabilities;</li>
+                           
+                           
+                           <li>alternative keyboards, which are used by people with certain physical disabilities
+                              to simulate the keyboard (including alternate keyboards that use head pointers, single
+                              switches, sip/puff and other special input devices.);
+                              
+                           </li>
+                           
+                           
+                           <li>alternative pointing devices, which are used by people with certain physical disabilities
+                              to simulate mouse pointing and button activations.
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-essential">essential</dt>
+                  <dd>
+                     <definition xmlns="">
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">if removed, would fundamentally change the information or functionality of the content,
+                           <strong>and</strong> information and functionality cannot be achieved in another way that would conform
+                           
+                        </p>
+                        				
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-human-language">human language</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">language that is spoken, written or signed (through visual or tactile means) to communicate
+                           with humans
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">See also <a href="#dfn-sign-language">sign language</a>.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-image-of-text">image of text</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">text that has been rendered in a non-text form (e.g., an image) in order to achieve
+                           a particular visual effect
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">This does not include <a href="#dfn-text">text</a> that is part of a picture that contains significant other visual content.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A person's name on a nametag in a photograph.</p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-programmatically-determined">programmatically determined</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">determined by software from author-supplied data provided in a way that different
+                           <a href="#dfn-user-agent">user agents</a>, including <a href="#dfn-assistive-technology">assistive technologies</a>, can extract and present this information to users in different modalities
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Determined in a markup language from elements and attributes that are accessed directly
+                           by commonly available assistive technology.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Determined from technology-specific data structures in a non-markup language and exposed
+                           to assistive technology via an accessibility API that is supported by commonly available
+                           assistive technology.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-sign-language">sign language</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">a language using combinations of movements of the hands and arms, facial expressions,
+                           or body positions to convey meaning
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-text">text</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">sequence of characters that can be <a href="#dfn-programmatically-determined">programmatically determined</a>, where the sequence is expressing something in <a href="#dfn-human-language">human language</a>
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-user-agent">user agent</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">any software that retrieves and presents Web content for users</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Web browsers, media players, plug-ins, and other programs — including <a href="#dfn-assistive-technology">assistive technologies</a> — that help in retrieving, rendering, and interacting with Web content.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-visually-customized">visually customized</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">the font, size, color, and background can be set</p>
+                        
+                        
+                     </definition>
+                  </dd>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -562,13 +781,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -598,7 +818,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
@@ -613,6 +833,7 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer>
-   </body>
+      </footer><script>
+				var translationStrings = {}; /* fix WAI JS */
+				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

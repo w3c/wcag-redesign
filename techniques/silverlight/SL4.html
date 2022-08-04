@@ -2,15 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
    <head>
       <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>SL4: Declaring Discrete Silverlight Objects to Specify Language Parts
          			in the HTML DOM
       </title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
-   <body>
-      <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+   <body class="wcag-docs" dir="ltr">
+      <header class="default-grid with-gap minimal-header-container">
+         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -32,12 +33,12 @@
       </header>
       <div class="nav-container">
          <div class="default-grid">
-            <nav class="nav" aria-label="Meta navigation">
+            <nav class="nav" aria-label="Techniques">
                <ul>
                   <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
                   <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
                   <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        										
+                        									
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
                         </svg></a></li>
@@ -56,113 +57,121 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/readable">3.1: Readable</a></span>.
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/language-of-parts">3.1.2: Language of Parts</a></span>.
                   </p>
                   <p><em>Note: Microsoft has stopped updating and distributing Silverlight, and authors are
                         encouraged to use HTML for accessible web content.</em></p>
                </div>
             </aside>
+            <div class="excol-all"></div>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is use the HTML <code class="att">Lang</code> attribute on
-                  				the object tag to describe each Silverlight plug-in instance on the
-                  				HTML hosting page as a "part" that has a different language.
-                  				Assistive technologies that use HTML Lang as a determinant of language
-                  				of parts can thus treat all Silverlight content as using that HTML
-                  				Lang-declared language. 
-               </p>
-               <p>Most assistive technologies that are capable of determining Language
-                  				for Web content will use the HTML Lang tag value as the determinant
-                  				of the language of the page. Assistive technologies would also use
-                  				HTML Lang tag values for the language of parts. HTML Lang is not specifically
-                  				reported in accessibility frameworks. Assistive technologies would
-                  				typically access the HTML DOM to get this information. This technique
-                  				specifically addresses this known situation regarding how ATs obtain
-                  				Language information from HTML rather than from accessibility frameworks
-                  				that otherwise report other aspects of HTML content. 
-               </p>
-               <p>In order to support different language parts that each contain Silverlight
-                  				content, authors declare one Silverlight object tag per continuous
-                  				language part region in the HTML. For example, the following HTML is
-                  				a simplication of HTML markup for a page that contains two Silverlight
-                  				content areas, the first declaring Lang as English (en), the second
-                  				declaring Lang as German (de): 
-               </p><pre xml:space="preserve">     &lt;body&gt;
+               <details open="open">
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is use the HTML <code class="att">Lang</code> attribute on
+                     				the object tag to describe each Silverlight plug-in instance on the
+                     				HTML hosting page as a "part" that has a different language.
+                     				Assistive technologies that use HTML Lang as a determinant of language
+                     				of parts can thus treat all Silverlight content as using that HTML
+                     				Lang-declared language. 
+                  </p>
+                  <p>Most assistive technologies that are capable of determining Language
+                     				for Web content will use the HTML Lang tag value as the determinant
+                     				of the language of the page. Assistive technologies would also use
+                     				HTML Lang tag values for the language of parts. HTML Lang is not specifically
+                     				reported in accessibility frameworks. Assistive technologies would
+                     				typically access the HTML DOM to get this information. This technique
+                     				specifically addresses this known situation regarding how ATs obtain
+                     				Language information from HTML rather than from accessibility frameworks
+                     				that otherwise report other aspects of HTML content. 
+                  </p>
+                  <p>In order to support different language parts that each contain Silverlight
+                     				content, authors declare one Silverlight object tag per continuous
+                     				language part region in the HTML. For example, the following HTML is
+                     				a simplication of HTML markup for a page that contains two Silverlight
+                     				content areas, the first declaring Lang as English (en), the second
+                     				declaring Lang as German (de): 
+                  </p><pre xml:space="preserve">     &lt;body&gt;
        &lt;object type="application/x-silverlight-2" lang="en"&gt;
        &lt;/object&gt;
        &lt;object type="application/x-silverlight-2" lang="de"&gt;
        &lt;/object&gt;
      &lt;/body&gt;
      </pre><p>To support communication between different Silverlight plug-in instances
-                  				that are hosted on the same HTML page, application authors can use
-                  				various techniques, including the following 
-               </p>
-               <ul>
-                  
-                  <li> System.Windows.Messaging APIs: this is the simplest technique,
-                     				and this is shown in Example 1 
-                  </li>
-                  
-                  <li> Using a shared business object, and exchanging information by
-                     					having each Silverlight instance reference two-way data binding to
-                     					that business object's properties. 
-                  </li>
-                  
-                  <li> Exchanging information through the HTML DOM and declaring properties
-                     					of one or both instances as Scriptable by the DOM. 
-                  </li>
-                  
-               </ul>
-               <section id="SL4_silverlight_runtime_language_determination">
-                  
-                  <h3>Silverlight runtime language determination</h3>
-                  
-                  <p>Regardless of how HTML Lang is declared on the defining object tags,
-                     					many aspects of how Silverlight works with language and culture information
-                     					at run time are not determined by HTML Lang, and are instead determined
-                     					by the operating system and which culture that operating system is
-                     					running. For more information, see <a href="/techniques/silverlight/SL27">SL27: Using Language/Culture Properties as Exposed by Silverlight Applications and Assistive
-                        Technologies</a>. 
-                  </p>
-                  	
-               </section>
-            </section>
-            <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-two-silverlight-object-tags-each-with-different-html&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;lang-to-support-a-simple-language-translator-application-as-a-web&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;page">
-                  <h3>Example 1: Two Silverlight object tags, each with different HTML
-                     					Lang, to support a simple language-translator application as a Web
-                     					page
-                  </h3>
-                  <p>The Visual Studio solution for this example has a total of 4 project
-                     						components: 
+                     				that are hosted on the same HTML page, application authors can use
+                     				various techniques, including the following 
                   </p>
                   <ul>
                      
-                     <li> The Web project that declares the HTML or ASP page that shows
-                        						the framework of how the two Silverlight object tags exist on a page.
-                        						This is where the HTML Lang is actually set. 
+                     <li> System.Windows.Messaging APIs: this is the simplest technique,
+                        				and this is shown in Example 1 
                      </li>
                      
-                     <li> A project for the English user control, a simple <code class="obj">TextBox</code>. 
+                     <li> Using a shared business object, and exchanging information by
+                        					having each Silverlight instance reference two-way data binding to
+                        					that business object's properties. 
                      </li>
                      
-                     <li> A project for a German user control, also a simple <code class="obj">TextBox</code>. 
+                     <li> Exchanging information through the HTML DOM and declaring properties
+                        					of one or both instances as Scriptable by the DOM. 
                      </li>
-                     
-                     <li> A library with a static translation function </li>
                      
                   </ul>
-                  <p>In this example, the English user control implements a LocalMessageSender,
-                     						which sends asynchronous messages to the German user control. The German
-                     						user control has a LocalMessageReceiver, which is set to listen as
-                     						soon as the control is instantiated. When a message is received, the
-                     						German control calls a function of the translation library, and displays
-                     						translated text. 
-                  </p>
-                  <p>The following is the HTML page (some infrastructure and parameters
-                     					omitted for clarity): 
-                  </p><pre xml:space="preserve">&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+                  <section id="SL4_silverlight_runtime_language_determination">
+                     
+                     <h3>Silverlight runtime language determination</h3>
+                     
+                     <p>Regardless of how HTML Lang is declared on the defining object tags,
+                        					many aspects of how Silverlight works with language and culture information
+                        					at run time are not determined by HTML Lang, and are instead determined
+                        					by the operating system and which culture that operating system is
+                        					running. For more information, see <a href="/techniques/silverlight/SL27">SL27: Using Language/Culture Properties as Exposed by Silverlight Applications and Assistive
+                           Technologies</a>. 
+                     </p>
+                     	
+                  </section>
+               </details>
+            </section>
+            <section id="examples">
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-two-silverlight-object-tags-each-with-different-html&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;lang-to-support-a-simple-language-translator-application-as-a-web&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;page">
+                     <h3>Example 1: Two Silverlight object tags, each with different HTML
+                        					Lang, to support a simple language-translator application as a Web
+                        					page
+                     </h3>
+                     <p>The Visual Studio solution for this example has a total of 4 project
+                        						components: 
+                     </p>
+                     <ul>
+                        
+                        <li> The Web project that declares the HTML or ASP page that shows
+                           						the framework of how the two Silverlight object tags exist on a page.
+                           						This is where the HTML Lang is actually set. 
+                        </li>
+                        
+                        <li> A project for the English user control, a simple <code class="obj">TextBox</code>. 
+                        </li>
+                        
+                        <li> A project for a German user control, also a simple <code class="obj">TextBox</code>. 
+                        </li>
+                        
+                        <li> A library with a static translation function </li>
+                        
+                     </ul>
+                     <p>In this example, the English user control implements a LocalMessageSender,
+                        						which sends asynchronous messages to the German user control. The German
+                        						user control has a LocalMessageReceiver, which is set to listen as
+                        						soon as the control is instantiated. When a message is received, the
+                        						German control calls a function of the translation library, and displays
+                        						translated text. 
+                     </p>
+                     <p>The following is the HTML page (some infrastructure and parameters
+                        					omitted for clarity): 
+                     </p><pre xml:space="preserve">&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
 &lt;body&gt;
 
     &lt;object data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="100%" height="25px" lang="en"&gt;
@@ -199,11 +208,11 @@
        }
    }
    </pre><p>The following is the code-behind for the German user control (the
-                     						XAML is minimal; the main relevant point is that it contains a <code class="obj">TextBox</code> target
-                     						named GermanTranslationBox). The code invokes the translation function
-                     						found in a separate library. The translation function is not shown,
-                     						it simply takes an English string and returns a German translation. 
-                  </p><pre xml:space="preserve">   public partial class MainPage : UserControl
+                        						XAML is minimal; the main relevant point is that it contains a <code class="obj">TextBox</code> target
+                        						named GermanTranslationBox). The code invokes the translation function
+                        						found in a separate library. The translation function is not shown,
+                        						it simply takes an English string and returns a German translation. 
+                     </p><pre xml:space="preserve">   public partial class MainPage : UserControl
    {
        public MainPage()
        {
@@ -227,50 +236,62 @@
        }
    }
 </pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-silver-fish/">working example of SilverFish</a>.
-                  </p>
-               </section>
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <ul id="silverlight.applicability.general">
-                  
-                  <li> Microsoft Silverlight, versions 3 and greater </li>
-                  
-                  <li> Silverlight managed programming model and Silverlight XAML </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <ul id="silverlight.applicability.general">
+                     
+                     <li> Microsoft Silverlight, versions 3 and greater </li>
+                     
+                     <li> Silverlight managed programming model and Silverlight XAML </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Using a browser that supports Silverlight, open an HTML page that
-                        					references multiple Silverlight object tags, each with different
-                        					HTML Lang values. 
-                     </li>
+                     <ol>
+                        
+                        <li> Using a browser that supports Silverlight, open an HTML page that
+                           					references multiple Silverlight object tags, each with different
+                           					HTML Lang values. 
+                        </li>
+                        
+                        <li> Verify that language settings through HTML Lang on object tags
+                           						are respected by assistive technologies that can use HTML Lang values
+                           						for language of parts determination. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li> Verify that language settings through HTML Lang on object tags
-                        						are respected by assistive technologies that can use HTML Lang values
-                        						for language of parts determination. 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <p>#2 gives expected results. </p>
-                  
-               </section>
-            </section>
-         </main>
+                     <p>#2 gives expected results. </p>
+                     
+                  </section>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Back to Top
+                  			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -309,7 +330,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -361,5 +382,12 @@
             </ul>
          </div>
       </footer>
-      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>hljs.highlightAll();</script></body>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+				document.addEventListener('DOMContentLoaded', (event) => {
+			  	document.querySelectorAll('pre').forEach((el) => {
+    				hljs.highlightElement(el);
+  				});
+				});
+				var translationStrings = {}; /* fix WAI JS */
+				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

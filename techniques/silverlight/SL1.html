@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
    <head>
       <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>SL1: Accessing Alternate Audio Tracks in Silverlight Media</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
-   <body>
-      <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+   <body class="wcag-docs" dir="ltr">
+      <header class="default-grid with-gap minimal-header-container">
+         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -30,12 +31,12 @@
       </header>
       <div class="nav-container">
          <div class="default-grid">
-            <nav class="nav" aria-label="Meta navigation">
+            <nav class="nav" aria-label="Techniques">
                <ul>
                   <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
                   <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
                   <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        										
+                        									
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
                         </svg></a></li>
@@ -55,72 +56,80 @@
                <div class="box-i">
                   <p>This technique is
                      
-                     						<strong>Sufficient</strong> to meet <a href="/understanding/time-based-media">1.2: Time-based Media</a>, if combined with <a href="../general/G78">G78: Providing a second, user-selectable, audio track that includes audio descriptions</a> and <strong>Sufficient</strong> to meet <a href="/understanding/time-based-media">1.2: Time-based Media</a> when used with <a href="../general/G173">G173: Providing a version of a movie with audio descriptions</a> and <strong>Sufficient</strong> to meet <a href="/understanding/time-based-media">1.2: Time-based Media</a> when used with <a href="../general/G8">G8: Providing a movie with extended audio descriptions</a>
+                     						<strong>Sufficient</strong> to meet <a href="/understanding/audio-description-or-media-alternative-prerecorded">1.2.3: Audio Description or Media Alternative (Prerecorded)</a>, if combined with <a href="../general/G78">G78: Providing a second, user-selectable, audio track that includes audio descriptions</a> and <strong>Sufficient</strong> to meet <a href="/understanding/audio-description-or-media-alternative-prerecorded">1.2.3: Audio Description or Media Alternative (Prerecorded)</a> when used with <a href="../general/G173">G173: Providing a version of a movie with audio descriptions</a> and <strong>Sufficient</strong> to meet <a href="/understanding/audio-description-or-media-alternative-prerecorded">1.2.3: Audio Description or Media Alternative (Prerecorded)</a> when used with <a href="../general/G8">G8: Providing a movie with extended audio descriptions</a> and <strong>Sufficient</strong> to meet <a href="/understanding/audio-description-prerecorded">1.2.5: Audio Description (Prerecorded)</a>, if combined with <a href="../general/G78">G78: Providing a second, user-selectable, audio track that includes audio descriptions</a>
                      					.
                   </p>
                   <p><em>Note: Microsoft has stopped updating and distributing Silverlight, and authors are
                         encouraged to use HTML for accessible web content.</em></p>
                </div>
             </aside>
+            <div class="excol-all"></div>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to show how to access an alternate
-                  				audio channel in a prepared media file that is played in a Silverlight <code class="obj">MediaElement</code>. 
-               </p>
-               <p>Silverlight supports media file formats that contains additional audio
-                  				channels in synchronization, beyond the two tracks for stereo audio
-                  				that are used by typical media player defaults. Silverlight provides
-                  				a dedicated <code class="prop">AudioStreamIndex</code> API on <code class="obj">MediaElement</code>,
-                  				so that the Silverlight application author can use Silverlight programming
-                  				techniques to select which audio channel to play for the user. Silverlight
-                  				control authors might label a UI control with text such as "Activate
-                  				this button to listen to an audio-only version of the media presentation" so
-                  				that the purpose of the media element control interface is clear to
-                  				the user. That way the same media control can be used to present the
-                  				media either as audio-video or as audio-only with alternate track depending
-                  				on user preference at run time. 
-               </p>
-               <p>The media formats that are supported by Silverlight are documented
-                  				on <a href="https://msdn.microsoft.com/en-us/library/cc189080(VS.95).aspx">MSDN</a>. 
-               </p>
-               <section id="SL1_media_encoding">
-                  
-                  <h3>Media encoding</h3>
-                  
-                  <p>The process of encoding the media with additional audio channels is
-                     					not described in this technique because configuring and encoding audio
-                     					channels for media formats is a technique for any usage of media in
-                     					a computer application, not just a Silverlight-specific technique or
-                     					a Web technology technique. For more information on one possible procedure
-                     					for encoding the media in WMV format, see <a href="http://go.microsoft.com/fwlink/?LinkID=321498">Microsoft Expression Encoder Overview</a>.
-                     					Often, Silverlight authors will receive the media from a third party,
-                     					such as a video production facility, and are not directly involved
-                     					with the encoding process. Silverlight authors should verify that the
-                     					media they are using has alternate audio tracks encoded in it. If such
-                     					tracks exist, Silverlight authors will need a track listing from the
-                     					media producer to know which of the audio tracks is intended as the
-                     					alternate audio. Other tracks might exist in the encoded media that
-                     					provide language translations of the default audio, or that serve other
-                     					purposes. 
+               <details open="open">
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to show how to access an alternate
+                     				audio channel in a prepared media file that is played in a Silverlight <code class="obj">MediaElement</code>. 
                   </p>
-                  	
-               </section>
+                  <p>Silverlight supports media file formats that contains additional audio
+                     				channels in synchronization, beyond the two tracks for stereo audio
+                     				that are used by typical media player defaults. Silverlight provides
+                     				a dedicated <code class="prop">AudioStreamIndex</code> API on <code class="obj">MediaElement</code>,
+                     				so that the Silverlight application author can use Silverlight programming
+                     				techniques to select which audio channel to play for the user. Silverlight
+                     				control authors might label a UI control with text such as "Activate
+                     				this button to listen to an audio-only version of the media presentation" so
+                     				that the purpose of the media element control interface is clear to
+                     				the user. That way the same media control can be used to present the
+                     				media either as audio-video or as audio-only with alternate track depending
+                     				on user preference at run time. 
+                  </p>
+                  <p>The media formats that are supported by Silverlight are documented
+                     				on <a href="https://msdn.microsoft.com/en-us/library/cc189080(VS.95).aspx">MSDN</a>. 
+                  </p>
+                  <section id="SL1_media_encoding">
+                     
+                     <h3>Media encoding</h3>
+                     
+                     <p>The process of encoding the media with additional audio channels is
+                        					not described in this technique because configuring and encoding audio
+                        					channels for media formats is a technique for any usage of media in
+                        					a computer application, not just a Silverlight-specific technique or
+                        					a Web technology technique. For more information on one possible procedure
+                        					for encoding the media in WMV format, see <a href="http://go.microsoft.com/fwlink/?LinkID=321498">Microsoft Expression Encoder Overview</a>.
+                        					Often, Silverlight authors will receive the media from a third party,
+                        					such as a video production facility, and are not directly involved
+                        					with the encoding process. Silverlight authors should verify that the
+                        					media they are using has alternate audio tracks encoded in it. If such
+                        					tracks exist, Silverlight authors will need a track listing from the
+                        					media producer to know which of the audio tracks is intended as the
+                        					alternate audio. Other tracks might exist in the encoded media that
+                        					provide language translations of the default audio, or that serve other
+                        					purposes. 
+                     </p>
+                     	
+                  </section>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-changing-audiostreamindex-">
-                  <h3>Example 1: Changing AudioStreamIndex </h3>
-                  <p>This example has a UI definition in XAML and interaction logic in
-                     						C#. In addition to the typical Play/Pause/Stop controls, this interface
-                     						includes a Play Full-Description Audio button. Activating the button
-                     						invokes a function that swaps the audio channels and plays an alternative
-                     						synchronized audio channel that contains a composite full-description audio
-                     track. 
-                  </p>
-                  <p>The following is the basic UI in XAML. This example is deliberately
-                     						simple and does not include <code class="obj">AutomationProperties</code>.
-                     						Audio streams are identified by an index in a collection. 
-                  </p><pre xml:space="preserve">      &lt;Grid x:Name="LayoutRoot" Background="White"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-changing-audiostreamindex-">
+                     <h3>Example 1: Changing AudioStreamIndex </h3>
+                     <p>This example has a UI definition in XAML and interaction logic in
+                        						C#. In addition to the typical Play/Pause/Stop controls, this interface
+                        						includes a Play Full-Description Audio button. Activating the button
+                        						invokes a function that swaps the audio channels and plays an alternative
+                        						synchronized audio channel that contains a composite full-description audio
+                        track. 
+                     </p>
+                     <p>The following is the basic UI in XAML. This example is deliberately
+                        						simple and does not include <code class="obj">AutomationProperties</code>.
+                        						Audio streams are identified by an index in a collection. 
+                     </p><pre xml:space="preserve">      &lt;Grid x:Name="LayoutRoot" Background="White"&gt;
         &lt;Grid.ColumnDefinitions&gt;
             &lt;ColumnDefinition Width="*" /&gt;
             &lt;ColumnDefinition Width="*" /&gt;
@@ -175,57 +184,69 @@
         {
             media.Play();
         }</pre><p class="working-example">This example is shown in operation in the <a href="../../working-examples/silverlight-alternative-audio-channel/">working example of Alternative Audio Channel</a>. If using the test file, the test contains test audio tones rather than actual audio
-                     description, but the pitch of the tones is indicative of which of the channels is
-                     selected and played. 
-                  </p>
-               </section>
+                        description, but the pitch of the tones is indicative of which of the channels is
+                        selected and played. 
+                     </p>
+                  </section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <ul id="silverlight.applicability.general">
-                  
-                  <li> Microsoft Silverlight, versions 3 and greater </li>
-                  
-                  <li> Silverlight managed programming model and Silverlight XAML </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <ul id="silverlight.applicability.general">
+                     
+                     <li> Microsoft Silverlight, versions 3 and greater </li>
+                     
+                     <li> Silverlight managed programming model and Silverlight XAML </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Open the HTML page for a Silverlight application, where that application
-                        					plays media and the media is expected to support an alternate audio
-                        					track for the video. 
-                     </li>
+                     <ol>
+                        
+                        <li> Open the HTML page for a Silverlight application, where that application
+                           					plays media and the media is expected to support an alternate audio
+                           					track for the video. 
+                        </li>
+                        
+                        <li> Verify that the application user interface presents a control
+                           						that enables the user to cause the media to play with an alternate
+                           						audio track. 
+                        </li>
+                        
+                        <li> Activate that control. Verify that the audio portion of the media
+                           							player output as played through the computer's audio system is now
+                           							playing the alternate audio track. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li> Verify that the application user interface presents a control
-                        						that enables the user to cause the media to play with an alternate
-                        						audio track. 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li> Activate that control. Verify that the audio portion of the media
-                        							player output as played through the computer's audio system is now
-                        							playing the alternate audio track. 
-                     </li>
+                     <p>#2 and #3 are true. </p>
                      
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <p>#2 and #3 are true. </p>
-                  
-               </section>
-            </section>
-         </main>
+                  </section>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Back to Top
+                  			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -270,7 +291,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -322,5 +343,12 @@
             </ul>
          </div>
       </footer>
-      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>hljs.highlightAll();</script></body>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+				document.addEventListener('DOMContentLoaded', (event) => {
+			  	document.querySelectorAll('pre').forEach((el) => {
+    				hljs.highlightElement(el);
+  				});
+				});
+				var translationStrings = {}; /* fix WAI JS */
+				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
    <head>
       <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Understanding Success Criterion 1.4.11: Non-text Contrast</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
-   <body>
-      <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+   <body dir="ltr">
+      <div class="minimal-header-container default-grid">
+         <div class="minimal-header" id="site-header">
+            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -27,50 +30,77 @@
                      </g>
                   </svg></a></div>
          </div>
-      </header>
-      <div class="nav-container">
-         <div class="default-grid">
-            <nav class="nav" aria-label="Meta navigation">
+      </div>
+      <div class="default-grid nav-container nav-page-specific">
+         <div class="nav">
+            <nav class="nav standalone-resource-pager" aria-label="Understanding Docs">
                <ul>
-                  <li class="nav__item"><a href=".">All Understanding documents</a></li>
-                  <li class="nav__item"><a href="#">About Understanding documents</a></li>
-                  <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        										
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                           <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
+                  <li><a href=".">
+                        								All Understanding Docs
+                        							</a></li>
+                  <li><a href="distinguishable" aria-current="page" class="active">
+                        <svg alt="up" focusable="false" aria-hidden="true" class="icon-arrow-up-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path>
+                        </svg> Guideline: Distinguishable</a></li>
+                  <li><a href="reflow">
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path>
+                        </svg>Previous SC: Reflow</a></li>
+                  <li><a href="text-spacing">Next SC: Text Spacing
+                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                         </svg></a></li>
                </ul>
             </nav>
          </div>
       </div>
-      <div class="default-grid">
-         <main class="main-content">
-            <h1><span class="standalone-resource__type-of-guidance">Understanding:</span>Success Criterion 1.4.11: Non-text Contrast
+      <div class="default-grid with-gap leftcol">
+         <aside class="box nav-hack sidebar standalone-resource__sidebar ">
+            <nav>
+               <header class="box-h ">Page Contents</header>
+               <div class="box-i">
+                  <ul>
+                     <li><a href="#intent">Intent</a></li>
+                     <li><a href="#benefits">Benefits</a></li>
+                     <li><a href="#examples">Examples</a></li>
+                     <li><a href="#resources">Related Resources</a></li>
+                     <li><a href="#techniques">Techniques</a></li>
+                     <li><a href="#key-terms">Key Terms</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <main class="standalone-resource__main">
+            <h1><span class="standalone-resource__type-of-guidance">Understanding SC 1.4.11:</span>Non-text Contrast (Level AA)
             </h1>
-            <blockquote class="scquote">
-               <p>Success Criterion <a href="/guidelines/#non-text-contrast" style="font-weight: bold;">1.4.11 Non-text Contrast</a> (Level AA): The visual <a href="#dfn-presentation">presentation</a> of the following have a <a href="#dfn-contrast-ratio">contrast ratio</a> of at least 3:1 against adjacent color(s):
-               </p>
-               <dl>
-                  						
-                  
-                  <dt>User Interface Components</dt>
-                  						
-                  
-                  <dd>Visual information required to identify <a href="#dfn-user-interface-component">user interface components</a> and <a href="#dfn-state">states</a>, except for inactive components or where the appearance of the component is determined
-                     by the user agent and not modified by the author;
-                  </dd>
-                  						
-                  
-                  <dt>Graphical Objects</dt>
-                  						
-                  
-                  <dd>Parts of graphics required to understand the content, except when a particular presentation
-                     of graphics is <a href="#dfn-essential">essential</a> to the information being conveyed.
-                  </dd>
-                  						
-                  
-               </dl>
-            </blockquote>
+            <aside class="box">
+               <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
+               <div class="box-i">
+                  <p>The visual <a href="#dfn-presentation">presentation</a> of the following have a <a href="#dfn-contrast-ratio">contrast ratio</a> of at least 3:1 against adjacent color(s):
+                  </p>
+                  <dl>
+                     						
+                     
+                     <dt>User Interface Components</dt>
+                     						
+                     
+                     <dd>Visual information required to identify <a href="#dfn-user-interface-component">user interface components</a> and <a href="#dfn-state">states</a>, except for inactive components or where the appearance of the component is determined
+                        by the user agent and not modified by the author;
+                     </dd>
+                     						
+                     
+                     <dt>Graphical Objects</dt>
+                     						
+                     
+                     <dd>Parts of graphics required to understand the content, except when a particular presentation
+                        of graphics is <a href="#dfn-essential">essential</a> to the information being conveyed.
+                     </dd>
+                     						
+                     
+                  </dl>
+               </div>
+            </aside>
+            <div class="excol-all"></div>
             <section id="intent">
                <h2>Intent</h2>
                <p>The intent of this Success Criterion is to ensure that active user interface components
@@ -84,6 +114,15 @@
                   with low vision or other impairments without the need for contrast-enhancing assistive
                   technology.
                </p>
+               <div class="note">
+                  				
+                  <p>The 3:1 contrast ratios referenced in this Success Criterion is intended to be treated
+                     as threshold values. When comparing the computed contrast ratio to the Success Criterion
+                     ratio, the computed values should not be rounded (e.g. 2.999:1 would not meet the
+                     3:1 threshold).
+                  </p>
+                  			
+               </div>
                <section id="user-interface-components">
                   				
                   <h3>Active User Interface Components</h3>
@@ -126,7 +165,7 @@
                   <figure id="figure-buttons-no-visual-indicator">
                      						<img alt="Two buttons, the first with no visual indicator except text saying 'button'. The second is the same but with an added grey border." src="img/minimal-button.png" /> 
                      						
-                     <figcaption>Figure 1 A button (active control) without a visual boundary, and the same button with a focus
+                     <figcaption>A button (active control) without a visual boundary, and the same button with a focus
                         indicator that is a defined visual boundary of grey (#949494) adjacent to white.
                      </figcaption>
                      				
@@ -143,7 +182,7 @@
                   <figure id="figure-standard-text-adjacent-white">
                      					<img src="img/text-input-default.png" alt="Standard text input with a label, white internal and external background with a dark border." />
                      					
-                     <figcaption>Figure 2 A standard text input with a grey border (#767676) and white adjacent color outside
+                     <figcaption>A standard text input with a grey border (#767676) and white adjacent color outside
                         the component
                      </figcaption>
                      				
@@ -168,7 +207,7 @@
                   <figure id="figure-text-box-dark-bg-light-border">
                      					<img alt="A text box with a dark background and light border, with a white background." src="img/text-input-background-border.png" />
                      					
-                     <figcaption>Figure 3  The contrast of the input background (white) and color adjacent to the control (dark
+                     <figcaption> The contrast of the input background (white) and color adjacent to the control (dark
                         blue #003366) is sufficient. There is also a border (silver) on the component that
                         is not required to contrast with either.
                      </figcaption>
@@ -185,7 +224,7 @@
                   <figure id="figure-purple-box-light-check">
                      					<img alt="A purple box with a light grey check." src="img/checkbox-purple.png" />
                      					
-                     <figcaption>Figure 4  A customized checkbox with light grey check (#E5E5E5), which has a contrast ratio
+                     <figcaption> A customized checkbox with light grey check (#E5E5E5), which has a contrast ratio
                         of 5.6:1 with the purple box (#6221EA).
                      </figcaption>
                      				
@@ -202,7 +241,7 @@
                   <figure id="figure-three-radios">
                      					<img alt="Four radio buttons, the first is a plain circle labelled 'Not selected'. The second shows the circle filled with a darker color than the border. The third is filled with the same color as the border. The fourth has an inner filled circle with a gap between it and the outer border." src="img/radio-custom.png" />
                      					
-                     <figcaption>Figure 5 The first radio button shows the default state with a grey (#949494) circle. The second
+                     <figcaption>The first radio button shows the default state with a grey (#949494) circle. The second
                         and third show the radio button selected and filled with a color that contrasts with
                         the color adjacent to the component. The last example shows the state indicator contrasting
                         with the component colors.
@@ -211,13 +250,12 @@
                   </figure>
                   
                   				
-                  <h3>Relationship with Use of Color and Focus Visible</h3>
+                  <h3>Relationship with Use of Color</h3>
                   
                   				
                   <p>The <a href="use-of-color">Use of Color</a> success criterion addresses changing <strong>only the color</strong> (hue) of an object or text without otherwise altering the object's form. The principle
                      is that contrast ratio (the difference in brightness) can be used to distinguish text
-                     or graphics. For example, <a href="/techniques/general/G183">G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual
-                        cues on hover for links or controls where color alone is used to identify them</a> is a technique to use a contrast ratio of 3:1 with surrounding text to distinguish
+                     or graphics. For example, <a href="../../techniques/general/G183.html">G183</a> is a technique to use a contrast ratio of 3:1 with surrounding text to distinguish
                      links and controls. In that case the Working Group regards a link color that meets
                      the 3:1 contrast ratio relative to the non-linked text color as satisfying the Success
                      Criterion <a href="use-of-color">1.4.1 Use of color</a> since it is relying on contrast ratio as well as color (hue) to convey that the text
@@ -235,7 +273,7 @@
                   <figure id="figure-two-star-ratings">
                      					<img src="img/star-examples-pass.png" alt="Two star ratings, one uses a black outline (on white) with a black fill to indicate it is checked. The second has a yellow fill and a thicker dark border." width="300" />
                      					
-                     <figcaption>Figure 6 
+                     <figcaption>
                         						Two examples which pass this success criterion, using either a solid fill to
                         indicate a checked-state that has contrast, or a thicker border as well as yellow
                         fill.
@@ -247,7 +285,7 @@
                   <figure id="figure-two-star-ratings-failing">
                      					<img src="img/star-examples-fail.png" alt="Two star ratings, the first uses 5 stars with a black outline and a yellow or white fill, where yellow indicates checked. The second uses only pale yellow stars on white." width="300" />
                      					
-                     <figcaption>Figure 7 
+                     <figcaption>
                         						Two examples which fail a success criterion, the first fails the Use of color
                         criterion due to relying on yellow and white hues. The second example fails the Non-text
                         contrast criterion due to the yellow (#FFF000) to white contrast ratio of 1.2:1.
@@ -258,20 +296,163 @@
                   
                   				
                   <p>Using a change of contrast for focus and other states is a technique to differentiate
-                     the states. This is the basis for <a class="general" href="/techniques/general/G195">G195: Using an author-supplied, highly visible focus indicator</a>, and more techniques are being added.
+                     the states. This is the basis for <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G195" class="general">G195: Using an author-supplied, highly visible focus indicator</a>, and more techniques are being added.
                   </p>
                   
+                  
+                  				
+                  <h3>Relationship with Focus Visible</h3>
+                  				
                   				
                   <p>In combination with <a href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>, the visual focus indicator for a component <em>must</em> have sufficient contrast against the adjacent background when the component is focused,
                      except where the appearance of the component is determined by the user agent and not
                      modified by the author.
                   </p>
                   
+                  				
+                  <p>Most focus indicators appear outside the component - in that case it needs to contrast
+                     with the background that the component is on. Other cases include focus indicators
+                     which are:
+                  </p>
+                  
+                  				
+                  <ul>
+                     					
+                     <li>only inside the component and need to contrast with the adjacent color(s) within the
+                        component.
+                     </li>
+                     					
+                     <li>the border of the component (inside the component and adjacent to the outside) and
+                        need to contrast with both adjacent colours. 
+                     </li>
+                     					
+                     <li>partly inside and partly outside, where either part of the focus indicator can contrast
+                        with the adjacent colors.
+                     </li>
+                     				
+                  </ul>
+                  
+                  				
+                  <figure id="figure-focus-inner">
+                     					<img src="img/ntc-focus-inner.png" alt="Three blue buttons, the middle has a thick yellow outline well inside the border of the button." width="400" />
+                     					
+                     <figcaption>
+                        						The internal yellow indicator (#FFFF00) contrasts with the blue button background
+                        (#4189B9), <strong>passing</strong> the criterion.
+                        					
+                     </figcaption>
+                     				
+                  </figure>
+                  
+                  
+                  				
+                  <figure id="figure-focus-outer-yellow">
+                     					<img src="img/ntc-focus-outer-yellow.png" alt="Three blue buttons on a white background, the middle has a light yellow outline outside of the botton's non-focused boundary." width="400" />
+                     					
+                     <figcaption>
+                        						The external yellow indicator (#FFFF00) does not contrast with the white background
+                        (#FFF) which the component is on, <strong>failing</strong> the criterion.
+                        					
+                     </figcaption>
+                     				
+                  </figure>
+                  
+                  				
+                  <figure id="figure-focus-outer-green">
+                     					<img src="img/ntc-focus-outer-green.png" alt="Three blue buttons on a white background, the middle has a dark green outline outside of the botton's non-focused boundary." width="400" />
+                     					
+                     <figcaption>
+                        						The external green indicator (#008000) does contrast with the white background
+                        (#FFF) which the component is on, <strong>passing</strong> the criterion. It does not need to contrast with both the component background and
+                        the component.
+                        					
+                     </figcaption>
+                     				
+                  </figure>
+                  				
+                  <p>Although the figure above with a dark outline passes non-text contrast, it is not
+                     a good indicator unless it is very thick. <span class="wcag22">There is a criterion in WCAG 2.2 that addresses this aspect, <a href="../22/focus-appearance-minimum.html">Focus Appearance</a>.</span></p>
+                  
+                  				
+                  <p>If an indicator is partly inside and partly outside the component, either part of
+                     the indicator could provide contrast.
+                  </p>
+                  
+                  				
+                  <figure id="figure-focus-outer-inner">
+                     					<img src="img/ntc-focus-inner-outer.png" alt="Three blue buttons on a white background, the middle has the outline of a yellow rectangle that is partly inside the button's boundary, and partly outside on the white background." width="400" />
+                     					
+                     <figcaption>
+                        						The focus indicator is partially inside, partially outside the button. The internal
+                        part of the yellow indicator (#FFFF00) contrasts with the blue button background (#4189B9),
+                        <strong>passing</strong> the criterion.
+                        					
+                     </figcaption>
+                     				
+                  </figure>
+                  
+                  				
+                  <p>If the focus indicator changes the border of the component within the visible boundary
+                     it must contrast with the component. Typically an outline goes around (outside) the
+                     visible boundary of the component, in this case changing the border is just inside
+                     the visible edge of the component.
+                  </p>
+                  
+                  				
+                  <figure id="figure-focus-border">
+                     					<img src="img/ntc-focus-border.png" alt="Three blue buttons on a white background, the center button has a green border exactly on the outer boundary of the button." width="400" />
+                     					
+                     <figcaption>
+                        						The border of the control changes from blue (#4189B9) to green (#4B933A). This
+                        is within the component and does not contrast with the inside background of the component
+                        therefore <strong>fails</strong> non-text contrast.
+                        					
+                     </figcaption>
+                     				
+                  </figure>
+                  
+                  				
+                  <figure id="figure-focus-inner-green">
+                     					<img src="img/ntc-focus-inner-border.png" alt="Three blue buttons with a black border on a white background, the center button has a green border inside, adjacent to the inner background and black border." width="400" />
+                     					
+                     <figcaption>
+                        						An inner border of dark green (#008000) does contrast with the black border,
+                        but does not contrast with the blue component background, therefore <strong>fails</strong> non-text contrast.
+                        					
+                     </figcaption>
+                     				
+                  </figure>
+                  
+                  				
+                  <figure id="figure-focus-inner-white">
+                     					<img src="img/ntc-focus-inner-white.png" alt="Three blue buttons with a black border on a white background, the center button has a white border inside, adjacent to the inner background and black border." width="400" />
+                     					
+                     <figcaption>
+                        						An inner border of white contrasts with the black border and the blue component
+                        background, therefore <strong>passes</strong> non-text contrast.
+                        					
+                     </figcaption>
+                     				
+                  </figure>
+                  
+                  		        
                   <p>Note that this Success Criterion does not directly compare the focused and unfocused
                      states of a control - if the focus state relies on a change of color (e.g., changing
                      <em>only</em> the background color of a button), this Success Criterion does not define any requirement
                      for the difference in contrast between the two states.
                   </p>
+                  
+                  				
+                  <figure id="figure-focus-background">
+                     					<img src="img/ntc-focus-background.png" alt="Three blue buttons, the center button is a lighter blue than the others." width="400" />
+                     					
+                     <figcaption>
+                        						The change of background within the component is not in scope of non-text contrast.
+                        However, this would not pass <a href="use-of-color.html">Use of color</a>.
+                        					
+                     </figcaption>
+                     				
+                  </figure>
                   
                   				
                   <section id="active-user-interface-component-examples">
@@ -316,8 +497,8 @@
                            							
                            <th>Default focus style</th>
                            							
-                           <td>Links are required to have a focus indicator by <a href="focus-visible.html">2.4.7 Focus Visible</a>. Where the focus style of the user-agent is not adjusted on interactive controls
-                              (such as links, form fields or buttons), the default focus style is sufficient.
+                           <td>Links are required to have a focus indicator by <a href="focus-visible.html">2.4.7 Focus Visible</a>. Where the user agent's default appearance of interactive controls (such as links,
+                              form fields or buttons) is not adjusted, the default focus style is sufficient.
                            </td>
                            							
                            <td><img src="img/link-text-focus.png" alt="A browser-default styled link, with a black dotted outline around the link." /></td>
@@ -493,7 +674,7 @@
                            </td>
                            							
                            <td>
-                              								<img src="img/checkbox-example5.png" alt="Unchecked checkbox with a thick gray additional outline as focus indication." />
+                              								<img src="img/checkbox-example5.png" alt="Unchecked checkbox with a thick gray additional outline as focus indication." width="150" />
                               							
                            </td>
                            						
@@ -519,7 +700,7 @@
                      <figure id="figure-grey-button-and-text">
                         						<img src="img/inactive-button.png" alt="Grey button with non-contrasting grey text." width="120" />
                         						
-                        <figcaption>Figure 8  An inactive button using default browser styles</figcaption>
+                        <figcaption> An inactive button using default browser styles</figcaption>
                         					
                      </figure>
                      					
@@ -721,11 +902,8 @@
                               <em>and</em> values on a chart.
                            </p>
                            						
-                           <div class="note">
-                              <div role="heading" class="note-title marker" aria-level="5">Note</div>
-                              <p>Text within a graphic must meet <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a>.
-                              </p>
-                           </div>
+                           <p class="note">Text within a graphic must meet <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a>.
+                           </p>
                            					
                         </li>
                         					
@@ -760,7 +938,7 @@
                      <figure id="figure-blue-circle-i-versions">
                         <img src="img/contrast-gradient.png" alt="Two versions of a blue circle with an 'i' indicating information. The first example has a blue gradient background, the second is missing the upper half of the background which obscures the i." width="300" />
                         				
-                        <figcaption>Figure 9 Removing the background which does not have sufficient contrast highlights that the
+                        <figcaption>Removing the background which does not have sufficient contrast highlights that the
                            graphical object (the "i") is not then understandable.
                         </figcaption>
                      </figure>
@@ -786,7 +964,7 @@
                      <figure id="figure-pie-slice-hover-data">
                         					<img alt="A pie chart with one slice highlighted and a box hovering next to it that shows the data and indicates the source in the key." src="img/dynamic-pie-chart.png" width="350" /> 
                         					
-                        <figcaption>Figure 10 A dynamic chart where the current 'slice' is hovered or focused, which activates the
+                        <figcaption>A dynamic chart where the current 'slice' is hovered or focused, which activates the
                            associated text display of the values and highlights the series
                         </figcaption>
                         				
@@ -971,7 +1149,7 @@
                   <figure id="figure-failing-pie-chart">
                      					<img src="img/graphics-contrast_pie-chart_fail.png" alt="Failing pie chart" />
                      					
-                     <figcaption>Figure 11 
+                     <figcaption>
                         						
                         <p><strong>Fail:</strong> The pie chart has labels for each slice (so passes 1.4.1 Use of Color), but in order
                            to understand the proportions of the slices you must discern the edges of the slices
@@ -986,7 +1164,7 @@
                   <figure id="figure-not-applicable-pie-chart">
                      					<img src="img/graphics-contrast_pie-chart_na.png" alt="Not applicable pie chart" />
                      					
-                     <figcaption>Figure 12 
+                     <figcaption>
                         						
                         <p><strong>Not applicable:</strong> The pie chart has visible labels <em>and</em> values that convey equivalent information to the graphical objects (the pie slices).
                            
@@ -999,7 +1177,7 @@
                   <figure id="figure-passing-pie-chart">
                      					<img src="img/graphics-contrast_pie-chart_pass.png" alt="Passing pie chart" />
                      					
-                     <figcaption>Figure 13 
+                     <figcaption>
                         						
                         <p><strong>Pass:</strong> The pie chart has visible labels, and sufficient contrast around and between the
                            slices of the pie chart (the graphical objects). A darker border has been added around
@@ -1018,7 +1196,7 @@
                   <figure id="figure-infographic-light-circles">
                      					<img src="img/infographic-fail.png" alt="An infographic showing lightly colored circles of various sizes to indicate the size of five different social networks" />
                      					
-                     <figcaption>Figure 14 
+                     <figcaption>
                         						
                         <p><strong>Fail:</strong> Discerning the circles is required to understand the size of network and discerning
                            the icons in each circle is required to identify which network it shows.
@@ -1035,7 +1213,7 @@
                   <figure id="figure-infographic-contrasting-text">
                      					<img src="img/infographic-pass.png" alt="The same infographic with contrasting text, dark borders around the circles, and contrasting icons." />
                      					
-                     <figcaption>Figure 15 
+                     <figcaption>
                         						
                         <p><strong>Pass:</strong> The circles have contrasting borders and the icons are a contrasting dark color against
                            the light circle backgrounds.
@@ -1093,10 +1271,10 @@
                         						
                         <ul>
                            							
-                           <li><a class="general" href="/techniques/general/G195">G195: Using an author-supplied, highly visible focus indicator</a></li>
+                           <li><a href="../../techniques/general/G195" class="general">G195: Using an author-supplied, highly visible focus indicator</a></li>
                            							
-                           <li><a class="general" href="/techniques/general/G174">G174: Providing a control with a sufficient contrast ratio that allows users to switch to
-                                 a presentation that uses sufficient contrast</a></li>
+                           <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G174" class="general">G174: Providing a control with a sufficient contrast ratio that allows users to switch
+                                 to a presentation that uses sufficient contrast</a></li>
                            						
                         </ul>
                         					
@@ -1106,9 +1284,9 @@
                      					
                      <ul>
                         						
-                        <li><a class="general" href="/techniques/general/G207">G207: Ensuring that a contrast ratio of 3:1 is provided for icons</a></li>
+                        <li><a href="../../techniques/general/G207" class="general">G207: Ensuring that a contrast ratio of 3:1 is provided for icons</a></li>
                         						
-                        <li><a class="general" href="/techniques/general/G209">G209: Provide sufficient contrast at the boundaries between adjoining colors</a></li>
+                        <li><a href="../../techniques/general/G209" class="general">G209: Provide sufficient contrast at the boundaries between adjoining colors</a></li>
                         					
                      </ul>
                      				
@@ -1121,47 +1299,461 @@
                   </p>
                   <ul>
                      					
-                     <li><a class="general" href="/techniques/failures/F78">F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders in
-                           a way that removes or renders non-visible the visual focus indicator</a></li>
+                     <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F78" class="general">F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders
+                           in a way that removes or renders non-visible the visual focus indicator</a></li>
                      				
                   </ul>
                </section>
             </section>
-            <nav class="pager" aria-label="Previous/Next Page">
-               <ul id="navigation">
-                  <li class="pager--item context"><a href="distinguishable"><span class="pager--item-text"><span class="pager--item-text-direction"><abbr title="Guideline">Part of Guideline</abbr>:</span><span class="pager--item-text-target">Distinguishable</span></span></a></li>
-                  <li class="pager--item previous"><a href="reflow">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-left pager--item-icon" viewBox="0 0 25 28">
-                           <path d="M24 14v2c0 1.062-0.703 2-1.828 2h-11l4.578 4.594c0.375 0.359 0.594 0.875 0.594 1.406s-0.219 1.047-0.594 1.406l-1.172 1.188c-0.359 0.359-0.875 0.578-1.406 0.578s-1.047-0.219-1.422-0.578l-10.172-10.187c-0.359-0.359-0.578-0.875-0.578-1.406s0.219-1.047 0.578-1.422l10.172-10.156c0.375-0.375 0.891-0.594 1.422-0.594s1.031 0.219 1.406 0.594l1.172 1.156c0.375 0.375 0.594 0.891 0.594 1.422s-0.219 1.047-0.594 1.422l-4.578 4.578h11c1.125 0 1.828 0.938 1.828 2z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Previous <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Reflow</span></span></a></li>
-                  <li class="pager--item next"><a href="text-spacing">
-                        <svg focusable="false" aria-hidden="true" class="icon-arrow-right pager--item-icon" viewBox="0 0 23 28">
-                           <path d="M23 15c0 0.531-0.203 1.047-0.578 1.422l-10.172 10.172c-0.375 0.359-0.891 0.578-1.422 0.578s-1.031-0.219-1.406-0.578l-1.172-1.172c-0.375-0.375-0.594-0.891-0.594-1.422s0.219-1.047 0.594-1.422l4.578-4.578h-11c-1.125 0-1.828-0.938-1.828-2v-2c0-1.062 0.703-2 1.828-2h11l-4.578-4.594c-0.375-0.359-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.406l1.172-1.172c0.375-0.375 0.875-0.594 1.406-0.594s1.047 0.219 1.422 0.594l10.172 10.172c0.375 0.359 0.578 0.875 0.578 1.406z"></path>
-                        </svg><span class="pager--item-text"><span class="pager--item-text-direction">Next <abbr title="Success Criterion">SC</abbr>:</span><span class="pager--item-text-target">Text Spacing</span></span></a></li>
-               </ul>
-            </nav>
-         </main>
-         <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Understanding documents</em> explain intent, benefits, examples and key terms for WCAG success criteria.
-            </p>
-            <dl>
-               <dt>Level</dt>
-               <dd>AA</dd>
-               <dt>Key terms</dt>
-               <dd id="dfn-assistive-technology">assistive technology</dd>
-               <dd id="dfn-content">content</dd>
-               <dd id="dfn-contrast-ratio">contrast ratio</dd>
-               <dd id="dfn-essential">essential</dd>
-               <dd id="dfn-presentation">presentation</dd>
-               <dd id="dfn-relative-luminance">relative luminance</dd>
-               <dd id="dfn-state">state</dd>
-               <dd id="dfn-structure">structure</dd>
-               <dd id="dfn-user-agent">user agent</dd>
-               <dd id="dfn-user-interface-component">user interface component</dd>
-               <dd id="dfn-web-page">web page</dd>
-            </dl>
-         </aside>
+            <section id="key-terms">
+               <details>
+                  <summary>
+                     <h2>Key Terms</h2>
+                  </summary>
+                  <dt id="dfn-assistive-technology">assistive technology</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">hardware and/or software that acts as a <a href="#dfn-user-agent">user agent</a>, or along with a mainstream user agent, to provide functionality to meet the requirements
+                           of users with disabilities that go beyond those offered by mainstream user agents
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
+                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                           voice), additional navigation or orientation mechanisms, and content transformations
+                           (e.g., to make tables more accessible).
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
+                           by using and monitoring APIs.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
+                           Many mainstream user agents provide some features to assist individuals with disabilities.
+                           The basic difference is that mainstream user agents target broad and diverse audiences
+                           that usually include people with and without disabilities. Assistive technologies
+                           target narrowly defined populations of users with specific disabilities. The assistance
+                           provided by an assistive technology is more specific and appropriate to the needs
+                           of its target users. The mainstream user agent may provide important functionality
+                           to assistive technologies like retrieving Web content from program objects or parsing
+                           markup into identifiable bundles.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
+                           the following:
+                           
+                        </p>
+                        
+                        
+                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>screen magnifiers, and other visual reading assistants, which are used by people with
+                              visual, perceptual and physical print disabilities to change text font, size, spacing,
+                              color, synchronization with speech, etc. in order to improve the visual readability
+                              of rendered text and images;
+                              
+                           </li>
+                           
+                           
+                           <li>screen readers, which are used by people who are blind to read textual information
+                              through synthesized speech or braille;
+                              
+                           </li>
+                           
+                           
+                           <li>text-to-speech software, which is used by some people with cognitive, language, and
+                              learning disabilities to convert text into synthetic speech;
+                              
+                           </li>
+                           
+                           
+                           <li>speech recognition software, which may be used by people who have some physical disabilities;</li>
+                           
+                           
+                           <li>alternative keyboards, which are used by people with certain physical disabilities
+                              to simulate the keyboard (including alternate keyboards that use head pointers, single
+                              switches, sip/puff and other special input devices.);
+                              
+                           </li>
+                           
+                           
+                           <li>alternative pointing devices, which are used by people with certain physical disabilities
+                              to simulate mouse pointing and button activations.
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-content">content</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">information and sensory experience to be communicated to the user by means of a <a href="#dfn-user-agent">user agent</a>, including code or markup that defines the content's <a href="#dfn-structure">structure</a>, <a href="#dfn-presentation">presentation</a>, and interactions
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-contrast-ratio">contrast ratio</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">(L1 + 0.05) / (L2 + 0.05), where</p>
+                        
+                        
+                        <ul xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>L1 is the <a href="#dfn-relative-luminance">relative luminance</a> of the lighter of the colors, and
+                              
+                           </li>
+                           
+                           
+                           <li>L2 is the <a href="#dfn-relative-luminance">relative luminance</a> of the darker of the colors.
+                              
+                           </li>
+                           
+                           
+                        </ul>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Contrast ratios can range from 1 to 21 (commonly written 1:1 to 21:1).</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Because authors do not have control over user settings as to how text is rendered
+                           (for example font smoothing or anti-aliasing), the contrast ratio for text can be
+                           evaluated with anti-aliasing turned off.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">For the purpose of Success Criteria 1.4.3 and 1.4.6, contrast is measured with respect
+                           to the specified background over which the text is rendered in normal usage. If no
+                           background color is specified, then white is assumed.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Background color is the specified color of content over which the text is to be rendered
+                           in normal usage. It is a failure if no background color is specified when the text
+                           color is specified, because the user's default background color is unknown and cannot
+                           be evaluated for sufficient contrast. For the same reason, it is a failure if no text
+                           color is specified when a background color is specified.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">When there is a border around the letter, the border can add contrast and would be
+                           used in calculating the contrast between the letter and its background. A narrow border
+                           around the letter would be used as the letter. A wide border around the letter that
+                           fills in the inner details of the letters acts as a halo and would be considered background.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">WCAG conformance should be evaluated for color pairs specified in the content that
+                           an author would expect to appear adjacent in typical presentation. Authors need not
+                           consider unusual presentations, such as color changes made by the user agent, except
+                           where caused by authors' code.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-essential">essential</dt>
+                  <dd>
+                     <definition xmlns="">
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">if removed, would fundamentally change the information or functionality of the content,
+                           <strong>and</strong> information and functionality cannot be achieved in another way that would conform
+                           
+                        </p>
+                        				
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-presentation">presentation</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">rendering of the <a href="#dfn-content">content</a> in a form to be perceived by users
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-relative-luminance">relative luminance</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">the relative brightness of any point in a colorspace, normalized to 0 for darkest
+                           black and 1 for lightest white
+                           
+                        </p>
+                        
+                        
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           
+                           <p>For the sRGB colorspace, the relative luminance of a color is defined as L = 0.2126
+                              * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> where <strong>R</strong>, <strong>G</strong> and <strong>B</strong> are defined as:
+                              
+                           </p>
+                           
+                           
+                           <ul>
+                              
+                              
+                              <li>if RsRGB &lt;= 0.04045 then <strong>R</strong> = RsRGB/12.92 else <strong>R</strong> = ((RsRGB+0.055)/1.055) ^ 2.4
+                                 
+                              </li>
+                              
+                              
+                              <li>if GsRGB &lt;= 0.04045 then <strong>G</strong> = GsRGB/12.92 else <strong>G</strong> = ((GsRGB+0.055)/1.055) ^ 2.4
+                                 
+                              </li>
+                              
+                              
+                              <li>if BsRGB &lt;= 0.04045 then <strong>B</strong> = BsRGB/12.92 else <strong>B</strong> = ((BsRGB+0.055)/1.055) ^ 2.4
+                                 
+                              </li>
+                              
+                              
+                           </ul>
+                           
+                           
+                           <p>and RsRGB, GsRGB, and BsRGB are defined as:</p>
+                           
+                           
+                           <ul>
+                              
+                              
+                              <li>RsRGB = R8bit/255</li>
+                              
+                              
+                              <li>GsRGB = G8bit/255</li>
+                              
+                              
+                              <li>BsRGB = B8bit/255</li>
+                              
+                              
+                           </ul>
+                           
+                           
+                           <p>The "^" character is the exponentiation operator. (Formula taken from 
+                              [[IEC-4WD]]).
+                              
+                           </p>
+                           
+                           
+                        </div>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Before May 2021 the value of 0.04045 in the definition was different (0.03928). It
+                           was taken from an older version of the specification and has been updated. It has
+                           no practical effect on the calculations in the context of these guidelines.
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Almost all systems used today to view Web content assume sRGB encoding. Unless it
+                           is known that another color space will be used to process and display the content,
+                           authors should evaluate using sRGB colorspace. If using other color spaces, see <a href="contrast-minimum">Understanding Success Criterion 1.4.3</a>.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">If dithering occurs after delivery, then the source color value is used. For colors
+                           that are dithered at the source, the average values of the colors that are dithered
+                           should be used (average R, average G, and average B).
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Tools are available that automatically do the calculations when testing contrast and
+                           flash.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">A <a href="relative-luminance.xml">MathML version of the relative luminance definition</a> is available.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-state">state</dt>
+                  <dd>
+                     <definition xmlns="">
+                        					
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">dynamic property expressing characteristics of a user interface component that may
+                           change in response to user action or automated processes
+                        </p>
+                        	        
+                        <p xmlns="http://www.w3.org/1999/xhtml">States do not affect the nature of the component, but represent data associated with
+                           the component or user interaction possibilities. Examples include focus, hover, select,
+                           press, check, visited/unvisited, and expand/collapse.
+                        </p>
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-structure">structure</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <ol xmlns="http://www.w3.org/1999/xhtml">
+                           
+                           
+                           <li>The way the parts of a <a href="#dfn-web-page">Web page</a> are organized in relation to each other; and
+                              
+                           </li>
+                           
+                           
+                           <li>The way a collection of <a href="#dfn-web-page">Web pages</a> is organized
+                              
+                           </li>
+                           
+                           
+                        </ol>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-user-agent">user agent</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">any software that retrieves and presents Web content for users</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">Web browsers, media players, plug-ins, and other programs — including <a href="#dfn-assistive-technology">assistive technologies</a> — that help in retrieving, rendering, and interacting with Web content.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-user-interface-component">user interface component</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">a part of the content that is perceived by users as a single control for a distinct
+                           function
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Multiple user interface components may be implemented as a single programmatic element.
+                           "Components" here is not tied to programming techniques, but rather to what the user
+                           perceives as separate controls.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">User interface components include form elements and links as well as components generated
+                           by scripts.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">What is meant by "component" or "user interface component" here is also sometimes
+                           called "user interface element".
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">An applet has a "control" that can be used to move through content by line or page
+                           or random access. Since each of these would need to have a name and be settable independently,
+                           they would each be a "user interface component."
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+                  <dt id="dfn-web-page">web page</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">a non-embedded resource obtained from a single URI using HTTP plus any other resources
+                           that are used in the rendering or intended to be rendered together with it by a <a href="#dfn-user-agent">user agent</a>
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Although any "other resources" would be rendered together with the primary resource,
+                           they would not necessarily be rendered simultaneously with each other.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">For the purposes of conformance with these guidelines, a resource must be "non-embedded"
+                           within the scope of conformance to be considered a Web page.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web resource including all embedded images and media.</p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web mail program built using Asynchronous JavaScript and XML (AJAX). The program
+                           lives entirely at http://example.com/mail, but includes an inbox, a contacts area
+                           and a calendar. Links or buttons are provided that cause the inbox, contacts, or calendar
+                           to display, but do not change the URI of the page as a whole.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">A customizable portal site, where users can choose content to display from a set of
+                           different content modules.
+                           
+                        </p>
+                        
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">When you enter "http://shopping.example.com/" in your browser, you enter a movie-like
+                           interactive shopping environment where you visually move around in a store dragging
+                           products off of the shelves around you and into a visual shopping cart in front of
+                           you. Clicking on a product causes it to be demonstrated with a specification sheet
+                           floating alongside. This might be a single-page Web site or just one page within a
+                           Web site.
+                           
+                        </p>
+                        
+                        
+                     </definition>
+                  </dd>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -1179,13 +1771,14 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 19 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
             </p>
-            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was developed by Hidde de Vries
-               with contributions from Shadi Abou-Zahra and Shawn Lawton Henry, as part of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission..
+            <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
+               Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>) with contributions from Shadi Abou-Zahra, Steve Lee, and Shawn Lawton Henry as part
+               of the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">WAI-Guide</a> project, co-funded by the European Commission.
             </p>
          </div>
       </footer>
@@ -1215,7 +1808,7 @@
                </ul>
             </div>
             <div dir="auto" translate="no" lang="en">
-               <p>Copyright © 2021 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
+               <p>Copyright © 2022 W3C <sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn">Beihang</a>) <a href="/about/using-wai-material/">Permission to Use WAI Material</a>.
                </p>
             </div>
          </div>
@@ -1230,6 +1823,7 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer>
-   </body>
+      </footer><script>
+				var translationStrings = {}; /* fix WAI JS */
+				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

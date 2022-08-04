@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
    <head>
       <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>SL32: Using Silverlight Text Elements for Appropriate Accessibility Role</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
-   <body>
-      <header id="site-header" class="default-grid with-gap">
-         <div class="tool-header"><span class="tool-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="tool-header-logo"><a href="http://w3.org/" aria-label="W3C">
+   <body class="wcag-docs" dir="ltr">
+      <header class="default-grid with-gap minimal-header-container">
+         <div class="minimal-header"><span class="minimal-header-name"><a href="../">WCAG 2.2: Techniques</a></span><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C">
                   <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
@@ -30,12 +31,12 @@
       </header>
       <div class="nav-container">
          <div class="default-grid">
-            <nav class="nav" aria-label="Meta navigation">
+            <nav class="nav" aria-label="Techniques">
                <ul>
                   <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
                   <li class="nav__item"><a href="/techniques//about">About Techniques</a></li>
                   <li class="nav__item"><a href="/WAI/standards-guidelines/wcag/docs/">All WCAG 2 Guidance 
-                        										
+                        									
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 4.55228 13 4C13 3.44772 13.4477 3 14 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4L21 10C21 10.5523 20.5523 11 20 11C19.4477 11 19 10.5523 19 10L19 6.41422L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L17.5858 5H14ZM3 7C3 5.89543 3.89543 5 5 5H10C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 10 7H5V19H17V14C17 13.4477 17.4477 13 18 13C18.5523 13 19 13.4477 19 14V19C19 20.1046 18.1046 21 17 21H5C3.89543 21 3 20.1046 3 19V7Z" fill="#282828"></path>
                         </svg></a></li>
@@ -53,142 +54,146 @@
                   				
                </header>
                <div class="box-i">
-                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/compatible">4.1: Compatible</a> when used with <a href="../general/G135">G135: Using the accessibility API features of a technology to expose names and notification
+                  <p>This technique is <span><strong>Sufficient</strong> to meet <a href="/understanding/name-role-value">4.1.2: Name, Role, Value</a> when used with <a href="../general/G135">G135: Using the accessibility API features of a technology to expose names and notification
                            of changes</a></span>.
                   </p>
                   <p><em>Note: Microsoft has stopped updating and distributing Silverlight, and authors are
                         encouraged to use HTML for accessible web content.</em></p>
                </div>
             </aside>
+            <div class="excol-all"></div>
             <section id="description">
-               <h2>Description</h2>
-               <p>The objective of this technique is to choose a Silverlight text container
-                  				that provides appropriate behavior and accessibility roles for different
-                  				types of text content. How those roles interact with existing assistive
-                  				technologies that are interpreting Silverlight under the larger concept
-                  				of being an "HTML control part" is also a factor in which
-                  				Silverlight text container should be used in an application's composition. 
-               </p>
-               <p>Text containers can identified by role to accessibility frameworks,
-                  				and each type of Silverlight text container uses a different role.
-                  				Application authors should choose text containers that combine the
-                  				desired behavior in the user interface with an accessibility role that
-                  				can be consumed by existing assistive technology implementations. 
-               </p>
-               <p>The Silverlight core libraries define the following classes that are
-                  				specifically intended as text containers: 
-               </p>
-               <ul>
-                  
-                  <li> 
-                     <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.richtextbox%28VS.95%29.aspx">RichTextBox</a> 
+               <details open="open">
+                  <summary>
+                     <h2>Description</h2>
+                  </summary>
+                  <p>The objective of this technique is to choose a Silverlight text container
+                     				that provides appropriate behavior and accessibility roles for different
+                     				types of text content. How those roles interact with existing assistive
+                     				technologies that are interpreting Silverlight under the larger concept
+                     				of being an "HTML control part" is also a factor in which
+                     				Silverlight text container should be used in an application's composition. 
+                  </p>
+                  <p>Text containers can identified by role to accessibility frameworks,
+                     				and each type of Silverlight text container uses a different role.
+                     				Application authors should choose text containers that combine the
+                     				desired behavior in the user interface with an accessibility role that
+                     				can be consumed by existing assistive technology implementations. 
+                  </p>
+                  <p>The Silverlight core libraries define the following classes that are
+                     				specifically intended as text containers: 
+                  </p>
+                  <ul>
                      
-                  </li>
-                  
-                  <li> 
-                     <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.textbox%28VS.95%29.aspx">TextBox</a> 
+                     <li> 
+                        <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.richtextbox%28VS.95%29.aspx">RichTextBox</a> 
+                        
+                     </li>
                      
-                  </li>
-                  
-                  <li> 
-                     <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.textblock%28VS.95%29.aspx">TextBlock</a> 
+                     <li> 
+                        <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.textbox%28VS.95%29.aspx">TextBox</a> 
+                        
+                     </li>
                      
-                  </li>
-                  
-               </ul>
-               <section id="SL32_programmatic">
-                  
-                  <h3> UI Automation programmatic access </h3>
-                  
-                  <p>For programming information that is relevant for how Silverlight application
-                     					authors produce the application, each text container has its own object
-                     					model/API. That API is documented on MSDN, specifically for each class <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.textbox%28VS.95%29.aspx">TextBox</a>; <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.richtextbox%28VS.95%29.aspx">RichTextBox</a>; <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.textblock%28VS.95%29.aspx">TextBlock</a>.)
-                     					However, rather than using the Silverlight-specific object models,
-                     					most assistive technologies that are capable of reporting on Silverlight
-                     					will choose to use UI Automation (or MSAA) to obtain information about
-                     					the Silverlight elements in general. Text containers within the Silverlight
-                     					content are identified through UIA accessibility roles. This is because
-                     					the assistive technologies can use UI Automation to query for ANY relevant
-                     					text items from the content (and chrome) of the user agent / browser
-                     					host, not just those that come from Silverlight. That can include the
-                     					HTML content, items created from scripting, CSS or other plugin-internal
-                     					object models and so on. In other words, text from Silverlight is integrated
-                     					into the overall UI Automation view of the user agent host as the top-level
-                     					application in a platform view. Different types of "text" in
-                     					a general sense might appear as different UI Automation patterns, as
-                     					is described below. 
-                  </p>
-                  	
-               </section>
-               <section id="SL32_textbox">
-                  
-                  <h3> TextBox </h3>
-                  
-                  <p>A <code class="obj">TextBox</code> within the Silverlight content area is
-                     					reported to UI Automation as an Edit role (through MSAA, as Editable
-                     					Text). 
-                  </p>
-                  
-                  <p>Edit controls are expected to implement the <a href="https://msdn.microsoft.com/en-us/library/system.windows.automation.provider.ivalueprovider%28VS.95%29.aspx">Value
-                        					pattern</a> for UIA, so that the value of the edit area can be queried
-                     					or set by a client. Assistive technologies can use this value as
-                     					a text-string value for screen readers or other purposes. 
-                  </p>
-                  
-                  <p>In typical user interface design, a form with an input field also
-                     					includes a label or other explanatory text that is proximally close
-                     					to the input field. In order to maintain proper reading order, the
-                     					label should typically appear immediately before the input field. This
-                     					general model should also be used for Silverlight user interface design.
-                     					For more information on labeling for <code class="obj">TextBox</code> controls,
-                     					see <a href="#SL26"></a>. 
-                  </p>
-                  	
-               </section>
-               <section id="SL32_richtextbox">
-                  
-                  <h3> RichTextBox </h3>
-                  
-                  <p>A <code class="obj">RichTextBox</code> within the Silverlight content area
-                     					is reported to UI Automation and MSAA as a Document role. 
-                  </p>
-                  
-                  <p>A <code class="obj">RichTextBox</code> can either be set to be a read-only
-                     					control, or left as a read-write control. In the latter case, users
-                     					can insert a text cursor and make changes to the text. It is more common
-                     					in Silverlight programming to set the <code class="obj">RichTextBox</code> to
-                     					be read-only; in this scenario the reason for using <code class="obj">RichTextBox</code> is
-                     					because <code class="obj">TextBlock</code> did not offer the range of text
-                     					formatting options that are possible from a <code class="obj">RichTextBox</code>. 
-                  </p>
-                  
-                  <p>In UIA, a document is generally expected to support the <a href="https://msdn.microsoft.com/en-us/library/system.windows.automation.provider.itextprovider%28VS.95%29.aspx">Text
-                        					pattern</a> for UI Automation. However, to read the text from a <code class="obj">RichTextBox</code>,
-                     					the assistive technology does not necessarily have to implement code
-                     					that handles the entirety of the information that the Text pattern
-                     					reports. 
-                  </p>
-                  	
-               </section>
-               <section id="SL32_text-pattern">
-                  
-                  <h3> More about the Text pattern </h3>
-                  
-                  <p>The Text pattern provides APIs to iterate over the internal structure
-                     					of a document and return text ranges. Each such text range can be queried
-                     					for specific properties, and can return its plain text string value
-                     					to UI Automation. Ranges can also be programmatically adjusted by the <code class="obj">TextPattern</code>/<code class="obj">TextRange</code> APIs.
-                     					The following is a snippet of a Silverlight-specific UI Automation
-                     					tree utility to give a general idea of the APIs involved. Note that
-                     					these are not specifically Silverlight APIs; they are .NET Framework
-                     					APIs. .NET Framework or Windows Automation APIs are generally what
-                     					is used for programming a UI Automation client, which runs on a platform
-                     					runtime rather than the Silverlight runtime. Using the Text pattern
-                     					is generally what is necessary in order for an assistive technology
-                     					to obtain a comprehensive view of the "value" for a document
-                     					role object. 
-                  </p>
-                  <pre xml:space="preserve">private void FindTheTextPatterns_Click(object sender, RoutedEventArgs e)
+                     <li> 
+                        <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.textblock%28VS.95%29.aspx">TextBlock</a> 
+                        
+                     </li>
+                     
+                  </ul>
+                  <section id="SL32_programmatic">
+                     
+                     <h3> UI Automation programmatic access </h3>
+                     
+                     <p>For programming information that is relevant for how Silverlight application
+                        					authors produce the application, each text container has its own object
+                        					model/API. That API is documented on MSDN, specifically for each class <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.textbox%28VS.95%29.aspx">TextBox</a>; <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.richtextbox%28VS.95%29.aspx">RichTextBox</a>; <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.textblock%28VS.95%29.aspx">TextBlock</a>.)
+                        					However, rather than using the Silverlight-specific object models,
+                        					most assistive technologies that are capable of reporting on Silverlight
+                        					will choose to use UI Automation (or MSAA) to obtain information about
+                        					the Silverlight elements in general. Text containers within the Silverlight
+                        					content are identified through UIA accessibility roles. This is because
+                        					the assistive technologies can use UI Automation to query for ANY relevant
+                        					text items from the content (and chrome) of the user agent / browser
+                        					host, not just those that come from Silverlight. That can include the
+                        					HTML content, items created from scripting, CSS or other plugin-internal
+                        					object models and so on. In other words, text from Silverlight is integrated
+                        					into the overall UI Automation view of the user agent host as the top-level
+                        					application in a platform view. Different types of "text" in
+                        					a general sense might appear as different UI Automation patterns, as
+                        					is described below. 
+                     </p>
+                     	
+                  </section>
+                  <section id="SL32_textbox">
+                     
+                     <h3> TextBox </h3>
+                     
+                     <p>A <code class="obj">TextBox</code> within the Silverlight content area is
+                        					reported to UI Automation as an Edit role (through MSAA, as Editable
+                        					Text). 
+                     </p>
+                     
+                     <p>Edit controls are expected to implement the <a href="https://msdn.microsoft.com/en-us/library/system.windows.automation.provider.ivalueprovider%28VS.95%29.aspx">Value
+                           					pattern</a> for UIA, so that the value of the edit area can be queried
+                        					or set by a client. Assistive technologies can use this value as
+                        					a text-string value for screen readers or other purposes. 
+                     </p>
+                     
+                     <p>In typical user interface design, a form with an input field also
+                        					includes a label or other explanatory text that is proximally close
+                        					to the input field. In order to maintain proper reading order, the
+                        					label should typically appear immediately before the input field. This
+                        					general model should also be used for Silverlight user interface design.
+                        					For more information on labeling for <code class="obj">TextBox</code> controls,
+                        					see <a href="#SL26"></a>. 
+                     </p>
+                     	
+                  </section>
+                  <section id="SL32_richtextbox">
+                     
+                     <h3> RichTextBox </h3>
+                     
+                     <p>A <code class="obj">RichTextBox</code> within the Silverlight content area
+                        					is reported to UI Automation and MSAA as a Document role. 
+                     </p>
+                     
+                     <p>A <code class="obj">RichTextBox</code> can either be set to be a read-only
+                        					control, or left as a read-write control. In the latter case, users
+                        					can insert a text cursor and make changes to the text. It is more common
+                        					in Silverlight programming to set the <code class="obj">RichTextBox</code> to
+                        					be read-only; in this scenario the reason for using <code class="obj">RichTextBox</code> is
+                        					because <code class="obj">TextBlock</code> did not offer the range of text
+                        					formatting options that are possible from a <code class="obj">RichTextBox</code>. 
+                     </p>
+                     
+                     <p>In UIA, a document is generally expected to support the <a href="https://msdn.microsoft.com/en-us/library/system.windows.automation.provider.itextprovider%28VS.95%29.aspx">Text
+                           					pattern</a> for UI Automation. However, to read the text from a <code class="obj">RichTextBox</code>,
+                        					the assistive technology does not necessarily have to implement code
+                        					that handles the entirety of the information that the Text pattern
+                        					reports. 
+                     </p>
+                     	
+                  </section>
+                  <section id="SL32_text-pattern">
+                     
+                     <h3> More about the Text pattern </h3>
+                     
+                     <p>The Text pattern provides APIs to iterate over the internal structure
+                        					of a document and return text ranges. Each such text range can be queried
+                        					for specific properties, and can return its plain text string value
+                        					to UI Automation. Ranges can also be programmatically adjusted by the <code class="obj">TextPattern</code>/<code class="obj">TextRange</code> APIs.
+                        					The following is a snippet of a Silverlight-specific UI Automation
+                        					tree utility to give a general idea of the APIs involved. Note that
+                        					these are not specifically Silverlight APIs; they are .NET Framework
+                        					APIs. .NET Framework or Windows Automation APIs are generally what
+                        					is used for programming a UI Automation client, which runs on a platform
+                        					runtime rather than the Silverlight runtime. Using the Text pattern
+                        					is generally what is necessary in order for an assistive technology
+                        					to obtain a comprehensive view of the "value" for a document
+                        					role object. 
+                     </p>
+                     <pre xml:space="preserve">private void FindTheTextPatterns_Click(object sender, RoutedEventArgs e)
 {
    if (allSilverlight != null &amp;&amp; allSilverlight.Count&gt;0)
    {
@@ -212,88 +217,92 @@ private void GetAllSilverlight()
       new PropertyCondition(AutomationElement.ClassNameProperty, "MicrosoftSilverlight"));
 }
 </pre>
-                  <p>MSAA has only limited possibilities for interacting with a Document
-                     				role, and MSAA code for attempting to do so is not shown. 
-                  </p>
-                  	
-               </section>
-               <section id="SL32_textblock">
-                  
-                  <h3> TextBlock </h3>
-                  
-                  <p>
-                     <code class="obj">TextBlock</code> is reported as a Text role in UI Automation. <code class="obj">TextBlock</code> has
-                     					several important characteristics: 
-                  </p>
-                  
-                  <ul>
+                     <p>MSAA has only limited possibilities for interacting with a Document
+                        				role, and MSAA code for attempting to do so is not shown. 
+                     </p>
+                     	
+                  </section>
+                  <section id="SL32_textblock">
                      
-                     <li> A <code class="obj">TextBlock</code> is always read-only; only the application
-                        					author can declare the text, users cannot change it. 
-                     </li>
+                     <h3> TextBlock </h3>
                      
-                     <li> A <code class="obj">TextBlock</code> is not considered to be a true control
-                        						in the Silverlight object model (it is not a class derived from <code class="obj">Control</code>).
-                        						The practical implications of this to accessibility scenarios is
-                        						that a <code class="obj">TextBlock</code> is not in the default tab sequence,
-                        						cannot be manually added to any tab sequence, and cannot be keyboard-focused
-                        						either programatically or by the user. 
-                     </li>
+                     <p>
+                        <code class="obj">TextBlock</code> is reported as a Text role in UI Automation. <code class="obj">TextBlock</code> has
+                        					several important characteristics: 
+                     </p>
                      
-                     <li> 
-                        <code class="obj">TextBlock</code> has a deliberately limited range of
-                        							block / span formatting options. If the application author desires
-                        							a wider range of formatting options, for example supporting a "Paragraph" metaphor
-                        							for blocks of text, a read-only <code class="obj">RichTextBox</code> should
-                        							be used instead. 
-                     </li>
+                     <ul>
+                        
+                        <li> A <code class="obj">TextBlock</code> is always read-only; only the application
+                           					author can declare the text, users cannot change it. 
+                        </li>
+                        
+                        <li> A <code class="obj">TextBlock</code> is not considered to be a true control
+                           						in the Silverlight object model (it is not a class derived from <code class="obj">Control</code>).
+                           						The practical implications of this to accessibility scenarios is
+                           						that a <code class="obj">TextBlock</code> is not in the default tab sequence,
+                           						cannot be manually added to any tab sequence, and cannot be keyboard-focused
+                           						either programatically or by the user. 
+                        </li>
+                        
+                        <li> 
+                           <code class="obj">TextBlock</code> has a deliberately limited range of
+                           							block / span formatting options. If the application author desires
+                           							a wider range of formatting options, for example supporting a "Paragraph" metaphor
+                           							for blocks of text, a read-only <code class="obj">RichTextBox</code> should
+                           							be used instead. 
+                        </li>
+                        
+                     </ul>
                      
-                  </ul>
-                  
-                  <p>If the user relies solely on navigating a Silverlight application
-                     					using the TAB sequence, such navigation will skip over any <code class="obj">TextBlock</code> in
-                     					the interface. This could have implications for how users who use screen
-                     					readers can interact with the Silverlight content. Screen readers typically
-                     					read text only from the currently focused element in cases where the
-                     					user is moving through the TAB sequence or changing focus within the
-                     					application, and thus cannot read the text from a <code class="obj">TextBlock</code> in
-                     					such a mode. However, most screen readers also have modes for reading
-                     					text that is not necessarily focusable. These are generally the same
-                     					modes that screen readers use for a conventional non-interactive HTML
-                     					document text. For example, some screen readers support a mode that
-                     					reads text by line, or by word. These modes can read text from a <code class="obj">TextBlock</code>. 
-                  </p>
-                  	
-               </section>
+                     <p>If the user relies solely on navigating a Silverlight application
+                        					using the TAB sequence, such navigation will skip over any <code class="obj">TextBlock</code> in
+                        					the interface. This could have implications for how users who use screen
+                        					readers can interact with the Silverlight content. Screen readers typically
+                        					read text only from the currently focused element in cases where the
+                        					user is moving through the TAB sequence or changing focus within the
+                        					application, and thus cannot read the text from a <code class="obj">TextBlock</code> in
+                        					such a mode. However, most screen readers also have modes for reading
+                        					text that is not necessarily focusable. These are generally the same
+                        					modes that screen readers use for a conventional non-interactive HTML
+                        					document text. For example, some screen readers support a mode that
+                        					reads text by line, or by word. These modes can read text from a <code class="obj">TextBlock</code>. 
+                     </p>
+                     	
+                  </section>
+               </details>
             </section>
             <section id="examples">
-               <h2>Examples</h2>
-               <section class="example" id="example-1-structure-from-a-container-that-has-non-semantic-role&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;in-ui-automation-and-textblock-for-text">
-                  <h3>Example 1: Structure from a container that has non-semantic role
-                     					in UI Automation, and TextBlock for text
-                  </h3>
-                  <p>If viewed as a UI Automation tree, the <code class="obj">StackPanel</code> and <code class="obj">Grid</code> do
-                     						not exist explicitly in the tree view, because they do not serve a
-                     						semantic role (only a presentation role). Rather, the tree consists
-                     						of the items that report some kind of semantic control type. The semantic
-                     						children of the containers are still reported in the order that they
-                     						were declared, when viewed as children of the next semantic container
-                     						upwards in the tree, and despite the containers themselves being abstracted
-                     						out of the tree. This defines the reading order. This example is a
-                     						large block of text with intentionally simple formatting, where the
-                     						only formatting is to represent paragraphs as separate <code class="obj">TextBlock</code> elements
-                     						to support an adaptive layout, but no <code class="obj">Run</code> blocks within. 
-                  </p>
-                  <p>When viewed with assistive technologies that represent the contents,
-                     						each <code class="obj">TextBlock</code> is a control type of Text. Screen readers
-                     						can use document reading modes such as virtual cursor modes to read
-                     						the content from each element and each element's content, following
-                     						the same reading order as is declared in the XAML. For example, in
-                     						JAWS 12, readers can read out this text container line by line using
-                     						(Jaws Key)+DownArrow. It is actually JAWS that determines the line
-                     						length, because the line length otherwise is defined only by the adaptive
-                     						layout at runtime, which is not reported to UIA. 
-                  </p><pre xml:space="preserve">  &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
+               <details>
+                  <summary>
+                     <h2>Examples</h2>
+                  </summary>
+                  <section class="example" id="example-1-structure-from-a-container-that-has-non-semantic-role&#xA;----&#x9;&#x9;&#x9;&#x9;&#x9;in-ui-automation-and-textblock-for-text">
+                     <h3>Example 1: Structure from a container that has non-semantic role
+                        					in UI Automation, and TextBlock for text
+                     </h3>
+                     <p>If viewed as a UI Automation tree, the <code class="obj">StackPanel</code> and <code class="obj">Grid</code> do
+                        						not exist explicitly in the tree view, because they do not serve a
+                        						semantic role (only a presentation role). Rather, the tree consists
+                        						of the items that report some kind of semantic control type. The semantic
+                        						children of the containers are still reported in the order that they
+                        						were declared, when viewed as children of the next semantic container
+                        						upwards in the tree, and despite the containers themselves being abstracted
+                        						out of the tree. This defines the reading order. This example is a
+                        						large block of text with intentionally simple formatting, where the
+                        						only formatting is to represent paragraphs as separate <code class="obj">TextBlock</code> elements
+                        						to support an adaptive layout, but no <code class="obj">Run</code> blocks within. 
+                     </p>
+                     <p>When viewed with assistive technologies that represent the contents,
+                        						each <code class="obj">TextBlock</code> is a control type of Text. Screen readers
+                        						can use document reading modes such as virtual cursor modes to read
+                        						the content from each element and each element's content, following
+                        						the same reading order as is declared in the XAML. For example, in
+                        						JAWS 12, readers can read out this text container line by line using
+                        						(Jaws Key)+DownArrow. It is actually JAWS that determines the line
+                        						length, because the line length otherwise is defined only by the adaptive
+                        						layout at runtime, which is not reported to UIA. 
+                     </p><pre xml:space="preserve">  &lt;StackPanel x:Name="LayoutRoot" Background="White"&gt;
           &lt;TextBlock&gt;Call me Ishmael. Some years ago--never mind how long precisely--
 having little or no money in my purse, and
 nothing particular to interest me on shore, I thought I would sail about a little 
@@ -332,12 +341,12 @@ How  then is this? Are the green fields gone? What do they here?
           &lt;/TextBlock&gt;
   &lt;/StackPanel&gt;
 </pre></section>
-               <section class="example" id="example-2-text-containers-and-their-uia-representation">
-                  <h3>Example 2: Text containers and their UIA representation</h3>
-                  <p>The following example is intended as sample XAML to view in an accessibility
-                     						framework viewer, to see the various names, roles, and patterns for
-                     						obtaining value. 
-                  </p><pre xml:space="preserve">   &lt;StackPanel x:Name="LayoutRoot"&gt;
+                  <section class="example" id="example-2-text-containers-and-their-uia-representation">
+                     <h3>Example 2: Text containers and their UIA representation</h3>
+                     <p>The following example is intended as sample XAML to view in an accessibility
+                        						framework viewer, to see the various names, roles, and patterns for
+                        						obtaining value. 
+                     </p><pre xml:space="preserve">   &lt;StackPanel x:Name="LayoutRoot"&gt;
        &lt;TextBox Text="This is a TextBox"/&gt;
        &lt;RichTextBox&gt;
            &lt;Paragraph&gt;This is a RichTextBox.&lt;/Paragraph&gt;
@@ -345,58 +354,70 @@ How  then is this? Are the green fields gone? What do they here?
        &lt;TextBlock Text="This is a TextBlock"/&gt;
    &lt;/StackPanel&gt;
 </pre></section>
+               </details>
             </section>
             <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <ul id="silverlight.applicability.general">
-                  
-                  <li> Microsoft Silverlight, versions 3 and greater </li>
-                  
-                  <li> Silverlight managed programming model and Silverlight XAML </li>
-                  
-               </ul>
+               <details>
+                  <summary>
+                     <h2 id="applicability">Applicability</h2>
+                  </summary>
+                  <ul id="silverlight.applicability.general">
+                     
+                     <li> Microsoft Silverlight, versions 3 and greater </li>
+                     
+                     <li> Silverlight managed programming model and Silverlight XAML </li>
+                     
+                  </ul>
+               </details>
             </section>
             <section id="tests">
-               <h2>Tests</h2>
-               <section class="procedure" id="procedure">
-                  <h3>Procedure</h3>
-                  
-                  <ol>
+               <details>
+                  <summary>
+                     <h2>Tests</h2>
+                  </summary>
+                  <section class="procedure" id="procedure">
+                     <h3>Procedure</h3>
                      
-                     <li> Using a browser that supports Silverlight, open an HTML page that
-                        					references a Silverlight application through an object tag. To see
-                        					UI Automation, use Microsoft Windows as platform. 
-                     </li>
+                     <ol>
+                        
+                        <li> Using a browser that supports Silverlight, open an HTML page that
+                           					references a Silverlight application through an object tag. To see
+                           					UI Automation, use Microsoft Windows as platform. 
+                        </li>
+                        
+                        <li> Use a verification tool that is capable of showing the full automation
+                           						tree. (For example, use UIAVerify or Silverlight Spy; see Resources
+                           						links.) 
+                        </li>
+                        
+                        <li> Verify that <code class="obj">TextBox</code> elements in the Silverlight
+                           							user interface have the Edit role, that <code class="obj">RichTextBox</code> elements
+                           							have the Document role, and <code class="obj">TextBlock</code> has Text role
+                           							in UI Automation. 
+                        </li>
+                        
+                        <li> Verify that the text content can be programmatically determined
+                           								by techniques that are appropriate for that role. 
+                        </li>
+                        
+                     </ol>
                      
-                     <li> Use a verification tool that is capable of showing the full automation
-                        						tree. (For example, use UIAVerify or Silverlight Spy; see Resources
-                        						links.) 
-                     </li>
+                  </section>
+                  <section class="results" id="expected-results">
+                     <h3>Expected Results</h3>
                      
-                     <li> Verify that <code class="obj">TextBox</code> elements in the Silverlight
-                        							user interface have the Edit role, that <code class="obj">RichTextBox</code> elements
-                        							have the Document role, and <code class="obj">TextBlock</code> has Text role
-                        							in UI Automation. 
-                     </li>
+                     <p>#3 and #4 are true. </p>
                      
-                     <li> Verify that the text content can be programmatically determined
-                        								by techniques that are appropriate for that role. 
-                     </li>
-                     
-                  </ol>
-                  
-               </section>
-               <section class="results" id="expected-results">
-                  <h3>Expected Results</h3>
-                  
-                  <p>#3 and #4 are true. </p>
-                  
-               </section>
-            </section>
-         </main>
+                  </section>
+               </details>
+            </section><a class="button button-backtotop" href="#top"><span>
+                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
+                  </svg> Back to Top
+                  			</span></a></main>
          <aside class="your-report your-report--expanded sidebar" aria-labelledby="about-this-page">
             <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="javascript:alert('placeholder; link to About Techniques')">not required to meet WCAG</a>.
+            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
             </p>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
@@ -445,7 +466,7 @@ How  then is this? Are the green fields gone? What do they here?
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated @@@. First published @@@
+            <p><strong>Date:</strong> Updated 13 October 2021. First published @@@
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
@@ -497,5 +518,12 @@ How  then is this? Are the green fields gone? What do they here?
             </ul>
          </div>
       </footer>
-      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>hljs.highlightAll();</script></body>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+				document.addEventListener('DOMContentLoaded', (event) => {
+			  	document.querySelectorAll('pre').forEach((el) => {
+    				hljs.highlightElement(el);
+  				});
+				});
+				var translationStrings = {}; /* fix WAI JS */
+				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>
