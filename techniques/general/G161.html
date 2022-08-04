@@ -41,38 +41,22 @@
          </div>
       </div>
       <div class="default-grid with-gap leftcol">
-         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="about-this-page">
-            <h2 style="margin-top: 0" id="about-this-page">About this page</h2>
-            <p><em>Techniques</em> are examples of ways to meet a WCAG success criterion. They are <a href="/techniques//about">not required to meet WCAG</a>.
-            </p>
-            <section id="resources">
-               <h3 style="margin-bottom: 0;">Other sources</h3>
-               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
-               <ul>
-                  
-                  <li>
-                     <a href="http://webdesign.about.com/od/administration/a/aa091399.htm">Searching Your Site</a>
-                     
-                  </li>
-                  
-                  <li>
-                     <a href="http://www.bravenet.com/webtools/search2/">Bravenet Site Search</a>
-                     
-                  </li>
-                  
-                  <li>
-                     <a href="http://www.freefind.com/">FreeFind</a>
-                     
-                  </li>
-                  
-                  <li>
-                     <a href="https://www.google.com/cse/">Google Custom Search Engine</a>
-                     
-                  </li>
-                  
-                  
-               </ul>
-            </section>
+         <aside class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="page-contents">
+            <nav>
+               <header class="box-h" id="page-contents">Page Contents</header>
+               <div class="box-i">
+                  <nav class="navtoc">
+                     <ul id="navbar">
+                        <li><a href="#applicability">Applicability</a></li>
+                        <li><a href="#description">Description</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                        <li><a href="#resources">Related Resources</a></li>
+                        <li><a href="#related">Related Techniques</a></li>
+                        <li><a href="#tests">Tests</a></li>
+                     </ul>
+                  </nav>
+               </div>
+            </nav>
          </aside>
          <main class="standalone-resource__main">
             <h1><span>Technique G161:</span>Providing a search function to help users find content
@@ -88,6 +72,12 @@
                </div>
             </aside>
             <div class="excol-all"></div>
+            <section id="applicability">
+               <h2 id="applicability">Applicability</h2>
+               <p>All technologies that include forms.</p>
+               <p>This technique relates to <span><a href="/understanding/multiple-ways">2.4.5: Multiple Ways</a> (Sufficient when used with Using two or more of the following techniques:)</span>.
+               </p>
+            </section>
             <section id="description">
                <h2>Description</h2>
                <p>Providing a search function that searches your Web pages is a design strategy that
@@ -141,11 +131,47 @@
                   </p>
                </section>
             </section>
-            <section id="applicability">
-               <h2 id="applicability">Applicability</h2>
-               <p>All technologies that include forms.</p>
-               <p>This technique relates to <span><a href="/understanding/multiple-ways">2.4.5: Multiple Ways</a> (Sufficient when used with Using two or more of the following techniques:)</span>.
-               </p>
+            <section id="resources">
+               <h3 style="margin-bottom: 0;">Other sources</h3>
+               <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
+               <ul>
+                  
+                  <li>
+                     <a href="http://webdesign.about.com/od/administration/a/aa091399.htm">Searching Your Site</a>
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="http://www.bravenet.com/webtools/search2/">Bravenet Site Search</a>
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="http://www.freefind.com/">FreeFind</a>
+                     
+                  </li>
+                  
+                  <li>
+                     <a href="https://www.google.com/cse/">Google Custom Search Engine</a>
+                     
+                  </li>
+                  
+                  
+               </ul>
+            </section>
+            <section id="related">
+               <h2>Related Techniques</h2>
+               <ul>
+                  
+                  <li><a href="../general/G63">G63</a></li>
+                  
+                  <li><a href="../general/G64">G64</a></li>
+                  
+                  <li><a href="../general/G125">G125</a></li>
+                  
+                  <li><a href="../general/G126">G126</a></li>
+                  
+               </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
@@ -179,11 +205,8 @@
                   </ul>
                   
                </section>
-            </section><a class="button button-backtotop" href="#top"><span>
-                  <svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
-                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path>
-                  </svg> Back to Top
-                  			</span></a></main>
+            </section>
+         </main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon">
                <svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
@@ -201,7 +224,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 19 July 2022.
+            <p><strong>Date:</strong> Updated 22 July 2022.
             </p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).
