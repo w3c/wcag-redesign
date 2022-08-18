@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3f3f6c5b-949a-4a91-ab06-8c677dd102c2/deploy-status)](https://app.netlify.com/sites/draft-wcag-redesign/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3a3eb339-f918-4cd5-997b-743c3ea40b66/deploy-status)](https://app.netlify.com/sites/wai-wcag-redesign/deploys)
 
 Temporary repository to preview WCAG redesign work to stakeholders.
 Content is copied from the main wcga directory once built there.
