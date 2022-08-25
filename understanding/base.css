@@ -222,6 +222,10 @@ color: var(--dk-blue);
 text-decoration: underline;
 }
 
+.nav-hack.sidebar h2#sidebar-header {
+	font-size: .95rem;
+}
+
 .standalone-resource-about, .standalone-resource-pager {
 margin: 0;
 }
