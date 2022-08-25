@@ -27,7 +27,7 @@
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
             <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -43,21 +43,31 @@
                      </g></svg></a></div>
          </div>
       </div>
-      <div class="nav-container">
-         <div class="default-grid">
+      <div class="default-grid nav-container nav-page-specific">
             <nav class="nav" aria-label="Techniques">
                <ul>
                   <li class="nav__item"><a href="/techniques/#techniques">All Techniques</a></li>
                </ul>
             </nav>
-         </div>
       </div>
       	
       
-      <div class="default-grid">
+      <div class="default-grid with-gap leftcol">
+         <nav class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="sidebar-header">
+            <h2 id="sidebar-header" class="box-h ">Page Contents</h2>
+            <div class="box-i">
+               <ul>
+               <li><a href="#updated">Updated periodically</a></li>
+               <li><a href="#notrequired">Techniques are not required</a></li>
+               <li><a href="#intro">Introduction to Techniques for WCAG 2.2</a></li>
+               <li><a href="#changelog">Change Log</a></li>
+               <li><a href="#acknowledgements">Acknowledgements</a></li>
+               </ul>
+            </div>
+         </nav>
          
          
-         <main class="main-content">
+         <main class="standalone-resource__main">
             
             
             <h1>About Techniques</h1>
@@ -96,7 +106,7 @@
             <section>
                	
                
-               <h2>Updated periodically</h2>
+               <h2 id="updated">Updated periodically</h2>
                
                
                <p>WCAG 2.1 itself is a stable document that does not change. This Techniques for WCAG
@@ -108,7 +118,7 @@
             <section>
                	
                
-               <h2>Techniques are not required</h2>
+               <h2 id="notrequired">Techniques are not required</h2>
                
                
                <p>Techniques are informative—that means they are not required. The basis for determining
@@ -120,7 +130,7 @@
             <section id="introduction">
                		
                
-               <h2>Introduction to Techniques for WCAG 2.2</h2>
+               <h2 id="intro">Introduction to Techniques for WCAG 2.2</h2>
                		
                
                <p>This <em>Techniques for WCAG 2.2</em> document provides guidance for web content authors and evaluators on meeting <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a>success criteria. It is part of a series of documents published by the W3C Web Accessibility

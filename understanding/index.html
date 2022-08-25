@@ -22,7 +22,7 @@
       	</head>
    	
    
-   <body>
+   <body dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
             <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
@@ -42,8 +42,7 @@
                      </g></svg></a></div>
          </div>
       </div>
-      <div class="nav-container">
-         <div class="default-grid">
+      <div class="default-grid nav-container nav-page-specific">
             <nav class="nav" aria-label="Understanding Docs">
                <ul>
                   <li class="nav__item"><a href="." class="active" aria-current="page">
@@ -51,15 +50,21 @@
                         								</a></li>
                </ul>
             </nav>
-         </div>
       </div>
       		
       
-      <div class="default-grid">
-         			
-         
-         <main class="main-content">
-            				
+      <div class="default-grid with-gap leftcol">
+         <nav class="box nav-hack sidebar standalone-resource__sidebar" aria-labelledby="sidebar-header">
+            <h2 id="sidebar-header" class="box-h ">Page Contents</h2>
+            <div class="box-i">
+               <ul>
+               <li><a href="#understanding">Understanding Guidelines and Success Criteria</a></li>
+               <li><a href="#other">Other Understanding documents</a></li>
+               </ul>
+            </div>
+         </nav>
+         <main class="standalone-resource__main">
+
             		
             
             <h1 id="title" class="title p-name">Understanding WCAG 2.2</h1>
@@ -80,7 +85,7 @@
                				</aside>
             				
             		
-            <h2>Understanding Guidelines and Success Criteria</h2>
+            <h2 id="understanding">Understanding Guidelines and Success Criteria</h2>
             <h3> Perceivable </h3>
             <ol class="toc toc-wcag-docs toc-understanding-guideline">
                
@@ -371,7 +376,7 @@
                      </ol>
                   </li>
                </ol>
-            <h2>Other Understanding documents</h2>
+            <h2 id="other">Other Understanding documents</h2>
             <ul class="toc-wcag-docs">
                
                <li><a href="intro" class="tocxref">Introduction to Understanding WCAG </a></li>
