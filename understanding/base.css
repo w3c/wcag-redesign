@@ -285,13 +285,14 @@ width: 2em;
 height: 2em;
 }
 
-.standalone-resource-pager {
+/* .standalone-resource-pager {
 padding: .7em 0;
 }
 
 .standalone-resource-pager ul {
 display: block;
 }
+*/
 
 .standalone-resource-pager ul li {
 display: inline;
@@ -360,7 +361,7 @@ list-style: none;
 }
 
 .nav {
-font-size: 95%;
+font-size: 1rem;
 }
 
 .standalone-resource-about a,
