@@ -5,9 +5,9 @@ Content is copied from the main wcga directory once built there.
 
 The previews are:
 
-* [Techniques](https://draft-wcag-redesign.netlify.app/techniques/)
-* [Understanding](https://draft-wcag-redesign.netlify.app/understanding/)
-* [Netlify site](https://app.netlify.com/sites/draft-wcag-redesign/overview)
+* [Techniques](https://wai-wcag-redesign.netlify.app/techniques/)
+* [Understanding](https://wai-wcag-redesign.netlify.app/understanding/)
+* [Netlify site](https://app.netlify.com/sites/wai-wcag-redesign/overview)
 
 This is temporary, may break and should not be used as a reference.
 
