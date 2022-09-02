@@ -130,6 +130,12 @@ dt div {
 .minimal-header-name > a {
 	color: inherit;
 }
+.minimal-header-name {
+    text-decoration: none;
+}
+.minimal-header-name a:hover, .minimal-header-name a:focus {
+    text-decoration: underline;
+}
 
 .note {
 	background: var(--off-white);
