@@ -50,7 +50,7 @@ main {
 }
 
 h1 {
-	padding-top: 55px;
+	padding-top: 33px;
 }
 
 h1 span {
@@ -130,7 +130,7 @@ dt div {
 .minimal-header-name > a {
 	color: inherit;
 }
-.minimal-header-name {
+.minimal-header-name a {
     text-decoration: none;
 }
 .minimal-header-name a:hover, .minimal-header-name a:focus {
