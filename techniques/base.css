@@ -49,6 +49,10 @@ main {
 	margin-left: 0 !important;
 }
 
+h1 {
+	padding-top: 33px;
+}
+
 h1 span {
 	display: block;
 	font-size: .5em;
@@ -123,6 +127,12 @@ dt div {
 }
 .minimal-header-name > a {
 	color: inherit;
+}
+.minimal-header-name a {
+    text-decoration: none;
+}
+.minimal-header-name a:hover, .minimal-header-name a:focus {
+    text-decoration: underline;
 }
 
 .note {
