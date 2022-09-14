@@ -185,9 +185,11 @@ font-weight: normal;
 margin-right: 16px;
 }
 
+/*
 .nav-container {
 margin-bottom: 0;
 }
+*/
 
 .nav {
 background: none;
@@ -203,7 +205,7 @@ color: #fff !important;
 }
 
 .nav-page-specific { /* light blue bar with page/section specific navigation/pager */
-margin-bottom: 1.25em;
+margin-bottom: 2em;
 }
 
 .nav a:link, .nav a:visited {
@@ -288,13 +290,14 @@ width: 2em;
 height: 2em;
 }
 
-.standalone-resource-pager {
+/* .standalone-resource-pager {
 padding: .7em 0;
 }
 
 .standalone-resource-pager ul {
 display: block;
 }
+*/
 
 .standalone-resource-pager ul li {
 display: inline;
@@ -363,7 +366,7 @@ list-style: none;
 }
 
 .nav {
-font-size: 95%;
+font-size: 1rem;
 }
 
 .standalone-resource-about a,
