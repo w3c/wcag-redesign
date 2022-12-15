@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>ARIA1: Using the aria-describedby property to provide a descriptive label for user interface controls</title>
+      <title>ARIA1: Using the aria-describedby property to provide a descriptive label for user interface controls | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -55,8 +55,7 @@
             </nav>
          </aside>
          <main class="standalone-resource__main">
-            <h1><span>Technique ARIA1:</span>Using the aria-describedby property to provide a descriptive label for user interface
-               controls</h1>
+            <h1><span>Technique ARIA1:</span>Using the <code class="language-html">aria-describedby</code> property to provide a descriptive label for user interface controls</h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
                   					About this Technique
@@ -71,7 +70,7 @@
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
-               <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>. </p>
+               <p>Technologies that support <a href="https://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA)</a>.</p>
                <p>This technique relates to:</p>
                <ul>
                   <li><a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> (Advisory)</li>
@@ -80,217 +79,44 @@
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>The purpose of this technique is to demonstrate how to use the WAI-ARIA <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby">aria-describedby</a> property to provide programmatically determined, descriptive information about a
-                  user interface element. The <code class="att">aria-describedby</code> property may be used to attach descriptive information to one or more elements through
-                  the use of an id reference list. The id reference list contains one or more unique
-                  element ids. </p>
-               <p>Refer to <a href="https://www.w3.org/TR/wai-aria-primer/#ariahtml">Supporting ARIA in XHTML and HTML 4.01</a> for information on how to provide WAI-ARIA States and Properties with XHTML and HTML.
-                  WAI-ARIA States and Properties is compatible with other languages as well; refer to
-                  documentation in those languages. </p>
+               <p>The purpose of this technique is to demonstrate how to use the WAI-ARIA <a href="https://www.w3.org/TR/wai-aria-1.2/#aria-describedby"><code class="language-html">aria-describedby</code></a> property to provide programmatically determined, descriptive information about a
+                  user interface element. The <code class="language-html">aria-describedby</code> property may be used to attach descriptive information to one or more elements through
+                  the use of an <code class="language-html">id</code> reference list. The <code class="language-html">id</code> reference list contains one or more unique element <code class="language-html">id</code>s.</p>
+               <p>Refer to <a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a> for information on how to provide WAI-ARIA States and Properties with HTML. WAI-ARIA
+                  States and Properties are compatible with other languages as well; refer to documentation
+                  in those languages.</p>
                <div class="note">
                   
-                  <p>The <code class="att">aria-describedby</code> property is not designed to reference descriptions on an external resource — since
-                     it is an ID, it must reference an element in the same DOM document.</p>
+                  <p>The <code class="language-html">aria-describedby</code> property is not designed to reference descriptions on an external resource - since
+                     it is an <code class="att">id</code>, it must reference an element in the same <abbr title="Document Object Model">DOM</abbr> document.</p>
                   </div>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-using-aria-describedby-property-to-describe-a-close-button's-action">
-                  <h3>Example 1: Using aria-describedby property to describe a Close button's action</h3>
-                  <p>A button that functions as a 'close' button on a dialog is described elsewhere in
-                     the document. The <code class="att">aria-describedby</code> property is used to associate the description with the button.</p>
-                  <pre xml:space="preserve">&lt;button aria-label="Close" aria-describedby="descriptionClose"
-    onclick="myDialog.close()"&gt;X&lt;/button&gt;
-
-...
-
-&lt;div id="descriptionClose"&gt;Closing this window will discard any information entered and
-return you back to the main page&lt;/div&gt;
-</pre>
-                  <p class="working-example">Working example: <a href="../../working-examples/aria-describedby-close/">Example 1</a>
-                     </p>
-               </section>
-               <section class="example" id="example-2-using-aria-describedby-to-associate-instructions-with-form-fields">
-                  <h3>Example 2: Using aria-describedby to associate instructions with form fields</h3>
-                  <p>Sample form field using <code class="att">aria-describedby</code> to associate instructions with form fields while there is a form label.</p>
+               <section class="example" id="example-1-using-aria-describedby-to-associate-instructions-with-form-fields">
+                  <h3>Example 1: Using <code class="language-html">aria-describedby</code> to associate instructions with form fields</h3>
+                  <p>Sample form field using <code class="language-html">aria-describedby</code> to associate instructions with form fields while there is a form label.</p>
                   <pre xml:space="preserve">&lt;form&gt;
-&lt;label for="fname"&gt;First name&lt;/label&gt;
-&lt;input name="" type="text" id="fname" aria-describedby="int2"&gt;
-&lt;p id="int2"&gt;A bit of instructions for this field linked with aria-describedby. &lt;/p&gt;
+  &lt;label for="fname"&gt;First name&lt;/label&gt;
+  &lt;input aria-describedby="int2" autocomplete="given-name" id="fname" type="text"&gt;
+  &lt;p id="int2"&gt;Your first name is sometimes called your "given name".&lt;/p&gt;
 &lt;/form&gt;
 </pre>
                </section>
-               <section class="example" id="example-3-using-aria-describedby-property-to-provide-more-detailed-information-about-the-button">
-                  <h3>Example 3: Using aria-describedby property to provide more detailed information about
-                     the button</h3>
-                  <pre xml:space="preserve">&lt;p&gt;&lt;span id="fontDesc"&gt;Select the font faces and sizes to be used on this page&lt;/span&gt;
- &lt;button id="fontB" onclick="doAction('Fonts');" aria-describedby="fontDesc"&gt;Fonts&lt;/button&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;span id="colorDesc"&gt;Select the colors to be used on this page&lt;/span&gt;
- &lt;button id="colorB" onclick="doAction('Colors');" aria-describedby="colorDesc"&gt;Colors&lt;/button&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;span id="customDesc"&gt;Customize the layout and styles used on this page&lt;/span&gt;
- &lt;button id="customB" onclick="doAction('Customize');" aria-describedby="customDesc"&gt;Customize&lt;/button&gt;
-&lt;/p&gt;
-</pre>
-               </section>
-               <section class="example" id="example-4-using-aria-describedby-to-associate-tooltips-with-form-fields">
-                  <h3>Example 4: Using aria-describedby to associate tooltips with form fields</h3>
-                  <p>The following code snippet  shows how to use <code class="att">aria-describedby</code> and the onfocus="tooltipShow() function to display the tooltip when focus is placed
-                     on an element.</p>
-                  <pre xml:space="preserve">&lt;html lang="en-us"&gt;
-&lt;head&gt;
-   &lt;title&gt;inline: Tooltip Example 1&lt;/title&gt;
-   &lt;link rel="stylesheet" href="css/tooltip1_inline.css" type="text/css"&gt;
-   &lt;script type="text/javascript" src="js/tooltip1_inline.js"&gt;&lt;/script&gt;
-   &lt;script type="text/javascript" src="../js/widgets_inline.js"&gt;&lt;/script&gt;
-   &lt;script type="text/javascript" src="../js/globals.js"&gt;&lt;/script&gt;
-   &lt;link rel="icon" href="http://www.cites.uiuc.edu/favicon.ico" type="image/x-icon"&gt;
-   &lt;link rel="shortcut icon" href="http://www.cites.uiuc.edu/favicon.ico" type="image/x-icon"&gt;
-&lt;/head&gt;
-   ...
-
-&lt;body onload="initApp()"&gt;
-
-&lt;div id="container"&gt;
-
-&lt;h1&gt;Tooltip Example 1&lt;/h1&gt;
-&lt;h2&gt;Create Account&lt;/h2&gt;
-&lt;div class="text"&gt;
-&lt;label for="first"&gt;First Name:&lt;/label&gt;
-
-&lt;input type="text" id="first" name="first" size="20"
-      onmouseover="tooltipShow(event, this, 'tp1');"
-      onfocus="tooltipShow(event, this, 'tp1');"
-      aria-describedby="tp1"
-      aria-required="false"/&gt;
-
-&lt;div id="tp1" role="tooltip" aria-hidden="true"&gt;Your first name is optional. &lt;/div&gt;
+               <section class="example" id="example-2-using-aria-describedby-property-to-provide-more-detailed-information-about-the-button">
+                  <h3>Example 2: Using <code class="language-html">aria-describedby</code> property to provide more detailed information about the button</h3>
+                  <pre xml:space="preserve">&lt;div&gt;
+  &lt;span id="fontDesc"&gt;Select the font faces and sizes to be used on this page&lt;/span&gt;
+  &lt;button aria-describedby="fontDesc" id="fontB" type="button"&gt;Fonts&lt;/button&gt;
 &lt;/div&gt;
-</pre>
-               </section>
-               <section class="example" id="example-5-xhtml">
-                  <h3>Example 5: XHTML</h3>
-                  <p>This example is coded in XHTML with a MIME type of application/xhtml+xml. This MIME
-                     type is not supported in all user agents. The aria-describedby property is added directly
-                     into the XHTML markup, and no additional scripting is needed. </p>
-                  <pre xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+ARIA 1.0//EN"
-"https://www.w3.org/WAI/ARIA/schemata/xhtml-aria-1.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"&gt;
-&lt;head&gt;
-&lt;meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" /&gt;
-&lt;title&gt;Demonstration of aria-describedby property&lt;/title&gt;
-&lt;style type="text/css"&gt;
-div.form p { clear:left; margin: 0.3em 0;}
-.left {
-  float:left;
-  width:400px;
-}
-.right {
-  width:100px;
-  text-align:right;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p&gt;The buttons on this page use the Accessible Rich Internet Applications aria-describedby property
-to provide more detailed information about the button action&lt;/p&gt;
-&lt;div class="form"&gt;
-&lt;p&gt;&lt;span class="left" id="fontDesc" &gt;Select the font faces and sizes to be used on this page&lt;/span&gt;
-&lt;span class="right"&gt;&lt;button id="fontB" onclick="doAction('Fonts');" aria-describedby="fontDesc"&gt;
-Fonts &lt;/button&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="left" id="colorDesc" &gt;Select the colors to be used on this page&lt;/span&gt;
-&lt;span class="right"&gt;&lt;button id="colorB" onclick="doAction('Colors');" aria-describedby="colorDesc"&gt;
-Colors &lt;/button&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class="left" id="customDesc" &gt;Customize the layout and styles used on this page&lt;/span&gt;
-&lt;span class="right"&gt;&lt;button id="customB" onclick="doAction('Customize');" aria-describedby="customDesc"&gt;
-Customize &lt;/button&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div&gt;
+  &lt;span id="colorDesc"&gt;Select the colors to be used on this page&lt;/span&gt;
+  &lt;button aria-describedby="colorDesc" id="colorB" type="button"&gt;Colors&lt;/button&gt;
 &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-               </section>
-               <section class="example" id="example-6-html">
-                  <h3>Example 6: HTML</h3>
-                  <p>This example uses scripting to add an aria-describedby property to buttons on a page.
-                     The example creates a buttonIds array variable to hold the ids of the elements that
-                     contain description text. The setDescribedBy() function is called from the onload
-                     event of the window object. </p>
-                  <p>The setDescribedBy() function loops through all of the button elements and calls setAttribute()
-                     on each button element to set the aria-describedby property. Each button's aria-describedby
-                     property is set to the id of the element containing its descriptive text. </p>
-                  <p>Using a user agent and/or assistive technology which supports WAI-ARIA, the description
-                     will be provided when the user interface controls receive focus. </p>
-                  <pre xml:space="preserve">&lt;html lang="en-us"&gt;
-&lt;head&gt;
-&lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
-&lt;title&gt;Demonstration of aria-describedby property&lt;/title&gt;
-&lt;style type="text/css"&gt;
-div.form p { clear:left; margin: 0.3em 0;}
-.left {
-  float:left;
-  width:400px;
-}
-.right {
-  width:100px;
-  text-align:right;
-}
-&lt;/style&gt;
-&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-
-// array entries for each button on the page that associates the button id
-// with the id of the element containing the text which describes the button
-var buttonIds = new Array();
-buttonIds["fontB"]= "fontDesc";
-buttonIds["colorB"] = "colorDesc";
-buttonIds["customB"] = "customDesc";
-
-// function that is run after the page has loaded to set the aria-describedBy
-// property on each of the elements referenced by the array of id values
-function setDescribedBy(){
-  if (buttonIds){
-    var buttons = document.getElementsByTagName("button");
-    if (buttons){
-      var buttonId;
-      for(var i=0; i&lt;buttons.length; i++){
-        buttonId = buttons[i].id;
-        if (buttonId &amp;&amp; buttonIds[buttonId]){
-          buttons[i].setAttribute("aria-describedby", buttonIds[buttonId]);
-        }
-      }
-    }
-  }
-}
-
-// simulated action function - currently just displays an alert
-function doAction(theAction){
-  alert("Perform the " + theAction + " action");
-}
-
-window.onload=setDescribedBy;
-
-//]]&gt;
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p&gt;The buttons on this page use the Accessible Rich Internet Applications
-aria-describedby property to provide more detailed information
-about the button action.
-&lt;/p&gt;
-&lt;div class="form"&gt;
-&lt;p&gt;&lt;span class="left" id="fontDesc" &gt;Select the font faces and sizes to be used on this page&lt;/span&gt;
-  &lt;span class="right"&gt;&lt;button id="fontB" onclick="doAction('Fonts');"&gt; Fonts &lt;/button&gt;&lt;/span&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;span class="left" id="colorDesc" &gt;Select the colors to be used on this page&lt;/span&gt;
-  &lt;span class="right"&gt;&lt;button id="colorB" onclick="doAction('Colors');"&gt; Colors &lt;/button&gt;&lt;/span&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;span class="left" id="customDesc" &gt;Customize the layout and styles used on this page&lt;/span&gt;
-  &lt;span class="right"&gt;&lt;button id="customB" onclick="doAction('Customize');"&gt; Customize &lt;/button&gt;&lt;/span&gt;
-&lt;/p&gt;
+&lt;div&gt;
+  &lt;span id="customDesc"&gt;Customize the layout and styles used on this page&lt;/span&gt;
+  &lt;button aria-describedby="customDesc" id="customB" type="button"&gt;Customize&lt;/button&gt;
 &lt;/div&gt;
-&lt;/body&gt;
 </pre>
                </section>
             </section>
@@ -300,24 +126,23 @@ about the button action.
                <ul>
                   
                   <li>
-                     <a href="https://www.w3.org/WAI/intro/aria">WAI-ARIA Overview</a>
+                     <a href="https://www.w3.org/WAI/standards-guidelines/aria/">WAI-ARIA Overview</a>.
                      </li>
                   
                   <li>
-                     <a href="https://www.w3.org/WAI/ARIA/apg/">WAI-ARIA Authoring Practices Guide</a>
+                     <a href="https://www.w3.org/WAI/ARIA/apg/">WAI-ARIA Authoring Practices Guide</a>.
                      </li>
                   
                   <li>
-                     <a href="https://www.w3.org/TR/html-aapi/#accessible-name-and-description-calculation">HTML to Platform Accessibility APIs Implementation Guide: Accessible Name and Description
-                        Calculation</a>
+                     <a href="https://www.w3.org/TR/accname/">Accessible Name and Description Computation</a>.
                      </li>
                   
                   <li>
-                     <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">Using the aria-describedby attribute (MDN)</a>
+                     <a href="https://developer.mozilla.org/en-US/docs/web/accessibility/aria/attributes/aria-describedby"><code class="language-html">aria-describedby</code> attribute (<abbr title="Mozilla Developer Network">MDN</abbr>)</a>.
                      </li>
                   
                   <li>
-                     <a href="https://www.w3.org/TR/aria-in-html/">Using WAI-ARIA in HTML</a>
+                     <a href="https://www.w3.org/TR/aria-in-html/">Using WAI-ARIA in HTML</a>.
                      </li>
                   </ul>
             </section>
@@ -333,26 +158,29 @@ about the button action.
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  
                   <h3>Procedure</h3>
                   
                   <ol>
                      
-                     <li>Check that there is a user interface control having an <code class="att">aria-describedby</code> attribute that references one or more elements via unique id.</li>
+                     <li>Check that there is a user interface control having an <code class="language-html">aria-describedby</code> attribute that references one or more elements via unique <code class="language-html">id</code>.</li>
                      
                      <li>Check that the referenced element or elements provide additional information about
                         the user interface control.</li>
                      </ol>
                   </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
                      
-                     <li>Checks #1 and #2 are true. </li>
+                     <li>Checks #1 and #2 are true.</li>
                      </ul>
                   </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -366,7 +194,7 @@ about the button action.
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -409,11 +237,11 @@ about the button action.
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

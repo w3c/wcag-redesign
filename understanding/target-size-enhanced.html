@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Understanding Success Criterion 2.5.5: Target Size (Enhanced)</title>
+      <title>Understanding Success Criterion 2.5.5: Target Size (Enhanced) | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/understanding/">WCAG 2.2 Understanding Docs</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/understanding/about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -142,10 +142,9 @@
                <ul>
                   			  
                   <li><strong>Example 1: Buttons</strong><br />
-                     		      Three buttons are on-screen and the touch target area of each button is 44
-                     by 44 CSS pixels.</li>
+                     		      Three buttons are on-screen and the target area of each button is 44 by 44
+                     CSS pixels.</li>
                   </ul>
-               <section class="example" id=""></section>
             </section>
             <section id="resources">
                <h2>Related Resources</h2>
@@ -184,7 +183,7 @@
                      					
                      <ul>
                         					  
-                        <li>Ensuring that touch targets are at least 44 by 44 CSS pixels.</li>
+                        <li>Ensuring that targets are at least 44 by 44 CSS pixels.</li>
                         					  
                         <li>Ensuring inline links provide sufficiently large activation target.</li>
                         		          </ul>
@@ -206,8 +205,7 @@
                      by the WCAG Working Group.</p>
                   <ul>
                      				  
-                     <li>Failure of success criterion 2.5.5 due to touch target being less than 44 by 44 CSS
-                        pixels.</li>
+                     <li>Failure of success criterion 2.5.5 due to target being less than 44 by 44 CSS pixels.</li>
                      		      </ul>
                </section>
             </section>
@@ -243,12 +241,13 @@
                   <dd>
                      <definition xmlns="">
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml">input device that can target a specific coordinate (or set of coordinates) on a screen,
+                        <p xmlns="http://www.w3.org/1999/xhtml">input from a device that can target a specific coordinate (or set of coordinates)
+                           on a screen,
                            such as a mouse, pen, or touch contact
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml">See also <a href="https://www.w3.org/TR/pointerevents/#dfn-pointer">Pointer Events pointer definition</a> [[!pointerevents]].
-                           </p>
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">See the <a href="https://www.w3.org/TR/pointerevents/#dfn-pointer">Pointer Events
+                              definition for "pointer"</a> [[!pointerevents]].</p>
                         </definition>
                   </dd>
                   <dt id="dfn-target">target</dt>
@@ -258,7 +257,7 @@
                         <p xmlns="http://www.w3.org/1999/xhtml">region of the display that will accept a pointer action, such as the interactive area
                            of a user interface component</p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">If two or more touch targets are overlapping, the overlapping area should not be included
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">If two or more targets are overlapping, the overlapping area should not be included
                            in the measurement of the target size, except when the overlapping targets perform
                            the same action or open the same page.</p>
                         </definition>
@@ -280,7 +279,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -321,7 +320,13 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script>
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

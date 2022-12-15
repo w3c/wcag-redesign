@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Understanding Success Criterion 2.5.7: Dragging Movements</title>
+      <title>Understanding Success Criterion 2.5.7: Dragging Movements | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/understanding/">WCAG 2.2 Understanding Docs</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/understanding/about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -68,8 +68,6 @@
                   <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this
                      does not apply to actions that are required to operate the user agent or assistive
                      technology).</p>
-                  <p class="ednote">Is there an assistive technology that helps for people with mobility impairments?
-                     The group would like feedback on the frontier between AT &amp; author responsibility.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -83,8 +81,8 @@
                <h2>Intent</h2>
                <p>The intent of this Success Criterion is to ensure functionality that uses a dragging
                   movement (e.g., sliders, drag-and-drop interfaces) has another <a href="#dfn-single-pointer">single pointer</a> mode of operation without the need for the dexterity required to drag elements.</p>
-               <p>Some people cannot perform dragging movements in a precise manner. Others use a specialized
-                  or adapted input device such as a head pointer, eye-gaze system, or speech-controlled
+               <p>Some people cannot perform dragging movements in a precise manner.  Others use a specialized
+                  or adapted input device - such as a head pointer, eye-gaze system, or speech-controlled
                   mouse emulator, which makes dragging cumbersome, error-prone, or outright impossible.</p>
                <p>When an interface implements functionality that uses dragging movements, users perform
                   four discrete actions:</p>
@@ -102,7 +100,10 @@
                   the pointer. An alternative method must be provided so that users with mobility impairments
                   who use a pointer (mouse, pen, or touch contact) can use the functionality.</p>
                <section id="relationship-to-other-requirements">
+                  
+                  
                   <h3>Relationship to other requirements</h3>
+                  
                   
                   <p>Success Criteria 2.1.1 Keyboard and 2.1.3 Keyboard (No Exception) require dragging
                      features to be keyboard accessible. However, achieving keyboard equivalence for a
@@ -110,8 +111,7 @@
                      to create an interface that works with dragging and keyboard controls that does not
                      work using only clicks or taps. While many designs can be created for a dragging alternative
                      which address both keyboard accessibility and operability by single pointer operation,
-                     the two requirements should be assessed independently. </p>
-                  
+                     the two requirements should be assessed independently.</p>
                   
                   
                   <p>This Success Criterion applies to dragging movements as opposed to pointer gestures,
@@ -226,9 +226,9 @@
                         <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">an operation where the pointer engages with an element on the down event and the element
-                           (or a representation of its position) follows the pointer</p>
+                           (or a representation of its position) follows the pointer until an up event</p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The element could be, for example, a list item, a text element, or an image.</p>
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Examples of draggable elements include list items, text elements, and images.</p>
                         </definition>
                   </dd>
                   <dt id="dfn-essential">essential</dt>
@@ -265,7 +265,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -306,7 +306,13 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script>
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>G134: Validating Web pages</title>
+      <title>G134: Validating Web pages | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -71,278 +71,159 @@
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>The objective of this technique is to avoid ambiguities in Web pages
-                  that often result from code that does not validate against formal
-                  specifications. Each technology's mechanism to specify the technology and
-                  technology version is used, and the Web page is validated against the
-                  formal specification of that technology. If a validator for that technology
-                  is available, the developer can use it.</p>
-               <p>Validation will usually eliminate ambiguities (and more) because an
-                  essential step in validation is to check for proper use of that technology's
-                  markup (in a markup language) or code (in other technologies). Validation
-                  does not necessarily check for full conformance with a specification but it
-                  is the best means for automatically checking content against its
-                  specification.</p>
+               <p>The objective of this technique is to avoid ambiguities in Web pages that often result
+                  from code that does not validate against formal specifications. Each technology's
+                  mechanism to specify the technology and technology version is used, and the Web page
+                  is validated against the formal specification of that technology. If a validator for
+                  that technology is available, the developer can use it.</p>
+               <p>Validation will usually eliminate ambiguities (and more) because an essential step
+                  in validation is to check for proper use of that technology's markup (in a markup
+                  language) or code (in other technologies). Validation does not necessarily check for
+                  full conformance with a specification but it is the best means for automatically checking
+                  content against its specification.</p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
                <section class="example" id="example-1-validating-html">
-                  <h3>Example 1: Validating HTML</h3>
-                  <p>HTML pages include a document type declaration (sometimes referred
-                     to as
-                     
-                     !DOCTYPE
-                     
-                     statement) and are valid according to
-                     the HTML version specified by the document type declaration. The
-                     developer can use off-line or online validators (see Resources
-                     below) to check the validity of the HTML pages.</p>
+                  <h3>Example 1: Validating <abbr title="HyperText Markup Language">HTML</abbr></h3>
+                  <p>HTML pages include a document type declaration (sometimes referred to as <code class="language-html">!DOCTYPE</code> statement) and are valid according to the HTML version specified by the document
+                     type declaration. The developer can use off-line or online validators (see <a href="#resources">Resources section</a>) to check the validity of the HTML pages.</p>
                </section>
                <section class="example" id="example-2-validating-xml">
-                  <h3>Example 2: Validating XML</h3>
-                  <p>XHTML, SVG, SMIL and other XML-based documents reference a Document
-                     Type Definition (DTD) or other type of XML schema. The developer can
-                     use online or off-line validators (including validation tools built
-                     into editors) to check the validity of the XML documents.</p>
+                  <h3>Example 2: Validating <abbr title="Extensible Markup Language">XML</abbr></h3>
+                  <p><abbr title="Scalable Vector Graphics">SVG</abbr>, <abbr title="Synchronized Multimedia Integration Language">SMIL</abbr> and other XML-based documents reference a Document Type Definition (DTD) or other
+                     type of XML schema. The developer can use online or off-line validators (including
+                     validation tools built into editors) to check the validity of the XML documents.</p>
                </section>
                <section class="example" id="example-3-batch-validation-with-ant">
                   <h3>Example 3: Batch validation with Ant</h3>
-                  <p>The
-                     
-                     xmlvalidate
-                     
-                     task of Apache Ant can be used for
-                     batch validation of XML files. The following Apache Ant target is a
-                     simple example for the validation of files with the extension
-                     
-                     .xml
-                     
-                     in the directory
-                     
-                     dev\\Web
-                     
-                     (relative to the Ant build file).</p>
-                  <pre xml:space="preserve">
-              
-              &lt;target name="validate-xml"&gt; 
-                &lt;xmlvalidate lenient="no"&gt; 
-                &lt;fileset dir="dev/web" includes="*.xml" /&gt; 
-                &lt;/xmlvalidate&gt; 
-              &lt;/target&gt;
-            </pre>
+                  <p>The <code>xmlvalidate</code> task of Apache Ant can be used for batch validation of XML files. The following Apache
+                     Ant target is a simple example for the validation of files with the extension .xml
+                     in the directory <code>dev\\Web</code> (relative to the Ant build file).</p>
+                  <pre xml:space="preserve">&lt;target name="validate-xml"&gt; 
+  &lt;xmlvalidate lenient="no"&gt; 
+    &lt;fileset dir="dev/web" includes="*.xml" /&gt; 
+  &lt;/xmlvalidate&gt; 
+&lt;/target&gt;</pre>
                </section>
             </section>
             <section id="resources">
                <h3 style="margin-bottom: 0;">Other sources</h3>
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
-                  
+                  				
                   <li>
-                     <a href="https://www.w3.org/QA/Tips/Doctype">Do not forget to
-                        add a doctype</a>
-                     by the W3C Quality Assurance Initiative
-                     explains what doctypes are and why you should use them.</li>
-                  
+                     					<a href="https://www.w3.org/QA/Tips/Doctype">Do not forget to add a doctype</a> by the W3C Quality Assurance Initiative explains what doctypes are and why you should
+                     use them.</li>
+                  				
                   <li>
-                     <a href="https://www.w3.org/QA/2002/04/valid-dtd-list.html">Recommended DTDs to use in your Web document</a>
-                     by the
-                     W3C Quality Assurance Initiative is a list of commonly used
-                     declarations.</li>
-                  
+                     					<a href="https://www.w3.org/QA/2002/04/valid-dtd-list.html">Recommended DTDs to use in your Web document</a> by the W3C Quality Assurance Initiative is a list of commonly used declarations.</li>
+                  				
                   <li>
-                     <a href="http://www.chami.com/html-kit/faq/pages/validate_tools.html">How do I validate my code or check for possible errors?</a>
-                     describes the tools in the free editor HTML-Kit for
-                     checking HTML, CSS and XML.</li>
-                  </ul>
-               <p>Validating HTML and XHTML</p>
+                     					<a href="http://www.chami.com/html-kit/faq/pages/validate_tools.html">How do I validate my code or check for possible errors?</a> describes the tools in the free editor HTML-Kit for checking HTML, <abbr title="Cascading Style Sheets">CSS</abbr> and XML.</li>
+                  			</ul>
                <ul>
-                  
+                  				
                   <li>
-                     <a href="http://validator.w3.org/">The W3C Markup Validation
-                        Service</a>
-                     by the World Wide Web Consortium allows you
-                     to validate HTML and XHTML files by URI, by file upload and by
-                     direct input of complete HTML or XHTML documents. There are also
-                     separate pages with an extended interface for file upload and
-                     for validating by URI (advanced options such as encodings and
-                     document types).</li>
-                  
+                     					<a href="https://validator.w3.org/">The W3C Markup Validation Service</a> by the World Wide Web Consortium allows you to validate HTML  files by <abbr title="Uniform Resource Identifier">URI</abbr>, by file upload and by direct input of complete HTML documents. There are also separate
+                     pages with an extended interface for file upload and for validating by URI (advanced
+                     options such as encodings and document types).</li>
+                  				
                   <li>
-                     <a href="http://validator.w3.org/docs/install.html">Installation Documentation for the W3C Markup Validation
-                        Service</a>
-                     explains how to install this service (for
-                     example for use on an intranet).</li>
-                  
+                     					<a href="https://validator.w3.org/docs/install.html">Installation Documentation for the W3C Markup Validation Service</a> explains how to install this service (for example for use on an intranet).
+                     				</li>
+                  				
                   <li>
-                     <a href="http://www.htmlhelp.com/tools/validator/">WDG HTML
-                        Validator</a>
-                     by the Web Design Group allows you to enter
-                     a URI to validate single pages or entire sites. There are also
-                     versions to validate Web pages in batch mode (by specifying one
-                     or more URIs of HTML documents to validate), by file upload and
-                     by direct input of HTML code.</li>
-                  
+                     					<a href="https://people.tuke.sk/igor.podlubny/ov.html">Off-line HTML Validator - A clipbook for NoteTab</a> by Professor Igor Podlubny is an extension for the programming editor NoteTab. It
+                     uses <a href="http://www.jclark.com/sp/">James Clark's open-source SGML parser</a>, which is also used by the W3C Markup Validation Service.
+                     				</li>
+                  				
                   <li>
-                     <a href="http://www.htmlhelp.com/tools/validator/offline/index.html.en">Offline HTMLHelp.com Validator</a>
-                     is a tool for Unix
-                     users; it is the off-line version of the online WDG HTML
-                     Validator.</li>
-                  
+                     					<a href="http://ktmatu.com/info/do-it-yourself-offline-html-validator/">Do-it-yourself Offline HTML Validator</a> by Matti Tukiainen explains how you can create a simple validator with James Clark's
+                     SGML parser on Windows.</li>
+                  				
                   <li>
-                     <a href="http://people.tuke.sk/igor.podlubny/ov.html">Off-line HTML
-                        Validator – A clipbook for NoteTab</a>
-                     by Professor Igor
-                     Podlubny is an extension for the programming editor NoteTab. It
-                     uses
-                     <a href="http://www.jclark.com/sp/">James Clark's
-                        open-source SGML parser</a>, which is also used by the
-                     W3C Markup Validation Service.</li>
-                  
+                     					<a href="https://www.standards-schmandards.com/2005/massvalidate/">Validating an entire site</a> by Peter Kranz explains how you can install a modified version of the W3C Markup
+                     Validation Service that outputs validation results as XML on Mac OS. Source code (in
+                     Perl and Python) is available.
+                     				</li>
+                  				
                   <li>
-                     <a href="http://ktmatu.com/info/do-it-yourself-offline-html-validator/">Do-it-yourself Offline HTML Validator</a>
-                     by Matti
-                     Tukiainen explains how you can create a simple validator with
-                     James Clark's SGML parser on Windows.</li>
-                  
+                     					<a href="http://www.chami.com/html-kit/faq/pages/w3c_markup_validator.html">Can I use the W3C MarkUp Validation Service to validate HTML?</a> explains how you can validate HTML from within the free editor HTML-Kit.
+                     				</li>
+                  				
                   <li>
-                     <a href="http://www.standards-schmandards.com/2005/massvalidate/">Validating an entire site</a>
-                     by Peter Kranz explains
-                     how you can install a modified version of the W3C Markup
-                     Validation Service that outputs validation results as XML on Mac
-                     OS. Source code (in Perl and Python) is available.</li>
-                  
-                  
+                     					<a href="https://validator.aborla.net/">HTML/XML Validator</a> is an online repair tool for HTML based on Tidy and PHP 5. It is available in several
+                     languages but it is not a real validator.
+                     				</li>
+                  				
                   <li>
-                     <a href="http://www.chami.com/html-kit/faq/pages/w3c_markup_validator.html">Can I use the W3C MarkUp Validation Service to validate
-                        HTML?</a>
-                     explains how you can validate HTML from within
-                     the free editor HTML-Kit.</li>
-                  
-                  <li>
-                     <a href="http://validator.aborla.net/">HTML/XML Validator</a>
-                     is an online repair tool for HTML and XHTML based on Tidy
-                     and PHP 5. It is available in several languages but it is not a
-                     real validator.</li>
-                  
-                  <li>
-                     	<a href="http://alistapart.com/article/doctype">Fix Your
-                        Site With the Right DOCTYPE!</a>
-                     by Jeffrey Zeldman
-                     explains what HTML and XHTML doctypes work and what their effect
-                     is on the rendering mode of a few browsers.</li>
-                  
-                  <li>
-                     	<a href="http://alistapart.com/article/dreamweaver">Modifying Dreamweaver to Produce Valid XHTML</a>
-                     by
-                     Carrie Bickner.</li>
-                  
-                  <li>
-                     <a href="http://schneegans.de/frontpage/xhtml-schema/">XHTML-Schemata für FrontPage 2003 und Visual Studio .NET</a>
-                     by Christoph Schneegans is a German article that explains
-                     how the W3C XML Schemas for XHTML 1.0 can be used in FrontPage
-                     2003 and Visual Studio .NET to create valid code.</li>
-                  
-                  <li>
-                     <a href="http://www.nvu.com/">Nvu</a>
-                     is a free
-                     and open-source Web authoring tool for Windows, Macintosh and
-                     Linux that can call the W3C HTML Validation Service.</li>
-                  
-                  <li>
-                     <a href="https://www.w3.org/Amaya/">Amaya</a>
-                     by the World
-                     Wide Web Consortium is a free and open-source Web authoring tool
-                     with support for HTML, XHTML, CSS, SVG and MathML that alerts
-                     you to validity errors when you save a document.</li>
-                  
-                  <li>
-                     <a href="http://chrispederick.com/work/web-developer/">Web
-                        Developer Extension</a>
-                     is an extension for Mozilla,
-                     Firefox and Flock by Chris Pedrick that allows you to use the
-                     W3C Validation Services for HTML and CSS.</li>
-                  </ul>
-               <p>Validating XML</p>
+                     					<a href="https://chrispederick.com/work/web-developer/">Web Developer Extension</a> is an extension for Firefox and Chromium browsers by Chris Pederick that allows you
+                     to use the W3C Validation Services for HTML and CSS.
+                     				</li>
+                  			</ul>
                <ul>
-                  
+                  				
                   <li>
-                     <a href="http://www.javaview.de/validator/">XML Validator - A
-                        Document Validation Service</a>
-                     by JavaView allows you to
-                     check wellformedness and validity of XML files, by file upload
-                     or by direct input of XML code.</li>
-                  
-                  <li>Apache Ant's
-                     <a href="http://ant.apache.org/manual/Tasks/xmlvalidate.html">XMLValidate Task</a>
-                     can be used to validate XML-based
-                     documents. This tool can be used to validate entire directories
-                     (and subdirectories) of XML files.</li>
-                  
-                  
+                     					<a href="http://www.javaview.de/validator/">XML Validator - A Document Validation Service</a> by JavaView allows you to check wellformedness and validity of XML files, by file
+                     upload or by direct input of XML code.
+                     				</li>
+                  				
                   <li>
-                     <a href="http://schneegans.de/sv/">XML Schema Validator</a>
-                     by Christoph Schneegans is an online tool that allows you to
-                     validate XML (and XHTML) files by URI, by file upload, by
-                     direct input of complete XML documents, and by direct input of
-                     XML code fragments. A bookmarklet that allows you to validate
-                     the page currently displayed in your browser is also available.
-                     This validator claims to be more accurate than the W3C
-                     validator.</li>
-                  
+                     					Apache Ant's <a href="https://ant.apache.org/manual/Tasks/xmlvalidate.html">XMLValidate Task</a> can be used to validate XML-based documents. This tool can be used to validate entire
+                     directories (and subdirectories) of XML files.
+                     				</li>
+                  				
                   <li>
-                     	<a href="http://www.corefiling.com/opensource/schemaValidate.html">XML Schema Validator</a>
-                     by CoreFiling is an online
-                     tool that allows you to validate an XML file against a W3C XML
-                     Schema, both of which can be uploaded.</li>
-                  
+                     					<a href="https://schneegans.de/sv/">XML Schema Validator</a> by Christoph Schneegans is an online tool that allows you to validate XML files by
+                     URI, by file upload, by direct input of complete XML documents, and by direct input
+                     of XML code fragments. A bookmarklet that allows you to validate the page currently
+                     displayed in your browser is also available. This validator claims to be more accurate
+                     than the W3C validator.
+                     				</li>
+                  				
                   <li>
-                     <a href="http://www.xmlforasp.net/SchemaValidator.aspx">Schema Validator</a>: this is a validator that allows you to paste XML and W3C XML Schema code into text
-                     boxes to validate XML code.</li>
+                     					<a href="https://www.corefiling.com/opensource/schemaValidate/">XML Schema Validator</a> by CoreFiling is an online tool that allows you to validate an XML file against a
+                     W3C XML Schema, both of which can be uploaded.</li>
+                  				
+                  <li>
+                     					<a href="http://www.xmlforasp.net/SchemaValidator.aspx">Schema Validator</a>: this is a validator that allows you to paste XML and W3C XML Schema code into text
+                     boxes to validate XML code.
+                     				</li>
                   </ul>
-               <p>Note that many programming editors, XML editors and integrated
-                  development environments (IDEs) can validate XML files. These include
-                  the following free and/or open-source tools:</p>
+               <p>Note that many programming editors, XML editors and integrated development environments
+                  (IDEs) can validate XML files. These include the following free and/or open-source
+                  tools:</p>
                <ul>
-                  
-                  <li>the programming editor
-                     <a href="http://www.jedit.org/">JEdit</a>
-                     with the XML and SideKick plugins, which supports DTDs
-                     and W3C XML Schemas,</li>
-                  
-                  <li>the “workbench"
-                     <a href="http://www.eclipse.org/">Eclipse</a>
-                     with the
-                     <a href="http://download.eclipse.org/webtools/downloads/">Web
-                        Tools Platform</a>,</li>
-                  
-                  <li>the Web authoring tool
-                     <a href="http://www.screem.org/">SCREEM</a>
-                     for the Gnome desktop environment, which supports DTDs,</li>
-                  
-                  <li>the XML editor
-                     <a href="http://jaxe.sourceforge.net/">Jaxe</a>, which validates XML files with Apache Xerces,</li>
-                  
-                  <li>the XML editor
-                     <a href="http://www.xerlin.org/">Xerlin</a>,
-                     which supports DTDs and to some extent W3C XML schema,</li>
-                  
-                  <li>the XML editor
-                     <a href="http://www.xmloperator.net/">xmloperator</a>, which supports DTDs and RELAX NG
-                     schemas,</li>
-                  
-                  <li>Emacs in nXML mode (see the <a href="https://groups.yahoo.com/neo/groups/emacs-nxml-mode/info">YahooGroup Emacs nXML Mode</a>),</li>
-                  
-                  <li>the XML editor
-                     <a href="http://pollo.sourceforge.net/">Pollo</a>, which supports DTDs, W3C XML Schemas and RELAX NG
-                     schemas, and is best suited for tree-like XML files.</li>
-                  </ul>
+                  				
+                  <li>
+                     					the programming editor <a href="http://www.jedit.org/">JEdit</a> with the XML and SideKick plugins, which supports DTDs and W3C XML Schemas,
+                     				</li>
+                  				
+                  <li>
+                     					the "workbench" <a href="https://www.eclipse.org/">Eclipse</a> with the <a href="https://www.eclipse.org/webtools/">Web Tools Platform</a>,
+                     				</li>
+                  				
+                  <li>
+                     					the XML editor <a href="http://jaxe.sourceforge.net/">Jaxe</a>, which validates XML files with Apache Xerces,
+                     				</li>
+                  				
+                  <li>
+                     					Emacs in nXML mode (see the <a href="https://www.emacswiki.org/emacs/NxmlMode">Emacs documentation wiki</a>),
+                     				</li>
+                  				
+                  <li>
+                     					the XML editor <a href="http://pollo.sourceforge.net/">Pollo</a>, which supports DTDs, W3C XML Schemas and RELAX NG schemas, and is best suited for
+                     tree-like XML files.
+                     				</li>
+                  			</ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
                   <h3>Procedure</h3>
                   
-                  <p>For HTML, SGML-based and XML-based technologies:</p>
+                  <p>For HTML, <abbr title="Standard Generalized Markup Language">SGML</abbr>-based and XML-based technologies:</p>
                   
                   <ol>
                      
@@ -353,18 +234,19 @@
                   
                   <p>For other technologies:</p>
                   
-                  <p>Follow the validation procedure defined for the technology in use, if any
-                     exists.</p>
+                  <p>Follow the validation procedure defined for the technology in use, if any exists.</p>
                   </section>
                <section class="results" id="expected-results">
+                  				
                   <h3>Expected Results</h3>
                   
                   <p>For HTML, SGML-based and XML-based technologies:</p>
                   
-                  <p>Step 2 is true.</p>
+                  <p>Check 2 is true.</p>
                   </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -378,7 +260,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -421,11 +303,11 @@
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

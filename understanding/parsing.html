@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Understanding Success Criterion 4.1.1: Parsing</title>
+      <title>Understanding Success Criterion 4.1.1: Parsing | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/understanding/">WCAG 2.2 Understanding Docs</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/understanding/about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -57,31 +57,41 @@
             </nav>
          </aside>
          <main class="standalone-resource__main">
-            <h1><span class="standalone-resource__type-of-guidance">Understanding SC 4.1.1:</span>Parsing (Level A)</h1>
+            <h1><span class="standalone-resource__type-of-guidance">Understanding SC 4.1.1:</span>Parsing (Level )</h1>
             <aside class="box">
                <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
                <div class="box-i">
-                  <p>In content implemented using markup languages, elements have complete start and end
-                     tags, elements are nested according to their specifications, elements do not contain
-                     duplicate attributes, and any IDs are unique, except where the specifications allow
-                     these features.
-                     </p>
-                  <p class="note">Start and end tags that are missing a critical character in their formation, such
-                     as a closing angle bracket or a mismatched attribute value quotation mark are not
-                     complete.
-                     </p>
+                  <p>This criterion has been removed.</p>
                </div>
             </aside>
             <div class="excol-all"></div>
             <section id="intent">
                <h2>Intent</h2>
-               <p>The intent of this Success Criterion is to ensure that user agents, including assistive
-                  technologies, can accurately interpret and parse content. If the content cannot be
+               <div class="wcag22">
+                  
+                  <p class="note">This criterion has been removed from WCAG 2.2.</p>
+                  
+                  
+                  <p>The intent of this Success Criterion was to ensure that user-agents, including assistive
+                     technologies, can accurately interpret and parse content. Since WCAG 2.0 was published,
+                     the specifications (such as HTML) and browsers have improved their handling of parsing
+                     errors. It is also that case that assistive technology used to do their own parsing
+                     of markup, but now rely on the browser. For that reason this success criterion has
+                     been removed. Many issues that would have failed this criterion will fail <a href="info-and-relationships">Info and Relationships</a> or <a href="name-role-value">Name, Role, Value</a>. Other issues are excepted by the "except where the specification allow these features"
+                     part of the criterion.</p>
+                  
+                  
+                  <p>The following content is left for historical purposes to show the original intent.</p>  
+                  
+                  
+                  <hr />
+                  </div>
+               <p>
+                  The intent of this Success Criterion is to ensure that user agents, including assistive
+                  technologies, can accurately interpret and parse content.  If the content cannot be
                   parsed into a data structure, then different user agents may present it differently
                   or be completely unable to parse it. Some user agents use "repair techniques" to render
-                  poorly coded content. 
-                  
-                  
+                  poorly coded content.
                   </p>
                <p>Since repair techniques vary among user agents, authors cannot assume that content
                   will be accurately parsed into a data structure or that it will be rendered correctly
@@ -100,17 +110,17 @@
                   <p>The concept of "well formed" is close to what is required here. However, exact parsing
                      requirements vary amongst markup languages, and most non XML-based languages do not
                      explicitly define requirements for well formedness. Therefore, it was necessary to
-                     be more explicit in the success criterion in order to be generally applicable to markup
+                     be more explicit in the Success Criterion in order to be generally applicable to markup
                      languages. Because the term "well formed" is only defined in XML, and (because end
                      tags are sometimes optional) valid HTML does not require well formed code, the term
-                     is not used in this success criterion.
+                     is not used in this Success Criterion.
                      </p>
                   
                   
-                  <p>With the exception of one success criterion (
-                     <a href="resize-text">1.4.4: Resize text</a>, which specifically mentions that the effect specified by the success criterion must
-                     be achieved without relying on an assistive technology) authors can meet the success
-                     criteria with content that assumes use of an assistive technology (or access features
+                  <p>With the exception of one Success Criterion (
+                     <a href="resize-text">1.4.4: Resize Text</a>, which specifically mentions that the effect specified by the Success Criterion must
+                     be achieved without relying on an assistive technology) authors can meet the Success
+                     Criteria with content that assumes use of an assistive technology (or access features
                      in use agents) by the user, where such assistive technologies (or access features
                      in user agents) exist and are available to the user.
                      </p>
@@ -238,7 +248,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -279,7 +289,13 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script>
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

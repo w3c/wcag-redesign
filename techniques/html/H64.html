@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H64: Using the title attribute of the frame and iframe elements</title>
+      <title>H64: Using the title attribute of the iframe element | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -54,7 +54,7 @@
             </nav>
          </aside>
          <main class="standalone-resource__main">
-            <h1><span>Technique H64:</span>Using the <code class="att">title</code> attribute of the <code class="el">frame</code> and <code class="el">iframe</code> elements</h1>
+            <h1><span>Technique H64:</span>Using the <code class="language-html">title</code> attribute of the <code class="language-html">iframe</code> element</h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
                   					About this Technique
@@ -70,7 +70,7 @@
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML documents that use frames or iframes </p>
+               <p>HTML documents that use <code class="language-html">iframe</code>s</p>
                <p>This technique relates to:</p>
                <ul>
                   <li><a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a> (Sufficient, together with <a href="../html/H70">H70: Using frame elements to group blocks of repeated material</a> when used with Grouping blocks of repeated material in a way that can be skipped,
@@ -83,62 +83,32 @@
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>The objective of this technique is to demonstrate the use of the <code class="att">title</code>
-                  attribute of the <code class="el">frame</code> or <code class="el">iframe</code> element to describe the contents
-                  of each frame. This provides a label for the frame so users can determine which frame
-                  to
-                  enter and explore in detail. It does not label the individual page (frame) or inline
-                  frame (iframe) in the frameset.</p>
-               <p>Note that the <code class="att">title</code> attribute labels frames, and is different from the
-                  <code class="el">title</code> element which labels documents. Both should be provided, since the
-                  first facilitates navigation among frames and the second clarifies the user's current
-                  location.</p>
-               <p>The <code class="att">title</code> attribute is not interchangeable with the <code class="att">name</code>
-                  attribute. The <code class="att">title</code> labels the frame for users; the <code class="att">name</code>
-                  labels it for scripting and window targeting. The <code class="att">name</code> is not presented to
-                  the user, only the <code class="att">title</code> is.</p>
-               <p>In HTML5 the <code class="el">frame</code> element is marked as obsolete. The <code class="el">iframe</code> element remains part of the HTML5 specification.</p>
+               <p>The objective of this technique is to demonstrate the use of the <code class="language-html">title</code>
+                  attribute of the <code class="language-html">iframe</code> element to describe its contents. This provides a label for the frame so users can
+                  determine which frame to enter and explore in detail. It does not label the content
+                  inside the <code class="language-html">iframe</code>.</p>
+               <div class="note">
+                  
+                  <p>The <code class="language-html">title</code> attribute labels <code class="language-html">iframe</code>s, and is different from the <code class="language-html">title</code> element which labels documents. Both should be provided, since the first facilitates
+                     navigation among <code class="language-html">iframe</code>s and the second clarifies the user's current page.</p>
+                  </div>
+               <p>The <code class="language-html">title</code> attribute is not interchangeable with the <code class="language-html">name</code>
+                  attribute. The <code class="language-html">title</code> labels the frame for users; the <code class="language-html">name</code>
+                  labels it for scripting and window targeting. The <code class="language-html">name</code> is not presented to the user, only the <code class="language-html">title</code> is.</p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>This example shows how to use the <code class="att">title</code> attribute with
-                     <code class="el">frame</code> to describe the frames containing the navigation bar and the
-                     document.</p>
-                  <pre xml:space="preserve">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-  &lt;head&gt;
-    &lt;title&gt;A simple frameset document&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;frameset cols="10%, 90%"&gt;
-    &lt;frame src="nav.html" title="Main menu" /&gt;
-    &lt;frame src="doc.html" title="Documents" /&gt;
-    &lt;noframes&gt;
-      &lt;body&gt;
-        &lt;a href="lib.html" title="Library link"&gt;Select to
-        go to the electronic library&lt;/a&gt;
-      &lt;/body&gt;
-    &lt;/noframes&gt;
-  &lt;/frameset&gt;
-&lt;/html&gt; </pre>
-               </section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>This example shows how to use the title attribute with <code class="el">iframe</code> to
-                     describe the contents of an inline frame. The example also includes an alternative
-                     link to the page included by the iframe element for older browsers, which may not
-                     understand the <code class="el">iframe</code>element.</p>
-                  <pre xml:space="preserve"> &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-  &lt;head&gt;
-    &lt;title&gt;A document using iframe&lt;/title&gt;
-  &lt;/head&gt;
+               <section class="example" id="example-1-using-the-title-attribute-with-an-iframe-to-describe-the-iframe's-content">
+                  <h3>Example 1: Using the <code class="language-html">title</code> attribute with an <code class="language-html">iframe</code> to describe the <code class="language-html">iframe</code>'s content</h3>
+                  <pre xml:space="preserve">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;title&gt;A document using an iframe&lt;/title&gt;
+&lt;/head&gt;
 ...
-&lt;iframe src="banner-ad.html" id="testiframe" 
-  name="testiframe" title="Advertisement"&gt;
-    &lt;a href="banner-ad.html"&gt;Advertisement&lt;/a&gt;
-&lt;/iframe&gt;
+&lt;iframe src="banner-ad.html" name="ad-iframe" title="Advertisement"&gt;&lt;/iframe&gt;
 ...
-&lt;/html&gt;  </pre>
+&lt;/html&gt;</pre>
                </section>
             </section>
             <section id="resources">
@@ -147,36 +117,25 @@
                <ul>
                   
                   <li>
-                     									         <a href="https://www.w3.org/TR/html4/present/frames.html#h-16.2.2"> HTML 4.01
-                        FRAME element</a>
-                     								       </li>
-                  
-                  <li>
-                     									         <a href="https://www.w3.org/TR/html4/present/frames.html#h-16.5">HTML 4.0.1
-                        Inline frames: the IFRAME element</a>
-                     								       </li>
-                  
-                  <li>
-                     									         <a href="http://www.jimthatcher.com/webcourse4.htm">Accessible Navigation,
-                        "Implementing Frame Titles"</a>
-                     								       </li>
+                     <a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element">HTML - <code class="language-html">iframe</code> element</a>.
+                     </li>
                   </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  
                   <h3>Procedure</h3>
                   
                   <ol>
                      
-                     <li>Check each frame and iframe element in the HTML or XHTML source code for the presence
-                        of a
-                        title attribute.</li>
+                     <li>Check each <code class="language-html">iframe</code> element in the HTML source code for the presence of a <code class="language-html">title</code> attribute.</li>
                      
-                     <li>Check that the title attribute contains text that identifies the frame.</li>
+                     <li>Check that the <code class="language-html">title</code> attribute contains text that describes the <code class="language-html">iframe</code>'s content.</li>
                      </ol>
                   </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
@@ -184,8 +143,9 @@
                      <li>Checks #1 and #2 are true.</li>
                      </ul>
                   </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -199,7 +159,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -242,11 +202,11 @@
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

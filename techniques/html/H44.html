@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H44: Using label elements to associate text labels with form controls</title>
+      <title>H44: Using label elements to associate text labels with form controls | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -71,7 +71,7 @@
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML controls that use external labels</p>
+               <p><abbr title="HyperText Markup Language">HTML</abbr> controls that use external labels</p>
                <p>This technique relates to:</p>
                <ul>
                   <li><a href="/understanding/non-text-content">1.1.1: Non-text Content</a> (Sufficient)</li>
@@ -86,94 +86,94 @@
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>The objective of this technique is to use the <code class="el">label</code> element to explicitly
-                  associate a form control with a label. A <code class="el">label</code> is attached to a specific
-                  form control through the use of the <code class="att">for</code> attribute. The value of the
-                  <code class="att">for</code> attribute must be the same as the value of the <code class="att">id</code>
-                  attribute of the form control. </p>
-               <p>The <code class="att">id</code> attribute may have the same value as the <code class="att">name</code>
-                  attribute, but both must be provided, and the <code class="att">id</code> must be unique in the Web
-                  page.</p>
-               <p>This technique is sufficient for Success Criteria 1.1.1, 1.3.1 and 4.1.2 whether or
-                  not the <code class="el">label</code> element is visible. That is, it may be hidden using CSS. However, for Success Criterion
-                  3.3.2, the <code class="el">label</code> element must be visible since it provides assistance to all users who need help understanding
+               <p>The objective of this technique is to use the <code class="language-html">label</code> element to explicitly associate a form control with a label. A <code class="language-html">label</code> is attached to a specific form control through the use of the <code class="language-html">for</code> attribute. The value of the <code class="language-html">for</code> attribute must be the same as the value of the <code class="language-html">id</code> attribute of the form control.</p>
+               <p>The <code class="language-html">id</code> attribute may have the same value as the <code class="language-html">name</code> attribute, but both must be provided, and the <code class="language-html">id</code> must be unique in the Web page.</p>
+               <p>This technique is sufficient for Success Criteria <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">1.1.1 (Non-Text Content)</a>, <a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">1.3.1 (Info and Relationships)</a> and <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html">4.1.2 (Name, Role, Value)</a> whether or not the <code class="language-html">label</code> element is visible. That is, it may be hidden using <abbr title="Cascading Style Sheets">CSS</abbr>. However, for Success Criterion <a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html">3.3.2 (Labels or Instructions)</a>, the <code class="language-html">label</code> element must be visible since it provides assistance to all users who need help understanding
                   the purpose of the field. </p>
                <p>An additional benefit of this technique is a larger clickable area for the control,
                   since clicking on the label or the control will activate the control. This can be
                   helpful for users with impaired motor control.</p>
-               <p>Note that the <code class="el">label</code> is positioned after <code class="el">input</code> elements of
-                  
-                  							<code class="att">type</code>="checkbox" and 
-                  							<code class="att">type</code>="radio".</p>
+               <p>Note that the <code class="language-html">label</code> is positioned after <code class="language-html">input</code> elements of <code class="language-html">type="checkbox"</code> and <code class="language-html">type="radio"</code>.</p>
                <div class="note">
                   
-                  <p>Elements that use explicitly associated labels are: </p>
+                  <p>Elements that use explicitly associated labels are:</p>
                   
                   <ul>
                      
-                     <li>
-                        									         
-                        										<code class="el">input</code>
-                        										<code class="att">type</code>="text"
-                        								       </li>
+                     <li>inputs for text entry:
+                        
+                        <ul>
+                           
+                           <li><code class="language-html">input type="date"</code></li>
+                           
+                           <li><code class="language-html">input type="datetime-local"</code></li>
+                           
+                           <li><code class="language-html">input type="email"</code></li>
+                           
+                           <li><code class="language-html">input type="month"</code></li>
+                           
+                           <li><code class="language-html">input type="number"</code></li>
+                           
+                           <li><code class="language-html">input type="password"</code></li>
+                           
+                           <li><code class="language-html">input type="search"</code></li>
+                           
+                           <li><code class="language-html">input type="tel"</code></li>
+                           
+                           <li><code class="language-html">input type="text"</code></li>
+                           
+                           <li><code class="language-html">input type="time"</code></li>
+                           
+                           <li><code class="language-html">input type="url"</code></li>
+                           
+                           <li><code class="language-html">input type="week"</code></li>
+                           </ul>   
+                        </li>
                      
                      <li>
-                        									         
-                        										<code class="el">input</code>
-                        										<code class="att">type</code>="checkbox"
-                        								       </li>
+                        <code class="language-html">input type="checkbox"</code>
+                        </li>
                      
                      <li>
-                        									         
-                        										<code class="el">input</code>
-                        										<code class="att">type</code>="radio"
-                        								       </li>
+                        <code class="language-html">input type="color"</code>
+                        </li>
                      
                      <li>
-                        									         
-                        										<code class="el">input</code>
-                        										<code class="att">type</code>="file"
-                        								       </li>
+                        <code class="language-html">input type="file"</code>
+                        </li>
                      
                      <li>
-                        									         
-                        										<code class="el">input</code>
-                        										<code class="att">type</code>="password"
-                        								       </li>
+                        <code class="language-html">input type="radio"</code>
+                        </li>
                      
                      <li>
-                        									         <code class="el">textarea</code>
-                        								       </li>
+                        <code class="language-html">input type="range"</code>
+                        </li>
                      
                      <li>
-                        									         <code class="el">select</code>
-                        								       </li>
+                        <code class="language-html">select</code>
+                        </li>
+                     
+                     <li>
+                        <code class="language-html">textarea</code>
+                        				</li>
                      </ul>
                   
-                  <p>The <code class="att">label</code> element is <strong>not</strong> used for the following
-                     because labels for these elements are provided via the value attribute (for Submit
-                     and
-                     Reset buttons), the <code class="att">alt</code> attribute (for image buttons), or element content itself
-                     (button). </p>
+                  <p>The <code class="language-html">label</code> element is <strong>not</strong> used for the following elements:</p>
                   
                   <ul>
                      
-                     <li>Submit and Reset buttons (
-                        										<code class="el">input</code>
-                        										<code class="att">type</code>="submit" or 
-                        										<code class="el">input</code>
-                        										<code class="att">type</code>="reset")</li>
+                     <li><code class="language-html">button</code> (the label is provided by the content)</li>
                      
-                     <li>Image buttons (
-                        										<code class="el">input</code>
-                        										<code class="att">type</code>="image")</li>
+                     <li><code class="language-html">input type="button"</code>  (the label is provided by the content)</li>
                      
-                     <li>Hidden input fields (
-                        										<code class="el">input</code>
-                        										<code class="att">type</code>="hidden")</li>
+                     <li><code class="language-html">input type="hidden"</code></li>
                      
-                     <li>Script buttons (<code class="el">button</code> elements or &lt;<code class="el">input</code>
-                        										<code class="att">type</code>="button"&gt;)</li>
+                     <li><code class="language-html">input type="image"</code> (the label is provided by the <code class="language-html">alt</code> attribute)</li>
+                     
+                     <li><code class="language-html">input type="reset"</code> (the label is label provided by the <code class="language-html">value</code> attribute)</li>
+                     
+                     <li><code class="language-html">input type="submit"</code> (the label is label provided by the <code class="language-html">value</code> attribute)</li>
                      </ul>
                   </div>
             </section>
@@ -181,41 +181,31 @@
                <h2>Examples</h2>
                <section class="example" id="example-1-a-text-input-field">
                   <h3>Example 1: A text input field</h3>
-                  <p>The text field in the example below has the explicit label of "First name:". The
-                     <code class="el">label</code> element's <code class="att">for</code> attribute matches the
-                     <code class="att">id</code> attribute of the <code class="el">input</code> element. </p>
+                  <p>The text field in this example has the explicit label of "First name:". The <code class="language-html">label</code> element's <code class="language-html">for</code> attribute matches the <code class="language-html">id</code> attribute of the <code class="language-html">input</code> element.</p>
                   <pre xml:space="preserve">&lt;label for="firstname"&gt;First name:&lt;/label&gt; 
-&lt;input type="text" name="firstname" id="firstname" /&gt;</pre>
+&lt;input id="firstname" name="firstname" type="text"&gt;</pre>
                </section>
                <section class="example" id="example-2-a-checkbox">
                   <h3>Example 2: A checkbox</h3>
-                  <pre xml:space="preserve">&lt;input type="checkbox" id="markuplang" name="computerskills" checked="checked"&gt;
+                  <pre xml:space="preserve">&lt;input checked id="markuplang" name="computerskills" type="checkbox"&gt;
 &lt;label for="markuplang"&gt;HTML&lt;/label&gt;</pre>
                </section>
                <section class="example" id="example-3-a-group-of-radio-buttons">
                   <h3>Example 3: A group of radio buttons</h3>
-                  <p>A small, related group of radio buttons with a clear description and labels for
-                     each individual element.</p>
-                  <div class="note">
-                     
-                     <p>To provide clear associations and instructions for a large set of related radio
-                        buttons <a href="#H71"></a>, should be considered.</p>
-                     </div>
-                  <pre xml:space="preserve"> &lt;h1&gt;Donut Selection&lt;/h1&gt;
-
-&lt;p&gt;Choose the type of donut(s) you would like then select 
-   the "purchase donuts" button.&lt;/p&gt;
-
-&lt;form action="http://example.com/donut" method="post"&gt;
-&lt;p&gt;
-  &lt;input type="radio" name="flavor" id="choc" value="chocolate" /&gt;
-    &lt;label for="choc"&gt;Chocolate&lt;/label&gt;&lt;br/&gt;
-  &lt;input type="radio" name="flavor" id="cream" value="cream"/&gt;
-    &lt;label for="cream"&gt;Cream Filled&lt;/label&gt;&lt;br/&gt;
-  &lt;input type="radio" name="flavor" id="honey" value="honey"/&gt;
-    &lt;label for="honey"&gt;Honey Glazed&lt;/label&gt;&lt;br/&gt;
-  &lt;input type="submit" value="Purchase Donuts"/&gt;
-&lt;/p&gt;
+                  <p>A small, related group of radio buttons with a clear description and labels for each
+                     individual element.</p>
+                  <pre xml:space="preserve">&lt;h1&gt;Doughnut Selection&lt;/h1&gt;
+&lt;form action="/buy-doughnuts" method="post"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Pick the doughnut you would like&lt;/legend&gt;
+    &lt;input id="dn-choc" name="flavor" type="radio" value="chocolate"&gt;
+    &lt;label for="dn-choc"&gt;Chocolate&lt;/label&gt;
+    &lt;input id="dn-cream" name="flavor" type="radio" value="cream"&gt;
+    &lt;label for="dn-cream"&gt;Cream Filled&lt;/label&gt;
+    &lt;input id="dn-raspberry" name="flavor" type="radio" value="raspberry"&gt;
+    &lt;label for="dn-raspberry"&gt;Raspberry Filled&lt;/label&gt;
+  &lt;/fieldset&gt;
+  &lt;input type="submit" value="Purchase Your Doughnut"&gt;
 &lt;/form&gt;</pre>
                </section>
             </section>
@@ -225,12 +215,12 @@
                <ul>
                   
                   <li>
-                     									         <a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.9">HTML 4.01 form labels</a>
-                     								       </li>
+                     <a href="https://html.spec.whatwg.org/multipage/input.html#the-input-element">HTML - the <code class="language-html">input</code> element</a>.
+                     </li>
                   
                   <li>
-                     									         <a href="http://usability.com.au/2008/09/accessible-forms-using-wcag-2-0/">Accessible Forms using WCAG 2.0</a>
-                     								       </li>
+                     <a href="https://html.spec.whatwg.org/multipage/forms.html#the-label-element">HTML - the <code class="language-html">label</code> element</a>.
+                     </li>
                   </ul>
             </section>
             <section id="related">
@@ -247,46 +237,45 @@
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  
                   <h3>Procedure</h3>
                   
-                  <p>For all <code class="el">input</code> elements of type text, file or
-                     password, for all <code class="el">textareas</code> and for all
-                     <code class="el">select</code> elements in the Web page: </p>
+                  <p>For all <code class="language-html">input</code> elements of type <code class="language-html">text</code>, <code class="language-html">file</code> or <code class="language-html">password</code>, for all <code class="language-html">textarea</code> elements, and for all <code class="language-html">select</code> elements in the Web page:</p>
                   
                   <ol>
                      
-                     <li>Check that there is a <code class="el">label</code> element that identifies the purpose of
-                        	the control before the <code class="el">input</code>, <code class="el">textarea</code>, or <code class="el">select</code> element</li>
+                     <li>Check that there is a <code class="language-html">label</code> element that identifies the purpose of the control before the <code class="language-html">input</code>, <code class="language-html">textarea</code>, or <code class="language-html">select</code> element</li>
                      
-                     <li>Check that the <code class="att">for</code> attribute of the <code class="el">label</code> element
-                        	matches the id of the <code class="el">input</code>, <code class="el">textarea</code>, or <code class="el">select</code> element</li>
+                     <li>Check that the <code class="language-html">for</code> attribute of the <code class="language-html">label</code> element matches the <code class="language-html">id</code> of the <code class="language-html">input</code>, <code class="language-html">textarea</code>, or <code class="language-html">select</code> element.</li>
                      
-                     <li>Check that the <code class="el">label</code> element is visible. </li>
+                     <li>Check that the <code class="language-html">label</code> element is visible.</li>
                      </ol>
                   
-                  <p>For all <code class="el">input</code> elements of type checkbox or radio in the Web page:: </p>
+                  <p>For all <code class="language-html">input</code> elements of type checkbox or radio in the Web page:</p>
                   
                   <ol>
                      
-                     <li>Check that there is a <code class="el">label</code> element that identifies the purpose of
-                        the control after the <code class="el">input</code> element</li>
+                     <li>Check that there is a <code class="language-html">label</code> element that identifies the purpose of the control after the <code class="language-html">input</code> element.</li>
                      
-                     <li>Check that the <code class="att">for</code> attribute of the <code class="el">label</code> element
-                        matches the <code class="att">id</code> of the <code class="el">input</code> element</li>
+                     <li>Check that the <code class="language-html">for</code> attribute of the <code class="language-html">label</code> element matches the <code class="language-html">id</code> of the <code class="language-html">input</code> element.</li>
                      
-                     <li>Check that the <code class="el">label</code> element is visible. </li>
+                     <li>Check that the <code class="language-html">label</code> element is visible.</li>
                      </ol>
                   </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
                      
-                     <li>Checks #1 and #2 are true. For Success Criterion 3.3.2, Check #3 is also true. </li>
+                     <li>Checks 1 and 2 are true.</li>
+                     
+                     <li>For Success Criterion 3.3.2 (Labels or Instructions), Check 3 is also true.</li>
                      </ul>
                   </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -300,7 +289,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -343,11 +332,11 @@
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H49: Using semantic markup to mark emphasized or special text</title>
+      <title>H49: Using semantic markup to mark emphasized or special text | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -67,7 +67,7 @@
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
+               <p>HTML</p>
                <p>This technique relates to <span><a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> (Sufficient, together with <a href="../general/G115">G115: Using semantic elements to mark up structure</a>)</span>.</p>
             </section>
             <section id="description">
@@ -86,63 +86,51 @@
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <p class="working-example">See <a href="../../working-examples/semantic-text/">rendered examples of semantic
-                     text</a>.</p>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>This example shows how to use the <code class="el">em</code> and <code class="el">strong</code> elements
-                     to emphasize text. The <code class="el">em</code> and <code class="el">strong</code> elements were
+               <p class="working-example">See <a href="../../working-examples/semantic-text/">rendered examples of semantic text</a>.</p>
+               <section class="example" id="example-1-using-the-em-and-strong-elements-to-emphasize-text">
+                  <h3>Example 1: Using the <code class="language-html">em</code> and <code class="language-html">strong</code> elements
+                     to emphasize text</h3>
+                  <p>The <code class="language-html">em</code> and <code class="language-html">strong</code> elements are
                      designed to indicate structural emphasis that may be rendered in a variety of ways
                      (font style changes, speech inflection changes, etc.).</p>
-                  <pre xml:space="preserve"> ...What she &lt;em&gt;really&lt;/em&gt; meant to say was, &amp;quot;This is not ok, 
- it is &lt;strong&gt;excellent&lt;/strong&gt;&amp;quot;!... </pre>
+                  <pre xml:space="preserve"> ... What she &lt;em&gt;really&lt;/em&gt; meant to say was, &amp;quot;This is not OK, 
+ it is &lt;strong&gt;excellent&lt;/strong&gt;&amp;quot;! ...</pre>
                </section>
-               <section class="example" id="example-2">
-                  <h3>Example 2</h3>
-                  <p>This example shows using the <code class="el">blockquote</code> element to mark up long
-                     quotations which may require paragraph breaks. It also demonstrates the use of the
-                     <code class="el">cite</code> element to specify a reference.</p>
-                  <pre xml:space="preserve">&lt;p&gt;The following is an excerpt from the &lt;cite&gt;The Story of my Life&lt;/cite&gt; by Helen Keller&lt;/p&gt;
- &lt;blockquote&gt;
-   &lt;p&gt;Even in the days before my teacher came, I used to feel along the square stiff boxwood
-   hedges, and, guided by the sense of smell, would find the first violets and lilies.  
-   There, too, after a fit of temper, I went to find comfort and to hide my hot face 
-   in the cool leaves and grass.&lt;/p&gt;
- &lt;/blockquote&gt;</pre>
+               <section class="example" id="example-2-using-the-blockquote-element-to-mark-up-long-quotations-from-another-source">
+                  <h3>Example 2: Using the <code class="language-html">blockquote</code> element to mark up long quotations from another source</h3>
+                  <p>This example also demonstrates the use of the <code class="language-html">cite</code> element to specify a reference.</p>
+                  <pre xml:space="preserve">&lt;p&gt;The following is an excerpt from the &lt;cite&gt;The Story Of My Life&lt;/cite&gt; 
+   by Helen Keller:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Even in the days before my teacher came, I used to feel along the square stiff
+     boxwood hedges, and, guided by the sense of smell, would find the first violets
+     and lilies. There, too, after a fit of temper, I went to find comfort and to hide
+     my hot face in the cool leaves and grass.&lt;/p&gt;
+&lt;/blockquote&gt;</pre>
                </section>
-               <section class="example" id="example-3">
-                  <h3>Example 3</h3>
-                  <p>Here is the use of the <code class="el">q</code> element to mark up a shorter quotation.
-                     Quotes are provided around the <code class="el">q</code> element, because many user agents do
-                     not support this element yet and therefore do not display it properly (see UA
-                     notes). CSS rules to suppress automatic generation of quotes are provided for those
-                     user agents that do support the <code class="el">q</code> element, to prevent them from
-                     generating quotes automatically in addition to the quotes provided by the author,
-                     resulting in double-quoted content. In the future, when the <code class="el">q</code> element
-                     is more broadly supported, the need to provide quotes and suppress browser-generated
-                     quotes will go away. </p>
-                  <pre xml:space="preserve">q:before { content: ""; } 
-q:after { content: ""; }  </pre>
-                  <pre xml:space="preserve"> &lt;p&gt;Helen Keller said, "&lt;q&gt;Self-pity is our worst enemy and if we yield to it, 
-we can never do anything good in the world.&lt;/q&gt;"&lt;/p&gt;</pre>
+               <section class="example" id="example-3-using-the-q-element-to-mark-up-a-shorter-quotation-from-another-source">
+                  <h3>Example 3: Using the <code class="language-html">q</code> element to mark up a shorter quotation from another source</h3>
+                  <p>Quotation marks aren't manually added to the quote because they are added by the user
+                     agent.</p>
+                  <pre xml:space="preserve">&lt;p&gt;Helen Keller said, &lt;q&gt;Self-pity is our worst enemy and if we yield to it, 
+   we can never do anything good in the world&lt;/q&gt;.&lt;/p&gt;</pre>
                </section>
-               <section class="example" id="example-4">
-                  <h3>Example 4</h3>
-                  <p>Superscripts and subscripts are created using the <code class="el">sup</code> and
-                     <code class="el">sub</code> elements.</p>
-                  <pre xml:space="preserve"> &lt;p&gt;Beth received 1&lt;sup&gt;st&lt;/sup&gt; place in the 9&lt;sup&gt;th&lt;/sup&gt; grade science competition.&lt;/p&gt;
+               <section class="example" id="example-4-using-the-sup-and-sub-elements-to-mark-up-superscripts-and-subscripts">
+                  <h3>Example 4: Using the <code class="language-html">sup</code> and <code class="language-html">sub</code> elements to mark up superscripts and subscripts</h3>
+                  <p>The <code class="language-html">sup</code> and <code class="language-html">sub</code> elements must be used only to mark up typographical conventions with specific meanings,
+                     not for typographical presentation for presentation's sake.</p>
+                  <pre xml:space="preserve">&lt;p&gt;Beth won 1&lt;sup&gt;st&lt;/sup&gt; place in the 9&lt;sup&gt;th&lt;/sup&gt; grade science competition.&lt;/p&gt;
 &lt;p&gt;The chemical notation for water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;</pre>
                </section>
-               <section class="example" id="example-5">
-                  <h3>Example 5</h3>
-                  <p>This example shows use of the <code>code</code> element to provide visual emphasis and consistent restyling capability for code rendered
-                     on a web page. In this example shows a <code>code</code> code element being used to emphasize a block of CSS code.</p>
+               <section class="example" id="example-5-using-the-code-element-to-mark-up-code">
+                  <h3>Example 5: Using the <code class="language-html">code</code> element to mark up code</h3>
+                  <p>This example shows use of the <code>code</code> element to provide visual emphasis for a CSS rule:</p>
                   <pre xml:space="preserve">&lt;code&gt;
 #trial {
-background-image: url(30daytrial.jpg);
-background-repeat: no-repeat;
-background-position: left top;
-padding-top: 68px;
+  background-image: url(30daytrial.jpg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  padding-top: 68px;
 } 
 &lt;/code&gt;</pre>
                </section>
@@ -152,20 +140,15 @@ padding-top: 68px;
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
                   
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/text.html#h-9.2.1">Phrase
-                        elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</a>
-                     								       </li>
+                  <li><a href="https://html.spec.whatwg.org/multipage/dom.html#phrasing-content-2">HTML - Phrasing Content</a>.</li>
                   
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/text.html#h-9.2.2">Quotations: The BLOCKQUOTE and Q elements</a>
-                     								       </li>
+                  <li><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element">HTML - <code class="language-html">blockquote</code> element</a>.</li>
                   
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/text.html#h-9.2.3">Subscripts and superscripts: the SUB and SUP elements</a>
-                     								       </li>
+                  <li><a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element">HTML - <code class="language-html">code</code> element</a>.</li>
                   
-                  <li>
-                     									         <a href="http://juicystudio.com/article/fixing-ie-quotes.php">Fixing Quotes in
-                        Internet Explorer</a>
-                     								       </li>
+                  <li><a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element">HTML - <code class="language-html">q</code> element</a>.</li>
+                  
+                  <li><a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements">HTML - <code class="language-html">sub</code> and <code class="language-html">sup</code> elements</a>.</li>
                   </ul>
             </section>
             <section id="related">
@@ -182,15 +165,14 @@ padding-top: 68px;
                   
                   <ol>
                      
-                     <li>Examine the content for information that is conveyed through variations in
-                        presentation of text.</li>
+                     <li>Examine the content for information that is conveyed through variations in presentation
+                        of text.</li>
                      
-                     <li>Check that appropriate semantic markup (such as <code class="el">em</code>, <code class="el">strong</code>, <code class="el">cite</code>,
-                        <code class="el">blockquote</code>, <code class="el">sub</code>, and <code class="el">sup</code>) have been used to mark the
-                        text that conveys information through variations in text.</li>
+                     <li>Check that appropriate semantic markup (such as <code class="language-html">em</code>, <code class="language-html">strong</code>, <code class="language-html">cite</code>, <code class="language-html">blockquote</code>, <code class="language-html">sub</code>, and <code class="language-html">sup</code>) have been used to mark the text that conveys information through variations in text.</li>
                      </ol>
                   </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
@@ -198,8 +180,9 @@ padding-top: 68px;
                      <li>Check #2 is true.</li>
                      </ul>
                   </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -213,7 +196,7 @@ padding-top: 68px;
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -256,11 +239,11 @@ padding-top: 68px;
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H98: Using HTML 5.2 autocomplete attributes</title>
+      <title>H98: Using HTML 5.2 autocomplete attributes | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -53,7 +53,7 @@
             </nav>
          </aside>
          <main class="standalone-resource__main">
-            <h1><span>Technique H98:</span>Using HTML 5.2 autocomplete attributes</h1>
+            <h1><span>Technique H98:</span>Using HTML 5.2 <code class="language-html">autocomplete</code> attributes</h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
                   					About this Technique
@@ -65,7 +65,7 @@
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
-               <p>All HTML form fields that map to the <a href="https://www.w3.org/TR/WCAG21/#input-purposes">HTML 5.2 autofill tokens</a>.</p>
+               <p>All <abbr title="Hypertext Markup Language">HTML</abbr> form fields that map to the <a href="https://www.w3.org/TR/WCAG21/#input-purposes">HTML 5.2 <code class="language-html">autofill</code> tokens</a>.</p>
                <p>This technique relates to <span><a href="/understanding/identify-input-purpose">1.3.5: Identify Input Purpose</a> (Sufficient)</span>.</p>
             </section>
             <section id="description">
@@ -76,32 +76,29 @@
                   to it, no matter what language is used, or what visible on-screen term is used to
                   label the input. Then it can be further customized or otherwise machine-manipulated
                   to help users.</p>
-               <p>The technique works by adding the appropriate autocomplete token to each form field
-                  on the form to make the identified inputs Programmatically Determinable. This will
-                  help people with cognitive disabilities who may not immediately know the purpose of
-                  the field because the label used by the author is not familiar to them.  When inputs
-                  have been programmatically assigned, third party plugins and software can manipulate
-                  these form fields to make them more accessible to people with cognitive disabilities.
-                  For instance, a plugin could detect an autocomplete token with the text string "tel"
-                  and insert a telephone icon. It will further enable third party software to swap out
-                  the existing labels for text labels that the user finds more familiar. For instance,
+               <p>The technique works by adding the appropriate <code class="language-html">autocomplete</code> token to each form field on the form to make the identified inputs Programmatically
+                  Determinable. This will help people with cognitive disabilities who may not immediately
+                  know the purpose of the field because the label used by the author is not familiar
+                  to them. When inputs have been programmatically assigned, third party plugins and
+                  software can manipulate these form fields to make them more accessible to people with
+                  cognitive disabilities. For instance, a plugin could detect an <code class="language-html">autocomplete</code> token with the text string "<code class="language-html">tel</code>" and insert a telephone icon. It will further enable third party software to swap
+                  out the existing labels for text labels that the user finds more familiar. For instance,
                   it could change "Given Name" to "First Name".</p>
-               <p>The <code>autocomplete</code> attribute also improves the browser's ability to pre-populate form fields with user-preferred
-                  values. When the input has been properly 'tagged' with the known token value, the
+               <p>The <code class="language-html">autocomplete</code> attribute also improves the browser's ability to pre-populate form fields with user-preferred
+                  values. When the input has been properly "tagged" with the known token value, the
                   value entered by the user is stored locally on the host machine and associated with
-                  the token value for reuse.  It helps those with dexterity disabilities who have trouble
+                  the token value for reuse. It helps those with dexterity disabilities who have trouble
                   typing, those who may need more time, and anyone who wishes to reduce effort to fill
                   out a form.</p>
-               <p>The <code>autocomplete</code> attribute allows the browser to do a pattern match against a list of values locally
+               <p>The <code class="language-html">autocomplete</code> attribute allows the browser to do a pattern match against a list of values locally
                   stored with the browser, and supplies the appropriate corresponding value when the
-                  input is programmatically tagged. This is a User setting that can be turned on or
+                  input is programmatically tagged. This is a user setting that can be turned on or
                   off, or modified by the end user. This reduces typing and reliance on memory because
                   it uses stored values to fill in the fields.</p>
-               <p>It's important to note the success criterion <a href="identify-input-purpose">Identify Input Purpose</a> and autocomplete attribute only place requirements on input fields collecting information
-                  <em><strong>about the user</strong></em>.</p>
-               <p>For the success criterion, it is assumed that the <code>autocomplete</code> attribute is not used on form fields that do not correspond to an autocomplete field
-                  described in the <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute">HTML specification</a>. If the <code>autocomplete</code> field is used to describe a "custom" taxonomy, rather than that described in the
-                  specification, this rule may produce incorrect results. </p>
+               <p>It's important to note the Success Criterion <a href="identify-input-purpose">Identify Input Purpose</a> and <code class="language-html">autocomplete</code> attribute only place requirements on input fields collecting information <strong>about the user</strong>.</p>
+               <p>For the Success Criterion, it is assumed that the <code class="language-html">autocomplete</code> attribute is not used on form fields that do not correspond to an autocomplete field
+                  described in the <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute">HTML <code class="language-html">autocomplete</code> attribute specification</a>. If the <code class="language-html">autocomplete</code> field is used to describe a "custom" taxonomy, rather than that described in the
+                  specification, this rule may produce incorrect results.</p>
                <section id="security-considerations">
                   				
                   <h3>Security considerations</h3>
@@ -110,19 +107,17 @@
                      There is sometimes confusion about how browsers save information and the security
                      implications.</p>
                   				
-                  <p>For the autocomplete attribute:</p>
+                  <p>For the <code class="language-html">autocomplete</code> attribute:</p>
                   				
                   <ul>
                      					
-                     <li>This technique should only be used when asking for data about the <em>user</em> who is filling the form in, not for other people.</li>
+                     <li>This technique should only be used when asking for <strong>data about the user</strong> who is filling the form in, not for other people.</li>
                      					
                      <li>It only works if you are on the same computer, using the same user-account, and using
-                        the same browser. Any multi-login scenario does not save autocomplete data between
-                        different accounts. (Users can setup syncing of data across computers, but that is
-                        not the default.)</li>
+                        the same browser. Any multi-login scenario does not save <code class="language-html">autocomplete</code> data between different accounts. (Users can setup syncing of data across computers,
+                        but that is not the default.)</li>
                      					
-                     <li>Saving information with autocomplete is opt-in by the user, usually at the point of
-                        saving data the first time.</li>
+                     <li>Saving information with <code class="language-html">autocomplete</code> is opt-in by the user, usually at the point of saving data the first time.</li>
                      					
                      <li>The form is not auto-submitted, the user can see the data before it is submitted.</li>
                      					
@@ -130,38 +125,39 @@
                      					
                      <li>It is easy to engage a privacy mode, such as private browsing.</li>
                      					
-                     <li>Even <em>without</em> autocomplete set in the webpage, browsers can save data, and some plugins (such as
-                        password managers) will aggressively use heuristics to guess what fields are for and
-                        fill them in. Using the autocomplete attribute makes those guesses accurate.</li>
+                     <li>Even <em>without</em> <code class="language-html">autocomplete</code> set in the webpage, browsers can save data, and some plugins (such as password managers)
+                        will aggressively use heuristics to guess what fields are for and fill them in. Using
+                        the <code class="language-html">autocomplete</code> attribute makes those guesses accurate.</li>
                      				</ul>
                   				
                   <p>The browser history provides far more detail about what people have done, and is just
-                     as available as autocomplete data. The solutions/mitigations for browser-history are
-                     similar to autocomplete.</p>
+                     as available as <code class="language-html">autocomplete</code> data. The solutions/mitigations for browser-history are similar to <code class="language-html">autocomplete</code>.</p>
                   			</section>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-example-1-currency">
-                  <h3>Example 1: Example 1: Currency</h3>
+               <section class="example" id="example-1-a-user's-credit-card-information">
+                  <h3>Example 1: A user's credit card information</h3>
                   <p>This is a simple form that collects contact and credit card information from the user.</p>
                   <pre><code>&lt;form method="post" action="step2"&gt;
- &lt;div&gt;
-   &lt;label for="fname"&gt;First Name&lt;/label&gt;
-  &lt;input id="fname" type="text" <strong>autocomplete="given-name"</strong> ... &gt;
+  &lt;div&gt;
+    &lt;label for="fname"&gt;First Name&lt;/label&gt;
+    &lt;input <mark>autocomplete="given-name"</mark> id="fname" type="text"&gt;
   &lt;/div&gt;
   &lt;div&gt;
-    &lt;label for="lname"&gt;Last Name Name&lt;/label&gt;
-  &lt;input id="lname" type="text" <strong>autocomplete="family-name"</strong> ... &gt;
+    &lt;label for="lname"&gt;Last Name&lt;/label&gt;
+    &lt;input <mark>autocomplete="family-name"</mark> id="lname" type="text"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
     &lt;label for="cc-num"&gt;Credit card number:&lt;/label&gt;
-    &lt;input type="text" id="cc-num" <strong>autocomplete="cc-number"</strong>&gt;
+    &lt;input <mark>autocomplete="cc-number"</mark> id="cc-num" type="text"&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;label for="exp-date"&gt;Expiry Date:&lt;/label&gt;
-    &lt;input type="month" id="exp-date" <strong>autocomplete="cc-exp"</strong>&gt;
+    &lt;input <mark>autocomplete="cc-exp"</mark> id="exp-date" type="month"&gt;
   &lt;/div&gt;
   &lt;div&gt;
-    &lt;input type="submit" value="Continue..."&gt;
+    &lt;input type="submit" value="Continue"&gt;
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
                </section>
@@ -171,13 +167,12 @@
                <section class="test-procedure">
                   <h3>Procedure</h3>
                   <p>For each form field that collects information about the user and corresponds to an
-                     autocomplete field described in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">WCAG 2.1 7. Section 7: Input Purposes for User Interface Components</a>, check the following:</p>
+                     <code class="language-html">autocomplete</code> field described in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">WCAG 2.1 7. Section 7: Input Purposes for User Interface Components</a>, check the following:</p>
                   <ol>
                      					
-                     <li>The form field has a valid and well-formed autocomplete attribute and value pair.</li>
+                     <li>The form field has a valid and well-formed <code class="language-html">autocomplete</code> attribute and value pair.</li>
                      
-                     <li>The purpose of the form field indicated by the label corresponds with the autocomplete
-                        token on the input.</li>
+                     <li>The purpose of the form field indicated by the label corresponds with the <code class="language-html">autocomplete</code> token on the input.</li>
                      				</ol>
                </section>
                <section class="test-results">
@@ -185,11 +180,12 @@
                   <ul>
                      					
                      <li>If #1 and #2 are true, then the test passes and the technique has been successfully
-                        implemented</li>
+                        implemented.</li>
                      				</ul>
                </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -203,7 +199,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -246,11 +242,11 @@
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

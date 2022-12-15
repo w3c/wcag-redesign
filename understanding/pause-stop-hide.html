@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Understanding Success Criterion 2.2.2: Pause, Stop, Hide</title>
+      <title>Understanding Success Criterion 2.2.2: Pause, Stop, Hide | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/understanding/">WCAG 2.2 Understanding Docs</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/understanding/about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -584,7 +584,8 @@
                         
                         <ul xmlns="http://www.w3.org/1999/xhtml">
                            
-                           <li>A <strong>general flash</strong> is defined as a pair of opposing changes in <a href="#dfn-relative-luminance">relative luminance</a> of 10% or more of the maximum relative luminance where the relative luminance of
+                           <li>A <strong>general flash</strong> is defined as a pair of opposing changes in <a href="#dfn-relative-luminance">relative luminance</a> of 10% or more of the maximum relative luminance (1.0) where the relative luminance
+                              of
                               the darker image is below 0.80; and where "a pair of opposing changes" is an increase
                               followed by a decrease, or a decrease followed by an increase, and
                               </li>
@@ -602,9 +603,11 @@
                         <p xmlns="http://www.w3.org/1999/xhtml" class="note">For general software or Web content, using a 341 x 256 pixel rectangle anywhere on
                            the displayed screen area when the content is viewed at 1024 x 768 pixels will provide
                            a good estimate of a 10 degree visual field for standard screen sizes and viewing
-                           distances (e.g., 15-17 inch screen at 22-26 inches). (Higher resolutions displays
-                           showing the same rendering of the content yield smaller and safer images so it is
-                           lower resolutions that are used to define the thresholds.)
+                           distances (e.g., 15-17 inch screen at 22-26 inches). This resolution of 75 - 85 ppi
+                           is known to be lower, and thus more conservative than the nominal CSS pixel resolution
+                           of 96 ppi in CSS specifications. Higher resolutions displays showing the same rendering
+                           of the content yield smaller and safer images so it is lower resolutions that are
+                           used to define the thresholds.
                            </p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="note">A transition is the change in relative luminance (or relative luminance/color for
@@ -613,11 +616,10 @@
                            of two opposing transitions.
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The current working definition in the field for <strong>"pair of opposing transitions involving a saturated red"</strong> is where, for either or both states involved in each transition, R/(R+ G + B) &gt;=
-                           0.8, and the change in the value of (R-G-B)x320 is &gt; 20 (negative values of (R-G-B)x320
-                           are set to zero) for both transitions. R, G, B values range from 0-1 as specified
-                           in “relative luminance” definition. [[HARDING-BINNIE]]
-                           </p>
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The new working definition in the field for <strong>"pair of opposing transitions involving a saturated red"</strong> (from WCAG 2.2) is a pair of opposing transitions where, one transition is either
+                           to or from a state with a value R/(R + G + B) that is greater than or equal to 0.8,
+                           and the difference between states is more than 0.2 (unitless) in the CIE 1976 UCS
+                           chromaticity diagram. [[ISO_9241-391]] </p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="note">Tools are available that will carry out analysis from video screen capture. However,
                            no tool is necessary to evaluate for this condition if flashing is less than or equal
@@ -670,7 +672,7 @@
                               </ul>
                            
                            <p>The "^" character is the exponentiation operator. (Formula taken from 
-                              [[IEC-4WD]]).
+                              [[SRGB]].)
                               </p>
                            </div>
                         
@@ -692,7 +694,7 @@
                            flash.
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">A <a href="relative-luminance.xml">MathML version of the relative luminance definition</a> is available.
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">A <a href="relative-luminance.html">separate page giving the relative luminance definition using MathML</a> to display the formulas is available.
                            </p>
                         </definition>
                   </dd>
@@ -713,7 +715,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -754,7 +756,13 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script>
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

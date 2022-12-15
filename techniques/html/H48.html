@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H48: Using ol, ul and dl for lists or groups of links</title>
+      <title>H48: Using ol, ul and dl for lists or groups of links | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -55,7 +55,7 @@
             </nav>
          </aside>
          <main class="standalone-resource__main">
-            <h1><span>Technique H48:</span>Using ol, ul and dl for lists or groups of links</h1>
+            <h1><span>Technique H48:</span>Using <code class="language-html">ol</code>, <code class="language-html">ul</code> and <code class="language-html">dl</code> for lists or groups of links</h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
                   					About this Technique
@@ -67,7 +67,7 @@
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
-               <p>HTML, XHTML</p>
+               <p>HTML</p>
                <p>This technique relates to <span><a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> (Sufficient when used with Making information and relationships conveyed through
                      presentation programmatically
                      determinable using the following techniques:
@@ -76,32 +76,31 @@
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to create lists of related items using list elements
-                  appropriate for their purposes. The <code class="el">ol</code> element is used when the list is
-                  ordered and the <code class="el">ul</code> element is used when the list is unordered. Definition
-                  lists (<code class="el">dl</code>) are used to group terms with their definitions. Although the use
-                  of this markup can make lists more readable, not all lists need markup. For instance,
-                  sentences that contain comma-separated lists may not need list markup.</p>
+                  appropriate for their purposes. The <code class="language-html">ol</code> element is used when the list is ordered and the <code class="language-html">ul</code> element is used when the list is unordered. Description lists (<code class="language-html">dl</code>) are used to group name-value pairs of information, for example: terms and definitions
+                  or questions and answers. Although the use of this markup can make lists more readable,
+                  not all lists need markup. For instance, sentences that contain comma-separated lists
+                  may not need list markup.</p>
                <p>When markup is used that visually formats items as a list but does not indicate the
                   list relationship, users may have difficulty in navigating the information. An example
                   of such visual formatting is including asterisks in the content at the beginning of
-                  each
-                  list item and using &lt;<code class="el">br</code>&gt; elements to separate the list items.</p>
+                  each list item and using <code class="language-html">br</code> elements to separate the list items.</p>
                <p>Some assistive technologies allow users to navigate from list to list or item to item.
                   Style sheets can be used to change the presentation of the lists while preserving
-                  their
-                  integrity.</p>
-               <p>The list structure (<code class="el">ul</code>/<code class="el">ol</code>) is also useful to group hyperlinks. When this is done, it helps screen reader users
-                  to navigate from the first item in a list to the end of the list or jump to the next
-                  list. This helps them to bypass groups of links if they choose to.</p>
+                  their integrity.</p>
+               <p>The list structure, commonly unordered lists, is also useful to group hyperlinks.
+                  When this is done, it helps screen reader users to navigate from the first item in
+                  a list to the end of the list or jump to the next list. This helps them to bypass
+                  groups of links if they choose to.</p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1-a-list-showing-steps-in-a-sequence-">
-                  <h3>Example 1: A list showing steps in a sequence </h3>
+               <section class="example" id="example-1-a-list-showing-steps-in-a-sequence">
+                  <h3>Example 1: A list showing steps in a sequence</h3>
                   <p>This example uses an ordered list to show the sequence of steps in a process.</p>
-                  <pre xml:space="preserve"> &lt;ol&gt;
-  &lt;li&gt;Mix eggs and milk in a bowl.&lt;/li&gt;
-  &lt;li&gt;Add salt and pepper.&lt;/li&gt;
+                  <pre xml:space="preserve">&lt;ol&gt;
+  &lt;li&gt;Mix flour, eggs, milk, and seasoning in a bowl.&lt;/li&gt;
+  &lt;li&gt;Whisk until the batter is smooth.&lt;/li&gt;
+  &lt;li&gt;Rest the batter for at least 30 minutes before cooking.&lt;/li&gt;
 &lt;/ol&gt;</pre>
                </section>
                <section class="example" id="example-2-a-grocery-list-">
@@ -113,72 +112,49 @@
   &lt;li&gt;Butter&lt;/li&gt;
 &lt;/ul&gt;</pre>
                </section>
-               <section class="example" id="example-3-a-word-and-its-definition-">
-                  <h3>Example 3: A word and its definition </h3>
-                  <p>This example uses a definition list to group a definition with the term that is
-                     being defined.</p>
+               <section class="example" id="example-3-a-word-and-its-definition">
+                  <h3>Example 3: A word and its definition</h3>
+                  <p>This example uses a description list to group a definition with the term that is being
+                     defined.</p>
                   <pre xml:space="preserve">&lt;dl&gt;
   &lt;dt&gt;blink&lt;/dt&gt;
-  &lt;dd&gt;turn on and off between .5 and 3 times per second
-  &lt;/dd&gt;
-&lt;/dl&gt; </pre>
+  &lt;dd&gt;turn on and off between 0.5 and 3 times per second&lt;/dd&gt;
+&lt;/dl&gt;</pre>
                </section>
-               <section class="example" id="example-4-contact-information-using-a-definition-list">
-                  <h3>Example 4: Contact information using a definition list</h3>
-                  <p>This example uses a defintion list to mark up pairs of related items. The pairs themselves
-                     are a logically related list. Since browsers lack wide support for CSS styling on
-                     definition list elements, span elements have been included in the markup for styling
-                     purposes only, and are not required: </p>
+               <section class="example" id="example-4-contact-information-using-a-description-list">
+                  <h3>Example 4: Contact information using a description list</h3>
+                  <p>This example uses a description list to mark up pairs of related items. The pairs
+                     themselves are a logically related list.</p>
                   <pre xml:space="preserve">&lt;dl&gt;
-&lt;dt&gt;&lt;span&gt;name:&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;John Doe&lt;/span&gt;&lt;/dd&gt;
-&lt;dt&gt;&lt;span&gt;tel:&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;01-2345678&lt;/span&gt;&lt;/dd&gt;
-&lt;dt&gt;&lt;span&gt;fax:&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;02-3456789&lt;/span&gt;&lt;/dd&gt;
-&lt;dt&gt;&lt;span&gt;email:&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;johndoe@someemail.com&lt;/span&gt;&lt;/dd&gt;
+  &lt;div&gt;
+    &lt;dt&gt;Name:&lt;/dt&gt;
+    &lt;dd&gt;Taisha Silveri&lt;/dd&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;dt&gt;Tel:&lt;/dt&gt;
+    &lt;dd&gt;503-123-4567&lt;/dd&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;dt&gt;Email:&lt;/dt&gt;
+    &lt;dd&gt;taisha-silveri@example.com&lt;/dd&gt;
+  &lt;/div&gt;
 &lt;/dl&gt;
 </pre>
-                  <p>The following CSS styling can be used to format each paired item in the list on its
-                     own line, as well as giving a table-like layout: </p>
-                  <pre xml:space="preserve">dt, dd{float: left;margin: 0;padding: 0;}
-dt{clear:both;font-weight: bold}
-dt span{display: inline-block; width: 70px;}
-dd span{display: inline-block; margin-right: 5px;}
-</pre>
-                  <p class="working-example">This is shown in the <a href="../../working-examples/definition-list-contact-info/">working example of Contact information using a definition list</a>
-                     </p>
+                  <p class="working-example">This is shown in the <a href="../../working-examples/description-list-contact-info/">working example of contact information using a description list</a>.</p>
                </section>
                <section class="example" id="example-5-using-lists-to-group-links">
                   <h3>Example 5: Using lists to group links</h3>
-                  <p>In this example the links are grouped using the <code class="el">ul</code> and <code class="el">li</code>
-                     				elements.</p>
-                  <pre xml:space="preserve">&lt;a name="categories" id="categories"&gt;&lt;/a&gt;&lt;h2&gt;Product Categories&lt;/h2&gt;
-&lt;ul class="navigation"&gt;
+                  <p>In this example the links are grouped using the <code class="el">ul</code> and <code class="el">li</code> elements.</p>
+                  <pre xml:space="preserve">&lt;h2 id="product-categories"&gt;Product Categories&lt;/h2&gt;
+&lt;nav aria-labelledby="product-categories"&gt;
+  &lt;ul&gt;
     &lt;li&gt;&lt;a href="kitchen.html"&gt;Kitchen&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="bedbath.html"&gt;Bed &amp;amp; Bath&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="dining.html"&gt;Fine Dining&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="lighting.html"&gt;Lighting&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="storage.html"&gt;Storage&lt;/a&gt;&lt;li&gt;
-&lt;/ul&gt; </pre>
-                  <p>CSS can be used to style the list elements, so this technique can be used with a
-                     				variety of visual appearances.</p>
-                  <p>Here is a style that removes the list bullets and the left padding that creates the
-                     				indent and flows the individual list elements horizontally.</p>
-                  <pre xml:space="preserve">ul.navigation {
-  list-style: none; 
-  padding: 0;
-}
-ul.navigation li {
-  display: inline;
-}</pre>
-                  <p>This style removes the list bullets and the left padding and displays the items in
-                     				a floating block.</p>
-                  <pre xml:space="preserve">ul.navigation {
- list-style: none; 
- padding: 0;
-}
-ul.navigation li {
- display: block; 
- float: left;
-}</pre>
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
                </section>
             </section>
             <section id="resources">
@@ -186,11 +162,17 @@ ul.navigation li {
                <p style="margin-bottom: 1.5em;"><em><small>No endorsement implied.</small></em></p>
                <ul>
                   
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/lists.html#h-10.2">Unordered lists (UL), ordered lists (OL), and list items (LI)</a>
-                     								       </li>
+                  <li>
+                     <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element">HTML - the <code class="language-html">dl</code> element</a>.
+                     </li>
                   
-                  <li>HTML 4.01 <a href="https://www.w3.org/TR/html4/struct/lists.html#h-10.3">Definition lists: the DL, DT, and DD elements</a>
-                     								       </li>
+                  <li>
+                     <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element">HTML - the <code class="language-html">ol</code> element</a>.
+                     </li>
+                  
+                  <li>
+                     <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element">HTML - the <code class="language-html">ul</code> element</a>.
+                     </li>
                   </ul>
             </section>
             <section id="related">
@@ -198,12 +180,12 @@ ul.navigation li {
                <ul>
                   
                   <li><a href="../html/H40">H40</a></li>
-                  
                   </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  
                   <h3>Procedure</h3>
                   
                   <ol>
@@ -214,11 +196,13 @@ ul.navigation li {
                      <li>Check that content that has the visual appearance of a numbered list is marked as
                         an ordered list.</li>
                      
-                     <li>Check that content is marked as a definition list when terms and their definitions
-                        are presented in the form of a list.</li>
+                     <li>Check that content is marked as a description list when groups of name-value pairs,
+                        for example: terms and definitions or questions and answers, are presented in the
+                        form of a list.</li>
                      </ol>
                   </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
@@ -226,8 +210,9 @@ ul.navigation li {
                      <li>All the checks above are true.</li>
                      </ul>
                   </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -241,7 +226,7 @@ ul.navigation li {
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -284,11 +269,11 @@ ul.navigation li {
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

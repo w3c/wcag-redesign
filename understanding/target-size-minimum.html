@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Understanding Success Criterion 2.5.8: Target Size (Minimum)</title>
+      <title>Understanding Success Criterion 2.5.8: Target Size (Minimum) | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/understanding/">WCAG 2.2 Understanding Docs</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/understanding/about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -65,32 +65,30 @@
             <aside class="box">
                <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
                <div class="box-i">
-                  <p>The size of the <a href="#dfn-target">target</a> for <a href="#dfn-pointer-input">pointer inputs</a> is at least 24 by 24 CSS pixels, except where:</p>
+                  <p>The size of the <a href="#dfn-target">target</a> for <a href="#dfn-pointer-input">pointer inputs</a> is at least 24 by 24 <a href="#dfn-css-pixel">CSS pixels</a>, except where:</p>
                   <ul>
                      
                      <li>
                         <strong>Spacing:</strong> The <a href="#dfn-target-offset">target offset</a> is at least 24 CSS pixels to every adjacent target;</li>
                      
                      <li>
-                        <strong>Inline:</strong> The target is in a sentence or block of text;</li>
+                        <strong>Equivalent:</strong> The function can be achieved through a different control on the same page that meets
+                        this criterion.</li>
                      
                      <li>
-                        <strong>Essential:</strong> A particular presentation of the target is <a href="#dfn-essential">essential</a> or is legally required for the information being conveyed;</li>
+                        <strong>Inline:</strong> The target is in a sentence or block of text;</li>
                      
                      <li>
                         <strong>User agent control:</strong> The size of the target is determined by the user agent and is not modified by the
                         author;</li>
                      
                      <li>
-                        <strong>Equivalent:</strong> The function can be achieved through a different control on the same page that has
-                        an area of at least 24 by 24 CSS pixels.</li>
+                        <strong>Essential:</strong> A particular presentation of the target is <a href="#dfn-essential">essential</a> or is legally required for the information being conveyed;</li>
                      </ul>
                   <p class="note">Targets that allow for values to be selected spatially based on position within the
                      target are considered one target for the purpose of the success criterion. Examples
                      include sliders with granular values, color pickers displaying a gradient of colors,
                      or editable areas where you position the cursor.</p>
-                  <p class="ednote">Are there issues with internationalization when describing inline links?</p>
-                  <p class="ednote">Are there issues with pop-over content overlapping targets triggering failures?</p>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -183,11 +181,11 @@
                   In the top line of icons, the dimensions of each icon target are 44 by 44 CSS pixels
                   with no space in between. This amply passes this Success Criterion and is actually
                   sufficient to meet the AAA requirement for <a href="../21/target-size-enhanced.html">Target Size (Enhanced)</a>. In the next row, the dimensions of each icon target are 24 by 24 CSS pixels with
-                  no space in between, passing this Success Criterion. In the third row, the the same
-                  icon targets are only 20 by 20 CSS pixels but they have a 4 CSS pixel space in between,
-                  passing this Success Criterion via the spacing exception. In the last row, the the
-                  same icon targets are only 20 by 20 CSS pixels and have no space in between, failing
-                  this Success Criterion.</p>
+                  no space in between, passing this Success Criterion. In the third row, the same icon
+                  targets are only 20 by 20 CSS pixels but they have a 4 CSS pixel space in between,
+                  passing this Success Criterion via the spacing exception. In the last row, the same
+                  icon targets are only 20 by 20 CSS pixels and have no space in between, failing this
+                  Success Criterion.</p>
                <figure id="pointer-target-24x24">
                   <img src="img/pointer-target-example1-full.png" alt="Four rows of icons with measurements, the first three passing,the last failing the requirement." />
                   
@@ -324,8 +322,9 @@
                      the Success Criterion passes.</li>
                   
                   <li>A row of buttons, each of which has a horizontal width of more than 24 CSS pixels,
-                     but a height of only 20 CSS pixels. Since there is sufficient spacing above and below
-                     the row of buttons, the Success Criterion passes.</li>
+                     a height of only 20 CSS pixels, and vertical margin of 4 CSS pixels above and below
+                     the row of buttons. Since there is sufficient spacing both above and below the row
+                     of buttons, the Success Criterion passes.</li>
                   
                   <li>Links within a paragraph of text have varying target dimensions. Links within paragraphs
                      of text do not need to meet the 24 by 24 CSS pixels requirements, so the Success Criterion
@@ -361,6 +360,20 @@
                   <summary>
                      <h2>Key Terms</h2>
                   </summary>
+                  <dt id="dfn-css-pixel">css pixel</dt>
+                  <dd>
+                     <definition xmlns="">
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">visual angle of about 0.0213 degrees</p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml">A CSS pixel is the canonical unit of measure for all lengths and measurements in CSS.
+                           This unit is density-independent, and distinct from actual hardware pixels present
+                           in a display. User agents and operating systems should ensure that a CSS pixel is
+                           set as closely as possible to the <a href="https://www.w3.org/TR/css3-values/#reference-pixel">CSS Values and Units Module Level 3 reference pixel</a> [[!css3-values]], which takes into account the physical dimensions of the display
+                           and the assumed viewing distance (factors that cannot be determined by content authors).
+                           </p>
+                        </definition>
+                  </dd>
                   <dt id="dfn-essential">essential</dt>
                   <dd>
                      <definition xmlns="">
@@ -374,12 +387,13 @@
                   <dd>
                      <definition xmlns="">
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml">input device that can target a specific coordinate (or set of coordinates) on a screen,
+                        <p xmlns="http://www.w3.org/1999/xhtml">input from a device that can target a specific coordinate (or set of coordinates)
+                           on a screen,
                            such as a mouse, pen, or touch contact
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml">See also <a href="https://www.w3.org/TR/pointerevents/#dfn-pointer">Pointer Events pointer definition</a> [[!pointerevents]].
-                           </p>
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">See the <a href="https://www.w3.org/TR/pointerevents/#dfn-pointer">Pointer Events
+                              definition for "pointer"</a> [[!pointerevents]].</p>
                         </definition>
                   </dd>
                   <dt id="dfn-target">target</dt>
@@ -389,7 +403,7 @@
                         <p xmlns="http://www.w3.org/1999/xhtml">region of the display that will accept a pointer action, such as the interactive area
                            of a user interface component</p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">If two or more touch targets are overlapping, the overlapping area should not be included
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">If two or more targets are overlapping, the overlapping area should not be included
                            in the measurement of the target size, except when the overlapping targets perform
                            the same action or open the same page.</p>
                         </definition>
@@ -401,8 +415,9 @@
                         <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">the distance measured from the farthest point of a target (A), to the nearest point
-                           of the second target (B). The offset includes the target and spacing around the target.
-                           The offset from A to B may be different than the offset from B to A, if the sizes
+                           of the second target (B). The offset includes the target and spacing around the target.</p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The offset from A to B may be different than the offset from B to A, if the sizes
                            of these targets differ.</p>
                         </definition>
                   </dd>
@@ -423,7 +438,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -464,7 +479,13 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script>
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

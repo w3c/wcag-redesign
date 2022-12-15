@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H57: Using the language attribute on the HTML element</title>
+      <title>H57: Using the language attribute on the HTML element | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -56,7 +56,7 @@
             </nav>
          </aside>
          <main class="standalone-resource__main">
-            <h1><span>Technique H57:</span>Using the language attribute on the <code>HTML</code> element</h1>
+            <h1><span>Technique H57:</span>Using the language attribute on the <code class="el">HTML</code> element</h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
                   					About this Technique
@@ -74,42 +74,38 @@
             <section id="description">
                <h2>Description</h2>
                <p> The objective of this technique is to identify the default language of a document
-                  by
-                  providing the <code class="att">lang</code> attribute on the <code class="el">html</code>
-                  element. </p>
-               <p>Identifying the language of the document is important for a number of reasons: </p>
+                  by providing the <code class="language-html">lang</code> attribute on the <code class="language-html">html</code> element.</p>
+               <p>Identifying the language of the document is important for a number of reasons:</p>
                <ul>
                   
-                  <li>It allows braille translation software to substitute control codes for accented
-                     characters, and insert control codes necessary to prevent erroneous creation of
-                     Grade 2 braille contractions. </li>
+                  <li>It allows braille translation software to substitute control codes for accented characters,
+                     and insert control codes necessary to prevent erroneous creation of Grade 2 braille
+                     contractions.</li>
                   
-                  <li>Speech synthesizers that support multiple languages will be able to orient and
-                     adapt to the pronunciation and syntax that are specific to the language of the page,
-                     speaking the text in the appropriate accent with proper pronunciation. </li>
+                  <li>Speech synthesizers that support multiple languages will be able to orient and adapt
+                     to the pronunciation and syntax that are specific to the language of the page, speaking
+                     the text in the appropriate accent with proper pronunciation.</li>
                   
-                  <li>Marking the language can benefit future developments in technology, for example
-                     users who are unable to translate between languages themselves will be able to use
-                     machines to translate unfamiliar languages. </li>
+                  <li>Marking the language can benefit future developments in technology, for example users
+                     who are unable to translate between languages themselves will be able to use machines
+                     to translate unfamiliar languages.</li>
                   
                   <li>Marking the language can also assist user agents in providing definitions using a
-                     dictionary. </li>
+                     dictionary.</li>
                   </ul>
-               <p>HTML uses the <code class="att">lang</code> attribute of the <code class="el">html</code> element.</p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>This example defines the content of an HTML document to be in the French language.</p>
-                  <pre>&lt;!DOCTYPE&gt;
+               <section class="example" id="example-1-defining-the-content-of-an-html-document-to-be-in-french">
+                  <h3>Example 1: Defining the content of an HTML document to be in French</h3>
+                  <pre>&lt;!doctype html&gt;
 &lt;html lang="fr"&gt; 
 &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
   &lt;title&gt;document écrit en français&lt;/title&gt;
-  &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
 &lt;/head&gt;  
 &lt;body&gt;     
-	...document écrit en français...   
+  ... document écrit en français ...
 &lt;/body&gt;
 &lt;/html&gt;</pre>
                </section>
@@ -120,19 +116,19 @@
                <ul>
                   
                   <li>
-                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">HTML "lang" attribute on the Mozilla Developer Network</a>
+                     <a href="https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes">HTML - The <code class="language-html">lang</code> and <code class="language-html">xml:lang</code> attributes</a>.
                      </li>
                   
                   <li>
-                     <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47: Tags for the Identification of Languages</a>
+                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">HTML "<code class="language-html">lang</code>" attribute on the Mozilla Developer Network</a>.
                      </li>
                   
                   <li>
-                     <a href="https://www.w3.org/TR/REC-html40/struct/dirlang.html#h-8.1.2">Inheritance of language codes</a>
+                     <a href="https://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47: Tags for the Identification of Languages</a>.
                      </li>
                   
                   <li>
-                     <a href="https://www.w3.org/International/articles/language-tags/">Language tags in HTML and XML</a>
+                     <a href="https://www.w3.org/International/articles/language-tags/">Language tags in HTML and XML</a>.
                      </li>
                   </ul>
             </section>
@@ -149,14 +145,13 @@
                   
                   <h3>Procedure</h3>
                   
-                  <p>Examine the <code class="el">html</code> element of the document.</p> 
+                  <p>Examine the <code class="language-html">html</code> element of the document.</p> 
                   
                   <ol>
                      
-                     <li>Check that the <code class="el">html</code> element has a <code class="att">lang</code> attribute.</li>
+                     <li>Check that the <code class="language-html">html</code> element has a <code class="language-html">lang</code> attribute.</li>
                      
-                     <li>Check that the value of the <code class="att">lang</code> attribute conforms to <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47: Tags for the
-                           Identification of Languages</a> or its successor and reflects the primary language used by the Web page. </li>
+                     <li>Check that the value of the <code class="language-html">lang</code> attribute conforms to <a href="https://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47: Tags for the Identification of Languages</a> or its successor and reflects the primary language used by the Web page.</li>
                      </ol>
                   </section>
                <section class="results" id="expected-results">
@@ -178,8 +173,9 @@
                   <li><a href="/WAI/standards-guidelines/act/rules/html-page-lang-b5c3f8/">HTML page has lang attribute</a></li>
                   <li><a href="/WAI/standards-guidelines/act/rules/html-page-lang-valid-bf051a/">HTML page lang attribute has valid language tag</a></li>
                </ul>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -193,7 +189,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -236,11 +232,11 @@
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Understanding Success Criterion 2.4.11: Focus Appearance</title>
+      <title>Understanding Success Criterion 2.4.11: Focus Appearance | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="base.css" />
    </head>
    <body dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Understanding Docs</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="./about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/understanding/">WCAG 2.2 Understanding Docs</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/understanding/about">About WCAG Understanding Docs</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -65,20 +65,21 @@
             <aside class="box">
                <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
                <div class="box-i">
-                  <p>When a <a href="#dfn-user-interface-component">user interface component</a> has keyboard focus, one or both of the following is true:</p>
+                  <p>When the keyboard <a href="#dfn-focus-indicator">focus indicator</a> is visible, one or both of the following are true:</p>
                   <ol>
                      
-                     <li>The <a href="#dfn-focus-indicator">focus indicator</a>:
+                     <li>The entire <a href="#dfn-focus-indicator">focus indicator</a> meets all the following:
+                        
                         
                         <ul>
                            
                            <li>
-                              <a href="#dfn-encloses">encloses</a> the visual presentation of the user interface component, and</li>
+                              <a href="#dfn-encloses">encloses</a> the <a href="#dfn-user-interface-component">user interface component</a>  or sub-component that is focused, and</li>
                            
                            <li>has a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused
                               states, and</li>
                            
-                           <li>has a contrast ratio of at least 3:1 against adjacent colors.</li>
+                           <li>has a contrast ratio of at least 3:1 against adjacent non-focus-indicator colors.</li>
                            </ul>
                         </li>
                      
@@ -86,8 +87,8 @@
                         
                         <ul>
                            
-                           <li>is at least as large as the area of a 1 <a href="#dfn-css-pixel">CSS pixel</a> thick <a href="#dfn-perimeter">perimeter</a> of the unfocused component, or is at least as large as a 4 CSS pixel thick line along
-                              the shortest side of the <a href="#dfn-minimum-bounding-box">minimum bounding box</a> of the unfocused component, and</li>
+                           <li>is at least as large as the area of a 1 <a href="#dfn-css-pixel">CSS pixel</a> thick <a href="#dfn-perimeter">perimeter</a> of the unfocused component or sub-component, or is at least as large as a 4 CSS pixel
+                              thick line along the shortest side of the <a href="#dfn-minimum-bounding-box">minimum bounding box</a> of the unfocused component or sub-component, and</li>
                            
                            <li>has a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused
                               states, and</li>
@@ -97,8 +98,6 @@
                            </ul>
                         </li>
                      </ol>
-                  <p>Where a user interface component has active sub-components, if a sub-component receives
-                     a focus indicator, these requirements may be applied to the sub-component instead.</p>
                   <p>Exceptions:</p>
                   <ul>
                      
@@ -107,13 +106,14 @@
                      
                      <li>The focus indicator and the indicator's background color are not modified by the author.</li>
                      </ul>
-                  <p class="note">Note: Examples of sub-components that may receive a focus indicator are menu items
-                     in an opened drop-down menu. However, it may also be possible to indicate user interaction
-                     for such sub-components by relying strictly on a visual indication of which item is
-                     <em>selected</em>. Where selectable sub-components have no differentiated focus indicator, the visual
-                     indicator for sub-component selection is measured against <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html">1.4.11 Non-text Contrast</a> requirements, not against this Criterion.</p>
-                  <p class="note">Note: Contrast calculations can be based on colors defined within the technology (such
-                     as HTML, CSS and SVG). Pixels modified by user agent resolution enhancements and anti-aliasing
+                  <p class="note">What is perceived as the user interface component or sub-component (to determine enclosure
+                     or size) depends on its visual presentation. The visual presentation includes the
+                     component's visible content, border, and component-specific background. It does not
+                     include shadow and glow effects outside the component's content, background, or border.</p>
+                  <p class="note">Examples of sub-components that may receive a focus indicator are menu items in an
+                     opened drop-down menu, or focusable cells in a grid.</p>
+                  <p class="note">Contrast calculations can be based on colors defined within the technology (such as
+                     HTML, CSS and SVG). Pixels modified by user agent resolution enhancements and anti-aliasing
                      can be ignored.</p>
                </div>
             </aside>
@@ -127,14 +127,14 @@
             <section id="intent">
                <h2>Intent</h2>
                <p>The purpose of this Success Criterion (SC) is to ensure a keyboard focus indicator
-                  is clearly visible and discernible. Focus Appearance is closely related to <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html">2.4.7 Focus Visible</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html">1.4.11 Non-text Contrast</a>. Where Focus Visible merely requires a visible focus indicator, this SC defines a
-                  minimum level of visibility. Where Non-text Contrast requires a component to have
-                  adequate contrast against the background in each of its states, this SC requires sufficient
-                  contrast for the focus indicator itself.</p>
-               <p>For sighted people with mobility impairments who use a keyboard or keyboard-like device
-                  (such as a switch or voice input), knowing the current point of focus is very important.
-                  Visible focus must also meet the needs of users with low vision, who may also be keyboard-only
-                  users.</p>
+                  is clearly visible and discernible. Focus Appearance is closely related to <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html">2.4.7 Focus Visible</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html">1.4.11 Non-text Contrast</a>. Focus Visible requires a visible focus indicator exists whilst it has keyboard focus,
+                  this SC defines a minimum level of visibility. Where Non-text Contrast requires a
+                  component to have adequate contrast against the background in each of its states,
+                  this SC requires sufficient contrast for the focus indicator itself.</p>
+               <p>For sighted people with mobility impairments who use a keyboard or a device that utilizes
+                  the <a href="https://www.w3.org/TR/WCAG22/#dfn-keyboard-interface">keyboard interface</a> (such as a switch or voice input), knowing the current point of focus is very important.
+                  Visible focus must also meet the needs of users with low vision, who may also rely
+                  on the keyboard.</p>
                <p>A keyboard focus indicator can take different forms. This Success Criterion lists
                   two ways to achieve a sufficient focus appearance. The first involves three primary
                   considerations for the entire focus indicator. A second way of achieving sufficient
@@ -183,15 +183,15 @@
                   
                   <p>Where the indicator does not "solidly" bound or surround the component, as with a
                      dashed or dotted line, it cannot meet this primary consideration. However, a non-solid
-                     line can still pass if it meets the wording of the exceptions (discussed in more detail
-                     under Exceptions).</p>
+                     line can still pass if it meets the area calculations for the size of the focus indicator
+                     (discussed in more detail under Area of focus indicator).</p>
                   
                   
                   <figure id="focus-indicator-weak-dashed">
                      <img src="img/focus-indicator-weak-dashed-border.svg" alt="3 of 5 stars are selected with the whole third star outlined with a 1 pixel thick dashed line" />
                      
                      <figcaption> Fails: the dashed outline does not "solidly bound" the third star and does not meet
-                        the exception language.</figcaption>
+                        the size requirements of the focus area calculation.</figcaption>
                      </figure>         
                   
                   
@@ -199,7 +199,7 @@
                      <img src="img/focus-indicator-strong-dashed-border.svg" alt="3 of 5 stars are selected with the whole third star outlined with a 2 pixel thick dashed line" />
                      
                      <figcaption> Passes: the dashed outline does not "solidly bound" the third star; however, the
-                        dashed line meets the area requirements of the exception language.</figcaption>
+                        dashed line meets the size requirements of the focus area calculation.</figcaption>
                      </figure>      
                   </section>
                <section id="contrast-pixels">
@@ -354,9 +354,9 @@
                   
                   <p>A <a href="https://www.w3.org/WAI/ARIA/apg/example-index/slider/slider-color-viewer.html">slider to pick colors</a> provides a working example of a different complex component that predominantly shows
                      focus for the subcomponent. In this case, the thumb slider sub-component has a focus
-                     indicator of sufficient size and contrast to pass the exception. There is also a subtle
-                     focus around the whole slider component, but it does not need to be assessed to pass
-                     this SC.</p>
+                     indicator of sufficient size and contrast to pass the sufficient area calculation.
+                     There is also a subtle focus around the whole slider component, but it does not need
+                     to be assessed to pass this SC.</p>
                   
                   
                   <h3>Focus indicator around only the subcomponent</h3>
@@ -384,7 +384,7 @@
                   
                   
                   <p>A <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example"> functional example of sub-component-only tab focus</a> has an indicator that is large enough (at least four times the shortest side) with
-                     sufficient contrast to pass the exception language of this SC.</p>
+                     sufficient contrast to pass the focus area language of this SC.</p>
                   
                   
                   <h3>Where something with focus is not a user interface component</h3>
@@ -495,9 +495,10 @@
                      
                      
                      <p>The Success Criterion includes an alternative size measure of "at least as large as
-                        a 4 CSS pixels border along the shortest side". This is included to allow for smaller
+                        a 4 CSS pixel thick line along the shortest side". This is included to allow for smaller
                         but thick indicators. For example, some controls might be of a fixed height but variable
-                        width, in which case this measure allows for a more consistent approach.</p>
+                        width, in which case this measure, 4×<em>h</em>, allows for a more consistent approach. A button that is 40 CSS pixels high would
+                        need to have a focus area of at least 160 CSS pixels (40×4).</p>
                      
                      
                      <figure id="focus-indicator-shortside">
@@ -592,10 +593,10 @@
                            it is a thick indicator that meets the requirements.</figcaption>
                         </figure>
                      
-                     <p class="note">Some of the examples in this document, especially in the Exceptions section, are screen-captured
-                        images of elements. Due to loss of resolution in these images, the actual pixel color
-                        may not match the original. As such, they are intended to be used for illustrative
-                        purposes, and should not be inspected on a pixel-by-pixel basis for sufficient contrast.</p>    
+                     <p class="note">Some of the examples in this document are screen-captured images of elements. Due
+                        to loss of resolution in these images, the actual pixel color may not match the original.
+                        As such, they are intended to be used for illustrative purposes, and should not be
+                        inspected on a pixel-by-pixel basis for sufficient contrast.</p>    
                      
                      <p>Some designs have pages with a non-solid background image covering the whole (or part)
                         of the page or make use of parallax scrolling effects which result in a near-infinite
@@ -614,13 +615,12 @@
                      <p>If an inline link is broken over multiple lines, some methods of creating a focus
                         indicator create different results by browsers. CSS <code>outline</code> separately surrounds each part of a link that breaks across multiple lines. It is
                         by far the most common CSS technique for focus indication, and produces a result that
-                        satisfies the minimum bounding box definition (each part is solidly bound). CSS <code>border</code> will split the perimeter across the parts of the link, which results in an unenclosed
-                        border for each line of the link. Such an effect still meets the area requirement
-                        both since text links are inevitably longer than they are tall (thus the three sides
-                        of the focus indicator are "at least as large as" four times the shortest side), and
-                        since the focus indicator around links includes some padding and so exceeds the minimum
-                        bounding box. Where the contrast requirements are met, each of these methods produces
-                        a sufficient focus indicator.</p>
+                        satisfies the minimum bounding box definition since each part is solidly bound. CSS
+                        <code>border</code> will split the perimeter across the parts of the link, which results in an unenclosed
+                        border for each line of the link. The minimum bounding box definition states that
+                        link focus can be assessed as if the link was all on one line, so these are also considered
+                        to meet the "encloses" language. Therefore, where the contrast requirements are met,
+                        each of these methods produces a sufficient focus indicator.</p>
                      
                      <figure id="focus-indicator-inline-link-outline">
                         <img src="img/focus-inline-link-outline.png" alt="A paragraph of text containing a link broken over two lines. The red focus indicator is a complete rectangle around each part of the link." />
@@ -633,8 +633,9 @@
                      <figure id="focus-indicator-inline-link">
                         <img src="img/focus-inline-link.png" alt="A paragraph of text containing a link broken over two lines. The red focus indicator has a gap on the right of one part of the link, and on the left of the other part of the link." />
                         
-                        <figcaption> Passes: Although the CSS <code>border</code> on a multi-line link does not enclose the link, the size of the indicator meets the
-                           shortest-side calculation of the minimum bounding box requirements for indicator area.</figcaption>
+                        <figcaption> Passes: Although the CSS <code>border</code> on a multi-line link does not enclose the link, the minimum bounding box definition
+                           allows it to be assessed as if it was on a single line. As well, the indicator's area
+                           is invariably more than four times the shortest-side calculation .</figcaption>
                         </figure>
                      
                      
@@ -855,7 +856,7 @@
                   <h3>Second exception: the default indicator and background are not modified</h3>
                   
                   <blockquote>
-                     <p>The focus indicator and the indicator’s background color are not modified by the author</p>
+                     <p>The focus indicator and the indicator's background color are not modified by the author</p>
                   </blockquote>
                   
                   <p>If the focus indicator and the background behind the focus indicator are not modified
@@ -1004,8 +1005,9 @@
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml">the pixels that are changed to visually indicate when a user interface component is
-                           in a focused state.
+                        <p xmlns="http://www.w3.org/1999/xhtml">pixels that are changed to visually indicate when a user interface component is in
+                           a focused state
+                           
                            </p>
                         </definition>
                   </dd>
@@ -1017,7 +1019,7 @@
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">the smallest enclosing rectangle aligned to the horizontal axis within which all the
                            points of a shape lie. For components which wrap onto multiple lines as part of a
-                           sentence or block of text (such has hypertext links), the bounding box is based on
+                           sentence or block of text (such as hypertext links), the bounding box is based on
                            how the component would appear on a single line.</p>
                         </definition>
                   </dd>
@@ -1028,8 +1030,9 @@
                         <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">continuous line forming the boundary of a shape not including shared pixels, or the
-                           <a href="#dfn-minimum-bounding-box">minimum bounding box</a>, whichever is shortest. For example, the perimeter calculation for a rectangle is
-                           2<em>h</em>+2<em>w</em> -4, where <em>h</em> is the height and <em>w</em> is the width and the corners are not counted twice. The perimeter of a circle is
+                           <a href="#dfn-minimum-bounding-box">minimum bounding box</a>, whichever is shortest.</p>
+                        
+                        <p xmlns="http://www.w3.org/1999/xhtml" class="example">The perimeter calculation for a rectangle is 2<em>h</em>+2<em>w</em> -4, where <em>h</em> is the height and <em>w</em> is the width and the corners are not counted twice. The perimeter of a circle is
                            2𝜋<em>r</em>.</p>
                         </definition>
                   </dd>
@@ -1077,7 +1080,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -1118,7 +1121,13 @@
                <li><a href="/roles/">Resources for Roles</a></li>
             </ul>
          </div>
-      </footer><script>
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+      </footer>
+      <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

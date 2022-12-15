@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H97: Grouping related links using the nav element</title>
+      <title>H97: Grouping related links using the nav element | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -55,7 +55,7 @@
             </nav>
          </aside>
          <main class="standalone-resource__main">
-            <h1><span>Technique H97:</span>Grouping related links using the nav element</h1>
+            <h1><span>Technique H97:</span>Grouping related links using the <code class="language-html">nav</code> element</h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
                   					About this Technique
@@ -70,7 +70,7 @@
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
-               <p>HTML5 documents that contain related links.</p>
+               <p>HTML documents that contain related links.</p>
                <p>This technique relates to:</p>
                <ul>
                   <li><a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> (Sufficient when used with Making information and relationships conveyed through
@@ -82,62 +82,72 @@
             </section>
             <section id="description">
                <h2>Description</h2>
-               <p>The objective of this technique is to group navigation links using the HTML5 <code class="el">nav</code> element. The <code class="el">nav</code> element is one of several sectioning elements in HTML5. Use of this markup can make
+               <p>The objective of this technique is to group navigation links using the HTML <code class="language-html">nav</code> element. The <code class="language-html">nav</code> element is one of several sectioning elements in HTML. Use of this markup can make
                   groups of links easier to locate and skip past by users of assistive technology such
                   as screen readers. Using semantic structures allow custom style sheets to be used
                   to change the presentation of groups of links while preserving their relationship.
-                  When the <code class="el">nav</code> element is employed more than once on a page, distinguish the navigation groups by
-                  using an <code class="att">aria-label</code> or <code class="att">aria-labelledby</code> attribute.</p>
-               <p>Not all groups of links need to use the <code class="el">nav</code> element for markup. For instance, links may be grouped in other structure such as
+                  When the <code class="language-html">nav</code> element is employed more than once on a page, distinguish the navigation groups by
+                  using an <code class="language-html">aria-labelledby</code> or <code class="language-html">aria-label</code> attribute.</p>
+               <p>Not all groups of links need to use the <code class="language-html">nav</code> element for markup. For instance, links may be grouped in other structure such as
                   lists or may use ARIA markup if they do not represent a discrete section of the page.</p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
                <section class="example" id="example-1-navigation-links-enclosed-in-a-nav-element">
                   <h3>Example 1: Navigation links enclosed in a nav element</h3>
-                  <p>This example uses a <code class="el">nav</code> element to group navigation links in an accessibility curriculum.</p>
+                  <p>This example uses a <code class="language-html">nav</code> element to group navigation links in an accessibility curriculum.</p>
                   <pre xml:space="preserve">
-				 &lt;nav&gt;
-				    &lt;a href="../webaccessibility.html"&gt;Web Accessibility&lt;/a&gt;
-				    &lt;a href="../docaccessibility.html"&gt;Document Accessibility&lt;/a&gt;
-					&lt;a href="../mobileaccessibility.html"&gt;Mobile Accessibility&lt;/a&gt;
-				 &lt;/nav&gt;
-            </pre>
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/web-accessibility.html"&gt;Web Accessibility&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/doc-accessibility.html"&gt;Document Accessibility&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/mobile-accessibility.html"&gt;Mobile Accessibility&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;    
+&lt;/nav&gt;</pre>
                </section>
-               <section class="example" id="example-2-multiple-nav-elements">
-                  <h3>Example 2: Multiple nav elements</h3>
-                  <p>This example uses an nav element with an aria-label attribute to identify the navigation
-                     group when there is more than one nav element in a document.</p>
-                  <pre xml:space="preserve">
-			&lt;nav aria-label="Site menu"&gt;
-			  &lt;ul&gt;
-				  &lt;li&gt;...a list of links site navigation link here ...&lt;/li&gt;
-			  &lt;/ul&gt;
-			&lt;/nav&gt;
-			...
-			&lt;article&gt;
-			  &lt;nav aria-label="Related links"&gt;
-				...a list of related links here ...
-			  &lt;/nav&gt;
-			&lt;/article&gt;          </pre>
+               <section class="example" id="example-2-multiple-nav-elements-and-aria-labelledby">
+                  <h3>Example 2: Multiple <code class="language-html">nav</code> elements and <code class="language-html">aria-labelledby</code></h3>
+                  <p>The following example shows a best practice of how landmarks might be added to an
+                     HTML document in situations where there are two or more of the same type of landmark
+                     on the same page. For instance, if a <code class="language-html">nav</code> element is used multiple times on a page, each instance may have a unique label specified
+                     using <code class="language-html">aria-labelledby</code>:</p>
+                  <pre xml:space="preserve">&lt;nav aria-labelledby="site-nav-heading"&gt;
+  &lt;h2 id="site-nav-heading"&gt;Site&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="..."&gt;nav link 1&lt;/a&gt;&lt;/li&gt;  
+      &lt;li&gt;&lt;a href="..."&gt;nav link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="..."&gt;nav link 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;nav aria-labelledby="related-nav-heading"&gt;
+  &lt;h2 id="related-nav-heading"&gt;Related Topics&lt;/h2&gt;
+    &lt;ul&gt;
+    &lt;li&gt;&lt;a href="..."&gt;topic link 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;topic link 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;topic link 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
                </section>
-               <section class="example" id="example-3-generic-multiple-nav-elements">
-                  <h3>Example 3: Generic multiple nav elements</h3>
-                  <p>The following example shows a best practice of situation where there are more than
-                     two navigation menus on the same page, and there is no existing text on the page that
-                     can be referenced as the label.</p>
-                  <pre xml:space="preserve">
-			&lt;nav aria-label="primary"&gt;
-				&lt;a href="home.html"&gt;Home&lt;/a&gt;
-				&lt;a href="about-us.html"&gt;About Us&lt;/a&gt;
-				&lt;a href="products.html"&gt;Products&lt;/a&gt;
-			&lt;/nav&gt;
-
-			&lt;nav aria-label="secondary"&gt;
-				&lt;a href="adverts.html"&gt;Our Advertisers&lt;/a&gt;
-				&lt;a href="related.html"&gt;Related Links&lt;/a&gt;
-				&lt;a href="subsidiaries.html"&gt;Subsidiaries&lt;/a&gt;
-			&lt;/nav&gt;            </pre>
+               <section class="example" id="example-3-multiple-nav-elements-and-aria-label">
+                  <h3>Example 3: Multiple <code class="language-html">nav</code> elements and <code class="language-html">aria-label</code></h3>
+                  <p>The following example shows a best practice of how landmarks might be added to an
+                     HTML document in situations where there are two or more of the same type of landmark
+                     on the same page, and there is no existing text on the page that can be referenced
+                     as the label:</p>
+                  <pre xml:space="preserve">&lt;nav aria-label="Site"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt; href="..."&gt;nav link 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt; href="..."&gt;nav link 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt; href="..."&gt;nav link 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;nav aria-label="Tags"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="..."&gt;tag link 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;tag link 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="..."&gt;tag link 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
                </section>
             </section>
             <section id="resources">
@@ -146,7 +156,7 @@
                <ul>
                   
                   <li>
-                     <a href="https://html.spec.whatwg.org/multipage/sections.html#the-nav-element">HTML5 nav element</a>
+                     <a href="https://html.spec.whatwg.org/multipage/sections.html#the-nav-element">HTML - <code class="language-html">nav</code> element</a>.
                      </li>
                   </ul>
             </section>
@@ -166,15 +176,17 @@
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  
                   <h3>Procedure</h3>
                   
                   <ol>
                      
                      <li>Check that links that are visually grouped and represent a section of the page are
-                        enclosed in a <code class="el">nav</code> element.</li>
+                        enclosed in a <code class="language-html">nav</code> element.</li>
                      </ol>
                   </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
@@ -182,8 +194,9 @@
                      <li>Check #1 is true.</li>
                      </ul>
                   </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -197,7 +210,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -240,11 +253,11 @@
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

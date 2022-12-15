@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H85: Using OPTGROUP to group OPTION elements inside a SELECT</title>
+      <title>H85: Using optgroup to group option elements inside a select | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -54,7 +54,7 @@
             </nav>
          </aside>
          <main class="standalone-resource__main">
-            <h1><span>Technique H85:</span>Using OPTGROUP to group OPTION elements inside a SELECT</h1>
+            <h1><span>Technique H85:</span>Using <code class="language-html">optgroup</code> to group <code class="language-html">option</code> elements inside a <code class="language-html">select</code></h1>
             <aside class="box">
                <header class="box-h  box-h-icon">
                   					About this Technique
@@ -66,7 +66,7 @@
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML pages that collect user input.</p>
+               <p><abbr title="HyperText Markup Language">HTML</abbr> pages that collect user input.</p>
                <p>This technique relates to <span><a href="/understanding/info-and-relationships">1.3.1: Info and Relationships</a> (Sufficient when used with Making information and relationships conveyed through
                      presentation programmatically
                      determinable using the following techniques:
@@ -77,19 +77,17 @@
                <p>The objective of this technique is to group items in a selection list. A selection
                   list is a set of allowed values for a form control such as a multi-select list or
                   a combo box. Often, selection lists have groups of related options. Those groups should
-                  be semantically identified, rather than simply delimiting the groups with "dummy"
-                  list entries. This allows user agents to collapse the options by group to support
-                  quicker skimming of the options, and to indicate in what group an option of interest
-                  is located. It also helps to visually break up long lists so that users can more easily
-                  locate the option(s) they are interested in.</p>
-               <p>In HTML, the <code class="el">select</code> element is used to create both multi-select lists and combo boxes. The various allowed
-                  options are each indicated with <code class="el">option</code> elements. To group options together, use the <code class="el">optgroup</code> element, with the related <code class="el">option</code> elements inside that element. Label the group with the "label" attribute so users
-                  will know what to expect inside the group.</p>
-               <p>The <code class="el">optgroup</code> element should be directly inside the <code class="el">select</code> element, and the <code class="el">option</code>  elements directly inside the <code class="el">optgroup</code>. It is possible for a <code class="el">select</code> element to contain both single <code class="el">option</code> elements and <code class="el">optgroup</code> groups, though authors should consider if this is in fact the desired intent when
-                  using this. It is not possible to nest the <code class="el">optgroup</code> element, so only one level of grouping can be done within a <code class="el">select</code>.</p>
+                  be semantically identified, rather than being delimited with "dummy" list entries,
+                  for example: an <code class="language-html">option</code> element containing only a series of dashes to create a horizontal line. Semantically
+                  identifying groups of options helps to visually break up long lists so that users
+                  can more easily locate what they are interested in.</p>
+               <p>In HTML, the <code class="language-html">select</code> element is used to create both multi-select lists and combo boxes. The various allowed
+                  options are each indicated with <code class="language-html">option</code> elements. To group options together, use the <code class="language-html">optgroup</code> element, with the related <code class="language-html">option</code> elements inside that element. Label the group with the <code class="language-html">label</code> attribute so users will know what to expect inside the group.</p>
+               <p>The <code class="language-html">optgroup</code> element should be directly inside the <code class="language-html">select</code> element, and the <code class="language-html">option</code>  elements directly inside the <code class="language-html">optgroup</code>. It is possible for a <code class="language-html">select</code> element to contain both single <code class="language-html">option</code> elements and <code class="language-html">optgroup</code> groups, though authors should consider if this is in fact the desired intent when
+                  using this. It is not possible to nest the <code class="language-html">optgroup</code> element, so only one level of grouping can be done within a <code class="language-html">select</code>.</p>
                <p>If grouping information is essential to understanding the list, authors may define
-                  <code class="el">option</code> labels that can be understood even when the screen reader does not present the grouping
-                  information provided by <code class="el">optgroup</code>.</p>
+                  <code class="language-html">option</code> labels that can be understood even when the screen reader does not present the grouping
+                  information provided by <code class="language-html">optgroup</code>.</p>
             </section>
             <section id="examples">
                <h2>Examples</h2>
@@ -97,71 +95,54 @@
                   <h3>Example 1</h3>
                   <p>The following combo box collects data about favorite foods. Grouping by type allows
                      users to select their preference more quickly.</p>
-                  <pre xml:space="preserve">
-&lt;form action="http://example.com/prog/someprog" method="post"&gt;
-    &lt;label for="food"&gt;What is your favorite food?&lt;/label&gt;
-    &lt;select id="food" name="food"&gt;
-      &lt;optgroup label="Fruits"&gt;
-        &lt;option value="1"&gt;Apples&lt;/option&gt;
-        &lt;option value="3"&gt;Bananas&lt;/option&gt;
-        &lt;option value="4"&gt;Peaches&lt;/option&gt;
-        &lt;option value="5"&gt;...&lt;/option&gt;
-      &lt;/optgroup&gt;
-      &lt;optgroup label="Vegetables"&gt;
-        &lt;option value="2"&gt;Carrots&lt;/option&gt;
-        &lt;option value="6"&gt;Cucumbers&lt;/option&gt;
-       &lt;option value="7"&gt;...&lt;/option&gt;
-     &lt;/optgroup&gt;
-     &lt;optgroup label="Baked Goods"&gt;
-       &lt;option value="8"&gt;Apple Pie&lt;/option&gt;
-       &lt;option value="9"&gt;Chocolate Cake&lt;/option&gt;
-       &lt;option value="10"&gt;...&lt;/option&gt;
-     &lt;/optgroup&gt;
+                  <pre xml:space="preserve">&lt;form action="/favorite-food/" method="post"&gt;
+  &lt;label for="food"&gt;What is your favorite food?&lt;/label&gt;
+  &lt;select id="food" name="food"&gt;
+    &lt;optgroup label="Fruits"&gt;
+      &lt;option value="1"&gt;Apples&lt;/option&gt;
+      &lt;option value="2"&gt;Bananas&lt;/option&gt;
+      &lt;option value="3"&gt;Peaches&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Vegetables"&gt;
+      &lt;option value="4"&gt;Broccoli&lt;/option&gt;
+      &lt;option value="5"&gt;Carrots&lt;/option&gt;
+      &lt;option value="6"&gt;Cucumbers&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Baked Goods"&gt;
+      &lt;option value="7"&gt;Apple Pie&lt;/option&gt;
+      &lt;option value="8"&gt;Bagel&lt;/option&gt;
+      &lt;option value="9"&gt;Chocolate Cake&lt;/option&gt;
+    &lt;/optgroup&gt;
    &lt;/select&gt;
-&lt;/form&gt;              </pre>
+&lt;/form&gt;</pre>
                </section>
                <section class="example" id="example-2">
                   <h3>Example 2</h3>
-                  <p>The following example shows how a multi-select box can make use of the <code class="el">optrgroup</code> element.</p>
-                  <pre xml:space="preserve">
-&lt;form action="http://example.com/prog/someprog" method="post"&gt;
-    &lt;label for="related_techniques"&gt;&lt;strong&gt;Related Techniques:&lt;/strong&gt;&lt;/label&gt;
-    &lt;select name="related_techniques" id="related_techniques" multiple="multiple" size="10"&gt;
-  &lt;optgroup label="General Techniques"&gt;
-    &lt;option value="G1"&gt;G1: Adding a link at the top of each page ... &lt;/option&gt;
-    &lt;option value="G4"&gt;G4: Allowing the content to be paused and restarted ... &lt;/option&gt;
-    &lt;option value="G5"&gt;G5: Allowing users to complete an activity without any time... &lt;/option&gt;
-    &lt;option value="G8"&gt;G8: Creating an extended audio description for the ... &lt;/option&gt;
-    &lt;option value="G9"&gt;G9: Creating captions for live synchronized media... &lt;/option&gt;
-    &lt;option value="G10"&gt;G10: Creating components using a technology that ... &lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="HTML Techniques"&gt;
-    &lt;option value="H2"&gt;H2: Combining adjacent image and text links for the same ... &lt;/option&gt;
-    &lt;option value="H4"&gt;H4: Creating a logical tab order through links, form ... &lt;/option&gt;
-    &lt;option value="H24"&gt;H24: Providing text alternatives for the area ... &lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="CSS Techniques"&gt;
-    &lt;option value="C6"&gt;C6: Positioning content based on structural markup... &lt;/option&gt;
-    &lt;option value="C7"&gt;C7: Using CSS to hide a portion of the link text... &lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="SMIL Techniques"&gt;
-    &lt;option value="SM1"&gt;SM1: Adding extended audio description in SMIL 1.0... &lt;/option&gt;
-    &lt;option value="SM2"&gt;SM2: Adding extended audio description in SMIL 2.0... &lt;/option&gt;
-    &lt;option value="SM6"&gt;SM6: Providing audio description in SMIL 1.0... &lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="ARIA Techniques"&gt;
-    &lt;option value="ARIA1"&gt;ARIA1: Using WAI-ARIA describedby... &lt;/option&gt;
-    &lt;option value="ARIA2"&gt;ARIA2: Identifying required fields with the "required"... &lt;/option&gt;
-    &lt;option value="ARIA3"&gt;ARIA3: Identifying valid range information with "valuemin" ... &lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Common Failures"&gt;
-    &lt;option value="F1"&gt;F1: Failure of SC 1.3.2 due to changing the meaning of content by... &lt;/option&gt;
-    &lt;option value="F2"&gt;F2: Failure of SC 1.3.1 due to using changes in text presentation... &lt;/option&gt;
-    &lt;option value="F3"&gt;F3: Failure of SC 1.1.1 due to using CSS to include images  ... &lt;/option&gt;
-    &lt;option value="F4"&gt;F4: Failure of SC 2.2.2 due to using text-decoration:blink ...&lt;/option&gt;
-  &lt;/optgroup&gt;
-&lt;/select&gt;
-&lt;/form&gt;              </pre>
+                  <p>The following example shows how a multi-select box can make use of the <code class="language-html">optgroup</code> element.</p>
+                  <pre xml:space="preserve">&lt;form action="/animals/" method="post"&gt;
+  &lt;label for="animals"&gt;Pick your favorite animals:&lt;/label&gt;
+  &lt;select id="animals" multiple name="animals" size="10"&gt;
+    &lt;optgroup label="Dinosaurs"&gt;
+      &lt;option value="brontosaurus"&gt;Brontosaurus&lt;/option&gt;
+      &lt;option value="pterodactyl"&gt;Pterodactyl&lt;/option&gt;
+      &lt;option value="trex"&gt;Tyrannosaurus Rex&lt;/option&gt;
+      &lt;option value="velociraptor"&gt;Velociraptor&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Ungulates"&gt;
+      &lt;option value="camel"&gt;Camel&lt;/option&gt;
+      &lt;option value="giraffe"&gt;Giraffe&lt;/option&gt;
+      &lt;option value="hippo"&gt;Hippo&lt;/option&gt;
+      &lt;option value="horse"&gt;Horse&lt;/option&gt;
+      &lt;option value="zebra"&gt;Zebra&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Household Pets"&gt;
+      &lt;option value="cat"&gt;Cat&lt;/option&gt;
+      &lt;option value="dog"&gt;Dog&lt;/option&gt;
+      &lt;option value="fish"&gt;Fish&lt;/option&gt;
+      &lt;option value="rabbit"&gt;Rabbit&lt;/option&gt;
+    &lt;/optgroup&gt;
+  &lt;/select&gt;
+&lt;/form&gt;</pre>
                </section>
             </section>
             <section id="resources">
@@ -170,25 +151,26 @@
                <ul>
                   
                   <li>
-                     									         <a href="https://www.w3.org/TR/html401/interact/forms.html#edef-SELECT">HTML SELECT element</a>
-                     								       </li>
+                     <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element">HTML - <code class="language-html">select</code> element</a>.
+                     </li>
                   
                   <li>
-                     									         <a href="https://www.w3.org/TR/html401/interact/forms.html#edef-OPTGROUP">HTML OPTGROUP element</a>
-                     								       </li>
+                     <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element">HTML - <code class="language-html">optgroup</code> element</a>.
+                     </li>
                   
                   <li>
-                     									         <a href="http://webaim.org/techniques/forms/">Creating Accessible Forms</a>
-                     								       </li>
+                     <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element">HTML - <code class="language-html">option</code> element</a>.
+                     </li>
                   
                   <li>
-                     									         <a href="http://usability.com.au/2008/09/accessible-forms-using-wcag-2-0/">Accessible Forms using WCAG 2.0</a>
-                     								       </li>
+                     <a href="https://webaim.org/techniques/forms/">WebAIM - Creating Accessible Forms</a>.
+                     </li>
                   </ul>
             </section>
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  
                   <h3>Procedure</h3>
                   
                   <ol>
@@ -196,19 +178,21 @@
                      <li>Check the set of options within a selection list to see if there are groups of related
                         options.</li>
                      
-                     <li>If there are groups of related options, they should be grouped with <code class="el">optgroup</code>. </li>
+                     <li>If there are groups of related options, they should be grouped with <code class="language-html">optgroup</code>.</li>
                      </ol>
                   </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
                      
-                     <li>Check #2 is true.</li>
+                     <li>Check 2 is true.</li>
                      </ul>
                   </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -222,7 +206,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -265,11 +249,11 @@
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>

@@ -3,15 +3,15 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>H69: Providing heading elements at the beginning of each section of content</title>
+      <title>H69: Providing heading elements at the beginning of each section of content | WAI | W3C</title>
       <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css" />
       <link rel="stylesheet" href="../base.css" />
    </head>
    <body class="wcag-docs" dir="ltr">
       <div class="minimal-header-container default-grid">
          <div class="minimal-header" id="site-header">
-            <div class="minimal-header-name">WCAG 2.2 Techniques</div>
-            <div class="minimal-header-subtitle">Informative explanations, not required to meet WCAG</div><a class="minimal-header-link" href="../about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
+            <div class="minimal-header-name"><a class="minimal-header-link" href="/techniques/">WCAG 2.2 Techniques</a></div>
+            <div class="minimal-header-subtitle">Examples of ways to meet WCAG; not required</div><a class="minimal-header-link" href="/techniques/about">About WCAG Techniques</a><div class="minimal-header-logo"><a href="http://w3.org/" aria-label="W3C"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 91.968 44" style="margin: 0.75em 0 0.75em 0.5em">
                      <g fill-rule="evenodd" fill="none">
                         <path fill="#015a9c" d="M-.231-.21h92.917v44.659H-.23z"></path>
                         <g fill-rule="nonzero" fill="#fff">
@@ -70,7 +70,7 @@
             <div class="excol-all"></div>
             <section id="applicability">
                <h2 id="applicability">Applicability</h2>
-               <p>HTML and XHTML</p>
+               <p>HTML</p>
                <p>This technique relates to:</p>
                <ul>
                   <li><a href="/understanding/bypass-blocks">2.4.1: Bypass Blocks</a> (Sufficient when used with Grouping blocks of repeated material in a way that can
@@ -83,113 +83,106 @@
             <section id="description">
                <h2>Description</h2>
                <p>The objective of this technique is to use section headings to convey the structure
-                  of
-                  		the content. Heading markup can be used:</p>
+                  of the content. Heading markup can be used:</p>
                <ul>
                   
-                  <li>to indicate start of main content</li>
+                  <li>to indicate start of main content;</li>
                   
-                  <li>to mark up section headings within the main content area</li>
+                  <li>to mark up section headings within the main content area;</li>
                   
                   <li>to demarcate different navigational sections like top or main navigation, left or
-                     				secondary navigation and footer navigation</li>
+                     secondary navigation and footer navigation;</li>
                   
-                  <li>to mark up images of text that are used as headings</li>
-                  		 
+                  <li>to mark up images of text that are used as headings;</li>
+                  
                   <li>to allow users the ability to navigate a page by sections or skip repeated blocks
-                     of information</li>
+                     of information.</li>
                   </ul>
-               <p>Headings are designed to convey logical hierarchy. Skipping
-                  		levels in the sequence of headings may create the impression that the structure
-                  of the
-                  		document has not been properly thought through or that specific headings have been
-                  		chosen for their visual rendering rather than their meaning. Authors are encouraged
-                  to
-                  		nest headings hierarchically. When headings are nested hierarchically, the most
-                  important information is given the highest logical level, and subsections are given
-                  subsequent logical levels.(i.e., h2 is a subsection of h1). Providing this type of
-                  structure will help users understand the overall organization of the content more
-                  easily.</p>
+               <p>Headings are designed to convey logical hierarchy. Skipping levels in the sequence
+                  of headings may create the impression that the structure of the document has not been
+                  properly thought through or that specific headings have been chosen for their visual
+                  rendering rather than their meaning. Authors are encouraged to nest headings hierarchically.
+                  When headings are nested hierarchically, the most important information is given the
+                  highest logical level, and subsections are given subsequent logical levels.(i.e.,
+                  <code class="el">h2</code> is a subsection of <code class="el">h1</code>). Providing this type of structure will help users understand the overall organization
+                  of the content more easily.</p>
                <p>Since headings indicate the start of important sections of content, it is possible
-                  for
-                  		users with assistive technology to jump directly to the appropriate heading and
-                  begin
-                  		reading the content. This significantly speeds interaction for users who would otherwise
-                  		access the content slowly. Headings create chunks of information that can be found
-                  easily by people with disabilities, such as a blind person using a screen reader,
-                  or a person with a cognitive disability who uses assistive technology that delineates
-                  groups of information, or someone with a communication disability or illiteracy, who
-                  uses a screen reader to assist them in their reading.
-                  					</p>
+                  for users with assistive technology to jump directly to the appropriate heading and
+                  begin reading the content. This significantly speeds interaction for users who would
+                  otherwise access the content slowly. Headings create chunks of information that can
+                  be found easily by people with disabilities, such as a blind person using a screen
+                  reader, or a person with a cognitive disability who uses assistive technology that
+                  delineates groups of information, or someone with a communication disability or illiteracy,
+                  who uses a screen reader to assist them in their reading.</p>
                <div class="note">
                   
-                  <p>All of our techniques assume that people needing special user agents (including AT
-                     or special plug-ins) will get and be using that type user agent (eg screen reader,
-                     or plug-in that allows keyboard navigation of properly marked up content, etc).</p>
+                  <p>All of our techniques assume that people needing special user agents (including assistive
+                     technology or special plug-ins) will get and be using that type of user agent (for
+                     example: a screen reader, or plug-in that allows keyboard navigation of properly marked
+                     up content, etc.).</p>
                   </div>
             </section>
             <section id="examples">
                <h2>Examples</h2>
-               <section class="example" id="example-1">
-                  <h3>Example 1</h3>
-                  <p>This example organizes the sections of a search page by marking each section
-                     heading using <code class="el">h2</code> elements.</p>
+               <section class="example" id="example-1-organizing-the-sections-of-a-search-page">
+                  <h3>Example 1: Organizing the sections of a search page</h3>
+                  <p>This example marks up each section heading using <code class="el">h2</code> elements.</p>
                   <pre xml:space="preserve">&lt;h1&gt;Search Technical Periodicals&lt;/h1&gt;
  &lt;h2&gt;Search&lt;/h2&gt;
- &lt;form action="search.php"&gt;
-  &lt;p&gt;&lt;label for="searchInput"&gt;Enter search topic: &lt;/label&gt;
-  &lt;input type="text" size="30" id="searchInput"&gt;
-  &lt;input type="submit" value="Go"&gt;&lt;/p&gt;
+ &lt;form action="/search" role="search"&gt;
+  &lt;label for="searchInput"&gt;Enter search topic:&lt;/label&gt;
+  &lt;input id="searchInput" type="text"&gt;
+  &lt;input type="submit" value="Search"&gt;
  &lt;/form&gt;
- &lt;h2&gt;Available Periodicals&lt;/h2&gt;
- &lt;div class="jlinks"&gt;
-  &lt;a href="pcoder.com"&gt;Professional Coder&lt;/a&gt; |
-  &lt;a href="algo.com"&gt;Algorithms&lt;/a&gt; |
-  &lt;a href="jse.com"&gt;Journal of Software Engineering&lt;/a&gt;
- &lt;/div&gt;
- &lt;h2&gt;Search Results&lt;/h2&gt;
- ... search results are returned in this section ...   </pre>
+ &lt;section&gt;
+   &lt;h2&gt;Available Periodicals&lt;/h2&gt;
+   &lt;ul&gt;
+     &lt;li&gt;&lt;a href="https://example.com/pcoder"&gt;Professional Coder&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="https://example.com/algo"&gt;Algorithms&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="https://example.com/jse"&gt;Journal of Software Engineering&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/section&gt;
+ &lt;section&gt;
+   &lt;h2&gt;Search Results&lt;/h2&gt;
+   ... search results are returned in this section ...
+ &lt;/section&gt;</pre>
                </section>
                <section class="example" id="example-2-headings-show-the-overall-organization-of-the-content">
                   <h3>Example 2: Headings show the overall organization of the content</h3>
-                  <p>In this example, heading markup is used to make the navigation and main content
-                     sections perceivable.</p>
-                  <pre xml:space="preserve">&lt;!-- Logo, banner graphic, search form, etc.  --&gt;
-  &lt;h2&gt;Navigation&lt;/h2&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href="about.htm"&gt;About us&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="contact.htm"&gt;Contact us&lt;/a&gt;&lt;/li&gt;
-       ...
-    &lt;/ul&gt;
-  &lt;h2&gt;All about headings&lt;/h2&gt;
-   &lt;!-- Text, images, other material making up the main content... --&gt; 
-            </pre>
+                  <p>In this example, heading markup is used to make the navigation and main content sections
+                     perceivable.</p>
+                  <pre xml:space="preserve">&lt;main&gt;
+  &lt;h1&gt;Why Monday Monkey Lives For The Weekend&lt;/h1&gt;
+  ... text, images, and other material making up the main content ...
+&lt;/main&gt;
+&lt;nav aria-labelledby="nav-heading"&gt;
+  &lt;h2 id="nav-heading"&gt;More About Monday Monkey, Ltd.&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/about"&gt;About us&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
                </section>
                <section class="example" id="example-3-headings-show-the-organization-of-material-within-the-main-content">
                   <h3>Example 3: Headings show the organization of material within the main content</h3>
-                  <p>Note that in HTML 4.01 and XHTML 1.x, heading elements only mark the beginning of
-                     	sections. Because there is no markup to associate a heading element with the section
-                     content explicitly, users will assume that the heading applies to all following content
-                     until the next heading element is encountered.</p>
-                  <pre xml:space="preserve"> &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+                  <pre xml:space="preserve">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
   &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
     &lt;title&gt;Cooking techniques&lt;/title&gt;  
   &lt;/head&gt;   
-  &lt;body&gt;     
-    &lt;h1&gt;Cooking techniques&lt;/h1&gt;     
-    &lt;p&gt;       
-      ... some text here ...     
-    &lt;/p&gt;           
-    &lt;h2&gt;Cooking with oil&lt;/h2&gt; 
-    &lt;p&gt; 
-        ... text of the section ...     
-    &lt;/p&gt;           
-    &lt;h2&gt;Cooking with butter&lt;/h2&gt;       
-    &lt;p&gt;
-        ... text of the section ...     
-    &lt;/p&gt;   
+  &lt;body&gt;
+    &lt;main&gt;
+      &lt;h1&gt;Cooking techniques&lt;/h1&gt;     
+      &lt;p&gt;... some text here ...&lt;/p&gt;
+      &lt;h2&gt;Cooking with oil&lt;/h2&gt; 
+      &lt;p&gt;... text of the section ...&lt;/p&gt;
+      &lt;h2&gt;Cooking with butter&lt;/h2&gt;       
+      &lt;p&gt;... text of the section ...&lt;/p&gt;
+    &lt;/main&gt;
   &lt;/body&gt; 
-&lt;/html&gt;    </pre>
+&lt;/html&gt;</pre>
                </section>
             </section>
             <section id="resources">
@@ -198,40 +191,19 @@
                <ul>
                   
                   <li>
-                     									         <a href="https://www.w3.org/TR/html401/struct/global.html#h-7.5.5">HTML 4.01
-                        H1-H6 elements</a>
-                     								       </li>
-                  
-                  <li>
-                     									         <a href="http://meyerweb.com/eric/thoughts/2004/07/21/pick-a-heading/">Pick a
-                        Heading</a> Eric Meyer</li>
-                  
-                  <li>
-                     <a href="http://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure</a>
+                     <a href="https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">HTML - the <code class="el">h1</code>, <code class="el">h2</code>, <code class="el">h3</code>, <code class="el">h4</code>, <code class="el">h5</code>, and <code class="el">h6</code> elements</a>.
                      </li>
                   
                   <li>
-                     <a href="http://accessibility.psu.edu/headingshtml/">Heading Tags</a>
+                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"><abbr title="Mozilla Developer Network">MDN</abbr> <code class="el">&lt;h1&gt;</code> - <code class="el">&lt;h6&gt;</code>: The HTML Section Heading elements</a>.
                      </li>
                   
                   <li>
-                     <a href="http://www.456bereastreet.com/archive/201003/heading_navigation_in_web_browsers/">Heading navigation in web browsers</a>
+                     <a href="https://www.nomensa.com/blog/how-structure-headings-web-accessibility">Nomensa: How to structure headings for web accessibility</a>.
                      </li>
                   
                   <li>
-                     
-                     <p>For Firefox, the following plugins provide header navigation via the keyboard:</p>
-                     
-                     <ul>
-                        
-                        <li>
-                           <a href="https://addons.mozilla.org/en-US/firefox/addon/accessibility-evaluation-toolb/">Accessibility Evaluation Toolbar</a>
-                           </li>
-                        
-                        <li>
-                           <a href="http://juicystudio.com/article/heading-navigation-greasemonkey-user-script.php">Heading Navigation Greasemonkey User Script</a>
-                           </li>
-                        </ul>
+                     <a href="https://webaim.org/techniques/semanticstructure/">WebAIM: Semantic Structure: Regions, Headings, and Lists</a>.
                      </li>
                   </ul>
             </section>
@@ -247,27 +219,30 @@
             <section id="tests">
                <h2>Tests</h2>
                <section class="procedure" id="procedure">
+                  
                   <h3>Procedure</h3>
                   
                   <ol>
-                     			
-                     <li>Check that the content is divided into separate sections</li>
+                     			   
+                     <li>Check that the content is divided into separate sections.</li>
                      
                      <li>Check that each section on the page starts with a heading.</li>
                      </ol>
                   </section>
                <section class="results" id="expected-results">
+                  
                   <h3>Expected Results</h3>
                   
                   <ul>
                      
-                     <li>For 2.4.1 check #2 is true.</li>
-                     			
-                     <li>For 2.4.10 checks #1 and #2 are true.</li>
+                     <li>For <a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html">Success Criterion 2.4.1 (Bypass Blocks)</a> check #2 is true.</li>
+                     
+                     <li>For <a href="https://www.w3.org/WAI/WCAG21/Understanding/section-headings.html">Success Criterion 2.4.10 (Section Headings)</a> check #1 and #2 are true.</li>
                      </ul>
                   </section>
-            </section>
-         </main>
+            </section><a class="button button-backtotop" href="#top"><span><svg focusable="false" aria-hidden="true" class="icon-arrow-up " viewBox="0 0 26 28">
+                     <path d="M25.172 15.172c0 0.531-0.219 1.031-0.578 1.406l-1.172 1.172c-0.375 0.375-0.891 0.594-1.422 0.594s-1.047-0.219-1.406-0.594l-4.594-4.578v11c0 1.125-0.938 1.828-2 1.828h-2c-1.062 0-2-0.703-2-1.828v-11l-4.594 4.578c-0.359 0.375-0.875 0.594-1.406 0.594s-1.047-0.219-1.406-0.594l-1.172-1.172c-0.375-0.375-0.594-0.875-0.594-1.406s0.219-1.047 0.594-1.422l10.172-10.172c0.359-0.375 0.875-0.578 1.406-0.578s1.047 0.203 1.422 0.578l10.172 10.172c0.359 0.375 0.578 0.891 0.578 1.422z"></path></svg> Back to Top
+                  			</span></a></main>
          <aside class="box box-icon box-space-above" id="helpimprove" style="grid-column: 2 / 8; grid-row: 3">
             <header class="box-h  box-h-icon box-h-space-above box-h-icon"><svg focusable="false" aria-hidden="true" class="icon-comments" viewBox="0 0 28 28">
                   <path d="M22 12c0 4.422-4.922 8-11 8-0.953 0-1.875-0.094-2.75-0.25-1.297 0.922-2.766 1.594-4.344 2-0.422 0.109-0.875 0.187-1.344 0.25h-0.047c-0.234 0-0.453-0.187-0.5-0.453v0c-0.063-0.297 0.141-0.484 0.313-0.688 0.609-0.688 1.297-1.297 1.828-2.594-2.531-1.469-4.156-3.734-4.156-6.266 0-4.422 4.922-8 11-8s11 3.578 11 8zM28 16c0 2.547-1.625 4.797-4.156 6.266 0.531 1.297 1.219 1.906 1.828 2.594 0.172 0.203 0.375 0.391 0.313 0.688v0c-0.063 0.281-0.297 0.484-0.547 0.453-0.469-0.063-0.922-0.141-1.344-0.25-1.578-0.406-3.047-1.078-4.344-2-0.875 0.156-1.797 0.25-2.75 0.25-2.828 0-5.422-0.781-7.375-2.063 0.453 0.031 0.922 0.063 1.375 0.063 3.359 0 6.531-0.969 8.953-2.719 2.609-1.906 4.047-4.484 4.047-7.281 0-0.812-0.125-1.609-0.359-2.375 2.641 1.453 4.359 3.766 4.359 6.375z"></path></svg><h2> Help improve this page </h2>
@@ -281,7 +256,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 16 August 2022.</p>
+            <p><strong>Date:</strong> Updated 15 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
@@ -324,11 +299,11 @@
          </div>
       </footer>
       <link rel="stylesheet" href="../a11y-light.css" /><script src="../highlight.min.js"></script><script>
-				document.addEventListener('DOMContentLoaded', (event) => {
-			  	document.querySelectorAll('pre').forEach((el) => {
-    				hljs.highlightElement(el);
-  				});
-				});
-				var translationStrings = {}; /* fix WAI JS */
-				</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
+			document.addEventListener('DOMContentLoaded', (event) =&gt; {
+			document.querySelectorAll('pre').forEach((el) =&gt; {
+			hljs.highlightElement(el);
+			});
+			});
+			var translationStrings = {}; /* fix WAI JS */
+		</script><script src="https://www.w3.org/WAI/assets/scripts/main.js"></script></body>
 </html>
