@@ -66,7 +66,10 @@
                <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
                <div class="box-i">
                   <p>For <a href="#dfn-user-interface-component">user interface components</a> with <a href="#dfn-label">labels</a> that include <a href="#dfn-text">text</a> or <a href="#dfn-image-of-text">images of text</a>, the <a href="#dfn-name">name</a> contains the text that is presented visually.</p>
-                  <p class="note">A best practice is to have  the text of the label at the start of the name.</p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>A best practice is to have  the text of the label at the start of the name.</p>
+                  </div>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -155,7 +158,7 @@
                      <figure id="figure-RTE-github">
                         	<img alt="Icons for transforming text, including heading, bold, italic, quote, code, and link, along with icons for ordered and unordered lists and other controls" src="img/rich-text-editor-detail.png" />
                         	
-                        <figcaption>A detail of the rich text editor in Github, showing a variety of unlabeled icons,
+                        <figcaption>Figure 1 A detail of the rich text editor in Github, showing a variety of unlabeled icons,
                            including icons resembling text characters.</figcaption>
                         </figure>
                      
@@ -294,9 +297,9 @@
                   <h3>Sufficient Techniques</h3>
                   <ul>
                      					
-                     <li><a href="../../techniques/general/G208">G208: Including the text of the visible label as part of the accessible name</a></li>
+                     <li><a href="/techniques/general/G208">G208: Including the text of the visible label as part of the accessible name</a></li>
                      					
-                     <li><a href="../../techniques/general/G211">G211: Matching the accessible name to the visible label</a></li>
+                     <li><a href="/techniques/general/G211">G211: Matching the accessible name to the visible label</a></li>
                      				</ul>
                </section>
                <section id="advisory">
@@ -322,7 +325,7 @@
                      by the WCAG Working Group.</p>
                   <ul>
                      					
-                     <li><a href="../../techniques/failures/F96">F96: Failure due to the accessible name not containing the visible label text</a></li>
+                     <li><a href="/techniques/failures/F96">F96: Failure due to the accessible name not containing the visible label text</a></li>
                      					
                      <li>Accessible name contains the visible label text, but the words of the visible label
                         are not in the same order as they are in the visible label text (Potential future
@@ -355,26 +358,35 @@
                            of users with disabilities that go beyond those offered by mainstream user agents
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
-                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
-                           voice), additional navigation or orientation mechanisms, and content transformations
-                           (e.g., to make tables more accessible).
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>functionality provided by assistive technology includes alternative presentations
+                              (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                              voice), additional navigation or orientation mechanisms, and content transformations
+                              (e.g., to make tables more accessible).
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
-                           by using and monitoring APIs.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Assistive technologies often communicate data and messages with mainstream user agents
+                              by using and monitoring APIs.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
-                           Many mainstream user agents provide some features to assist individuals with disabilities.
-                           The basic difference is that mainstream user agents target broad and diverse audiences
-                           that usually include people with and without disabilities. Assistive technologies
-                           target narrowly defined populations of users with specific disabilities. The assistance
-                           provided by an assistive technology is more specific and appropriate to the needs
-                           of its target users. The mainstream user agent may provide important functionality
-                           to assistive technologies like retrieving Web content from program objects or parsing
-                           markup into identifiable bundles.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The distinction between mainstream user agents and assistive technologies is not absolute.
+                              Many mainstream user agents provide some features to assist individuals with disabilities.
+                              The basic difference is that mainstream user agents target broad and diverse audiences
+                              that usually include people with and without disabilities. Assistive technologies
+                              target narrowly defined populations of users with specific disabilities. The assistance
+                              provided by an assistive technology is more specific and appropriate to the needs
+                              of its target users. The mainstream user agent may provide important functionality
+                              to assistive technologies like retrieving Web content from program objects or parsing
+                              markup into identifiable bundles.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
                            the following:
@@ -425,8 +437,11 @@
                            with humans
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">See also <a href="#dfn-sign-language">sign language</a>.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>See also <a href="#dfn-sign-language">sign language</a>.
+                              </p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-image-of-text">image of text</dt>
@@ -437,8 +452,11 @@
                            a particular visual effect
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">This does not include <a href="#dfn-text">text</a> that is part of a picture that contains significant other visual content.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>This does not include <a href="#dfn-text">text</a> that is part of a picture that contains significant other visual content.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">A person's name on a nametag in a photograph.</p>
                         </definition>
@@ -451,11 +469,17 @@
                            <a href="#dfn-text">text</a> or other component with a <a href="#dfn-text-alternative">text alternative</a> that is presented to a user to identify a component within Web <a href="#dfn-content">content</a>
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">A label is presented to all users whereas the <a href="#dfn-name">name</a> may be hidden and only exposed by assistive technology. In many (but not all) cases
-                           the name and the label are the same.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>A label is presented to all users whereas the <a href="#dfn-name">name</a> may be hidden and only exposed by assistive technology. In many (but not all) cases
+                              the name and the label are the same.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The term label is not limited to the label element in HTML.</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The term label is not limited to the label element in HTML.</p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-name">name</dt>
@@ -464,11 +488,17 @@
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">text by which software can identify a component within Web content to the user</p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The name may be hidden and only exposed by assistive technology, whereas a <a href="#dfn-label">label</a> is presented to all users. In many (but not all) cases, the label and the name are
-                           the same.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The name may be hidden and only exposed by assistive technology, whereas a <a href="#dfn-label">label</a> is presented to all users. In many (but not all) cases, the label and the name are
+                              the same.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">This is unrelated to the name attribute in HTML.</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>This is unrelated to the name attribute in HTML.</p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-non-text-content">non-text content</dt>
@@ -478,9 +508,12 @@
                         <p xmlns="http://www.w3.org/1999/xhtml">any content that is not a sequence of characters that can be <a href="#dfn-programmatically-determined">programmatically determined</a> or where the sequence is not expressing something in <a href="#dfn-human-language">human language</a>
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">This includes <a href="#dfn-ascii-art">ASCII Art</a> (which is a pattern of characters), emoticons, leetspeak (which uses character substitution),
-                           and images representing text
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>This includes <a href="#dfn-ascii-art">ASCII Art</a> (which is a pattern of characters), emoticons, leetspeak (which uses character substitution),
+                              and images representing text
+                              </p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-presentation">presentation</dt>
@@ -554,8 +587,11 @@
                            text alternative for the chart indicates that a description follows.
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Refer to <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#text-alternatives">Understanding Text Alternatives</a> for more information.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Refer to <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#text-alternatives">Understanding Text Alternatives</a> for more information.
+                              </p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-user-agent">user agent</dt>
@@ -576,18 +612,27 @@
                            function
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Multiple user interface components may be implemented as a single programmatic element.
-                           "Components" here is not tied to programming techniques, but rather to what the user
-                           perceives as separate controls.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Multiple user interface components may be implemented as a single programmatic element.
+                              "Components" here is not tied to programming techniques, but rather to what the user
+                              perceives as separate controls.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">User interface components include form elements and links as well as components generated
-                           by scripts.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>User interface components include form elements and links as well as components generated
+                              by scripts.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">What is meant by "component" or "user interface component" here is also sometimes
-                           called "user interface element".
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>What is meant by "component" or "user interface component" here is also sometimes
+                              called "user interface element".
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">An applet has a "control" that can be used to move through content by line or page
                            or random access. Since each of these would need to have a name and be settable independently,
@@ -603,13 +648,19 @@
                            that are used in the rendering or intended to be rendered together with it by a <a href="#dfn-user-agent">user agent</a>
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Although any "other resources" would be rendered together with the primary resource,
-                           they would not necessarily be rendered simultaneously with each other.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Although any "other resources" would be rendered together with the primary resource,
+                              they would not necessarily be rendered simultaneously with each other.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">For the purposes of conformance with these guidelines, a resource must be "non-embedded"
-                           within the scope of conformance to be considered a Web page.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>For the purposes of conformance with these guidelines, a resource must be "non-embedded"
+                              within the scope of conformance to be considered a Web page.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web resource including all embedded images and media.</p>
                         
@@ -649,7 +700,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

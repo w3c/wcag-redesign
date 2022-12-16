@@ -67,9 +67,12 @@
             <div class="excol-all"></div>
             <section id="intent">
                <h2>Intent</h2>
-               <div class="wcag22">
+               <div class="wcag22"> <span class="new-version">New in WCAG 22: </span>
                   
-                  <p class="note">This criterion has been removed from WCAG 2.2.</p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                     <p>This criterion has been removed from WCAG 2.2.</p>
+                  </div>
                   
                   
                   <p>The intent of this Success Criterion was to ensure that user-agents, including assistive
@@ -105,27 +108,30 @@
                   
                   </p>
                <div class="note">
-                  
-                  
-                  <p>The concept of "well formed" is close to what is required here. However, exact parsing
-                     requirements vary amongst markup languages, and most non XML-based languages do not
-                     explicitly define requirements for well formedness. Therefore, it was necessary to
-                     be more explicit in the Success Criterion in order to be generally applicable to markup
-                     languages. Because the term "well formed" is only defined in XML, and (because end
-                     tags are sometimes optional) valid HTML does not require well formed code, the term
-                     is not used in this Success Criterion.
-                     </p>
-                  
-                  
-                  <p>With the exception of one Success Criterion (
-                     <a href="resize-text">1.4.4: Resize Text</a>, which specifically mentions that the effect specified by the Success Criterion must
-                     be achieved without relying on an assistive technology) authors can meet the Success
-                     Criteria with content that assumes use of an assistive technology (or access features
-                     in use agents) by the user, where such assistive technologies (or access features
-                     in user agents) exist and are available to the user.
-                     </p>
-                  
-                  </div>
+                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                  <div>
+                     
+                     
+                     <p>The concept of "well formed" is close to what is required here. However, exact parsing
+                        requirements vary amongst markup languages, and most non XML-based languages do not
+                        explicitly define requirements for well formedness. Therefore, it was necessary to
+                        be more explicit in the Success Criterion in order to be generally applicable to markup
+                        languages. Because the term "well formed" is only defined in XML, and (because end
+                        tags are sometimes optional) valid HTML does not require well formed code, the term
+                        is not used in this Success Criterion.
+                        </p>
+                     
+                     
+                     <p>With the exception of one Success Criterion (
+                        <a href="resize-text">1.4.4: Resize Text</a>, which specifically mentions that the effect specified by the Success Criterion must
+                        be achieved without relying on an assistive technology) authors can meet the Success
+                        Criteria with content that assumes use of an assistive technology (or access features
+                        in use agents) by the user, where such assistive technologies (or access features
+                        in user agents) exist and are available to the user.
+                        </p>
+                     
+                     </div>
+               </div>
             </section>
             <section id="benefits">
                <h2>Benefits</h2>
@@ -153,21 +159,21 @@
                      
                      <li>
                         									         
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G134" class="general">Validating Web pages</a>
+                        <a class="general" href="/techniques/general/G134">G134: Validating Web pages</a>
                         								       
                         </li>
                      
                      
                      <li>
                         									         
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G192" class="general">Fully conforming to specifications</a>
+                        <a class="general" href="/techniques/general/G192">G192: Fully conforming to specifications</a>
                         								       
                         </li>
                      
                      
                      <li>
                         									         
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H88" class="html">Using (X)HTML according to spec</a>
+                        <a class="html" href="/techniques/html/H88">H88: Using HTML according to spec</a>
                         								       
                         </li>
                      
@@ -183,24 +189,22 @@
                            
                            <li>
                               											             
-                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H74" class="html">Ensuring that  opening and closing tags are used according to specification</a>
+                              <a class="html" href="/techniques/html/H74">H74: Ensuring that opening and closing tags are used according to specification</a>
                               											             
                               <strong>AND</strong>
                               											             
-                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H93" class="html">Ensuring that id attributes are unique on a Web page</a>
+                              <a class="html" href="/techniques/html/H93">H93: Ensuring that id attributes are unique on a Web page</a>
                               											             
                               <strong>AND</strong>
                               											             
-                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H94" class="html">Ensuring that elements do not contain duplicate attributes</a>
+                              <a class="html" href="/techniques/html/H94">H94: Ensuring that elements do not contain duplicate attributes</a>
                               										           
                               </li>
                            
                            
                            <li>
                               											             
-                              <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H75" class="html">Ensuring that 
-                                 Web pages are well-formed
-                                 </a>
+                              <a class="html" href="/techniques/html/H75">H75: Ensuring that Web pages are well-formed</a>
                               										           
                               </li>
                            
@@ -219,14 +223,15 @@
                      
                      <li>
                         									         
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F70" class="failure">Failure of 4.1.1 due to incorrect use of start and end tags or attribute markup</a>
+                        <a class="failure" href="/techniques/failures/F70">F70: Failure of Success Criterion 4.1.1 due to incorrect use of start and end tags or attribute
+                           markup</a>
                         								       
                         </li>
                      
                      
                      <li>
                         									         
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F77" class="failure">Failure of 4.1.1 due to duplicate values of type ID</a>
+                        <a class="failure" href="/techniques/failures/F77">F77: Failure of Success Criterion 4.1.1 due to duplicate values of type ID</a>
                         								       
                         </li>
                      
@@ -248,7 +253,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

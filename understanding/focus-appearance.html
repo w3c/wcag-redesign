@@ -106,15 +106,24 @@
                      
                      <li>The focus indicator and the indicator's background color are not modified by the author.</li>
                      </ul>
-                  <p class="note">What is perceived as the user interface component or sub-component (to determine enclosure
-                     or size) depends on its visual presentation. The visual presentation includes the
-                     component's visible content, border, and component-specific background. It does not
-                     include shadow and glow effects outside the component's content, background, or border.</p>
-                  <p class="note">Examples of sub-components that may receive a focus indicator are menu items in an
-                     opened drop-down menu, or focusable cells in a grid.</p>
-                  <p class="note">Contrast calculations can be based on colors defined within the technology (such as
-                     HTML, CSS and SVG). Pixels modified by user agent resolution enhancements and anti-aliasing
-                     can be ignored.</p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>What is perceived as the user interface component or sub-component (to determine enclosure
+                        or size) depends on its visual presentation. The visual presentation includes the
+                        component's visible content, border, and component-specific background. It does not
+                        include shadow and glow effects outside the component's content, background, or border.</p>
+                  </div>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>Examples of sub-components that may receive a focus indicator are menu items in an
+                        opened drop-down menu, or focusable cells in a grid.</p>
+                  </div>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>Contrast calculations can be based on colors defined within the technology (such as
+                        HTML, CSS and SVG). Pixels modified by user agent resolution enhancements and anti-aliasing
+                        can be ignored.</p>
+                  </div>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -156,7 +165,7 @@
                   <figure id="focus-indicator-basic">
                      <img src="img/focus-indicator-basic.png" alt="2 blue buttons with a dark 1 pixel thick offset focus rectangle around the second" />
                      
-                     <figcaption>Passes: A solid focus rectangle around the second of two buttons.</figcaption>
+                     <figcaption>Figure 1 Passes: A solid focus rectangle around the second of two buttons.</figcaption>
                      </figure>
                   
                   
@@ -168,14 +177,14 @@
                   <figure id="focus-border-solid">
                      <img src="img/focus-indicator-solid-border.svg" alt="3 of 5 stars are selected with a solid-line rectangular focus indicator around the third" />
                      
-                     <figcaption> Passes: a solidly bound focus rectangle encloses the third of five stars.</figcaption>
+                     <figcaption>Figure 2  Passes: a solidly bound focus rectangle encloses the third of five stars.</figcaption>
                      </figure>
                   
                   
                   <figure id="focus-outline-solid">
                      <img src="img/focus-indicator-solid-outline.svg" alt="Three of 5 stars are selected with a solid-line focus indicator in the shape of a star outlining the third" />
                      
-                     <figcaption> Passes: a solid outline indicator surrounds the third of five stars.</figcaption>
+                     <figcaption>Figure 3  Passes: a solid outline indicator surrounds the third of five stars.</figcaption>
                      </figure>  
                   
                   
@@ -190,7 +199,7 @@
                   <figure id="focus-indicator-weak-dashed">
                      <img src="img/focus-indicator-weak-dashed-border.svg" alt="3 of 5 stars are selected with the whole third star outlined with a 1 pixel thick dashed line" />
                      
-                     <figcaption> Fails: the dashed outline does not "solidly bound" the third star and does not meet
+                     <figcaption>Figure 4  Fails: the dashed outline does not "solidly bound" the third star and does not meet
                         the size requirements of the focus area calculation.</figcaption>
                      </figure>         
                   
@@ -198,7 +207,7 @@
                   <figure id="focus-indicator-strong-dashed">
                      <img src="img/focus-indicator-strong-dashed-border.svg" alt="3 of 5 stars are selected with the whole third star outlined with a 2 pixel thick dashed line" />
                      
-                     <figcaption> Passes: the dashed outline does not "solidly bound" the third star; however, the
+                     <figcaption>Figure 5  Passes: the dashed outline does not "solidly bound" the third star; however, the
                         dashed line meets the size requirements of the focus area calculation.</figcaption>
                      </figure>      
                   </section>
@@ -219,7 +228,7 @@
                   <figure id="focus-indicator-star-with-light-focus">
                      <img src="img/focus-indicator-star-with-light-focus.svg" alt="Two orange-yellow five-pointed stars, one with a mid-gray focus rectangle" />
                      
-                     <figcaption> Passes: Two buttons in the shape of a star, with the second surrounded by a focus
+                     <figcaption>Figure 6  Passes: Two buttons in the shape of a star, with the second surrounded by a focus
                         indicator whose pixels contrast 3:1 between focused (light grey) and unfocused (white)
                         states.</figcaption>
                      </figure> 
@@ -241,7 +250,7 @@
                   <figure id="focus-indicator-abutted">
                      <img src="img/focus-indicator-star-with-abutted-line.svg" alt="Two orange-yellow five-pointed stars, the second with a tightly cropped blue focus outline" />
                      
-                     <figcaption>Passes: The second of two stars has a star-shaped blue outline that directly abuts
+                     <figcaption>Figure 7 Passes: The second of two stars has a star-shaped blue outline that directly abuts
                         the star, with which it contrasts 3:1, creating a minimally visible focus indicator.</figcaption>
                      </figure>    
                   </section>
@@ -288,7 +297,7 @@
                   <figure id="component-complex-whole">
                      <img src="img/component-complex-whole.png" alt="Three tab buttons shown with a dark blue rectangle around all three tab buttons." />
                      
-                     <figcaption> A tablist with a focus indicator around only the whole.</figcaption>
+                     <figcaption>Figure 8  A tablist with a focus indicator around only the whole.</figcaption>
                      </figure>    
                   
                   
@@ -323,7 +332,7 @@
                      <br />
                      <img src="img/component-complex-both-unselected.png" alt="The same tab list showing except the first tab is selected, but the second has the focus outline." />
                      
-                     <figcaption> The same tablist in two states. In the first, focus is around both the tablist and
+                     <figcaption>Figure 9  The same tablist in two states. In the first, focus is around both the tablist and
                         the currently selected tab; in the second, focus is around both the tablist and an
                         unselected tab.</figcaption>
                      </figure>    
@@ -365,7 +374,7 @@
                   <figure id="component-complex-sub">
                      <img src="img/component-complex-sub.png" alt="Three tab buttons shown and the first button has a dark outline." />
                      
-                     <figcaption> The same tabs as in the prior set, but the focus indicator around the whole is removed.</figcaption>
+                     <figcaption>Figure 10  The same tabs as in the prior set, but the focus indicator around the whole is removed.</figcaption>
                      </figure>   
                   
                   
@@ -444,11 +453,14 @@
                         and vertically), for a total minimum area of 236 CSS pixels.</p>
                      
                      
-                     <p class="note">A <a href="#dfn-css-pixel">CSS pixel</a> is what developers use in CSS declarations like “width: 200px”. It is device-independent
-                        and not to be confused with device pixels which vary depending on the physical pixel
-                        density. <br />
-                        The rest of this document notates CSS pixels as "px".
-                        </p>
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="5">Note</div>
+                        <p>A <a href="#dfn-css-pixel">CSS pixel</a> is what developers use in CSS declarations like “width: 200px”. It is device-independent
+                           and not to be confused with device pixels which vary depending on the physical pixel
+                           density. <br />
+                           The rest of this document notates CSS pixels as "px".
+                           </p>
+                     </div>
                      
                      
                      <p>The following 3 examples use a 90px wide by 30px tall button, therefore the surface
@@ -459,7 +471,7 @@
                      <figure id="focus-indicator-innerline">
                         <img src="img/focus-indicator-innerline.png" alt="Three dark blue buttons on a white background. The middle button has a yellow inner border." width="284" />
                         
-                        <figcaption> Passes: the inner outline is slightly smaller than the outer edge of the component
+                        <figcaption>Figure 11  Passes: the inner outline is slightly smaller than the outer edge of the component
                            (236px minus 2px on each side), but using a 2px thick indicator means it is well over
                            the minimum requirement of 236px squared.</figcaption>
                         </figure>
@@ -468,7 +480,7 @@
                      <figure id="focus-indicator-underline">
                         <img src="img/focus-indicator-underline.png" alt="Three dark blue buttons on a white background. The middle button has a thick yellow line under the text." width="284" />
                         
-                        <figcaption> Passes: the thick (3px) yellow underline, at 80px almost as long as the longest edge,
+                        <figcaption>Figure 12  Passes: the thick (3px) yellow underline, at 80px almost as long as the longest edge,
                            multiplied by 3px exceeds the requirement of 236px squared.</figcaption>
                         </figure>
                      
@@ -490,7 +502,7 @@
                      <figure id="focus-indicator-whole">
                         <img src="img/focus-indicator-whole-star.svg" alt="3 of 5 stars are selected with the whole third star altered in color to indicate focus" />
                         
-                        <figcaption> Passes: a color change applies to the whole third star to indicate focus.</figcaption>
+                        <figcaption>Figure 13  Passes: a color change applies to the whole third star to indicate focus.</figcaption>
                         </figure> 
                      
                      
@@ -504,7 +516,7 @@
                      <figure id="focus-indicator-shortside">
                         <img src="img/focus-indicator-thick-short-side.png" alt="Two dark blue buttons on a white background. The left button has a very thick yellow block of color left of the text." width="284" />
                         
-                        <figcaption> Passes: the yellow block on the left is along the short side, but very thick.</figcaption>
+                        <figcaption>Figure 14  Passes: the yellow block on the left is along the short side, but very thick.</figcaption>
                         </figure>
                      
                      
@@ -541,7 +553,7 @@
                      <figure id="focus-indicator-circle">
                         <img src="img/focus-indicator-circle.png" alt="Two orange circular buttons with an icon in the middle. The right hand circle has a dark outline around the whole circle to indicate focus" width="150" />
                         
-                        <figcaption> Passes: a circular button in the default state, and then with a focus indicator.</figcaption>
+                        <figcaption>Figure 15  Passes: a circular button in the default state, and then with a focus indicator.</figcaption>
                         </figure>
                      
                      
@@ -552,7 +564,7 @@
                      <figure id="focus-indicator-star-shadow">
                         <img src="img/focus-indicator-star-shadow.png" alt="Two yellow star symbols, the second has a dark drop-shadow." width="400" />
                         
-                        <figcaption> An unfocused star component beside one using a drop shadow to show focus.</figcaption>
+                        <figcaption>Figure 16  An unfocused star component beside one using a drop shadow to show focus.</figcaption>
                         </figure>
                      
                      
@@ -579,7 +591,7 @@
                      <figure id="focus-indicator-box-shadow">
                         <img src="img/focus-indicator-box-shadow.png" alt="Three buttons, the middle with a heavy drop-shadow indicating focus." />
                         
-                        <figcaption> When a gradient is used on a focus indicator, the measure of surface area should
+                        <figcaption>Figure 17  When a gradient is used on a focus indicator, the measure of surface area should
                            only include the area that has changed enough to meet the 3:1 contrast ratio.</figcaption>
                         </figure>
                      
@@ -589,14 +601,17 @@
                      <figure id="focus-indicator-box-shadow-only">
                         <img src="img/focus-indicator-box-shadow-only.png" alt="The middle button with the drop-shadow included, but the subtle grey areas removed to only show the contrasting area." />
                         
-                        <figcaption> Passes: the same focused button with the non-contrasting areas removed, showing that
+                        <figcaption>Figure 18  Passes: the same focused button with the non-contrasting areas removed, showing that
                            it is a thick indicator that meets the requirements.</figcaption>
                         </figure>
                      
-                     <p class="note">Some of the examples in this document are screen-captured images of elements. Due
-                        to loss of resolution in these images, the actual pixel color may not match the original.
-                        As such, they are intended to be used for illustrative purposes, and should not be
-                        inspected on a pixel-by-pixel basis for sufficient contrast.</p>    
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="5">Note</div>
+                        <p>Some of the examples in this document are screen-captured images of elements. Due
+                           to loss of resolution in these images, the actual pixel color may not match the original.
+                           As such, they are intended to be used for illustrative purposes, and should not be
+                           inspected on a pixel-by-pixel basis for sufficient contrast.</p>
+                     </div>    
                      
                      <p>Some designs have pages with a non-solid background image covering the whole (or part)
                         of the page or make use of parallax scrolling effects which result in a near-infinite
@@ -625,7 +640,7 @@
                      <figure id="focus-indicator-inline-link-outline">
                         <img src="img/focus-inline-link-outline.png" alt="A paragraph of text containing a link broken over two lines. The red focus indicator is a complete rectangle around each part of the link." />
                         
-                        <figcaption> Passes: the CSS <code>outline</code> property solidly bounds each part of the link completely, so meets the "encloses"
+                        <figcaption>Figure 19  Passes: the CSS <code>outline</code> property solidly bounds each part of the link completely, so meets the "encloses"
                            requirement for indicator area.</figcaption>
                         </figure>
                      
@@ -633,7 +648,7 @@
                      <figure id="focus-indicator-inline-link">
                         <img src="img/focus-inline-link.png" alt="A paragraph of text containing a link broken over two lines. The red focus indicator has a gap on the right of one part of the link, and on the left of the other part of the link." />
                         
-                        <figcaption> Passes: Although the CSS <code>border</code> on a multi-line link does not enclose the link, the minimum bounding box definition
+                        <figcaption>Figure 20  Passes: Although the CSS <code>border</code> on a multi-line link does not enclose the link, the minimum bounding box definition
                            allows it to be assessed as if it was on a single line. As well, the indicator's area
                            is invariably more than four times the shortest-side calculation .</figcaption>
                         </figure>
@@ -672,7 +687,7 @@
                      <figure id="focus-indicator-innerline-2">
                         <img src="img/focus-indicator-innerline.png" alt="Three dark blue buttons on a white background. The middle button has a yellow inner border." width="284" />
                         
-                        <figcaption> Passes: adding a yellow outline to a link is a change of color from blue to yellow.
+                        <figcaption>Figure 21  Passes: adding a yellow outline to a link is a change of color from blue to yellow.
                            That change has a contrast ratio of 12:1.</figcaption>
                         </figure>        
                      
@@ -685,12 +700,15 @@
                      <figure id="focus-indicator-non-contrast">
                         <img src="img/focus-indicator-non-contrast.png" alt="Three buttons with light background and dark border on a white background. The middle button has a light grey outline." width="250" />
                         
-                        <figcaption> Fails: the second link has a light-grey (#ccc) focus outline which <strong>fails</strong> this Success Criterion because the change from white-background to light-grey outline
+                        <figcaption>Figure 22  Fails: the second link has a light-grey (#ccc) focus outline which <strong>fails</strong> this Success Criterion because the change from white-background to light-grey outline
                            does not meet 3:1.</figcaption>
                         </figure>
                      
-                     <p class="note">Color contrast measurements in WCAG are based on luminance (brightness) regardless
-                        of the hue.</p>
+                     <div class="note">
+                        <div role="heading" class="note-title marker" aria-level="5">Note</div>
+                        <p>Color contrast measurements in WCAG are based on luminance (brightness) regardless
+                           of the hue.</p>
+                     </div>
                      
                      
                      <p>If a control receiving focus changes its background (fill color) to a color that contrasts
@@ -700,7 +718,7 @@
                      <figure id="focus-indicator-background">
                         <img src="img/focus-indicator-background.png" alt="Three black buttons with a dark background. The middle button has a dark grey background." width="250" />
                         
-                        <figcaption> Fails: the second link has a dark-grey (#555) which <strong>fails</strong> this Success Criterion because the change from black-background to dark-grey background
+                        <figcaption>Figure 23  Fails: the second link has a dark-grey (#555) which <strong>fails</strong> this Success Criterion because the change from black-background to dark-grey background
                            does not meet 3:1.</figcaption>
                         </figure>
                      
@@ -709,7 +727,7 @@
                      <figure id="focus-indicator-background-passing">
                         <img src="img/focus-indicator-background-passing.png" alt="Three black buttons with a dark border and two have a dark background. The middle button has a white background." width="250" />
                         
-                        <figcaption> Passes: the second link has a white background (#fff) which <strong>passes</strong> this Success Criterion because the change from black-background to white-background
+                        <figcaption>Figure 24  Passes: the second link has a white background (#fff) which <strong>passes</strong> this Success Criterion because the change from black-background to white-background
                            meets 3:1.</figcaption>
                         </figure>
                      
@@ -742,7 +760,7 @@
                      <figure id="focus-indicator-thin-non-contrast">
                         <img src="img/focus-indicator-thin-non-contrast.png" alt="Three dark buttons, the middle one appears very slightly larger due to a thin dark outline." width="255" />
                         
-                        <figcaption> Fails: adding a 1px dark outline around a dark button does not differentiate it.
+                        <figcaption>Figure 25  Fails: adding a 1px dark outline around a dark button does not differentiate it.
                            This example <strong>fails</strong> the Success Criterion.</figcaption>
                         </figure>
                      
@@ -755,7 +773,7 @@
                      <figure id="focus-indicator-thick-non-contrast">
                         <img src="img/focus-indicator-thick-non-contrast.png" alt="Three dark buttons, the middle one appears larger due to a thick dark outline." width="255" />
                         
-                        <figcaption> Passes: adding a 2px border around the button helps to differentiate which one is
+                        <figcaption>Figure 26  Passes: adding a 2px border around the button helps to differentiate which one is
                            focused.</figcaption>
                         </figure>
                      
@@ -763,7 +781,7 @@
                      <figure id="focus-indicator-outerline">
                         <img src="img/focus-indicator-outerline.png" alt="Three dark buttons, the middle one has a outline slightly offset away from the component, so there is a gap between the component's background and the outline." width="250" />
                         
-                        <figcaption> Adding an outline that is separated from the button helps to differentiate which
+                        <figcaption>Figure 27  Adding an outline that is separated from the button helps to differentiate which
                            one is focused.</figcaption>
                         </figure>
                      
@@ -778,7 +796,7 @@
                      <figure id="focus-indicator-extra-outline">
                         <img src="img/focus-indicator-extra-outline.png" alt="Two dark blue buttons on a white background. The second one has a dark outline, then a light grey outline on the outside." width="250" />
                         
-                        <figcaption> Passes: the 3px thick dark outline also meets the size and change of contrast requirements.
+                        <figcaption>Figure 28  Passes: the 3px thick dark outline also meets the size and change of contrast requirements.
                            The light grey outline can be ignored.</figcaption>
                         </figure>
                      
@@ -808,7 +826,7 @@
                      <figure id="focus-indicator-ntc-comparison1">
                         <img src="img/focus-indicator-ntc-comparison1.png" alt="Three dark blue buttons, the center button also has a thin dark line around it." width="400" />
                         
-                        <figcaption> A 1px dark outline around a dark button would pass 1.4.11 Non-text Contrast, but
+                        <figcaption>Figure 29  A 1px dark outline around a dark button would pass 1.4.11 Non-text Contrast, but
                            fails this Success Criterion.</figcaption>
                         
                         </figure>
@@ -846,7 +864,7 @@
                   <figure id="country-select">
                      <img src="img/focus-indicator-select.png" alt="A country select element with Afghanistan selected and Albani with focus" />
                      
-                     <figcaption>Passes: The user agent's default <code>select</code> element presentation cannot be modified by the author, so it passes regardless of
+                     <figcaption>Figure 30 Passes: The user agent's default <code>select</code> element presentation cannot be modified by the author, so it passes regardless of
                         the quality of the focus indicator</figcaption>
                      </figure>  
                   
@@ -947,15 +965,15 @@
                   <ol>
                      
                      <li>
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G195" class="general">Using an author-supplied, highly visible focus indicator</a>
+                        <a class="general" href="/techniques/general/G195">G195: Using an author-supplied, visible focus indicator</a>
                         </li>
                      
                      <li>
-                        <a href="../../techniques/css/C40">Creating a two-color focus indicator to ensure sufficient contrast</a>
+                        <a href="/techniques/css/C40">C40: Creating a two-color focus indicator to ensure sufficient contrast with all components</a>
                         </li>
                      
                      <li>
-                        <a href="../../techniques/css/C41">Creating a contrasting focus indicator inside the component</a>
+                        <a href="/techniques/css/C41">C41: Creating a strong focus indicator within the component</a>
                         </li>
                      </ol>
                </section>
@@ -994,7 +1012,6 @@
                   <dd>
                      <definition xmlns="">
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">solidly bounds or surrounds</p>
                         </definition>
@@ -1003,7 +1020,6 @@
                   <dd>
                      <definition xmlns="">
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">pixels that are changed to visually indicate when a user interface component is in
                            a focused state
@@ -1015,7 +1031,6 @@
                   <dd>
                      <definition xmlns="">
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">the smallest enclosing rectangle aligned to the horizontal axis within which all the
                            points of a shape lie. For components which wrap onto multiple lines as part of a
@@ -1027,7 +1042,6 @@
                   <dd>
                      <definition xmlns="">
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">continuous line forming the boundary of a shape not including shared pixels, or the
                            <a href="#dfn-minimum-bounding-box">minimum bounding box</a>, whichever is shortest.</p>
@@ -1044,18 +1058,27 @@
                            function
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Multiple user interface components may be implemented as a single programmatic element.
-                           "Components" here is not tied to programming techniques, but rather to what the user
-                           perceives as separate controls.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Multiple user interface components may be implemented as a single programmatic element.
+                              "Components" here is not tied to programming techniques, but rather to what the user
+                              perceives as separate controls.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">User interface components include form elements and links as well as components generated
-                           by scripts.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>User interface components include form elements and links as well as components generated
+                              by scripts.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">What is meant by "component" or "user interface component" here is also sometimes
-                           called "user interface element".
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>What is meant by "component" or "user interface component" here is also sometimes
+                              called "user interface element".
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">An applet has a "control" that can be used to move through content by line or page
                            or random access. Since each of these would need to have a name and be settable independently,
@@ -1080,7 +1103,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

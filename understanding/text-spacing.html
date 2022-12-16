@@ -173,7 +173,7 @@
                      
                      <figure id="figure-text-cut">
                         
-                        <figcaption>Vertical text cut off is a failure.</figcaption>
+                        <figcaption>Figure 1 Vertical text cut off is a failure.</figcaption>
                         <img src="img/spacing_cutoff_fail_vertical.png" alt="Heading text truncated vertically." width="420" height="190" />         
                         </figure>
                      
@@ -185,7 +185,7 @@
                      
                      <figure id="figure-horiz-text-cut">
                         
-                        <figcaption>Horizontal text cut off is a failure.</figcaption>
+                        <figcaption>Figure 2 Horizontal text cut off is a failure.</figcaption>
                         <img src="img/spacing_cutoff_fail_horizontal.png" alt="3 side-by-side headings with truncated text." width="509" height="184" />         
                         </figure>
                      		</section>
@@ -202,7 +202,7 @@
                      
                      <figure id="figure-overlapping-text">
                         
-                        <figcaption>Overlapping text is a failure.</figcaption>
+                        <figcaption>Figure 3 Overlapping text is a failure.</figcaption>
                         <img src="img/spacing_overlap_fail.png" alt="Heading text overlaps part of paragraph text." width="510" height="170" />            
                         </figure>
                      		</section>
@@ -330,11 +330,10 @@
                   <h3>Sufficient Techniques</h3>
                   <ul>
                      
-                     <li><a href="../../techniques/CSS/C36">Allowing for Spacing Override (Draft)
-                           </a>
+                     <li><a href="/techniques/css/C36">C36: Allowing for text spacing override</a>
                         </li>
                      	
-                     <li><a href="../../techniques/CSS/C35">C35</a></li>
+                     <li><a href="/techniques/css/C35">C35: Allowing for text spacing without wrapping</a></li>
                      </ul>
                </section>
                <section id="advisory">
@@ -344,11 +343,11 @@
                      used or would be effective in all situations.</p>
                   <ul>
                      	
-                     <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C8" class="css">C8: Using CSS letter-spacing to control spacing within a word</a></li>
+                     <li><a class="css" href="/techniques/css/C8">C8: Using CSS letter-spacing to control spacing within a word</a></li>
                      	
-                     <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C21" class="css">C21: Specifying line spacing in CSS</a></li>
+                     <li><a class="css" href="/techniques/css/C21">C21: Specifying line spacing in CSS</a></li>
                      	
-                     <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C28" class="css">C28: Specifying the size of text containers using em units </a></li>
+                     <li><a class="css" href="/techniques/css/C28">C28: Specifying the size of text containers using em units</a></li>
                      </ul>
                </section>
                <section id="failure">
@@ -357,7 +356,8 @@
                      by the WCAG Working Group.</p>
                   <ul>
                      		
-                     <li><a href="../../techniques/failures/F104"></a></li>
+                     <li><a href="/techniques/failures/F104">F104: Failure of Success Criterion 1.4.12 due to clipped or overlapped content when text
+                           spacing is adjusted</a></li>
                      	</ul>
                </section>
             </section>
@@ -374,26 +374,35 @@
                            of users with disabilities that go beyond those offered by mainstream user agents
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
-                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
-                           voice), additional navigation or orientation mechanisms, and content transformations
-                           (e.g., to make tables more accessible).
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>functionality provided by assistive technology includes alternative presentations
+                              (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                              voice), additional navigation or orientation mechanisms, and content transformations
+                              (e.g., to make tables more accessible).
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
-                           by using and monitoring APIs.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Assistive technologies often communicate data and messages with mainstream user agents
+                              by using and monitoring APIs.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
-                           Many mainstream user agents provide some features to assist individuals with disabilities.
-                           The basic difference is that mainstream user agents target broad and diverse audiences
-                           that usually include people with and without disabilities. Assistive technologies
-                           target narrowly defined populations of users with specific disabilities. The assistance
-                           provided by an assistive technology is more specific and appropriate to the needs
-                           of its target users. The mainstream user agent may provide important functionality
-                           to assistive technologies like retrieving Web content from program objects or parsing
-                           markup into identifiable bundles.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The distinction between mainstream user agents and assistive technologies is not absolute.
+                              Many mainstream user agents provide some features to assist individuals with disabilities.
+                              The basic difference is that mainstream user agents target broad and diverse audiences
+                              that usually include people with and without disabilities. Assistive technologies
+                              target narrowly defined populations of users with specific disabilities. The assistance
+                              provided by an assistive technology is more specific and appropriate to the needs
+                              of its target users. The mainstream user agent may provide important functionality
+                              to assistive technologies like retrieving Web content from program objects or parsing
+                              markup into identifiable bundles.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
                            the following:
@@ -436,8 +445,11 @@
                            with humans
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">See also <a href="#dfn-sign-language">sign language</a>.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>See also <a href="#dfn-sign-language">sign language</a>.
+                              </p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-image-of-text">image of text</dt>
@@ -448,8 +460,11 @@
                            a particular visual effect
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">This does not include <a href="#dfn-text">text</a> that is part of a picture that contains significant other visual content.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>This does not include <a href="#dfn-text">text</a> that is part of a picture that contains significant other visual content.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">A person's name on a nametag in a photograph.</p>
                         </definition>
@@ -542,7 +557,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

@@ -38,8 +38,7 @@
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path></svg> Guideline: Predictable</a></li>
                   <li class="nav__item"><a href="change-on-request"><svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>Previous SC: Change on Request</a></li>
-                  <li class="nav__item"><a href="">Next : <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
-                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg></a></li>
+                  <li class="nav__item"></li>
                </ul>
             </nav>
          </div>
@@ -77,15 +76,21 @@
                      
                      <li>A fully automated contact mechanism.</li>
                      </ul>
-                  <p class="note">Help mechanisms may be provided directly on the page, or may be provided via a direct
-                     link to a different page containing the information.</p>
-                  <p class="note">For this Success Criterion, the same relative order can be thought of as how the content
-                     is ordered when the page is serialized. The visual position of a help mechanism is
-                     likely to be consistent across pages for the same page variation (e.g., CSS break-point).
-                     The user can initiate a change, such as changing the page's zoom or orientation, which
-                     may trigger a different page variation. This criterion is concerned with relative
-                     order across pages displayed in the same page variation (e.g., same zoom level and
-                     orientation).</p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>Help mechanisms may be provided directly on the page, or may be provided via a direct
+                        link to a different page containing the information.</p>
+                  </div>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>For this Success Criterion, the same relative order can be thought of as how the content
+                        is ordered when the page is serialized. The visual position of a help mechanism is
+                        likely to be consistent across pages for the same page variation (e.g., CSS break-point).
+                        The user can initiate a change, such as changing the page's zoom or orientation, which
+                        may trigger a different page variation. This criterion is concerned with relative
+                        order across pages displayed in the same page variation (e.g., same zoom level and
+                        orientation).</p>
+                  </div>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -243,7 +248,7 @@
                   <h3>Sufficient Techniques</h3>
                   <ol>
                      
-                     <li><a href="../../techniques/general/G220" class="general">Provide a contact-us link in a consistent location</a></li>
+                     <li><a class="general" href="/techniques/general/G220">G220: Provide a contact-us link in a consistent location</a></li>
                      </ol>
                </section>
                <section id="failure">
@@ -270,26 +275,35 @@
                            of users with disabilities that go beyond those offered by mainstream user agents
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
-                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
-                           voice), additional navigation or orientation mechanisms, and content transformations
-                           (e.g., to make tables more accessible).
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>functionality provided by assistive technology includes alternative presentations
+                              (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                              voice), additional navigation or orientation mechanisms, and content transformations
+                              (e.g., to make tables more accessible).
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
-                           by using and monitoring APIs.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Assistive technologies often communicate data and messages with mainstream user agents
+                              by using and monitoring APIs.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
-                           Many mainstream user agents provide some features to assist individuals with disabilities.
-                           The basic difference is that mainstream user agents target broad and diverse audiences
-                           that usually include people with and without disabilities. Assistive technologies
-                           target narrowly defined populations of users with specific disabilities. The assistance
-                           provided by an assistive technology is more specific and appropriate to the needs
-                           of its target users. The mainstream user agent may provide important functionality
-                           to assistive technologies like retrieving Web content from program objects or parsing
-                           markup into identifiable bundles.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The distinction between mainstream user agents and assistive technologies is not absolute.
+                              Many mainstream user agents provide some features to assist individuals with disabilities.
+                              The basic difference is that mainstream user agents target broad and diverse audiences
+                              that usually include people with and without disabilities. Assistive technologies
+                              target narrowly defined populations of users with specific disabilities. The assistance
+                              provided by an assistive technology is more specific and appropriate to the needs
+                              of its target users. The mainstream user agent may provide important functionality
+                              to assistive technologies like retrieving Web content from program objects or parsing
+                              markup into identifiable bundles.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
                            the following:
@@ -338,7 +352,10 @@
                            full set of pages.
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Different language versions would be considered different sets of Web pages.</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Different language versions would be considered different sets of Web pages.</p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-user-agent">user agent</dt>
@@ -359,13 +376,19 @@
                            that are used in the rendering or intended to be rendered together with it by a <a href="#dfn-user-agent">user agent</a>
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Although any "other resources" would be rendered together with the primary resource,
-                           they would not necessarily be rendered simultaneously with each other.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Although any "other resources" would be rendered together with the primary resource,
+                              they would not necessarily be rendered simultaneously with each other.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">For the purposes of conformance with these guidelines, a resource must be "non-embedded"
-                           within the scope of conformance to be considered a Web page.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>For the purposes of conformance with these guidelines, a resource must be "non-embedded"
+                              within the scope of conformance to be considered a Web page.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web resource including all embedded images and media.</p>
                         
@@ -405,7 +428,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

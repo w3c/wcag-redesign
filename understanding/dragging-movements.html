@@ -65,9 +65,12 @@
                <header class="box-h  box-h-icon"> Success Criterion (SC)</header>
                <div class="box-i">
                   <p>All functionality that uses a <a href="#dfn-dragging-movement">dragging movement</a> for operation can be achieved by a <a href="#dfn-single-pointer">single pointer</a> without dragging, unless dragging is <a href="#dfn-essential">essential</a> or the functionality is determined by the user agent and not modified by the author.</p>
-                  <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this
-                     does not apply to actions that are required to operate the user agent or assistive
-                     technology).</p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>This requirement applies to web content that interprets pointer actions (i.e. this
+                        does not apply to actions that are required to operate the user agent or assistive
+                        technology).</p>
+                  </div>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -196,8 +199,8 @@
                   <ol>
                      
                      <li>
-                        <a href="../../techniques/general/G219" class="general">Ensuring that a single pointer operable alternative is available for dragging movements
-                           that operate on content</a>
+                        <a class="general" href="/techniques/general/G219">G219: Ensuring that a single pointer alternative is available for dragging movements that
+                           operate on content</a>
                         </li>
                      </ol>
                </section>
@@ -208,7 +211,7 @@
                   <ul>
                      
                      <li>								         
-                        <a href="../../techniques/failures/F108" class="failure">Failure of Success Criterion 2.5.X Dragging due to not providing a single pointer
+                        <a class="failure" href="/techniques/failures/F108">F108: Failure of Success Criterion 2.5.X Dragging due to not providing a single pointer
                            method for the user to operate a function that does not require a dragging movement</a>						       
                         </li>
                      </ul>
@@ -223,12 +226,14 @@
                   <dd>
                      <definition xmlns="">
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">an operation where the pointer engages with an element on the down event and the element
                            (or a representation of its position) follows the pointer until an up event</p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Examples of draggable elements include list items, text elements, and images.</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Examples of draggable elements include list items, text elements, and images.</p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-essential">essential</dt>
@@ -265,7 +270,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

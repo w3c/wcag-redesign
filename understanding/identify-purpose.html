@@ -38,8 +38,7 @@
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path></svg> Guideline: Adaptable</a></li>
                   <li class="nav__item"><a href="identify-input-purpose"><svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>Previous SC: Identify Input Purpose</a></li>
-                  <li class="nav__item"><a href="">Next : <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
-                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg></a></li>
+                  <li class="nav__item"></li>
                </ul>
             </nav>
          </div>
@@ -163,7 +162,7 @@
                      					
                      <li>Programmatically indicating the purpose of icons, regions and user interface components</li>
                      					
-                     <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11" class="aria">ARIA11: Using ARIA landmarks to identify regions of a page</a> AND</li>
+                     <li><a class="aria" href="/techniques/aria/ARIA11">ARIA11: Using ARIA landmarks to identify regions of a page</a> AND</li>
                      					
                      <li>Using microdata to markup user interface components (future link)</li>
                      				</ul>
@@ -196,26 +195,35 @@
                            of users with disabilities that go beyond those offered by mainstream user agents
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
-                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
-                           voice), additional navigation or orientation mechanisms, and content transformations
-                           (e.g., to make tables more accessible).
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>functionality provided by assistive technology includes alternative presentations
+                              (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                              voice), additional navigation or orientation mechanisms, and content transformations
+                              (e.g., to make tables more accessible).
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
-                           by using and monitoring APIs.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Assistive technologies often communicate data and messages with mainstream user agents
+                              by using and monitoring APIs.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
-                           Many mainstream user agents provide some features to assist individuals with disabilities.
-                           The basic difference is that mainstream user agents target broad and diverse audiences
-                           that usually include people with and without disabilities. Assistive technologies
-                           target narrowly defined populations of users with specific disabilities. The assistance
-                           provided by an assistive technology is more specific and appropriate to the needs
-                           of its target users. The mainstream user agent may provide important functionality
-                           to assistive technologies like retrieving Web content from program objects or parsing
-                           markup into identifiable bundles.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The distinction between mainstream user agents and assistive technologies is not absolute.
+                              Many mainstream user agents provide some features to assist individuals with disabilities.
+                              The basic difference is that mainstream user agents target broad and diverse audiences
+                              that usually include people with and without disabilities. Assistive technologies
+                              target narrowly defined populations of users with specific disabilities. The assistance
+                              provided by an assistive technology is more specific and appropriate to the needs
+                              of its target users. The mainstream user agent may provide important functionality
+                              to assistive technologies like retrieving Web content from program objects or parsing
+                              markup into identifiable bundles.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
                            the following:
@@ -274,7 +282,10 @@
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">perceivable, programmatically determined section of content</p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">In HTML, any area designated with a landmark role would be a region.</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>In HTML, any area designated with a landmark role would be a region.</p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-user-agent">user agent</dt>
@@ -295,18 +306,27 @@
                            function
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Multiple user interface components may be implemented as a single programmatic element.
-                           "Components" here is not tied to programming techniques, but rather to what the user
-                           perceives as separate controls.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Multiple user interface components may be implemented as a single programmatic element.
+                              "Components" here is not tied to programming techniques, but rather to what the user
+                              perceives as separate controls.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">User interface components include form elements and links as well as components generated
-                           by scripts.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>User interface components include form elements and links as well as components generated
+                              by scripts.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">What is meant by "component" or "user interface component" here is also sometimes
-                           called "user interface element".
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>What is meant by "component" or "user interface component" here is also sometimes
+                              called "user interface element".
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">An applet has a "control" that can be used to move through content by line or page
                            or random access. Since each of these would need to have a name and be settable independently,
@@ -331,7 +351,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

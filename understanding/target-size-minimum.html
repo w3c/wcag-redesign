@@ -38,8 +38,7 @@
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path></svg> Guideline: Input Modalities</a></li>
                   <li class="nav__item"><a href="dragging-movements"><svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>Previous SC: Dragging Movements</a></li>
-                  <li class="nav__item"><a href="">Next : <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
-                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg></a></li>
+                  <li class="nav__item"></li>
                </ul>
             </nav>
          </div>
@@ -85,10 +84,13 @@
                      <li>
                         <strong>Essential:</strong> A particular presentation of the target is <a href="#dfn-essential">essential</a> or is legally required for the information being conveyed;</li>
                      </ul>
-                  <p class="note">Targets that allow for values to be selected spatially based on position within the
-                     target are considered one target for the purpose of the success criterion. Examples
-                     include sliders with granular values, color pickers displaying a gradient of colors,
-                     or editable areas where you position the cursor.</p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>Targets that allow for values to be selected spatially based on position within the
+                        target are considered one target for the purpose of the success criterion. Examples
+                        include sliders with granular values, color pickers displaying a gradient of colors,
+                        or editable areas where you position the cursor.</p>
+                  </div>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -189,7 +191,7 @@
                <figure id="pointer-target-24x24">
                   <img src="img/pointer-target-example1-full.png" alt="Four rows of icons with measurements, the first three passing,the last failing the requirement." />
                   
-                  <figcaption>Four rows of targets, illustrating three ways of meeting this Success Criterion and
+                  <figcaption>Figure 1 Four rows of targets, illustrating three ways of meeting this Success Criterion and
                      one way of failing it.</figcaption>
                   </figure>
                <p>When targets are not 24 by 24 CSS pixels, it is still possible to meet this Success
@@ -200,14 +202,14 @@
                <figure id="pointer-target-44x20-spacing">
                   <img src="img/pointer-target-example3-v2.png" alt="A row of buttons which are more that 44px wide and 20 CSS pixels high. There are no targets above or below." />
                   
-                  <figcaption>The widths of the buttons with adjacent neighbors is above 24 CSS pixels, while the
+                  <figcaption>Figure 2 The widths of the buttons with adjacent neighbors is above 24 CSS pixels, while the
                      height is only 20 CSS pixels. However, the lack of adjacent targets above and below
                      means that the targets pass this Success Criterion.</figcaption>
                   </figure>
                <figure id="pointer-target-44-20-nospace">
                   <img src="img/pointer-target-example4-v2.png" alt="Two rows of buttons only 20 CSS pixels high, with no spacing between them." />
                   
-                  <figcaption><strong>Fail:</strong> Two rows of buttons, both with a height of only 20 CSS pixels. The rows are flush,
+                  <figcaption>Figure 3 <strong>Fail:</strong> Two rows of buttons, both with a height of only 20 CSS pixels. The rows are flush,
                      with no gap between them, which means that the offset from the top of the targets
                      in the top row to the top of targets in the row below is below 24px, thus failing
                      the Success Criterion.</figcaption>
@@ -219,7 +221,7 @@
                <figure id="pointer-target-dropdown">
                   <img src="img/pointer-target-example4.jpg" alt="A dropdown menu - a pass example with menu items 24 CSS pixels high, and a fail example with menu items only 20 CSS pixels high." />
                   
-                  <figcaption>A dropdown menu is shown. The PASS example has menu items which are 24 CSS pixels
+                  <figcaption>Figure 4 A dropdown menu is shown. The PASS example has menu items which are 24 CSS pixels
                      high. In the FAIL example, the menu items are only 20 CSS pixels high.</figcaption>
                   </figure>
                <p>The following three examples illustrate how a target's position relative to another
@@ -239,12 +241,12 @@
                <figure id="pointer-target-embedded">
                   <img src="img/pointer-target-example5-revised.png" alt="Three examples of a target adjacent to, or nested within, another target (see legend below)" />
                   
-                  <figcaption>Three illustrations showing the offsets between two targets when they abut and overlap.</figcaption>
+                  <figcaption>Figure 5 Three illustrations showing the offsets between two targets when they abut and overlap.</figcaption>
                   </figure>
                <figure id="pointer-target-inline-links">
                   <img src="img/pointer-target-example6-inline-links.png" alt="Inline links in a block of text and in an ordered list (see legend below)" />
                   
-                  <figcaption>Two examples show inline text links. The first example has various links in a block
+                  <figcaption>Figure 6 Two examples show inline text links. The first example has various links in a block
                      of text. The font size is 14px, line height is 16.8px. Depending on the position of
                      links in the text, the vertical offset of links is smaller than 24 CSS pixels. For
                      linked footnote numbers, the horizontal offset is also below 24 CSS pixels. The inline
@@ -254,7 +256,7 @@
                <figure id="pointer-target-stacked-links">
                   <img src="img/pointer-target-example7-stacked-links.png" alt="A bulleted list of stacked links with sufficient and insufficient offset (see legend below)" />
                   
-                  <figcaption>The two examples show lists of stacked links as used in navigation, for example in
+                  <figcaption>Figure 7 The two examples show lists of stacked links as used in navigation, for example in
                      a list of contents of a longer text page. In both cases, the font size is 14px. In
                      the first example, the line height is 25.8px, exceeding the requirement of 24 CSS
                      pixels. In the second example, the stacked links have a line height of just 16.8px.
@@ -276,14 +278,14 @@
                <figure id="target-size-minimum">
                   <img src="img/target-size-minimum-diagram.png" alt="Illustration showing four 24 by 24 pixel buttons ('play', 'previous', 'next', 'settings') arranged side by side in a row. Another row shows the same buttons, now reduced to a target size of 10 by 10 pixels, with spacing of 14 pixels on all sides of each button." />
                   
-                  <figcaption>Targets that are 24 by 24 pixels or larger can be arranged closely together. Reducing
+                  <figcaption>Figure 8 Targets that are 24 by 24 pixels or larger can be arranged closely together. Reducing
                      the target size to 10 by 10 pixels requires spacing/clearance of 14 pixels around
                      each target, meaning that the overall space occupied by the four targets is bigger.</figcaption>
                   </figure>
                <figure id="target-size-minimum-redux">
                   <img src="img/target-size-minimum.png" alt="First diagram: five 24 by 24 pixel targets, arranged in a cross (one target at the center, one target above, one to the right, one below, and one to the left), with no gaps. This passes. Second diagram: reducing the size of the central target to 10 by 10 pixels, while leaving the outer targets unchanged, leads to spacing of only 7 pixels between the central target and the outer targets. This fails. Third diagram: to pass, the outer targets need to be moved further away from the central target 10 by 10 pixel target, with spacing of 14 pixels." />
                   
-                  <figcaption>In this (hypothetical) cross arrangement of five 24 by 24 pixel targets, shrinking
+                  <figcaption>Figure 9 In this (hypothetical) cross arrangement of five 24 by 24 pixel targets, shrinking
                      the central target to 10 by 10 pixels, with spacing of only 7 pixels to the other
                      targets, will fail the Success Criterion. To pass, the outer targets will need to
                      be moved further out, to achieve a spacing of 14 pixels - leading to an increase of
@@ -350,7 +352,7 @@
                   <ol>
                      
                      <li>
-                        <a href="../../techniques/css/C42" class="css">Using min-height and min-width to ensure sufficient target spacing</a>
+                        <a class="css" href="/techniques/css/C42">C42: Using min-height and min-width to ensure sufficient target spacing</a>
                         </li>
                      </ol>
                </section>
@@ -392,8 +394,11 @@
                            such as a mouse, pen, or touch contact
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">See the <a href="https://www.w3.org/TR/pointerevents/#dfn-pointer">Pointer Events
-                              definition for "pointer"</a> [[!pointerevents]].</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>See the <a href="https://www.w3.org/TR/pointerevents/#dfn-pointer">Pointer Events
+                                 definition for "pointer"</a> [[!pointerevents]].</p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-target">target</dt>
@@ -403,22 +408,27 @@
                         <p xmlns="http://www.w3.org/1999/xhtml">region of the display that will accept a pointer action, such as the interactive area
                            of a user interface component</p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">If two or more targets are overlapping, the overlapping area should not be included
-                           in the measurement of the target size, except when the overlapping targets perform
-                           the same action or open the same page.</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>If two or more targets are overlapping, the overlapping area should not be included
+                              in the measurement of the target size, except when the overlapping targets perform
+                              the same action or open the same page.</p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-target-offset">target offset</dt>
                   <dd>
                      <definition xmlns="">
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="change">New</p>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml">the distance measured from the farthest point of a target (A), to the nearest point
                            of the second target (B). The offset includes the target and spacing around the target.</p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The offset from A to B may be different than the offset from B to A, if the sizes
-                           of these targets differ.</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The offset from A to B may be different than the offset from B to A, if the sizes
+                              of these targets differ.</p>
+                        </div>
                         </definition>
                   </dd>
                </details>
@@ -438,7 +448,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

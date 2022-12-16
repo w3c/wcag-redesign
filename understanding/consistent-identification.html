@@ -228,7 +228,7 @@
                      
                      <p>An icon with alt text and a link are next to each other and go to the same location.
                         The best practice would be to group them into one link as per 
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H2" class="html"></a>. However if they are visually positioned one above the other but separated in the
+                        <a class="html" href="/techniques/html/H2">H2: Combining adjacent image and text links for the same resource</a>. However if they are visually positioned one above the other but separated in the
                         source, this may not be possible. To meet the Success Criterion, the link text for
                         these two links need only be consistent, not identical. But best practice is to have
                         identical text so that when users encounter the second one, it is clear that it goes
@@ -292,9 +292,8 @@
                      
                      <li>
                         
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G197" class="general">Using consistent labels, names, and text alternatives for content that has the same
-                           functionality.
-                           </a>
+                        <a class="general" href="/techniques/general/G197">G197: Using labels, names, and text alternatives consistently for content that has the same
+                           functionality</a>
                         									         
                         <strong>AND</strong> following the 
                         <a href="non-text-content#techniques" class="understanding">sufficient techniques for Success Criterion 1.1.1</a> and 
@@ -303,28 +302,31 @@
                      
                      </ol>
                   <div class="note">
-                     
-                     
-                     <p>Text alternatives that are "consistent" are not always "identical." For instance,
-                        you may have a graphical arrow at the bottom of a Web page that links to the next
-                        Web page. The text alternative may say "Go to page 4." Naturally, it would not be
-                        appropriate to repeat this exact text alternative on the next Web page. It would be
-                        more appropriate to say "Go to page 5". Although these text alternatives would not
-                        be identical, they would be consistent, and therefore would satisfy this Success Criterion.
-                        </p>
-                     
-                     
-                     <p> A single non-text-content-item may be used to serve different functions. In such
-                        cases, different text alternatives are necessary and should be used. Examples can
-                        be commonly found with the use of icons such as check marks, cross marks, and traffic
-                        signs. Their functions can be different depending on the context of the Web page.
-                        A check mark icon may function as "approved", "completed", or "included", to name
-                        a few, depending on the situation. Using "check mark" as text alternative across all
-                        Web pages does not help users understand the function of the icon. Different text
-                        alternatives can be used when the same non-text content serves multiple functions.
-                        </p>
-                     
-                     </div>
+                     <div role="heading" class="note-title marker" aria-level="4">Note</div>
+                     <div>
+                        
+                        
+                        <p>Text alternatives that are "consistent" are not always "identical." For instance,
+                           you may have a graphical arrow at the bottom of a Web page that links to the next
+                           Web page. The text alternative may say "Go to page 4." Naturally, it would not be
+                           appropriate to repeat this exact text alternative on the next Web page. It would be
+                           more appropriate to say "Go to page 5". Although these text alternatives would not
+                           be identical, they would be consistent, and therefore would satisfy this Success Criterion.
+                           </p>
+                        
+                        
+                        <p> A single non-text-content-item may be used to serve different functions. In such
+                           cases, different text alternatives are necessary and should be used. Examples can
+                           be commonly found with the use of icons such as check marks, cross marks, and traffic
+                           signs. Their functions can be different depending on the context of the Web page.
+                           A check mark icon may function as "approved", "completed", or "included", to name
+                           a few, depending on the situation. Using "check mark" as text alternative across all
+                           Web pages does not help users understand the function of the icon. Different text
+                           alternatives can be used when the same non-text content serves multiple functions.
+                           </p>
+                        
+                        </div>
+                  </div>
                </section>
                <section id="failure">
                   <h3>Failures</h3>
@@ -335,7 +337,8 @@
                      
                      <li>
                         									         
-                        <a href="https://www.w3.org/WAI/WCAG21/Techniques/failures/F31" class="failure">Failure due to using two different labels for the same function on different pages</a>
+                        <a class="failure" href="/techniques/failures/F31">F31: Failure of Success Criterion 3.2.4 due to using two different labels for the same
+                           function on different Web pages within a set of Web pages </a>
                         								       
                         </li>
                      
@@ -355,26 +358,35 @@
                            of users with disabilities that go beyond those offered by mainstream user agents
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
-                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
-                           voice), additional navigation or orientation mechanisms, and content transformations
-                           (e.g., to make tables more accessible).
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>functionality provided by assistive technology includes alternative presentations
+                              (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                              voice), additional navigation or orientation mechanisms, and content transformations
+                              (e.g., to make tables more accessible).
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
-                           by using and monitoring APIs.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Assistive technologies often communicate data and messages with mainstream user agents
+                              by using and monitoring APIs.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
-                           Many mainstream user agents provide some features to assist individuals with disabilities.
-                           The basic difference is that mainstream user agents target broad and diverse audiences
-                           that usually include people with and without disabilities. Assistive technologies
-                           target narrowly defined populations of users with specific disabilities. The assistance
-                           provided by an assistive technology is more specific and appropriate to the needs
-                           of its target users. The mainstream user agent may provide important functionality
-                           to assistive technologies like retrieving Web content from program objects or parsing
-                           markup into identifiable bundles.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The distinction between mainstream user agents and assistive technologies is not absolute.
+                              Many mainstream user agents provide some features to assist individuals with disabilities.
+                              The basic difference is that mainstream user agents target broad and diverse audiences
+                              that usually include people with and without disabilities. Assistive technologies
+                              target narrowly defined populations of users with specific disabilities. The assistance
+                              provided by an assistive technology is more specific and appropriate to the needs
+                              of its target users. The mainstream user agent may provide important functionality
+                              to assistive technologies like retrieving Web content from program objects or parsing
+                              markup into identifiable bundles.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
                            the following:
@@ -436,7 +448,10 @@
                            full set of pages.
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Different language versions would be considered different sets of Web pages.</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Different language versions would be considered different sets of Web pages.</p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-user-agent">user agent</dt>
@@ -457,13 +472,19 @@
                            that are used in the rendering or intended to be rendered together with it by a <a href="#dfn-user-agent">user agent</a>
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Although any "other resources" would be rendered together with the primary resource,
-                           they would not necessarily be rendered simultaneously with each other.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Although any "other resources" would be rendered together with the primary resource,
+                              they would not necessarily be rendered simultaneously with each other.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">For the purposes of conformance with these guidelines, a resource must be "non-embedded"
-                           within the scope of conformance to be considered a Web page.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>For the purposes of conformance with these guidelines, a resource must be "non-embedded"
+                              within the scope of conformance to be considered a Web page.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web resource including all embedded images and media.</p>
                         
@@ -503,7 +524,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

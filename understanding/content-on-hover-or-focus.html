@@ -38,8 +38,7 @@
                            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"></path></svg> Guideline: Distinguishable</a></li>
                   <li class="nav__item"><a href="text-spacing"><svg focusable="false" aria-hidden="true" class="icon-arrow-left-thin pager-icon" viewBox="0 0 16 16">
                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>Previous SC: Text Spacing</a></li>
-                  <li class="nav__item"><a href="">Next : <svg focusable="false" aria-hidden="true" class="icon-arrow-right-thin pager-icon" viewBox="0 0 16 16">
-                           <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg></a></li>
+                  <li class="nav__item"></li>
                </ul>
             </nav>
          </div>
@@ -86,11 +85,17 @@
                      </dl>
                   <p>Exception: The visual presentation of the additional content is controlled by the
                      user agent and is not modified by the author.</p>
-                  <p class="note">Examples of additional content controlled by the user agent include browser tooltips
-                     created through use of the HTML <a href="https://www.w3.org/TR/html/dom.html#the-title-attribute">
-                        <code>title</code> attribute</a>.</p>
-                  <p class="note">Custom tooltips, sub-menus, and other nonmodal popups that display on hover and focus
-                     are examples of additional content covered by this criterion.</p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>Examples of additional content controlled by the user agent include browser tooltips
+                        created through use of the HTML <a href="https://www.w3.org/TR/html/dom.html#the-title-attribute">
+                           <code>title</code> attribute</a>.</p>
+                  </div>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>Custom tooltips, sub-menus, and other nonmodal popups that display on hover and focus
+                        are examples of additional content covered by this criterion.</p>
+                  </div>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -129,10 +134,13 @@
                   <li>persistent</li>
                   				</ul>
                <p>Each of these is discussed in a separate section.</p>
-               <p class="note">This SC covers content that appears in addition to the triggering component itself.
-                  Therefore, a non-visible component, like a Skip to Main link, that is made visible
-                  on keyboard focus (with no <em>additional</em> content beyond the trigger becoming visible) is not covered by the SC.
-                  			</p>
+               <div class="note">
+                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                  <p>This SC covers content that appears in addition to the triggering component itself.
+                     Therefore, a non-visible component, like a Skip to Main link, that is made visible
+                     on keyboard focus (with no <em>additional</em> content beyond the trigger becoming visible) is not covered by the SC.
+                     			</p>
+               </div>
                <section id="dismissable">
                   			
                   <h3>Dismissable</h3>
@@ -258,7 +266,7 @@
                      				<img src="img/button-pointer-tooltip.png" alt="Screenshot of a button with a mouse pointer over it, and a tooltip displayed  below the button" />
                      				<img src="img/button-pointer.png" alt="Screenshot of a button with a mouse pointer over it, and no tooltip" />
                      				
-                     <figcaption>A tooltip is displayed below a LVTF button on hover so as not to obscure the button
+                     <figcaption>Figure 1 A tooltip is displayed below a LVTF button on hover so as not to obscure the button
                         itself. It does however obscure content below the button (the next red button, called
                         ~comment-zoom-content). To meet the Dismissible requirement, a user can press the
                         Escape key to clear the tooltip without moving the mouse, as demonstrated in the second
@@ -268,7 +276,7 @@
                   <figure id="figure-focused-button-no-tooltip">
                      				<img src="img/button-focus-indicator.png" alt="Screenshot of a button with a focus indicator on it, and no tooltip" />
                      				
-                     <figcaption>The button's tooltip also appears on focus and can be removed with the Escape key.
+                     <figcaption>Figure 2 The button's tooltip also appears on focus and can be removed with the Escape key.
                         The screen shot shows the same LVTF button with focus, but the tooltip has been dismissed
                         and is no longer visible.</figcaption>
                      				</figure>
@@ -281,7 +289,7 @@
                      				<img src="img/button-pointer-on-tooltip.png" alt="Screenshot of a button with a large mouse pointer over it, and a tooltip displayed  below the button which is obscured by the large pointer" />
                      				<img src="img/button-pointer-below-tooltip.png" alt="Screenshot of a button with a tooltip below it, and a large mouse pointer at the bottom of the tooltip" />
                      				
-                     <figcaption>A button's tooltip is displayed directly below it on mouse hover which can easily
+                     <figcaption>Figure 3 A button's tooltip is displayed directly below it on mouse hover which can easily
                         be obscured by a large pointer.  The tooltip itself is able to be hovered so the mouse
                         pointer can be moved down to its bottom edge in order to view the tooltip text.</figcaption>
                      				</figure>
@@ -305,7 +313,7 @@
                   <h3>Sufficient Techniques</h3>
                   <ul>
                      						
-                     <li><a href="../../techniques/client-side-script/SCR39.html">Making content on focus or hover hoverable, dismissible, and persistent</a></li>
+                     <li><a href="/techniques/client-side-script/SCR39">SCR39: Making content on focus or hover hoverable, dismissible, and persistent</a></li>
                      						
                      <li>ARIA: Using role="tooltip" (Potential future technique)</li>
                      						
@@ -318,7 +326,7 @@
                      by the WCAG Working Group.</p>
                   <ul>
                      					
-                     <li><a href="../../techniques/failures/F95.html">F95</a></li>
+                     <li><a href="/techniques/failures/F95">F95: Failure of Success Criterion 1.4.13 due to content shown on hover not being hoverable</a></li>
                      					
                      <li>Failure to make content dismissable without moving pointer hover or keyboard focus
                         (Potential future technique)</li>
@@ -341,26 +349,35 @@
                            of users with disabilities that go beyond those offered by mainstream user agents
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">functionality provided by assistive technology includes alternative presentations
-                           (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
-                           voice), additional navigation or orientation mechanisms, and content transformations
-                           (e.g., to make tables more accessible).
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>functionality provided by assistive technology includes alternative presentations
+                              (e.g., as synthesized speech or magnified content), alternative input methods (e.g.,
+                              voice), additional navigation or orientation mechanisms, and content transformations
+                              (e.g., to make tables more accessible).
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Assistive technologies often communicate data and messages with mainstream user agents
-                           by using and monitoring APIs.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Assistive technologies often communicate data and messages with mainstream user agents
+                              by using and monitoring APIs.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The distinction between mainstream user agents and assistive technologies is not absolute.
-                           Many mainstream user agents provide some features to assist individuals with disabilities.
-                           The basic difference is that mainstream user agents target broad and diverse audiences
-                           that usually include people with and without disabilities. Assistive technologies
-                           target narrowly defined populations of users with specific disabilities. The assistance
-                           provided by an assistive technology is more specific and appropriate to the needs
-                           of its target users. The mainstream user agent may provide important functionality
-                           to assistive technologies like retrieving Web content from program objects or parsing
-                           markup into identifiable bundles.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The distinction between mainstream user agents and assistive technologies is not absolute.
+                              Many mainstream user agents provide some features to assist individuals with disabilities.
+                              The basic difference is that mainstream user agents target broad and diverse audiences
+                              that usually include people with and without disabilities. Assistive technologies
+                              target narrowly defined populations of users with specific disabilities. The assistance
+                              provided by an assistive technology is more specific and appropriate to the needs
+                              of its target users. The mainstream user agent may provide important functionality
+                              to assistive technologies like retrieving Web content from program objects or parsing
+                              markup into identifiable bundles.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">Assistive technologies that are important in the context of this document include
                            the following:
@@ -409,19 +426,22 @@
                         <p xmlns="http://www.w3.org/1999/xhtml">information provided by the user that is not accepted</p>
                         
                         <div xmlns="http://www.w3.org/1999/xhtml" class="note">
-                           
-                           <p>This includes:</p>
-                           
-                           <ol>
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <div>
                               
-                              <li>Information that is required by the <a href="#dfn-web-page">Web page</a> but omitted by the user
-                                 </li>
+                              <p>This includes:</p>
                               
-                              <li>Information that is provided by the user but that falls outside the required data
-                                 format or values
-                                 </li>
-                              </ol>
-                           </div>
+                              <ol>
+                                 
+                                 <li>Information that is required by the <a href="#dfn-web-page">Web page</a> but omitted by the user
+                                    </li>
+                                 
+                                 <li>Information that is provided by the user but that falls outside the required data
+                                    format or values
+                                    </li>
+                                 </ol>
+                              </div>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-mechanism">mechanism</dt>
@@ -432,10 +452,16 @@
                            <a href="#dfn-process">process</a> or technique for achieving a result
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The mechanism may be explicitly provided in the content, or may be <a href="#dfn-relied-upon">relied upon</a> to be provided by either the platform or by <a href="#dfn-user-agent">user agents</a>, including <a href="#dfn-assistive-technology">assistive technologies</a>.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The mechanism may be explicitly provided in the content, or may be <a href="#dfn-relied-upon">relied upon</a> to be provided by either the platform or by <a href="#dfn-user-agent">user agents</a>, including <a href="#dfn-assistive-technology">assistive technologies</a>.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">The mechanism needs to meet all success criteria for the conformance level claimed.</p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>The mechanism needs to meet all success criteria for the conformance level claimed.</p>
+                        </div>
                         </definition>
                   </dd>
                   <dt id="dfn-process">process</dt>
@@ -470,15 +496,21 @@
                            <a href="#dfn-mechanism">mechanism</a> for encoding instructions to be rendered, played or executed by <a href="#dfn-user-agent">user agents</a>
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">As used in these guidelines "Web Technology" and the word "technology" (when used
-                           alone) both refer to Web Content Technologies.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>As used in these guidelines "Web Technology" and the word "technology" (when used
+                              alone) both refer to Web Content Technologies.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Web content technologies may include markup languages, data formats, or programming
-                           languages that authors may use alone or in combination to create end-user experiences
-                           that range from static Web pages to synchronized media presentations to dynamic Web
-                           applications.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Web content technologies may include markup languages, data formats, or programming
+                              languages that authors may use alone or in combination to create end-user experiences
+                              that range from static Web pages to synchronized media presentations to dynamic Web
+                              applications.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">Some common examples of Web content technologies include HTML, CSS, SVG, PNG, PDF,
                            Flash, and JavaScript.
@@ -503,13 +535,19 @@
                            that are used in the rendering or intended to be rendered together with it by a <a href="#dfn-user-agent">user agent</a>
                            </p>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">Although any "other resources" would be rendered together with the primary resource,
-                           they would not necessarily be rendered simultaneously with each other.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>Although any "other resources" would be rendered together with the primary resource,
+                              they would not necessarily be rendered simultaneously with each other.
+                              </p>
+                        </div>
                         
-                        <p xmlns="http://www.w3.org/1999/xhtml" class="note">For the purposes of conformance with these guidelines, a resource must be "non-embedded"
-                           within the scope of conformance to be considered a Web page.
-                           </p>
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="note">
+                           <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                           <p>For the purposes of conformance with these guidelines, a resource must be "non-embedded"
+                              within the scope of conformance to be considered a Web page.
+                              </p>
+                        </div>
                         
                         <p xmlns="http://www.w3.org/1999/xhtml" class="example">A Web resource including all embedded images and media.</p>
                         
@@ -549,7 +587,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and

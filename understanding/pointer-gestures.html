@@ -65,9 +65,12 @@
                <div class="box-i">
                   <p>All <a href="#dfn-functionality">functionality</a> that uses multipoint or path-based gestures for operation can be operated with a
                      <a href="#dfn-single-pointer">single pointer</a> without a path-based gesture, unless a multipoint or path-based gesture is <a href="#dfn-essential">essential</a>.</p>
-                  <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this
-                     does not apply to actions that are required to operate the user agent or assistive
-                     technology).</p>
+                  <div class="note">
+                     <div role="heading" class="note-title marker" aria-level="2">Note</div>
+                     <p>This requirement applies to web content that interprets pointer actions (i.e. this
+                        does not apply to actions that are required to operate the user agent or assistive
+                        technology).</p>
+                  </div>
                </div>
             </aside>
             <div class="excol-all"></div>
@@ -88,7 +91,7 @@
                <figure id="figure-path-based-gesture-1">
                   				<img src="img/path-based-gesture-1.png" width="400" alt="Hand showing a starting touch, 1. Moving through a second point, 2. Going to one of several points,3." />
                   				
-                  <figcaption>A path-based gesture involves starting a pointer movement that goes through at least
+                  <figcaption>Figure 1 A path-based gesture involves starting a pointer movement that goes through at least
                      one intermediate point before the end-point. The end-point may be a continuation,
                      or allow for various movements.</figcaption>
                   			</figure>
@@ -107,12 +110,15 @@
                <figure id="figure-path-based-gesture-2">
                   				<img src="img/path-based-gesture-2.png" width="400" alt="Hand showing a starting touch, 1. Going to a second point, 2. It follows a very random path." />
                   				
-                  <figcaption>A free-form gesture does not require any particular path before the end-point, only
+                  <figcaption>Figure 2 A free-form gesture does not require any particular path before the end-point, only
                      the start and (optionally) the end point matter.</figcaption>
                   			</figure>
-               <p class="note">Any movement of a pointer could be difficult or impossible to use for someone who
-                  cannot perform precise movements, therefore alternative forms of interaction are always
-                  recommended. This success criterion is scoped to <em>path-based gestures</em> as it may be difficult or impossible to provide an alternative for free-form paths.</p>
+               <div class="note">
+                  <div role="heading" class="note-title marker" aria-level="3">Note</div>
+                  <p>Any movement of a pointer could be difficult or impossible to use for someone who
+                     cannot perform precise movements, therefore alternative forms of interaction are always
+                     recommended. This success criterion is scoped to <em>path-based gestures</em> as it may be difficult or impossible to provide an alternative for free-form paths.</p>
+               </div>
                <p>Examples of <strong>multipoint</strong> gestures include a two-finger pinch zoom, a split tap where one finger rests on the
                   screen and a second finger taps, or a two- or three-finger tap or swipe. Users may
                   find it difficult or impossible to accomplish these if they type and point with a
@@ -252,9 +258,9 @@
                   <h3>Sufficient Techniques</h3>
                   <ul>
                      					
-                     <li><a href="../../techniques/general/G215">G215</a></li>
+                     <li><a href="/techniques/general/G215">G215: Providing controls to achieve the same result as path based or multipoint gestures</a></li>
                      					
-                     <li><a href="../../techniques/general/G216">G216</a></li>
+                     <li><a href="/techniques/general/G216">G216: Providing single point activation for a control slider</a></li>
                      				</ul>
                </section>
                <section id="failure">
@@ -263,7 +269,8 @@
                      by the WCAG Working Group.</p>
                   <ul>
                      					
-                     <li><a href="../../techniques/failures/F105">F105</a></li>
+                     <li><a href="/techniques/failures/F105">F105: Failure of Success Criterion 2.5.1 due to providing functionality via a path-based
+                           gesture without simple pointer alternative</a></li>
                      				</ul>
                </section>
             </section>
@@ -331,7 +338,7 @@
       </div>
       <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
          <div class="inner" style="grid-column: 2 / 8">
-            <p><strong>Date:</strong> Updated 15 December 2022.</p>
+            <p><strong>Date:</strong> Updated 16 December 2022.</p>
             <p><strong>Developed by</strong> <a href="https://www.w3.org/groups/wg/ag/participants">Accessibility Guidelines Working Group (AG WG) Participants</a> (Co-Chairs: Alastair Campbell, Charles Adams, Rachael Bradley Montgomery. W3C Staff
                Contact: Michael Cooper).</p>
             <p>The content was developed as part of the <a href="https://www.w3.org/WAI/about/projects/#us">WAI-Core projects</a> funded by U.S. Federal funds. The user interface was designed by the Education and
