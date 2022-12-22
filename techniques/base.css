@@ -100,7 +100,7 @@ dt div {
 }
 
 .toc-wcag-docs {
-	padding-left: 0;
+	padding-left: 1em;
 }
 
 .main-content > .toc-understanding-guideline > li > a {
